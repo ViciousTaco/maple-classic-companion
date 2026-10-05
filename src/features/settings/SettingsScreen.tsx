@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { usePack, usePackInfo, usePlatform, useProfileStore, useProfiles } from "../../app/context";
+import { navigate, usePack, usePackInfo, usePlatform, useProfileStore, useProfiles } from "../../app/context";
 import { useUpdates } from "../../app/updates";
 import { ExternalLinkButton } from "../guide/parts";
 import { relativeTime } from "../characters/hooks";
@@ -8,7 +8,7 @@ import type { AppPaths, BackupInfo, FolderName } from "../../platform/types";
 import type { Settings } from "../../data/schema/profile";
 import { migrate } from "../../data/schema/migrations";
 import { formatWhen, SYDNEY } from "../../lib/sydney";
-import { Button, Card, LargeTitle } from "../../ui/kit";
+import { Button, Card, LargeTitle, Toggle } from "../../ui/kit";
 import { ConfirmDialog, toast } from "../../ui/overlays";
 
 function Select<T extends string>({
@@ -105,6 +105,43 @@ export function SettingsScreen() {
             ]}
             onChange={(theme) => set({ theme })}
           />
+        </div>
+      </Card>
+
+      <Card>
+        <h2 className="mb-2 font-display text-[19px] font-semibold">Event reminders</h2>
+        <div className="divide-y divide-hairline">
+          <Toggle
+            label="Remind me before events and deadlines"
+            detail="A Windows notification shortly before a GM event starts or a deadline passes (deadlines also get a day's warning). Turn single events off with the bell on Home or News."
+            checked={settings.reminders.enabled}
+            onChange={(enabled) => set({ reminders: { ...settings.reminders, enabled } })}
+          />
+          {settings.reminders.enabled && (
+            <Select
+              label="How early"
+              value={String(settings.reminders.leadMinutes)}
+              options={[
+                ["5", "5 minutes before"],
+                ["15", "15 minutes before"],
+                ["30", "30 minutes before"],
+                ["60", "1 hour before"],
+              ]}
+              onChange={(v) => set({ reminders: { ...settings.reminders, leadMinutes: Number(v) } })}
+            />
+          )}
+        </div>
+      </Card>
+
+      <Card>
+        <h2 className="font-display text-[19px] font-semibold">Screen watcher</h2>
+        <p className="mt-1 text-sm text-ink-2">
+          {settings.watch
+            ? `Set up for “${settings.watch.windowTitle}”. Off every time the app starts — switch it on with the Watch pill at the top or Ctrl+Alt+W.`
+            : "Counts your kills, EXP, meso and pickups from the game screen while you switch it on. Not set up yet."}
+        </p>
+        <div className="mt-3">
+          <Button onClick={() => navigate(settings.watch ? "/watch" : "/watch?setup=1")}>{settings.watch ? "Open the watcher" : "Set it up"}</Button>
         </div>
       </Card>
 

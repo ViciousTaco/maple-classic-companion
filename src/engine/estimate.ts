@@ -1,13 +1,15 @@
 import type { Pack } from "../data/pack";
 import type { Monster, TrainingSpot } from "../data/schema/pack";
 import type { Profile } from "../data/schema/profile";
+import { observedRates, type ObservedRates } from "./observed";
 import { knownProbability, rateWeight, usableDrop } from "./rates";
 
 // Plan §8.7 step 0 + step 2 (estimate). Pure.
 
 export type Range = { low: number; high: number };
 export type Danger = "safe" | "caution" | "dangerous" | "unknown";
-export type Basis = "computed" | "level-band";
+/** How the shown numbers were made. "observed" = measured by the screen watcher at this spot (I-29). */
+export type Basis = "computed" | "level-band" | "observed";
 export type Estimate = {
   basis: Basis;
   hitsToKill: number | null;
@@ -15,6 +17,8 @@ export type Estimate = {
   expPerHour: Range | null;
   mesoPerHour: Range | null;
   danger: Danger;
+  /** Present when the screen watcher measured this spot long enough (the shown numbers then come from it). */
+  observed: ObservedRates | null;
 };
 
 export type MobShare = { mob: Monster; weight: number; count: number | null; respawn: number | null };
@@ -35,7 +39,7 @@ export type SpotEstimate = {
 
 const range = (mid: number): Range => ({ low: mid * 0.8, high: mid * 1.2 });
 
-export function basisFor(profile: Profile): Basis {
+export function basisFor(profile: Profile): Exclude<Basis, "observed"> {
   const { damageMin, damageMax } = profile.combat;
   return damageMin !== undefined && damageMax !== undefined && damageMin > 0 && damageMax > 0 ? "computed" : "level-band";
 }
@@ -99,7 +103,27 @@ export function mesoPerKillOf(pack: Pack, mob: Monster, mode: "rank" | "shown" =
   return known ? value : null;
 }
 
-export function estimateSpot(pack: Pack, profile: Profile, spot: TrainingSpot, basis: Basis = basisFor(profile)): SpotEstimate {
+export function estimateSpot(pack: Pack, profile: Profile, spot: TrainingSpot, basis: Exclude<Basis, "observed"> = basisFor(profile)): SpotEstimate {
+  const est = estimateFromData(pack, profile, spot, basis);
+  const observed = observedRates(pack, profile.observations[spot.id]);
+  if (!observed) return est;
+  // Measured numbers win for display. For ranking they replace computed kills/hour; level-band ranking compares
+  // relative densities, so a measured spot keeps its density there to stay comparable with the others.
+  return {
+    ...est,
+    kph: est.estimate.basis === "computed" ? (observed.kills / observed.minutes) * 60 : est.kph,
+    estimate: {
+      ...est.estimate,
+      basis: "observed",
+      killsPerHour: observed.killsPerHour,
+      expPerHour: observed.expPerHour,
+      mesoPerHour: observed.mesoPerHour,
+      observed,
+    },
+  };
+}
+
+function estimateFromData(pack: Pack, profile: Profile, spot: TrainingSpot, basis: Exclude<Basis, "observed">): SpotEstimate {
   const mobs = spotMobs(pack, spot);
   const danger = dangerFor(profile, mobs.map((m) => m.mob));
   const anyMeso = mobs.some((m) => mesoPerKillOf(pack, m.mob) !== null);
@@ -119,7 +143,7 @@ export function estimateSpot(pack: Pack, profile: Profile, spot: TrainingSpot, b
     const kph = respawn ? sumCount / respawn : sumCount;
     const expPerKill = mobs.reduce((a, m) => a + m.weight * m.mob.exp, 0);
     return {
-      estimate: { basis: "level-band", hitsToKill: null, killsPerHour: null, expPerHour: null, mesoPerHour: null, danger },
+      estimate: { basis: "level-band", hitsToKill: null, killsPerHour: null, expPerHour: null, mesoPerHour: null, danger, observed: null },
       kph,
       mobs,
       expPerKill,
@@ -173,6 +197,7 @@ export function estimateSpot(pack: Pack, profile: Profile, spot: TrainingSpot, b
       expPerHour: range(kph * expPerKill),
       mesoPerHour: mesoPerKillShown === null ? null : range(kph * mesoPerKillShown),
       danger,
+      observed: null,
     },
     kph,
     mobs,

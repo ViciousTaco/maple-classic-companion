@@ -9,9 +9,6 @@ import { SkillsEditor, type SkillDef } from "./SkillsEditor";
 import { FOCUS_OPTIONS, removeScreenshot, saveScreenshot, useScreenshot } from "./hooks";
 import { buildExport, exportFileName } from "./transfer";
 
-/** Skills from the guide data. Empty until skill records are verified (P3). */
-const PACK_SKILLS: SkillDef[] = [];
-
 /** Job options for a level: the character's own line first, then everything else valid at that level. */
 export function jobOptions(rules: GameRules, level: number, current: JobId) {
   const valid = jobsForLevel(rules, level);
@@ -273,7 +270,7 @@ export function CharacterSheet({ profileId }: { profileId: string }) {
         </Section>
 
         <Section value="skills" title="Skills" summary={`${Object.keys(profile.skills).length} set`}>
-          <SkillsEditor rules={rules} skills={PACK_SKILLS} jobId={profile.jobId} values={profile.skills} onChange={(skills) => update((p) => ({ ...p, skills }))} />
+          <SkillsEditor rules={rules} skills={(pack?.skills ?? []) as SkillDef[]} jobId={profile.jobId} values={profile.skills} onChange={(skills) => update((p) => ({ ...p, skills }))} />
         </Section>
 
         <Section value="unlocks" title="Unlocks" summary={unlockCount ? `${unlockCount} recorded` : "what this character has done"}>

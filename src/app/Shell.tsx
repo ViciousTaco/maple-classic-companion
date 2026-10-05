@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { toast } from "../ui/overlays";
 import { motion } from "motion/react";
-import { ChartSpline, Gem, Home as HomeIcon, Leaf, Newspaper, NotebookPen, ScrollText, Search, Settings, Shield, Swords, Users } from "lucide-react";
+import { ChartSpline, Eye, Gem, Home as HomeIcon, Leaf, Newspaper, NotebookPen, ScrollText, Search, Settings, Shield, Swords, Users } from "lucide-react";
 import { jobName } from "../data/gameRules";
 import { CharacterSheet } from "../features/characters/CharacterSheet";
 import { CharactersScreen, Portrait } from "../features/characters/CharactersScreen";
@@ -25,6 +25,8 @@ import { LevelUpBurst } from "../ui/LevelUpBurst";
 import { CommandPalette, useSearch } from "../features/search/CommandPalette";
 import { relativeTime } from "../features/characters/hooks";
 import { useNow } from "../features/guide/parts";
+import { WatchScreen } from "../features/watch/WatchScreen";
+import { WatchPill } from "../features/watch/WatchControls";
 
 const NAV = [
   { path: "/home", label: "Home", Icon: HomeIcon },
@@ -35,6 +37,7 @@ const NAV = [
   { path: "/quests", label: "Quests", Icon: ScrollText },
   { path: "/news", label: "News", Icon: Newspaper },
   { path: "/characters", label: "Characters", Icon: Users },
+  { path: "/watch", label: "Watch", Icon: Eye },
 ] as const;
 
 export function Backdrop() {
@@ -214,6 +217,7 @@ function TopBar() {
         </Button>
       )}
       <div className="flex items-center gap-2">
+        <WatchPill />
         <FreshnessPill />
         <SearchButton />
         <Button onClick={() => openNote(true)} title="Quick note (Ctrl+N)">
@@ -252,6 +256,8 @@ function Routes() {
       return <NewsScreen />;
     case "/maps":
       return <MapsScreen key={query} initialQuery={query} />;
+    case "/watch":
+      return <WatchScreen />;
     default:
       return <HomeScreen />;
   }

@@ -8,6 +8,7 @@ import { Button, Chip, EmptyState, LargeTitle, Segmented, spring } from "../../u
 import { Dialog } from "../../ui/overlays";
 import { relativeTime } from "../characters/hooks";
 import { endingSoon, eventState, stateLabel, type EventState } from "../events/events";
+import { ReminderBell } from "../events/ReminderBell";
 import { useNow } from "../guide/parts";
 import { dateReferences } from "./core";
 import { annotateArticles, type AssessedArticle } from "./relevance";
@@ -36,7 +37,8 @@ function EventRow({ s, now, changed, tz }: { s: EventState; now: Date; changed: 
             {s.at && <> · {formatWhen(s.at, tz)}</>}
           </p>
         </div>
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap items-center gap-1.5">
+          {s.status !== "ended" && <ReminderBell eventId={e.id} title={e.title} />}
           {s.status === "now" && <Chip tone="leaf">Live</Chip>}
           {e.minLevel && <Chip>Lv {e.minLevel}+</Chip>}
           {e.kind === "gm-event" && <Chip tone="sky">GM event</Chip>}

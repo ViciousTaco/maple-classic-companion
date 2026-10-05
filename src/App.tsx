@@ -12,6 +12,8 @@ import { createProfileStore, type ProfileStore } from "./features/characters/sto
 import { platform as defaultPlatform } from "./platform/ipc";
 import type { Platform } from "./platform/types";
 import { toast, Toaster } from "./ui/overlays";
+import { useWatcherSetup } from "./features/watch/useWatch";
+import { useEventReminders } from "./features/events/useReminders";
 
 function Loading() {
   return (
@@ -118,6 +120,8 @@ export default function App({
       : { status: "failed", problems: loaded?.problems ?? [] };
     return { platform, store, pack, packInfo, rules: pack ? rulesFromPack(pack) : baselineRules };
   }, [platform, store, loaded]);
+  useWatcherSetup(platform, store, value.pack);
+  useEventReminders(platform, store, liveUpdates ? value.pack : null);
 
   return (
     <AppProvider value={value}>

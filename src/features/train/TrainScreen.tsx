@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { motion, useSpring, useTransform } from "motion/react";
-import { AlertTriangle, Coins, Footprints, Gem, MapPin, NotebookPen, RefreshCw, RotateCcw, Scale, Shield, ShieldCheck, Sword, TrendingUp, Users } from "lucide-react";
+import { AlertTriangle, Coins, Eye, Footprints, Gem, MapPin, NotebookPen, RefreshCw, RotateCcw, Scale, Shield, ShieldCheck, Sword, TrendingUp, Users } from "lucide-react";
 import type { FocusId } from "../../data/schema/profile";
 import type { Pack } from "../../data/pack";
 import type { Recommendation } from "../../engine/recommend";
 import { rateLabel } from "../../engine/rates";
+import { observedDrops } from "../../engine/observed";
 import { navigate, useActiveProfile, usePack, useProfileStore, useRules } from "../../app/context";
 import { jobName } from "../../data/gameRules";
 import { Button, Card, Chip, EmptyState, LargeTitle, Section, Sections, Segmented, spring } from "../../ui/kit";
@@ -35,9 +36,9 @@ function Ticker({ value }: { value: number }) {
   return <motion.span className="tabular-nums">{text}</motion.span>;
 }
 
-function Stat({ label, range, hint }: { label: string; range: { low: number; high: number } | null; hint: string }) {
+function Stat({ label, range, hint, measured }: { label: string; range: { low: number; high: number } | null; hint: string; measured?: boolean }) {
   return (
-    <div className="rounded-2xl bg-fill px-3 py-2.5" title={range ? "Estimate range (±20 %)" : hint}>
+    <div className="rounded-2xl bg-fill px-3 py-2.5" title={!range ? hint : measured ? "Measured by your screen watcher (±10 %)" : "Estimate range (±20 %)"}>
       <dt className="text-xs font-semibold text-ink-3">{label}</dt>
       <dd className="font-display text-[21px] font-bold tracking-[-0.02em]">
         {range ? (
@@ -126,10 +127,15 @@ function HeroCard({ pack, rec, pinned, onTaken, onRoute, onUnpin }: { pack: Pack
           )}
         </div>
         <dl className="mt-4 grid grid-cols-3 gap-2.5">
-          <Stat label="EXP / hour" range={rec.estimate.expPerHour} hint="Add your damage range to estimate this" />
-          <Stat label="Kills / hour" range={rec.estimate.killsPerHour} hint="Add your damage range to estimate this" />
-          <Stat label="Meso / hour" range={rec.estimate.mesoPerHour} hint="Not enough meso data for this spot yet" />
+          <Stat label="EXP / hour" range={rec.estimate.expPerHour} hint="Add your damage range to estimate this" measured={!!rec.estimate.observed} />
+          <Stat label="Kills / hour" range={rec.estimate.killsPerHour} hint="Add your damage range to estimate this" measured={!!rec.estimate.observed} />
+          <Stat label="Meso / hour" range={rec.estimate.mesoPerHour} hint="Not enough meso data for this spot yet" measured={!!rec.estimate.observed} />
         </dl>
+        {rec.estimate.observed && (
+          <p className="mt-2 flex items-center gap-1.5 text-[13px] font-semibold text-leaf">
+            <Eye size={14} /> Measured by your screen watcher over {Math.round(rec.estimate.observed.minutes)} min ({rec.estimate.observed.kills.toLocaleString("en-AU")} kills)
+          </p>
+        )}
         {rec.warnings.length > 0 && (
           <ul className="mt-3 space-y-1 text-[13px] text-ink-2">
             {rec.warnings.map((w) => (
@@ -404,6 +410,20 @@ export function TrainScreen() {
                   ))}
               </ul>
             </>
+          )}
+          {observedDrops(profile.observations[hero.spotId]).length > 0 && (
+            <div className="mt-4">
+              <p className="mb-2 flex items-center gap-1.5 text-sm font-semibold text-ink-2">
+                <Eye size={14} /> What you've picked up here (screen watcher)
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {observedDrops(profile.observations[hero.spotId]).map((o) => (
+                  <Chip key={o.itemId}>
+                    {pack.index.itemById.get(o.itemId)?.name ?? o.itemId} · {o.drops.toLocaleString("en-AU")} in {o.kills.toLocaleString("en-AU")} kills
+                  </Chip>
+                ))}
+              </div>
+            </div>
           )}
         </Section>
 

@@ -25,6 +25,28 @@ export type FocusId = (typeof FOCUS_IDS)[number];
 
 const int = (min: number, max: number) => z.number().int().min(min).max(max);
 const iso = z.iso.datetime();
+const count = z.number().int().min(0).max(1e12);
+
+function ObservationSchema() {
+  return z.object({
+    minutes: z.number().min(0).max(1e7),
+    kills: count,
+    exp: count,
+    meso: count,
+    killsByMob: z.record(z.string(), count).default({}),
+    items: z.record(z.string(), count).default({}),
+    /** % of a level gained (status bar), and the minutes it was measured over. */
+    levelPercent: z.number().min(0).max(1e6).default(0),
+    levelPercentMinutes: z.number().min(0).max(1e7).default(0),
+    sessions: int(0, 1e6),
+    lastAt: iso,
+  });
+}
+export type Observation = z.infer<ReturnType<typeof ObservationSchema>>;
+
+/** I-29: a region of the game window, in the window's real pixels. */
+export const RegionSchema = z.object({ x: int(0, 20000), y: int(0, 20000), w: int(4, 4000), h: int(4, 4000) });
+export type Region = z.infer<typeof RegionSchema>;
 
 export const ProfileSchema = z.object({
   id: z.uuid(),
@@ -87,6 +109,8 @@ export const ProfileSchema = z.object({
   paceTimer: z.object({ startedAt: iso, startExpPercent: z.number().min(0).max(100), level: int(1, 300) }).nullable().default(null),
   /** P6-T2: ticked quest steps (indexes) per quest id. */
   questSteps: z.record(z.string(), z.array(int(0, 99))).default({}),
+  /** I-29: what the screen watcher saw, summed per training spot (only while the owner had it switched on). */
+  observations: z.record(z.string(), ObservationSchema()).default({}),
 });
 export type Profile = z.infer<typeof ProfileSchema>;
 export type ProfileInput = z.input<typeof ProfileSchema>;
@@ -107,6 +131,27 @@ export const SettingsSchema = z
     motion: z.enum(["system", "full", "reduced"]).default("system"),
     theme: z.enum(["system", "day", "night"]).default("system"),
     window: WindowGeometrySchema.nullable().default(null),
+    /** I-26: Windows notifications shortly before events and deadlines. */
+    reminders: z
+      .object({
+        enabled: z.boolean().default(true),
+        leadMinutes: z.number().int().min(1).max(240).default(15),
+        muted: z.array(z.string()).default([]),
+      })
+      .prefault({}),
+    /** I-29 setup. Deliberately no "on" flag: the watcher is off at every launch. */
+    watch: z
+      .object({
+        windowTitle: z.string().max(256),
+        sourceWidth: int(1, 20000),
+        sourceHeight: int(1, 20000),
+        status: RegionSchema.nullable(),
+        chat: RegionSchema.nullable(),
+        intervalSec: z.number().min(1).max(30).default(2),
+        savedAt: iso,
+      })
+      .nullable()
+      .default(null),
   })
   .prefault({});
 export type Settings = z.infer<typeof SettingsSchema>;

@@ -46,6 +46,26 @@ what was unclear.
 `.tmp/wiki-refresh-report.txt`. Review those pages and update the matching records. Unattended daily syncing waits for
 the wiki maintainers' OK (`docs/wiki-permission-request.md`).
 
+## Refreshing on request (I-28)
+
+The app has no AI key and no schedule for this. When the owner wants fresh data, they open a Claude Code session in
+the project folder and say:
+
+> Check the wiki and Nexon for updates.
+
+The session then:
+
+1. Runs `npm run datapack:refresh` and reads `.tmp/wiki-refresh-report.txt`.
+2. Reads the newest Nexon news (the app's News screen lists anything not yet reviewed after
+   `reviewedThroughArticleId`) and applies Appendix C for patch notes, events and maintenance.
+3. Updates the changed records with fresh `retrievedAt`/`verifiedAt` and sources, and bumps `meta.packVersion`.
+4. Runs `npm run datapack:validate` and `npm run datapack:coverage`, then commits and pushes. GitHub Actions
+   signs and publishes the data. Installed apps pick it up within 30 minutes, or straight away with **Check now** in
+   Settings.
+5. Reports what changed and what it couldn't confirm.
+
+Same rules as always: one wiki page at a time with citation, MeowDB is link-only, nothing from memory.
+
 ## When Forgotten Hollow (or other parked content) opens
 
 Move the records from `datapack/_parked/<area>/` back into `regions/…`, restore their portal links and training spots

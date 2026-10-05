@@ -51,6 +51,8 @@ test("an empty file has default settings", () => {
     motion: "system",
     theme: "system",
     window: null,
+    reminders: { enabled: true, leadMinutes: 15, muted: [] },
+    watch: null, // the screen watcher is never on by default, and has no setup until the owner makes one
   });
 });
 

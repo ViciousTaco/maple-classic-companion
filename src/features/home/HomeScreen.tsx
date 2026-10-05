@@ -8,6 +8,7 @@ import { availableQuests, rankQuests } from "../../engine/quests";
 import { formatWhen, SYDNEY } from "../../lib/sydney";
 import { Card, EmptyState, LargeTitle, spring } from "../../ui/kit";
 import { endingSoon, stateLabel } from "../events/events";
+import { ReminderBell } from "../events/ReminderBell";
 import { useNow, useTrainingPlan, Scene } from "../guide/parts";
 import { mapName, rangeText, reasonText, sceneHue } from "../guide/text";
 import { EntityImage } from "../guide/EntityImage";
@@ -174,7 +175,10 @@ export function HomeScreen() {
                 <li key={s.event.id} className="rounded-2xl bg-fill px-3 py-2">
                   <div className="flex items-start justify-between gap-2">
                     <p className="font-semibold leading-tight">{s.event.title}</p>
+                    <span className="flex shrink-0 items-center gap-1.5">
+                    <ReminderBell eventId={s.event.id} title={s.event.title} />
                     <span className={`shrink-0 rounded-full px-2 py-0.5 text-[11px] font-bold ${s.status === "now" ? "bg-leaf/15 text-leaf" : "bg-sky/12 text-sky"}`}>{s.status === "now" ? "Live" : "Soon"}</span>
+                    </span>
                   </div>
                   <p className="text-xs text-ink-2">
                     {stateLabel(s, now)} · {s.at && formatWhen(s.at, tz)}
