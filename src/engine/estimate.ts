@@ -1,7 +1,7 @@
 import type { Pack } from "../data/pack";
 import type { Monster, TrainingSpot } from "../data/schema/pack";
 import type { Profile } from "../data/schema/profile";
-import { rateWeight, usableDrop } from "./rates";
+import { knownProbability, rateWeight, usableDrop } from "./rates";
 
 // Plan §8.7 step 0 + step 2 (estimate). Pure.
 
@@ -26,8 +26,10 @@ export type SpotEstimate = {
   mobs: MobShare[];
   /** Weighted EXP per kill (with level penalty when computed and verified). */
   expPerKill: number;
-  /** Weighted meso value per kill (meso drops + NPC sell value of drops × w(rate)); null if nothing is known. */
+  /** Ranking value per kill: meso drops + NPC sell value × w(rate) (heuristic weights allowed; never displayed). */
   mesoPerKill: number | null;
+  /** Displayable meso per kill: only known meso ranges + drops with an official/sampled rate (§6.3); null otherwise. */
+  mesoPerKillShown: number | null;
   hitChanceAssumed: boolean;
 };
 
@@ -71,17 +73,25 @@ export function dangerFor(profile: Profile, mobs: Monster[]): Danger {
   return hitsToDie >= 8 ? "safe" : hitsToDie >= 4 ? "caution" : "dangerous";
 }
 
-/** Meso value of one kill of `mob`: average meso drop + Σ drops × NPC sell price × w(rate). Null if nothing known. */
-export function mesoPerKillOf(pack: Pack, mob: Monster): number | null {
+/**
+ * Meso value of one kill of `mob`. "rank": average meso drop + Σ drops × NPC sell price × w(rate), using heuristic
+ * weights for unknown rates (ranking only). "shown": only what's actually known — the meso range plus drops with an
+ * official or sampled rate; null when the meso range itself is unknown (never a made-up number on screen).
+ */
+export function mesoPerKillOf(pack: Pack, mob: Monster, mode: "rank" | "shown" = "rank"): number | null {
   let known = false;
   let value = 0;
   if (mob.mesoMin !== undefined && mob.mesoMax !== undefined) {
     value += (mob.mesoMin + mob.mesoMax) / 2;
     known = true;
-  }
+  } else if (mode === "shown") return null;
   for (const d of (pack.index.dropsByMob.get(mob.id) ?? []).filter(usableDrop)) {
     const item = pack.index.itemById.get(d.itemId);
-    if (item?.npcSellMeso !== undefined) {
+    if (item?.npcSellMeso === undefined) continue;
+    if (mode === "shown") {
+      const p = knownProbability(d);
+      if (p) value += item.npcSellMeso * p.p;
+    } else {
       value += item.npcSellMeso * rateWeight(d, pack.formulas);
       known = true;
     }
@@ -95,6 +105,9 @@ export function estimateSpot(pack: Pack, profile: Profile, spot: TrainingSpot, b
   const anyMeso = mobs.some((m) => mesoPerKillOf(pack, m.mob) !== null);
   const mesoPerKillRaw = mobs.reduce((a, m) => a + m.weight * (mesoPerKillOf(pack, m.mob) ?? 0), 0);
   const mesoPerKill = anyMeso ? mesoPerKillRaw : null;
+  const shownParts = mobs.map((m) => mesoPerKillOf(pack, m.mob, "shown"));
+  const mesoPerKillShown =
+    mobs.length > 0 && shownParts.every((x) => x !== null) ? mobs.reduce((a, m, i) => a + m.weight * shownParts[i]!, 0) : null;
   const archetype = pack.jobs.find((j) => j.id === profile.jobId)?.archetype ?? "melee";
   const countsKnown = mobs.length > 0 && mobs.every((m) => m.count !== null);
   const respawnKnown = mobs.length > 0 && mobs.every((m) => m.respawn !== null);
@@ -111,6 +124,7 @@ export function estimateSpot(pack: Pack, profile: Profile, spot: TrainingSpot, b
       mobs,
       expPerKill,
       mesoPerKill,
+      mesoPerKillShown,
       hitChanceAssumed: false,
     };
   }
@@ -157,13 +171,14 @@ export function estimateSpot(pack: Pack, profile: Profile, spot: TrainingSpot, b
       hitsToKill: main.hits,
       killsPerHour: range(kph),
       expPerHour: range(kph * expPerKill),
-      mesoPerHour: mesoPerKill === null ? null : range(kph * mesoPerKill),
+      mesoPerHour: mesoPerKillShown === null ? null : range(kph * mesoPerKillShown),
       danger,
     },
     kph,
     mobs,
     expPerKill,
     mesoPerKill,
+    mesoPerKillShown,
     hitChanceAssumed,
   };
 }

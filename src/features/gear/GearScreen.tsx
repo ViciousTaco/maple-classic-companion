@@ -2,6 +2,7 @@ import { Hammer, ScrollText, ShoppingBag, Swords } from "lucide-react";
 import { useActiveProfile, usePack, useRules } from "../../app/context";
 import { jobName } from "../../data/gameRules";
 import { nextUpgrades } from "../../engine/gear";
+import { apAdvice, STAT_LABEL } from "../../engine/ap";
 import { Chip, EmptyState, LargeTitle, Section, Sections } from "../../ui/kit";
 import { WishStar } from "../loot/LootScreen";
 import { ConfidenceChip } from "../guide/parts";
@@ -15,7 +16,8 @@ export function GearScreen() {
   const profile = useActiveProfile();
   if (!profile) return <EmptyState title="Pick a character to get started" />;
   if (!pack) return <EmptyState title="The guide data isn't loaded" />;
-  const ups = nextUpgrades(profile, pack);
+  const primary = apAdvice(profile, pack)[0]?.rest ?? null;
+  const ups = nextUpgrades(profile, pack, 5, primary);
   return (
     <div className="space-y-6">
       <LargeTitle sub={`Next upgrades for a Lv ${profile.level} ${jobName(rules, profile.jobId)}`}>Gear & stats</LargeTitle>
@@ -38,6 +40,7 @@ export function GearScreen() {
                 })}
                 <ConfidenceChip confidence={u.item.confidence} sources={u.item.sources} verifiedAt={u.item.verifiedAt} />
                 {u.derived && <Chip tone="sky">Picked from drop data</Chip>}
+                {!u.fitsBuild && primary && <Chip tone="maple">Not a {STAT_LABEL[primary]} item — check your build</Chip>}
               </div>
               {u.note && <p className="mb-2 text-sm text-ink-2">{u.note}</p>}
               {u.sources.length > 0 && (

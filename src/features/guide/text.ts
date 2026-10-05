@@ -36,6 +36,8 @@ export function warningText(r: Reason): string {
       return "Monsters here hit hard for your HP — bring potions.";
     case "hit-chance-assumed":
       return "Hit chance is assumed (Classic World's accuracy formula isn't confirmed yet).";
+    case "estimate-assumptions":
+      return "Rates assume ~0.8 s per attack and ~1.5 s walking per kill — measure your real pace on the Plan screen.";
     case "estimate-from-level-only":
       return "Ranked by level and spawns only — add your damage range for EXP/hour.";
     case "unverified-data":

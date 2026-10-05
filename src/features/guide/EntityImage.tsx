@@ -50,6 +50,7 @@ export function EntityImage({
   editable = true,
   fit = "contain",
   fallback,
+  hideWhenMissing = false,
 }: {
   kind: EntityKind;
   id: string;
@@ -61,6 +62,8 @@ export function EntityImage({
   fit?: "contain" | "cover";
   /** Shown while there's no picture (default: an image icon). */
   fallback?: React.ReactNode;
+  /** Render nothing at all until a picture exists (for decorative sprites). */
+  hideWhenMissing?: boolean;
 }) {
   const platform = usePlatform();
   const [state, setState] = useState<{ key: string; bytes: Uint8Array | null; source: Source } | null>(null);
@@ -113,6 +116,7 @@ export function EntityImage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
+  if (hideWhenMissing && !src) return null;
   const title = current?.source === "own" ? `${name} — your picture` : current?.source === "wiki" ? `${name} — image via MapleClassic Wiki · © Nexon` : name;
   const pic = (
     <span

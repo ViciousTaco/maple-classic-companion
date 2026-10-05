@@ -43,7 +43,8 @@ export function StatAdvice({ pack, profile, compact = false }: { pack: Pack | nu
               </span>
             ))}
             <span>
-              everything else into <strong className="text-maple-deep dark:text-maple-hi">{STAT_LABEL[main.rest]}</strong>
+              {main.steps.length ? "everything else into" : "Put your points into"}{" "}
+              <strong className="text-maple-deep dark:text-maple-hi">{STAT_LABEL[main.rest]}</strong>
             </span>
           </div>
           {!compact && <p className="text-sm text-ink-2">{main.phase.text}</p>}

@@ -86,11 +86,15 @@ test("a skill the character hasn't learned is ignored", () => {
   expect(e.estimate.hitsToKill).toBe(2); // 80 HP / 50
 });
 
-test("meso per hour comes from meso drops plus sell value × rate weight", () => {
+test("ranking meso uses heuristic drop weights, but the shown meso/hour uses only known values", () => {
   const pack = smallPack();
   const e = estimateSpot(pack, testProfile(combat(5000, 5000)), spotOf(pack, "spot-meso"));
-  expect(e.mesoPerKill).toBeCloseTo(80 + 200 * 0.05, 10);
-  expect(e.estimate.mesoPerHour!.low).toBeCloseTo(e.kph * e.mesoPerKill! * 0.8, 6);
+  expect(e.mesoPerKill).toBeCloseTo(80 + 200 * 0.05, 10); // ranking: meso range + sell value × tier weight
+  expect(e.mesoPerKillShown).toBeCloseTo(80, 10); // shown: the tier-weighted sell value is left out (§6.3)
+  expect(e.estimate.mesoPerHour!.low).toBeCloseTo(e.kph * 80 * 0.8, 6);
+  // A sampled (self-logged) rate does count towards the shown value.
+  const logged = smallPack((d) => void (d.drops.find((x) => x.itemId === "i-sell")!.rate = { kind: "sampled", drops: 1, kills: 10 }));
+  expect(estimateSpot(logged, testProfile(combat(5000, 5000)), spotOf(logged, "spot-meso")).mesoPerKillShown).toBeCloseTo(80 + 200 * 0.1, 10);
   // No meso data at all → null, not 0.
   expect(estimateSpot(pack, testProfile(combat(50, 50)), spotOf(pack, "spot-exp")).estimate.mesoPerHour).toBeNull();
 });

@@ -74,16 +74,23 @@ function HeroCard({ pack, rec, pinned, onTaken, onRoute, onUnpin }: { pack: Pack
             url={map?.image}
             fit="cover"
             className="h-full w-full rounded-[22px]"
-            fallback={<Scene hue={sceneHue(rec.mapId)} className="absolute inset-0" />}
+            fallback={<Scene hue={sceneHue(rec.mapId)} className="h-full w-full" />}
           />
         </div>
         <div className="pointer-events-none absolute bottom-3 left-3 flex items-end gap-2">
           {spot.mobIds.slice(0, 3).map((m) => {
             const mob = pack.index.monsterById.get(m);
             return mob ? (
-              <span key={m} className="rounded-2xl bg-white/70 p-1 backdrop-blur-md dark:bg-black/40">
-                <EntityImage kind="monster" id={m} name={mob.name} url={mob.image} className="h-12 w-12 bg-transparent" editable={false} />
-              </span>
+              <EntityImage
+                key={m}
+                kind="monster"
+                id={m}
+                name={mob.name}
+                url={mob.image}
+                className="h-14 w-14 bg-white/70 p-1 backdrop-blur-md dark:bg-black/40"
+                editable={false}
+                hideWhenMissing
+              />
             ) : null;
           })}
         </div>

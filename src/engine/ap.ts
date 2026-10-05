@@ -55,7 +55,8 @@ export type GearNeed = { item: Item; level: number; stat: Stat; need: number; cu
 /** Stat requirements of the next upgrades that the character doesn't meet yet (or can't be checked). */
 export function gearStatNeeds(profile: Profile, pack: Pack): GearNeed[] {
   const out: GearNeed[] = [];
-  for (const u of nextUpgrades(profile, pack)) {
+  const primary = apAdvice(profile, pack)[0]?.rest ?? null;
+  for (const u of nextUpgrades(profile, pack, 5, primary).filter((x) => x.fitsBuild)) {
     for (const [stat, need] of Object.entries(u.item.reqStats ?? {})) {
       if (!need) continue;
       const current = profile.stats[stat as Stat] ?? null;

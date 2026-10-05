@@ -51,6 +51,7 @@ export function warningsFor(args: { est: SpotEstimate; stretch: boolean; confide
   const w: Reason[] = [];
   if (args.est.estimate.danger === "dangerous") w.push({ code: "dangerous-mob", params: {} });
   if (args.est.estimate.basis === "computed" && args.est.hitChanceAssumed) w.push({ code: "hit-chance-assumed", params: {} });
+  if (args.est.estimate.basis === "computed") w.push({ code: "estimate-assumptions", params: {} });
   if (args.est.estimate.basis === "level-band") w.push({ code: "estimate-from-level-only", params: {} });
   if (args.confidence === "unverified") w.push({ code: "unverified-data", params: {} });
   if (args.stretch) w.push({ code: "stretch-option", params: {} });

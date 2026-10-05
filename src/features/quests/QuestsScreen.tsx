@@ -19,7 +19,7 @@ export function JobAdvanceCard({ rules, pack, profile }: { rules: GameRules; pac
   if (!next || profile.level < next.level - 2) return null;
   const ready = profile.level >= next.level;
   const targets = next.to.map((j) => jobById(rules, j)).filter((j) => j !== undefined);
-  const quests = pack?.quests.filter((q) => q.category === "job" && q.jobs?.some((j) => next.to.includes(j) || j === profile.jobId)) ?? [];
+  const quests = pack?.quests.filter((q) => q.category === "job" && q.jobs?.includes(profile.jobId)) ?? [];
   return (
     <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={spring}>
       <Card className={ready ? "ring-2 ring-maple/50" : ""}>
@@ -33,9 +33,17 @@ export function JobAdvanceCard({ rules, pack, profile }: { rules: GameRules; pac
               {jobName(rules, profile.jobId)} → {targets.map((t) => t.name).join(" or ")}
             </p>
             <p className="mt-1 text-sm text-ink-2">
-              {targets[0]?.instructor
-                ? `Talk to ${targets[0].instructor} in ${targets[0].town}.`
-                : "Where to start isn't confirmed for Classic World yet — it will appear here once it is."}
+              {(() => {
+                // Several classes to choose from (Beginner): list every instructor.
+                if (targets.length > 1 && targets.every((t) => t.instructor))
+                  return targets.map((t) => `${t.name}: ${t.instructor} in ${t.town}`).join(" · ");
+                // Otherwise prefer the guide's quest chain: its first quest's start NPC and map.
+                const first = quests.find((q) => q.prereqQuestIds.length === 0 && q.jobs?.includes(profile.jobId));
+                const npc = first && pack?.index.npcById.get(first.startNpcId);
+                if (first && npc && pack) return `Start "${first.name}" with ${npc.name} in ${pack.index.mapById.get(npc.mapId)?.name ?? "town"}${npc.role ? ` (${npc.role})` : ""}.`;
+                if (targets[0]?.instructor) return `Talk to ${targets[0].instructor} in ${targets[0].town}.`;
+                return "Where to start isn't confirmed for Classic World yet — it will appear here once it is.";
+              })()}
             </p>
             {quests.length > 0 && <p className="mt-1 text-sm text-ink-2">Quest: {quests.map((q) => q.name).join(", ")}</p>}
           </div>

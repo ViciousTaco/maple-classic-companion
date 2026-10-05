@@ -67,6 +67,19 @@ test("nextUpgrades: per slot, the next item at or above the level for the family
   expect(nextUpgrades(testProfile({ jobId: "warrior" }), pack).find((u) => u.slot === "weapon")!.item.id).toBe("i-sword");
 });
 
+test("build-matching gear comes first; off-build gear is kept but flagged", () => {
+  const pack = smallPack((d) => {
+    d.gearProgression = [];
+    d.items.find((i) => i.id === "i-claw")!.reqStats = { luk: 60, dex: 25 };
+    d.items.find((i) => i.id === "i-hat")!.reqStats = { int: 40 };
+  });
+  const ups = nextUpgrades(testProfile(), pack, 5, "luk");
+  expect(ups.map((u) => [u.item.id, u.fitsBuild])).toEqual([
+    ["i-claw", true],
+    ["i-hat", false],
+  ]);
+});
+
 test("nextUpgrades falls back to dropped class equips when there's no curated progression", () => {
   const pack = smallPack((d) => void (d.gearProgression = []));
   expect(nextUpgrades(testProfile(), pack).map((u) => [u.slot, u.item.id, u.derived])).toEqual([
