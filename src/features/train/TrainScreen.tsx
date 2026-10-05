@@ -376,6 +376,12 @@ export function TrainScreen() {
           )}
         </Section>
 
+        <Section value="maps" title="Browse all maps" summary="every map by area, with pictures and routes">
+          <button type="button" onClick={() => navigate("/maps")} className="font-semibold text-sky hover:underline">
+            Open the map browser →
+          </button>
+        </Section>
+
         <Section value="route" title="How to get there">
           <RouteView pack={pack} profile={profile} to={hero.mapId} />
         </Section>

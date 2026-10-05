@@ -20,6 +20,8 @@ import { navigate, useActiveProfile, usePack, usePackInfo, usePlatform, useProfi
 import { useUpdates } from "./updates";
 import { useNews } from "../features/news/store";
 import { NewsScreen } from "../features/news/NewsScreen";
+import { MapsScreen } from "../features/maps/MapsScreen";
+import { LevelUpBurst } from "../ui/LevelUpBurst";
 import { relativeTime } from "../features/characters/hooks";
 import { useNow } from "../features/guide/parts";
 
@@ -184,7 +186,10 @@ function TopBar() {
               </span>
             </span>
           </motion.button>
-          <Stepper label="Level" value={profile.level} min={1} max={rules.levelCap} onChange={(level) => store.getState().updateProfile(profile.id, (p) => ({ ...p, level }))} />
+          <span className="relative">
+            <Stepper label="Level" value={profile.level} min={1} max={rules.levelCap} onChange={(level) => store.getState().updateProfile(profile.id, (p) => ({ ...p, level }))} />
+            <LevelUpBurst level={profile.level} />
+          </span>
         </div>
       ) : (
         <Button variant="primary" onClick={() => navigate("/characters")}>
@@ -226,6 +231,8 @@ function Routes() {
       return <QuestsScreen />;
     case "/news":
       return <NewsScreen />;
+    case "/maps":
+      return <MapsScreen />;
     default:
       return <HomeScreen />;
   }
