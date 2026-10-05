@@ -1,0 +1,288 @@
+{
+  "regions": [
+    {
+      "id": "maple-island",
+      "name": "Maple Island",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        },
+        {
+          "kind": "official",
+          "label": "Nexon — MapleStory Classic World FAQ",
+          "url": "https://www.nexon.com/maplestory/news/general/45385",
+          "articleId": 45385,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    },
+    {
+      "id": "victoria-island",
+      "name": "Victoria Island",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        },
+        {
+          "kind": "official",
+          "label": "Nexon — MapleStory Classic World FAQ",
+          "url": "https://www.nexon.com/maplestory/news/general/45385",
+          "articleId": 45385,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    }
+  ],
+  "bosses": [
+    {
+      "id": "mano",
+      "name": "Mano",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    },
+    {
+      "id": "mushmom",
+      "name": "Mushmom",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    },
+    {
+      "id": "shade",
+      "name": "Shade",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    },
+    {
+      "id": "zombie-mushmom",
+      "name": "Zombie Mushmom",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    },
+    {
+      "id": "jr-balrog",
+      "name": "Jr. Balrog",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    }
+  ],
+  "partyQuests": [
+    {
+      "id": "first-time-together",
+      "name": "First Time Together",
+      "town": "Kerning City",
+      "minLevel": 21,
+      "finalBoss": "King Slime",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    }
+  ],
+  "crafting": [
+    {
+      "id": "smithing",
+      "name": "Smithing",
+      "npc": "Silas Irons",
+      "minLevel": 10,
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    },
+    {
+      "id": "weaponcrafting",
+      "name": "Weaponcrafting",
+      "npc": "Mr. Thunder",
+      "minLevel": 10,
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    },
+    {
+      "id": "tailoring",
+      "name": "Tailoring",
+      "npc": "Francois",
+      "minLevel": 10,
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    },
+    {
+      "id": "woodcrafting",
+      "name": "Woodcrafting",
+      "npc": "Vicious",
+      "minLevel": 10,
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    },
+    {
+      "id": "leatherworking",
+      "name": "Leatherworking",
+      "npc": "JM From tha Streetz",
+      "minLevel": 10,
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    },
+    {
+      "id": "arcforge",
+      "name": "Arcforge",
+      "npc": "Chrishrama",
+      "minLevel": 10,
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Nexon — Founder's Access Release Notes",
+          "url": "https://www.nexon.com/maplestory/news/general/45621",
+          "articleId": 45621,
+          "retrievedAt": "2026-10-05"
+        }
+      ],
+      "confidence": "verified",
+      "verifiedAt": "2026-10-05"
+    }
+  ],
+  "citizenship": {
+    "minLevel": 12,
+    "towns": [
+      {
+        "id": "henesys",
+        "name": "Henesys",
+        "npc": "Arthur",
+        "place": "Town Hall",
+        "sources": [
+          {
+            "kind": "official",
+            "label": "Nexon — Founder's Access Release Notes",
+            "url": "https://www.nexon.com/maplestory/news/general/45621",
+            "articleId": 45621,
+            "retrievedAt": "2026-10-05"
+          }
+        ],
+        "confidence": "verified",
+        "verifiedAt": "2026-10-05"
+      },
+      {
+        "id": "kerning",
+        "name": "Kerning City",
+        "npc": "Roxy",
+        "place": "Civic Center",
+        "sources": [
+          {
+            "kind": "official",
+            "label": "Nexon — Founder's Access Release Notes",
+            "url": "https://www.nexon.com/maplestory/news/general/45621",
+            "articleId": 45621,
+            "retrievedAt": "2026-10-05"
+          }
+        ],
+        "confidence": "verified",
+        "verifiedAt": "2026-10-05"
+      }
+    ]
+  }
+}

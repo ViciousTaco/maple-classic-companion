@@ -1,0 +1,5006 @@
+[
+  {
+    "mobId": "axe-stump",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "axe-stump",
+    "itemId": "firewood",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "axe-stump",
+    "itemId": "orihalcon-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "axe-stump",
+    "itemId": "plant-fossil",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "blue-mushroom",
+    "itemId": "black-knucklevest-pants",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "blue-mushroom",
+    "itemId": "blue-mushroom-cap",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "blue-mushroom",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "blue-mushroom",
+    "itemId": "gloves-crit-rate-scroll-greater",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "blue-mushroom",
+    "itemId": "gold-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "blue-mushroom",
+    "itemId": "green-loosecap",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "blue-mushroom",
+    "itemId": "red-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "bubbling",
+    "itemId": "arrows-for-bows",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "bubbling",
+    "itemId": "arrows-for-crossbows",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "bubbling",
+    "itemId": "battle-axe",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "bubbling",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "bubbling",
+    "itemId": "bubblings-huge-bubble",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "bubbling",
+    "itemId": "dankke",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "bubbling",
+    "itemId": "fish-spear",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "bubbling",
+    "itemId": "grey-able-armor",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "bubbling",
+    "itemId": "mithril-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "bubbling",
+    "itemId": "red-apprentice-hat",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "bubbling",
+    "itemId": "red-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "bubbling",
+    "itemId": "sapphire-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "bubbling",
+    "itemId": "triple-tipped-zamadar",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "clang",
+    "itemId": "clang-claw",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Clang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "cold-eye",
+    "itemId": "blue-starlight",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Cold_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "cold-eye",
+    "itemId": "brown-starlight",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Cold_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "cold-eye",
+    "itemId": "cold-eye-tail",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Cold_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "cold-eye",
+    "itemId": "white-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Cold_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "copper-drake",
+    "itemId": "drake-skull",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Copper_Drake",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "croco",
+    "itemId": "croco-skin",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Croco",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "axe-pole-arm",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "battle-shield",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "black-knucklevest",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "bronze-pride",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "curse-eye-tail",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "great-brown-helmet",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "green-distinction",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "green-matty",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "green-pilfer",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "lollipop",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "orange-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "orihalcon-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "scimitar",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "sniper-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "topaz-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "curse-eye",
+    "itemId": "topwear-mp-scroll-greater",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-axe-stump",
+    "itemId": "diamond-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-axe-stump",
+    "itemId": "firewood",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-axe-stump",
+    "itemId": "green-able-armor-skirt",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-axe-stump",
+    "itemId": "machete",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-axe-stump",
+    "itemId": "orange-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-axe-stump",
+    "itemId": "orihalcon-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-axe-stump",
+    "itemId": "sap-of-ancient-tree",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-axe-stump",
+    "itemId": "stumps-teardrop",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-axe-stump",
+    "itemId": "wooden-top",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-stump",
+    "itemId": "blue-qi-pao",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-stump",
+    "itemId": "bronze-helmet",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-stump",
+    "itemId": "garnet-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-stump",
+    "itemId": "iron-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-stump",
+    "itemId": "leaf",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-stump",
+    "itemId": "pole-arm",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "dark-stump",
+    "itemId": "red-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "drake",
+    "itemId": "drake-skull",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Drake",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "evil-eye",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Evil_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "evil-eye",
+    "itemId": "evil-eye-tail",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Evil_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "evil-eye",
+    "itemId": "yellow-square",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Evil_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "animal-fur-bundle",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "arwens-glass-shoe",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "black-amoria-skirt",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "blood-fitted-mail",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "brown-martial-arts-pants",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "diamond-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "earring-str-scroll-greater",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "fire-boars-tooth",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "firemans-axe",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "garnet-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "green-knucklevest",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "iron-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "leather",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "orange-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "red-amoria-skirt",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "red-guiltian",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "red-guise",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "red-hawkeye",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "red-matty",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "red-pilfer",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "red-viper",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "ryden",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "fire-boar",
+    "itemId": "wolbi-throwing-stars",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "animal-fossil",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "arrows-for-crossbows",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "claw-attack-scroll-intermediate",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "emerald-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "emerald-staff",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "fragment-of-magic",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "green-bennis-chainmail-male",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "green-feather-hat",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "green-mushroom-cap",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "green-woodsman-boots",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "mace",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "one-handed-axe-attack-scroll-greater",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "pan-lid",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "red-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "green-mushroom",
+    "itemId": "silver-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "arrows-for-bows",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "black-sneak-pants",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "blue-hawkeye",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "blue-shark",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "bronze-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "brown-jester",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "cutlus",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "horny-mushroom-cap",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "iron-dagger",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "magic-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "mithril-pole-arm",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "orange-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "sky-sneak-pants",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "steel-fingerless-gloves",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "horny-mushroom",
+    "itemId": "topaz-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "iron-hog",
+    "itemId": "animal-fur-bundle",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Iron_Hog",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "iron-hog",
+    "itemId": "iron-hogs-metal-hoof",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Iron_Hog",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-boogie-1",
+    "itemId": "iron-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Boogie_1",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-boogie-1",
+    "itemId": "jr-boogie-horn",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Boogie_1",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-necki",
+    "itemId": "jr-necki-skin",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Necki",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-necki",
+    "itemId": "mithril-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Necki",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-necki",
+    "itemId": "orange-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Necki",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "adamantium-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "bronze-wolfskin",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "dankke",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "dark-guise",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "dark-hawkeye",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "eloon",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "hat-accuracy-scroll-greater",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "mokbi-throwing-stars",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "opal-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "orange-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "red-jack-boots",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "tablecloth",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "white-doros-robe",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "wooden-buckler",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "jr-wraith",
+    "itemId": "yellow-jangoon-armor",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "ligator",
+    "itemId": "aquamarine-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ligator",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "ligator",
+    "itemId": "heavy-hammer",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ligator",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "ligator",
+    "itemId": "ligator-skin",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ligator",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "ligator",
+    "itemId": "mithril-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ligator",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "ligator",
+    "itemId": "plunger",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ligator",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "black-dragon-robe",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "cats-eye",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "dark-brown-stealer-pants",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "garnet-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "korean-fan",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "lorang-claw",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "orange-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "orihalcon-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "purple-steal",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "purple-steal-pants",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "purple-tube",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "red-gold-stealer",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "red-silky-boots",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lorang",
+    "itemId": "sky-blue-umbrella",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lupin",
+    "itemId": "aluminum-baseball-bat",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lupin",
+    "itemId": "animal-fur-bundle",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lupin",
+    "itemId": "bronze-chain-boots",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lupin",
+    "itemId": "kumbi-throwing-stars",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lupin",
+    "itemId": "leather",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lupin",
+    "itemId": "lupin-doll",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lupin",
+    "itemId": "lupins-banana",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lupin",
+    "itemId": "orange-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "lupin",
+    "itemId": "silver-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "malady",
+    "itemId": "black-crystal-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Malady",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "malady",
+    "itemId": "maladys-experimental-frog",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Malady",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "mano",
+    "itemId": "rainbow-colored-snail-shell",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mano",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "mano",
+    "itemId": "scroll-crafting-stimulator",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mano",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "mushmom",
+    "itemId": "gloves-attack-scroll-intermediate",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "mushmom",
+    "itemId": "ilbi-throwing-stars",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "mushmom",
+    "itemId": "mushmom-spore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "mushmom",
+    "itemId": "orange-whitebottom-boots",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "octopus",
+    "itemId": "adamantium-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "octopus",
+    "itemId": "aquamarine-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "octopus",
+    "itemId": "brown-winter-hat",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "octopus",
+    "itemId": "fragment-of-magic",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "octopus",
+    "itemId": "octopus-leg",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "octopus",
+    "itemId": "omok-piece-octopus",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "octopus",
+    "itemId": "red-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "octopus",
+    "itemId": "red-thief-hood",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "octopus",
+    "itemId": "red-tiberian",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "pig",
+    "itemId": "animal-fur-bundle",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "pig",
+    "itemId": "leather",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "pig",
+    "itemId": "pigs-head",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "pig",
+    "itemId": "red-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "pig",
+    "itemId": "stiff-feather",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "ribbon-pig",
+    "itemId": "amethyst-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "ribbon-pig",
+    "itemId": "animal-fur-bundle",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "ribbon-pig",
+    "itemId": "leather",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "ribbon-pig",
+    "itemId": "mithril-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "ribbon-pig",
+    "itemId": "pigs-head",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "ribbon-pig",
+    "itemId": "pigs-ribbon",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "ribbon-pig",
+    "itemId": "stiff-feather",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "slime",
+    "itemId": "arrows-for-bows",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "slime",
+    "itemId": "arrows-for-crossbows",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "slime",
+    "itemId": "bronze-koif",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "slime",
+    "itemId": "lemona",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "slime",
+    "itemId": "metal-axe",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "slime",
+    "itemId": "omok-piece-slime",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "slime",
+    "itemId": "orihalcon-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "slime",
+    "itemId": "red-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "slime",
+    "itemId": "sandblasted-jeans",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "slime",
+    "itemId": "sapphire-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "slime",
+    "itemId": "slime-bubble",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "slime",
+    "itemId": "squishy-liquid",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "slime",
+    "itemId": "white-bandana",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "animal-fur-bundle",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "blue-basic-boots",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "broken-mirror-glass",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "brown-sneak-pants",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "cape-magic-def-scroll-greater",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "fragment-of-magic",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "garnet-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "heckler",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "iron-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "lemon",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "orange-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "red-starry-bandana",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "stiff-feather",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "stirge-wing",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stirge",
+    "itemId": "work-gloves",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stump",
+    "itemId": "arrows-for-crossbows",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stump",
+    "itemId": "bronze-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stump",
+    "itemId": "emerald-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stump",
+    "itemId": "omok-table",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stump",
+    "itemId": "tree-branch",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stump",
+    "itemId": "wooden-club",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "stump",
+    "itemId": "wooden-staff",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "tortie",
+    "itemId": "tortie-shell",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tortie",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "adamantium-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "animal-fur-bundle",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "blue-jester",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "blue-knucklevest-pants",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "eagle-crow",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "forked-dagger",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "leather",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "opal-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "orange-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "ryden",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "warrior-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "weighted-earrings",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-boar",
+    "itemId": "wild-boar-tooth",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wraith",
+    "itemId": "medicine-with-weird-vibes",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-lupin",
+    "itemId": "black-napoleon",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-lupin",
+    "itemId": "cursed-doll",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-lupin",
+    "itemId": "lionheart",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-lupin",
+    "itemId": "white-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushmom",
+    "itemId": "earring-crit-damage-scroll-greater",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushmom",
+    "itemId": "earring-crit-damage-scroll-intermediate",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushmom",
+    "itemId": "equipment-crafting-stimulator",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushmom",
+    "itemId": "ilbi-throwing-stars",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushmom",
+    "itemId": "poisonous-mushroom",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushmom",
+    "itemId": "scroll-crafting-stimulator",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushroom",
+    "itemId": "blue-chaos-robe",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushroom",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushroom",
+    "itemId": "charm-of-the-undead",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushroom",
+    "itemId": "claw-attack-scroll-intermediate",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushroom",
+    "itemId": "dexterity-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushroom",
+    "itemId": "gold-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushroom",
+    "itemId": "nakamaki",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushroom",
+    "itemId": "orange-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushroom",
+    "itemId": "pink-jester",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushroom",
+    "itemId": "spear-attack-scroll-greater",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushroom",
+    "itemId": "weighted-earrings",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "zombie-mushroom",
+    "itemId": "white-chaos-robe",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  }
+]

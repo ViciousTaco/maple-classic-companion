@@ -1,0 +1,866 @@
+[
+  {
+    "id": "another-sanctuary",
+    "name": "Another Sanctuary",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "golden-stirge",
+        "count": 3
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "collision-of-ice-and-fire",
+    "name": "Collision of Ice and Fire",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "glowshroom",
+        "count": 11
+      },
+      {
+        "mobId": "aqumander",
+        "count": 15
+      },
+      {
+        "mobId": "rafflesia",
+        "count": 7
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "decayed-tunnel-iii",
+    "name": "Decayed Tunnel III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "golden-stirge",
+        "count": 2
+      },
+      {
+        "mobId": "rafflesia",
+        "count": 7
+      },
+      {
+        "mobId": "myewood",
+        "count": 6
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Myewood",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "forgotten-entrance-i",
+    "name": "Forgotten Entrance I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "raffle",
+        "count": 11
+      },
+      {
+        "mobId": "golden-stirge",
+        "count": 2
+      },
+      {
+        "mobId": "echopus",
+        "count": 8
+      },
+      {
+        "mobId": "rafflesia",
+        "count": 2
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "primeval-forest-i",
+    "name": "Primeval Forest I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "aqumander",
+        "count": 8
+      },
+      {
+        "mobId": "rafflesia",
+        "count": 8
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "primeval-forest-ii",
+    "name": "Primeval Forest II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "golden-stirge",
+        "count": 2
+      },
+      {
+        "mobId": "aqumander",
+        "count": 8
+      },
+      {
+        "mobId": "rafflesia",
+        "count": 8
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "primeval-forest-iii",
+    "name": "Primeval Forest III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "echopus",
+        "count": 5
+      },
+      {
+        "mobId": "rafflesia",
+        "count": 6
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-end-of-fleeting-light",
+    "name": "The End of Fleeting Light",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "aqumander",
+        "count": 9
+      },
+      {
+        "mobId": "rafflesia",
+        "count": 11
+      },
+      {
+        "mobId": "duskmander",
+        "count": 7
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Duskmander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-faded-canopy",
+    "name": "The Faded Canopy",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "glowshroom",
+        "count": 10
+      },
+      {
+        "mobId": "raffle",
+        "count": 8
+      },
+      {
+        "mobId": "echopus",
+        "count": 7
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "decayed-tunnel-i",
+    "name": "Decayed Tunnel I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "evil-eye",
+        "count": 9
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Evil_Eye",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Duskmander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "decayed-tunnel-ii",
+    "name": "Decayed Tunnel II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "zombie-lupin",
+        "count": 7
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Lupin",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "dilapidated-tomb",
+    "name": "Dilapidated Tomb",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "fairy-2",
+        "count": 3
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fairy_2",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "forbidden-entrance",
+    "name": "Forbidden Entrance",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "zombie-mushroom",
+        "count": 4
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Duskmander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "forgotten-dungeon-tunnel",
+    "name": "Forgotten Dungeon Tunnel",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "curse-eye",
+        "count": 4
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "forgotten-entrance-ii",
+    "name": "Forgotten Entrance II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "lupin",
+        "count": 8
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "forgotten-entrance-iii",
+    "name": "Forgotten Entrance III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "curse-eye",
+        "count": 11
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "lingering-regret",
+    "name": "Lingering Regret",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "fairy-4",
+        "count": 3
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fairy_4",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Myewood",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "perilous-descent-i",
+    "name": "Perilous Descent I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "zombie-mushroom",
+        "count": 6
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Myewood",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "perilous-descent-ii",
+    "name": "Perilous Descent II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "zombie-mushroom",
+        "count": 8
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Myewood",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "perilous-descent-iii",
+    "name": "Perilous Descent III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "zombie-mushroom",
+        "count": 4
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Myewood",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "precipice-of-darkness",
+    "name": "Precipice of Darkness",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "zombie-mushroom",
+        "count": 2
+      },
+      {
+        "mobId": "zombie-lupin",
+        "count": 5
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Lupin",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Duskmander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "someone-elses-grave",
+    "name": "Someone Else's Grave",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "zombie-mushroom",
+        "count": 2
+      },
+      {
+        "mobId": "fairy-3",
+        "count": 1
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Someone_Else%27s_Grave",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-valley-of-death",
+    "name": "The Valley of Death",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "zombie-mushroom",
+        "count": 8
+      },
+      {
+        "mobId": "zombie-lupin",
+        "count": 8
+      }
+    ],
+    "links": [],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Lupin",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  }
+]

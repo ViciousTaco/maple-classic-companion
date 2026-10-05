@@ -1,0 +1,45 @@
+node_modules/
+dist/
+dist-datapack/
+src-tauri/target/
+MapleClassicCompanion-data/
+field-notes/
+*.key
+.env*
+
+# --- from Tauri scaffold ---
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- kept inside the project but never committed ---
+.cache/
+.tmp/
+.keys/
+test-run/
+
+# The app itself lives at the project root (the owner, 2026-10-05); its data folder MapleClassicCompanion-data/ is ignored above.
+/MapleClassicCompanion.exe
+public/baseline/
+.claude/

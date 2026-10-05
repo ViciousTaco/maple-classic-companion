@@ -1,0 +1,273 @@
+[
+  {
+    "id": "bari",
+    "name": "Bari",
+    "mapId": "southperry",
+    "role": "Ambient NPC (Pio's nephew)",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Southperry",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "biggs",
+    "name": "Biggs",
+    "mapId": "southperry",
+    "role": "Quest giver (collection-quest tutorial)",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Southperry",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "lucas",
+    "name": "Lucas",
+    "mapId": "amherst",
+    "role": "Quest turn-in (Maria's letter)",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Amherst",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "lucy",
+    "name": "Lucy",
+    "mapId": "amherst",
+    "role": "Grocer - in Amherst Department Store",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Amherst",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "mai",
+    "name": "Mai",
+    "mapId": "a-split-road",
+    "role": "Quest giver (hunting-training chain)",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Split_Road",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "maple-administrator",
+    "name": "Maple Administrator",
+    "mapId": "amherst",
+    "role": "Tutorial guide",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Amherst",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "maria",
+    "name": "Maria",
+    "mapId": "a-split-road",
+    "role": "Quest giver (letter-delivery tutorial)",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Split_Road",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "pan",
+    "name": "Pan",
+    "mapId": "southperry",
+    "role": "Armor Seller - in Southperry Armor Store",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Southperry",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "peter",
+    "name": "Peter",
+    "mapId": "east-entrance-to-mushroom-town",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/East_Entrance_to_Mushroom_Town",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "pio",
+    "name": "Pio",
+    "mapId": "amherst",
+    "role": "Quest giver (recycling-collection tutorial)",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Amherst",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "rain",
+    "name": "Rain",
+    "mapId": "amherst",
+    "role": "Quest giver (Maple Quiz)",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Amherst",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "robin",
+    "name": "Robin",
+    "mapId": "snail-hunting-ground-i",
+    "role": "Tutorial NPC; information desk",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail_Hunting_Ground_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "sam-maple-island",
+    "name": "Sam (Maple Island)",
+    "mapId": "snail-hunting-ground-i",
+    "role": "Tutorial NPC; quest giver (kill-quest tutorial)",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail_Hunting_Ground_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "shanks",
+    "name": "Shanks",
+    "mapId": "southperry",
+    "role": "Transport (boat captain to Victoria Island)",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Southperry",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "sid",
+    "name": "Sid",
+    "mapId": "amherst",
+    "role": "Weapon Seller - in Amherst Weapon Store",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Amherst",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "todd",
+    "name": "Todd",
+    "mapId": "east-entrance-to-mushroom-town",
+    "role": "Tutorial NPC; quest giver (combat tutorial)",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/East_Entrance_to_Mushroom_Town",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "yoona",
+    "name": "Yoona",
+    "mapId": "southperry",
+    "role": "Ambient NPC",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Southperry",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  }
+]

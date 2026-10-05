@@ -1,0 +1,29 @@
+# Daily: marks guide videos that YouTube no longer serves as "removed" and opens a PR. Convenience only —
+# GitHub pauses scheduled workflows after 60 days without repo activity (re-enable from the Actions tab).
+name: Video check
+on:
+  schedule: [{ cron: "17 3 * * *" }]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npx tsx scripts/check-videos.ts
+      - name: Open a PR if anything changed
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          if git diff --quiet datapack/videos.json; then echo "No changes"; exit 0; fi
+          branch="video-check-$(date +%Y%m%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git commit -am "data: mark removed videos"
+          git push -u origin "$branch"
+          gh pr create --title "Videos removed from YouTube" --body "Automated daily video check." --base main

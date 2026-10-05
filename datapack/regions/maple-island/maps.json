@@ -1,0 +1,772 @@
+[
+  {
+    "id": "amherst",
+    "name": "Amherst",
+    "region": "maple-island",
+    "isTown": true,
+    "spawns": [],
+    "links": [
+      {
+        "to": "amherst-townstreet",
+        "kind": "portal"
+      },
+      {
+        "to": "the-field-east-of-amherst",
+        "kind": "portal"
+      },
+      {
+        "to": "the-field-west-of-amherst",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "lucas",
+      "lucy",
+      "maple-administrator",
+      "pio",
+      "rain",
+      "sid"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Amherst",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/4/41/Amherst.png/800px-Amherst.png"
+  },
+  {
+    "id": "amherst-townstreet",
+    "name": "Amherst Townstreet",
+    "region": "maple-island",
+    "isTown": true,
+    "spawns": [],
+    "links": [
+      {
+        "to": "amherst",
+        "kind": "portal"
+      },
+      {
+        "to": "snail-field-of-flowers",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Amherst_Townstreet",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/29/Amherst_Townstreet.png/800px-Amherst_Townstreet.png"
+  },
+  {
+    "id": "southperry",
+    "name": "Southperry",
+    "region": "maple-island",
+    "isTown": true,
+    "spawns": [],
+    "links": [
+      {
+        "to": "a-split-road",
+        "kind": "portal"
+      },
+      {
+        "to": "lith-harbor",
+        "kind": "ship",
+        "costMeso": 300,
+        "note": "Shanks's boat to Victoria Island"
+      }
+    ],
+    "npcIds": [
+      "bari",
+      "biggs",
+      "pan",
+      "shanks",
+      "yoona"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Southperry",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/e/ef/Southperry.png/800px-Southperry.png"
+  },
+  {
+    "id": "a-split-road",
+    "name": "A Split Road",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 17
+      },
+      {
+        "mobId": "shroom",
+        "count": 14
+      },
+      {
+        "mobId": "red-snail",
+        "count": 11
+      }
+    ],
+    "links": [
+      {
+        "to": "snail-hunting-ground-iii",
+        "kind": "portal"
+      },
+      {
+        "to": "southperry",
+        "kind": "portal"
+      },
+      {
+        "to": "the-field-west-of-amherst",
+        "kind": "portal"
+      },
+      {
+        "to": "snail-hunting-ground-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "mai",
+      "maria"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Split_Road",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/b/b6/A_Split_Road.png/800px-A_Split_Road.png"
+  },
+  {
+    "id": "dangerous-forest",
+    "name": "Dangerous Forest",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 14
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 3
+      },
+      {
+        "mobId": "red-snail",
+        "count": 5
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 12
+      }
+    ],
+    "links": [
+      {
+        "to": "the-field-west-of-amherst",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dangerous_Forest",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/6/67/Dangerous_Forest.png/800px-Dangerous_Forest.png"
+  },
+  {
+    "id": "east-entrance-to-mushroom-town",
+    "name": "East Entrance to Mushroom Town",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "tutorial-jr-sentinel",
+        "count": 3,
+        "respawnSec": 1
+      }
+    ],
+    "links": [
+      {
+        "to": "snail-hunting-ground-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "peter",
+      "todd"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/East_Entrance_to_Mushroom_Town",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/f7/East_Entrance_to_Mushroom_Town.png/800px-East_Entrance_to_Mushroom_Town.png"
+  },
+  {
+    "id": "hunting-ground-middle-of-the-forest-i",
+    "name": "Hunting Ground Middle of the Forest I",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 14
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 12
+      },
+      {
+        "mobId": "shroom",
+        "count": 10
+      },
+      {
+        "mobId": "red-snail",
+        "count": 8
+      }
+    ],
+    "links": [
+      {
+        "to": "the-field-west-of-amherst",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Hunting_Ground_Middle_of_the_Forest_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/a/ad/Hunting_Ground_Middle_of_the_Forest_I.png/800px-Hunting_Ground_Middle_of_the_Forest_I.png"
+  },
+  {
+    "id": "hunting-ground-middle-of-the-forest-ii",
+    "name": "Hunting Ground Middle of the Forest II",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 10
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 16
+      },
+      {
+        "mobId": "shroom",
+        "count": 7
+      },
+      {
+        "mobId": "red-snail",
+        "count": 6
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 6
+      }
+    ],
+    "links": [
+      {
+        "to": "the-field-west-of-amherst",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Hunting_Ground_Middle_of_the_Forest_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/2e/Hunting_Ground_Middle_of_the_Forest_II.png/800px-Hunting_Ground_Middle_of_the_Forest_II.png"
+  },
+  {
+    "id": "in-a-small-forest",
+    "name": "In a Small Forest",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 12
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 7
+      },
+      {
+        "mobId": "shroom",
+        "count": 12
+      },
+      {
+        "mobId": "red-snail",
+        "count": 5
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 4
+      }
+    ],
+    "links": [
+      {
+        "to": "the-field-west-of-amherst",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/In_a_Small_Forest",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/c/c2/In_a_Small_Forest.png/800px-In_a_Small_Forest.png"
+  },
+  {
+    "id": "mushroom-garden-maple-island",
+    "name": "Mushroom Garden (Maple Island)",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 7
+      },
+      {
+        "mobId": "shroom",
+        "count": 23
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 5
+      }
+    ],
+    "links": [
+      {
+        "to": "the-field-west-of-amherst",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushroom_Garden_(Maple_Island)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/7/76/Mushroom_Garden.png/800px-Mushroom_Garden.png"
+  },
+  {
+    "id": "snail-field-of-flowers",
+    "name": "Snail Field of Flowers",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 6
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 10
+      },
+      {
+        "mobId": "red-snail",
+        "count": 12
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 6
+      }
+    ],
+    "links": [
+      {
+        "to": "amherst-townstreet",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail_Field_of_Flowers",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/6/6a/Snail_Field_of_Flowers.png/800px-Snail_Field_of_Flowers.png"
+  },
+  {
+    "id": "snail-garden",
+    "name": "Snail Garden",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 11
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 19
+      },
+      {
+        "mobId": "red-snail",
+        "count": 11
+      }
+    ],
+    "links": [
+      {
+        "to": "the-field-west-of-amherst",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail_Garden",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/e/ec/Snail_Garden.png/800px-Snail_Garden.png"
+  },
+  {
+    "id": "snail-hunting-ground-i",
+    "name": "Snail Hunting Ground I",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 17
+      }
+    ],
+    "links": [
+      {
+        "to": "snail-hunting-ground-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "east-entrance-to-mushroom-town",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "robin",
+      "sam-maple-island"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail_Hunting_Ground_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/9/9c/Snail_Hunting_Ground_I.png/800px-Snail_Hunting_Ground_I.png"
+  },
+  {
+    "id": "snail-hunting-ground-ii",
+    "name": "Snail Hunting Ground II",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 32
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 13
+      }
+    ],
+    "links": [
+      {
+        "to": "snail-hunting-ground-i",
+        "kind": "portal"
+      },
+      {
+        "to": "snail-hunting-ground-iii",
+        "kind": "portal"
+      },
+      {
+        "to": "a-split-road",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail_Hunting_Ground_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/0f/Snail_Hunting_Ground_II.png/800px-Snail_Hunting_Ground_II.png"
+  },
+  {
+    "id": "snail-hunting-ground-iii",
+    "name": "Snail Hunting Ground III",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 20
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 21
+      },
+      {
+        "mobId": "red-snail",
+        "count": 1
+      }
+    ],
+    "links": [
+      {
+        "to": "a-split-road",
+        "kind": "portal"
+      },
+      {
+        "to": "snail-hunting-ground-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail_Hunting_Ground_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/3/37/Snail_Hunting_Ground_III.png/800px-Snail_Hunting_Ground_III.png"
+  },
+  {
+    "id": "the-field-east-of-amherst",
+    "name": "The Field East of Amherst",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 3
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 11
+      },
+      {
+        "mobId": "red-snail",
+        "count": 12
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 12
+      }
+    ],
+    "links": [
+      {
+        "to": "amherst",
+        "kind": "portal"
+      },
+      {
+        "to": "tomato-field",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Field_East_of_Amherst",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/b/b1/The_Field_East_of_Amherst.png/800px-The_Field_East_of_Amherst.png"
+  },
+  {
+    "id": "the-field-west-of-amherst",
+    "name": "The Field West of Amherst",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 7
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 13
+      },
+      {
+        "mobId": "shroom",
+        "count": 17
+      },
+      {
+        "mobId": "red-snail",
+        "count": 24
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 5
+      }
+    ],
+    "links": [
+      {
+        "to": "a-split-road",
+        "kind": "portal"
+      },
+      {
+        "to": "amherst",
+        "kind": "portal"
+      },
+      {
+        "to": "dangerous-forest",
+        "kind": "portal"
+      },
+      {
+        "to": "hunting-ground-middle-of-the-forest-i",
+        "kind": "portal"
+      },
+      {
+        "to": "hunting-ground-middle-of-the-forest-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "in-a-small-forest",
+        "kind": "portal"
+      },
+      {
+        "to": "mushroom-garden-maple-island",
+        "kind": "portal"
+      },
+      {
+        "to": "snail-garden",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Field_West_of_Amherst",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/01/The_Field_West_of_Amherst.png/800px-The_Field_West_of_Amherst.png"
+  },
+  {
+    "id": "tomato-field",
+    "name": "Tomato Field",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 9
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 8
+      },
+      {
+        "mobId": "red-snail",
+        "count": 4
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 4
+      }
+    ],
+    "links": [
+      {
+        "to": "the-field-east-of-amherst",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tomato_Field",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/a/ad/Tomato_Field.png/800px-Tomato_Field.png"
+  }
+]

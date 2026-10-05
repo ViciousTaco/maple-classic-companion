@@ -1,0 +1,253 @@
+[
+  {
+    "id": "founders-access-opens",
+    "title": "Founder's Access opens",
+    "kind": "event",
+    "windows": [
+      {
+        "startUtc": "2026-10-06T18:00:00Z",
+        "endUtc": null
+      }
+    ],
+    "howTo": "Founder's Package owners can play from this moment.",
+    "rewards": "",
+    "articleId": 45621,
+    "articleHash": "5e82b958d6881667735ed020810de1bb2fda23d351fb2db679457e762355d25f",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "grand-launch",
+    "title": "Grand Launch",
+    "kind": "event",
+    "windows": [
+      {
+        "startUtc": "2026-10-21T18:00:00Z",
+        "endUtc": null
+      }
+    ],
+    "howTo": "MapleStory Classic World opens to everyone.",
+    "rewards": "",
+    "articleId": 45385,
+    "articleHash": "833d454d6c33ecc420f75e4bac4c6baebdb01934fd5883e2498549d4b6748e40",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — MapleStory Classic World FAQ",
+        "url": "https://www.nexon.com/maplestory/news/general/45385",
+        "articleId": 45385,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "founders-first-step",
+    "title": "Founder's First Step",
+    "kind": "event",
+    "windows": [
+      {
+        "startUtc": "2026-10-06T18:00:00Z",
+        "endUtc": "2026-10-20T23:59:00Z"
+      }
+    ],
+    "minLevel": 10,
+    "howTo": "Once you reach Lv 10, talk to Maple Administrator to accept the '[Event] Founder's First Step' quest. Rewards follow cumulative check-in days, once per account per day.",
+    "rewards": "Day 1, Days 2–7 and Days 8–14 reward sets (potions, megaphones, Leaf Points coupons, Atmospheric Effect Boxes) — see the article.",
+    "articleId": 45621,
+    "articleHash": "5e82b958d6881667735ed020810de1bb2fda23d351fb2db679457e762355d25f",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "gm-event-jump-quest",
+    "title": "GM event: physical fitness jump quest",
+    "kind": "gm-event",
+    "windows": [
+      {
+        "startUtc": "2026-10-07T00:00:00Z",
+        "endUtc": "2026-10-07T02:00:00Z"
+      },
+      {
+        "startUtc": "2026-10-14T00:00:00Z",
+        "endUtc": "2026-10-14T02:00:00Z"
+      }
+    ],
+    "howTo": "Talk to Paul at Lith Harbor to move to the event map. Not available if you own a Scroll of Secrets or joined a GM event in the past 24 hours. Finish the jump quest within 15 minutes; Haste and Teleport are disabled.",
+    "rewards": "Scroll of Secrets",
+    "articleId": 45621,
+    "articleHash": "5e82b958d6881667735ed020810de1bb2fda23d351fb2db679457e762355d25f",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "gm-event-coconut",
+    "title": "GM event: coconut harvest (teams)",
+    "kind": "gm-event",
+    "windows": [
+      {
+        "startUtc": "2026-10-12T00:00:00Z",
+        "endUtc": "2026-10-12T02:00:00Z"
+      }
+    ],
+    "howTo": "Talk to Paul at Lith Harbor to move to the event map. Not available if you own a Scroll of Secrets or joined a GM event in the past 24 hours. Two teams hit coconut trees with melee attacks for 5 minutes; ranged attacks and skills are disabled.",
+    "rewards": "Scroll of Secrets (winning team)",
+    "articleId": 45621,
+    "articleHash": "5e82b958d6881667735ed020810de1bb2fda23d351fb2db679457e762355d25f",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "gm-event-portal-climb",
+    "title": "GM event: three-stage portal climb",
+    "kind": "gm-event",
+    "windows": [
+      {
+        "startUtc": "2026-10-09T00:00:00Z",
+        "endUtc": "2026-10-09T02:00:00Z"
+      },
+      {
+        "startUtc": "2026-10-19T00:00:00Z",
+        "endUtc": "2026-10-19T02:00:00Z"
+      }
+    ],
+    "howTo": "Talk to Paul at Lith Harbor to move to the event map. Not available if you own a Scroll of Secrets or joined a GM event in the past 24 hours. Pick the right portals through three stages before time runs out.",
+    "rewards": "Scroll of Secrets",
+    "articleId": 45621,
+    "articleHash": "5e82b958d6881667735ed020810de1bb2fda23d351fb2db679457e762355d25f",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "gm-event-town-invasion",
+    "title": "GM event: monsters in town",
+    "kind": "gm-event",
+    "windows": [
+      {
+        "startUtc": "2026-10-11T01:00:00Z",
+        "endUtc": "2026-10-11T02:00:00Z"
+      },
+      {
+        "startUtc": "2026-10-16T01:00:00Z",
+        "endUtc": "2026-10-16T02:00:00Z"
+      },
+      {
+        "startUtc": "2026-10-20T01:00:00Z",
+        "endUtc": "2026-10-20T02:00:00Z"
+      }
+    ],
+    "howTo": "GMs summon monsters (Mano, King Slime, Mushmom, Zombie Mushmom, Jr. Balrog) across towns — team up to defeat them. Death penalties don't apply in town.",
+    "rewards": "Per-boss rewards — see the article.",
+    "articleId": 45621,
+    "articleHash": "5e82b958d6881667735ed020810de1bb2fda23d351fb2db679457e762355d25f",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "founders-package-sale-ends",
+    "title": "Founder's Package sale ends",
+    "kind": "deadline",
+    "windows": [
+      {
+        "startUtc": "2026-10-15T06:59:00Z",
+        "endUtc": null
+      }
+    ],
+    "howTo": "Last moment to buy or upgrade a Founder's Package (11:59 PM PDT, 14 Oct).",
+    "rewards": "",
+    "articleId": 45385,
+    "articleHash": "833d454d6c33ecc420f75e4bac4c6baebdb01934fd5883e2498549d4b6748e40",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — MapleStory Classic World FAQ",
+        "url": "https://www.nexon.com/maplestory/news/general/45385",
+        "articleId": 45385,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "founders-package-claim-deadline",
+    "title": "Claim your Founder's Package items",
+    "kind": "deadline",
+    "windows": [
+      {
+        "startUtc": "2026-11-30T23:59:00Z",
+        "endUtc": null
+      }
+    ],
+    "howTo": "Collect the items from your in-game mailbox before this time or they expire.",
+    "rewards": "",
+    "articleId": 45385,
+    "articleHash": "833d454d6c33ecc420f75e4bac4c6baebdb01934fd5883e2498549d4b6748e40",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — MapleStory Classic World FAQ",
+        "url": "https://www.nexon.com/maplestory/news/general/45385",
+        "articleId": 45385,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  }
+]

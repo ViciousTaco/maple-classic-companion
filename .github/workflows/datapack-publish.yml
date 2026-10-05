@@ -1,0 +1,47 @@
+# Validates, builds and signs the guide data, then publishes it (and releases/latest.json) to GitHub Pages.
+# The app checks https://vicioustaco.github.io/maple-classic-companion/ on launch and every 30 minutes.
+name: Publish guide data
+on:
+  push:
+    branches: [main]
+    paths: ["datapack/**", "releases/**", "src/data/**", "src/features/news/schema.ts", "scripts/**", ".github/workflows/datapack-publish.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run datapack:validate
+      - run: npm run datapack:build
+      - name: Sign the manifest
+        env:
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.MCC_SIGNING_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.MCC_SIGNING_KEY_PASSWORD }}
+        run: npx tsx scripts/sign.ts dist-datapack/manifest.json
+      - name: Assemble the site
+        run: |
+          mkdir -p site/datapack
+          cp dist-datapack/* site/datapack/
+          if [ -d releases ]; then cp -r releases site/; fi
+          printf '<!doctype html><meta charset="utf-8"><title>Maple Classic Companion feed</title><p>Guide-data feed for a personal, non-commercial fan app. Not affiliated with Nexon.</p>' > site/index.html
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

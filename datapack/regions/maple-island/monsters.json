@@ -1,0 +1,154 @@
+[
+  {
+    "id": "snail",
+    "name": "Snail",
+    "level": 1,
+    "hp": 45,
+    "exp": 2,
+    "mp": 30,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 33,
+    "avoid": 0,
+    "boss": false,
+    "mesoMin": 1,
+    "mesoMax": 2,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d2/Snail.png"
+  },
+  {
+    "id": "tutorial-jr-sentinel",
+    "name": "Tutorial Jr. Sentinel",
+    "level": 1,
+    "hp": 30,
+    "exp": 1,
+    "mp": 30,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 33,
+    "avoid": 0,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tutorial_Jr._Sentinel",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/78/Tutorial_Jr._Sentinel.png"
+  },
+  {
+    "id": "blue-snail",
+    "name": "Blue Snail",
+    "level": 2,
+    "hp": 51,
+    "exp": 4,
+    "mp": 30,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 39,
+    "avoid": 0,
+    "boss": false,
+    "mesoMin": 2,
+    "mesoMax": 4,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/b1/Blue_Snail.webp"
+  },
+  {
+    "id": "shroom",
+    "name": "Shroom",
+    "level": 3,
+    "hp": 62,
+    "exp": 6,
+    "mp": 30,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 44,
+    "avoid": 0,
+    "boss": false,
+    "mesoMin": 4,
+    "mesoMax": 6,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/17/Shroom.png"
+  },
+  {
+    "id": "red-snail",
+    "name": "Red Snail",
+    "level": 4,
+    "hp": 68,
+    "exp": 8,
+    "mp": 30,
+    "pdef": 0,
+    "mdef": 30,
+    "accuracy": 45,
+    "avoid": 0,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/04/Red_Snail.webp"
+  },
+  {
+    "id": "orange-mushroom",
+    "name": "Orange Mushroom",
+    "level": 8,
+    "hp": 142,
+    "exp": 15,
+    "mp": 30,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 62,
+    "avoid": 0,
+    "boss": false,
+    "mesoMin": 10,
+    "mesoMax": 18,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Orange_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/bb/Orange_mushroom.png"
+  }
+]

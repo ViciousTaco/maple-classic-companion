@@ -1,0 +1,992 @@
+[
+  {
+    "mobId": "aqumander",
+    "itemId": "aquamarine-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "aqumander",
+    "itemId": "aqumander-tail",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "aqumander",
+    "itemId": "blue-burgler",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "aqumander",
+    "itemId": "blue-pilfer",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "aqumander",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "aqumander",
+    "itemId": "brown-piettra",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "aqumander",
+    "itemId": "brown-piettra-skirt",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "aqumander",
+    "itemId": "mithril-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "aqumander",
+    "itemId": "white-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "duskmander",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Duskmander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "duskmander",
+    "itemId": "duskmander-tail",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Duskmander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "duskmander",
+    "itemId": "sai",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Duskmander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "duskmander",
+    "itemId": "silver-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Duskmander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "duskmander",
+    "itemId": "white-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Duskmander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "echopus",
+    "itemId": "blue-calaf",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "echopus",
+    "itemId": "blue-counter",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "echopus",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "echopus",
+    "itemId": "echopus-leg",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "echopus",
+    "itemId": "orihalcon-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "echopus",
+    "itemId": "white-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "glowshroom",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "glowshroom",
+    "itemId": "blue-steal-pants",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "glowshroom",
+    "itemId": "emerald-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "glowshroom",
+    "itemId": "glowing-mushroom-spore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "glowshroom",
+    "itemId": "halfmoon-zamadar",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "glowshroom",
+    "itemId": "orange-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "glowshroom",
+    "itemId": "silver-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "golden-stirge",
+    "itemId": "animal-fur-bundle",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "golden-stirge",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "golden-stirge",
+    "itemId": "gold-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "golden-stirge",
+    "itemId": "golden-stirge-wing",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "golden-stirge",
+    "itemId": "white-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "myewood",
+    "itemId": "fragment-of-magic",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Myewood",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "myewood",
+    "itemId": "giant-trees-bough",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Myewood",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "myewood",
+    "itemId": "iron-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Myewood",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "myewood",
+    "itemId": "white-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Myewood",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "raffle",
+    "itemId": "adamantium-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "raffle",
+    "itemId": "amethyst-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "raffle",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "raffle",
+    "itemId": "raffle-petal",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "raffle",
+    "itemId": "red-matty",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "raffle",
+    "itemId": "red-steal",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "raffle",
+    "itemId": "vaulter-2000",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "raffle",
+    "itemId": "white-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "raffle",
+    "itemId": "yellow-umbrella",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "rafflesia",
+    "itemId": "blue-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "rafflesia",
+    "itemId": "bronze-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "rafflesia",
+    "itemId": "brown-piette-pants",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "rafflesia",
+    "itemId": "earring-luk-scroll-intermediate",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "rafflesia",
+    "itemId": "jeweled-katar",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "rafflesia",
+    "itemId": "opal-ore",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "rafflesia",
+    "itemId": "orange-golden-circlet",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "rafflesia",
+    "itemId": "rafflesia-petal",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "rafflesia",
+    "itemId": "red-burgler",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "rafflesia",
+    "itemId": "white-potion",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  }
+]

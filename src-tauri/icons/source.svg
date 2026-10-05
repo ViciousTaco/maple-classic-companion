@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Original app icon (no Nexon assets): glossy squircle with a simple stylised leaf. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#ffb06a"/>
+      <stop offset="0.55" stop-color="#ff6a2b"/>
+      <stop offset="1" stop-color="#d9451a"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#ffe9d6"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="960" height="960" rx="230" fill="url(#bg)"/>
+  <path d="M262 74 H762 A200 200 0 0 1 962 274 V420 C760 480 400 470 62 380 V274 A200 200 0 0 1 262 74Z" fill="url(#gloss)"/>
+  <g transform="translate(512 540) rotate(-38)">
+    <path d="M0 -330 C190 -250 250 -60 170 110 C120 215 50 270 0 300 C-50 270 -120 215 -170 110 C-250 -60 -190 -250 0 -330Z" fill="url(#leaf)"/>
+    <path d="M0 -270 V300" stroke="#ff7a3a" stroke-width="26" stroke-linecap="round" fill="none"/>
+    <path d="M0 -90 L110 -170 M0 30 L130 -40 M0 -90 L-110 -170 M0 30 L-130 -40" stroke="#ff7a3a" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M0 300 V400" stroke="#ffffff" stroke-width="34" stroke-linecap="round"/>
+  </g>
+</svg>

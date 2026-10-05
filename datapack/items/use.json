@@ -1,0 +1,600 @@
+[
+  {
+    "id": "arrows-for-bows",
+    "name": "Arrows for Bows",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c2/Arrows_for_Bows.png"
+  },
+  {
+    "id": "arrows-for-crossbows",
+    "name": "Arrows for Crossbows",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/1c/Arrows_for_Crossbows.png"
+  },
+  {
+    "id": "blue-potion",
+    "name": "Blue Potion",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/13/Blue_Potion.png"
+  },
+  {
+    "id": "cape-magic-def-scroll-greater",
+    "name": "Cape Magic Def. Scroll: Greater",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "claw-attack-scroll-intermediate",
+    "name": "Claw Attack Scroll: Intermediate",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "dexterity-potion",
+    "name": "Dexterity Potion",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/b2/Dexterity_Potion.png"
+  },
+  {
+    "id": "earring-crit-damage-scroll-greater",
+    "name": "Earring Crit. Damage Scroll: Greater",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "earring-crit-damage-scroll-intermediate",
+    "name": "Earring Crit. Damage Scroll: Intermediate",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "earring-luk-scroll-intermediate",
+    "name": "Earring LUK Scroll: Intermediate",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "earring-str-scroll-greater",
+    "name": "Earring STR Scroll: Greater",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "gloves-attack-scroll-intermediate",
+    "name": "Gloves Attack Scroll: Intermediate",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "gloves-crit-rate-scroll-greater",
+    "name": "Gloves Crit. Rate Scroll: Greater",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "hat-accuracy-scroll-greater",
+    "name": "Hat Accuracy Scroll: Greater",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "ilbi-throwing-stars",
+    "name": "Ilbi Throwing Stars",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushmom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/a6/Ilbi_Throwing_Stars.png"
+  },
+  {
+    "id": "kumbi-throwing-stars",
+    "name": "Kumbi Throwing Stars",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/b6/Kumbi_Throwing_Stars.png"
+  },
+  {
+    "id": "lemon",
+    "name": "Lemon",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/35/Lemon.png"
+  },
+  {
+    "id": "magic-potion",
+    "name": "Magic Potion",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/58/Magic_Potion.png"
+  },
+  {
+    "id": "mokbi-throwing-stars",
+    "name": "Mokbi Throwing Stars",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/ac/Mokbi_Throwing_Stars.png"
+  },
+  {
+    "id": "one-handed-axe-attack-scroll-greater",
+    "name": "One-Handed Axe Attack Scroll: Greater",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "orange-potion",
+    "name": "Orange Potion",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Necki",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9b/Orange_Potion.png"
+  },
+  {
+    "id": "overall-armor-def-scroll-intermediate",
+    "name": "Overall Armor DEF Scroll: Intermediate",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "rainbow-colored-snail-shell",
+    "name": "Rainbow-colored Snail Shell",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mano",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/24/Rainbow-colored_Snail_Shell.png"
+  },
+  {
+    "id": "red-potion",
+    "name": "Red Potion",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/dd/Red_Potion.png"
+  },
+  {
+    "id": "sap-of-ancient-tree",
+    "name": "Sap of Ancient Tree",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/95/Sap_of_Ancient_Tree.png"
+  },
+  {
+    "id": "sniper-potion",
+    "name": "Sniper Potion",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/17/Sniper_Potion.png"
+  },
+  {
+    "id": "spear-attack-scroll-greater",
+    "name": "Spear Attack Scroll: Greater",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "topwear-mp-scroll-greater",
+    "name": "Topwear MP Scroll: Greater",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "warrior-potion",
+    "name": "Warrior Potion",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/6b/Warrior_Potion.png"
+  },
+  {
+    "id": "white-potion",
+    "name": "White Potion",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Cold_Eye",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/cb/White_Potion.png"
+  },
+  {
+    "id": "wolbi-throwing-stars",
+    "name": "Wolbi Throwing Stars",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/f4/Wolbi_Throwing_Stars.png"
+  },
+  {
+    "id": "wooden-top",
+    "name": "Wooden Top",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/21/Wooden_Top.png"
+  }
+]

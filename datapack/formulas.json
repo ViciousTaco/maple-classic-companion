@@ -1,0 +1,16 @@
+{
+  "expToNext": null,
+  "levelPenalty": null,
+  "hitChance": null,
+  "defaultAttackIntervalSec": 0.8,
+  "aoeEfficiency": 0.5,
+  "tierWeights": {
+    "common": 0.05,
+    "uncommon": 0.01,
+    "rare": 0.002,
+    "very-rare": 0.0005,
+    "unknown": 0.001
+  },
+  "sources": [],
+  "notes": "Engine heuristics (plan §8.7). EXP table, level penalty and hit-chance formulas are unknown for Classic World and stay null until verified. Tier weights rank spots only and are never shown as drop rates."
+}

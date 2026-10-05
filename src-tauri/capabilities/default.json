@@ -1,0 +1,52 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "core:window:allow-destroy",
+    {
+      "identifier": "opener:allow-open-url",
+      "allow": [
+        {
+          "url": "https://www.nexon.com/*"
+        },
+        {
+          "url": "https://meowdb.com/msclassic/*"
+        },
+        {
+          "url": "https://www.youtube.com/*"
+        },
+        {
+          "url": "https://youtu.be/*"
+        },
+        {
+          "url": "https://www.google.com/search*"
+        },
+        {
+          "url": "https://github.com/ViciousTaco/maple-classic-companion/*"
+        },
+        {
+          "url": "https://mapleclassic.wiki/wiki/*"
+        }
+      ]
+    },
+    {
+      "identifier": "http:default",
+      "allow": [
+        {
+          "url": "https://g.nexonstatic.com/maplestory/cms/v1/*"
+        },
+        {
+          "url": "https://vicioustaco.github.io/maple-classic-companion/*"
+        },
+        {
+          "url": "https://mapleclassic.wiki/images/*"
+        }
+      ]
+    }
+  ]
+}

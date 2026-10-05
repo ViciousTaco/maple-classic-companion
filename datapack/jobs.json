@@ -1,0 +1,345 @@
+[
+  {
+    "id": "beginner",
+    "name": "Beginner",
+    "family": "beginner",
+    "tier": 0,
+    "parent": null,
+    "advanceLevel": 1,
+    "archetype": "melee",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "official",
+        "label": "Nexon — MapleStory Classic World FAQ",
+        "url": "https://www.nexon.com/maplestory/news/general/45385",
+        "articleId": 45385,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "warrior",
+    "name": "Warrior",
+    "family": "warrior",
+    "tier": 1,
+    "parent": "beginner",
+    "advanceLevel": 10,
+    "archetype": "melee",
+    "instructor": "Dances with Balrog",
+    "town": "Perion",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "official",
+        "label": "Nexon — MapleStory Classic World FAQ",
+        "url": "https://www.nexon.com/maplestory/news/general/45385",
+        "articleId": 45385,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "magician",
+    "name": "Magician",
+    "family": "magician",
+    "tier": 1,
+    "parent": "beginner",
+    "advanceLevel": 10,
+    "archetype": "mage",
+    "instructor": "Grendel the Really Old",
+    "town": "Ellinia",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "official",
+        "label": "Nexon — MapleStory Classic World FAQ",
+        "url": "https://www.nexon.com/maplestory/news/general/45385",
+        "articleId": 45385,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "bowman",
+    "name": "Bowman",
+    "family": "bowman",
+    "tier": 1,
+    "parent": "beginner",
+    "advanceLevel": 10,
+    "archetype": "ranged",
+    "instructor": "Athena Pierce",
+    "town": "Henesys",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "official",
+        "label": "Nexon — MapleStory Classic World FAQ",
+        "url": "https://www.nexon.com/maplestory/news/general/45385",
+        "articleId": 45385,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "thief",
+    "name": "Thief",
+    "family": "thief",
+    "tier": 1,
+    "parent": "beginner",
+    "advanceLevel": 10,
+    "archetype": "ranged",
+    "instructor": "Dark Lord",
+    "town": "Kerning City",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "official",
+        "label": "Nexon — MapleStory Classic World FAQ",
+        "url": "https://www.nexon.com/maplestory/news/general/45385",
+        "articleId": 45385,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "fighter",
+    "name": "Fighter",
+    "family": "warrior",
+    "tier": 2,
+    "parent": "warrior",
+    "advanceLevel": 30,
+    "archetype": "melee",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "page",
+    "name": "Page",
+    "family": "warrior",
+    "tier": 2,
+    "parent": "warrior",
+    "advanceLevel": 30,
+    "archetype": "melee",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "spearman",
+    "name": "Spearman",
+    "family": "warrior",
+    "tier": 2,
+    "parent": "warrior",
+    "advanceLevel": 30,
+    "archetype": "melee",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "wizard-fp",
+    "name": "Wizard (Fire/Poison)",
+    "family": "magician",
+    "tier": 2,
+    "parent": "magician",
+    "advanceLevel": 30,
+    "archetype": "mage",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "wizard-il",
+    "name": "Wizard (Ice/Lightning)",
+    "family": "magician",
+    "tier": 2,
+    "parent": "magician",
+    "advanceLevel": 30,
+    "archetype": "mage",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "cleric",
+    "name": "Cleric",
+    "family": "magician",
+    "tier": 2,
+    "parent": "magician",
+    "advanceLevel": 30,
+    "archetype": "mage",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "hunter",
+    "name": "Hunter",
+    "family": "bowman",
+    "tier": 2,
+    "parent": "bowman",
+    "advanceLevel": 30,
+    "archetype": "ranged",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "crossbowman",
+    "name": "Crossbowman",
+    "family": "bowman",
+    "tier": 2,
+    "parent": "bowman",
+    "advanceLevel": 30,
+    "archetype": "ranged",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "assassin",
+    "name": "Assassin",
+    "family": "thief",
+    "tier": 2,
+    "parent": "thief",
+    "advanceLevel": 30,
+    "archetype": "ranged",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "bandit",
+    "name": "Bandit",
+    "family": "thief",
+    "tier": 2,
+    "parent": "thief",
+    "advanceLevel": 30,
+    "archetype": "melee",
+    "sources": [
+      {
+        "kind": "official",
+        "label": "Nexon — Founder's Access Release Notes",
+        "url": "https://www.nexon.com/maplestory/news/general/45621",
+        "articleId": 45621,
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "verified",
+    "verifiedAt": "2026-10-05"
+  }
+]

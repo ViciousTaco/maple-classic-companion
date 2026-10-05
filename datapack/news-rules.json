@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-03T23:24:09.115Z",
+  "articles": {
+    "27035": {
+      "contentHash": "a4759da3101dd1624772abfd76da8dd46f51ee7cc6314687c8a8392cf28f6734",
+      "kind": "historical",
+      "status": "Past playtest",
+      "reason": "The 2025 playtest was completed, as confirmed by the later playtest recap.",
+      "source": "https://www.nexon.com/maplestory/news/general/27587",
+      "evidence": [
+        {
+          "id": 27587,
+          "contentHash": "ec843a995dfde6d12e077842d77396194b3b846fb0e2acd255c3cf527904f779"
+        }
+      ]
+    },
+    "27587": {
+      "contentHash": "ec843a995dfde6d12e077842d77396194b3b846fb0e2acd255c3cf527904f779",
+      "kind": "historical",
+      "status": "Historical recap",
+      "reason": "Recap of the completed summer 2025 first playtest.",
+      "evidence": []
+    },
+    "29010": {
+      "contentHash": "f37379dbec283d7c62e3de578d5991e34150d8c6ce2dc95372e9b070372d7974",
+      "kind": "calendar",
+      "eventDate": "2025-10-25",
+      "calendarZone": "America/Los_Angeles",
+      "reason": "The 25 October 2025 Los Angeles event date has passed. No invented event end time is used.",
+      "evidence": []
+    },
+    "32233": {
+      "contentHash": "43f2b4ede5d191339a7eaffa5b2fd611678d999902ccbedfb70e281d813ec5df",
+      "kind": "calendar",
+      "eventDate": "2025-10-25",
+      "calendarZone": "America/Los_Angeles",
+      "reason": "The 25 October 2025 Los Angeles event date has passed. No invented event end time is used.",
+      "evidence": []
+    },
+    "32271": {
+      "contentHash": "26fe64adfe29a8fd598bee70d2f61c450ff9127efd279ca084c7431172b2cf81",
+      "kind": "calendar",
+      "eventDate": "2025-10-25",
+      "calendarZone": "America/Los_Angeles",
+      "reason": "The 25 October 2025 Los Angeles event date has passed. No invented event end time is used.",
+      "evidence": []
+    },
+    "33974": {
+      "contentHash": "b3c8197f2c97db04b66f075067b6618476143901682ec2138e8f87ed3688413f",
+      "kind": "historical",
+      "status": "Past event",
+      "reason": "PC Cafe sessions are over. The later giveaway announcement thanks participants for attending.",
+      "source": "https://www.nexon.com/maplestory/news/general/36686",
+      "evidence": [
+        {
+          "id": 36686,
+          "contentHash": "f7636ae1c038536112c09687682d819d1aa2f870ba3e644c657e779c41388ea6"
+        }
+      ]
+    },
+    "34769": {
+      "contentHash": "af44aff7f07a23d06b0e43c9f50e1c2fda049b5597b68187267095508e659fad",
+      "kind": "historical",
+      "status": "Past event",
+      "reason": "PC Cafe sessions are over. The later giveaway announcement thanks participants for attending.",
+      "source": "https://www.nexon.com/maplestory/news/general/36686",
+      "evidence": [
+        {
+          "id": 36686,
+          "contentHash": "f7636ae1c038536112c09687682d819d1aa2f870ba3e644c657e779c41388ea6"
+        }
+      ]
+    },
+    "34840": {
+      "contentHash": "d1bba5c4fb7c2304baca189b14875a19ad533b2e613ad03513f380c8369e004a",
+      "kind": "keep",
+      "reason": "Ongoing policy, development, or known-issues reference. A publication date is not an expiry date.",
+      "evidence": []
+    },
+    "35337": {
+      "contentHash": "316ecfee931b3be814cd4f1996c37265edafe76a53cf9ee1be42b930ee3357df",
+      "kind": "expire",
+      "until": "2026-04-24T00:00:00.000Z",
+      "status": "Past test phase",
+      "reason": "Closed Online Test #1 ended on 24 April 2026. Current release notes cover launch rewards.",
+      "source": "https://www.nexon.com/maplestory/news/general/39217",
+      "evidence": [
+        {
+          "id": 39217,
+          "contentHash": "bf197602c7aac20af015f9960063886db8de7d9fe7d070076243805413b73043"
+        },
+        {
+          "id": 45621,
+          "contentHash": "5e82b958d6881667735ed020810de1bb2fda23d351fb2db679457e762355d25f"
+        }
+      ]
+    },
+    "36686": {
+      "contentHash": "f7636ae1c038536112c09687682d819d1aa2f870ba3e644c657e779c41388ea6",
+      "kind": "review",
+      "reason": "Past giveaway, but the claim window is 7 days after a private email. Its exact expiry is not publicly verifiable.",
+      "evidence": []
+    },
+    "39217": {
+      "contentHash": "bf197602c7aac20af015f9960063886db8de7d9fe7d070076243805413b73043",
+      "kind": "expire",
+      "until": "2026-04-24T00:00:00.000Z",
+      "status": "Past test phase",
+      "reason": "Closed Online Test #1 ended on 24 April 2026. Current release notes cover launch rewards.",
+      "source": "https://www.nexon.com/maplestory/news/general/39217",
+      "evidence": [
+        {
+          "id": 39217,
+          "contentHash": "bf197602c7aac20af015f9960063886db8de7d9fe7d070076243805413b73043"
+        },
+        {
+          "id": 45621,
+          "contentHash": "5e82b958d6881667735ed020810de1bb2fda23d351fb2db679457e762355d25f"
+        }
+      ]
+    },
+    "39378": {
+      "contentHash": "2a411e2e4b701617ac531e3cd95a74243f488dabbe60a1732058e7ce4f27f922",
+      "kind": "expire",
+      "until": "2026-04-24T00:00:00.000Z",
+      "status": "Past test phase",
+      "reason": "Closed Online Test #1 ended on 24 April 2026. Current release notes cover launch rewards.",
+      "source": "https://www.nexon.com/maplestory/news/general/39217",
+      "evidence": [
+        {
+          "id": 39217,
+          "contentHash": "bf197602c7aac20af015f9960063886db8de7d9fe7d070076243805413b73043"
+        },
+        {
+          "id": 45621,
+          "contentHash": "5e82b958d6881667735ed020810de1bb2fda23d351fb2db679457e762355d25f"
+        }
+      ]
+    },
+    "40017": {
+      "contentHash": "4a045848cdc457ed943df5673a48038eae712ce9c50fcaec094157754f7082ef",
+      "kind": "expire",
+      "until": "2026-04-24T00:00:00.000Z",
+      "status": "Past test phase",
+      "reason": "Closed Online Test #1 ended on 24 April 2026. Current release notes cover launch rewards.",
+      "source": "https://www.nexon.com/maplestory/news/general/39217",
+      "evidence": [
+        {
+          "id": 39217,
+          "contentHash": "bf197602c7aac20af015f9960063886db8de7d9fe7d070076243805413b73043"
+        },
+        {
+          "id": 45621,
+          "contentHash": "5e82b958d6881667735ed020810de1bb2fda23d351fb2db679457e762355d25f"
+        }
+      ]
+    },
+    "40325": {
+      "contentHash": "4c20aeadef6dd8d354288c7c4f1665aff5ec9812be2dc998708c5852877c4710",
+      "kind": "expire",
+      "until": "2026-04-24T00:00:00.000Z",
+      "status": "Past test phase",
+      "reason": "Closed Online Test #1 ended on 24 April 2026. Current release notes cover launch rewards.",
+      "source": "https://www.nexon.com/maplestory/news/general/39217",
+      "evidence": [
+        {
+          "id": 39217,
+          "contentHash": "bf197602c7aac20af015f9960063886db8de7d9fe7d070076243805413b73043"
+        },
+        {
+          "id": 45621,
+          "contentHash": "5e82b958d6881667735ed020810de1bb2fda23d351fb2db679457e762355d25f"
+        }
+      ]
+    },
+    "41040": {
+      "contentHash": "69d9dbf0d14eb947fc1c7ce654b2c7b88e898e1c86b57e069690868e3ce1e9c6",
+      "kind": "review",
+      "reason": "Image/video-only report. Kept visible because its current relevance and dates cannot be verified from article text.",
+      "evidence": []
+    },
+    "42364": {
+      "contentHash": "b2e3bdbebe0e974dbde26f920372eb4bdba51d78498407bbc0870151fe61f144",
+      "kind": "expire",
+      "until": "2026-08-13T00:00:00.000Z",
+      "status": "Past test phase",
+      "reason": "Closed Online Test #2 ended on 13 August 2026. This post concerns that test.",
+      "source": "https://www.nexon.com/maplestory/news/general/43432",
+      "evidence": [
+        {
+          "id": 43432,
+          "contentHash": "682424bfca798227ac0ae792573779a004cdaf14523dedec4ed9454c22d47d68"
+        }
+      ]
+    },
+    "42772": {
+      "contentHash": "0c5168c79dbd1fc655e71b0f0593b693035c6a65dc73c3eae62fd54e02f2b353",
+      "kind": "calendar",
+      "eventDate": "2026-10-17",
+      "calendarZone": "America/Los_Angeles",
+      "reason": "Relevant through the 17 October 2026 event date in Los Angeles. Exact end time is not specified.",
+      "evidence": []
+    },
+    "43432": {
+      "contentHash": "682424bfca798227ac0ae792573779a004cdaf14523dedec4ed9454c22d47d68",
+      "kind": "expire",
+      "until": "2026-08-13T00:00:00.000Z",
+      "status": "Past test phase",
+      "reason": "Closed Online Test #2 ended on 13 August 2026. This post concerns that test.",
+      "source": "https://www.nexon.com/maplestory/news/general/43432",
+      "evidence": [
+        {
+          "id": 43432,
+          "contentHash": "682424bfca798227ac0ae792573779a004cdaf14523dedec4ed9454c22d47d68"
+        }
+      ]
+    },
+    "43808": {
+      "contentHash": "5b399f48af7037a2c4e76b7bf9a9dd2db3089335298562ed9235c1b51eefa752",
+      "kind": "expire",
+      "until": "2026-08-13T00:00:00.000Z",
+      "status": "Past test phase",
+      "reason": "Closed Online Test #2 ended on 13 August 2026. This post concerns that test.",
+      "source": "https://www.nexon.com/maplestory/news/general/43432",
+      "evidence": [
+        {
+          "id": 43432,
+          "contentHash": "682424bfca798227ac0ae792573779a004cdaf14523dedec4ed9454c22d47d68"
+        }
+      ]
+    },
+    "44134": {
+      "contentHash": "2282f166abf2cc7fac085800c2727109f7b273a8dd0dce4033354c7bea5ce5d1",
+      "kind": "expire",
+      "until": "2026-11-30T23:59:00.000Z",
+      "status": "Sale and claim period ended",
+      "reason": "The latest package claim deadline has passed, including the later claim period after sales close.",
+      "currentReason": "Kept current through the later package claim deadline, not just the purchase deadline.",
+      "source": "https://www.nexon.com/maplestory/news/general/45385",
+      "evidence": [
+        {
+          "id": 45385,
+          "contentHash": "833d454d6c33ecc420f75e4bac4c6baebdb01934fd5883e2498549d4b6748e40"
+        }
+      ]
+    },
+    "44359": {
+      "contentHash": "848cb8e19d5944c239a8696f268293da68511c1152e113715ffe98b1a7c71548",
+      "kind": "review",
+      "reason": "Image/video-only report. Kept visible because its current relevance and dates cannot be verified from article text.",
+      "evidence": []
+    },
+    "44825": {
+      "contentHash": "0112234c3ffb01d85d91613f89ec65947d223797e748fe2a6a06bac76d1ab2c6",
+      "kind": "keep",
+      "reason": "Ongoing policy, development, or known-issues reference. A publication date is not an expiry date.",
+      "evidence": []
+    },
+    "44883": {
+      "contentHash": "ac7562856863f444798660690d5875b07a1424d29453d186aa8f0618cba85bb4",
+      "kind": "expire",
+      "until": "2026-10-15T06:59:00.000Z",
+      "status": "Purchase period ended",
+      "reason": "The package purchase and upgrade period has ended.",
+      "source": "https://www.nexon.com/maplestory/news/general/45385",
+      "evidence": [
+        {
+          "id": 45385,
+          "contentHash": "833d454d6c33ecc420f75e4bac4c6baebdb01934fd5883e2498549d4b6748e40"
+        }
+      ]
+    },
+    "45230": {
+      "contentHash": "c8ff32d3f37ff8eb26341cb837991902afc1cba87c99e8ef1fd55a6f55b8b274",
+      "kind": "keep",
+      "reason": "Ongoing policy, development, or known-issues reference. A publication date is not an expiry date.",
+      "evidence": []
+    },
+    "45385": {
+      "contentHash": "833d454d6c33ecc420f75e4bac4c6baebdb01934fd5883e2498549d4b6748e40",
+      "kind": "keep",
+      "reason": "Current installation or FAQ reference. No whole-guide expiry is published.",
+      "evidence": []
+    },
+    "45521": {
+      "contentHash": "68a82dc5996285f700bcc79d92404d2309de586ebc6eff29d99a9a2c90fd6e45",
+      "kind": "keep",
+      "reason": "Current installation or FAQ reference. No whole-guide expiry is published.",
+      "evidence": []
+    },
+    "45621": {
+      "contentHash": "5e82b958d6881667735ed020810de1bb2fda23d351fb2db679457e762355d25f",
+      "kind": "keep",
+      "reason": "Current Founder’s Access release reference. Embedded events expire individually; the whole update is not treated as an event.",
+      "evidence": []
+    },
+    "45681": {
+      "contentHash": "d8771d2131a2762ffabf23b54b168ce79cfbdebbd3bc5b3c1feeb801088a6377",
+      "kind": "keep",
+      "reason": "Ongoing policy, development, or known-issues reference. A publication date is not an expiry date.",
+      "evidence": []
+    }
+  }
+}

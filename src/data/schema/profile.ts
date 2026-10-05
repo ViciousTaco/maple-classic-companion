@@ -1,0 +1,131 @@
+import { z } from "zod";
+
+// Plan §8.4, written for zod 4: object-level defaults use `.prefault({})` so inner defaults fill in.
+
+export const JOB_IDS = [
+  "beginner",
+  "warrior",
+  "fighter",
+  "page",
+  "spearman",
+  "magician",
+  "wizard-fp",
+  "wizard-il",
+  "cleric",
+  "bowman",
+  "hunter",
+  "crossbowman",
+  "thief",
+  "assassin",
+  "bandit",
+] as const;
+export const FOCUS_IDS = ["exp", "rare-drop", "class-equip", "meso", "balanced"] as const;
+export type JobId = (typeof JOB_IDS)[number];
+export type FocusId = (typeof FOCUS_IDS)[number];
+
+const int = (min: number, max: number) => z.number().int().min(min).max(max);
+const iso = z.iso.datetime();
+
+export const ProfileSchema = z.object({
+  id: z.uuid(),
+  name: z.string().trim().min(1).max(24),
+  createdAt: iso,
+  updatedAt: iso,
+  jobId: z.enum(JOB_IDS),
+  level: int(1, 300), // UI clamps to pack.meta.levelCap (100 today)
+  expPercent: z.number().min(0).max(100).nullable().default(null),
+  focus: z.enum(FOCUS_IDS).default("balanced"),
+  stats: z
+    .object({
+      str: int(0, 9999),
+      dex: int(0, 9999),
+      int: int(0, 9999),
+      luk: int(0, 9999),
+      hp: int(0, 99999),
+      mp: int(0, 99999),
+    })
+    .partial()
+    .prefault({}),
+  combat: z
+    .object({
+      damageMin: int(0, 999999),
+      damageMax: int(0, 999999),
+      accuracy: int(0, 9999),
+      avoid: int(0, 9999),
+      weaponType: z.string().max(32),
+      mainSkillId: z.string().max(64),
+    })
+    .partial()
+    .prefault({}),
+  skills: z.record(z.string(), int(0, 30)).default({}),
+  unlocks: z
+    .object({
+      areas: z.array(z.string()).default([]),
+      questsDone: z.array(z.string()).default([]),
+      questsActive: z.array(z.string()).default([]),
+      bossesDefeated: z.array(z.string()).default([]),
+      partyQuests: z.array(z.string()).default([]),
+      citizenship: z
+        .object({ town: z.enum(["henesys", "kerning"]), grade: int(0, 99) })
+        .nullable()
+        .default(null),
+      crafting: z.record(z.string(), int(0, 999)).default({}),
+    })
+    .prefault({}),
+  wishlistItemIds: z.array(z.string()).default([]),
+  skippedSpots: z.array(z.object({ spotId: z.string(), until: iso })).default([]),
+  screenshot: z.object({ file: z.string(), updatedAt: iso }).nullable().default(null),
+  lastView: z.string().default("/home"),
+  notes: z.string().max(4000).default(""),
+  archived: z.boolean().default(false),
+  /** I-20: the character's measured levelling pace (% of the current level per hour). */
+  pace: z
+    .object({ percentPerHour: z.number().positive().max(100000), level: int(1, 300), measuredAt: iso, minutes: z.number().positive() })
+    .nullable()
+    .default(null),
+  /** I-20: a running "measure my pace" timer, kept across restarts. */
+  paceTimer: z.object({ startedAt: iso, startExpPercent: z.number().min(0).max(100), level: int(1, 300) }).nullable().default(null),
+  /** P6-T2: ticked quest steps (indexes) per quest id. */
+  questSteps: z.record(z.string(), z.array(int(0, 99))).default({}),
+});
+export type Profile = z.infer<typeof ProfileSchema>;
+export type ProfileInput = z.input<typeof ProfileSchema>;
+
+/** Window geometry in logical pixels (replaces the window-state plugin; §15). */
+export const WindowGeometrySchema = z.object({
+  width: z.number().min(200).max(10000),
+  height: z.number().min(200).max(10000),
+  x: z.number().min(-20000).max(20000),
+  y: z.number().min(-20000).max(20000),
+  maximized: z.boolean(),
+});
+export type WindowGeometry = z.infer<typeof WindowGeometrySchema>;
+
+export const SettingsSchema = z
+  .object({
+    timeZoneMode: z.enum(["sydney", "system"]).default("sydney"),
+    motion: z.enum(["system", "full", "reduced"]).default("system"),
+    theme: z.enum(["system", "day", "night"]).default("system"),
+    window: WindowGeometrySchema.nullable().default(null),
+  })
+  .prefault({});
+export type Settings = z.infer<typeof SettingsSchema>;
+
+export const PROFILES_SCHEMA_VERSION = 1;
+
+export const ProfilesFileSchema = z.object({
+  schemaVersion: z.literal(PROFILES_SCHEMA_VERSION),
+  activeProfileId: z.uuid().nullable(),
+  profiles: z.array(ProfileSchema),
+  settings: SettingsSchema,
+});
+export type ProfilesFile = z.infer<typeof ProfilesFileSchema>;
+
+export function emptyProfilesFile(): ProfilesFile {
+  return ProfilesFileSchema.parse({
+    schemaVersion: 1,
+    activeProfileId: null,
+    profiles: [],
+    settings: {},
+  });
+}

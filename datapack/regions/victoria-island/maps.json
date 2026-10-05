@@ -1,0 +1,7738 @@
+[
+  {
+    "id": "ellinia",
+    "name": "Ellinia",
+    "region": "victoria-island",
+    "isTown": true,
+    "spawns": [],
+    "links": [
+      {
+        "to": "the-field-south-of-ellinia",
+        "kind": "portal"
+      },
+      {
+        "to": "the-field-up-north-of-ellinia",
+        "kind": "portal"
+      },
+      {
+        "to": "lith-harbor",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "henesys",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "perion",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "kerning-city",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "sleepywood",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      }
+    ],
+    "npcIds": [
+      "a-pile-of-flowers",
+      "a-pile-of-herbs",
+      "arcane-station",
+      "arwen-the-fairy",
+      "betty",
+      "cherry",
+      "flora-the-fairy",
+      "francois",
+      "grendel-the-really-old",
+      "joel",
+      "louis",
+      "magician-job-instructor-2nd-job-test",
+      "mar-the-fairy",
+      "mr-park",
+      "regular-cab-ellinia",
+      "ronnie",
+      "rowen-the-fairy",
+      "serabi-the-fairy",
+      "sewing-machine",
+      "shane",
+      "vip-cab-ellinia",
+      "wing-the-fairy"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ellinia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/50/Ellinia.png/800px-Ellinia.png"
+  },
+  {
+    "id": "florina-beach",
+    "name": "Florina Beach",
+    "region": "victoria-island",
+    "isTown": true,
+    "spawns": [],
+    "links": [
+      {
+        "to": "a-look-out-shed-around-the-beach",
+        "kind": "portal"
+      },
+      {
+        "to": "henesys",
+        "kind": "ship"
+      }
+    ],
+    "npcIds": [
+      "pison",
+      "rael",
+      "riel",
+      "roel",
+      "valen"
+    ],
+    "hasPotionShop": true,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Florina_Beach",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/e/e8/Florina_Beach.png/800px-Florina_Beach.png"
+  },
+  {
+    "id": "henesys",
+    "name": "Henesys",
+    "region": "victoria-island",
+    "isTown": true,
+    "spawns": [],
+    "links": [
+      {
+        "to": "an-empty-house",
+        "kind": "portal"
+      },
+      {
+        "to": "henesys-hunting-ground-i",
+        "kind": "portal"
+      },
+      {
+        "to": "the-hill-east-of-henesys",
+        "kind": "portal"
+      },
+      {
+        "to": "the-road-to-the-dungeon",
+        "kind": "portal"
+      },
+      {
+        "to": "florina-beach",
+        "kind": "ship"
+      },
+      {
+        "to": "lith-harbor",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "ellinia",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "perion",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "kerning-city",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "sleepywood",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      }
+    ],
+    "npcIds": [
+      "arthur",
+      "athena-pierce",
+      "bianca",
+      "bowman-job-instructor-2nd-job-test",
+      "brittany",
+      "bruce",
+      "camila",
+      "casey",
+      "chief-stan",
+      "cloy",
+      "community-board-henesys",
+      "denma-the-owner",
+      "doofus",
+      "dr-feeble",
+      "flint",
+      "jay",
+      "karl",
+      "leatherworking-station",
+      "maple-administrator-henesys",
+      "maya",
+      "mr-lee",
+      "mrs-ming-ming",
+      "ms-tan",
+      "natalie",
+      "oak",
+      "pia",
+      "raymond",
+      "regular-cab-henesys",
+      "rina",
+      "sam",
+      "tommy",
+      "trainer-bartos",
+      "trainer-frod",
+      "utah",
+      "vicious",
+      "woodworking-station"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/c/c1/Henesys.png/800px-Henesys.png"
+  },
+  {
+    "id": "kerning-city",
+    "name": "Kerning City",
+    "region": "victoria-island",
+    "isTown": true,
+    "spawns": [],
+    "links": [
+      {
+        "to": "kerning-city-construction-site",
+        "kind": "portal"
+      },
+      {
+        "to": "subway-ticketing-booth",
+        "kind": "portal",
+        "note": "one-way (reverse not confirmed)"
+      },
+      {
+        "to": "sunset-sky",
+        "kind": "portal"
+      },
+      {
+        "to": "the-swamp-of-despair-i",
+        "kind": "portal"
+      },
+      {
+        "to": "lith-harbor",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "henesys",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "ellinia",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "perion",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "sleepywood",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      }
+    ],
+    "npcIds": [
+      "alex",
+      "andre",
+      "ben",
+      "chris",
+      "community-board-kerning-city",
+      "cutthroat-manny",
+      "dark-lord",
+      "don-giovanni",
+      "don-hwang",
+      "exit",
+      "icarus",
+      "jack",
+      "jane-doe",
+      "jm-from-tha-streetz",
+      "lakelis",
+      "max",
+      "mong-from-kong",
+      "mr-hong",
+      "mr-pickall",
+      "nella",
+      "regular-cab-kerning-city",
+      "roxy",
+      "scarlett",
+      "shumi",
+      "thief-job-instructor-2nd-job-test",
+      "weaponcrafting-station",
+      "weston"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/c/c3/Kerning_City.png/800px-Kerning_City.png"
+  },
+  {
+    "id": "lith-harbor",
+    "name": "Lith Harbor",
+    "region": "victoria-island",
+    "isTown": true,
+    "spawns": [],
+    "links": [
+      {
+        "to": "right-around-lith-harbor",
+        "kind": "portal"
+      },
+      {
+        "to": "southperry",
+        "kind": "ship"
+      },
+      {
+        "to": "henesys",
+        "kind": "taxi"
+      },
+      {
+        "to": "ellinia",
+        "kind": "taxi"
+      },
+      {
+        "to": "perion",
+        "kind": "taxi"
+      },
+      {
+        "to": "kerning-city",
+        "kind": "taxi"
+      }
+    ],
+    "npcIds": [
+      "chef",
+      "jane",
+      "john",
+      "lyn",
+      "maple-administrator-lith-harbor",
+      "mr-goldstein",
+      "mr-kim",
+      "natasha",
+      "olaf",
+      "pason",
+      "paul",
+      "phil",
+      "silver",
+      "teo",
+      "vip-cab-lith-harbor"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lith_Harbor",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/9/9a/Lith_Harbor.png/800px-Lith_Harbor.png"
+  },
+  {
+    "id": "perion",
+    "name": "Perion",
+    "region": "victoria-island",
+    "isTown": true,
+    "spawns": [],
+    "links": [
+      {
+        "to": "deep-valley-i",
+        "kind": "portal"
+      },
+      {
+        "to": "perion-street-corner",
+        "kind": "portal"
+      },
+      {
+        "to": "west-street-corner-of-perion",
+        "kind": "portal"
+      },
+      {
+        "to": "lith-harbor",
+        "kind": "taxi"
+      },
+      {
+        "to": "henesys",
+        "kind": "taxi"
+      },
+      {
+        "to": "ellinia",
+        "kind": "taxi"
+      },
+      {
+        "to": "kerning-city",
+        "kind": "taxi"
+      }
+    ],
+    "npcIds": [
+      "anvil",
+      "ayan",
+      "blackbull",
+      "dances-with-balrog",
+      "harry",
+      "manji",
+      "mr-thunder",
+      "mr-wang",
+      "regular-cab-perion",
+      "river",
+      "silas-irons",
+      "warrior-job-instructor-2nd-job-test"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Perion",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/8/80/Perion.png/800px-Perion.png"
+  },
+  {
+    "id": "sleepywood",
+    "name": "Sleepywood",
+    "region": "victoria-island",
+    "isTown": true,
+    "spawns": [],
+    "links": [
+      {
+        "to": "ant-tunnel-i",
+        "kind": "portal"
+      },
+      {
+        "to": "sleepy-dungeon-i",
+        "kind": "portal"
+      },
+      {
+        "to": "swampy-land-in-a-deep-forest",
+        "kind": "portal"
+      },
+      {
+        "to": "lith-harbor",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "henesys",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "ellinia",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "perion",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "kerning-city",
+        "kind": "taxi",
+        "note": "cab to the other Victoria Island towns; fare not stated"
+      }
+    ],
+    "npcIds": [
+      "a-pile-of-blue-flowers",
+      "a-pile-of-pink-flowers",
+      "a-pile-of-white-flowers",
+      "chrishrama",
+      "crumbling-statue",
+      "eurek-the-alchemist",
+      "hotel-receptionist",
+      "mr-oh",
+      "mr-sweatbottom",
+      "mr-wetbottom",
+      "mysterious-statue",
+      "regular-cab-sleepywood",
+      "sabitrama"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sleepywood",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/5b/Sleepywood.png/800px-Sleepywood.png"
+  },
+  {
+    "id": "3-way-road-split",
+    "name": "3-Way Road-Split",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 5
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 14
+      },
+      {
+        "mobId": "red-snail",
+        "count": 11
+      },
+      {
+        "mobId": "slime",
+        "count": 17
+      },
+      {
+        "mobId": "pig",
+        "count": 6
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 9
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 6
+      }
+    ],
+    "links": [
+      {
+        "to": "beach-hunting-ground",
+        "kind": "portal"
+      },
+      {
+        "to": "forest-west-of-henesys",
+        "kind": "portal"
+      },
+      {
+        "to": "kerning-city-middle-forest-i",
+        "kind": "portal"
+      },
+      {
+        "to": "the-pig-beach",
+        "kind": "portal"
+      },
+      {
+        "to": "thicket-around-the-beach-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/3-Way_Road-Split",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/d/d3/3-Way_Road-Split.png/800px-3-Way_Road-Split.png"
+  },
+  {
+    "id": "a-hill-west-of-henesys",
+    "name": "A Hill West of Henesys",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 1
+      },
+      {
+        "mobId": "red-snail",
+        "count": 5
+      },
+      {
+        "mobId": "stump",
+        "count": 16
+      },
+      {
+        "mobId": "slime",
+        "count": 6
+      },
+      {
+        "mobId": "pig",
+        "count": 16
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 10
+      }
+    ],
+    "links": [
+      {
+        "to": "forest-west-of-henesys",
+        "kind": "portal"
+      },
+      {
+        "to": "henesys-hunting-ground-i",
+        "kind": "portal"
+      },
+      {
+        "to": "mushroom-garden-victoria-island",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Hill_West_of_Henesys",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/a/a6/A_Hill_West_of_Henesys.png/800px-A_Hill_West_of_Henesys.png"
+  },
+  {
+    "id": "a-look-out-shed-around-the-beach",
+    "name": "A Look-Out Shed Around the Beach",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "lupin",
+        "count": 27,
+        "respawnSec": 60
+      },
+      {
+        "mobId": "lorang",
+        "count": 36
+      }
+    ],
+    "links": [
+      {
+        "to": "florina-beach",
+        "kind": "portal"
+      },
+      {
+        "to": "lorang-lorang",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Look-Out_Shed_Around_the_Beach",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/5d/A_Look-Out_Shed_Around_the_Beach.png/800px-A_Look-Out_Shed_Around_the_Beach.png"
+  },
+  {
+    "id": "an-empty-house",
+    "name": "An Empty House",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "orange-mushroom",
+        "count": 12,
+        "respawnSec": 1800
+      }
+    ],
+    "links": [
+      {
+        "to": "henesys",
+        "kind": "portal"
+      },
+      {
+        "to": "pig-park",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/An_Empty_House",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/c/c8/An_Empty_House.png/800px-An_Empty_House.png"
+  },
+  {
+    "id": "another-entrance",
+    "name": "Another Entrance",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "another-path",
+        "kind": "portal"
+      },
+      {
+        "to": "drakes-meal-table",
+        "kind": "portal"
+      },
+      {
+        "to": "the-tunnel-that-lost-light-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Another_Entrance",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/6/66/Another_Entrance.png/240px-Another_Entrance.png"
+  },
+  {
+    "id": "another-path",
+    "name": "Another Path",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "cold-eye",
+        "count": 23
+      }
+    ],
+    "links": [
+      {
+        "to": "another-entrance",
+        "kind": "portal"
+      },
+      {
+        "to": "sanctuary-entrance-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Another_Path",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/21/Another_Path.png/800px-Another_Path.png"
+  },
+  {
+    "id": "ant-tunnel-i",
+    "name": "Ant Tunnel I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "horny-mushroom",
+        "count": 15
+      },
+      {
+        "mobId": "zombie-mushroom",
+        "count": 11
+      }
+    ],
+    "links": [
+      {
+        "to": "ant-tunnel-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "sleepywood",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ant_Tunnel_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/0f/Ant_Tunnel_I.png/800px-Ant_Tunnel_I.png"
+  },
+  {
+    "id": "ant-tunnel-ii",
+    "name": "Ant Tunnel II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "horny-mushroom",
+        "count": 15
+      },
+      {
+        "mobId": "zombie-mushroom",
+        "count": 32
+      }
+    ],
+    "links": [
+      {
+        "to": "ant-tunnel-i",
+        "kind": "portal"
+      },
+      {
+        "to": "ant-tunnel-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ant_Tunnel_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/7/79/Ant_Tunnel_II.png/800px-Ant_Tunnel_II.png"
+  },
+  {
+    "id": "ant-tunnel-iii",
+    "name": "Ant Tunnel III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "horny-mushroom",
+        "count": 38
+      },
+      {
+        "mobId": "zombie-mushroom",
+        "count": 61
+      }
+    ],
+    "links": [
+      {
+        "to": "ant-tunnel-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "ant-tunnel-iv",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ant_Tunnel_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/58/Ant_Tunnel_III.png/800px-Ant_Tunnel_III.png"
+  },
+  {
+    "id": "ant-tunnel-iv",
+    "name": "Ant Tunnel IV",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "horny-mushroom",
+        "count": 41
+      },
+      {
+        "mobId": "zombie-mushroom",
+        "count": 23
+      }
+    ],
+    "links": [
+      {
+        "to": "ant-tunnel-iii",
+        "kind": "portal"
+      },
+      {
+        "to": "dark-cave",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ant_Tunnel_IV",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/b/b5/Ant_Tunnel_IV.png/800px-Ant_Tunnel_IV.png"
+  },
+  {
+    "id": "ant-tunnel-park",
+    "name": "Ant Tunnel Park",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "horny-mushroom",
+        "count": 4
+      },
+      {
+        "mobId": "zombie-mushroom",
+        "count": 23
+      },
+      {
+        "mobId": "evil-eye",
+        "count": 31
+      }
+    ],
+    "links": [
+      {
+        "to": "deep-ant-tunnel-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "the-cave-of-evil-eye-i",
+        "kind": "portal"
+      },
+      {
+        "to": "the-grave-of-mushmom",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "24-hr-mobile-store"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ant_Tunnel_Park",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/8/8a/Ant_Tunnel_Park.png/800px-Ant_Tunnel_Park.png"
+  },
+  {
+    "id": "b1-subway-depot",
+    "name": "B1 (Subway Depot)",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "bubbling",
+        "count": 9
+      }
+    ],
+    "links": [],
+    "npcIds": [
+      "treasure-chest-subway-depot-b1"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/B1_(Subway_Depot)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/b/b3/B1_%28Subway_Depot%29.png/800px-B1_%28Subway_Depot%29.png"
+  },
+  {
+    "id": "b2-subway-depot",
+    "name": "B2 (Subway Depot)",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "jr-wraith",
+        "count": 12,
+        "respawnSec": 1
+      },
+      {
+        "mobId": "jr-boogie-1",
+        "count": 1,
+        "respawnSec": 300
+      }
+    ],
+    "links": [],
+    "npcIds": [
+      "treasure-chest-subway-depot-b2"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/B2_(Subway_Depot)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/c/ca/B2_%28Subway_Depot%29.png/800px-B2_%28Subway_Depot%29.png"
+  },
+  {
+    "id": "b3-subway-depot",
+    "name": "B3 (Subway Depot)",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "jr-boogie-1",
+        "count": 1,
+        "respawnSec": 300
+      },
+      {
+        "mobId": "jr-boogie-2",
+        "count": 1,
+        "respawnSec": 300
+      },
+      {
+        "mobId": "wraith",
+        "count": 10,
+        "respawnSec": 1
+      }
+    ],
+    "links": [],
+    "npcIds": [
+      "treasure-chest-subway-depot-b3"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/B3_(Subway_Depot)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/58/B3_%28Subway_Depot%29.png/800px-B3_%28Subway_Depot%29.png"
+  },
+  {
+    "id": "beach-hunting-ground",
+    "name": "Beach Hunting Ground",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 2
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 11
+      },
+      {
+        "mobId": "shroom",
+        "count": 2
+      },
+      {
+        "mobId": "red-snail",
+        "count": 4
+      },
+      {
+        "mobId": "slime",
+        "count": 6
+      },
+      {
+        "mobId": "pig",
+        "count": 1
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 3
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 5
+      }
+    ],
+    "links": [
+      {
+        "to": "3-way-road-split",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Beach_Hunting_Ground",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/c/c3/Beach_Hunting_Ground.png/800px-Beach_Hunting_Ground.png"
+  },
+  {
+    "id": "caution-falling-down",
+    "name": "Caution Falling Down",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "orange-mushroom",
+        "count": 5
+      },
+      {
+        "mobId": "octopus",
+        "count": 12
+      },
+      {
+        "mobId": "blue-mushroom",
+        "count": 3
+      }
+    ],
+    "links": [
+      {
+        "to": "kerning-city-construction-site",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Caution_Falling_Down",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/27/Caution_Falling_Down.png/800px-Caution_Falling_Down.png"
+  },
+  {
+    "id": "clang-and-lorang",
+    "name": "Clang and Lorang",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "lorang",
+        "count": 8
+      },
+      {
+        "mobId": "tortie",
+        "count": 6
+      },
+      {
+        "mobId": "clang",
+        "count": 17
+      }
+    ],
+    "links": [
+      {
+        "to": "lorang-and-clang",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Clang_and_Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/e/e8/Clang_and_Lorang.png/800px-Clang_and_Lorang.png"
+  },
+  {
+    "id": "construction-site-north-of-kerning-city",
+    "name": "Construction Site North of Kerning City",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "red-snail",
+        "count": 23
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 9
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 11
+      },
+      {
+        "mobId": "octopus",
+        "count": 8
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 2
+      },
+      {
+        "mobId": "blue-mushroom",
+        "count": 1
+      }
+    ],
+    "links": [
+      {
+        "to": "northern-top-of-construction-site",
+        "kind": "portal"
+      },
+      {
+        "to": "sunset-sky",
+        "kind": "portal"
+      },
+      {
+        "to": "west-domain-of-perion",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "thief-job-instructor"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Construction_Site_North_of_Kerning_City",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/3/34/Construction_Site_North_of_Kerning_City.png/800px-Construction_Site_North_of_Kerning_City.png"
+  },
+  {
+    "id": "damp-forest",
+    "name": "Damp Forest",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 2
+      },
+      {
+        "mobId": "octopus",
+        "count": 15
+      },
+      {
+        "mobId": "jr-necki",
+        "count": 11
+      }
+    ],
+    "links": [
+      {
+        "to": "damp-tree-forest",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Damp_Forest",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/f9/Damp_Forest.png/800px-Damp_Forest.png"
+  },
+  {
+    "id": "damp-tree-forest",
+    "name": "Damp Tree-Forest",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 13
+      },
+      {
+        "mobId": "octopus",
+        "count": 19
+      },
+      {
+        "mobId": "jr-necki",
+        "count": 8
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 6
+      }
+    ],
+    "links": [
+      {
+        "to": "damp-forest",
+        "kind": "portal"
+      },
+      {
+        "to": "dangerous-croko-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "deep-forest",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Damp_Tree-Forest",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/9/95/Damp_Tree-Forest.png/800px-Damp_Tree-Forest.png"
+  },
+  {
+    "id": "dangerous-croko-i",
+    "name": "Dangerous Croko I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 7
+      },
+      {
+        "mobId": "jr-necki",
+        "count": 27
+      },
+      {
+        "mobId": "ligator",
+        "count": 14
+      },
+      {
+        "mobId": "croco",
+        "count": 6
+      }
+    ],
+    "links": [
+      {
+        "to": "dangerous-croko-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "the-swamp-of-despair-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dangerous_Croko_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/7/76/Dangerous_Croko_I.png/800px-Dangerous_Croko_I.png"
+  },
+  {
+    "id": "dangerous-croko-ii",
+    "name": "Dangerous Croko II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 9
+      },
+      {
+        "mobId": "jr-necki",
+        "count": 21
+      },
+      {
+        "mobId": "croco",
+        "count": 24
+      }
+    ],
+    "links": [
+      {
+        "to": "damp-tree-forest",
+        "kind": "portal"
+      },
+      {
+        "to": "dangerous-croko-i",
+        "kind": "portal"
+      },
+      {
+        "to": "monkey-swamp-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dangerous_Croko_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/57/Dangerous_Croko_II.png/800px-Dangerous_Croko_II.png"
+  },
+  {
+    "id": "dangerous-steam",
+    "name": "Dangerous Steam",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "stirge",
+        "count": 38
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 5
+      },
+      {
+        "mobId": "zombie-mushroom",
+        "count": 6
+      }
+    ],
+    "links": [
+      {
+        "to": "dark-cave",
+        "kind": "portal"
+      },
+      {
+        "to": "deep-ant-tunnel-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dangerous_Steam",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/1/16/Dangerous_Steam.png/800px-Dangerous_Steam.png"
+  },
+  {
+    "id": "dangerous-valley",
+    "name": "Dangerous Valley",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "fire-boar",
+        "count": 21
+      },
+      {
+        "mobId": "copper-drake",
+        "count": 13
+      }
+    ],
+    "links": [
+      {
+        "to": "dangerous-valley-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "deep-valley-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dangerous_Valley",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/fe/Dangerous_Valley.png/800px-Dangerous_Valley.png"
+  },
+  {
+    "id": "dangerous-valley-ii",
+    "name": "Dangerous Valley II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "fire-boar",
+        "count": 8
+      },
+      {
+        "mobId": "copper-drake",
+        "count": 5
+      }
+    ],
+    "links": [
+      {
+        "to": "dangerous-valley",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dangerous_Valley_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/b/b6/Dangerous_Valley_II.png/800px-Dangerous_Valley_II.png"
+  },
+  {
+    "id": "dark-cave",
+    "name": "Dark Cave",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "stirge",
+        "count": 35
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 9
+      },
+      {
+        "mobId": "zombie-mushroom",
+        "count": 7
+      }
+    ],
+    "links": [
+      {
+        "to": "ant-tunnel-iv",
+        "kind": "portal"
+      },
+      {
+        "to": "dangerous-steam",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Cave",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/8/8c/Dark_Cave.png/800px-Dark_Cave.png"
+  },
+  {
+    "id": "deep-ant-tunnel-i",
+    "name": "Deep Ant Tunnel I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "horny-mushroom",
+        "count": 16
+      },
+      {
+        "mobId": "zombie-mushroom",
+        "count": 29
+      },
+      {
+        "mobId": "evil-eye",
+        "count": 21
+      },
+      {
+        "mobId": "jr-boogie-2",
+        "count": 2,
+        "respawnSec": 180
+      }
+    ],
+    "links": [
+      {
+        "to": "dangerous-steam",
+        "kind": "portal"
+      },
+      {
+        "to": "deep-ant-tunnel-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Deep_Ant_Tunnel_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/8/85/Deep_Ant_Tunnel_I.png/800px-Deep_Ant_Tunnel_I.png"
+  },
+  {
+    "id": "deep-ant-tunnel-ii",
+    "name": "Deep Ant Tunnel II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "horny-mushroom",
+        "count": 9
+      },
+      {
+        "mobId": "zombie-mushroom",
+        "count": 9
+      },
+      {
+        "mobId": "evil-eye",
+        "count": 16
+      }
+    ],
+    "links": [
+      {
+        "to": "ant-tunnel-park",
+        "kind": "portal"
+      },
+      {
+        "to": "deep-ant-tunnel-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Deep_Ant_Tunnel_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/3/31/Deep_Ant_Tunnel_II.png/800px-Deep_Ant_Tunnel_II.png"
+  },
+  {
+    "id": "deep-forest",
+    "name": "Deep Forest",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 7
+      },
+      {
+        "mobId": "stump",
+        "count": 4
+      },
+      {
+        "mobId": "slime",
+        "count": 15
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 1
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 8
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 6
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 2
+      }
+    ],
+    "links": [
+      {
+        "to": "damp-tree-forest",
+        "kind": "portal"
+      },
+      {
+        "to": "perion-dungeon-entrance",
+        "kind": "portal"
+      },
+      {
+        "to": "swampy-land-in-a-deep-forest",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Deep_Forest",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/9/94/Deep_Forest.png/800px-Deep_Forest.png"
+  },
+  {
+    "id": "deep-valley-i",
+    "name": "Deep Valley I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 1
+      },
+      {
+        "mobId": "red-snail",
+        "count": 15
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 6
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 1
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 8
+      },
+      {
+        "mobId": "wild-boar",
+        "count": 5
+      },
+      {
+        "mobId": "fire-boar",
+        "count": 4
+      }
+    ],
+    "links": [
+      {
+        "to": "dangerous-valley",
+        "kind": "portal"
+      },
+      {
+        "to": "deep-valley-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "perion",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Deep_Valley_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/53/Deep_Valley_I.png/800px-Deep_Valley_I.png"
+  },
+  {
+    "id": "deep-valley-ii",
+    "name": "Deep Valley II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "dark-stump",
+        "count": 5
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 11
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 5
+      },
+      {
+        "mobId": "wild-boar",
+        "count": 5
+      },
+      {
+        "mobId": "fire-boar",
+        "count": 5
+      }
+    ],
+    "links": [
+      {
+        "to": "deep-valley-i",
+        "kind": "portal"
+      },
+      {
+        "to": "deep-valley-iii",
+        "kind": "portal"
+      },
+      {
+        "to": "the-burnt-land-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Deep_Valley_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/f7/Deep_Valley_II.png/800px-Deep_Valley_II.png"
+  },
+  {
+    "id": "deep-valley-iii",
+    "name": "Deep Valley III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "dark-stump",
+        "count": 10
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 12
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 11
+      },
+      {
+        "mobId": "wild-boar",
+        "count": 7
+      },
+      {
+        "mobId": "fire-boar",
+        "count": 9
+      }
+    ],
+    "links": [
+      {
+        "to": "deep-valley-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "perion-dungeon-entrance",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Deep_Valley_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/e/e7/Deep_Valley_III.png/800px-Deep_Valley_III.png"
+  },
+  {
+    "id": "downstairs-at-the-forest",
+    "name": "Downstairs at the Forest",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 7
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 12
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 17
+      },
+      {
+        "mobId": "lupin",
+        "count": 3,
+        "respawnSec": 300
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-of-wisdom",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Downstairs_at_the_Forest",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/9/9e/Downstairs_at_the_Forest.png/800px-Downstairs_at_the_Forest.png"
+  },
+  {
+    "id": "drake-hunting-ground",
+    "name": "Drake Hunting Ground",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "horny-mushroom",
+        "count": 2
+      },
+      {
+        "mobId": "jr-boogie-2",
+        "count": 2,
+        "respawnSec": 300
+      },
+      {
+        "mobId": "drake",
+        "count": 18
+      }
+    ],
+    "links": [
+      {
+        "to": "the-cave-of-evil-eye-iv",
+        "kind": "portal"
+      },
+      {
+        "to": "the-tunnel-that-lost-light-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Drake_Hunting_Ground",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/c/c1/Drake_Hunting_Ground.png/800px-Drake_Hunting_Ground.png"
+  },
+  {
+    "id": "drakes-meal-table",
+    "name": "Drake's Meal Table",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 1,
+        "respawnSec": 300
+      },
+      {
+        "mobId": "cold-eye",
+        "count": 22
+      },
+      {
+        "mobId": "drake",
+        "count": 23
+      }
+    ],
+    "links": [
+      {
+        "to": "another-entrance",
+        "kind": "portal"
+      },
+      {
+        "to": "wild-kargos-area",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Drake%27s_Meal_Table",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/3/3b/Drake%27s_Meal_Table.png/800px-Drake%27s_Meal_Table.png"
+  },
+  {
+    "id": "dungeon-southern-forest-i",
+    "name": "Dungeon, Southern Forest I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 21
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-south-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dungeon,_Southern_Forest_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/7/74/Dungeon%2C_Southern_Forest_I.png/240px-Dungeon%2C_Southern_Forest_I.png"
+  },
+  {
+    "id": "dungeon-southern-forest-ii",
+    "name": "Dungeon, Southern Forest II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 11
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 16
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-south-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dungeon,_Southern_Forest_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/9/97/Dungeon%2C_Southern_Forest_II.png/240px-Dungeon%2C_Southern_Forest_II.png"
+  },
+  {
+    "id": "dungeon-southern-forest-iii",
+    "name": "Dungeon, Southern Forest III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 10
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 16
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-south-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dungeon,_Southern_Forest_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/4/45/Dungeon%2C_Southern_Forest_III.png/240px-Dungeon%2C_Southern_Forest_III.png"
+  },
+  {
+    "id": "dungeon-southern-forest-iv",
+    "name": "Dungeon, Southern Forest IV",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 2
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 9
+      },
+      {
+        "mobId": "blue-mushroom",
+        "count": 1
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 13
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-south-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dungeon,_Southern_Forest_IV",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/4/40/Dungeon%2C_Southern_Forest_IV.png/240px-Dungeon%2C_Southern_Forest_IV.png"
+  },
+  {
+    "id": "east-domain-of-perion",
+    "name": "East Domain of Perion",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 3
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 15
+      },
+      {
+        "mobId": "red-snail",
+        "count": 5
+      },
+      {
+        "mobId": "stump",
+        "count": 8
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 10
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 12
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 8
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 10
+      }
+    ],
+    "links": [
+      {
+        "to": "rocky-road-iii",
+        "kind": "portal"
+      },
+      {
+        "to": "the-forest-north-of-ellinia",
+        "kind": "portal"
+      },
+      {
+        "to": "the-land-of-wild-boar-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/East_Domain_of_Perion",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/fb/East_Domain_of_Perion.png/800px-East_Domain_of_Perion.png"
+  },
+  {
+    "id": "east-rocky-mountain-i",
+    "name": "East Rocky Mountain I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 9
+      },
+      {
+        "mobId": "red-snail",
+        "count": 16
+      },
+      {
+        "mobId": "stump",
+        "count": 14
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 13
+      }
+    ],
+    "links": [
+      {
+        "to": "east-rocky-mountain-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "perion-street-corner",
+        "kind": "portal"
+      },
+      {
+        "to": "rocky-road-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/East_Rocky_Mountain_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/f4/East_Rocky_Mountain_I.png/800px-East_Rocky_Mountain_I.png"
+  },
+  {
+    "id": "east-rocky-mountain-ii",
+    "name": "East Rocky Mountain II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "red-snail",
+        "count": 9
+      },
+      {
+        "mobId": "stump",
+        "count": 16
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 12
+      }
+    ],
+    "links": [
+      {
+        "to": "east-rocky-mountain-i",
+        "kind": "portal"
+      },
+      {
+        "to": "east-rocky-mountain-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "winston"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/East_Rocky_Mountain_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/b/b5/East_Rocky_Mountain_II.png/800px-East_Rocky_Mountain_II.png"
+  },
+  {
+    "id": "east-rocky-mountain-iii",
+    "name": "East Rocky Mountain III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "red-snail",
+        "count": 8
+      },
+      {
+        "mobId": "stump",
+        "count": 8
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 14
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 12
+      }
+    ],
+    "links": [
+      {
+        "to": "east-rocky-mountain-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "east-rocky-mountain-iv",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/East_Rocky_Mountain_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/04/East_Rocky_Mountain_III.png/800px-East_Rocky_Mountain_III.png"
+  },
+  {
+    "id": "east-rocky-mountain-iv",
+    "name": "East Rocky Mountain IV",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 11
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 17
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 6
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 23
+      }
+    ],
+    "links": [
+      {
+        "to": "east-rocky-mountain-iii",
+        "kind": "portal"
+      },
+      {
+        "to": "east-rocky-mountain-v",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/East_Rocky_Mountain_IV",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/5d/East_Rocky_Mountain_IV.png/800px-East_Rocky_Mountain_IV.png"
+  },
+  {
+    "id": "east-rocky-mountain-v",
+    "name": "East Rocky Mountain V",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "red-snail",
+        "count": 5
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 17
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 25
+      },
+      {
+        "mobId": "fire-boar",
+        "count": 4
+      }
+    ],
+    "links": [
+      {
+        "to": "east-rocky-mountain-iv",
+        "kind": "portal"
+      },
+      {
+        "to": "east-rocky-mountain-vi",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/East_Rocky_Mountain_V",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/b/bc/East_Rocky_Mountain_V.png/800px-East_Rocky_Mountain_V.png"
+  },
+  {
+    "id": "east-rocky-mountain-vi",
+    "name": "East Rocky Mountain VI",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "dark-stump",
+        "count": 4
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 3
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 17
+      },
+      {
+        "mobId": "fire-boar",
+        "count": 10
+      },
+      {
+        "mobId": "lupin",
+        "count": 3
+      }
+    ],
+    "links": [
+      {
+        "to": "east-rocky-mountain-v",
+        "kind": "portal"
+      },
+      {
+        "to": "east-rocky-mountain-vii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/East_Rocky_Mountain_VI",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/8/8c/East_Rocky_Mountain_VI.png/800px-East_Rocky_Mountain_VI.png"
+  },
+  {
+    "id": "east-rocky-mountain-vii",
+    "name": "East Rocky Mountain VII",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "dark-axe-stump",
+        "count": 15
+      },
+      {
+        "mobId": "fire-boar",
+        "count": 20
+      },
+      {
+        "mobId": "copper-drake",
+        "count": 22
+      }
+    ],
+    "links": [
+      {
+        "to": "east-rocky-mountain-vi",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/East_Rocky_Mountain_VII",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/fe/East_Rocky_Mountain_VII.png/800px-East_Rocky_Mountain_VII.png"
+  },
+  {
+    "id": "forest-west-of-henesys",
+    "name": "Forest West of Henesys",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 13
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 20
+      },
+      {
+        "mobId": "red-snail",
+        "count": 11
+      },
+      {
+        "mobId": "stump",
+        "count": 5
+      },
+      {
+        "mobId": "slime",
+        "count": 9
+      },
+      {
+        "mobId": "pig",
+        "count": 3
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 3
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 1
+      }
+    ],
+    "links": [
+      {
+        "to": "3-way-road-split",
+        "kind": "portal"
+      },
+      {
+        "to": "a-hill-west-of-henesys",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Forest_West_of_Henesys",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/a/a5/Forest_West_of_Henesys.png/800px-Forest_West_of_Henesys.png"
+  },
+  {
+    "id": "golems-temple-i",
+    "name": "Golem's Temple I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-mushroom",
+        "count": 7
+      },
+      {
+        "mobId": "fairy-4",
+        "count": 1,
+        "respawnSec": 180
+      },
+      {
+        "mobId": "lupin",
+        "count": 3,
+        "respawnSec": 60
+      }
+    ],
+    "links": [
+      {
+        "to": "the-entrance-of-golems-temple",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golem%27s_Temple_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/9/91/Golem%27s_Temple_I.png/800px-Golem%27s_Temple_I.png"
+  },
+  {
+    "id": "golems-temple-ii",
+    "name": "Golem's Temple II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-mushroom",
+        "count": 4
+      },
+      {
+        "mobId": "fairy-4",
+        "count": 1,
+        "respawnSec": 180
+      },
+      {
+        "mobId": "lupin",
+        "count": 3,
+        "respawnSec": 60
+      }
+    ],
+    "links": [
+      {
+        "to": "the-entrance-of-golems-temple",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golem%27s_Temple_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/7/74/Golem%27s_Temple_II.png/800px-Golem%27s_Temple_II.png"
+  },
+  {
+    "id": "golems-temple-iii",
+    "name": "Golem's Temple III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-mushroom",
+        "count": 5
+      },
+      {
+        "mobId": "fairy-4",
+        "count": 1,
+        "respawnSec": 180
+      },
+      {
+        "mobId": "lupin",
+        "count": 7,
+        "respawnSec": 60
+      }
+    ],
+    "links": [
+      {
+        "to": "the-entrance-of-golems-temple",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golem%27s_Temple_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/6/6a/Golem%27s_Temple_III.png/800px-Golem%27s_Temple_III.png"
+  },
+  {
+    "id": "golems-temple-iv",
+    "name": "Golem's Temple IV",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-mushroom",
+        "count": 7
+      },
+      {
+        "mobId": "fairy-4",
+        "count": 1,
+        "respawnSec": 180
+      }
+    ],
+    "links": [
+      {
+        "to": "the-entrance-of-golems-temple",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golem%27s_Temple_IV",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/8/85/Golem%27s_Temple_IV.png/800px-Golem%27s_Temple_IV.png"
+  },
+  {
+    "id": "henesys-dungeon-entrance",
+    "name": "Henesys Dungeon Entrance",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 14
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 9
+      },
+      {
+        "mobId": "blue-mushroom",
+        "count": 5
+      },
+      {
+        "mobId": "iron-hog",
+        "count": 3
+      },
+      {
+        "mobId": "lupin",
+        "count": 4
+      }
+    ],
+    "links": [
+      {
+        "to": "swampy-land-in-a-deep-forest",
+        "kind": "portal"
+      },
+      {
+        "to": "the-breathing-rock",
+        "kind": "portal"
+      },
+      {
+        "to": "the-road-to-the-dungeon",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "luke"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Dungeon_Entrance",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/0c/Henesys_Dungeon_Entrance.png/800px-Henesys_Dungeon_Entrance.png"
+  },
+  {
+    "id": "henesys-hunting-ground-i",
+    "name": "Henesys Hunting Ground I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 4
+      },
+      {
+        "mobId": "shroom",
+        "count": 10
+      },
+      {
+        "mobId": "red-snail",
+        "count": 6
+      },
+      {
+        "mobId": "stump",
+        "count": 4
+      },
+      {
+        "mobId": "slime",
+        "count": 5
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 5
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 5
+      }
+    ],
+    "links": [
+      {
+        "to": "a-hill-west-of-henesys",
+        "kind": "portal"
+      },
+      {
+        "to": "henesys",
+        "kind": "portal"
+      },
+      {
+        "to": "henesys-hunting-ground-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/d/d7/Henesys_Hunting_Ground_I.png/800px-Henesys_Hunting_Ground_I.png"
+  },
+  {
+    "id": "henesys-hunting-ground-ii",
+    "name": "Henesys Hunting Ground II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 3
+      },
+      {
+        "mobId": "shroom",
+        "count": 6
+      },
+      {
+        "mobId": "red-snail",
+        "count": 6
+      },
+      {
+        "mobId": "stump",
+        "count": 12
+      },
+      {
+        "mobId": "slime",
+        "count": 8
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 8
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 4
+      }
+    ],
+    "links": [
+      {
+        "to": "henesys-hunting-ground-i",
+        "kind": "portal"
+      },
+      {
+        "to": "henesys-hunting-ground-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/4/4e/Henesys_Hunting_Ground_II.png/800px-Henesys_Hunting_Ground_II.png"
+  },
+  {
+    "id": "henesys-hunting-ground-iii",
+    "name": "Henesys Hunting Ground III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 2
+      },
+      {
+        "mobId": "red-snail",
+        "count": 6
+      },
+      {
+        "mobId": "stump",
+        "count": 10
+      },
+      {
+        "mobId": "slime",
+        "count": 17
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 11
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 13
+      }
+    ],
+    "links": [
+      {
+        "to": "henesys-hunting-ground-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Hunting_Ground_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/fd/Henesys_Hunting_Ground_III.png/800px-Henesys_Hunting_Ground_III.png"
+  },
+  {
+    "id": "hot-sand",
+    "name": "Hot Sand",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "tortie",
+        "count": 25
+      },
+      {
+        "mobId": "clang",
+        "count": 13
+      }
+    ],
+    "links": [
+      {
+        "to": "lorang-and-clang",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Hot_Sand",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/0e/Hot_Sand.png/800px-Hot_Sand.png"
+  },
+  {
+    "id": "hunting-ground-in-the-deep-forest-i",
+    "name": "Hunting Ground in the Deep Forest I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 1
+      },
+      {
+        "mobId": "slime",
+        "count": 8
+      },
+      {
+        "mobId": "octopus",
+        "count": 2
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 2
+      },
+      {
+        "mobId": "jr-necki",
+        "count": 11
+      },
+      {
+        "mobId": "curse-eye",
+        "count": 11
+      },
+      {
+        "mobId": "jr-boogie-1",
+        "count": 1,
+        "respawnSec": 300
+      }
+    ],
+    "links": [
+      {
+        "to": "hunting-ground-in-the-deep-forest-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "swampy-land-in-a-deep-forest",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Hunting_Ground_in_the_Deep_Forest_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/8/82/Hunting_Ground_in_the_Deep_Forest_I.png/800px-Hunting_Ground_in_the_Deep_Forest_I.png"
+  },
+  {
+    "id": "hunting-ground-in-the-deep-forest-ii",
+    "name": "Hunting Ground in the Deep Forest II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 1
+      },
+      {
+        "mobId": "slime",
+        "count": 2
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 16
+      },
+      {
+        "mobId": "curse-eye",
+        "count": 20
+      },
+      {
+        "mobId": "lupin",
+        "count": 15
+      }
+    ],
+    "links": [
+      {
+        "to": "hunting-ground-in-the-deep-forest-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Hunting_Ground_in_the_Deep_Forest_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/b/b9/Hunting_Ground_in_the_Deep_Forest_II.png/800px-Hunting_Ground_in_the_Deep_Forest_II.png"
+  },
+  {
+    "id": "kerning-city-construction-site",
+    "name": "Kerning City Construction Site",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 8
+      },
+      {
+        "mobId": "stump",
+        "count": 24
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 8
+      },
+      {
+        "mobId": "octopus",
+        "count": 10
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 2
+      }
+    ],
+    "links": [
+      {
+        "to": "caution-falling-down",
+        "kind": "portal"
+      },
+      {
+        "to": "kerning-city",
+        "kind": "portal"
+      },
+      {
+        "to": "l-forest-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "chun-ji"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Construction_Site",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/24/Kerning_City_Construction_Site.png/800px-Kerning_City_Construction_Site.png"
+  },
+  {
+    "id": "kerning-city-middle-forest-i",
+    "name": "Kerning City Middle Forest I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 14
+      },
+      {
+        "mobId": "shroom",
+        "count": 3
+      },
+      {
+        "mobId": "red-snail",
+        "count": 10
+      },
+      {
+        "mobId": "slime",
+        "count": 10
+      },
+      {
+        "mobId": "pig",
+        "count": 3
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 8
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 5
+      }
+    ],
+    "links": [
+      {
+        "to": "3-way-road-split",
+        "kind": "portal"
+      },
+      {
+        "to": "kerning-city-middle-forest-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "l-forest-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Middle_Forest_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/1/13/Kerning_City_Middle_Forest_I.png/800px-Kerning_City_Middle_Forest_I.png"
+  },
+  {
+    "id": "kerning-city-middle-forest-ii",
+    "name": "Kerning City Middle Forest II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 9
+      },
+      {
+        "mobId": "shroom",
+        "count": 3
+      },
+      {
+        "mobId": "red-snail",
+        "count": 8
+      },
+      {
+        "mobId": "slime",
+        "count": 10
+      },
+      {
+        "mobId": "pig",
+        "count": 2
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 8
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 5
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 2
+      }
+    ],
+    "links": [
+      {
+        "to": "kerning-city-middle-forest-i",
+        "kind": "portal"
+      },
+      {
+        "to": "kerning-city-middle-forest-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Middle_Forest_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/25/Kerning_City_Middle_Forest_II.png/800px-Kerning_City_Middle_Forest_II.png"
+  },
+  {
+    "id": "kerning-city-middle-forest-iii",
+    "name": "Kerning City Middle Forest III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 5
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 6
+      },
+      {
+        "mobId": "red-snail",
+        "count": 8
+      },
+      {
+        "mobId": "slime",
+        "count": 13
+      },
+      {
+        "mobId": "pig",
+        "count": 3
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 10
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 3
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 2
+      }
+    ],
+    "links": [
+      {
+        "to": "kerning-city-middle-forest-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Middle_Forest_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/1/16/Kerning_City_Middle_Forest_III.png/800px-Kerning_City_Middle_Forest_III.png"
+  },
+  {
+    "id": "l-forest-i",
+    "name": "L Forest I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 8
+      },
+      {
+        "mobId": "shroom",
+        "count": 9
+      },
+      {
+        "mobId": "red-snail",
+        "count": 7
+      },
+      {
+        "mobId": "stump",
+        "count": 2
+      },
+      {
+        "mobId": "slime",
+        "count": 6
+      },
+      {
+        "mobId": "pig",
+        "count": 9
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 7
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 21
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 3
+      },
+      {
+        "mobId": "iron-hog",
+        "count": 1,
+        "respawnSec": 600
+      }
+    ],
+    "links": [
+      {
+        "to": "kerning-city-construction-site",
+        "kind": "portal"
+      },
+      {
+        "to": "l-forest-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/L_Forest_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/3/3f/L_Forest_I.png/800px-L_Forest_I.png"
+  },
+  {
+    "id": "l-forest-ii",
+    "name": "L Forest II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 1
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 2
+      },
+      {
+        "mobId": "shroom",
+        "count": 8
+      },
+      {
+        "mobId": "red-snail",
+        "count": 5
+      },
+      {
+        "mobId": "stump",
+        "count": 3
+      },
+      {
+        "mobId": "slime",
+        "count": 6
+      },
+      {
+        "mobId": "pig",
+        "count": 9
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 3
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 10
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 4
+      },
+      {
+        "mobId": "blue-mushroom",
+        "count": 2
+      },
+      {
+        "mobId": "lupin",
+        "count": 1
+      }
+    ],
+    "links": [
+      {
+        "to": "l-forest-i",
+        "kind": "portal"
+      },
+      {
+        "to": "l-forest-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/L_Forest_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/0b/L_Forest_II.png/800px-L_Forest_II.png"
+  },
+  {
+    "id": "l-forest-iii",
+    "name": "L Forest III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 4
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 6
+      },
+      {
+        "mobId": "shroom",
+        "count": 5
+      },
+      {
+        "mobId": "red-snail",
+        "count": 14
+      },
+      {
+        "mobId": "stump",
+        "count": 3
+      },
+      {
+        "mobId": "slime",
+        "count": 24
+      },
+      {
+        "mobId": "pig",
+        "count": 7
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 6
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 10
+      },
+      {
+        "mobId": "blue-mushroom",
+        "count": 7
+      }
+    ],
+    "links": [
+      {
+        "to": "kerning-city-middle-forest-i",
+        "kind": "portal"
+      },
+      {
+        "to": "l-forest-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/L_Forest_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/4/4f/L_Forest_III.png/800px-L_Forest_III.png"
+  },
+  {
+    "id": "land-of-wild-boar",
+    "name": "Land of Wild Boar",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "dark-axe-stump",
+        "count": 7
+      },
+      {
+        "mobId": "wild-boar",
+        "count": 22
+      },
+      {
+        "mobId": "jr-boogie-1",
+        "count": 3,
+        "respawnSec": 600
+      },
+      {
+        "mobId": "jr-boogie-2",
+        "count": 3,
+        "respawnSec": 300
+      }
+    ],
+    "links": [
+      {
+        "to": "over-the-wall",
+        "kind": "portal"
+      },
+      {
+        "to": "perion-street-corner",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Land_of_Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/51/Land_of_Wild_Boar.png/800px-Land_of_Wild_Boar.png"
+  },
+  {
+    "id": "line-1-area-1",
+    "name": "Line 1 (Area 1)",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "bubbling",
+        "count": 64
+      }
+    ],
+    "links": [
+      {
+        "to": "subway-ticketing-booth",
+        "kind": "portal",
+        "note": "one-way (reverse not confirmed)"
+      },
+      {
+        "to": "transfer-area",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Line_1_(Area_1)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/9/90/Line_1_%28Area_1%29.png/800px-Line_1_%28Area_1%29.png"
+  },
+  {
+    "id": "line-1-area-2",
+    "name": "Line 1 (Area 2)",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "stirge",
+        "count": 21
+      },
+      {
+        "mobId": "jr-wraith",
+        "count": 69
+      }
+    ],
+    "links": [
+      {
+        "to": "line-1-area-3",
+        "kind": "portal"
+      },
+      {
+        "to": "transfer-area",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Line_1_(Area_2)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/27/Line_1_%28Area_2%29.png/800px-Line_1_%28Area_2%29.png"
+  },
+  {
+    "id": "line-1-area-3",
+    "name": "Line 1 (Area 3)",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "stirge",
+        "count": 18
+      },
+      {
+        "mobId": "jr-wraith",
+        "count": 31
+      },
+      {
+        "mobId": "wraith",
+        "count": 48
+      }
+    ],
+    "links": [
+      {
+        "to": "line-1-area-2",
+        "kind": "portal"
+      },
+      {
+        "to": "line-1-area-4",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Line_1_(Area_3)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/f9/Line_1_%28Area_3%29.png/800px-Line_1_%28Area_3%29.png"
+  },
+  {
+    "id": "line-1-area-4",
+    "name": "Line 1 (Area 4)",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "wraith",
+        "count": 59
+      }
+    ],
+    "links": [
+      {
+        "to": "line-1-area-3",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Line_1_(Area_4)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/d/d5/Line_1_%28Area_4%29.png/800px-Line_1_%28Area_4%29.png"
+  },
+  {
+    "id": "line-2-area-1",
+    "name": "Line 2 (Area 1)",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "jr-necki",
+        "count": 14
+      },
+      {
+        "mobId": "jr-wraith",
+        "count": 83
+      }
+    ],
+    "links": [
+      {
+        "to": "line-2-area-2",
+        "kind": "portal"
+      },
+      {
+        "to": "transfer-area",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Line_2_(Area_1)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/1/1a/Line_2_%28Area_1%29.png/800px-Line_2_%28Area_1%29.png"
+  },
+  {
+    "id": "line-2-area-2",
+    "name": "Line 2 (Area 2)",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "jr-necki",
+        "count": 18
+      },
+      {
+        "mobId": "jr-wraith",
+        "count": 32
+      },
+      {
+        "mobId": "wraith",
+        "count": 57
+      }
+    ],
+    "links": [
+      {
+        "to": "line-2-area-1",
+        "kind": "portal"
+      },
+      {
+        "to": "line-2-area-3",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Line_2_(Area_2)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/23/Line_2_%28Area_2%29.png/800px-Line_2_%28Area_2%29.png"
+  },
+  {
+    "id": "line-2-area-3",
+    "name": "Line 2 (Area 3)",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "wraith",
+        "count": 68
+      }
+    ],
+    "links": [
+      {
+        "to": "line-2-area-2",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Line_2_(Area_3)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/22/Line_2_%28Area_3%29.png/800px-Line_2_%28Area_3%29.png"
+  },
+  {
+    "id": "lorang-and-clang",
+    "name": "Lorang and Clang",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "lorang",
+        "count": 18
+      },
+      {
+        "mobId": "clang",
+        "count": 29
+      }
+    ],
+    "links": [
+      {
+        "to": "clang-and-lorang",
+        "kind": "portal"
+      },
+      {
+        "to": "hot-sand",
+        "kind": "portal"
+      },
+      {
+        "to": "lorang-lorang",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang_and_Clang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/9/93/Lorang_and_Clang.png/800px-Lorang_and_Clang.png"
+  },
+  {
+    "id": "lorang-lorang",
+    "name": "Lorang Lorang",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "lupin",
+        "count": 5
+      },
+      {
+        "mobId": "lorang",
+        "count": 35
+      }
+    ],
+    "links": [
+      {
+        "to": "a-look-out-shed-around-the-beach",
+        "kind": "portal"
+      },
+      {
+        "to": "lorang-and-clang",
+        "kind": "portal"
+      },
+      {
+        "to": "lorang-lorang-lorang",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang_Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/f9/Lorang_Lorang.png/800px-Lorang_Lorang.png"
+  },
+  {
+    "id": "lorang-lorang-lorang",
+    "name": "Lorang Lorang Lorang",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "lorang",
+        "count": 18
+      }
+    ],
+    "links": [
+      {
+        "to": "lorang-lorang",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang_Lorang_Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/02/Lorang_Lorang_Lorang.png/800px-Lorang_Lorang_Lorang.png"
+  },
+  {
+    "id": "monkey-forest-i",
+    "name": "Monkey Forest I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "lupin",
+        "count": 13
+      },
+      {
+        "mobId": "zombie-lupin",
+        "count": 14
+      }
+    ],
+    "links": [
+      {
+        "to": "monkey-forest-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "the-forest-of-wisdom",
+        "kind": "portal"
+      },
+      {
+        "to": "tree-dungeon-monkey-forest-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Monkey_Forest_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/a/a1/Monkey_Forest_I.png/800px-Monkey_Forest_I.png"
+  },
+  {
+    "id": "monkey-forest-ii",
+    "name": "Monkey Forest II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "lupin",
+        "count": 10
+      },
+      {
+        "mobId": "zombie-lupin",
+        "count": 25
+      }
+    ],
+    "links": [
+      {
+        "to": "monkey-forest-i",
+        "kind": "portal"
+      },
+      {
+        "to": "the-forest-of-evil-i",
+        "kind": "portal"
+      },
+      {
+        "to": "tree-dungeon-monkey-forest-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Monkey_Forest_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/6/61/Monkey_Forest_II.png/800px-Monkey_Forest_II.png"
+  },
+  {
+    "id": "monkey-swamp-i",
+    "name": "Monkey Swamp I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "jr-necki",
+        "count": 3
+      },
+      {
+        "mobId": "lupin",
+        "count": 28
+      }
+    ],
+    "links": [
+      {
+        "to": "dangerous-croko-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "monkey-swamp-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Monkey_Swamp_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/23/Monkey_Swamp_I.png/800px-Monkey_Swamp_I.png"
+  },
+  {
+    "id": "monkey-swamp-ii",
+    "name": "Monkey Swamp II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "jr-necki",
+        "count": 3
+      },
+      {
+        "mobId": "lupin",
+        "count": 10
+      },
+      {
+        "mobId": "zombie-lupin",
+        "count": 13
+      }
+    ],
+    "links": [
+      {
+        "to": "monkey-swamp-i",
+        "kind": "portal"
+      },
+      {
+        "to": "monkey-swamp-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Monkey_Swamp_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/f5/Monkey_Swamp_II.png/800px-Monkey_Swamp_II.png"
+  },
+  {
+    "id": "monkey-swamp-iii",
+    "name": "Monkey Swamp III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "jr-necki",
+        "count": 14
+      },
+      {
+        "mobId": "zombie-lupin",
+        "count": 31
+      }
+    ],
+    "links": [
+      {
+        "to": "monkey-swamp-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Monkey_Swamp_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/1/1b/Monkey_Swamp_III.png/800px-Monkey_Swamp_III.png"
+  },
+  {
+    "id": "mushroom-garden-victoria-island",
+    "name": "Mushroom Garden (Victoria Island)",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "shroom",
+        "count": 10
+      },
+      {
+        "mobId": "red-snail",
+        "count": 9
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 15
+      }
+    ],
+    "links": [
+      {
+        "to": "a-hill-west-of-henesys",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushroom_Garden_(Victoria_Island)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/53/Mushroom_Garden_%28Victoria_Island%29.png/800px-Mushroom_Garden_%28Victoria_Island%29.png"
+  },
+  {
+    "id": "northern-top-of-construction-site",
+    "name": "Northern Top of Construction Site",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "orange-mushroom",
+        "count": 6
+      },
+      {
+        "mobId": "octopus",
+        "count": 12
+      },
+      {
+        "mobId": "blue-mushroom",
+        "count": 3
+      }
+    ],
+    "links": [
+      {
+        "to": "construction-site-north-of-kerning-city",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Northern_Top_of_Construction_Site",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/7/77/Northern_Top_of_Construction_Site.png/800px-Northern_Top_of_Construction_Site.png"
+  },
+  {
+    "id": "over-the-wall",
+    "name": "Over the Wall",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "stump",
+        "count": 4
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 4
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 11
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 5
+      }
+    ],
+    "links": [
+      {
+        "to": "land-of-wild-boar",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Over_the_Wall",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/54/Over_the_Wall.png/800px-Over_the_Wall.png"
+  },
+  {
+    "id": "perion-dungeon-entrance",
+    "name": "Perion Dungeon Entrance",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "dark-stump",
+        "count": 10
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 16
+      },
+      {
+        "mobId": "wild-boar",
+        "count": 11
+      },
+      {
+        "mobId": "fire-boar",
+        "count": 9
+      }
+    ],
+    "links": [
+      {
+        "to": "deep-forest",
+        "kind": "portal"
+      },
+      {
+        "to": "deep-valley-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "mike"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Perion_Dungeon_Entrance",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/20/Perion_Dungeon_Entrance.png/800px-Perion_Dungeon_Entrance.png"
+  },
+  {
+    "id": "perion-street-corner",
+    "name": "Perion Street Corner",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 6
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 1
+      },
+      {
+        "mobId": "red-snail",
+        "count": 7
+      },
+      {
+        "mobId": "stump",
+        "count": 15
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 11
+      }
+    ],
+    "links": [
+      {
+        "to": "east-rocky-mountain-i",
+        "kind": "portal"
+      },
+      {
+        "to": "land-of-wild-boar",
+        "kind": "portal"
+      },
+      {
+        "to": "perion",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Perion_Street_Corner",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/8/8c/Perion_Street_Corner.png/800px-Perion_Street_Corner.png"
+  },
+  {
+    "id": "pig-park",
+    "name": "Pig Park",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "iron-hog",
+        "count": 20
+      }
+    ],
+    "links": [
+      {
+        "to": "an-empty-house",
+        "kind": "portal"
+      },
+      {
+        "to": "pig-park-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig_Park",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/9/92/Pig_Park.png/800px-Pig_Park.png"
+  },
+  {
+    "id": "pig-park-ii",
+    "name": "Pig Park II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "iron-hog",
+        "count": 22
+      }
+    ],
+    "links": [
+      {
+        "to": "pig-park",
+        "kind": "portal"
+      },
+      {
+        "to": "someone-elses-house",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig_Park_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/3/3e/Pig_Park_II.png/800px-Pig_Park_II.png"
+  },
+  {
+    "id": "right-around-lith-harbor",
+    "name": "Right Around Lith Harbor",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 20
+      },
+      {
+        "mobId": "red-snail",
+        "count": 12
+      },
+      {
+        "mobId": "slime",
+        "count": 11
+      }
+    ],
+    "links": [
+      {
+        "to": "lith-harbor",
+        "kind": "portal"
+      },
+      {
+        "to": "thicket-around-the-beach-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Right_Around_Lith_Harbor",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/1/1c/Right_Around_Lith_Harbor.png/800px-Right_Around_Lith_Harbor.png"
+  },
+  {
+    "id": "rocky-road-i",
+    "name": "Rocky Road I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 9
+      },
+      {
+        "mobId": "red-snail",
+        "count": 11
+      },
+      {
+        "mobId": "stump",
+        "count": 15
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 3
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 6
+      }
+    ],
+    "links": [
+      {
+        "to": "east-rocky-mountain-i",
+        "kind": "portal"
+      },
+      {
+        "to": "rocky-road-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rocky_Road_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/7/79/Rocky_Road_I.png/800px-Rocky_Road_I.png"
+  },
+  {
+    "id": "rocky-road-ii",
+    "name": "Rocky Road II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 12
+      },
+      {
+        "mobId": "red-snail",
+        "count": 4
+      },
+      {
+        "mobId": "stump",
+        "count": 6
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 5
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 5
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 5
+      },
+      {
+        "mobId": "wild-boar",
+        "count": 4
+      }
+    ],
+    "links": [
+      {
+        "to": "rocky-road-i",
+        "kind": "portal"
+      },
+      {
+        "to": "rocky-road-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rocky_Road_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/9/9b/Rocky_Road_II.png/800px-Rocky_Road_II.png"
+  },
+  {
+    "id": "rocky-road-iii",
+    "name": "Rocky Road III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "red-snail",
+        "count": 8
+      },
+      {
+        "mobId": "stump",
+        "count": 2
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 3
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 11
+      },
+      {
+        "mobId": "wild-boar",
+        "count": 7
+      }
+    ],
+    "links": [
+      {
+        "to": "east-domain-of-perion",
+        "kind": "portal"
+      },
+      {
+        "to": "rocky-road-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rocky_Road_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/02/Rocky_Road_III.png/800px-Rocky_Road_III.png"
+  },
+  {
+    "id": "sanctuary-entrance-i",
+    "name": "Sanctuary Entrance I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "cold-eye",
+        "count": 13
+      }
+    ],
+    "links": [
+      {
+        "to": "another-path",
+        "kind": "portal"
+      },
+      {
+        "to": "sanctuary-entrance-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sanctuary_Entrance_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/e/ea/Sanctuary_Entrance_I.png/800px-Sanctuary_Entrance_I.png"
+  },
+  {
+    "id": "sanctuary-entrance-ii",
+    "name": "Sanctuary Entrance II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "cold-eye",
+        "count": 15
+      }
+    ],
+    "links": [
+      {
+        "to": "sanctuary-entrance-i",
+        "kind": "portal"
+      },
+      {
+        "to": "sanctuary-entrance-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sanctuary_Entrance_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/c/c7/Sanctuary_Entrance_II.png/800px-Sanctuary_Entrance_II.png"
+  },
+  {
+    "id": "sanctuary-entrance-iii",
+    "name": "Sanctuary Entrance III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "cold-eye",
+        "count": 8,
+        "respawnSec": 10
+      }
+    ],
+    "links": [
+      {
+        "to": "sanctuary-entrance-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "sanctuary-entrance-iv",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sanctuary_Entrance_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/b/bb/Sanctuary_Entrance_III.png/800px-Sanctuary_Entrance_III.png"
+  },
+  {
+    "id": "sanctuary-entrance-iv",
+    "name": "Sanctuary Entrance IV",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "cold-eye",
+        "count": 5,
+        "respawnSec": 20
+      }
+    ],
+    "links": [
+      {
+        "to": "sanctuary-entrance-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sanctuary_Entrance_IV",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/3/35/Sanctuary_Entrance_IV.png/800px-Sanctuary_Entrance_IV.png"
+  },
+  {
+    "id": "sleepy-dungeon-i",
+    "name": "Sleepy Dungeon I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 4
+      },
+      {
+        "mobId": "octopus",
+        "count": 2
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 4
+      },
+      {
+        "mobId": "jr-necki",
+        "count": 1
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 10
+      },
+      {
+        "mobId": "curse-eye",
+        "count": 2
+      },
+      {
+        "mobId": "lupin",
+        "count": 2
+      }
+    ],
+    "links": [
+      {
+        "to": "sleepy-dungeon-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "sleepywood",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "bluebell-bud-sleepy-dungeon"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sleepy_Dungeon_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/e/e9/Sleepy_Dungeon_I.png/800px-Sleepy_Dungeon_I.png"
+  },
+  {
+    "id": "sleepy-dungeon-ii",
+    "name": "Sleepy Dungeon II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 9
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 7
+      },
+      {
+        "mobId": "jr-necki",
+        "count": 5
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 12
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 7
+      },
+      {
+        "mobId": "curse-eye",
+        "count": 2
+      },
+      {
+        "mobId": "lupin",
+        "count": 10
+      }
+    ],
+    "links": [
+      {
+        "to": "sleepy-dungeon-i",
+        "kind": "portal"
+      },
+      {
+        "to": "sleepy-dungeon-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sleepy_Dungeon_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/0b/Sleepy_Dungeon_II.png/800px-Sleepy_Dungeon_II.png"
+  },
+  {
+    "id": "sleepy-dungeon-iii",
+    "name": "Sleepy Dungeon III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "jr-necki",
+        "count": 4
+      },
+      {
+        "mobId": "curse-eye",
+        "count": 19
+      },
+      {
+        "mobId": "jr-boogie-1",
+        "count": 1,
+        "respawnSec": 10800
+      },
+      {
+        "mobId": "lupin",
+        "count": 12
+      }
+    ],
+    "links": [
+      {
+        "to": "sleepy-dungeon-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "sleepy-dungeon-iv",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sleepy_Dungeon_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/51/Sleepy_Dungeon_III.png/800px-Sleepy_Dungeon_III.png"
+  },
+  {
+    "id": "sleepy-dungeon-iv",
+    "name": "Sleepy Dungeon IV",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "jr-necki",
+        "count": 3
+      },
+      {
+        "mobId": "curse-eye",
+        "count": 14
+      },
+      {
+        "mobId": "jr-boogie-1",
+        "count": 3,
+        "respawnSec": 300
+      },
+      {
+        "mobId": "jr-boogie-2",
+        "count": 3,
+        "respawnSec": 600
+      }
+    ],
+    "links": [
+      {
+        "to": "sleepy-dungeon-iii",
+        "kind": "portal"
+      },
+      {
+        "to": "sleepy-dungeon-v",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sleepy_Dungeon_IV",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/f7/Sleepy_Dungeon_IV.png/800px-Sleepy_Dungeon_IV.png"
+  },
+  {
+    "id": "sleepy-dungeon-v",
+    "name": "Sleepy Dungeon V",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 4
+      },
+      {
+        "mobId": "jr-necki",
+        "count": 9
+      },
+      {
+        "mobId": "curse-eye",
+        "count": 24
+      },
+      {
+        "mobId": "jr-boogie-1",
+        "count": 5,
+        "respawnSec": 300
+      },
+      {
+        "mobId": "jr-boogie-2",
+        "count": 5,
+        "respawnSec": 600
+      },
+      {
+        "mobId": "lupin",
+        "count": 23
+      }
+    ],
+    "links": [
+      {
+        "to": "sleepy-dungeon-iv",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sleepy_Dungeon_V",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/8/8d/Sleepy_Dungeon_V.png/800px-Sleepy_Dungeon_V.png"
+  },
+  {
+    "id": "someone-elses-house",
+    "name": "Someone Else's House",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "iron-hog",
+        "count": 13,
+        "respawnSec": 1
+      },
+      {
+        "mobId": "fairy-2",
+        "count": 2,
+        "respawnSec": 180
+      },
+      {
+        "mobId": "mushmom",
+        "count": 1,
+        "respawnSec": 1800
+      }
+    ],
+    "links": [
+      {
+        "to": "pig-park-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Someone_Else%27s_House",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/2c/Someone_Else%27s_House.png/800px-Someone_Else%27s_House.png"
+  },
+  {
+    "id": "subway-ticketing-booth",
+    "name": "Subway Ticketing Booth",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [],
+    "npcIds": [
+      "jake",
+      "the-ticket-gate"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Subway_Ticketing_Booth",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/08/Subway_Ticketing_Booth.png/240px-Subway_Ticketing_Booth.png"
+  },
+  {
+    "id": "sunset-sky",
+    "name": "Sunset Sky",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 7
+      },
+      {
+        "mobId": "stump",
+        "count": 15
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 8
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 7
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 7
+      }
+    ],
+    "links": [
+      {
+        "to": "construction-site-north-of-kerning-city",
+        "kind": "portal"
+      },
+      {
+        "to": "kerning-city",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sunset_Sky",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/c/c2/Sunset_Sky.png/800px-Sunset_Sky.png"
+  },
+  {
+    "id": "swampy-land-in-a-deep-forest",
+    "name": "Swampy Land in a Deep Forest",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 16
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 4
+      },
+      {
+        "mobId": "octopus",
+        "count": 2
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 16
+      },
+      {
+        "mobId": "jr-necki",
+        "count": 3
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 9
+      }
+    ],
+    "links": [
+      {
+        "to": "deep-forest",
+        "kind": "portal"
+      },
+      {
+        "to": "henesys-dungeon-entrance",
+        "kind": "portal"
+      },
+      {
+        "to": "hunting-ground-in-the-deep-forest-i",
+        "kind": "portal"
+      },
+      {
+        "to": "sleepywood",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Swampy_Land_in_a_Deep_Forest",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/0d/Swampy_Land_in_a_Deep_Forest.png/800px-Swampy_Land_in_a_Deep_Forest.png"
+  },
+  {
+    "id": "the-blue-mushroom-forest",
+    "name": "The Blue Mushroom Forest",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 7
+      },
+      {
+        "mobId": "red-snail",
+        "count": 1
+      },
+      {
+        "mobId": "slime",
+        "count": 8
+      },
+      {
+        "mobId": "blue-mushroom",
+        "count": 16
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-east-of-henesys",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Blue_Mushroom_Forest",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/f5/The_Blue_Mushroom_Forest.png/800px-The_Blue_Mushroom_Forest.png"
+  },
+  {
+    "id": "the-breathing-rock",
+    "name": "The Breathing Rock",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-mushroom",
+        "count": 12
+      },
+      {
+        "mobId": "fairy-4",
+        "count": 2,
+        "respawnSec": 180
+      },
+      {
+        "mobId": "lupin",
+        "count": 6
+      }
+    ],
+    "links": [
+      {
+        "to": "henesys-dungeon-entrance",
+        "kind": "portal"
+      },
+      {
+        "to": "the-entrance-of-golems-temple",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Breathing_Rock",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/a/a7/The_Breathing_Rock.png/800px-The_Breathing_Rock.png"
+  },
+  {
+    "id": "the-burnt-land-i",
+    "name": "The Burnt Land I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "dark-axe-stump",
+        "count": 7
+      },
+      {
+        "mobId": "fire-boar",
+        "count": 18
+      }
+    ],
+    "links": [
+      {
+        "to": "deep-valley-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "the-burnt-land-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Burnt_Land_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/4/48/The_Burnt_Land_I.png/800px-The_Burnt_Land_I.png"
+  },
+  {
+    "id": "the-burnt-land-ii",
+    "name": "The Burnt Land II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "dark-axe-stump",
+        "count": 12
+      },
+      {
+        "mobId": "fire-boar",
+        "count": 19
+      }
+    ],
+    "links": [
+      {
+        "to": "the-burnt-land-i",
+        "kind": "portal"
+      },
+      {
+        "to": "the-burnt-land-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Burnt_Land_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/f/f9/The_Burnt_Land_II.png/800px-The_Burnt_Land_II.png"
+  },
+  {
+    "id": "the-burnt-land-iii",
+    "name": "The Burnt Land III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "dark-axe-stump",
+        "count": 13
+      },
+      {
+        "mobId": "fire-boar",
+        "count": 24
+      }
+    ],
+    "links": [
+      {
+        "to": "the-burnt-land-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "the-burnt-land-iv",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Burnt_Land_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/1/18/The_Burnt_Land_III.png/800px-The_Burnt_Land_III.png"
+  },
+  {
+    "id": "the-burnt-land-iv",
+    "name": "The Burnt Land IV",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "dark-axe-stump",
+        "count": 10
+      },
+      {
+        "mobId": "fire-boar",
+        "count": 21
+      },
+      {
+        "mobId": "lupin",
+        "count": 14
+      }
+    ],
+    "links": [
+      {
+        "to": "the-burnt-land-iii",
+        "kind": "portal"
+      },
+      {
+        "to": "the-burnt-land-v",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Burnt_Land_IV",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/d/d0/The_Burnt_Land_IV.png/800px-The_Burnt_Land_IV.png"
+  },
+  {
+    "id": "the-burnt-land-v",
+    "name": "The Burnt Land V",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "dark-axe-stump",
+        "count": 10
+      },
+      {
+        "mobId": "fire-boar",
+        "count": 26
+      },
+      {
+        "mobId": "lupin",
+        "count": 12
+      }
+    ],
+    "links": [
+      {
+        "to": "the-burnt-land-iv",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Burnt_Land_V",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/e/e6/The_Burnt_Land_V.png/800px-The_Burnt_Land_V.png"
+  },
+  {
+    "id": "the-cave-of-evil-eye-i",
+    "name": "The Cave of Evil Eye I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "evil-eye",
+        "count": 19
+      },
+      {
+        "mobId": "jr-boogie-2",
+        "count": 2,
+        "respawnSec": 300
+      }
+    ],
+    "links": [
+      {
+        "to": "ant-tunnel-park",
+        "kind": "portal"
+      },
+      {
+        "to": "the-cave-of-evil-eye-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Cave_of_Evil_Eye_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/5e/The_Cave_of_Evil_Eye_I.png/800px-The_Cave_of_Evil_Eye_I.png"
+  },
+  {
+    "id": "the-cave-of-evil-eye-ii",
+    "name": "The Cave of Evil Eye II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "evil-eye",
+        "count": 36
+      },
+      {
+        "mobId": "jr-boogie-2",
+        "count": 2,
+        "respawnSec": 300
+      }
+    ],
+    "links": [
+      {
+        "to": "the-cave-of-evil-eye-i",
+        "kind": "portal"
+      },
+      {
+        "to": "the-cave-of-evil-eye-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Cave_of_Evil_Eye_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/6/61/The_Cave_of_Evil_Eye_II.png/800px-The_Cave_of_Evil_Eye_II.png"
+  },
+  {
+    "id": "the-cave-of-evil-eye-iii",
+    "name": "The Cave of Evil Eye III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "evil-eye",
+        "count": 38
+      },
+      {
+        "mobId": "jr-boogie-2",
+        "count": 2,
+        "respawnSec": 300
+      }
+    ],
+    "links": [
+      {
+        "to": "the-cave-of-evil-eye-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "the-cave-of-evil-eye-iv",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Cave_of_Evil_Eye_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/a/ab/The_Cave_of_Evil_Eye_III.png/800px-The_Cave_of_Evil_Eye_III.png"
+  },
+  {
+    "id": "the-cave-of-evil-eye-iv",
+    "name": "The Cave of Evil Eye IV",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "evil-eye",
+        "count": 23
+      },
+      {
+        "mobId": "jr-boogie-2",
+        "count": 2,
+        "respawnSec": 1800
+      }
+    ],
+    "links": [
+      {
+        "to": "drake-hunting-ground",
+        "kind": "portal"
+      },
+      {
+        "to": "the-cave-of-evil-eye-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Cave_of_Evil_Eye_IV",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/c/ca/The_Cave_of_Evil_Eye_IV.png/800px-The_Cave_of_Evil_Eye_IV.png"
+  },
+  {
+    "id": "the-entrance-of-golems-temple",
+    "name": "The Entrance of Golem's Temple",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-mushroom",
+        "count": 12
+      },
+      {
+        "mobId": "fairy-4",
+        "count": 3,
+        "respawnSec": 1800
+      }
+    ],
+    "links": [
+      {
+        "to": "golems-temple-i",
+        "kind": "portal"
+      },
+      {
+        "to": "golems-temple-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "golems-temple-iii",
+        "kind": "portal"
+      },
+      {
+        "to": "golems-temple-iv",
+        "kind": "portal"
+      },
+      {
+        "to": "the-breathing-rock",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Entrance_of_Golem%27s_Temple",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/8/87/The_Entrance_of_Golem%27s_Temple.png/800px-The_Entrance_of_Golem%27s_Temple.png"
+  },
+  {
+    "id": "the-field-south-of-ellinia",
+    "name": "The Field South of Ellinia",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "stump",
+        "count": 27
+      },
+      {
+        "mobId": "slime",
+        "count": 18
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 13
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 8
+      }
+    ],
+    "links": [
+      {
+        "to": "ellinia",
+        "kind": "portal"
+      },
+      {
+        "to": "the-forest-of-wisdom",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "estelle"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Field_South_of_Ellinia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/7/75/The_Field_South_of_Ellinia.png/800px-The_Field_South_of_Ellinia.png"
+  },
+  {
+    "id": "the-field-up-north-of-ellinia",
+    "name": "The Field Up North of Ellinia",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 10
+      },
+      {
+        "mobId": "stump",
+        "count": 12
+      },
+      {
+        "mobId": "slime",
+        "count": 16
+      }
+    ],
+    "links": [
+      {
+        "to": "ellinia",
+        "kind": "portal"
+      },
+      {
+        "to": "the-tree-that-grew-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "fully-bloomed-bluebell-ellinia"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Field_Up_North_of_Ellinia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/3/3f/The_Field_Up_North_of_Ellinia.png/800px-The_Field_Up_North_of_Ellinia.png"
+  },
+  {
+    "id": "the-forest-east-of-henesys",
+    "name": "The Forest East of Henesys",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 7
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 3
+      },
+      {
+        "mobId": "shroom",
+        "count": 2
+      },
+      {
+        "mobId": "red-snail",
+        "count": 6
+      },
+      {
+        "mobId": "slime",
+        "count": 7
+      },
+      {
+        "mobId": "pig",
+        "count": 15
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 6
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 11
+      },
+      {
+        "mobId": "blue-mushroom",
+        "count": 2
+      }
+    ],
+    "links": [
+      {
+        "to": "the-blue-mushroom-forest",
+        "kind": "portal"
+      },
+      {
+        "to": "the-forest-south-of-ellinia",
+        "kind": "portal"
+      },
+      {
+        "to": "the-rain-forest-east-of-henesys",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Forest_East_of_Henesys",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/4/47/The_Forest_East_of_Henesys.png/800px-The_Forest_East_of_Henesys.png"
+  },
+  {
+    "id": "the-forest-north-of-ellinia",
+    "name": "The Forest North of Ellinia",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 9
+      },
+      {
+        "mobId": "stump",
+        "count": 21
+      },
+      {
+        "mobId": "slime",
+        "count": 26
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 13
+      }
+    ],
+    "links": [
+      {
+        "to": "east-domain-of-perion",
+        "kind": "portal"
+      },
+      {
+        "to": "the-tree-that-grew-i",
+        "kind": "portal"
+      },
+      {
+        "to": "tree-dungeon-forest-up-north-i",
+        "kind": "portal"
+      },
+      {
+        "to": "tree-dungeon-forest-up-north-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "tree-dungeon-forest-up-north-iii",
+        "kind": "portal"
+      },
+      {
+        "to": "tree-dungeon-forest-up-north-iv",
+        "kind": "portal"
+      },
+      {
+        "to": "tree-dungeon-forest-up-north-ix",
+        "kind": "portal"
+      },
+      {
+        "to": "tree-dungeon-forest-up-north-v",
+        "kind": "portal"
+      },
+      {
+        "to": "tree-dungeon-forest-up-north-vi",
+        "kind": "portal"
+      },
+      {
+        "to": "tree-dungeon-forest-up-north-vii",
+        "kind": "portal"
+      },
+      {
+        "to": "tree-dungeon-forest-up-north-viii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "magician-job-instructor"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Forest_North_of_Ellinia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/5b/The_Forest_North_of_Ellinia.png/800px-The_Forest_North_of_Ellinia.png"
+  },
+  {
+    "id": "the-forest-of-evil-i",
+    "name": "The Forest of Evil I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "zombie-lupin",
+        "count": 11
+      },
+      {
+        "mobId": "malady",
+        "count": 15,
+        "respawnSec": 60
+      }
+    ],
+    "links": [
+      {
+        "to": "monkey-forest-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "the-forest-of-evil-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Forest_of_Evil_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/1/1e/The_Forest_of_Evil_I.png/800px-The_Forest_of_Evil_I.png"
+  },
+  {
+    "id": "the-forest-of-evil-ii",
+    "name": "The Forest of Evil II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "zombie-lupin",
+        "count": 16
+      },
+      {
+        "mobId": "malady",
+        "count": 23,
+        "respawnSec": 60
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-of-evil-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Forest_of_Evil_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/d/de/The_Forest_of_Evil_II.png/800px-The_Forest_of_Evil_II.png"
+  },
+  {
+    "id": "the-forest-of-wisdom",
+    "name": "The Forest of Wisdom",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 3
+      },
+      {
+        "mobId": "slime",
+        "count": 25
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 30
+      }
+    ],
+    "links": [
+      {
+        "to": "downstairs-at-the-forest",
+        "kind": "portal"
+      },
+      {
+        "to": "monkey-forest-i",
+        "kind": "portal"
+      },
+      {
+        "to": "the-field-south-of-ellinia",
+        "kind": "portal"
+      },
+      {
+        "to": "the-forest-south-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Forest_of_Wisdom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/b/b3/The_Forest_of_Wisdom.png/800px-The_Forest_of_Wisdom.png"
+  },
+  {
+    "id": "the-forest-south-of-ellinia",
+    "name": "The Forest South of Ellinia",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 15
+      },
+      {
+        "mobId": "stump",
+        "count": 19
+      },
+      {
+        "mobId": "slime",
+        "count": 24
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 3
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 2
+      }
+    ],
+    "links": [
+      {
+        "to": "dungeon-southern-forest-i",
+        "kind": "portal"
+      },
+      {
+        "to": "dungeon-southern-forest-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "dungeon-southern-forest-iii",
+        "kind": "portal"
+      },
+      {
+        "to": "dungeon-southern-forest-iv",
+        "kind": "portal"
+      },
+      {
+        "to": "the-forest-east-of-henesys",
+        "kind": "portal"
+      },
+      {
+        "to": "the-forest-of-wisdom",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Forest_South_of_Ellinia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/9/94/The_Forest_South_of_Ellinia.png/800px-The_Forest_South_of_Ellinia.png"
+  },
+  {
+    "id": "the-grave-of-mushmom",
+    "name": "The Grave of Mushmom",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "zombie-mushroom",
+        "count": 13
+      },
+      {
+        "mobId": "jr-boogie-2",
+        "count": 2
+      },
+      {
+        "mobId": "zombie-mushmom",
+        "count": 1,
+        "respawnSec": 1800
+      }
+    ],
+    "links": [
+      {
+        "to": "ant-tunnel-park",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Grave_of_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/3/33/The_Grave_of_Mushmom.png/800px-The_Grave_of_Mushmom.png"
+  },
+  {
+    "id": "the-hill-east-of-henesys",
+    "name": "The Hill East of Henesys",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 5
+      },
+      {
+        "mobId": "shroom",
+        "count": 22
+      },
+      {
+        "mobId": "red-snail",
+        "count": 7
+      },
+      {
+        "mobId": "slime",
+        "count": 7
+      },
+      {
+        "mobId": "pig",
+        "count": 3
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 2
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 3
+      }
+    ],
+    "links": [
+      {
+        "to": "henesys",
+        "kind": "portal"
+      },
+      {
+        "to": "the-rain-forest-east-of-henesys",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "anne"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Hill_East_of_Henesys",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/e/e5/The_Hill_East_of_Henesys.png/800px-The_Hill_East_of_Henesys.png"
+  },
+  {
+    "id": "the-land-of-wild-boar-ii",
+    "name": "The Land of Wild Boar II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "dark-stump",
+        "count": 2
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 6
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 2
+      },
+      {
+        "mobId": "wild-boar",
+        "count": 23
+      }
+    ],
+    "links": [
+      {
+        "to": "east-domain-of-perion",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Land_of_Wild_Boar_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/6/60/The_Land_of_Wild_Boar_II.png/800px-The_Land_of_Wild_Boar_II.png"
+  },
+  {
+    "id": "the-pig-beach",
+    "name": "The Pig Beach",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 2
+      },
+      {
+        "mobId": "red-snail",
+        "count": 4
+      },
+      {
+        "mobId": "pig",
+        "count": 8
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 8
+      },
+      {
+        "mobId": "iron-hog",
+        "count": 1
+      }
+    ],
+    "links": [
+      {
+        "to": "3-way-road-split",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Pig_Beach",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/9/9a/The_Pig_Beach.png/800px-The_Pig_Beach.png"
+  },
+  {
+    "id": "the-rain-forest-east-of-henesys",
+    "name": "The Rain-Forest East of Henesys",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "pig",
+        "count": 5
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 4
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-east-of-henesys",
+        "kind": "portal"
+      },
+      {
+        "to": "the-hill-east-of-henesys",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Rain-Forest_East_of_Henesys",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/d/da/The_Rain-Forest_East_of_Henesys.png/800px-The_Rain-Forest_East_of_Henesys.png"
+  },
+  {
+    "id": "the-road-to-the-dungeon",
+    "name": "The Road to the Dungeon",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 4
+      },
+      {
+        "mobId": "shroom",
+        "count": 10
+      },
+      {
+        "mobId": "red-snail",
+        "count": 2
+      },
+      {
+        "mobId": "slime",
+        "count": 6
+      },
+      {
+        "mobId": "pig",
+        "count": 2
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 2
+      },
+      {
+        "mobId": "ribbon-pig",
+        "count": 7
+      },
+      {
+        "mobId": "blue-mushroom",
+        "count": 11
+      },
+      {
+        "mobId": "iron-hog",
+        "count": 2
+      }
+    ],
+    "links": [
+      {
+        "to": "henesys",
+        "kind": "portal"
+      },
+      {
+        "to": "henesys-dungeon-entrance",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "bowman-job-instructor"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Road_to_the_Dungeon",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/2f/The_Road_to_the_Dungeon.png/800px-The_Road_to_the_Dungeon.png"
+  },
+  {
+    "id": "the-swamp-of-despair-i",
+    "name": "The Swamp of Despair I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 9
+      },
+      {
+        "mobId": "jr-necki",
+        "count": 10
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 3
+      },
+      {
+        "mobId": "ligator",
+        "count": 41
+      }
+    ],
+    "links": [
+      {
+        "to": "kerning-city",
+        "kind": "portal"
+      },
+      {
+        "to": "the-swamp-of-despair-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Swamp_of_Despair_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/d/d5/The_Swamp_of_Despair_I.png/800px-The_Swamp_of_Despair_I.png"
+  },
+  {
+    "id": "the-swamp-of-despair-ii",
+    "name": "The Swamp of Despair II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 6
+      },
+      {
+        "mobId": "jr-necki",
+        "count": 17
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 20
+      },
+      {
+        "mobId": "ligator",
+        "count": 36
+      }
+    ],
+    "links": [
+      {
+        "to": "the-swamp-of-despair-i",
+        "kind": "portal"
+      },
+      {
+        "to": "the-swamp-of-despair-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "tulcus"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Swamp_of_Despair_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/5b/The_Swamp_of_Despair_II.png/800px-The_Swamp_of_Despair_II.png"
+  },
+  {
+    "id": "the-swamp-of-despair-iii",
+    "name": "The Swamp of Despair III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 7
+      },
+      {
+        "mobId": "jr-necki",
+        "count": 19
+      },
+      {
+        "mobId": "ligator",
+        "count": 28
+      }
+    ],
+    "links": [
+      {
+        "to": "dangerous-croko-i",
+        "kind": "portal"
+      },
+      {
+        "to": "the-swamp-of-despair-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Swamp_of_Despair_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/a/af/The_Swamp_of_Despair_III.png/800px-The_Swamp_of_Despair_III.png"
+  },
+  {
+    "id": "the-tree-that-grew-i",
+    "name": "The Tree That Grew I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "stump",
+        "count": 8
+      },
+      {
+        "mobId": "slime",
+        "count": 22
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 10
+      }
+    ],
+    "links": [
+      {
+        "to": "the-field-up-north-of-ellinia",
+        "kind": "portal"
+      },
+      {
+        "to": "the-forest-north-of-ellinia",
+        "kind": "portal"
+      },
+      {
+        "to": "the-tree-that-grew-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Tree_That_Grew_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/6/6c/The_Tree_That_Grew_I.png/800px-The_Tree_That_Grew_I.png"
+  },
+  {
+    "id": "the-tree-that-grew-ii",
+    "name": "The Tree That Grew II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "stump",
+        "count": 28
+      },
+      {
+        "mobId": "slime",
+        "count": 30
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 12
+      }
+    ],
+    "links": [
+      {
+        "to": "the-tree-that-grew-i",
+        "kind": "portal"
+      },
+      {
+        "to": "the-tree-that-grew-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Tree_That_Grew_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/0b/The_Tree_That_Grew_II.png/800px-The_Tree_That_Grew_II.png"
+  },
+  {
+    "id": "the-tree-that-grew-iii",
+    "name": "The Tree That Grew III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "stump",
+        "count": 27
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 13
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 8
+      }
+    ],
+    "links": [
+      {
+        "to": "the-tree-that-grew-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "el-moth"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Tree_That_Grew_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/7/75/The_Tree_That_Grew_III.png/800px-The_Tree_That_Grew_III.png"
+  },
+  {
+    "id": "the-tunnel-that-lost-light-i",
+    "name": "The Tunnel That Lost Light I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "cold-eye",
+        "count": 32
+      },
+      {
+        "mobId": "drake",
+        "count": 20
+      }
+    ],
+    "links": [
+      {
+        "to": "drake-hunting-ground",
+        "kind": "portal"
+      },
+      {
+        "to": "the-tunnel-that-lost-light-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Tunnel_That_Lost_Light_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/c/cb/The_Tunnel_That_Lost_Light_I.png/800px-The_Tunnel_That_Lost_Light_I.png"
+  },
+  {
+    "id": "the-tunnel-that-lost-light-ii",
+    "name": "The Tunnel That Lost Light II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "cold-eye",
+        "count": 25
+      },
+      {
+        "mobId": "drake",
+        "count": 15
+      }
+    ],
+    "links": [
+      {
+        "to": "another-entrance",
+        "kind": "portal"
+      },
+      {
+        "to": "the-tunnel-that-lost-light-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Tunnel_That_Lost_Light_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/c/cb/The_Tunnel_That_Lost_Light_II.png/800px-The_Tunnel_That_Lost_Light_II.png"
+  },
+  {
+    "id": "thicket-around-the-beach-i",
+    "name": "Thicket Around the Beach I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 20
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 12
+      },
+      {
+        "mobId": "red-snail",
+        "count": 13
+      },
+      {
+        "mobId": "stump",
+        "count": 11
+      },
+      {
+        "mobId": "slime",
+        "count": 11
+      }
+    ],
+    "links": [
+      {
+        "to": "right-around-lith-harbor",
+        "kind": "portal"
+      },
+      {
+        "to": "thicket-around-the-beach-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thicket_Around_the_Beach_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/3/3a/Thicket_Around_the_Beach_I.png/800px-Thicket_Around_the_Beach_I.png"
+  },
+  {
+    "id": "thicket-around-the-beach-ii",
+    "name": "Thicket Around the Beach II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 9
+      },
+      {
+        "mobId": "slime",
+        "count": 12
+      },
+      {
+        "mobId": "pig",
+        "count": 18
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 9
+      }
+    ],
+    "links": [
+      {
+        "to": "thicket-around-the-beach-i",
+        "kind": "portal"
+      },
+      {
+        "to": "thicket-around-the-beach-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thicket_Around_the_Beach_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/4/48/Thicket_Around_the_Beach_II.png/800px-Thicket_Around_the_Beach_II.png"
+  },
+  {
+    "id": "thicket-around-the-beach-iii",
+    "name": "Thicket Around the Beach III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 13
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 1
+      },
+      {
+        "mobId": "red-snail",
+        "count": 2
+      },
+      {
+        "mobId": "stump",
+        "count": 10
+      },
+      {
+        "mobId": "orange-mushroom",
+        "count": 8
+      },
+      {
+        "mobId": "mano",
+        "count": 1,
+        "respawnSec": 1800
+      }
+    ],
+    "links": [
+      {
+        "to": "3-way-road-split",
+        "kind": "portal"
+      },
+      {
+        "to": "thicket-around-the-beach-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thicket_Around_the_Beach_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/6/6f/Thicket_Around_the_Beach_III.png/800px-Thicket_Around_the_Beach_III.png"
+  },
+  {
+    "id": "transfer-area",
+    "name": "Transfer Area",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "stirge",
+        "count": 38
+      }
+    ],
+    "links": [
+      {
+        "to": "line-1-area-1",
+        "kind": "portal"
+      },
+      {
+        "to": "line-1-area-2",
+        "kind": "portal"
+      },
+      {
+        "to": "line-2-area-1",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Transfer_Area",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/2c/Transfer_Area.png/800px-Transfer_Area.png"
+  },
+  {
+    "id": "tree-dungeon-forest-up-north-i",
+    "name": "Tree Dungeon, Forest Up North I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 15
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 14
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-north-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tree_Dungeon,_Forest_Up_North_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/0/02/Tree_Dungeon%2C_Forest_Up_North_I.png/240px-Tree_Dungeon%2C_Forest_Up_North_I.png"
+  },
+  {
+    "id": "tree-dungeon-forest-up-north-ii",
+    "name": "Tree Dungeon, Forest Up North II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 2
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 14
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 15
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-north-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tree_Dungeon,_Forest_Up_North_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/c/cc/Tree_Dungeon%2C_Forest_Up_North_II.png/240px-Tree_Dungeon%2C_Forest_Up_North_II.png"
+  },
+  {
+    "id": "tree-dungeon-forest-up-north-iii",
+    "name": "Tree Dungeon, Forest Up North III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 12
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 16
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 16
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-north-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tree_Dungeon,_Forest_Up_North_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/5/5c/Tree_Dungeon%2C_Forest_Up_North_III.png/240px-Tree_Dungeon%2C_Forest_Up_North_III.png"
+  },
+  {
+    "id": "tree-dungeon-forest-up-north-iv",
+    "name": "Tree Dungeon, Forest Up North IV",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 13
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 31
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-north-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tree_Dungeon,_Forest_Up_North_IV",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/8/87/Tree_Dungeon%2C_Forest_Up_North_IV.png/240px-Tree_Dungeon%2C_Forest_Up_North_IV.png"
+  },
+  {
+    "id": "tree-dungeon-forest-up-north-ix",
+    "name": "Tree Dungeon, Forest Up North IX",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "curse-eye",
+        "count": 20
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-north-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tree_Dungeon,_Forest_Up_North_IX",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/3/3c/Tree_Dungeon%2C_Forest_Up_North_IX.png/240px-Tree_Dungeon%2C_Forest_Up_North_IX.png"
+  },
+  {
+    "id": "tree-dungeon-forest-up-north-v",
+    "name": "Tree Dungeon, Forest Up North V",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "slime",
+        "count": 14
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 13
+      },
+      {
+        "mobId": "horny-mushroom",
+        "count": 17
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-north-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tree_Dungeon,_Forest_Up_North_V",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/d/d9/Tree_Dungeon%2C_Forest_Up_North_V.png/240px-Tree_Dungeon%2C_Forest_Up_North_V.png"
+  },
+  {
+    "id": "tree-dungeon-forest-up-north-vi",
+    "name": "Tree Dungeon, Forest Up North VI",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "fairy-3",
+        "count": 2,
+        "respawnSec": 180
+      },
+      {
+        "mobId": "curse-eye",
+        "count": 15
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-north-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tree_Dungeon,_Forest_Up_North_VI",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/1/14/Tree_Dungeon%2C_Forest_Up_North_VI.png/240px-Tree_Dungeon%2C_Forest_Up_North_VI.png"
+  },
+  {
+    "id": "tree-dungeon-forest-up-north-vii",
+    "name": "Tree Dungeon, Forest Up North VII",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "fairy-3",
+        "count": 2,
+        "respawnSec": 180
+      },
+      {
+        "mobId": "curse-eye",
+        "count": 13
+      },
+      {
+        "mobId": "cold-eye",
+        "count": 4
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-north-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tree_Dungeon,_Forest_Up_North_VII",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/3/3c/Tree_Dungeon%2C_Forest_Up_North_VII.png/800px-Tree_Dungeon%2C_Forest_Up_North_VII.png"
+  },
+  {
+    "id": "tree-dungeon-forest-up-north-viii",
+    "name": "Tree Dungeon, Forest Up North VIII",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "curse-eye",
+        "count": 17
+      }
+    ],
+    "links": [
+      {
+        "to": "the-forest-north-of-ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tree_Dungeon,_Forest_Up_North_VIII",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/e/e4/Tree_Dungeon%2C_Forest_Up_North_VIII.png/800px-Tree_Dungeon%2C_Forest_Up_North_VIII.png"
+  },
+  {
+    "id": "tree-dungeon-monkey-forest-i",
+    "name": "Tree Dungeon, Monkey Forest I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "curse-eye",
+        "count": 5
+      },
+      {
+        "mobId": "zombie-lupin",
+        "count": 26
+      }
+    ],
+    "links": [
+      {
+        "to": "monkey-forest-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tree_Dungeon,_Monkey_Forest_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/4/42/Tree_Dungeon%2C_Monkey_Forest_I.png/240px-Tree_Dungeon%2C_Monkey_Forest_I.png"
+  },
+  {
+    "id": "tree-dungeon-monkey-forest-ii",
+    "name": "Tree Dungeon, Monkey Forest II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "curse-eye",
+        "count": 4
+      },
+      {
+        "mobId": "zombie-lupin",
+        "count": 26
+      }
+    ],
+    "links": [
+      {
+        "to": "monkey-forest-ii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tree_Dungeon,_Monkey_Forest_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/4/4a/Tree_Dungeon%2C_Monkey_Forest_II.png/240px-Tree_Dungeon%2C_Monkey_Forest_II.png"
+  },
+  {
+    "id": "west-domain-of-perion",
+    "name": "West Domain of Perion",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "snail",
+        "count": 6
+      },
+      {
+        "mobId": "blue-snail",
+        "count": 8
+      },
+      {
+        "mobId": "red-snail",
+        "count": 1
+      },
+      {
+        "mobId": "stump",
+        "count": 15
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 21
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 14
+      }
+    ],
+    "links": [
+      {
+        "to": "construction-site-north-of-kerning-city",
+        "kind": "portal"
+      },
+      {
+        "to": "west-rocky-mountain-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/West_Domain_of_Perion",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/b/b1/West_Domain_of_Perion.png/800px-West_Domain_of_Perion.png"
+  },
+  {
+    "id": "west-rocky-mountain-i",
+    "name": "West Rocky Mountain I",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "red-snail",
+        "count": 22
+      },
+      {
+        "mobId": "stump",
+        "count": 27
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 4
+      }
+    ],
+    "links": [
+      {
+        "to": "west-domain-of-perion",
+        "kind": "portal"
+      },
+      {
+        "to": "west-rocky-mountain-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "west-street-corner-of-perion",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/West_Rocky_Mountain_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/6/6f/West_Rocky_Mountain_I.png/800px-West_Rocky_Mountain_I.png"
+  },
+  {
+    "id": "west-rocky-mountain-ii",
+    "name": "West Rocky Mountain II",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "red-snail",
+        "count": 13
+      },
+      {
+        "mobId": "stump",
+        "count": 21
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 10
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 7
+      }
+    ],
+    "links": [
+      {
+        "to": "west-rocky-mountain-i",
+        "kind": "portal"
+      },
+      {
+        "to": "west-rocky-mountain-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/West_Rocky_Mountain_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/1/13/West_Rocky_Mountain_II.png/800px-West_Rocky_Mountain_II.png"
+  },
+  {
+    "id": "west-rocky-mountain-iii",
+    "name": "West Rocky Mountain III",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "red-snail",
+        "count": 9
+      },
+      {
+        "mobId": "stump",
+        "count": 9
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 3
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 32
+      },
+      {
+        "mobId": "axe-stump",
+        "count": 5
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 9
+      }
+    ],
+    "links": [
+      {
+        "to": "west-rocky-mountain-ii",
+        "kind": "portal"
+      },
+      {
+        "to": "west-rocky-mountain-iv",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/West_Rocky_Mountain_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/a/ab/West_Rocky_Mountain_III.png/800px-West_Rocky_Mountain_III.png"
+  },
+  {
+    "id": "west-rocky-mountain-iv",
+    "name": "West Rocky Mountain IV",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "axe-stump",
+        "count": 1
+      },
+      {
+        "mobId": "dark-axe-stump",
+        "count": 14
+      },
+      {
+        "mobId": "wild-boar",
+        "count": 15
+      },
+      {
+        "mobId": "lupin",
+        "count": 3
+      }
+    ],
+    "links": [
+      {
+        "to": "west-rocky-mountain-iii",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "warrior-job-instructor"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/West_Rocky_Mountain_IV",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/d/df/West_Rocky_Mountain_IV.png/800px-West_Rocky_Mountain_IV.png"
+  },
+  {
+    "id": "west-street-corner-of-perion",
+    "name": "West Street Corner of Perion",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "blue-snail",
+        "count": 10
+      },
+      {
+        "mobId": "stump",
+        "count": 24
+      },
+      {
+        "mobId": "dark-stump",
+        "count": 14
+      },
+      {
+        "mobId": "green-mushroom",
+        "count": 5
+      }
+    ],
+    "links": [
+      {
+        "to": "perion",
+        "kind": "portal"
+      },
+      {
+        "to": "west-rocky-mountain-i",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/West_Street_Corner_of_Perion",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/2/2e/West_Street_Corner_of_Perion.png/800px-West_Street_Corner_of_Perion.png"
+  },
+  {
+    "id": "wild-kargos-area",
+    "name": "Wild Kargo's Area",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [
+      {
+        "mobId": "cold-eye",
+        "count": 17
+      }
+    ],
+    "links": [
+      {
+        "to": "drakes-meal-table",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Kargo%27s_Area",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/thumb/7/7b/Wild_Kargo%27s_Area.png/800px-Wild_Kargo%27s_Area.png"
+  }
+]

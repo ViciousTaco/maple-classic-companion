@@ -1,0 +1,1114 @@
+[
+  {
+    "id": "stump",
+    "name": "Stump",
+    "level": 5,
+    "hp": 133,
+    "exp": 10,
+    "mp": 30,
+    "pdef": 30,
+    "mdef": 0,
+    "accuracy": 45,
+    "avoid": 0,
+    "boss": false,
+    "weak": [
+      "Fire"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/8/85/Stump.webp"
+  },
+  {
+    "id": "slime",
+    "name": "Slime",
+    "level": 6,
+    "hp": 115,
+    "exp": 12,
+    "mp": 30,
+    "pdef": 10,
+    "mdef": 20,
+    "accuracy": 53,
+    "avoid": 0,
+    "boss": false,
+    "weak": [
+      "Lightning"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/f5/Slime.webp"
+  },
+  {
+    "id": "pig",
+    "name": "Pig",
+    "level": 7,
+    "hp": 128,
+    "exp": 13,
+    "mp": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 54,
+    "avoid": 0,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/30/Pig.png"
+  },
+  {
+    "id": "ribbon-pig",
+    "name": "Ribbon Pig",
+    "level": 10,
+    "hp": 172,
+    "exp": 19,
+    "mp": 0,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 64,
+    "avoid": 6,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e9/Ribbon_Pig.png"
+  },
+  {
+    "id": "dark-stump",
+    "name": "Dark Stump",
+    "level": 11,
+    "hp": 236,
+    "exp": 21,
+    "mp": 30,
+    "pdef": 30,
+    "mdef": 0,
+    "accuracy": 61,
+    "avoid": 5,
+    "boss": false,
+    "weak": [
+      "Fire"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/6c/Dark_Stump.png"
+  },
+  {
+    "id": "octopus",
+    "name": "Octopus",
+    "level": 12,
+    "hp": 191,
+    "exp": 23,
+    "mp": 50,
+    "pdef": 0,
+    "mdef": 30,
+    "accuracy": 69,
+    "avoid": 7,
+    "boss": false,
+    "weak": [
+      "Lightning"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/5a/Octopus.png"
+  },
+  {
+    "id": "green-mushroom",
+    "name": "Green Mushroom",
+    "level": 14,
+    "hp": 233,
+    "exp": 26,
+    "mp": 30,
+    "pdef": 0,
+    "mdef": 30,
+    "accuracy": 79,
+    "avoid": 8,
+    "boss": false,
+    "strong": [
+      "Poison"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/4f/Green_Mushroom.webp"
+  },
+  {
+    "id": "bubbling",
+    "name": "Bubbling",
+    "level": 15,
+    "hp": 259,
+    "exp": 28,
+    "mp": 30,
+    "pdef": 20,
+    "mdef": 10,
+    "accuracy": 81,
+    "avoid": 9,
+    "boss": false,
+    "weak": [
+      "Lightning"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/7f/Bubbling.png"
+  },
+  {
+    "id": "axe-stump",
+    "name": "Axe Stump",
+    "level": 17,
+    "hp": 371,
+    "exp": 32,
+    "mp": 30,
+    "pdef": 30,
+    "mdef": 0,
+    "accuracy": 72,
+    "avoid": 8,
+    "boss": false,
+    "weak": [
+      "Fire"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/64/Axe_Stump.png"
+  },
+  {
+    "id": "blue-mushroom",
+    "name": "Blue Mushroom",
+    "level": 19,
+    "hp": 342,
+    "exp": 35,
+    "mp": 30,
+    "pdef": 10,
+    "mdef": 20,
+    "accuracy": 85,
+    "avoid": 11,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/56/Blue_Mushroom.png"
+  },
+  {
+    "id": "mano",
+    "name": "Mano",
+    "level": 20,
+    "hp": 7420,
+    "exp": 148,
+    "mp": 30,
+    "pdef": 20,
+    "mdef": 10,
+    "accuracy": 97,
+    "avoid": 9,
+    "boss": true,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mano",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/6c/Mano.png"
+  },
+  {
+    "id": "stirge",
+    "name": "Stirge",
+    "level": 20,
+    "hp": 296,
+    "exp": 37,
+    "mp": 30,
+    "pdef": 0,
+    "mdef": 30,
+    "accuracy": 99,
+    "avoid": 13,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/19/Stirge.png"
+  },
+  {
+    "id": "jr-necki",
+    "name": "Jr. Necki",
+    "level": 21,
+    "hp": 272,
+    "exp": 39,
+    "mp": 30,
+    "pdef": 0,
+    "mdef": 30,
+    "accuracy": 102,
+    "avoid": 14,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Necki",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/49/Jr._Necki.png"
+  },
+  {
+    "id": "horny-mushroom",
+    "name": "Horny Mushroom",
+    "level": 22,
+    "hp": 403,
+    "exp": 41,
+    "mp": 30,
+    "pdef": 10,
+    "mdef": 0,
+    "accuracy": 94,
+    "avoid": 13,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/8/84/Horny_Mushroom.webp"
+  },
+  {
+    "id": "dark-axe-stump",
+    "name": "Dark Axe Stump",
+    "level": 23,
+    "hp": 547,
+    "exp": 43,
+    "mp": 30,
+    "pdef": 30,
+    "mdef": 0,
+    "accuracy": 87,
+    "avoid": 11,
+    "boss": false,
+    "weak": [
+      "Fire"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c3/Dark_Axe_Stump.png"
+  },
+  {
+    "id": "zombie-mushroom",
+    "name": "Zombie Mushroom",
+    "level": 24,
+    "hp": 436,
+    "exp": 45,
+    "mp": 30,
+    "pdef": 15,
+    "mdef": 15,
+    "accuracy": 99,
+    "avoid": 14,
+    "boss": false,
+    "undead": true,
+    "weak": [
+      "Holy"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/1d/Zombie_Mushroom.png"
+  },
+  {
+    "id": "wild-boar",
+    "name": "Wild Boar",
+    "level": 25,
+    "hp": 510,
+    "exp": 46,
+    "mp": 0,
+    "pdef": 15,
+    "mdef": 15,
+    "accuracy": 101,
+    "avoid": 15,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9e/Wild_Boar.png"
+  },
+  {
+    "id": "evil-eye",
+    "name": "Evil Eye",
+    "level": 27,
+    "hp": 606,
+    "exp": 50,
+    "mp": 50,
+    "pdef": 10,
+    "mdef": 20,
+    "accuracy": 103,
+    "avoid": 16,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Evil_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/27/Evil_Eye.png"
+  },
+  {
+    "id": "iron-hog",
+    "name": "Iron Hog",
+    "level": 28,
+    "hp": 572,
+    "exp": 52,
+    "mp": 50,
+    "pdef": 500,
+    "mdef": 100,
+    "accuracy": 104,
+    "avoid": 17,
+    "boss": false,
+    "weak": [
+      "Lightning"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Iron_Hog",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/39/Iron_Hog.png"
+  },
+  {
+    "id": "fairy-2",
+    "name": "Fairy 2",
+    "level": 29,
+    "hp": 593,
+    "exp": 54,
+    "mp": 175,
+    "pdef": 0,
+    "mdef": 500,
+    "accuracy": 116,
+    "avoid": 20,
+    "boss": false,
+    "weak": [
+      "Poison"
+    ],
+    "strong": [
+      "Lightning",
+      "Holy"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fairy_2",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/7b/Fairy_2.png"
+  },
+  {
+    "id": "fairy-3",
+    "name": "Fairy 3",
+    "level": 29,
+    "hp": 593,
+    "exp": 54,
+    "mp": 175,
+    "pdef": 0,
+    "mdef": 500,
+    "accuracy": 116,
+    "avoid": 20,
+    "boss": false,
+    "weak": [
+      "Poison"
+    ],
+    "strong": [
+      "Lightning",
+      "Holy"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fairy_3",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/99/Fairy_3.png"
+  },
+  {
+    "id": "fairy-4",
+    "name": "Fairy 4",
+    "level": 29,
+    "hp": 593,
+    "exp": 54,
+    "mp": 175,
+    "pdef": 0,
+    "mdef": 500,
+    "accuracy": 116,
+    "avoid": 20,
+    "boss": false,
+    "weak": [
+      "Poison"
+    ],
+    "strong": [
+      "Lightning",
+      "Holy"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fairy_4",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/28/Fairy_4.png"
+  },
+  {
+    "id": "ligator",
+    "name": "Ligator",
+    "level": 31,
+    "hp": 853,
+    "exp": 59,
+    "mp": 0,
+    "pdef": 10,
+    "mdef": 0,
+    "accuracy": 110,
+    "avoid": 19,
+    "boss": false,
+    "weak": [
+      "Fire"
+    ],
+    "strong": [
+      "Ice"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ligator",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/8/8f/Ligator.png"
+  },
+  {
+    "id": "fire-boar",
+    "name": "Fire Boar",
+    "level": 32,
+    "hp": 842,
+    "exp": 62,
+    "mp": 0,
+    "pdef": 10,
+    "mdef": 0,
+    "accuracy": 110,
+    "avoid": 20,
+    "boss": false,
+    "weak": [
+      "Ice"
+    ],
+    "strong": [
+      "Fire"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/15/Fire_Boar.png"
+  },
+  {
+    "id": "curse-eye",
+    "name": "Curse Eye",
+    "level": 33,
+    "hp": 1001,
+    "exp": 66,
+    "mp": 50,
+    "pdef": 30,
+    "mdef": 0,
+    "accuracy": 112,
+    "avoid": 21,
+    "boss": false,
+    "strong": [
+      "Poison"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d5/Curse_Eye.png"
+  },
+  {
+    "id": "jr-wraith",
+    "name": "Jr. Wraith",
+    "level": 34,
+    "hp": 982,
+    "exp": 70,
+    "mp": 70,
+    "pdef": 30,
+    "mdef": 0,
+    "accuracy": 112,
+    "avoid": 24,
+    "boss": false,
+    "undead": true,
+    "weak": [
+      "Fire",
+      "Holy"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/5f/Jr._Wraith.png"
+  },
+  {
+    "id": "jr-boogie-1",
+    "name": "Jr. Boogie 1",
+    "level": 35,
+    "hp": 1395,
+    "exp": 74,
+    "mp": 300,
+    "pdef": 50,
+    "mdef": 50,
+    "accuracy": 125,
+    "avoid": 25,
+    "boss": false,
+    "strong": [
+      "Poison"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Boogie_1",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/66/Jr._Boogie_1.png"
+  },
+  {
+    "id": "jr-boogie-2",
+    "name": "Jr. Boogie 2",
+    "level": 35,
+    "hp": 1395,
+    "exp": 74,
+    "mp": 300,
+    "pdef": 50,
+    "mdef": 50,
+    "accuracy": 125,
+    "avoid": 25,
+    "boss": false,
+    "strong": [
+      "Poison"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Boogie_2",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/ac/Jr._Boogie_2.png"
+  },
+  {
+    "id": "lupin",
+    "name": "Lupin",
+    "level": 37,
+    "hp": 1336,
+    "exp": 82,
+    "mp": 100,
+    "pdef": 0,
+    "mdef": 30,
+    "accuracy": 116,
+    "avoid": 26,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/05/Lupin.png"
+  },
+  {
+    "id": "lorang",
+    "name": "Lorang",
+    "level": 38,
+    "hp": 1714,
+    "exp": 86,
+    "mp": 10,
+    "pdef": 0,
+    "mdef": 30,
+    "accuracy": 116,
+    "avoid": 23,
+    "boss": false,
+    "weak": [
+      "Lightning"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c0/Lorang.png"
+  },
+  {
+    "id": "cold-eye",
+    "name": "Cold Eye",
+    "level": 40,
+    "hp": 1894,
+    "exp": 94,
+    "mp": 50,
+    "pdef": 0,
+    "mdef": 30,
+    "accuracy": 120,
+    "avoid": 24,
+    "boss": false,
+    "weak": [
+      "Fire"
+    ],
+    "strong": [
+      "Ice"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Cold_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d0/Cold_Eye.png"
+  },
+  {
+    "id": "mushmom",
+    "name": "Mushmom",
+    "level": 40,
+    "hp": 34440,
+    "exp": 376,
+    "mp": 200,
+    "pdef": 15,
+    "mdef": 15,
+    "accuracy": 130,
+    "avoid": 24,
+    "boss": true,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/be/Mushmom.png"
+  },
+  {
+    "id": "zombie-lupin",
+    "name": "Zombie Lupin",
+    "level": 41,
+    "hp": 1774,
+    "exp": 99,
+    "mp": 50,
+    "pdef": 0,
+    "mdef": 30,
+    "accuracy": 121,
+    "avoid": 28,
+    "boss": false,
+    "undead": true,
+    "weak": [
+      "Holy"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/ac/Zombie_Lupin.png"
+  },
+  {
+    "id": "copper-drake",
+    "name": "Copper Drake",
+    "level": 45,
+    "hp": 2595,
+    "exp": 117,
+    "mp": 150,
+    "pdef": 15,
+    "mdef": 15,
+    "accuracy": 124,
+    "avoid": 27,
+    "boss": false,
+    "weak": [
+      "Ice"
+    ],
+    "strong": [
+      "Fire"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Copper_Drake",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/35/Copper_Drake.png"
+  },
+  {
+    "id": "tortie",
+    "name": "Tortie",
+    "level": 46,
+    "hp": 2671,
+    "exp": 122,
+    "mp": 100,
+    "pdef": 30,
+    "mdef": 0,
+    "accuracy": 125,
+    "avoid": 24,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tortie",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/11/Tortie.png"
+  },
+  {
+    "id": "wraith",
+    "name": "Wraith",
+    "level": 48,
+    "hp": 2350,
+    "exp": 132,
+    "mp": 80,
+    "pdef": 30,
+    "mdef": 0,
+    "accuracy": 127,
+    "avoid": 31,
+    "boss": false,
+    "undead": true,
+    "weak": [
+      "Holy"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/7c/Wraith.png"
+  },
+  {
+    "id": "clang",
+    "name": "Clang",
+    "level": 49,
+    "hp": 2899,
+    "exp": 137,
+    "mp": 50,
+    "pdef": 15,
+    "mdef": 15,
+    "accuracy": 128,
+    "avoid": 29,
+    "boss": false,
+    "weak": [
+      "Lightning"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Clang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/ee/Clang.png"
+  },
+  {
+    "id": "drake",
+    "name": "Drake",
+    "level": 50,
+    "hp": 3218,
+    "exp": 142,
+    "mp": 150,
+    "pdef": 15,
+    "mdef": 15,
+    "accuracy": 129,
+    "avoid": 26,
+    "boss": false,
+    "strong": [
+      "Fire",
+      "Ice"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Drake",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/da/Drake.png"
+  },
+  {
+    "id": "zombie-mushmom",
+    "name": "Zombie Mushmom",
+    "level": 50,
+    "hp": 53640,
+    "exp": 568,
+    "mp": 220,
+    "pdef": 10,
+    "mdef": 20,
+    "accuracy": 141,
+    "avoid": 30,
+    "boss": true,
+    "undead": true,
+    "weak": [
+      "Holy"
+    ],
+    "strong": [
+      "Poison"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/26/Zombie_Mushmom.png"
+  },
+  {
+    "id": "croco",
+    "name": "Croco",
+    "level": 52,
+    "hp": 3136,
+    "exp": 155,
+    "mp": 75,
+    "pdef": 10,
+    "mdef": 0,
+    "accuracy": 131,
+    "avoid": 30,
+    "boss": false,
+    "weak": [
+      "Fire"
+    ],
+    "strong": [
+      "Ice"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Croco",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/96/Croco.png"
+  },
+  {
+    "id": "malady",
+    "name": "Malady",
+    "level": 55,
+    "hp": 2998,
+    "exp": 175,
+    "mp": 90,
+    "pdef": 0,
+    "mdef": 50,
+    "accuracy": 146,
+    "avoid": 32,
+    "boss": false,
+    "weak": [
+      "Holy"
+    ],
+    "strong": [
+      "Fire",
+      "Ice"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Malady",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9b/Malady.png"
+  }
+]

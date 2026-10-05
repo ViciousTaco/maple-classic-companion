@@ -1,0 +1,1617 @@
+[
+  {
+    "id": "adamantium-ore",
+    "name": "Adamantium Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/29/Adamantium_Ore.png"
+  },
+  {
+    "id": "amethyst-ore",
+    "name": "Amethyst Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9f/Amethyst_Ore.png"
+  },
+  {
+    "id": "animal-fossil",
+    "name": "Animal Fossil",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/8/85/Animal_Fossil.png"
+  },
+  {
+    "id": "animal-fur-bundle",
+    "name": "Animal Fur Bundle",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/b6/Animal_Fur_Bundle.png"
+  },
+  {
+    "id": "aquamarine-ore",
+    "name": "Aquamarine Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ligator",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/53/Aquamarine_Ore.png"
+  },
+  {
+    "id": "aqumander-tail",
+    "name": "Aqumander Tail",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/91/Aqumander_Tail.png"
+  },
+  {
+    "id": "arwens-glass-shoe",
+    "name": "Arwen's Glass Shoe",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c6/Arwen%27s_Glass_Shoe.png"
+  },
+  {
+    "id": "black-crystal-ore",
+    "name": "Black Crystal Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Malady",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/0b/Black_Crystal_Ore.png"
+  },
+  {
+    "id": "blue-mushroom-cap",
+    "name": "Blue Mushroom Cap",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/ba/Blue_Mushroom_Cap.png"
+  },
+  {
+    "id": "blue-snail-shell",
+    "name": "Blue Snail Shell",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/41/Blue_Snail_Shell.png"
+  },
+  {
+    "id": "broken-mirror-glass",
+    "name": "Broken Mirror Glass",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/ee/Broken_Mirror_Glass.png"
+  },
+  {
+    "id": "bronze-ore",
+    "name": "Bronze Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Orange_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/03/Bronze_Ore.png"
+  },
+  {
+    "id": "bubblings-huge-bubble",
+    "name": "Bubbling's Huge Bubble",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c7/Bubbling%27s_Huge_Bubble.png"
+  },
+  {
+    "id": "charm-of-the-undead",
+    "name": "Charm of the Undead",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/ef/Charm_of_the_Undead.png"
+  },
+  {
+    "id": "clang-claw",
+    "name": "Clang Claw",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Clang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/39/Clang_Claw.png"
+  },
+  {
+    "id": "cold-eye-tail",
+    "name": "Cold Eye Tail",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Cold_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/a1/Cold_Eye_Tail.png"
+  },
+  {
+    "id": "croco-skin",
+    "name": "Croco Skin",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Croco",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9b/Croco_Skin.png"
+  },
+  {
+    "id": "curse-eye-tail",
+    "name": "Curse Eye Tail",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/31/Curse_Eye_Tail.png"
+  },
+  {
+    "id": "cursed-doll",
+    "name": "Cursed Doll",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/6d/Cursed_Doll.png"
+  },
+  {
+    "id": "diamond-ore",
+    "name": "Diamond Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Orange_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/97/Diamond_Ore.png"
+  },
+  {
+    "id": "drake-skull",
+    "name": "Drake Skull",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Copper_Drake",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Drake",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/1f/Drake_Skull.png"
+  },
+  {
+    "id": "duskmander-tail",
+    "name": "Duskmander Tail",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Duskmander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/6a/Duskmander_Tail.png"
+  },
+  {
+    "id": "echopus-leg",
+    "name": "Echopus Leg",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/3a/Echopus_Leg.png"
+  },
+  {
+    "id": "emerald-ore",
+    "name": "Emerald Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9f/Emerald_Ore.png"
+  },
+  {
+    "id": "equipment-crafting-stimulator",
+    "name": "Equipment Crafting Stimulator",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/f6/Equipment_Crafting_Stimulator.png"
+  },
+  {
+    "id": "evil-eye-tail",
+    "name": "Evil Eye Tail",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Evil_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/41/Evil_Eye_Tail.png"
+  },
+  {
+    "id": "fire-boars-tooth",
+    "name": "Fire Boar's Tooth",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/49/Fire_Boar%27s_Tooth.png"
+  },
+  {
+    "id": "firewood",
+    "name": "Firewood",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d4/Firewood.png"
+  },
+  {
+    "id": "fragment-of-magic",
+    "name": "Fragment of Magic",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/cd/Fragment_of_Magic.png"
+  },
+  {
+    "id": "garnet-ore",
+    "name": "Garnet Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/5e/Garnet_Ore.png"
+  },
+  {
+    "id": "giant-trees-bough",
+    "name": "Giant Tree's Bough",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Myewood",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e4/Giant_Tree%27s_Bough.png"
+  },
+  {
+    "id": "glowing-mushroom-spore",
+    "name": "Glowing Mushroom Spore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/a3/Glowing_Mushroom_Spore.png"
+  },
+  {
+    "id": "gold-ore",
+    "name": "Gold Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/f7/Gold_Ore.png"
+  },
+  {
+    "id": "golden-stirge-wing",
+    "name": "Golden Stirge Wing",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/23/Golden_Stirge_Wing.png"
+  },
+  {
+    "id": "green-mushroom-cap",
+    "name": "Green Mushroom Cap",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/13/Green_Mushroom_Cap.png"
+  },
+  {
+    "id": "horny-mushroom-cap",
+    "name": "Horny Mushroom Cap",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/71/Horny_Mushroom_Cap.png"
+  },
+  {
+    "id": "iron-hogs-metal-hoof",
+    "name": "Iron Hog's Metal Hoof",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Iron_Hog",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/ec/Iron_Hog%27s_Metal_Hoof.png"
+  },
+  {
+    "id": "iron-ore",
+    "name": "Iron Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/8/87/Iron_Ore.png"
+  },
+  {
+    "id": "jr-boogie-horn",
+    "name": "Jr. Boogie Horn",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Boogie_1",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/30/Jr._Boogie_Horn.png"
+  },
+  {
+    "id": "jr-necki-skin",
+    "name": "Jr. Necki Skin",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Necki",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/57/Jr._Necki_Skin.png"
+  },
+  {
+    "id": "jr-sentinel-shellpiece",
+    "name": "Jr. Sentinel Shellpiece",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tutorial_Jr._Sentinel",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9b/Jr._Sentinel_Shellpiece.png"
+  },
+  {
+    "id": "leaf",
+    "name": "Leaf",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/a8/Leaf.png"
+  },
+  {
+    "id": "leather",
+    "name": "Leather",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/3d/Leather.png"
+  },
+  {
+    "id": "ligator-skin",
+    "name": "Ligator Skin",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ligator",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e0/Ligator_Skin.png"
+  },
+  {
+    "id": "lorang-claw",
+    "name": "Lorang Claw",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/56/Lorang_Claw.png"
+  },
+  {
+    "id": "lupin-doll",
+    "name": "Lupin Doll",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c8/Lupin_Doll.png"
+  },
+  {
+    "id": "lupins-banana",
+    "name": "Lupin's Banana",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/14/Lupin%27s_Banana.png"
+  },
+  {
+    "id": "maladys-experimental-frog",
+    "name": "Malady's Experimental Frog",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Malady",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/7e/Malady%27s_Experimental_Frog.png"
+  },
+  {
+    "id": "medicine-with-weird-vibes",
+    "name": "Medicine With Weird Vibes",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/a6/Medicine_With_Weird_Vibes.png"
+  },
+  {
+    "id": "mithril-ore",
+    "name": "Mithril Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/ee/Mithril_Ore.png"
+  },
+  {
+    "id": "monster-card",
+    "name": "Monster Card",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/35/Monster_Card.png"
+  },
+  {
+    "id": "mushmom-spore",
+    "name": "Mushmom Spore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/5a/Mushmom_Spore.png"
+  },
+  {
+    "id": "mushroom-spore",
+    "name": "Mushroom Spore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/b8/Mushroom_Spore.png"
+  },
+  {
+    "id": "octopus-leg",
+    "name": "Octopus Leg",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/27/Octopus_Leg.png"
+  },
+  {
+    "id": "omok-piece-octopus",
+    "name": "Omok Piece: Octopus",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "omok-piece-slime",
+    "name": "Omok Piece: Slime",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "omok-table",
+    "name": "Omok Table",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/b3/Omok_Table.png"
+  },
+  {
+    "id": "opal-ore",
+    "name": "Opal Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/b9/Opal_Ore.png"
+  },
+  {
+    "id": "orange-mushroom-cap",
+    "name": "Orange Mushroom Cap",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Orange_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/74/Orange_Mushroom_Cap.png"
+  },
+  {
+    "id": "orihalcon-ore",
+    "name": "Orihalcon Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/f2/Orihalcon_Ore.png"
+  },
+  {
+    "id": "pigs-head",
+    "name": "Pig's Head",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e2/Pig%27s_Head.png"
+  },
+  {
+    "id": "pigs-ribbon",
+    "name": "Pig's Ribbon",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/fb/Pig%27s_Ribbon.png"
+  },
+  {
+    "id": "plant-fossil",
+    "name": "Plant Fossil",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/fd/Plant_Fossil.png"
+  },
+  {
+    "id": "poisonous-mushroom",
+    "name": "Poisonous Mushroom",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c6/Poisonous_Mushroom.png"
+  },
+  {
+    "id": "raffle-petal",
+    "name": "Raffle Petal",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/da/Raffle_Petal.png"
+  },
+  {
+    "id": "rafflesia-petal",
+    "name": "Rafflesia Petal",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/b7/Rafflesia_Petal.png"
+  },
+  {
+    "id": "red-snail-shell",
+    "name": "Red Snail Shell",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/95/Red_Snail_Shell.png"
+  },
+  {
+    "id": "sapphire-ore",
+    "name": "Sapphire Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/ae/Sapphire_Ore.png"
+  },
+  {
+    "id": "scroll-crafting-stimulator",
+    "name": "Scroll Crafting Stimulator",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mano",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/1d/Scroll_Crafting_Stimulator.png"
+  },
+  {
+    "id": "silver-ore",
+    "name": "Silver Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/97/Silver_Ore.png"
+  },
+  {
+    "id": "slime-bubble",
+    "name": "Slime Bubble",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/55/Slime_Bubble.png"
+  },
+  {
+    "id": "snail-shell",
+    "name": "Snail Shell",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/29/Snail_Shell.png"
+  },
+  {
+    "id": "squishy-liquid",
+    "name": "Squishy Liquid",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/49/Squishy_Liquid.png"
+  },
+  {
+    "id": "stiff-feather",
+    "name": "Stiff Feather",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d0/Stiff_Feather.png"
+  },
+  {
+    "id": "stirge-wing",
+    "name": "Stirge Wing",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/8/84/Stirge_Wing.png"
+  },
+  {
+    "id": "stumps-teardrop",
+    "name": "Stump's Teardrop",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9b/Stump%27s_Teardrop.png"
+  },
+  {
+    "id": "tablecloth",
+    "name": "Tablecloth",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c1/Tablecloth.png"
+  },
+  {
+    "id": "topaz-ore",
+    "name": "Topaz Ore",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/0e/Topaz_Ore.png"
+  },
+  {
+    "id": "tortie-shell",
+    "name": "Tortie Shell",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tortie",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/34/Tortie_Shell.png"
+  },
+  {
+    "id": "tree-branch",
+    "name": "Tree Branch",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/fe/Tree_Branch.png"
+  },
+  {
+    "id": "wild-boar-tooth",
+    "name": "Wild Boar Tooth",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/70/Wild_Boar_Tooth.png"
+  }
+]

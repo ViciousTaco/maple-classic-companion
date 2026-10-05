@@ -1,0 +1,3402 @@
+[
+  {
+    "id": "aluminum-baseball-bat",
+    "name": "Aluminum Baseball Bat",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "Two-Handed Sword",
+    "reqLevel": 30,
+    "reqStats": {
+      "str": 55
+    },
+    "stats": {
+      "watk": 47
+    },
+    "npcSellMeso": 6500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aluminum_Baseball_Bat",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e6/Aluminum_Baseball_Bat.png"
+  },
+  {
+    "id": "axe-pole-arm",
+    "name": "Axe Pole Arm",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/5d/Axe_Pole_Arm.png"
+  },
+  {
+    "id": "battle-axe",
+    "name": "Battle Axe",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "One-Handed Axe",
+    "reqLevel": 15,
+    "reqJobs": [
+      "warrior"
+    ],
+    "reqStats": {
+      "str": 30,
+      "dex": 10
+    },
+    "stats": {
+      "watk": 32
+    },
+    "npcSellMeso": 2500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Battle_Axe",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/ca/Battle_Axe.png"
+  },
+  {
+    "id": "battle-shield",
+    "name": "Battle Shield",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/71/Battle_Shield.png"
+  },
+  {
+    "id": "black-amoria-skirt",
+    "name": "Black Amoria Skirt",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/8/80/Black_Amoria_Skirt.png"
+  },
+  {
+    "id": "black-dragon-robe",
+    "name": "Black Dragon Robe",
+    "category": "equip",
+    "tags": [],
+    "slot": "overall",
+    "reqLevel": 30,
+    "reqJobs": [
+      "warrior"
+    ],
+    "reqStats": {
+      "str": 50,
+      "dex": 20
+    },
+    "stats": {
+      "wdef": 105,
+      "str": 3,
+      "dex": 3
+    },
+    "npcSellMeso": 5400,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Black_Dragon_Robe",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/18/Black_Dragon_Robe.png"
+  },
+  {
+    "id": "black-knucklevest",
+    "name": "Black Knucklevest",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c7/Black_Knucklevest.png"
+  },
+  {
+    "id": "black-knucklevest-pants",
+    "name": "Black Knucklevest Pants",
+    "category": "equip",
+    "tags": [],
+    "slot": "bottom",
+    "reqLevel": 35,
+    "reqJobs": [
+      "thief"
+    ],
+    "reqStats": {
+      "dex": 25,
+      "luk": 60
+    },
+    "stats": {
+      "wdef": 32,
+      "luk": 3,
+      "hp": 5
+    },
+    "npcSellMeso": 4000,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Black_Knucklevest_Pants",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/75/Black_Knucklevest_Pants.png"
+  },
+  {
+    "id": "black-napoleon",
+    "name": "Black Napoleon",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c5/Black_Napoleon.png"
+  },
+  {
+    "id": "black-sneak-pants",
+    "name": "Black Sneak Pants",
+    "category": "equip",
+    "tags": [],
+    "slot": "bottom",
+    "reqLevel": 25,
+    "reqJobs": [
+      "thief"
+    ],
+    "reqStats": {
+      "dex": 15,
+      "luk": 40
+    },
+    "stats": {
+      "wdef": 26,
+      "luk": 2,
+      "hp": 5
+    },
+    "npcSellMeso": 2000,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Black_Sneak_Pants",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/69/Black_Sneak_Pants.png"
+  },
+  {
+    "id": "blood-fitted-mail",
+    "name": "Blood Fitted Mail",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/8/81/Blood_Fitted_Mail.png"
+  },
+  {
+    "id": "blue-basic-boots",
+    "name": "Blue Basic Boots",
+    "category": "equip",
+    "tags": [],
+    "slot": "shoes",
+    "reqLevel": 10,
+    "reqJobs": [
+      "magician"
+    ],
+    "reqStats": {
+      "int": 10
+    },
+    "stats": {
+      "wdef": 5,
+      "mdef": 6,
+      "avoid": 1,
+      "speed": 1
+    },
+    "npcSellMeso": 600,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Basic_Boots",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d9/Blue_Basic_Boots.png"
+  },
+  {
+    "id": "blue-burgler",
+    "name": "Blue Burgler",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/05/Blue_Burgler.png"
+  },
+  {
+    "id": "blue-calaf",
+    "name": "Blue Calaf",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/04/Blue_Calaf.png"
+  },
+  {
+    "id": "blue-chaos-robe",
+    "name": "Blue Chaos Robe",
+    "category": "equip",
+    "tags": [],
+    "slot": "overall",
+    "reqLevel": 35,
+    "reqJobs": [
+      "magician"
+    ],
+    "reqStats": {
+      "int": 60,
+      "luk": 25
+    },
+    "stats": {
+      "wdef": 51,
+      "mdef": 60,
+      "int": 6,
+      "mp": 5
+    },
+    "npcSellMeso": 9000,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Chaos_Robe",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/ca/Blue_Chaos_Robe.png"
+  },
+  {
+    "id": "blue-counter",
+    "name": "Blue Counter",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e9/Blue_Counter.png"
+  },
+  {
+    "id": "blue-hawkeye",
+    "name": "Blue Hawkeye",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e9/Blue_Hawkeye.png"
+  },
+  {
+    "id": "blue-headband",
+    "name": "Blue Headband",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/26/Blue_Headband.png"
+  },
+  {
+    "id": "blue-jean-shorts",
+    "name": "Blue Jean Shorts",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/4e/Blue_Jean_Shorts.png"
+  },
+  {
+    "id": "blue-jester",
+    "name": "Blue Jester",
+    "category": "equip",
+    "tags": [],
+    "slot": "hat",
+    "reqLevel": 30,
+    "reqJobs": [
+      "magician"
+    ],
+    "reqStats": {
+      "int": 50,
+      "luk": 20
+    },
+    "stats": {
+      "wdef": 16,
+      "mdef": 18,
+      "mp": 30
+    },
+    "npcSellMeso": 1800,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Jester",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/45/Blue_Jester.png"
+  },
+  {
+    "id": "blue-knucklevest-pants",
+    "name": "Blue Knucklevest Pants",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e6/Blue_Knucklevest_Pants.png"
+  },
+  {
+    "id": "blue-one-lined-t-shirt",
+    "name": "Blue One-lined T-Shirt",
+    "category": "equip",
+    "tags": [],
+    "slot": "top",
+    "reqLevel": 12,
+    "stats": {
+      "wdef": 26,
+      "hp": 12
+    },
+    "npcSellMeso": 1200,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_One-lined_T-Shirt",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/ab/Blue_One-lined_T-Shirt.png"
+  },
+  {
+    "id": "blue-pilfer",
+    "name": "Blue Pilfer",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/a4/Blue_Pilfer.png"
+  },
+  {
+    "id": "blue-qi-pao",
+    "name": "Blue Qi Pao",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/f5/Blue_Qi_Pao.png"
+  },
+  {
+    "id": "blue-shark",
+    "name": "Blue Shark",
+    "category": "equip",
+    "tags": [],
+    "slot": "top",
+    "reqLevel": 25,
+    "reqJobs": [
+      "warrior"
+    ],
+    "reqStats": {
+      "str": 40,
+      "dex": 15
+    },
+    "stats": {
+      "wdef": 50,
+      "mp": 25
+    },
+    "npcSellMeso": 2500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Shark",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9f/Blue_Shark.png"
+  },
+  {
+    "id": "blue-starlight",
+    "name": "Blue Starlight",
+    "category": "equip",
+    "tags": [],
+    "slot": "overall",
+    "reqLevel": 40,
+    "reqJobs": [
+      "magician"
+    ],
+    "reqStats": {
+      "int": 70,
+      "luk": 30
+    },
+    "stats": {
+      "wdef": 57,
+      "mdef": 66,
+      "int": 8
+    },
+    "npcSellMeso": 12600,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Starlight",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/52/Blue_Starlight.png"
+  },
+  {
+    "id": "blue-steal-pants",
+    "name": "Blue Steal Pants",
+    "category": "equip",
+    "tags": [],
+    "slot": "bottom",
+    "reqLevel": 30,
+    "reqJobs": [
+      "thief"
+    ],
+    "reqStats": {
+      "dex": 20,
+      "luk": 50
+    },
+    "stats": {
+      "wdef": 29,
+      "dex": 3
+    },
+    "npcSellMeso": 2400,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Steal_Pants",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/66/Blue_Steal_Pants.png"
+  },
+  {
+    "id": "bronze-chain-boots",
+    "name": "Bronze Chain Boots",
+    "category": "equip",
+    "tags": [],
+    "slot": "shoes",
+    "reqLevel": 30,
+    "reqJobs": [
+      "thief"
+    ],
+    "reqStats": {
+      "dex": 20,
+      "luk": 50
+    },
+    "stats": {
+      "wdef": 18,
+      "dex": 3,
+      "avoid": 3
+    },
+    "npcSellMeso": 1800,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bronze_Chain_Boots",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/3c/Bronze_Chain_Boots.png"
+  },
+  {
+    "id": "bronze-helmet",
+    "name": "Bronze Helmet",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e4/Bronze_Helmet.png"
+  },
+  {
+    "id": "bronze-koif",
+    "name": "Bronze Koif",
+    "category": "equip",
+    "tags": [],
+    "slot": "hat",
+    "reqLevel": 10,
+    "reqJobs": [
+      "warrior"
+    ],
+    "reqStats": {
+      "str": 10
+    },
+    "stats": {
+      "wdef": 22,
+      "dex": 1,
+      "acc": 1
+    },
+    "npcSellMeso": 600,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bronze_Koif",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d6/Bronze_Koif.png"
+  },
+  {
+    "id": "bronze-pride",
+    "name": "Bronze Pride",
+    "category": "equip",
+    "tags": [],
+    "slot": "hat",
+    "reqLevel": 30,
+    "reqStats": {
+      "int": 40
+    },
+    "stats": {
+      "wdef": 16,
+      "mdef": 18,
+      "int": 2,
+      "mp": 10
+    },
+    "npcSellMeso": 1800,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bronze_Pride",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/36/Bronze_Pride.png"
+  },
+  {
+    "id": "bronze-wolfskin",
+    "name": "Bronze Wolfskin",
+    "category": "equip",
+    "tags": [],
+    "slot": "gloves",
+    "reqLevel": 25,
+    "reqJobs": [
+      "thief"
+    ],
+    "reqStats": {
+      "dex": 15,
+      "luk": 40
+    },
+    "stats": {
+      "wdef": 12,
+      "str": 2,
+      "hp": 5,
+      "critRatePct": 1
+    },
+    "npcSellMeso": 3000,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bronze_Wolfskin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/67/Bronze_Wolfskin.png"
+  },
+  {
+    "id": "brown-duo",
+    "name": "Brown Duo",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/46/Brown_Duo.png"
+  },
+  {
+    "id": "brown-hard-leather-boots",
+    "name": "Brown Hard Leather Boots",
+    "category": "equip",
+    "tags": [],
+    "slot": "shoes",
+    "reqLevel": 10,
+    "reqJobs": [
+      "bowman"
+    ],
+    "reqStats": {
+      "dex": 10
+    },
+    "stats": {
+      "wdef": 10,
+      "avoid": 1,
+      "speed": 1
+    },
+    "npcSellMeso": 600,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Brown_Hard_Leather_Boots",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/8/83/Brown_Hard_Leather_Boots.png"
+  },
+  {
+    "id": "brown-jester",
+    "name": "Brown Jester",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/0a/Brown_Jester.png"
+  },
+  {
+    "id": "brown-martial-arts-pants",
+    "name": "Brown Martial Arts Pants",
+    "category": "equip",
+    "tags": [],
+    "slot": "bottom",
+    "reqLevel": 30,
+    "reqJobs": [
+      "warrior"
+    ],
+    "reqStats": {
+      "str": 50,
+      "dex": 20
+    },
+    "stats": {
+      "wdef": 41,
+      "dex": 3
+    },
+    "npcSellMeso": 2400,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Brown_Martial_Arts_Pants",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/63/Brown_Martial_Arts_Pants.png"
+  },
+  {
+    "id": "brown-piette-pants",
+    "name": "Brown Piette Pants",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/09/Brown_Piette_Pants.png"
+  },
+  {
+    "id": "brown-piettra",
+    "name": "Brown Piettra",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/24/Brown_Piettra.png"
+  },
+  {
+    "id": "brown-piettra-skirt",
+    "name": "Brown Piettra Skirt",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d9/Brown_Piettra_Skirt.png"
+  },
+  {
+    "id": "brown-sneak-pants",
+    "name": "Brown Sneak Pants",
+    "category": "equip",
+    "tags": [],
+    "slot": "bottom",
+    "reqLevel": 25,
+    "reqJobs": [
+      "thief"
+    ],
+    "reqStats": {
+      "dex": 15,
+      "luk": 40
+    },
+    "stats": {
+      "wdef": 26,
+      "str": 2,
+      "hp": 5
+    },
+    "npcSellMeso": 2000,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Brown_Sneak_Pants",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/23/Brown_Sneak_Pants.png"
+  },
+  {
+    "id": "brown-starlight",
+    "name": "Brown Starlight",
+    "category": "equip",
+    "tags": [],
+    "slot": "overall",
+    "reqLevel": 40,
+    "reqJobs": [
+      "magician"
+    ],
+    "reqStats": {
+      "int": 70,
+      "luk": 30
+    },
+    "stats": {
+      "wdef": 57,
+      "mdef": 66,
+      "luk": 8
+    },
+    "npcSellMeso": 12600,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Brown_Starlight",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e5/Brown_Starlight.png"
+  },
+  {
+    "id": "brown-winter-hat",
+    "name": "Brown Winter Hat",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/8/85/Brown_Winter_Hat.png"
+  },
+  {
+    "id": "brown-woodsman-boots",
+    "name": "Brown Woodsman Boots",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/24/Brown_Woodsman_Boots.png"
+  },
+  {
+    "id": "cats-eye",
+    "name": "Cat's Eye",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/3e/Cat%27s_Eye.png"
+  },
+  {
+    "id": "cutlus",
+    "name": "Cutlus",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/ee/Cutlus.png"
+  },
+  {
+    "id": "dankke",
+    "name": "Dankke",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/21/Dankke.png"
+  },
+  {
+    "id": "dark-brown-stealer-pants",
+    "name": "Dark Brown Stealer Pants",
+    "category": "equip",
+    "tags": [],
+    "slot": "bottom",
+    "reqLevel": 30,
+    "reqJobs": [
+      "thief"
+    ],
+    "reqStats": {
+      "dex": 20,
+      "luk": 50
+    },
+    "stats": {
+      "wdef": 29,
+      "str": 3
+    },
+    "npcSellMeso": 2400,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Brown_Stealer_Pants",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/35/Dark_Brown_Stealer_Pants.png"
+  },
+  {
+    "id": "dark-guise",
+    "name": "Dark Guise",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/1c/Dark_Guise.png"
+  },
+  {
+    "id": "dark-hawkeye",
+    "name": "Dark Hawkeye",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/47/Dark_Hawkeye.png"
+  },
+  {
+    "id": "double-axe",
+    "name": "Double Axe",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "One-Handed Axe",
+    "reqLevel": 10,
+    "reqStats": {
+      "str": 20
+    },
+    "stats": {
+      "watk": 27
+    },
+    "npcSellMeso": 1500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Double_Axe",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/a7/Double_Axe.png"
+  },
+  {
+    "id": "eagle-crow",
+    "name": "Eagle Crow",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "Crossbow",
+    "reqLevel": 30,
+    "reqJobs": [
+      "bowman"
+    ],
+    "reqStats": {
+      "str": 20,
+      "dex": 65
+    },
+    "stats": {
+      "watk": 52,
+      "dex": 1
+    },
+    "npcSellMeso": 6500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Eagle_Crow",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/50/Eagle_Crow.png"
+  },
+  {
+    "id": "eloon",
+    "name": "Eloon",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "One-Handed Sword",
+    "reqLevel": 25,
+    "reqJobs": [
+      "warrior",
+      "thief"
+    ],
+    "reqStats": {
+      "str": 50,
+      "dex": 20
+    },
+    "stats": {
+      "watk": 42
+    },
+    "npcSellMeso": 4500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Eloon",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9b/Eloon.png"
+  },
+  {
+    "id": "emerald-staff",
+    "name": "Emerald Staff",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "Staff",
+    "reqLevel": 15,
+    "reqJobs": [
+      "magician"
+    ],
+    "reqStats": {
+      "int": 30,
+      "luk": 10
+    },
+    "stats": {
+      "watk": 25,
+      "matk": 31,
+      "critDmgPct": 1
+    },
+    "npcSellMeso": 2500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Emerald_Staff",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/3b/Emerald_Staff.png"
+  },
+  {
+    "id": "firemans-axe",
+    "name": "Fireman's Axe",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "One-Handed Axe",
+    "reqLevel": 30,
+    "reqJobs": [
+      "warrior"
+    ],
+    "reqStats": {
+      "str": 60,
+      "dex": 25
+    },
+    "stats": {
+      "watk": 50
+    },
+    "npcSellMeso": 5500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fireman%27s_Axe",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/31/Fireman%27s_Axe.png"
+  },
+  {
+    "id": "fish-spear",
+    "name": "Fish Spear",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/ed/Fish_Spear.png"
+  },
+  {
+    "id": "forked-dagger",
+    "name": "Forked Dagger",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/68/Forked_Dagger.png"
+  },
+  {
+    "id": "great-brown-helmet",
+    "name": "Great Brown Helmet",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/f0/Great_Brown_Helmet.png"
+  },
+  {
+    "id": "green-able-armor-skirt",
+    "name": "Green Able Armor Skirt",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/00/Green_Able_Armor_Skirt.png"
+  },
+  {
+    "id": "green-avelin-skirt",
+    "name": "Green Avelin Skirt",
+    "category": "equip",
+    "tags": [],
+    "slot": "bottom",
+    "reqLevel": 10,
+    "reqJobs": [
+      "bowman"
+    ],
+    "reqStats": {
+      "dex": 10
+    },
+    "stats": {
+      "wdef": 17,
+      "dex": 1
+    },
+    "npcSellMeso": 800,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Avelin_Skirt",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9e/Green_Avelin_Skirt.png"
+  },
+  {
+    "id": "green-bennis-chainmail-male",
+    "name": "Green Bennis Chainmail (Male)",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/0d/Green_Bennis_Chainmail_%28Male%29.png"
+  },
+  {
+    "id": "green-distinction",
+    "name": "Green Distinction",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/bd/Green_Distinction.png"
+  },
+  {
+    "id": "green-feather-hat",
+    "name": "Green Feather Hat",
+    "category": "equip",
+    "tags": [],
+    "slot": "hat",
+    "reqLevel": 15,
+    "reqJobs": [
+      "bowman"
+    ],
+    "reqStats": {
+      "dex": 20
+    },
+    "stats": {
+      "wdef": 18,
+      "dex": 1,
+      "hp": 5
+    },
+    "npcSellMeso": 900,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Feather_Hat",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/ee/Green_Feather_Hat.png"
+  },
+  {
+    "id": "green-headband",
+    "name": "Green Headband",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/eb/Green_Headband.png"
+  },
+  {
+    "id": "green-knucklevest",
+    "name": "Green Knucklevest",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d1/Green_Knucklevest.png"
+  },
+  {
+    "id": "green-loosecap",
+    "name": "Green Loosecap",
+    "category": "equip",
+    "tags": [],
+    "slot": "hat",
+    "reqLevel": 20,
+    "reqJobs": [
+      "thief"
+    ],
+    "reqStats": {
+      "dex": 10,
+      "luk": 30
+    },
+    "stats": {
+      "wdef": 21,
+      "dex": 2
+    },
+    "npcSellMeso": 1200,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Loosecap",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/ae/Green_Loosecap.png"
+  },
+  {
+    "id": "green-matty",
+    "name": "Green Matty",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/f6/Green_Matty.png"
+  },
+  {
+    "id": "green-pilfer",
+    "name": "Green Pilfer",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/bd/Green_Pilfer.png"
+  },
+  {
+    "id": "green-skullcap",
+    "name": "Green Skullcap",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/df/Green_Skullcap.png"
+  },
+  {
+    "id": "green-t-shirt",
+    "name": "Green T-Shirt",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d0/Green_T-Shirt.png"
+  },
+  {
+    "id": "green-winter-hat",
+    "name": "Green Winter Hat",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Orange_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/0d/Green_Winter_Hat.png"
+  },
+  {
+    "id": "green-woodsman-boots",
+    "name": "Green Woodsman Boots",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e6/Green_Woodsman_Boots.png"
+  },
+  {
+    "id": "grey-able-armor",
+    "name": "Grey Able Armor",
+    "category": "equip",
+    "tags": [],
+    "slot": "top",
+    "reqLevel": 15,
+    "reqJobs": [
+      "bowman"
+    ],
+    "reqStats": {
+      "dex": 20
+    },
+    "stats": {
+      "wdef": 28,
+      "hp": 10,
+      "mp": 5
+    },
+    "npcSellMeso": 1500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Grey_Able_Armor",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/22/Grey_Able_Armor.png"
+  },
+  {
+    "id": "grey-t-shirt",
+    "name": "Grey T-Shirt",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/48/Grey_T-Shirt.png"
+  },
+  {
+    "id": "grey-thick-sweat-pants",
+    "name": "Grey Thick Sweat Pants",
+    "category": "equip",
+    "tags": [],
+    "slot": "bottom",
+    "reqLevel": 12,
+    "stats": {
+      "wdef": 18,
+      "hp": 12
+    },
+    "npcSellMeso": 960,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Grey_Thick_Sweat_Pants",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/74/Grey_Thick_Sweat_Pants.png"
+  },
+  {
+    "id": "halfmoon-zamadar",
+    "name": "Halfmoon Zamadar",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "Dagger",
+    "reqLevel": 35,
+    "reqJobs": [
+      "thief"
+    ],
+    "reqStats": {
+      "dex": 30,
+      "luk": 70
+    },
+    "stats": {
+      "watk": 53
+    },
+    "npcSellMeso": 7500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Halfmoon_Zamadar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d0/Halfmoon_Zamadar.png"
+  },
+  {
+    "id": "hand-axe",
+    "name": "Hand Axe",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9b/Hand_Axe.png"
+  },
+  {
+    "id": "heavy-hammer",
+    "name": "Heavy Hammer",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "One-Handed Blunt Weapon",
+    "reqLevel": 35,
+    "reqJobs": [
+      "warrior"
+    ],
+    "reqStats": {
+      "str": 70,
+      "dex": 30
+    },
+    "stats": {
+      "watk": 54
+    },
+    "npcSellMeso": 7500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Heavy_Hammer",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/b7/Heavy_Hammer.png"
+  },
+  {
+    "id": "heckler",
+    "name": "Heckler",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/22/Heckler.png"
+  },
+  {
+    "id": "ice-jeans",
+    "name": "Ice Jeans",
+    "category": "equip",
+    "tags": [],
+    "slot": "bottom",
+    "reqLevel": 17,
+    "stats": {
+      "wdef": 21,
+      "mp": 17
+    },
+    "npcSellMeso": 1360,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ice_Jeans",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/1d/Ice_Jeans.png"
+  },
+  {
+    "id": "iron-dagger",
+    "name": "Iron Dagger",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/3a/Iron_Dagger.png"
+  },
+  {
+    "id": "jean-capris",
+    "name": "Jean Capris",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/6c/Jean_Capris.png"
+  },
+  {
+    "id": "jeweled-katar",
+    "name": "Jeweled Katar",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/43/Jeweled_Katar.png"
+  },
+  {
+    "id": "korean-fan",
+    "name": "Korean Fan",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/3a/Korean_Fan.png"
+  },
+  {
+    "id": "leather-purse",
+    "name": "Leather Purse",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "One-Handed Blunt Weapon",
+    "reqLevel": 12,
+    "reqStats": {
+      "str": 15
+    },
+    "stats": {
+      "watk": 31
+    },
+    "npcSellMeso": 1900,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Leather_Purse",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/2e/Leather_Purse.png"
+  },
+  {
+    "id": "leather-sandals",
+    "name": "Leather Sandals",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/1e/Leather_Sandals.png"
+  },
+  {
+    "id": "lemona",
+    "name": "Lemona",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/b0/Lemona.png"
+  },
+  {
+    "id": "lionheart",
+    "name": "Lionheart",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Lupin",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/b/ba/Lionheart.png"
+  },
+  {
+    "id": "lollipop",
+    "name": "Lollipop",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "One-Handed Blunt Weapon",
+    "reqLevel": 30,
+    "reqStats": {
+      "str": 10,
+      "dex": 10,
+      "int": 10,
+      "luk": 10
+    },
+    "stats": {
+      "watk": 29,
+      "matk": 15
+    },
+    "npcSellMeso": 5500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lollipop",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/58/Lollipop.png"
+  },
+  {
+    "id": "long-sword",
+    "name": "Long Sword",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Orange_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/fd/Long_Sword.png"
+  },
+  {
+    "id": "mace",
+    "name": "Mace",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/63/Mace.png"
+  },
+  {
+    "id": "machete",
+    "name": "Machete",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "One-Handed Sword",
+    "reqLevel": 20,
+    "reqJobs": [
+      "warrior",
+      "thief"
+    ],
+    "reqStats": {
+      "str": 40,
+      "dex": 15
+    },
+    "stats": {
+      "watk": 37
+    },
+    "npcSellMeso": 3500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Machete",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/0c/Machete.png"
+  },
+  {
+    "id": "metal-axe",
+    "name": "Metal Axe",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "Two-Handed Axe",
+    "reqLevel": 10,
+    "reqJobs": [
+      "warrior",
+      "bowman",
+      "thief"
+    ],
+    "reqStats": {
+      "str": 25
+    },
+    "stats": {
+      "watk": 30
+    },
+    "npcSellMeso": 2500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Metal_Axe",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/33/Metal_Axe.png"
+  },
+  {
+    "id": "metal-wand",
+    "name": "Metal Wand",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/3d/Metal_Wand.png"
+  },
+  {
+    "id": "mithril-pole-arm",
+    "name": "Mithril Pole Arm",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/7e/Mithril_Pole_Arm.png"
+  },
+  {
+    "id": "nakamaki",
+    "name": "Nakamaki",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/58/Nakamaki.png"
+  },
+  {
+    "id": "orange-golden-circlet",
+    "name": "Orange Golden Circlet",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c7/Orange_Golden_Circlet.png"
+  },
+  {
+    "id": "orange-whitebottom-boots",
+    "name": "Orange Whitebottom Boots",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushmom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/71/Orange_Whitebottom_Boots.png"
+  },
+  {
+    "id": "pan-lid",
+    "name": "Pan Lid",
+    "category": "equip",
+    "tags": [],
+    "slot": "shield",
+    "reqLevel": 10,
+    "stats": {
+      "wdef": 44
+    },
+    "npcSellMeso": 2000,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pan_Lid",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/79/Pan_Lid.png"
+  },
+  {
+    "id": "pink-jester",
+    "name": "Pink Jester",
+    "category": "equip",
+    "tags": [],
+    "slot": "hat",
+    "reqLevel": 30,
+    "reqJobs": [
+      "magician"
+    ],
+    "reqStats": {
+      "int": 50,
+      "luk": 20
+    },
+    "stats": {
+      "wdef": 16,
+      "mdef": 18,
+      "hp": 30
+    },
+    "npcSellMeso": 1800,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pink_Jester",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/cd/Pink_Jester.png"
+  },
+  {
+    "id": "plunger",
+    "name": "Plunger",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "One-Handed Blunt Weapon",
+    "reqLevel": 25,
+    "reqStats": {
+      "str": 40
+    },
+    "stats": {
+      "watk": 44
+    },
+    "npcSellMeso": 4500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Plunger",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/30/Plunger.png"
+  },
+  {
+    "id": "pole-arm",
+    "name": "Pole Arm",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d1/Pole_Arm.png"
+  },
+  {
+    "id": "purple-steal",
+    "name": "Purple Steal",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/15/Purple_Steal.png"
+  },
+  {
+    "id": "purple-steal-pants",
+    "name": "Purple Steal Pants",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/67/Purple_Steal_Pants.png"
+  },
+  {
+    "id": "purple-tube",
+    "name": "Purple Tube",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/ac/Purple_Tube.png"
+  },
+  {
+    "id": "red-amoria-skirt",
+    "name": "Red Amoria Skirt",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9c/Red_Amoria_Skirt.png"
+  },
+  {
+    "id": "red-apprentice-hat",
+    "name": "Red Apprentice Hat",
+    "category": "equip",
+    "tags": [],
+    "slot": "hat",
+    "reqLevel": 10,
+    "reqJobs": [
+      "magician"
+    ],
+    "reqStats": {
+      "int": 10
+    },
+    "stats": {
+      "wdef": 8,
+      "mdef": 10,
+      "hp": 10
+    },
+    "npcSellMeso": 600,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Apprentice_Hat",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/19/Red_Apprentice_Hat.png"
+  },
+  {
+    "id": "red-burgler",
+    "name": "Red Burgler",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/31/Red_Burgler.png"
+  },
+  {
+    "id": "red-cloth-pants-male",
+    "name": "Red Cloth Pants (Male)",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/0f/Red_Cloth_Pants_%28Male%29.png"
+  },
+  {
+    "id": "red-gold-stealer",
+    "name": "Red Gold Stealer",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/6f/Red_Gold_Stealer.png"
+  },
+  {
+    "id": "red-guiltian",
+    "name": "Red Guiltian",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/f7/Red_Guiltian.png"
+  },
+  {
+    "id": "red-guise",
+    "name": "Red Guise",
+    "category": "equip",
+    "tags": [],
+    "slot": "hat",
+    "reqLevel": 30,
+    "reqJobs": [
+      "thief"
+    ],
+    "reqStats": {
+      "dex": 20,
+      "luk": 50
+    },
+    "stats": {
+      "wdef": 27,
+      "hp": 30
+    },
+    "npcSellMeso": 1800,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Guise",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/2e/Red_Guise.png"
+  },
+  {
+    "id": "red-hawkeye",
+    "name": "Red Hawkeye",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e6/Red_Hawkeye.png"
+  },
+  {
+    "id": "red-headband",
+    "name": "Red Headband",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c5/Red_Headband.png"
+  },
+  {
+    "id": "red-jack-boots",
+    "name": "Red Jack Boots",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/4d/Red_Jack_Boots.png"
+  },
+  {
+    "id": "red-matty",
+    "name": "Red Matty",
+    "category": "equip",
+    "tags": [],
+    "slot": "hat",
+    "reqLevel": 35,
+    "reqJobs": [
+      "magician"
+    ],
+    "reqStats": {
+      "int": 60,
+      "luk": 25
+    },
+    "stats": {
+      "wdef": 18,
+      "mdef": 20,
+      "hp": 35
+    },
+    "npcSellMeso": 3000,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Matty",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/2d/Red_Matty.png"
+  },
+  {
+    "id": "red-ninja-sandals",
+    "name": "Red Ninja Sandals",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Orange_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/92/Red_Ninja_Sandals.png"
+  },
+  {
+    "id": "red-pilfer",
+    "name": "Red Pilfer",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/4/41/Red_Pilfer.png"
+  },
+  {
+    "id": "red-silky-boots",
+    "name": "Red Silky Boots",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/9d/Red_Silky_Boots.png"
+  },
+  {
+    "id": "red-skullcap",
+    "name": "Red Skullcap",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/18/Red_Skullcap.png"
+  },
+  {
+    "id": "red-starry-bandana",
+    "name": "Red Starry Bandana",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/22/Red_Starry_Bandana.png"
+  },
+  {
+    "id": "red-steal",
+    "name": "Red Steal",
+    "category": "equip",
+    "tags": [],
+    "slot": "top",
+    "reqLevel": 30,
+    "reqJobs": [
+      "thief"
+    ],
+    "reqStats": {
+      "dex": 20,
+      "luk": 50
+    },
+    "stats": {
+      "wdef": 40,
+      "str": 3
+    },
+    "npcSellMeso": 3000,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Steal",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/33/Red_Steal.png"
+  },
+  {
+    "id": "red-striped-t-shirt",
+    "name": "Red Striped T-Shirt",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d6/Red_Striped_T-Shirt.png"
+  },
+  {
+    "id": "red-striped-top",
+    "name": "Red Striped Top",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/6/63/Red_Striped_Top.png"
+  },
+  {
+    "id": "red-thief-hood",
+    "name": "Red Thief Hood",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/8/83/Red_Thief_Hood.png"
+  },
+  {
+    "id": "red-tiberian",
+    "name": "Red Tiberian",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/0d/Red_Tiberian.png"
+  },
+  {
+    "id": "red-viper",
+    "name": "Red Viper",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/04/Red_Viper.png"
+  },
+  {
+    "id": "ryden",
+    "name": "Ryden",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d6/Ryden.png"
+  },
+  {
+    "id": "sai",
+    "name": "Sai",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Duskmander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d3/Sai.png"
+  },
+  {
+    "id": "sandblasted-jeans",
+    "name": "Sandblasted Jeans",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/9/97/Sandblasted_Jeans.png"
+  },
+  {
+    "id": "scimitar",
+    "name": "Scimitar",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "Two-Handed Sword",
+    "reqLevel": 30,
+    "reqJobs": [
+      "warrior"
+    ],
+    "reqStats": {
+      "str": 65,
+      "dex": 30
+    },
+    "stats": {
+      "watk": 50
+    },
+    "npcSellMeso": 6500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Scimitar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e5/Scimitar.png"
+  },
+  {
+    "id": "sky-blue-umbrella",
+    "name": "Sky Blue Umbrella",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "One-Handed Sword",
+    "reqLevel": 27,
+    "stats": {
+      "watk": 33,
+      "matk": 12
+    },
+    "npcSellMeso": 4900,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sky_Blue_Umbrella",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/2/2f/Sky_Blue_Umbrella.png"
+  },
+  {
+    "id": "sky-sneak-pants",
+    "name": "Sky Sneak Pants",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/5c/Sky_Sneak_Pants.png"
+  },
+  {
+    "id": "spear",
+    "name": "Spear",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Orange_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "steel-fingerless-gloves",
+    "name": "Steel Fingerless Gloves",
+    "category": "equip",
+    "tags": [],
+    "slot": "gloves",
+    "reqLevel": 15,
+    "reqJobs": [
+      "warrior"
+    ],
+    "reqStats": {
+      "str": 20
+    },
+    "stats": {
+      "wdef": 12,
+      "hp": 5,
+      "critRatePct": 1,
+      "acc": 1
+    },
+    "npcSellMeso": 1800,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Steel_Fingerless_Gloves",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/d6/Steel_Fingerless_Gloves.png"
+  },
+  {
+    "id": "sword",
+    "name": "Sword",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "triple-tipped-zamadar",
+    "name": "Triple-Tipped Zamadar",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/d/dd/Triple-Tipped_Zamadar.png"
+  },
+  {
+    "id": "undershirt",
+    "name": "Undershirt",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/37/Undershirt.png"
+  },
+  {
+    "id": "vaulter-2000",
+    "name": "Vaulter 2000",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/8/86/Vaulter_2000.png"
+  },
+  {
+    "id": "weighted-earrings",
+    "name": "Weighted Earrings",
+    "category": "equip",
+    "tags": [],
+    "slot": "earring",
+    "reqLevel": 20,
+    "stats": {
+      "mdef": 22,
+      "avoid": 1
+    },
+    "npcSellMeso": 3000,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Weighted_Earrings",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/09/Weighted_Earrings.png"
+  },
+  {
+    "id": "white-bandana",
+    "name": "White Bandana",
+    "category": "equip",
+    "tags": [],
+    "slot": "hat",
+    "reqLevel": 10,
+    "stats": {
+      "wdef": 15,
+      "int": 1
+    },
+    "npcSellMeso": 600,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/White_Bandana",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/af/White_Bandana.png"
+  },
+  {
+    "id": "white-chaos-robe",
+    "name": "White Chaos Robe",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/5/55/White_Chaos_Robe.png"
+  },
+  {
+    "id": "white-doros-robe",
+    "name": "White Doros Robe",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/f5/White_Doros_Robe.png"
+  },
+  {
+    "id": "white-gomushin",
+    "name": "White Gomushin",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Orange_Mushroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/10/White_Gomushin.png"
+  },
+  {
+    "id": "white-tube-top",
+    "name": "White Tube Top",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/0a/White_Tube_Top.png"
+  },
+  {
+    "id": "white-undershirt",
+    "name": "White Undershirt",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/fd/White_Undershirt.png"
+  },
+  {
+    "id": "wooden-buckler",
+    "name": "Wooden Buckler",
+    "category": "equip",
+    "tags": [],
+    "slot": "shield",
+    "reqLevel": 10,
+    "reqJobs": [
+      "warrior"
+    ],
+    "reqStats": {
+      "str": 10
+    },
+    "stats": {
+      "wdef": 70
+    },
+    "npcSellMeso": 2000,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wooden_Buckler",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/7/7f/Wooden_Buckler.png"
+  },
+  {
+    "id": "wooden-club",
+    "name": "Wooden Club",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c8/Wooden_Club.png"
+  },
+  {
+    "id": "wooden-staff",
+    "name": "Wooden Staff",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "Staff",
+    "reqLevel": 10,
+    "reqJobs": [
+      "magician"
+    ],
+    "reqStats": {
+      "int": 20
+    },
+    "stats": {
+      "watk": 20,
+      "matk": 24,
+      "critDmgPct": 1
+    },
+    "npcSellMeso": 1500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wooden_Staff",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/e/e5/Wooden_Staff.png"
+  },
+  {
+    "id": "wooden-sword",
+    "name": "Wooden Sword",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "Two-Handed Sword",
+    "reqLevel": 10,
+    "reqJobs": [
+      "warrior",
+      "bowman",
+      "thief"
+    ],
+    "reqStats": {
+      "str": 25
+    },
+    "stats": {
+      "watk": 30
+    },
+    "npcSellMeso": 2500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wooden_Sword",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/cd/Wooden_Sword.png"
+  },
+  {
+    "id": "wooden-wand",
+    "name": "Wooden Wand",
+    "category": "equip",
+    "tags": [],
+    "slot": "weapon",
+    "weaponType": "Wand",
+    "reqLevel": 10,
+    "reqStats": {
+      "int": 20
+    },
+    "stats": {
+      "watk": 18,
+      "matk": 27
+    },
+    "npcSellMeso": 1500,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wooden_Wand",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "work-gloves",
+    "name": "Work Gloves",
+    "category": "equip",
+    "tags": [],
+    "slot": "gloves",
+    "reqLevel": 10,
+    "stats": {
+      "wdef": 6,
+      "critRatePct": 1
+    },
+    "npcSellMeso": 1200,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Work_Gloves",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/a/ab/Work_Gloves.png"
+  },
+  {
+    "id": "yellow-headband",
+    "name": "Yellow Headband",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/1/17/Yellow_Headband.png"
+  },
+  {
+    "id": "yellow-jangoon-armor",
+    "name": "Yellow Jangoon Armor",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/c/c1/Yellow_Jangoon_Armor.png"
+  },
+  {
+    "id": "yellow-square",
+    "name": "Yellow Square",
+    "category": "equip",
+    "tags": [],
+    "slot": "earring",
+    "reqLevel": 20,
+    "stats": {
+      "mdef": 22,
+      "critDmgPct": 1
+    },
+    "npcSellMeso": 3000,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Yellow_Square",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/3/33/Yellow_Square.png"
+  },
+  {
+    "id": "yellow-t-shirt",
+    "name": "Yellow T-Shirt",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/0/03/Yellow_T-Shirt.png"
+  },
+  {
+    "id": "yellow-umbrella",
+    "name": "Yellow Umbrella",
+    "category": "equip",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05",
+    "image": "https://mapleclassic.wiki/images/f/f0/Yellow_Umbrella.png"
+  }
+]

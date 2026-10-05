@@ -1,0 +1,188 @@
+[
+  {
+    "id": "warrior-str",
+    "name": "Warrior: STR first",
+    "jobs": [
+      "beginner",
+      "warrior",
+      "fighter",
+      "page",
+      "spearman"
+    ],
+    "recommended": true,
+    "summary": "Put points into STR and add DEX only as your weapons ask for it.",
+    "phases": [
+      {
+        "fromLevel": 1,
+        "toLevel": 9,
+        "primary": "str",
+        "targets": {
+          "str": {
+            "base": 35
+          }
+        },
+        "text": "The Lv 10 Warrior advancement checks for STR 35 or more, so reach that before you go to Perion."
+      },
+      {
+        "fromLevel": 10,
+        "primary": "str",
+        "text": "Warriors run on STR through all three second jobs. Weapons past the starter tier also ask for some DEX (the guide's examples: Battle Axe 30 STR / 10 DEX, Cutlus 70 STR / 30 DEX), so top DEX up when your gear needs it."
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "magician-int",
+    "name": "Magician: INT first",
+    "jobs": [
+      "beginner",
+      "magician",
+      "wizard-fp",
+      "wizard-il",
+      "cleric"
+    ],
+    "recommended": true,
+    "summary": "Nearly every point goes into INT, with LUK as a small secondary stat.",
+    "phases": [
+      {
+        "fromLevel": 1,
+        "toLevel": 9,
+        "primary": "int",
+        "targets": {
+          "int": {
+            "base": 20
+          }
+        },
+        "text": "The Lv 10 Magician advancement checks for INT 20 or more, so reach that before you go to Ellinia."
+      },
+      {
+        "fromLevel": 10,
+        "primary": "int",
+        "text": "Almost all points into INT. Keep a little LUK for hit rate (the guide's example: Emerald Staff needs 30 INT / 10 LUK). The class page says STR and DEX give a magician nothing."
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Magician_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Magician",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "bowman-dex",
+    "name": "Bowman: DEX first",
+    "jobs": [
+      "beginner",
+      "bowman",
+      "hunter",
+      "crossbowman"
+    ],
+    "recommended": true,
+    "summary": "DEX is the main stat; add STR only when a bow or crossbow asks for it.",
+    "phases": [
+      {
+        "fromLevel": 1,
+        "toLevel": 9,
+        "primary": "dex",
+        "targets": {
+          "dex": {
+            "base": 25
+          }
+        },
+        "text": "The Lv 10 Bowman advancement checks for DEX 25 or more, so reach that before you go to Henesys."
+      },
+      {
+        "fromLevel": 10,
+        "primary": "dex",
+        "text": "Bowmen run on DEX through both second jobs. Bows and crossbows past the starter tier also ask for real STR (the guide's examples: Ryden 65 DEX / 30 STR, Heckler 85 DEX / 30 STR), so add STR when your weapon needs it."
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "thief-luk",
+    "name": "Thief: LUK first, DEX to qualify",
+    "jobs": [
+      "beginner",
+      "thief",
+      "assassin",
+      "bandit"
+    ],
+    "recommended": true,
+    "summary": "LUK is the damage stat, but the first job and the weapons also need DEX.",
+    "phases": [
+      {
+        "fromLevel": 1,
+        "toLevel": 9,
+        "primary": "luk",
+        "targets": {
+          "dex": {
+            "base": 25
+          }
+        },
+        "text": "The Lv 10 Thief advancement checks DEX (25 or more), not LUK, so reach DEX 25 first and put the rest into LUK."
+      },
+      {
+        "fromLevel": 10,
+        "primary": "luk",
+        "text": "Thieves run on LUK through both second jobs, with DEX as the secondary stat for hit rate. Daggers and claws past the starter tier ask for some DEX (the guide's examples: Triple-Tipped Zamadar 31 LUK / 11 DEX, Halfmoon Zamadar 70 LUK / 30 DEX)."
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  }
+]

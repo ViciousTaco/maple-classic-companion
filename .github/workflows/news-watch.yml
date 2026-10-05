@@ -1,0 +1,28 @@
+# Every 30 minutes: a new Classic World "Update" article on Nexon's news that the guide data hasn't been
+# reviewed against (id > meta.reviewedThroughArticleId) opens an issue "Data review needed". Convenience only —
+# the in-app staleness banner is the guarantee.
+name: News watch
+on:
+  schedule: [{ cron: "*/30 * * * *" }]
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - name: Find unreviewed updates
+        run: npx tsx scripts/news-watch.ts > unreviewed.tsv
+      - name: Open issues
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          while IFS=$'\t' read -r id title url; do
+            [ -z "$id" ] && continue
+            if gh issue list --state all --search "in:title \"#$id\"" --json number --jq 'length' | grep -qv '^0$'; then continue; fi
+            gh issue create --title "Data review needed: $title (#$id)" --body "Nexon posted $url — check the guide data against it, then bump meta.reviewedThroughArticleId (MASTER_PLAN Appendix C)."
+          done < unreviewed.tsv

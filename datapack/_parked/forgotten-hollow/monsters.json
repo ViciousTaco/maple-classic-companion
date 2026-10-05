@@ -1,0 +1,219 @@
+[
+  {
+    "id": "glowshroom",
+    "name": "Glowshroom",
+    "level": 39,
+    "hp": 1377,
+    "exp": 90,
+    "mp": 50,
+    "pdef": 10,
+    "mdef": 10,
+    "accuracy": 118,
+    "avoid": 24,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowshroom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "raffle",
+    "name": "Raffle",
+    "level": 40,
+    "hp": 1722,
+    "exp": 94,
+    "mp": 50,
+    "pdef": 10,
+    "mdef": 0,
+    "accuracy": 120,
+    "avoid": 24,
+    "boss": false,
+    "weak": [
+      "Fire"
+    ],
+    "strong": [
+      "Ice"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "golden-stirge",
+    "name": "Golden Stirge",
+    "level": 42,
+    "hp": 1278,
+    "exp": 103,
+    "mp": 50,
+    "pdef": 0,
+    "mdef": 0,
+    "accuracy": 133,
+    "avoid": 28,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "aqumander",
+    "name": "Aqumander",
+    "level": 43,
+    "hp": 2069,
+    "exp": 108,
+    "mp": 80,
+    "pdef": 0,
+    "mdef": 20,
+    "accuracy": 123,
+    "avoid": 26,
+    "boss": false,
+    "weak": [
+      "Lightning"
+    ],
+    "strong": [
+      "Ice"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "echopus",
+    "name": "Echopus",
+    "level": 45,
+    "hp": 2163,
+    "exp": 117,
+    "mp": 80,
+    "pdef": 10,
+    "mdef": 20,
+    "accuracy": 124,
+    "avoid": 27,
+    "boss": false,
+    "weak": [
+      "Lightning"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "rafflesia",
+    "name": "Rafflesia",
+    "level": 47,
+    "hp": 2285,
+    "exp": 127,
+    "mp": 80,
+    "pdef": 20,
+    "mdef": 10,
+    "accuracy": 126,
+    "avoid": 28,
+    "boss": false,
+    "weak": [
+      "Fire"
+    ],
+    "strong": [
+      "Poison"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "duskmander",
+    "name": "Duskmander",
+    "level": 50,
+    "hp": 2682,
+    "exp": 142,
+    "mp": 80,
+    "pdef": 0,
+    "mdef": 20,
+    "accuracy": 129,
+    "avoid": 29,
+    "boss": false,
+    "weak": [
+      "Ice"
+    ],
+    "strong": [
+      "Poison"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Duskmander",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "myewood",
+    "name": "Myewood",
+    "level": 54,
+    "hp": 3924,
+    "exp": 168,
+    "mp": 120,
+    "pdef": 10,
+    "mdef": 0,
+    "accuracy": 118,
+    "avoid": 27,
+    "boss": false,
+    "weak": [
+      "Fire"
+    ],
+    "strong": [
+      "Lightning"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Myewood",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  }
+]

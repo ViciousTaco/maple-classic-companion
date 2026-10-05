@@ -1,0 +1,930 @@
+[
+  {
+    "id": "path-of-the-warrior",
+    "name": "Path of the Warrior",
+    "category": "job",
+    "minLevel": 10,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "dances-with-balrog",
+    "steps": [
+      {
+        "text": "Talk to Dances with Balrog at his pavilion at the top of Perion; the instructor checks your level and stats before starting the trial (needs Lv 10 and STR 35, per the quest page).",
+        "kind": "talk",
+        "npcId": "dances-with-balrog",
+        "mapId": "perion"
+      },
+      {
+        "text": "Do the trial in the area the instructor designates and defeat monsters there until you have the proof of completion (targets can vary; follow the quest journal).",
+        "kind": "collect"
+      },
+      {
+        "text": "Bring the proof of completion back to Dances with Balrog.",
+        "kind": "deliver",
+        "npcId": "dances-with-balrog",
+        "mapId": "perion"
+      }
+    ],
+    "rewards": {
+      "exp": 0,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "warrior-first-job",
+    "chainIndex": 0,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Path_of_the_Warrior",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-warriors-next-journey",
+    "name": "The Warrior's Next Journey",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "warrior"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "dances-with-balrog",
+    "steps": [
+      {
+        "text": "Accept the quest from Dances with Balrog at Warriors' Sanctuary (Perion).",
+        "kind": "talk",
+        "npcId": "dances-with-balrog",
+        "mapId": "perion"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "warrior-second-job",
+    "chainIndex": 0,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Warrior%27s_Next_Journey",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "finding-the-instructor-warrior",
+    "name": "Finding the Instructor (Warrior)",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "warrior"
+    ],
+    "prereqQuestIds": [
+      "the-warriors-next-journey"
+    ],
+    "startNpcId": "dances-with-balrog",
+    "steps": [
+      {
+        "text": "Accept the quest from Dances with Balrog at Warriors' Sanctuary (Perion).",
+        "kind": "talk",
+        "npcId": "dances-with-balrog",
+        "mapId": "perion"
+      },
+      {
+        "text": "Collect 1 Dances with Balrog's Letter.",
+        "kind": "collect",
+        "qty": 1
+      },
+      {
+        "text": "Report to Warrior Job Instructor in West Rocky Mountain IV.",
+        "kind": "deliver",
+        "npcId": "warrior-job-instructor",
+        "mapId": "west-rocky-mountain-iv"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "warrior-second-job",
+    "chainIndex": 1,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Finding_the_Instructor_(Warrior)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "test-of-qualification-warrior",
+    "name": "Test of Qualification (Warrior)",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "warrior"
+    ],
+    "prereqQuestIds": [
+      "finding-the-instructor-warrior"
+    ],
+    "startNpcId": "warrior-job-instructor",
+    "steps": [
+      {
+        "text": "Accept the quest from Warrior Job Instructor in West Rocky Mountain IV.",
+        "kind": "talk",
+        "npcId": "warrior-job-instructor",
+        "mapId": "west-rocky-mountain-iv"
+      },
+      {
+        "text": "Collect 30 Dark Marbles.",
+        "kind": "collect",
+        "qty": 30
+      },
+      {
+        "text": "Return to Warrior Job Instructor.",
+        "kind": "deliver",
+        "npcId": "warrior-job-instructor",
+        "mapId": "west-rocky-mountain-iv"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "warrior-second-job",
+    "chainIndex": 2,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Test_of_Qualification_(Warrior)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "proof-of-qualification-warrior",
+    "name": "Proof of Qualification (Warrior)",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "warrior"
+    ],
+    "prereqQuestIds": [
+      "test-of-qualification-warrior"
+    ],
+    "startNpcId": "warrior-job-instructor",
+    "steps": [
+      {
+        "text": "Accept the quest from Warrior Job Instructor in West Rocky Mountain IV.",
+        "kind": "talk",
+        "npcId": "warrior-job-instructor",
+        "mapId": "west-rocky-mountain-iv"
+      },
+      {
+        "text": "Collect 1 The Proof of a Hero.",
+        "kind": "collect",
+        "qty": 1
+      },
+      {
+        "text": "Report to Dances with Balrog at Warriors' Sanctuary (Perion).",
+        "kind": "deliver",
+        "npcId": "dances-with-balrog",
+        "mapId": "perion"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "warrior-second-job",
+    "chainIndex": 3,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Warrior)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "path-of-the-magician",
+    "name": "Path of the Magician",
+    "category": "job",
+    "minLevel": 10,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "grendel-the-really-old",
+    "steps": [
+      {
+        "text": "Talk to Grendel the Really Old in the Magic Library at the top of Ellinia; the instructor checks your level and stats before starting the trial (needs Lv 10 and INT 20, per the quest page).",
+        "kind": "talk",
+        "npcId": "grendel-the-really-old",
+        "mapId": "ellinia"
+      },
+      {
+        "text": "Do the trial in the area the instructor designates and defeat monsters there until you have the proof of completion (targets can vary; follow the quest journal).",
+        "kind": "collect"
+      },
+      {
+        "text": "Bring the proof of completion back to Grendel the Really Old.",
+        "kind": "deliver",
+        "npcId": "grendel-the-really-old",
+        "mapId": "ellinia"
+      }
+    ],
+    "rewards": {
+      "exp": 0,
+      "meso": 0,
+      "items": [
+        {
+          "itemId": "wooden-staff",
+          "qty": 1,
+          "choice": true
+        },
+        {
+          "itemId": "wooden-wand",
+          "qty": 1,
+          "choice": true
+        }
+      ]
+    },
+    "repeatable": false,
+    "chainId": "magician-first-job",
+    "chainIndex": 0,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Path_of_the_Magician",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-magicians-next-journey",
+    "name": "The Magician's Next Journey",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "magician"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "grendel-the-really-old",
+    "steps": [
+      {
+        "text": "Accept the quest from Grendel the Really Old at Magic Library (Ellinia).",
+        "kind": "talk",
+        "npcId": "grendel-the-really-old",
+        "mapId": "ellinia"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "magician-second-job",
+    "chainIndex": 0,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Magician%27s_Next_Journey",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "finding-the-instructor-magician",
+    "name": "Finding the Instructor (Magician)",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "magician"
+    ],
+    "prereqQuestIds": [
+      "the-magicians-next-journey"
+    ],
+    "startNpcId": "grendel-the-really-old",
+    "steps": [
+      {
+        "text": "Accept the quest from Grendel the Really Old at Magic Library (Ellinia).",
+        "kind": "talk",
+        "npcId": "grendel-the-really-old",
+        "mapId": "ellinia"
+      },
+      {
+        "text": "Collect 1 Grendel the Really Old's Letter.",
+        "kind": "collect",
+        "qty": 1
+      },
+      {
+        "text": "Report to Magician Job Instructor in The Forest North of Ellinia.",
+        "kind": "deliver",
+        "npcId": "magician-job-instructor",
+        "mapId": "the-forest-north-of-ellinia"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "magician-second-job",
+    "chainIndex": 1,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Finding_the_Instructor_(Magician)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "test-of-qualification-magician",
+    "name": "Test of Qualification (Magician)",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "magician"
+    ],
+    "prereqQuestIds": [
+      "finding-the-instructor-magician"
+    ],
+    "startNpcId": "magician-job-instructor",
+    "steps": [
+      {
+        "text": "Accept the quest from Magician Job Instructor in The Forest North of Ellinia.",
+        "kind": "talk",
+        "npcId": "magician-job-instructor",
+        "mapId": "the-forest-north-of-ellinia"
+      },
+      {
+        "text": "Collect 30 Dark Marbles.",
+        "kind": "collect",
+        "qty": 30
+      },
+      {
+        "text": "Return to Magician Job Instructor.",
+        "kind": "deliver",
+        "npcId": "magician-job-instructor",
+        "mapId": "the-forest-north-of-ellinia"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "magician-second-job",
+    "chainIndex": 2,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Test_of_Qualification_(Magician)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "proof-of-qualification-magician",
+    "name": "Proof of Qualification (Magician)",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "magician"
+    ],
+    "prereqQuestIds": [
+      "test-of-qualification-magician"
+    ],
+    "startNpcId": "magician-job-instructor",
+    "steps": [
+      {
+        "text": "Accept the quest from Magician Job Instructor in The Forest North of Ellinia.",
+        "kind": "talk",
+        "npcId": "magician-job-instructor",
+        "mapId": "the-forest-north-of-ellinia"
+      },
+      {
+        "text": "Collect 1 The Proof of a Hero.",
+        "kind": "collect",
+        "qty": 1
+      },
+      {
+        "text": "Report to Grendel the Really Old at Magic Library (Ellinia).",
+        "kind": "deliver",
+        "npcId": "grendel-the-really-old",
+        "mapId": "ellinia"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "magician-second-job",
+    "chainIndex": 3,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Magician)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "path-of-the-bowman",
+    "name": "Path of the Bowman",
+    "category": "job",
+    "minLevel": 10,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "athena-pierce",
+    "steps": [
+      {
+        "text": "Talk to Athena Pierce at the Bowman Instructional School at the top of the great oak in Henesys; the instructor checks your level and stats before starting the trial (needs Lv 10 and DEX 25, per the quest page).",
+        "kind": "talk",
+        "npcId": "athena-pierce",
+        "mapId": "henesys"
+      },
+      {
+        "text": "Do the trial in the area the instructor designates and defeat monsters there until you have the proof of completion (targets can vary; follow the quest journal).",
+        "kind": "collect"
+      },
+      {
+        "text": "Bring the proof of completion back to Athena Pierce.",
+        "kind": "deliver",
+        "npcId": "athena-pierce",
+        "mapId": "henesys"
+      }
+    ],
+    "rewards": {
+      "exp": 0,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "bowman-first-job",
+    "chainIndex": 0,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Path_of_the_Bowman",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-bowmans-next-journey",
+    "name": "The Bowman's Next Journey",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "bowman"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "athena-pierce",
+    "steps": [
+      {
+        "text": "Accept the quest from Athena Pierce at Bowman Instructional School (Henesys).",
+        "kind": "talk",
+        "npcId": "athena-pierce",
+        "mapId": "henesys"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "bowman-second-job",
+    "chainIndex": 0,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Bowman%27s_Next_Journey",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "finding-the-instructor-bowman",
+    "name": "Finding the Instructor (Bowman)",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "bowman"
+    ],
+    "prereqQuestIds": [
+      "the-bowmans-next-journey"
+    ],
+    "startNpcId": "athena-pierce",
+    "steps": [
+      {
+        "text": "Accept the quest from Athena Pierce at Bowman Instructional School (Henesys).",
+        "kind": "talk",
+        "npcId": "athena-pierce",
+        "mapId": "henesys"
+      },
+      {
+        "text": "Collect 1 Athena Pierce's Letter.",
+        "kind": "collect",
+        "qty": 1
+      },
+      {
+        "text": "Report to Bowman Job Instructor in The Road to the Dungeon.",
+        "kind": "deliver",
+        "npcId": "bowman-job-instructor",
+        "mapId": "the-road-to-the-dungeon"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "bowman-second-job",
+    "chainIndex": 1,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Finding_the_Instructor_(Bowman)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "test-of-qualification-bowman",
+    "name": "Test of Qualification (Bowman)",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "bowman"
+    ],
+    "prereqQuestIds": [
+      "finding-the-instructor-bowman"
+    ],
+    "startNpcId": "bowman-job-instructor",
+    "steps": [
+      {
+        "text": "Accept the quest from Bowman Job Instructor in The Road to the Dungeon.",
+        "kind": "talk",
+        "npcId": "bowman-job-instructor",
+        "mapId": "the-road-to-the-dungeon"
+      },
+      {
+        "text": "Collect 30 Dark Marbles.",
+        "kind": "collect",
+        "qty": 30
+      },
+      {
+        "text": "Return to Bowman Job Instructor.",
+        "kind": "deliver",
+        "npcId": "bowman-job-instructor",
+        "mapId": "the-road-to-the-dungeon"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "bowman-second-job",
+    "chainIndex": 2,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Test_of_Qualification_(Bowman)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "proof-of-qualification-bowman",
+    "name": "Proof of Qualification (Bowman)",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "bowman"
+    ],
+    "prereqQuestIds": [
+      "test-of-qualification-bowman"
+    ],
+    "startNpcId": "bowman-job-instructor",
+    "steps": [
+      {
+        "text": "Accept the quest from Bowman Job Instructor in The Road to the Dungeon.",
+        "kind": "talk",
+        "npcId": "bowman-job-instructor",
+        "mapId": "the-road-to-the-dungeon"
+      },
+      {
+        "text": "Collect 1 The Proof of a Hero.",
+        "kind": "collect",
+        "qty": 1
+      },
+      {
+        "text": "Report to Athena Pierce at Bowman Instructional School (Henesys).",
+        "kind": "deliver",
+        "npcId": "athena-pierce",
+        "mapId": "henesys"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "bowman-second-job",
+    "chainIndex": 3,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Bowman)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "path-of-the-thief",
+    "name": "Path of the Thief",
+    "category": "job",
+    "minLevel": 10,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "dark-lord",
+    "steps": [
+      {
+        "text": "Talk to Dark Lord at his trade shop in the alley off Kerning City's main street; the instructor checks your level and stats before starting the trial (needs Lv 10 and DEX 25, per the quest page).",
+        "kind": "talk",
+        "npcId": "dark-lord",
+        "mapId": "kerning-city"
+      },
+      {
+        "text": "Do the trial in the area the instructor designates and defeat monsters there until you have the proof of completion (targets can vary; follow the quest journal).",
+        "kind": "collect"
+      },
+      {
+        "text": "Bring the proof of completion back to Dark Lord.",
+        "kind": "deliver",
+        "npcId": "dark-lord",
+        "mapId": "kerning-city"
+      }
+    ],
+    "rewards": {
+      "exp": 0,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "thief-first-job",
+    "chainIndex": 0,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Path_of_the_Thief",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-thiefs-next-journey",
+    "name": "The Thief's Next Journey",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "thief"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "dark-lord",
+    "steps": [
+      {
+        "text": "Accept the quest from Dark Lord at Thieves' Hideout (Kerning City).",
+        "kind": "talk",
+        "npcId": "dark-lord",
+        "mapId": "kerning-city"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "thief-second-job",
+    "chainIndex": 0,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Thief%27s_Next_Journey",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "finding-the-instructor-thief",
+    "name": "Finding the Instructor (Thief)",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "thief"
+    ],
+    "prereqQuestIds": [
+      "the-thiefs-next-journey"
+    ],
+    "startNpcId": "dark-lord",
+    "steps": [
+      {
+        "text": "Accept the quest from Dark Lord at Thieves' Hideout (Kerning City).",
+        "kind": "talk",
+        "npcId": "dark-lord",
+        "mapId": "kerning-city"
+      },
+      {
+        "text": "Collect 1 Dark Lord's Letter.",
+        "kind": "collect",
+        "qty": 1
+      },
+      {
+        "text": "Report to Thief Job Instructor in Construction Site North of Kerning City.",
+        "kind": "deliver",
+        "npcId": "thief-job-instructor",
+        "mapId": "construction-site-north-of-kerning-city"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "thief-second-job",
+    "chainIndex": 1,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Finding_the_Instructor_(Thief)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "test-of-qualification-thief",
+    "name": "Test of Qualification (Thief)",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "thief"
+    ],
+    "prereqQuestIds": [
+      "finding-the-instructor-thief"
+    ],
+    "startNpcId": "thief-job-instructor",
+    "steps": [
+      {
+        "text": "Accept the quest from Thief Job Instructor in Construction Site North of Kerning City.",
+        "kind": "talk",
+        "npcId": "thief-job-instructor",
+        "mapId": "construction-site-north-of-kerning-city"
+      },
+      {
+        "text": "Collect 30 Dark Marbles.",
+        "kind": "collect",
+        "qty": 30
+      },
+      {
+        "text": "Return to Thief Job Instructor.",
+        "kind": "deliver",
+        "npcId": "thief-job-instructor",
+        "mapId": "construction-site-north-of-kerning-city"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "thief-second-job",
+    "chainIndex": 2,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Test_of_Qualification_(Thief)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "proof-of-qualification-thief",
+    "name": "Proof of Qualification (Thief)",
+    "category": "job",
+    "minLevel": 30,
+    "jobs": [
+      "thief"
+    ],
+    "prereqQuestIds": [
+      "test-of-qualification-thief"
+    ],
+    "startNpcId": "thief-job-instructor",
+    "steps": [
+      {
+        "text": "Accept the quest from Thief Job Instructor in Construction Site North of Kerning City.",
+        "kind": "talk",
+        "npcId": "thief-job-instructor",
+        "mapId": "construction-site-north-of-kerning-city"
+      },
+      {
+        "text": "Collect 1 The Proof of a Hero.",
+        "kind": "collect",
+        "qty": 1
+      },
+      {
+        "text": "Report to Dark Lord at Thieves' Hideout (Kerning City).",
+        "kind": "deliver",
+        "npcId": "dark-lord",
+        "mapId": "kerning-city"
+      }
+    ],
+    "rewards": {
+      "exp": 3150,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "thief-second-job",
+    "chainIndex": 3,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Proof_of_Qualification_(Thief)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  }
+]

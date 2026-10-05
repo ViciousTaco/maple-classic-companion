@@ -1,0 +1,107 @@
+[
+  {
+    "id": "snail-hunting-ground-ii",
+    "mapId": "snail-hunting-ground-ii",
+    "mobIds": [
+      "snail",
+      "blue-snail"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 1,
+        "max": 4
+      }
+    ],
+    "party": "either",
+    "notes": "Guide calls this the cleanest start: only Snails and Blue Snails spawn here.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail_Hunting_Ground_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "mushroom-garden-maple-island",
+    "mapId": "mushroom-garden-maple-island",
+    "mobIds": [
+      "shroom"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "party": "either",
+    "notes": "Mostly Shrooms, with a few Snails and Orange Mushrooms mixed in (guide entry labelled 'Mushroom Garden'; spawn counts match the Maple Island version).",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushroom_Garden_(Maple_Island)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-field-west-of-amherst",
+    "mapId": "the-field-west-of-amherst",
+    "mobIds": [
+      "red-snail",
+      "shroom",
+      "blue-snail"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 4,
+        "max": 10
+      }
+    ],
+    "party": "either",
+    "notes": "Guide's all-round pick for the island: a mix of Red Snails, Shrooms and Blue Snails one map from Amherst, so a death respawns right beside it.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Field_West_of_Amherst",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  }
+]

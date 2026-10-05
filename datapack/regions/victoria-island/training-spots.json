@@ -1,0 +1,833 @@
+[
+  {
+    "id": "the-forest-east-of-henesys",
+    "mapId": "the-forest-east-of-henesys",
+    "mobIds": [
+      "pig",
+      "ribbon-pig"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 10,
+        "max": 13
+      }
+    ],
+    "party": "either",
+    "notes": "Pigs and Ribbon Pigs three maps from Henesys. The guide warns that leftover island-tier snails and shrooms take up some spawn room.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Forest_East_of_Henesys",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-tree-that-grew-ii",
+    "mapId": "the-tree-that-grew-ii",
+    "mobIds": [
+      "slime",
+      "stump"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 10,
+        "max": 12
+      }
+    ],
+    "party": "either",
+    "notes": "Lots of easy Slimes and Stumps three maps from Ellinia. Below your level, but the guide suggests it for a low-stress first session after job advancement.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Tree_That_Grew_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "line-1-area-1",
+    "mapId": "line-1-area-1",
+    "mobIds": [
+      "bubbling"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 13,
+        "max": 17
+      }
+    ],
+    "party": "either",
+    "notes": "Guide's best pick for this bracket: a Kerning City subway map with nothing but Bubblings, two maps from town.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Line_1_(Area_1)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-forest-of-wisdom",
+    "mapId": "the-forest-of-wisdom",
+    "mobIds": [
+      "green-mushroom",
+      "slime"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 13,
+        "max": 16
+      }
+    ],
+    "party": "either",
+    "notes": "Green Mushrooms with Slimes as filler between respawns, two maps from Ellinia.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Forest_of_Wisdom",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-forest-north-of-ellinia",
+    "mapId": "the-forest-north-of-ellinia",
+    "mobIds": [
+      "axe-stump",
+      "slime",
+      "stump"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 16,
+        "max": 19
+      }
+    ],
+    "party": "either",
+    "notes": "Axe Stumps backed by many trivial Slimes and Stumps. Low intensity and never empty, per the guide.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Forest_North_of_Ellinia",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-blue-mushroom-forest",
+    "mapId": "the-blue-mushroom-forest",
+    "mobIds": [
+      "blue-mushroom"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 18,
+        "max": 21
+      }
+    ],
+    "party": "either",
+    "notes": "Blue Mushrooms with low-level slimes and snails as filler.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Blue_Mushroom_Forest",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "transfer-area",
+    "mapId": "transfer-area",
+    "mobIds": [
+      "stirge"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 18,
+        "max": 22
+      }
+    ],
+    "party": "either",
+    "notes": "Stirges only, three maps from Kerning City. The guide's pick for the late teens.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Transfer_Area",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "dark-cave",
+    "mapId": "dark-cave",
+    "mobIds": [
+      "stirge",
+      "horny-mushroom"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 19,
+        "max": 23
+      }
+    ],
+    "party": "either",
+    "notes": "Stirges plus some Horny Mushrooms at the top of the bracket, about five maps from Sleepywood. A bridge into the next bracket.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Cave",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "ant-tunnel-iii",
+    "mapId": "ant-tunnel-iii",
+    "mobIds": [
+      "zombie-mushroom",
+      "horny-mushroom"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 21,
+        "max": 26
+      }
+    ],
+    "party": "either",
+    "notes": "The guide's top map for this bracket: a very dense mix of Zombie and Horny Mushrooms, three maps below Sleepywood.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ant_Tunnel_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "ant-tunnel-iv",
+    "mapId": "ant-tunnel-iv",
+    "mobIds": [
+      "horny-mushroom",
+      "zombie-mushroom"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 21,
+        "max": 26
+      }
+    ],
+    "party": "either",
+    "notes": "Same mushrooms as Ant Tunnel III, one map deeper and less crowded. The guide's fallback when III is busy.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ant_Tunnel_IV",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "land-of-wild-boar",
+    "mapId": "land-of-wild-boar",
+    "mobIds": [
+      "wild-boar",
+      "dark-axe-stump"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 23,
+        "max": 27
+      }
+    ],
+    "party": "either",
+    "notes": "Wild Boars and Dark Axe Stumps two maps from Perion. The guide notes Wild Boars drop gear for the next bracket.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Land_of_Wild_Boar",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "ant-tunnel-park",
+    "mapId": "ant-tunnel-park",
+    "mobIds": [
+      "evil-eye",
+      "zombie-mushroom"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 25,
+        "max": 29
+      }
+    ],
+    "party": "either",
+    "notes": "Volume pick for Evil Eye levels (Evil Eyes plus Zombie Mushrooms), roughly nine maps from Sleepywood; you respawn in Sleepywood.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ant_Tunnel_Park",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "pig-park-ii",
+    "mapId": "pig-park-ii",
+    "mobIds": [
+      "iron-hog"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 26,
+        "max": 30
+      }
+    ],
+    "party": "either",
+    "notes": "Iron Hogs alone on the map, three maps from Henesys (respawn there). The guide's convenience option.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig_Park_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-cave-of-evil-eye-iii",
+    "mapId": "the-cave-of-evil-eye-iii",
+    "mobIds": [
+      "evil-eye"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 26,
+        "max": 30
+      }
+    ],
+    "party": "either",
+    "notes": "Almost nothing but Evil Eyes, but about twelve maps from Sleepywood. The guide labels it the long-session option.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Cave_of_Evil_Eye_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-swamp-of-despair-i",
+    "mapId": "the-swamp-of-despair-i",
+    "mobIds": [
+      "ligator"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 29,
+        "max": 33
+      }
+    ],
+    "party": "either",
+    "notes": "Ligators one map from Kerning City, so restocking is quick. The low-level clutter is harmless, per the guide.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Swamp_of_Despair_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "the-burnt-land-iii",
+    "mapId": "the-burnt-land-iii",
+    "mobIds": [
+      "fire-boar",
+      "dark-axe-stump"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 30,
+        "max": 34
+      }
+    ],
+    "party": "either",
+    "notes": "Fire Boars mixed with some Dark Axe Stumps. The guide calls it the cleaner of the Burnt Land maps.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Burnt_Land_III",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "line-2-area-1",
+    "mapId": "line-2-area-1",
+    "mobIds": [
+      "jr-wraith"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 32,
+        "max": 36
+      }
+    ],
+    "party": "either",
+    "notes": "A very large Jr. Wraith spawn four maps from Kerning City. Jr. Neckis share the platforms but are far below the Wraiths.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Line_2_(Area_1)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "monkey-swamp-i",
+    "mapId": "monkey-swamp-i",
+    "mobIds": [
+      "lupin"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 35,
+        "max": 39
+      }
+    ],
+    "party": "either",
+    "notes": "Lupins spread across the swamp; a simple single-monster option.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Monkey_Swamp_I",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "a-look-out-shed-around-the-beach",
+    "mapId": "a-look-out-shed-around-the-beach",
+    "mobIds": [
+      "lorang",
+      "lupin"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 36,
+        "max": 40
+      }
+    ],
+    "party": "either",
+    "notes": "Mostly Lorangs one map from Florina Beach, with Lupins cycling in on respawn timers.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Look-Out_Shed_Around_the_Beach",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "lorang-lorang",
+    "mapId": "lorang-lorang",
+    "mobIds": [
+      "lorang",
+      "lupin"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 36,
+        "max": 40
+      }
+    ],
+    "party": "either",
+    "notes": "The guide's cleanest map for this bracket: Lorangs and a few Lupins, two maps from Florina Beach (where you respawn).",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang_Lorang",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "monkey-forest-ii",
+    "mapId": "monkey-forest-ii",
+    "mobIds": [
+      "zombie-lupin",
+      "lupin"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 41,
+        "max": 45
+      }
+    ],
+    "party": "either",
+    "notes": "Zombie Lupins about four maps from Ellinia; the guide's option that keeps you on the surface.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Monkey_Forest_II",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "hot-sand",
+    "mapId": "hot-sand",
+    "mobIds": [
+      "tortie",
+      "clang"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 45,
+        "max": 50
+      }
+    ],
+    "party": "either",
+    "notes": "Torties and Clangs about four maps from Florina Beach. Both are tanky for their level, so kills are slower than in the subway.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Hot_Sand",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "line-1-area-4",
+    "mapId": "line-1-area-4",
+    "mobIds": [
+      "wraith"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 46,
+        "max": 52
+      }
+    ],
+    "party": "either",
+    "notes": "Same Wraith-only layout and commute as Line 2 (Area 3); take whichever is quieter.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Line_1_(Area_4)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "line-2-area-3",
+    "mapId": "line-2-area-3",
+    "mobIds": [
+      "wraith"
+    ],
+    "bands": [
+      {
+        "archetype": "any",
+        "min": 46,
+        "max": 52
+      }
+    ],
+    "party": "either",
+    "notes": "Wraiths only, six maps from Kerning City with no closer shop. The guide's best map for this bracket if you can commit to a long session.",
+    "tags": [],
+    "videoIds": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Training_guide",
+        "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Line_2_(Area_3)",
+        "retrievedAt": "2026-10-05"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-05"
+  }
+]

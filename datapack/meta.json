@@ -1,0 +1,103 @@
+{
+  "packVersion": "2026.10.05-1",
+  "gameLabel": "Founder's Access",
+  "gameLabelUntilUtc": "2026-10-21T18:00:00Z",
+  "levelCap": 100,
+  "charactersPerAccount": 3,
+  "jobAdvancements": [
+    {
+      "level": 10,
+      "from": "beginner",
+      "to": [
+        "warrior"
+      ]
+    },
+    {
+      "level": 10,
+      "from": "beginner",
+      "to": [
+        "magician"
+      ]
+    },
+    {
+      "level": 10,
+      "from": "beginner",
+      "to": [
+        "bowman"
+      ]
+    },
+    {
+      "level": 10,
+      "from": "beginner",
+      "to": [
+        "thief"
+      ]
+    },
+    {
+      "level": 30,
+      "from": "warrior",
+      "to": [
+        "fighter",
+        "page",
+        "spearman"
+      ]
+    },
+    {
+      "level": 30,
+      "from": "magician",
+      "to": [
+        "wizard-fp",
+        "wizard-il",
+        "cleric"
+      ]
+    },
+    {
+      "level": 30,
+      "from": "bowman",
+      "to": [
+        "hunter",
+        "crossbowman"
+      ]
+    },
+    {
+      "level": 30,
+      "from": "thief",
+      "to": [
+        "assassin",
+        "bandit"
+      ]
+    }
+  ],
+  "regionsAvailable": [
+    "maple-island",
+    "victoria-island"
+  ],
+  "gatedRegions": [],
+  "defaultRespawnSec": 7.5,
+  "reviewedThroughArticleId": 45621,
+  "reviewedAt": "2026-10-05",
+  "sources": [
+    {
+      "kind": "official",
+      "label": "Nexon — Founder's Access Release Notes",
+      "url": "https://www.nexon.com/maplestory/news/general/45621",
+      "articleId": 45621,
+      "retrievedAt": "2026-10-05"
+    },
+    {
+      "kind": "official",
+      "label": "Nexon — MapleStory Classic World FAQ",
+      "url": "https://www.nexon.com/maplestory/news/general/45385",
+      "articleId": 45385,
+      "retrievedAt": "2026-10-05"
+    },
+    {
+      "kind": "community",
+      "label": "MapleClassic Wiki (CC BY-NC-SA 4.0) — default monster wave respawn ~7.5 s",
+      "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom",
+      "retrievedAt": "2026-10-05"
+    }
+  ],
+  "confidence": "verified",
+  "verifiedAt": "2026-10-05"
+}
