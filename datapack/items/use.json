@@ -1,5 +1,80 @@
 [
   {
+    "id": "apple",
+    "name": "Apple",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Roger's_Apple_(quest)",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bruce's_Cooking_Ingredients",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/7d/Apple.png"
+  },
+  {
+    "id": "arcforge-kit",
+    "name": "Arcforge Kit",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Chrishrama_in_Need_of_Help",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/8/82/Arcforge_Kit.png"
+  },
+  {
+    "id": "arcforging-kit",
+    "name": "Arcforging Kit",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Chrishrama_in_Need_of_Help",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/f/fe/Arcforging_Kit.png"
+  },
+  {
     "id": "arrows-for-bows",
     "name": "Arrows for Bows",
     "category": "use",
@@ -108,6 +183,29 @@
     "npcSellMeso": 22
   },
   {
+    "id": "cake",
+    "name": "Cake",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shumi's_Request",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/f/f0/Cake.png"
+  },
+  {
     "id": "cape-magic-def-scroll-greater",
     "name": "Cape Magic Def. Scroll: Greater",
     "category": "use",
@@ -182,6 +280,29 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/b/b2/Dexterity_Potion.png",
     "npcSellMeso": 250
+  },
+  {
+    "id": "drakes-blood",
+    "name": "Drake's Blood",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jane's_Second_Challenge",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/51/Drake%27s_Blood.png"
   },
   {
     "id": "earring-crit-damage-scroll-greater",
@@ -276,6 +397,81 @@
     "npcSellMeso": 1
   },
   {
+    "id": "egg",
+    "name": "Egg",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mai's_Final_Training",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sam's_Suggestion",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/2/26/Egg.png"
+  },
+  {
+    "id": "elixir",
+    "name": "Elixir",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jane's_First_Challenge",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/43/Elixir.png"
+  },
+  {
+    "id": "fried-chicken",
+    "name": "Fried Chicken",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Teo's_Weird_Hobby",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/7f/Fried_Chicken.png"
+  },
+  {
     "id": "gloves-attack-scroll-intermediate",
     "name": "Gloves Attack Scroll: Intermediate",
     "category": "use",
@@ -345,6 +541,29 @@
     "npcSellMeso": 1
   },
   {
+    "id": "hat-accuracy-scroll-intermediate",
+    "name": "Hat Accuracy Scroll: Intermediate",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tracing_the_Resonance",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/49/Intermediate_Scroll.png"
+  },
+  {
     "id": "ilbi-throwing-stars",
     "name": "Ilbi Throwing Stars",
     "category": "use",
@@ -399,6 +618,29 @@
     "npcSellMeso": 1500
   },
   {
+    "id": "leatherworking-kit",
+    "name": "Leatherworking Kit",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/JM_From_tha_Streetz_in_Need_of_Help",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/b/be/Leatherworking_Kit.png"
+  },
+  {
     "id": "lemon",
     "name": "Lemon",
     "category": "use",
@@ -447,6 +689,29 @@
     "npcSellMeso": 250
   },
   {
+    "id": "mana-elixir",
+    "name": "Mana Elixir",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shumi's_Lost_Sack_of_Cash",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/3/3d/Mana_Elixir.png"
+  },
+  {
     "id": "mokbi-throwing-stars",
     "name": "Mokbi Throwing Stars",
     "category": "use",
@@ -492,6 +757,35 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "npcSellMeso": 1
+  },
+  {
+    "id": "orange",
+    "name": "Orange",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz_7",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/43/Orange.png"
   },
   {
     "id": "orange-potion",
@@ -551,6 +845,58 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "npcSellMeso": 1
+  },
+  {
+    "id": "power-elixir",
+    "name": "Power Elixir",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jane's_Second_Challenge",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/51/Power_Elixir.png"
+  },
+  {
+    "id": "pure-water",
+    "name": "Pure Water",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Andre's_Request",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jane's_First_Challenge",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/9/94/Pure_Water.png"
   },
   {
     "id": "rainbow-colored-snail-shell",
@@ -613,6 +959,243 @@
     "npcSellMeso": 5
   },
   {
+    "id": "return-scroll-nearest-town",
+    "name": "Return Scroll - Nearest Town",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Olaf's_Second_Training",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shumi's_Lost_Coin",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/c/c2/Return_Scroll_-_Nearest_Town.png"
+  },
+  {
+    "id": "return-scroll-to-ellinia",
+    "name": "Return Scroll to Ellinia",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/I_Need_Help_on_My_Homework!",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shumi's_Lost_Coin",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/6/62/Return_Scroll_to_Ellinia.png"
+  },
+  {
+    "id": "return-scroll-to-henesys",
+    "name": "Return Scroll to Henesys",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Reason_Behind_the_Mushroom_Studies",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shumi's_Lost_Coin",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/5c/Return_Scroll_to_Henesys.png"
+  },
+  {
+    "id": "return-scroll-to-kerning-city",
+    "name": "Return Scroll to Kerning City",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Don_Hwang's_Request",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shumi's_Lost_Coin",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/74/Return_Scroll_to_Kerning_City.png"
+  },
+  {
+    "id": "return-scroll-to-lith-harbor",
+    "name": "Return Scroll to Lith Harbor",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shumi's_Lost_Coin",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/f/f5/Return_Scroll_to_Lith_Harbor.png"
+  },
+  {
+    "id": "return-scroll-to-perion",
+    "name": "Return Scroll to Perion",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Stump_Horror_Story",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shumi's_Lost_Coin",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/15/Return_Scroll_to_Perion.png"
+  },
+  {
+    "id": "return-scroll-to-sleepywood",
+    "name": "Return Scroll to Sleepywood",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shumi's_Lost_Coin",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/15/Return_Scroll_to_Sleepywood.png"
+  },
+  {
+    "id": "rogers-apple",
+    "name": "Roger's Apple",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Roger's_Apple_(quest)",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/76/Roger%27s_Apple.png"
+  },
+  {
+    "id": "salad",
+    "name": "Salad",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Luke_the_Security_Guy",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/7e/Salad.png"
+  },
+  {
     "id": "sap-of-ancient-tree",
     "name": "Sap of Ancient Tree",
     "category": "use",
@@ -635,6 +1218,75 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/9/95/Sap_of_Ancient_Tree.png",
     "npcSellMeso": 300
+  },
+  {
+    "id": "shoes-speed-scroll-greater",
+    "name": "Shoes Speed Scroll: Greater",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Last_Material_Delivery_for_Building_a_New_House",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/57/Greater_Scroll.png"
+  },
+  {
+    "id": "shoes-speed-scroll-intermediate",
+    "name": "Shoes Speed Scroll: Intermediate",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Last_Material_Delivery_for_Building_a_New_House",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/49/Intermediate_Scroll.png"
+  },
+  {
+    "id": "smithing-kit",
+    "name": "Smithing Kit",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Silas_Irons_in_Need_of_Help",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/6/6e/Smithing_Kit.png"
   },
   {
     "id": "sniper-potion",
@@ -684,6 +1336,46 @@
     "npcSellMeso": 1
   },
   {
+    "id": "steely-throwing-knives",
+    "name": "Steely Throwing Knives",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Drake",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/d/d8/Steely_Throwing_Knives.png"
+  },
+  {
+    "id": "tailoring-kit",
+    "name": "Tailoring Kit",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Francois_in_Need_of_Help",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/d/d7/Tailoring_Kit.png"
+  },
+  {
     "id": "topwear-mp-scroll-greater",
     "name": "Topwear MP Scroll: Greater",
     "category": "use",
@@ -729,6 +1421,29 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/6/6b/Warrior_Potion.png",
     "npcSellMeso": 250
+  },
+  {
+    "id": "weaponcrafting-kit",
+    "name": "Weaponcrafting Kit",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mr._Thunder_in_Need_of_Help",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/2/22/Weaponcrafting_Kit.png"
   },
   {
     "id": "white-potion",
@@ -789,6 +1504,29 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/f/f4/Wolbi_Throwing_Stars.png",
     "npcSellMeso": 500
+  },
+  {
+    "id": "woodcrafting-kit",
+    "name": "Woodcrafting Kit",
+    "category": "use",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Vicious_in_Need_of_Help",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Use_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/41/Woodcrafting_Kit.png"
   },
   {
     "id": "wooden-top",

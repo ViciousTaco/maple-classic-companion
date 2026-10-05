@@ -14,6 +14,8 @@ import type { Platform } from "./platform/types";
 import { toast, Toaster } from "./ui/overlays";
 import { useWatcherSetup } from "./features/watch/useWatch";
 import { useEventReminders } from "./features/events/useReminders";
+import { readOnlyPlatform, useMiniActions, useReloadOnSave, windowLabel } from "./features/mini/window";
+import { MiniApp } from "./features/mini/MiniApp";
 
 function Loading() {
   return (
@@ -42,9 +44,9 @@ function Appearance({ children }: { children: React.ReactNode }) {
   return <MotionConfig reducedMotion={motion === "reduced" ? "always" : motion === "full" ? "never" : "user"}>{children}</MotionConfig>;
 }
 
-function Body({ packLoading }: { packLoading: boolean }) {
+function Body({ packLoading, mini }: { packLoading: boolean; mini: boolean }) {
   const status = useProfiles((s) => s.status);
-  return status === "loading" || packLoading ? <Loading /> : <Shell />;
+  return status === "loading" || packLoading ? <Loading /> : mini ? <MiniApp /> : <Shell />;
 }
 
 export default function App({
@@ -59,7 +61,9 @@ export default function App({
   /** News + guide-data + app update checks (off in tests). */
   liveUpdates?: boolean;
 }) {
-  const [store] = useState(() => injected ?? createProfileStore(platform));
+  const [mini] = useState(() => windowLabel() === "mini");
+  // The mini window reads the same save file but never writes it (single writer, §8.2).
+  const [store] = useState(() => injected ?? createProfileStore(mini ? readOnlyPlatform(platform) : platform));
   const [loaded, setLoaded] = useState<LoadResult | null>(null);
   useEffect(() => {
     void store.getState().load();
@@ -82,7 +86,7 @@ export default function App({
   }, [loaded]);
   const loadedOk = loaded?.ok === true;
   useEffect(() => {
-    if (!liveUpdates || !loadedOk || started.current) return;
+    if (!liveUpdates || mini || !loadedOk || started.current) return;
     started.current = true;
     let timer: ReturnType<typeof setInterval> | null = null;
     void (async () => {
@@ -110,8 +114,8 @@ export default function App({
     return () => {
       if (timer) clearInterval(timer);
     };
-  }, [liveUpdates, loadedOk, platform]);
-  useDesktopWindow(platform, store);
+  }, [liveUpdates, mini, loadedOk, platform]);
+  useDesktopWindow(platform, store, !mini);
 
   const value = useMemo(() => {
     const pack = loaded?.ok ? loaded.pack : null;
@@ -120,14 +124,16 @@ export default function App({
       : { status: "failed", problems: loaded?.problems ?? [] };
     return { platform, store, pack, packInfo, rules: pack ? rulesFromPack(pack) : baselineRules };
   }, [platform, store, loaded]);
-  useWatcherSetup(platform, store, value.pack);
-  useEventReminders(platform, store, liveUpdates ? value.pack : null);
+  useWatcherSetup(platform, store, value.pack, !mini);
+  useEventReminders(platform, store, liveUpdates && !mini ? value.pack : null);
+  useMiniActions(platform, store, value.pack, !mini);
+  useReloadOnSave(platform, store, mini);
 
   return (
     <AppProvider value={value}>
       <Appearance>
         <Backdrop />
-        <Body packLoading={loaded === null} />
+        <Body packLoading={loaded === null} mini={mini} />
         <Toaster />
       </Appearance>
     </AppProvider>

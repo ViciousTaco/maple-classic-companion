@@ -1,0 +1,632 @@
+[
+  {
+    "id": "dagger-booster",
+    "name": "Dagger Booster",
+    "jobId": "bandit",
+    "maxLevel": 20,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 30
+      },
+      {
+        "level": 2,
+        "mpCost": 29
+      },
+      {
+        "level": 3,
+        "mpCost": 28
+      },
+      {
+        "level": 4,
+        "mpCost": 27
+      },
+      {
+        "level": 5,
+        "mpCost": 26
+      },
+      {
+        "level": 6,
+        "mpCost": 25
+      },
+      {
+        "level": 7,
+        "mpCost": 24
+      },
+      {
+        "level": 8,
+        "mpCost": 23
+      },
+      {
+        "level": 9,
+        "mpCost": 22
+      },
+      {
+        "level": 10,
+        "mpCost": 21
+      },
+      {
+        "level": 11,
+        "mpCost": 20
+      },
+      {
+        "level": 12,
+        "mpCost": 19
+      },
+      {
+        "level": 13,
+        "mpCost": 18
+      },
+      {
+        "level": 14,
+        "mpCost": 17
+      },
+      {
+        "level": 15,
+        "mpCost": 16
+      },
+      {
+        "level": 16,
+        "mpCost": 15
+      },
+      {
+        "level": 17,
+        "mpCost": 14
+      },
+      {
+        "level": 18,
+        "mpCost": 13
+      },
+      {
+        "level": 19,
+        "mpCost": 12
+      },
+      {
+        "level": 20,
+        "mpCost": 10
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dagger_Booster",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/0/0a/Dagger_Booster.png"
+  },
+  {
+    "id": "dagger-mastery",
+    "name": "Dagger Mastery",
+    "jobId": "bandit",
+    "maxLevel": 20,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/18/Dagger_Mastery.png"
+  },
+  {
+    "id": "haste-bandit",
+    "name": "Haste",
+    "jobId": "bandit",
+    "maxLevel": 20,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 15
+      },
+      {
+        "level": 2,
+        "mpCost": 16
+      },
+      {
+        "level": 3,
+        "mpCost": 17
+      },
+      {
+        "level": 4,
+        "mpCost": 18
+      },
+      {
+        "level": 5,
+        "mpCost": 19
+      },
+      {
+        "level": 6,
+        "mpCost": 20
+      },
+      {
+        "level": 7,
+        "mpCost": 21
+      },
+      {
+        "level": 8,
+        "mpCost": 22
+      },
+      {
+        "level": 9,
+        "mpCost": 23
+      },
+      {
+        "level": 10,
+        "mpCost": 24
+      },
+      {
+        "level": 11,
+        "mpCost": 25
+      },
+      {
+        "level": 12,
+        "mpCost": 26
+      },
+      {
+        "level": 13,
+        "mpCost": 27
+      },
+      {
+        "level": 14,
+        "mpCost": 28
+      },
+      {
+        "level": 15,
+        "mpCost": 29
+      },
+      {
+        "level": 16,
+        "mpCost": 30
+      },
+      {
+        "level": 17,
+        "mpCost": 31
+      },
+      {
+        "level": 18,
+        "mpCost": 32
+      },
+      {
+        "level": 19,
+        "mpCost": 33
+      },
+      {
+        "level": 20,
+        "mpCost": 35
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Haste",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/3/35/Haste.png"
+  },
+  {
+    "id": "nimble-recovery",
+    "name": "Nimble Recovery",
+    "jobId": "bandit",
+    "maxLevel": 20,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/b/b9/Nimble_Recovery.png"
+  },
+  {
+    "id": "savage-blow",
+    "name": "Savage Blow",
+    "jobId": "bandit",
+    "maxLevel": 30,
+    "kind": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "damagePct": 45,
+        "hits": 4,
+        "mpCost": 14
+      },
+      {
+        "level": 2,
+        "damagePct": 46,
+        "hits": 4,
+        "mpCost": 14
+      },
+      {
+        "level": 3,
+        "damagePct": 47,
+        "hits": 4,
+        "mpCost": 14
+      },
+      {
+        "level": 4,
+        "damagePct": 48,
+        "hits": 4,
+        "mpCost": 14
+      },
+      {
+        "level": 5,
+        "damagePct": 49,
+        "hits": 4,
+        "mpCost": 15
+      },
+      {
+        "level": 6,
+        "damagePct": 50,
+        "hits": 4,
+        "mpCost": 15
+      },
+      {
+        "level": 7,
+        "damagePct": 51,
+        "hits": 4,
+        "mpCost": 15
+      },
+      {
+        "level": 8,
+        "damagePct": 52,
+        "hits": 4,
+        "mpCost": 16
+      },
+      {
+        "level": 9,
+        "damagePct": 53,
+        "hits": 4,
+        "mpCost": 16
+      },
+      {
+        "level": 10,
+        "damagePct": 54,
+        "hits": 4,
+        "mpCost": 16
+      },
+      {
+        "level": 11,
+        "damagePct": 55,
+        "hits": 5,
+        "mpCost": 19
+      },
+      {
+        "level": 12,
+        "damagePct": 56,
+        "hits": 5,
+        "mpCost": 19
+      },
+      {
+        "level": 13,
+        "damagePct": 57,
+        "hits": 5,
+        "mpCost": 19
+      },
+      {
+        "level": 14,
+        "damagePct": 58,
+        "hits": 5,
+        "mpCost": 19
+      },
+      {
+        "level": 15,
+        "damagePct": 59,
+        "hits": 5,
+        "mpCost": 20
+      },
+      {
+        "level": 16,
+        "damagePct": 60,
+        "hits": 5,
+        "mpCost": 20
+      },
+      {
+        "level": 17,
+        "damagePct": 61,
+        "hits": 5,
+        "mpCost": 20
+      },
+      {
+        "level": 18,
+        "damagePct": 62,
+        "hits": 5,
+        "mpCost": 21
+      },
+      {
+        "level": 19,
+        "damagePct": 63,
+        "hits": 5,
+        "mpCost": 21
+      },
+      {
+        "level": 20,
+        "damagePct": 64,
+        "hits": 5,
+        "mpCost": 21
+      },
+      {
+        "level": 21,
+        "damagePct": 65,
+        "hits": 6,
+        "mpCost": 24
+      },
+      {
+        "level": 22,
+        "damagePct": 66,
+        "hits": 6,
+        "mpCost": 24
+      },
+      {
+        "level": 23,
+        "damagePct": 67,
+        "hits": 6,
+        "mpCost": 24
+      },
+      {
+        "level": 24,
+        "damagePct": 68,
+        "hits": 6,
+        "mpCost": 25
+      },
+      {
+        "level": 25,
+        "damagePct": 69,
+        "hits": 6,
+        "mpCost": 25
+      },
+      {
+        "level": 26,
+        "damagePct": 70,
+        "hits": 6,
+        "mpCost": 25
+      },
+      {
+        "level": 27,
+        "damagePct": 71,
+        "hits": 6,
+        "mpCost": 26
+      },
+      {
+        "level": 28,
+        "damagePct": 72,
+        "hits": 6,
+        "mpCost": 26
+      },
+      {
+        "level": 29,
+        "damagePct": 73,
+        "hits": 6,
+        "mpCost": 26
+      },
+      {
+        "level": 30,
+        "damagePct": 75,
+        "hits": 6,
+        "mpCost": 28
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Savage_Blow",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/d/d1/Savage_Blow.png"
+  },
+  {
+    "id": "steal",
+    "name": "Steal",
+    "jobId": "bandit",
+    "maxLevel": 30,
+    "kind": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "damagePct": 110,
+        "mpCost": 10
+      },
+      {
+        "level": 2,
+        "damagePct": 113,
+        "mpCost": 10
+      },
+      {
+        "level": 3,
+        "damagePct": 116,
+        "mpCost": 11
+      },
+      {
+        "level": 4,
+        "damagePct": 119,
+        "mpCost": 11
+      },
+      {
+        "level": 5,
+        "damagePct": 122,
+        "mpCost": 11
+      },
+      {
+        "level": 6,
+        "damagePct": 125,
+        "mpCost": 12
+      },
+      {
+        "level": 7,
+        "damagePct": 128,
+        "mpCost": 12
+      },
+      {
+        "level": 8,
+        "damagePct": 131,
+        "mpCost": 13
+      },
+      {
+        "level": 9,
+        "damagePct": 134,
+        "mpCost": 13
+      },
+      {
+        "level": 10,
+        "damagePct": 137,
+        "mpCost": 14
+      },
+      {
+        "level": 11,
+        "damagePct": 140,
+        "mpCost": 14
+      },
+      {
+        "level": 12,
+        "damagePct": 143,
+        "mpCost": 15
+      },
+      {
+        "level": 13,
+        "damagePct": 146,
+        "mpCost": 15
+      },
+      {
+        "level": 14,
+        "damagePct": 149,
+        "mpCost": 16
+      },
+      {
+        "level": 15,
+        "damagePct": 152,
+        "mpCost": 16
+      },
+      {
+        "level": 16,
+        "damagePct": 155,
+        "mpCost": 17
+      },
+      {
+        "level": 17,
+        "damagePct": 158,
+        "mpCost": 17
+      },
+      {
+        "level": 18,
+        "damagePct": 161,
+        "mpCost": 18
+      },
+      {
+        "level": 19,
+        "damagePct": 164,
+        "mpCost": 18
+      },
+      {
+        "level": 20,
+        "damagePct": 167,
+        "mpCost": 19
+      },
+      {
+        "level": 21,
+        "damagePct": 170,
+        "mpCost": 19
+      },
+      {
+        "level": 22,
+        "damagePct": 173,
+        "mpCost": 20
+      },
+      {
+        "level": 23,
+        "damagePct": 176,
+        "mpCost": 20
+      },
+      {
+        "level": 24,
+        "damagePct": 179,
+        "mpCost": 21
+      },
+      {
+        "level": 25,
+        "damagePct": 182,
+        "mpCost": 21
+      },
+      {
+        "level": 26,
+        "damagePct": 185,
+        "mpCost": 22
+      },
+      {
+        "level": 27,
+        "damagePct": 188,
+        "mpCost": 22
+      },
+      {
+        "level": 28,
+        "damagePct": 191,
+        "mpCost": 23
+      },
+      {
+        "level": 29,
+        "damagePct": 194,
+        "mpCost": 23
+      },
+      {
+        "level": 30,
+        "damagePct": 200,
+        "mpCost": 24
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Steal",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/9/92/Steal.png"
+  }
+]

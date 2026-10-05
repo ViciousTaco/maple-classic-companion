@@ -1026,6 +1026,24 @@
     "verifiedAt": "2026-10-05"
   },
   {
+    "mobId": "dark-stone-golem",
+    "itemId": "dark-stone-golem-rubble",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stone_Golem",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
     "mobId": "dark-stump",
     "itemId": "blue-qi-pao",
     "status": "reported",
@@ -3546,6 +3564,60 @@
     "verifiedAt": "2026-10-05"
   },
   {
+    "mobId": "red-drake",
+    "itemId": "dark-piettra-skirt",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Drake",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "mobId": "red-drake",
+    "itemId": "drake-skull",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Drake",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "mobId": "red-drake",
+    "itemId": "steely-throwing-knives",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Drake",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
     "mobId": "ribbon-pig",
     "itemId": "amethyst-ore",
     "status": "reported",
@@ -4194,6 +4266,24 @@
     "verifiedAt": "2026-10-05"
   },
   {
+    "mobId": "stone-golem",
+    "itemId": "stone-golem-rubble",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stone_Golem",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
     "mobId": "stump",
     "itemId": "arrows-for-crossbows",
     "status": "reported",
@@ -4318,6 +4408,24 @@
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "tauromacis",
+    "itemId": "tauromacis-horn",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tauromacis",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
   },
   {
     "mobId": "tortie",
@@ -4588,6 +4696,24 @@
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05"
+  },
+  {
+    "mobId": "wild-kargo",
+    "itemId": "wild-kargo-eye",
+    "status": "reported",
+    "rate": {
+      "kind": "unknown"
+    },
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Kargo",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
   },
   {
     "mobId": "wraith",

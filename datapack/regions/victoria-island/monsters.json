@@ -1110,5 +1110,147 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/9/9b/Malady.png"
+  },
+  {
+    "id": "stone-golem",
+    "name": "Stone Golem",
+    "level": 56,
+    "hp": 5134,
+    "exp": 183,
+    "mp": 120,
+    "pdef": 30,
+    "mdef": 0,
+    "accuracy": 120,
+    "avoid": 28,
+    "boss": false,
+    "strong": [
+      "Poison"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stone_Golem",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/d/d4/Stone_Golem.png"
+  },
+  {
+    "id": "dark-stone-golem",
+    "name": "Dark Stone Golem",
+    "level": 58,
+    "hp": 5428,
+    "exp": 197,
+    "mp": 150,
+    "pdef": 0,
+    "mdef": 30,
+    "accuracy": 121,
+    "avoid": 29,
+    "boss": false,
+    "weak": [
+      "Holy"
+    ],
+    "strong": [
+      "Fire",
+      "Poison"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Stone_Golem",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/b/b2/Dark_Stone_Golem.png"
+  },
+  {
+    "id": "red-drake",
+    "name": "Red Drake",
+    "level": 60,
+    "hp": 5184,
+    "exp": 213,
+    "mp": 120,
+    "pdef": 15,
+    "mdef": 15,
+    "accuracy": 150,
+    "avoid": 34,
+    "boss": false,
+    "weak": [
+      "Ice"
+    ],
+    "strong": [
+      "Fire"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Drake",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/47/Red_Drake.png"
+  },
+  {
+    "id": "wild-kargo",
+    "name": "Wild Kargo",
+    "level": 62,
+    "hp": 5057,
+    "exp": 229,
+    "mp": 100,
+    "pdef": 30,
+    "mdef": 0,
+    "accuracy": 138,
+    "avoid": 35,
+    "boss": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Kargo",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/8/83/Wild_Kargo.png"
+  },
+  {
+    "id": "tauromacis",
+    "name": "Tauromacis",
+    "level": 70,
+    "hp": 9328,
+    "exp": 300,
+    "mp": 120,
+    "pdef": 25,
+    "mdef": 5,
+    "accuracy": 144,
+    "avoid": 39,
+    "boss": false,
+    "weak": [
+      "Ice"
+    ],
+    "strong": [
+      "Lightning"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tauromacis",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/40/Tauromacis.png"
   }
 ]

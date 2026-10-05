@@ -118,14 +118,20 @@
   {
     "id": "andre",
     "name": "Andre",
-    "mapId": "kerning-city",
-    "role": "Hair Salon Assistant - in Kerning City Hair Salon",
+    "mapId": "kerning-city-hair-salon",
+    "role": "Hair Salon Assistant",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Kerning_City",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Hair_Salon",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -187,18 +193,40 @@
   {
     "id": "arthur",
     "name": "Arthur",
-    "mapId": "henesys",
-    "role": "Town Clerk - in Henesys Town Hall",
+    "mapId": "henesys-town-hall",
+    "role": "Town Clerk",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Town_Hall",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "arturo",
+    "name": "Arturo",
+    "mapId": "perion-department-store",
+    "role": "Grocer",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Perion_Department_Store",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
   },
   {
     "id": "arwen-the-fairy",
@@ -218,14 +246,20 @@
   {
     "id": "athena-pierce",
     "name": "Athena Pierce",
-    "mapId": "henesys",
-    "role": "Bowman 1st job instructor - in Bowman Instructional School",
+    "mapId": "bowman-instructional-school",
+    "role": "Bowman 1st job instructor",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman_Instructional_School",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -249,14 +283,20 @@
   {
     "id": "ben",
     "name": "Ben",
-    "mapId": "kerning-city",
-    "role": "City Scroll Shop - in Kerning City Civic Center",
+    "mapId": "kerning-city-civic-center",
+    "role": "City Scroll Shop",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Kerning_City",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Civic_Center",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -369,14 +409,20 @@
   {
     "id": "brittany",
     "name": "Brittany",
-    "mapId": "henesys",
-    "role": "Hair Salon Assistant - in Henesys Hair Salon",
+    "mapId": "henesys-hair-salon",
+    "role": "Hair Salon Assistant",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Hair_Salon",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -415,14 +461,20 @@
   {
     "id": "casey",
     "name": "Casey",
-    "mapId": "henesys",
-    "role": "Master of MiniGame - in Henesys Park",
+    "mapId": "henesys-park",
+    "role": "Master of MiniGame",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Park",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -446,14 +498,20 @@
   {
     "id": "cherry",
     "name": "Cherry",
-    "mapId": "ellinia",
-    "role": "Ticketing Usher - in Ellinia Station",
+    "mapId": "ellinia-station",
+    "role": "Ticketing Usher",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Ellinia",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ellinia_Station",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -477,14 +535,19 @@
   {
     "id": "chris",
     "name": "Chris",
-    "mapId": "kerning-city",
-    "role": "in Kerning City Repair Shop",
+    "mapId": "kerning-city-repair-shop",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Kerning_City",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Repair_Shop",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -530,14 +593,20 @@
   {
     "id": "cloy",
     "name": "Cloy",
-    "mapId": "henesys",
-    "role": "Pet Master - in Henesys Park",
+    "mapId": "henesys-park",
+    "role": "Pet Master",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Park",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -592,14 +661,20 @@
   {
     "id": "cutthroat-manny",
     "name": "Cutthroat Manny",
-    "mapId": "kerning-city",
-    "role": "Weapon Seller - in Kerning City Self-Defence Item Store",
+    "mapId": "kerning-city-self-defence-item-store",
+    "role": "Weapon Seller",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Kerning_City",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Self-Defence_Item_Store",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -608,14 +683,20 @@
   {
     "id": "dances-with-balrog",
     "name": "Dances with Balrog",
-    "mapId": "perion",
-    "role": "Warrior 1st job instructor - in Warrior Sanctuary",
+    "mapId": "warriors-sanctuary",
+    "role": "Warrior 1st job instructor",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Perion",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warriors'_Sanctuary",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -624,14 +705,20 @@
   {
     "id": "dark-lord",
     "name": "Dark Lord",
-    "mapId": "kerning-city",
-    "role": "Thief 1st job instructor - in Dark Lord's Trade Shop",
+    "mapId": "thieves-hideout",
+    "role": "Thief 1st job instructor",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Kerning_City",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thieves'_Hideout",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -640,14 +727,20 @@
   {
     "id": "denma-the-owner",
     "name": "Denma the Owner",
-    "mapId": "henesys",
-    "role": "Plastic Surgeon - in Henesys Plastic Surgery",
+    "mapId": "henesys-plastic-surgery",
+    "role": "Plastic Surgeon",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Plastic_Surgery",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -656,14 +749,20 @@
   {
     "id": "don-giovanni",
     "name": "Don Giovanni",
-    "mapId": "kerning-city",
-    "role": "Hair Salon Owner - in Kerning City Hair Salon",
+    "mapId": "kerning-city-hair-salon",
+    "role": "Hair Salon Owner",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Kerning_City",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Hair_Salon",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -672,14 +771,20 @@
   {
     "id": "don-hwang",
     "name": "Don Hwang",
-    "mapId": "kerning-city",
-    "role": "Armor Seller - in Kerning City Self-Defence Item Store",
+    "mapId": "kerning-city-self-defence-item-store",
+    "role": "Armor Seller",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Kerning_City",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Self-Defence_Item_Store",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -688,14 +793,20 @@
   {
     "id": "doofus",
     "name": "Doofus",
-    "mapId": "henesys",
-    "role": "Pet Food Merchant - in Henesys Market",
+    "mapId": "henesys-market",
+    "role": "Pet Food Merchant",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Market",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -704,14 +815,20 @@
   {
     "id": "dr-feeble",
     "name": "Dr. Feeble",
-    "mapId": "henesys",
-    "role": "Doctor w/o License - in Henesys Plastic Surgery",
+    "mapId": "henesys-plastic-surgery",
+    "role": "Doctor w/o License",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Plastic_Surgery",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -788,14 +905,20 @@
   {
     "id": "flint",
     "name": "Flint",
-    "mapId": "henesys",
-    "role": "Town Scroll Shop - in Henesys Town Hall",
+    "mapId": "henesys-town-hall",
+    "role": "Town Scroll Shop",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Town_Hall",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -804,14 +927,20 @@
   {
     "id": "flora-the-fairy",
     "name": "Flora the Fairy",
-    "mapId": "ellinia",
-    "role": "Weapon Seller - in Ellinia Weapon Store",
+    "mapId": "ellinia-weapon-store",
+    "role": "Weapon Seller",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Ellinia",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ellinia_Weapon_Store",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -857,14 +986,20 @@
   {
     "id": "grendel-the-really-old",
     "name": "Grendel the Really Old",
-    "mapId": "ellinia",
-    "role": "Magician 1st job instructor - in Magic Library",
+    "mapId": "magic-library",
+    "role": "Magician 1st job instructor",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Ellinia",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Magic_Library",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -873,14 +1008,20 @@
   {
     "id": "harry",
     "name": "Harry",
-    "mapId": "perion",
-    "role": "Armour merchant - in Perion Weapon Store",
+    "mapId": "perion-weapon-store",
+    "role": "Armour merchant",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Perion",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Perion_Weapon_Store",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -889,14 +1030,19 @@
   {
     "id": "hotel-receptionist",
     "name": "Hotel Receptionist",
-    "mapId": "sleepywood",
-    "role": "in Sleepywood Hotel",
+    "mapId": "sleepywood-hotel",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Sleepywood",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sleepywood_Hotel",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -920,14 +1066,20 @@
   {
     "id": "jack",
     "name": "Jack",
-    "mapId": "kerning-city",
-    "role": "Estate Agent - in Kerning City Civic Center",
+    "mapId": "kerning-city-civic-center",
+    "role": "Estate Agent",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Kerning_City",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Civic_Center",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -973,14 +1125,19 @@
   {
     "id": "jane-doe",
     "name": "Jane Doe",
-    "mapId": "kerning-city",
-    "role": "in Niora Hospital",
+    "mapId": "niora-hospital",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Kerning_City",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Niora_Hospital",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1020,14 +1177,20 @@
   {
     "id": "joel",
     "name": "Joel",
-    "mapId": "ellinia",
-    "role": "Ticketing Usher - in Ellinia Station",
+    "mapId": "ellinia-station",
+    "role": "Ticketing Usher",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Ellinia",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ellinia_Station",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1051,14 +1214,20 @@
   {
     "id": "karl",
     "name": "Karl",
-    "mapId": "henesys",
-    "role": "Weapon Seller - in Henesys Weapon Store",
+    "mapId": "henesys-weapon-store",
+    "role": "Weapon Seller",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Weapon_Store",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1082,14 +1251,20 @@
   {
     "id": "leatherworking-station",
     "name": "Leatherworking Station",
-    "mapId": "henesys",
-    "role": "Crafting station - in Henesys Market",
+    "mapId": "henesys-market",
+    "role": "Crafting station",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Market",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1233,14 +1408,20 @@
   {
     "id": "mar-the-fairy",
     "name": "Mar the Fairy",
-    "mapId": "ellinia",
-    "role": "Pet Master - in Marr's Forest",
+    "mapId": "marrs-forest",
+    "role": "Pet Master",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Ellinia",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Marr's_Forest",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1249,14 +1430,20 @@
   {
     "id": "max",
     "name": "Max",
-    "mapId": "kerning-city",
-    "role": "City General Store - in Kerning City Civic Center",
+    "mapId": "kerning-city-civic-center",
+    "role": "City General Store",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Kerning_City",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Civic_Center",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1265,14 +1452,19 @@
   {
     "id": "maya",
     "name": "Maya",
-    "mapId": "henesys",
-    "role": "in Henesys Townstreet",
+    "mapId": "henesys-townstreet",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Townstreet",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1366,14 +1558,20 @@
   {
     "id": "mr-lee",
     "name": "Mr. Lee",
-    "mapId": "henesys",
-    "role": "Storage Keeper - in Henesys Park",
+    "mapId": "henesys-park",
+    "role": "Storage Keeper",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Park",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1430,14 +1628,20 @@
   {
     "id": "mr-sweatbottom",
     "name": "Mr. Sweatbottom",
-    "mapId": "sleepywood",
-    "role": "Sauna Manager - in Regular Sauna",
+    "mapId": "regular-sauna",
+    "role": "Sauna Manager",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Sleepywood",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Regular_Sauna",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1478,14 +1682,20 @@
   {
     "id": "mr-wetbottom",
     "name": "Mr. Wetbottom",
-    "mapId": "sleepywood",
-    "role": "Sauna Manager - in VIP Sauna",
+    "mapId": "vip-sauna",
+    "role": "Sauna Manager",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Sleepywood",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/VIP_Sauna",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1509,14 +1719,20 @@
   {
     "id": "ms-tan",
     "name": "Ms. Tan",
-    "mapId": "henesys",
-    "role": "Dermatologist - in Henesys Skin-Care",
+    "mapId": "henesys-skin-care",
+    "role": "Dermatologist",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Skin-Care",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1540,14 +1756,20 @@
   {
     "id": "natalie",
     "name": "Natalie",
-    "mapId": "henesys",
-    "role": "Hair Salon Owner - in Henesys Hair Salon",
+    "mapId": "henesys-hair-salon",
+    "role": "Hair Salon Owner",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Hair_Salon",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1556,14 +1778,20 @@
   {
     "id": "natasha",
     "name": "Natasha",
-    "mapId": "lith-harbor",
-    "role": "Armor Seller - in Lith Harbor Armor Shop",
+    "mapId": "lith-harbor-armor-shop",
+    "role": "Armor Seller",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Lith_Harbor",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lith_Harbor_Armor_Shop",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1587,14 +1815,20 @@
   {
     "id": "oak",
     "name": "Oak",
-    "mapId": "henesys",
-    "role": "Town Furnishings - in Henesys Town Hall",
+    "mapId": "henesys-town-hall",
+    "role": "Town Furnishings",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Town_Hall",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1665,14 +1899,19 @@
   {
     "id": "pia",
     "name": "Pia",
-    "mapId": "henesys",
-    "role": "in Henesys Park",
+    "mapId": "henesys-park",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Park",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1712,14 +1951,20 @@
   {
     "id": "raymond",
     "name": "Raymond",
-    "mapId": "henesys",
-    "role": "Town General Store - in Henesys Town Hall",
+    "mapId": "henesys-town-hall",
+    "role": "Town General Store",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Town_Hall",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1838,14 +2083,20 @@
   {
     "id": "river",
     "name": "River",
-    "mapId": "perion",
-    "role": "Weapon merchant - in Perion Weapon Store",
+    "mapId": "perion-weapon-store",
+    "role": "Weapon merchant",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Perion",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Perion_Weapon_Store",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1869,14 +2120,19 @@
   {
     "id": "ronnie",
     "name": "Ronnie",
-    "mapId": "ellinia",
-    "role": "in The Tree Tunnel At the Forest Up North",
+    "mapId": "the-tree-tunnel-at-the-forest-up-north",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Ellinia",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Tree_Tunnel_At_the_Forest_Up_North",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1900,14 +2156,20 @@
   {
     "id": "roxy",
     "name": "Roxy",
-    "mapId": "kerning-city",
-    "role": "City Clerk - in Kerning City Civic Center",
+    "mapId": "kerning-city-civic-center",
+    "role": "City Clerk",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Kerning_City",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Civic_Center",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1931,14 +2193,20 @@
   {
     "id": "sam",
     "name": "Sam",
-    "mapId": "henesys",
-    "role": "Equipment shop owner - in Henesys Weapon Store",
+    "mapId": "henesys-weapon-store",
+    "role": "Equipment shop owner",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Weapon_Store",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -1963,14 +2231,20 @@
   {
     "id": "serabi-the-fairy",
     "name": "Serabi the Fairy",
-    "mapId": "ellinia",
-    "role": "Armor Seller - in Ellinia Weapon Store",
+    "mapId": "ellinia-weapon-store",
+    "role": "Armor Seller",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Ellinia",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ellinia_Weapon_Store",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -2041,18 +2315,45 @@
   {
     "id": "silver",
     "name": "Silver",
-    "mapId": "lith-harbor",
-    "role": "Weapon Seller - in Lith Harbor Weapon Shop",
+    "mapId": "lith-harbor-weapon-shop",
+    "role": "Weapon Seller",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Lith_Harbor",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lith_Harbor_Weapon_Shop",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "sophia",
+    "name": "Sophia",
+    "mapId": "perion-department-store",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Perion_Department_Store",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Making_a_Sparkling_Rock",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
   },
   {
     "id": "teo",
@@ -2130,14 +2431,20 @@
   {
     "id": "tommy",
     "name": "Tommy",
-    "mapId": "henesys",
-    "role": "Estate Agent - in Henesys Town Hall",
+    "mapId": "henesys-town-hall",
+    "role": "Estate Agent",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Town_Hall",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -2146,14 +2453,20 @@
   {
     "id": "trainer-bartos",
     "name": "Trainer Bartos",
-    "mapId": "henesys",
-    "role": "Pet Trainer - in Pet-Walking Road",
+    "mapId": "pet-walking-road",
+    "role": "Pet Trainer",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pet-Walking_Road",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -2162,14 +2475,20 @@
   {
     "id": "trainer-frod",
     "name": "Trainer Frod",
-    "mapId": "henesys",
-    "role": "Pet Trainer - in Pet-Walking Road",
+    "mapId": "pet-walking-road",
+    "role": "Pet Trainer",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pet-Walking_Road",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -2239,14 +2558,19 @@
   {
     "id": "utah",
     "name": "Utah",
-    "mapId": "henesys",
-    "role": "in Utah's Pig Farm",
+    "mapId": "utahs-pig-farm",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Utah's_Pig_Farm",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -2271,14 +2595,20 @@
   {
     "id": "vicious",
     "name": "Vicious",
-    "mapId": "henesys",
-    "role": "Carpenter - in Henesys Market",
+    "mapId": "henesys-market",
+    "role": "Carpenter",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Market",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -2372,14 +2702,20 @@
   {
     "id": "weston",
     "name": "Weston",
-    "mapId": "kerning-city",
-    "role": "City Furnishings - in Kerning City Civic Center",
+    "mapId": "kerning-city-civic-center",
+    "role": "City Furnishings",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Kerning_City",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Civic_Center",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -2424,14 +2760,20 @@
   {
     "id": "woodworking-station",
     "name": "Woodworking Station",
-    "mapId": "henesys",
-    "role": "Crafting station - in Henesys Market",
+    "mapId": "henesys-market",
+    "role": "Crafting station",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Henesys",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Market",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",

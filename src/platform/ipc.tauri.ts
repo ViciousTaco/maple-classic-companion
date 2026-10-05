@@ -1,4 +1,5 @@
 import { invoke } from "@tauri-apps/api/core";
+import { getCurrentWebviewWindow } from "@tauri-apps/api/webviewWindow";
 import { openUrl } from "@tauri-apps/plugin-opener";
 import { bytesToBase64 } from "./base64";
 import type { Platform } from "./types";
@@ -51,4 +52,36 @@ export const tauriPlatform: Platform = {
   appVersion: () => invoke("app_version"),
   cacheRead: (key) => invoke("cache_read", { key }),
   cacheWrite: (key, json) => invoke("cache_write", { key, json }),
+  screenListWindows: () => invoke("screen_list_windows"),
+  screenSnapshot: (windowId) => invoke("screen_snapshot", { windowId }),
+  screenRead: (windowId, regions) => invoke("screen_read", { windowId, regions }),
+  hotkeyStatus: () => invoke("hotkey_status"),
+  notify: (title, body) => invoke("notify_show", { title, body }),
+  notifyStatus: () => invoke("notify_status"),
+  miniWindowOpen: () => invoke("mini_window_open"),
+  miniWindowClose: () => invoke("mini_window_close"),
+  relayToMain: (kind, payload) => invoke("relay_to_main", { kind, payload: payload ?? null }),
+  onEvent: (name: string, handler: (payload: unknown) => void) => onEvent(name, handler),
 };
+
+/**
+ * Listens on *this* webview window: gets events Rust sends to every window and to this window's label, but not
+ * ones aimed at another window (e.g. `mcc://mini-action` → main only). The returned function works even
+ * before `listen` has resolved.
+ */
+function onEvent(name: string, handler: (payload: unknown) => void): () => void {
+  let stop: (() => void) | null = null;
+  let cancelled = false;
+  getCurrentWebviewWindow()
+    .listen(name, (event) => handler(event.payload))
+    .then((unlisten) => {
+      if (cancelled) unlisten();
+      else stop = unlisten;
+    })
+    .catch((err: unknown) => console.error(`Can't listen for ${name}:`, err));
+  return () => {
+    cancelled = true;
+    stop?.();
+    stop = null;
+  };
+}

@@ -1,0 +1,462 @@
+[
+  {
+    "id": "energy-bolt",
+    "name": "Energy Bolt",
+    "jobId": "magician",
+    "maxLevel": 20,
+    "kind": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 6
+      },
+      {
+        "level": 2,
+        "mpCost": 6
+      },
+      {
+        "level": 3,
+        "mpCost": 6
+      },
+      {
+        "level": 4,
+        "mpCost": 6
+      },
+      {
+        "level": 5,
+        "mpCost": 7
+      },
+      {
+        "level": 6,
+        "mpCost": 7
+      },
+      {
+        "level": 7,
+        "mpCost": 7
+      },
+      {
+        "level": 8,
+        "mpCost": 8
+      },
+      {
+        "level": 9,
+        "mpCost": 8
+      },
+      {
+        "level": 10,
+        "mpCost": 9
+      },
+      {
+        "level": 11,
+        "mpCost": 9
+      },
+      {
+        "level": 12,
+        "mpCost": 10
+      },
+      {
+        "level": 13,
+        "mpCost": 10
+      },
+      {
+        "level": 14,
+        "mpCost": 11
+      },
+      {
+        "level": 15,
+        "mpCost": 11
+      },
+      {
+        "level": 16,
+        "mpCost": 12
+      },
+      {
+        "level": 17,
+        "mpCost": 12
+      },
+      {
+        "level": 18,
+        "mpCost": 13
+      },
+      {
+        "level": 19,
+        "mpCost": 13
+      },
+      {
+        "level": 20,
+        "mpCost": 14
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Magician",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Energy_Bolt",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/8/8b/Energy_Bolt.png"
+  },
+  {
+    "id": "improved-mp-recovery",
+    "name": "Improved MP Recovery",
+    "jobId": "magician",
+    "maxLevel": 15,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Magician",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/d/dd/Improved_MP_Recovery.png"
+  },
+  {
+    "id": "magic-armor",
+    "name": "Magic Armor",
+    "jobId": "magician",
+    "maxLevel": 20,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 8
+      },
+      {
+        "level": 2,
+        "mpCost": 8
+      },
+      {
+        "level": 3,
+        "mpCost": 8
+      },
+      {
+        "level": 4,
+        "mpCost": 8
+      },
+      {
+        "level": 5,
+        "mpCost": 8
+      },
+      {
+        "level": 6,
+        "mpCost": 10
+      },
+      {
+        "level": 7,
+        "mpCost": 10
+      },
+      {
+        "level": 8,
+        "mpCost": 10
+      },
+      {
+        "level": 9,
+        "mpCost": 10
+      },
+      {
+        "level": 10,
+        "mpCost": 10
+      },
+      {
+        "level": 11,
+        "mpCost": 13
+      },
+      {
+        "level": 12,
+        "mpCost": 13
+      },
+      {
+        "level": 13,
+        "mpCost": 13
+      },
+      {
+        "level": 14,
+        "mpCost": 13
+      },
+      {
+        "level": 15,
+        "mpCost": 13
+      },
+      {
+        "level": 16,
+        "mpCost": 16
+      },
+      {
+        "level": 17,
+        "mpCost": 16
+      },
+      {
+        "level": 18,
+        "mpCost": 16
+      },
+      {
+        "level": 19,
+        "mpCost": 16
+      },
+      {
+        "level": 20,
+        "mpCost": 16
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Magician",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Magic_Armor",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/70/Magic_Armor.png"
+  },
+  {
+    "id": "magic-claw",
+    "name": "Magic Claw",
+    "jobId": "magician",
+    "maxLevel": 20,
+    "kind": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 10,
+        "hits": 2
+      },
+      {
+        "level": 2,
+        "mpCost": 10,
+        "hits": 2
+      },
+      {
+        "level": 3,
+        "mpCost": 10,
+        "hits": 2
+      },
+      {
+        "level": 4,
+        "mpCost": 10,
+        "hits": 2
+      },
+      {
+        "level": 5,
+        "mpCost": 11,
+        "hits": 2
+      },
+      {
+        "level": 6,
+        "mpCost": 11,
+        "hits": 2
+      },
+      {
+        "level": 7,
+        "mpCost": 11,
+        "hits": 2
+      },
+      {
+        "level": 8,
+        "mpCost": 12,
+        "hits": 2
+      },
+      {
+        "level": 9,
+        "mpCost": 12,
+        "hits": 2
+      },
+      {
+        "level": 10,
+        "mpCost": 13,
+        "hits": 2
+      },
+      {
+        "level": 11,
+        "mpCost": 13,
+        "hits": 2
+      },
+      {
+        "level": 12,
+        "mpCost": 14,
+        "hits": 2
+      },
+      {
+        "level": 13,
+        "mpCost": 14,
+        "hits": 2
+      },
+      {
+        "level": 14,
+        "mpCost": 15,
+        "hits": 2
+      },
+      {
+        "level": 15,
+        "mpCost": 15,
+        "hits": 2
+      },
+      {
+        "level": 16,
+        "mpCost": 16,
+        "hits": 2
+      },
+      {
+        "level": 17,
+        "mpCost": 17,
+        "hits": 2
+      },
+      {
+        "level": 18,
+        "mpCost": 18,
+        "hits": 2
+      },
+      {
+        "level": 19,
+        "mpCost": 19,
+        "hits": 2
+      },
+      {
+        "level": 20,
+        "mpCost": 20,
+        "hits": 2
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Magician",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Magic_Claw",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/6/64/Magic_Claw.png"
+  },
+  {
+    "id": "magic-guard",
+    "name": "Magic Guard",
+    "jobId": "magician",
+    "maxLevel": 15,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 8
+      },
+      {
+        "level": 2,
+        "mpCost": 8
+      },
+      {
+        "level": 3,
+        "mpCost": 8
+      },
+      {
+        "level": 4,
+        "mpCost": 8
+      },
+      {
+        "level": 5,
+        "mpCost": 8
+      },
+      {
+        "level": 6,
+        "mpCost": 10
+      },
+      {
+        "level": 7,
+        "mpCost": 10
+      },
+      {
+        "level": 8,
+        "mpCost": 10
+      },
+      {
+        "level": 9,
+        "mpCost": 10
+      },
+      {
+        "level": 10,
+        "mpCost": 10
+      },
+      {
+        "level": 11,
+        "mpCost": 12
+      },
+      {
+        "level": 12,
+        "mpCost": 12
+      },
+      {
+        "level": 13,
+        "mpCost": 12
+      },
+      {
+        "level": 14,
+        "mpCost": 12
+      },
+      {
+        "level": 15,
+        "mpCost": 12
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Magician",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Magic_Guard",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/e/e3/Magic_Guard.png"
+  },
+  {
+    "id": "max-mp-increase",
+    "name": "Max MP Increase",
+    "jobId": "magician",
+    "maxLevel": 15,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Magician",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/b/b0/Max_MP_Increase.png"
+  }
+]

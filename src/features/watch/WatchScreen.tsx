@@ -24,7 +24,9 @@ export function WatchScreen() {
   const store = useProfileStore();
   const setup = useProfiles((s) => s.file.settings.watch);
   const query = useRouteQuery();
-  const [setupOpen, setSetupOpen] = useState(query.get("setup") === "1");
+  const [setupClicked, setSetupOpen] = useState(false);
+  // `?setup=1` (from the top-bar pill before the first setup) opens it too, even when already on this screen.
+  const setupOpen = setupClicked || query.get("setup") === "1";
   const [forget, setForget] = useState<string | null>(null);
   const hotkey = useHotkeyStatus();
   const w = useWatch((s) => s);

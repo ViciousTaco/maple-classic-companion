@@ -1,0 +1,542 @@
+[
+  {
+    "id": "dark-sight",
+    "name": "Dark Sight",
+    "jobId": "thief",
+    "maxLevel": 20,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 50
+      },
+      {
+        "level": 2,
+        "mpCost": 49
+      },
+      {
+        "level": 3,
+        "mpCost": 48
+      },
+      {
+        "level": 4,
+        "mpCost": 47
+      },
+      {
+        "level": 5,
+        "mpCost": 46
+      },
+      {
+        "level": 6,
+        "mpCost": 45
+      },
+      {
+        "level": 7,
+        "mpCost": 44
+      },
+      {
+        "level": 8,
+        "mpCost": 43
+      },
+      {
+        "level": 9,
+        "mpCost": 42
+      },
+      {
+        "level": 10,
+        "mpCost": 41
+      },
+      {
+        "level": 11,
+        "mpCost": 40
+      },
+      {
+        "level": 12,
+        "mpCost": 39
+      },
+      {
+        "level": 13,
+        "mpCost": 38
+      },
+      {
+        "level": 14,
+        "mpCost": 37
+      },
+      {
+        "level": 15,
+        "mpCost": 36
+      },
+      {
+        "level": 16,
+        "mpCost": 35
+      },
+      {
+        "level": 17,
+        "mpCost": 34
+      },
+      {
+        "level": 18,
+        "mpCost": 33
+      },
+      {
+        "level": 19,
+        "mpCost": 32
+      },
+      {
+        "level": 20,
+        "mpCost": 30
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Sight",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/71/Dark_Sight.png"
+  },
+  {
+    "id": "disorder",
+    "name": "Disorder",
+    "jobId": "thief",
+    "maxLevel": 20,
+    "kind": "other",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 5
+      },
+      {
+        "level": 2,
+        "mpCost": 5
+      },
+      {
+        "level": 3,
+        "mpCost": 5
+      },
+      {
+        "level": 4,
+        "mpCost": 5
+      },
+      {
+        "level": 5,
+        "mpCost": 5
+      },
+      {
+        "level": 6,
+        "mpCost": 6
+      },
+      {
+        "level": 7,
+        "mpCost": 6
+      },
+      {
+        "level": 8,
+        "mpCost": 6
+      },
+      {
+        "level": 9,
+        "mpCost": 7
+      },
+      {
+        "level": 10,
+        "mpCost": 7
+      },
+      {
+        "level": 11,
+        "mpCost": 7
+      },
+      {
+        "level": 12,
+        "mpCost": 8
+      },
+      {
+        "level": 13,
+        "mpCost": 8
+      },
+      {
+        "level": 14,
+        "mpCost": 8
+      },
+      {
+        "level": 15,
+        "mpCost": 9
+      },
+      {
+        "level": 16,
+        "mpCost": 9
+      },
+      {
+        "level": 17,
+        "mpCost": 9
+      },
+      {
+        "level": 18,
+        "mpCost": 10
+      },
+      {
+        "level": 19,
+        "mpCost": 10
+      },
+      {
+        "level": 20,
+        "mpCost": 10
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Disorder",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/f/fe/Disorder.png"
+  },
+  {
+    "id": "double-stab",
+    "name": "Double Stab",
+    "jobId": "thief",
+    "maxLevel": 20,
+    "kind": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "damagePct": 80,
+        "mpCost": 8,
+        "hits": 2
+      },
+      {
+        "level": 2,
+        "damagePct": 84,
+        "mpCost": 8,
+        "hits": 2
+      },
+      {
+        "level": 3,
+        "damagePct": 88,
+        "mpCost": 8,
+        "hits": 2
+      },
+      {
+        "level": 4,
+        "damagePct": 92,
+        "mpCost": 8,
+        "hits": 2
+      },
+      {
+        "level": 5,
+        "damagePct": 96,
+        "mpCost": 9,
+        "hits": 2
+      },
+      {
+        "level": 6,
+        "damagePct": 100,
+        "mpCost": 9,
+        "hits": 2
+      },
+      {
+        "level": 7,
+        "damagePct": 104,
+        "mpCost": 9,
+        "hits": 2
+      },
+      {
+        "level": 8,
+        "damagePct": 108,
+        "mpCost": 10,
+        "hits": 2
+      },
+      {
+        "level": 9,
+        "damagePct": 112,
+        "mpCost": 10,
+        "hits": 2
+      },
+      {
+        "level": 10,
+        "damagePct": 116,
+        "mpCost": 11,
+        "hits": 2
+      },
+      {
+        "level": 11,
+        "damagePct": 120,
+        "mpCost": 11,
+        "hits": 2
+      },
+      {
+        "level": 12,
+        "damagePct": 124,
+        "mpCost": 12,
+        "hits": 2
+      },
+      {
+        "level": 13,
+        "damagePct": 128,
+        "mpCost": 12,
+        "hits": 2
+      },
+      {
+        "level": 14,
+        "damagePct": 132,
+        "mpCost": 13,
+        "hits": 2
+      },
+      {
+        "level": 15,
+        "damagePct": 136,
+        "mpCost": 13,
+        "hits": 2
+      },
+      {
+        "level": 16,
+        "damagePct": 140,
+        "mpCost": 14,
+        "hits": 2
+      },
+      {
+        "level": 17,
+        "damagePct": 144,
+        "mpCost": 14,
+        "hits": 2
+      },
+      {
+        "level": 18,
+        "damagePct": 148,
+        "mpCost": 15,
+        "hits": 2
+      },
+      {
+        "level": 19,
+        "damagePct": 152,
+        "mpCost": 15,
+        "hits": 2
+      },
+      {
+        "level": 20,
+        "damagePct": 160,
+        "mpCost": 16,
+        "hits": 2
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Double_Stab",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/5d/Double_Stab.png"
+  },
+  {
+    "id": "keen-eyes",
+    "name": "Keen Eyes",
+    "jobId": "thief",
+    "maxLevel": 15,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/c/c4/Keen_Eyes.png"
+  },
+  {
+    "id": "lucky-seven",
+    "name": "Lucky Seven",
+    "jobId": "thief",
+    "maxLevel": 20,
+    "kind": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "damagePct": 60,
+        "mpCost": 8,
+        "hits": 2
+      },
+      {
+        "level": 2,
+        "damagePct": 63,
+        "mpCost": 8,
+        "hits": 2
+      },
+      {
+        "level": 3,
+        "damagePct": 66,
+        "mpCost": 8,
+        "hits": 2
+      },
+      {
+        "level": 4,
+        "damagePct": 69,
+        "mpCost": 8,
+        "hits": 2
+      },
+      {
+        "level": 5,
+        "damagePct": 72,
+        "mpCost": 9,
+        "hits": 2
+      },
+      {
+        "level": 6,
+        "damagePct": 75,
+        "mpCost": 9,
+        "hits": 2
+      },
+      {
+        "level": 7,
+        "damagePct": 78,
+        "mpCost": 9,
+        "hits": 2
+      },
+      {
+        "level": 8,
+        "damagePct": 81,
+        "mpCost": 10,
+        "hits": 2
+      },
+      {
+        "level": 9,
+        "damagePct": 84,
+        "mpCost": 10,
+        "hits": 2
+      },
+      {
+        "level": 10,
+        "damagePct": 87,
+        "mpCost": 11,
+        "hits": 2
+      },
+      {
+        "level": 11,
+        "damagePct": 90,
+        "mpCost": 11,
+        "hits": 2
+      },
+      {
+        "level": 12,
+        "damagePct": 93,
+        "mpCost": 12,
+        "hits": 2
+      },
+      {
+        "level": 13,
+        "damagePct": 96,
+        "mpCost": 12,
+        "hits": 2
+      },
+      {
+        "level": 14,
+        "damagePct": 99,
+        "mpCost": 13,
+        "hits": 2
+      },
+      {
+        "level": 15,
+        "damagePct": 102,
+        "mpCost": 13,
+        "hits": 2
+      },
+      {
+        "level": 16,
+        "damagePct": 105,
+        "mpCost": 14,
+        "hits": 2
+      },
+      {
+        "level": 17,
+        "damagePct": 108,
+        "mpCost": 14,
+        "hits": 2
+      },
+      {
+        "level": 18,
+        "damagePct": 111,
+        "mpCost": 15,
+        "hits": 2
+      },
+      {
+        "level": 19,
+        "damagePct": 114,
+        "mpCost": 15,
+        "hits": 2
+      },
+      {
+        "level": 20,
+        "damagePct": 120,
+        "mpCost": 16,
+        "hits": 2
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lucky_Seven",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/c/ce/Lucky_Seven.png"
+  },
+  {
+    "id": "nimble-body",
+    "name": "Nimble Body",
+    "jobId": "thief",
+    "maxLevel": 15,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thief",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/f/f1/Nimble_Body.png"
+  }
+]

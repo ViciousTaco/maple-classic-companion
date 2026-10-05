@@ -37,7 +37,7 @@ export function warningText(r: Reason): string {
     case "hit-chance-assumed":
       return "Hit chance is assumed (Classic World's accuracy formula isn't confirmed yet).";
     case "estimate-assumptions":
-      return "Rates assume ~0.8 s per attack and ~1.5 s walking per kill — measure your real pace on the Plan screen.";
+      return "Rates assume ~0.8 s per attack and ~1.5 s walking per kill — switch on the screen watcher (or time yourself on the Plan screen) for your real numbers.";
     case "estimate-from-level-only":
       return "Ranked by level and spawns only — add your damage range for EXP/hour.";
     case "unverified-data":

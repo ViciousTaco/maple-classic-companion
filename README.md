@@ -6,7 +6,9 @@ should go, which quests to do and how to get there, live Nexon news and events i
 projections of how long levelling, meso goals and drops will take.
 
 Not affiliated with or endorsed by Nexon. MapleStory and all related names, images and assets belong to Nexon. The app
-never reads, changes or interacts with the game — it's a separate window of information.
+never changes or interacts with the game — no memory reading, no input, no hooks, no changes to game files. The optional
+screen watcher only reads the text in two boxes of the game window while you switch it on (off at every launch), using
+Windows' offline text recognition; pictures are never saved or sent.
 
 ## Run it
 

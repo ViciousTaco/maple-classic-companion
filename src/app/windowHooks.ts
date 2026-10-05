@@ -6,9 +6,9 @@ import type { Platform } from "../platform/types";
  * Inside the exe: flush pending saves before the window closes (plan §8.2) and remember the
  * window's size/position in profiles.json (replaces the window-state plugin; §15).
  */
-export function useDesktopWindow(platform: Platform, store: ProfileStore) {
+export function useDesktopWindow(platform: Platform, store: ProfileStore, enabled = true) {
   useEffect(() => {
-    if (platform.kind !== "tauri") return;
+    if (platform.kind !== "tauri" || !enabled) return;
     let disposed = false;
     const cleanups: (() => void)[] = [];
     let timer: ReturnType<typeof setTimeout> | null = null;
@@ -58,5 +58,5 @@ export function useDesktopWindow(platform: Platform, store: ProfileStore) {
       if (timer) clearTimeout(timer);
       cleanups.forEach((c) => c());
     };
-  }, [platform, store]);
+  }, [platform, store, enabled]);
 }

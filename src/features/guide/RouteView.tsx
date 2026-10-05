@@ -18,7 +18,7 @@ export function describePosition(pos: { x: number; y: number }): string {
   return `${x === "middle" ? "in the middle" : `on the ${x}`}, ${y}`;
 }
 
-function stepText(pack: Pack, s: RouteStep): string {
+export function stepText(pack: Pack, s: RouteStep): string {
   const to = mapName(pack, s.to);
   switch (s.kind) {
     case "portal":

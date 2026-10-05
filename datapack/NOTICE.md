@@ -12,6 +12,12 @@ Records in this datapack whose `sources` cite "MapleClassic Wiki (CC BY-NC-SA 4.
 - **Changes were made:** values were read from the wiki pages and re-structured into JSON records for this
   app's datapack schema. Some wording (for example training-spot notes) was rewritten in our own words.
   Ids, field names and groupings are ours. No images, sprites or icons were copied.
+- Quest records (`regions/*/quests.json`) restate each quest page's walkthrough steps, requirements and rewards in
+  shortened form; the quest step text is adapted from the walkthrough sentences. Skill records (`skills/*.json`) copy
+  the MP cost and damage figures from each skill page's "Stats per level" table; hits and targets come from the page's
+  skill box, or from the in-game skill description quoted on the same page where the two disagree (Lucky Seven
+  "throw 2 throwing stars", Slash Blast "up to 4 enemies"). Item records created for quests
+  cite the quest page that mentions them and the wiki's item category listing (or the item page itself for equipment).
 - **NonCommercial:** the app and this datapack are a personal, non-commercial fan tool.
 - **ShareAlike:** the datapack's data derived from MapleClassic Wiki is shared under the same licence,
   CC BY-NC-SA 4.0. Anyone reusing those records must keep this notice, keep the attribution, say that

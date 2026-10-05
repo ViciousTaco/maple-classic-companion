@@ -1,0 +1,74 @@
+[
+  {
+    "id": "red-chair",
+    "name": "Red Chair",
+    "category": "setup",
+    "npcSellMeso": 500,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Leatherworker_in_My_Own_Right!",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Setup_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/d/d1/Red_Chair.png"
+  },
+  {
+    "id": "the-green-relaxer",
+    "name": "The Green Relaxer",
+    "category": "setup",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pio's_Collecting_Recycled_Goods",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Setup_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/e/ed/The_Green_Relaxer.png"
+  },
+  {
+    "id": "the-red-relaxer",
+    "name": "The Red Relaxer",
+    "category": "setup",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Carpenter_in_My_Own_Right!",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Setup_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/0/07/The_Red_Relaxer.png"
+  }
+]

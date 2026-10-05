@@ -43,12 +43,12 @@ export function canWatch(platform: Platform): platform is WatchCapablePlatform {
   return typeof p.screenListWindows === "function" && typeof p.screenRead === "function";
 }
 
-export function useWatcherSetup(platform: Platform, store: ProfileStore, pack: Pack | null) {
+export function useWatcherSetup(platform: Platform, store: ProfileStore, pack: Pack | null, enabled = true) {
   useEffect(() => {
     packHolder.current = pack;
   }, [pack]);
   useEffect(() => {
-    if (!canWatch(platform)) return;
+    if (!enabled || !canWatch(platform)) return;
     const w = createWatcher({ platform, store, getPack: () => packHolder.current, tell: (message, tone) => toast({ message, tone }) });
     setApi(w);
     // Ctrl+Alt+W works even while the game has focus (global shortcut registered by Rust).
@@ -66,7 +66,7 @@ export function useWatcherSetup(platform: Platform, store: ProfileStore, pack: P
       w.getState().stop();
       setApi(idle);
     };
-  }, [platform, store]);
+  }, [platform, store, enabled]);
 }
 
 export function watcherApi(): StoreApi<WatchState> {

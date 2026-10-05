@@ -1,6 +1,6 @@
 import { base64ToBytes, bytesToBase64 } from "./base64";
-import { createMockPlatform } from "./ipc.mock";
-import { NEED_ALL_FILES, RELEASE_URL_PREFIX } from "./types";
+import { createMockPlatform, MOCK_GAME_WINDOW } from "./ipc.mock";
+import { APP_EVENTS, NEED_ALL_FILES, RELEASE_URL_PREFIX } from "./types";
 
 test("mock round-trips profiles and refuses invalid JSON", async () => {
   const p = createMockPlatform();
@@ -117,4 +117,91 @@ test("mock cache and app update", async () => {
   expect(p.updateCalls).toEqual([{ url, sha256: "ab".repeat(32), signature: "sig" }]);
   await expect(p.appUpdateApply("https://evil.example/x.exe", "", "")).rejects.toThrow();
   await expect(p.appUpdateApply(`${RELEASE_URL_PREFIX}../../x/y.exe`, "", "")).rejects.toThrow();
+});
+
+// ---- Screen watcher, hotkey, notifications, mini window ----
+
+test("mock screen watcher: windows, snapshot PNG, region checks and OCR lines", async () => {
+  const p = createMockPlatform();
+  const [win] = await p.screenListWindows();
+  expect(win).toEqual(MOCK_GAME_WINDOW);
+
+  const shot = await p.screenSnapshot(win!.id);
+  const png = base64ToBytes(shot.pngBase64);
+  expect([...png.subarray(0, 8)]).toEqual([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+  const view = new DataView(png.buffer, png.byteOffset);
+  expect([view.getUint32(16), view.getUint32(20)]).toEqual([shot.width, shot.height]);
+  expect([shot.sourceWidth, shot.sourceHeight]).toEqual([1280, 720]);
+  expect(shot.width).toBeLessThanOrEqual(1600);
+
+  p.controls.ocrLines = { status: ["Lv. 23", "EXP 1234 [12.34%]"] };
+  const out = await p.screenRead(win!.id, [
+    { name: "status", x: 10, y: 690, w: 400, h: 30 },
+    { name: "chat", x: 0, y: 520, w: 500.4, h: 150, scale: 3, filter: "nearest" },
+  ]);
+  expect(out.map((r) => [r.name, r.lines.map((l) => l.text), r.covered])).toEqual([
+    ["status", ["Lv. 23", "EXP 1234 [12.34%]"], false],
+    ["chat", [], false],
+  ]);
+  for (const l of out[0]!.lines) expect(l.y + l.h).toBeLessThanOrEqual(30);
+
+  const read = (r: Partial<{ name: string; x: number; y: number; w: number; h: number; scale: number }>) =>
+    p.screenRead(win!.id, [{ name: "r", x: 0, y: 0, w: 10, h: 10, ...r }]);
+  await expect(read({ x: 1271 })).rejects.toThrow("outside");
+  await expect(read({ w: 4001 })).rejects.toThrow();
+  await expect(read({ x: -1 })).rejects.toThrow();
+  await expect(read({ scale: 5 })).rejects.toThrow("scale");
+  await expect(
+    p.screenRead(win!.id, [
+      { name: "a", x: 0, y: 0, w: 5, h: 5 },
+      { name: "a", x: 0, y: 0, w: 5, h: 5 },
+    ]),
+  ).rejects.toThrow("twice");
+  await expect(p.screenRead(999, [])).rejects.toThrow("closed");
+  p.controls.windows[0]!.minimized = true;
+  await expect(p.screenSnapshot(win!.id)).rejects.toThrow("minimised");
+});
+
+test("mock events: hotkey toggle, profiles-saved, mini relay, unsubscribe", async () => {
+  const p = createMockPlatform();
+  expect(await p.hotkeyStatus()).toEqual({ registered: true, accelerator: "Ctrl+Alt+W" });
+
+  const seen: string[] = [];
+  const offToggle = p.onEvent(APP_EVENTS.watchToggle, () => seen.push("toggle"));
+  const offSaved = p.onEvent(APP_EVENTS.profilesSaved, () => seen.push("saved"));
+  const offAction = p.onEvent(APP_EVENTS.miniAction, (a) => seen.push(`action:${a.kind}`));
+  p.controls.emit("mcc://watch-toggle");
+  await p.profilesSave('{"a":1}');
+  await p.relayToMain("skip-spot", { profileId: "x", spotId: "y" });
+  expect(p.relayed).toEqual([{ kind: "skip-spot", payload: { profileId: "x", spotId: "y" } }]);
+  await expect(p.relayToMain("Bad Kind")).rejects.toThrow("kind");
+  expect(seen).toEqual(["toggle", "saved", "action:skip-spot"]);
+
+  offToggle();
+  offSaved();
+  offAction();
+  offAction(); // safe twice
+  p.controls.emit("mcc://watch-toggle");
+  await p.profilesSave('{"a":2}');
+  expect(seen).toHaveLength(3);
+
+  await p.miniWindowOpen();
+  expect(p.controls.miniOpen).toBe(true);
+  await p.miniWindowClose();
+  expect(p.controls.miniOpen).toBe(false);
+});
+
+test("mock notify: banner fallback like the portable exe, or a toast", async () => {
+  const p = createMockPlatform();
+  const banners: unknown[] = [];
+  p.onEvent(APP_EVENTS.notifyBanner, (b) => banners.push(b));
+  expect((await p.notifyStatus()).toast).toBe(false);
+  expect((await p.notify("Gold Rush in 15 min", "Starts 8:00 pm")).via).toBe("fallback");
+  expect(banners).toEqual([{ title: "Gold Rush in 15 min", body: "Starts 8:00 pm" }]);
+  await expect(p.notify(" ", "")).rejects.toThrow();
+
+  p.controls.toast = true;
+  expect(await p.notify("Boss", "now")).toEqual({ via: "toast", reason: null });
+  expect(p.toasts).toEqual([{ title: "Boss", body: "now" }]);
+  expect(banners).toHaveLength(1);
 });

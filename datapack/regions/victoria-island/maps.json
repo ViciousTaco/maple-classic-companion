@@ -46,6 +46,38 @@
         "to": "sleepywood",
         "kind": "taxi",
         "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "ellinia-station",
+        "kind": "portal",
+        "pos": {
+          "x": 74.1,
+          "y": 28.9
+        }
+      },
+      {
+        "to": "ellinia-weapon-store",
+        "kind": "portal",
+        "pos": {
+          "x": 72.9,
+          "y": 44.4
+        }
+      },
+      {
+        "to": "magic-library",
+        "kind": "portal",
+        "pos": {
+          "x": 56.4,
+          "y": 11.0
+        }
+      },
+      {
+        "to": "marrs-forest",
+        "kind": "portal",
+        "pos": {
+          "x": 93.4,
+          "y": 93.9
+        }
       }
     ],
     "npcIds": [
@@ -54,19 +86,12 @@
       "arcane-station",
       "arwen-the-fairy",
       "betty",
-      "cherry",
-      "flora-the-fairy",
       "francois",
-      "grendel-the-really-old",
-      "joel",
       "louis",
       "magician-job-instructor-2nd-job-test",
-      "mar-the-fairy",
       "mr-park",
       "regular-cab-ellinia",
-      "ronnie",
       "rowen-the-fairy",
-      "serabi-the-fairy",
       "sewing-machine",
       "shane",
       "vip-cab-ellinia",
@@ -191,45 +216,52 @@
         "to": "sleepywood",
         "kind": "taxi",
         "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "henesys-market",
+        "kind": "portal",
+        "pos": {
+          "x": 52.1,
+          "y": 74.0
+        }
+      },
+      {
+        "to": "henesys-park",
+        "kind": "portal",
+        "pos": {
+          "x": 64.0,
+          "y": 56.3
+        }
+      },
+      {
+        "to": "henesys-town-hall",
+        "kind": "portal",
+        "pos": {
+          "x": 41.3,
+          "y": 73.6
+        }
+      },
+      {
+        "to": "henesys-townstreet",
+        "kind": "portal",
+        "pos": {
+          "x": 82.7,
+          "y": 83.9
+        }
       }
     ],
     "npcIds": [
-      "arthur",
-      "athena-pierce",
       "bianca",
       "bowman-job-instructor-2nd-job-test",
-      "brittany",
       "bruce",
       "camila",
-      "casey",
       "chief-stan",
-      "cloy",
       "community-board-henesys",
-      "denma-the-owner",
-      "doofus",
-      "dr-feeble",
-      "flint",
       "jay",
-      "karl",
-      "leatherworking-station",
       "maple-administrator-henesys",
-      "maya",
-      "mr-lee",
       "mrs-ming-ming",
-      "ms-tan",
-      "natalie",
-      "oak",
-      "pia",
-      "raymond",
       "regular-cab-henesys",
-      "rina",
-      "sam",
-      "tommy",
-      "trainer-bartos",
-      "trainer-frod",
-      "utah",
-      "vicious",
-      "woodworking-station"
+      "rina"
     ],
     "sources": [
       {
@@ -307,36 +339,72 @@
         "to": "sleepywood",
         "kind": "taxi",
         "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "kerning-city-civic-center",
+        "kind": "portal",
+        "pos": {
+          "x": 92.2,
+          "y": 58.4
+        }
+      },
+      {
+        "to": "kerning-city-hair-salon",
+        "kind": "portal",
+        "pos": {
+          "x": 52.0,
+          "y": 63.4
+        }
+      },
+      {
+        "to": "kerning-city-repair-shop",
+        "kind": "portal",
+        "pos": {
+          "x": 53.2,
+          "y": 52.3
+        }
+      },
+      {
+        "to": "kerning-city-self-defence-item-store",
+        "kind": "portal",
+        "pos": {
+          "x": 15.0,
+          "y": 68.4
+        }
+      },
+      {
+        "to": "niora-hospital",
+        "kind": "portal",
+        "pos": {
+          "x": 33.6,
+          "y": 73.5
+        }
+      },
+      {
+        "to": "thieves-hideout",
+        "kind": "portal",
+        "pos": {
+          "x": 75.4,
+          "y": 75.5
+        }
       }
     ],
     "npcIds": [
       "alex",
-      "andre",
-      "ben",
-      "chris",
       "community-board-kerning-city",
-      "cutthroat-manny",
-      "dark-lord",
-      "don-giovanni",
-      "don-hwang",
       "exit",
       "icarus",
-      "jack",
-      "jane-doe",
       "jm-from-tha-streetz",
       "lakelis",
-      "max",
       "mong-from-kong",
       "mr-hong",
       "mr-pickall",
       "nella",
       "regular-cab-kerning-city",
-      "roxy",
       "scarlett",
       "shumi",
       "thief-job-instructor-2nd-job-test",
-      "weaponcrafting-station",
-      "weston"
+      "weaponcrafting-station"
     ],
     "sources": [
       {
@@ -384,6 +452,22 @@
       {
         "to": "kerning-city",
         "kind": "taxi"
+      },
+      {
+        "to": "lith-harbor-armor-shop",
+        "kind": "portal",
+        "pos": {
+          "x": 74.1,
+          "y": 47.5
+        }
+      },
+      {
+        "to": "lith-harbor-weapon-shop",
+        "kind": "portal",
+        "pos": {
+          "x": 61.5,
+          "y": 47.6
+        }
       }
     ],
     "npcIds": [
@@ -394,12 +478,10 @@
       "maple-administrator-lith-harbor",
       "mr-goldstein",
       "mr-kim",
-      "natasha",
       "olaf",
       "pason",
       "paul",
       "phil",
-      "silver",
       "teo",
       "vip-cab-lith-harbor"
     ],
@@ -461,19 +543,40 @@
       {
         "to": "kerning-city",
         "kind": "taxi"
+      },
+      {
+        "to": "perion-department-store",
+        "kind": "portal",
+        "pos": {
+          "x": 38.4,
+          "y": 60.5
+        }
+      },
+      {
+        "to": "perion-weapon-store",
+        "kind": "portal",
+        "pos": {
+          "x": 76.3,
+          "y": 50.2
+        }
+      },
+      {
+        "to": "warriors-sanctuary",
+        "kind": "portal",
+        "pos": {
+          "x": 68.0,
+          "y": 25.6
+        }
       }
     ],
     "npcIds": [
       "anvil",
       "ayan",
       "blackbull",
-      "dances-with-balrog",
-      "harry",
       "manji",
       "mr-thunder",
       "mr-wang",
       "regular-cab-perion",
-      "river",
       "silas-irons",
       "warrior-job-instructor-2nd-job-test"
     ],
@@ -544,6 +647,14 @@
         "to": "kerning-city",
         "kind": "taxi",
         "note": "cab to the other Victoria Island towns; fare not stated"
+      },
+      {
+        "to": "sleepywood-hotel",
+        "kind": "portal",
+        "pos": {
+          "x": 43.8,
+          "y": 27.7
+        }
       }
     ],
     "npcIds": [
@@ -553,10 +664,7 @@
       "chrishrama",
       "crumbling-statue",
       "eurek-the-alchemist",
-      "hotel-receptionist",
       "mr-oh",
-      "mr-sweatbottom",
-      "mr-wetbottom",
       "mysterious-statue",
       "regular-cab-sleepywood",
       "sabitrama"
@@ -1315,6 +1423,33 @@
     "image": "https://mapleclassic.wiki/images/thumb/c/c3/Beach_Hunting_Ground.png/800px-Beach_Hunting_Ground.png"
   },
   {
+    "id": "bowman-instructional-school",
+    "name": "Bowman Instructional School",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "henesys-park",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "athena-pierce"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman_Instructional_School",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/5/5c/Bowman_Instructional_School.png/240px-Bowman_Instructional_School.png"
+  },
+  {
     "id": "caution-falling-down",
     "name": "Caution Falling Down",
     "region": "victoria-island",
@@ -1795,6 +1930,11 @@
       {
         "mobId": "copper-drake",
         "count": 5
+      },
+      {
+        "mobId": "red-drake",
+        "count": 17,
+        "respawnSec": 60
       }
     ],
     "links": [
@@ -2363,6 +2503,11 @@
       {
         "mobId": "drake",
         "count": 23
+      },
+      {
+        "mobId": "wild-kargo",
+        "count": 10,
+        "respawnSec": 300
       }
     ],
     "links": [
@@ -2983,6 +3128,66 @@
     "image": "https://mapleclassic.wiki/images/thumb/f/fe/East_Rocky_Mountain_VII.png/800px-East_Rocky_Mountain_VII.png"
   },
   {
+    "id": "ellinia-station",
+    "name": "Ellinia Station",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "ellinia",
+        "kind": "portal",
+        "pos": {
+          "x": 7.9,
+          "y": 80.1
+        }
+      }
+    ],
+    "npcIds": [
+      "cherry",
+      "joel"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ellinia_Station",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/9/91/Ellinia_Station.png/800px-Ellinia_Station.png"
+  },
+  {
+    "id": "ellinia-weapon-store",
+    "name": "Ellinia Weapon Store",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "flora-the-fairy",
+      "serabi-the-fairy"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ellinia_Weapon_Store",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/4/43/Ellinia_Weapon_Store.png/240px-Ellinia_Weapon_Store.png"
+  },
+  {
     "id": "forest-west-of-henesys",
     "name": "Forest West of Henesys",
     "region": "victoria-island",
@@ -3071,6 +3276,10 @@
         "mobId": "lupin",
         "count": 3,
         "respawnSec": 60
+      },
+      {
+        "mobId": "stone-golem",
+        "count": 9
       }
     ],
     "links": [
@@ -3111,6 +3320,10 @@
         "mobId": "lupin",
         "count": 3,
         "respawnSec": 60
+      },
+      {
+        "mobId": "stone-golem",
+        "count": 7
       }
     ],
     "links": [
@@ -3151,6 +3364,10 @@
         "mobId": "lupin",
         "count": 7,
         "respawnSec": 60
+      },
+      {
+        "mobId": "stone-golem",
+        "count": 10
       }
     ],
     "links": [
@@ -3186,6 +3403,10 @@
         "mobId": "fairy-4",
         "count": 1,
         "respawnSec": 180
+      },
+      {
+        "mobId": "stone-golem",
+        "count": 8
       }
     ],
     "links": [
@@ -3232,6 +3453,10 @@
       {
         "mobId": "lupin",
         "count": 4
+      },
+      {
+        "mobId": "stone-golem",
+        "count": 3
       }
     ],
     "links": [
@@ -3274,6 +3499,34 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/thumb/0/0c/Henesys_Dungeon_Entrance.png/800px-Henesys_Dungeon_Entrance.png"
+  },
+  {
+    "id": "henesys-hair-salon",
+    "name": "Henesys Hair Salon",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "henesys-market",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "brittany",
+      "natalie"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Hair_Salon",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/f/f9/Henesys_Hair_Salon.png/240px-Henesys_Hair_Salon.png"
   },
   {
     "id": "henesys-hunting-ground-i",
@@ -3470,6 +3723,287 @@
     "image": "https://mapleclassic.wiki/images/thumb/f/fd/Henesys_Hunting_Ground_III.png/800px-Henesys_Hunting_Ground_III.png"
   },
   {
+    "id": "henesys-market",
+    "name": "Henesys Market",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "henesys",
+        "kind": "portal",
+        "pos": {
+          "x": 4.9,
+          "y": 73.5
+        }
+      },
+      {
+        "to": "henesys-hair-salon",
+        "kind": "portal",
+        "pos": {
+          "x": 82.7,
+          "y": 67.0
+        }
+      },
+      {
+        "to": "henesys-park",
+        "kind": "portal",
+        "pos": {
+          "x": 94.6,
+          "y": 67.1
+        }
+      },
+      {
+        "to": "henesys-plastic-surgery",
+        "kind": "portal",
+        "pos": {
+          "x": 83.1,
+          "y": 37.9
+        }
+      },
+      {
+        "to": "henesys-skin-care",
+        "kind": "portal",
+        "pos": {
+          "x": 73.7,
+          "y": 66.7
+        }
+      },
+      {
+        "to": "henesys-weapon-store",
+        "kind": "portal",
+        "pos": {
+          "x": 42.9,
+          "y": 79.6
+        }
+      }
+    ],
+    "npcIds": [
+      "doofus",
+      "leatherworking-station",
+      "vicious",
+      "woodworking-station"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Market",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/a/ac/Henesys_Market.png/800px-Henesys_Market.png"
+  },
+  {
+    "id": "henesys-park",
+    "name": "Henesys Park",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "bowman-instructional-school",
+        "kind": "portal",
+        "pos": {
+          "x": 84.1,
+          "y": 79.7
+        }
+      },
+      {
+        "to": "henesys",
+        "kind": "portal",
+        "pos": {
+          "x": 3.3,
+          "y": 54.3
+        }
+      },
+      {
+        "to": "henesys-market",
+        "kind": "portal",
+        "pos": {
+          "x": 21.3,
+          "y": 51.1
+        }
+      },
+      {
+        "to": "pet-walking-road",
+        "kind": "portal",
+        "pos": {
+          "x": 38.3,
+          "y": 38.1
+        }
+      }
+    ],
+    "npcIds": [
+      "casey",
+      "cloy",
+      "mr-lee",
+      "pia"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Park",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/2/2b/Henesys_Park.png/800px-Henesys_Park.png"
+  },
+  {
+    "id": "henesys-plastic-surgery",
+    "name": "Henesys Plastic Surgery",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "henesys-market",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "denma-the-owner",
+      "dr-feeble"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Plastic_Surgery",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/c/cb/Henesys_Plastic_Surgery.png/240px-Henesys_Plastic_Surgery.png"
+  },
+  {
+    "id": "henesys-skin-care",
+    "name": "Henesys Skin-Care",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "henesys-market",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "ms-tan"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Skin-Care",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/1/15/Henesys_Skin-Care.png/240px-Henesys_Skin-Care.png"
+  },
+  {
+    "id": "henesys-town-hall",
+    "name": "Henesys Town Hall",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "henesys",
+        "kind": "portal",
+        "pos": {
+          "x": 86.0,
+          "y": 78.7
+        }
+      }
+    ],
+    "npcIds": [
+      "arthur",
+      "flint",
+      "oak",
+      "raymond",
+      "tommy"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Town_Hall",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/8/89/Henesys_Town_Hall.png/800px-Henesys_Town_Hall.png"
+  },
+  {
+    "id": "henesys-townstreet",
+    "name": "Henesys Townstreet",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "henesys",
+        "kind": "portal",
+        "pos": {
+          "x": 54.8,
+          "y": 76.6
+        }
+      }
+    ],
+    "npcIds": [
+      "maya"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Townstreet",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/6/6e/Henesys_Townstreet.png/800px-Henesys_Townstreet.png"
+  },
+  {
+    "id": "henesys-weapon-store",
+    "name": "Henesys Weapon Store",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "henesys-market",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "karl",
+      "sam"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Henesys_Weapon_Store",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/9/92/Henesys_Weapon_Store.png/240px-Henesys_Weapon_Store.png"
+  },
+  {
     "id": "hot-sand",
     "name": "Hot Sand",
     "region": "victoria-island",
@@ -3625,6 +4159,41 @@
     "image": "https://mapleclassic.wiki/images/thumb/b/b9/Hunting_Ground_in_the_Deep_Forest_II.png/800px-Hunting_Ground_in_the_Deep_Forest_II.png"
   },
   {
+    "id": "kerning-city-civic-center",
+    "name": "Kerning City Civic Center",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "kerning-city",
+        "kind": "portal",
+        "pos": {
+          "x": 7.6,
+          "y": 82.3
+        }
+      }
+    ],
+    "npcIds": [
+      "ben",
+      "jack",
+      "max",
+      "roxy",
+      "weston"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Civic_Center",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/6/68/Kerning_City_Civic_Center.png/800px-Kerning_City_Civic_Center.png"
+  },
+  {
     "id": "kerning-city-construction-site",
     "name": "Kerning City Construction Site",
     "region": "victoria-island",
@@ -3691,6 +4260,34 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/thumb/2/24/Kerning_City_Construction_Site.png/800px-Kerning_City_Construction_Site.png"
+  },
+  {
+    "id": "kerning-city-hair-salon",
+    "name": "Kerning City Hair Salon",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "kerning-city",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "andre",
+      "don-giovanni"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Hair_Salon",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/4/4a/Kerning_City_Hair_Salon.png/240px-Kerning_City_Hair_Salon.png"
   },
   {
     "id": "kerning-city-middle-forest-i",
@@ -3897,6 +4494,61 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/thumb/1/16/Kerning_City_Middle_Forest_III.png/800px-Kerning_City_Middle_Forest_III.png"
+  },
+  {
+    "id": "kerning-city-repair-shop",
+    "name": "Kerning City Repair Shop",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "kerning-city",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "chris"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Repair_Shop",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/3/34/Kerning_City_Repair_Shop.png/240px-Kerning_City_Repair_Shop.png"
+  },
+  {
+    "id": "kerning-city-self-defence-item-store",
+    "name": "Kerning City Self-Defence Item Store",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "kerning-city",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "cutthroat-manny",
+      "don-hwang"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Kerning_City_Self-Defence_Item_Store",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/9/97/Kerning_City_Self-Defence_Item_Store.png/240px-Kerning_City_Self-Defence_Item_Store.png"
   },
   {
     "id": "l-forest-i",
@@ -4453,6 +5105,60 @@
     "image": "https://mapleclassic.wiki/images/thumb/2/22/Line_2_%28Area_3%29.png/800px-Line_2_%28Area_3%29.png"
   },
   {
+    "id": "lith-harbor-armor-shop",
+    "name": "Lith Harbor Armor Shop",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "lith-harbor",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "natasha"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lith_Harbor_Armor_Shop",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/3/32/Lith_Harbor_Armor_Shop.png/240px-Lith_Harbor_Armor_Shop.png"
+  },
+  {
+    "id": "lith-harbor-weapon-shop",
+    "name": "Lith Harbor Weapon Shop",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "lith-harbor",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "silver"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lith_Harbor_Weapon_Shop",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/a/a9/Lith_Harbor_Weapon_Shop.png/240px-Lith_Harbor_Weapon_Shop.png"
+  },
+  {
     "id": "lorang-and-clang",
     "name": "Lorang and Clang",
     "region": "victoria-island",
@@ -4593,6 +5299,64 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/thumb/0/02/Lorang_Lorang_Lorang.png/800px-Lorang_Lorang_Lorang.png"
+  },
+  {
+    "id": "magic-library",
+    "name": "Magic Library",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "ellinia",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "grendel-the-really-old"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Magic_Library",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/8/8b/Map_Magic_Library.webp/240px-Map_Magic_Library.webp.png"
+  },
+  {
+    "id": "marrs-forest",
+    "name": "Marr's Forest",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "ellinia",
+        "kind": "portal",
+        "pos": {
+          "x": 93.6,
+          "y": 24.5
+        }
+      }
+    ],
+    "npcIds": [
+      "mar-the-fairy"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Marr's_Forest",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/3/33/Marr%27s_Forest.png/800px-Marr%27s_Forest.png"
   },
   {
     "id": "monkey-forest-i",
@@ -4875,6 +5639,33 @@
     "image": "https://mapleclassic.wiki/images/thumb/5/53/Mushroom_Garden_%28Victoria_Island%29.png/800px-Mushroom_Garden_%28Victoria_Island%29.png"
   },
   {
+    "id": "niora-hospital",
+    "name": "Niora Hospital",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "kerning-city",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "jane-doe"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Niora_Hospital",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/8/8b/Niora_Hospital.png/240px-Niora_Hospital.png"
+  },
+  {
     "id": "northern-top-of-construction-site",
     "name": "Northern Top of Construction Site",
     "region": "victoria-island",
@@ -4961,6 +5752,35 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/thumb/5/54/Over_the_Wall.png/800px-Over_the_Wall.png"
+  },
+  {
+    "id": "perion-department-store",
+    "name": "Perion Department Store",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "perion",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "arturo",
+      "sophia"
+    ],
+    "hasPotionShop": true,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Perion_Department_Store",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/c/c8/Perion_Department_Store.png/240px-Perion_Department_Store.png"
   },
   {
     "id": "perion-dungeon-entrance",
@@ -5085,6 +5905,66 @@
     "image": "https://mapleclassic.wiki/images/thumb/8/8c/Perion_Street_Corner.png/800px-Perion_Street_Corner.png"
   },
   {
+    "id": "perion-weapon-store",
+    "name": "Perion Weapon Store",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "perion",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "harry",
+      "river"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Perion_Weapon_Store",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/a/ad/Perion_Weapon_Store.png/240px-Perion_Weapon_Store.png"
+  },
+  {
+    "id": "pet-walking-road",
+    "name": "Pet-Walking Road",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "henesys-park",
+        "kind": "portal",
+        "pos": {
+          "x": 62.0,
+          "y": 75.5
+        }
+      }
+    ],
+    "npcIds": [
+      "trainer-bartos",
+      "trainer-frod"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pet-Walking_Road",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/1/14/Pet-Walking_Road.png/800px-Pet-Walking_Road.png"
+  },
+  {
     "id": "pig-park",
     "name": "Pig Park",
     "region": "victoria-island",
@@ -5167,6 +6047,28 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/thumb/3/3e/Pig_Park_II.png/800px-Pig_Park_II.png"
+  },
+  {
+    "id": "regular-sauna",
+    "name": "Regular Sauna",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [],
+    "npcIds": [
+      "mr-sweatbottom"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Regular_Sauna",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/e/e7/Regular_Sauna.png/240px-Regular_Sauna.png"
   },
   {
     "id": "right-around-lith-harbor",
@@ -5409,6 +6311,11 @@
       {
         "mobId": "cold-eye",
         "count": 13
+      },
+      {
+        "mobId": "tauromacis",
+        "count": 4,
+        "respawnSec": 120
       }
     ],
     "links": [
@@ -5451,6 +6358,11 @@
       {
         "mobId": "cold-eye",
         "count": 15
+      },
+      {
+        "mobId": "tauromacis",
+        "count": 4,
+        "respawnSec": 120
       }
     ],
     "links": [
@@ -5494,6 +6406,11 @@
         "mobId": "cold-eye",
         "count": 8,
         "respawnSec": 10
+      },
+      {
+        "mobId": "tauromacis",
+        "count": 2,
+        "respawnSec": 60
       }
     ],
     "links": [
@@ -5537,6 +6454,11 @@
         "mobId": "cold-eye",
         "count": 5,
         "respawnSec": 20
+      },
+      {
+        "mobId": "tauromacis",
+        "count": 2,
+        "respawnSec": 60
       }
     ],
     "links": [
@@ -5718,6 +6640,10 @@
       {
         "mobId": "lupin",
         "count": 12
+      },
+      {
+        "mobId": "dark-stone-golem",
+        "count": 9
       }
     ],
     "links": [
@@ -5774,6 +6700,10 @@
         "mobId": "jr-boogie-2",
         "count": 3,
         "respawnSec": 600
+      },
+      {
+        "mobId": "dark-stone-golem",
+        "count": 7
       }
     ],
     "links": [
@@ -5838,6 +6768,10 @@
       {
         "mobId": "lupin",
         "count": 23
+      },
+      {
+        "mobId": "dark-stone-golem",
+        "count": 19
       }
     ],
     "links": [
@@ -5862,6 +6796,33 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/thumb/8/8d/Sleepy_Dungeon_V.png/800px-Sleepy_Dungeon_V.png"
+  },
+  {
+    "id": "sleepywood-hotel",
+    "name": "Sleepywood Hotel",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "sleepywood",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "hotel-receptionist"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sleepywood_Hotel",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/a/ad/Sleepywood_Hotel.png/240px-Sleepywood_Hotel.png"
   },
   {
     "id": "someone-elses-house",
@@ -6127,6 +7088,11 @@
       {
         "mobId": "lupin",
         "count": 6
+      },
+      {
+        "mobId": "stone-golem",
+        "count": 4,
+        "respawnSec": 40
       }
     ],
     "links": [
@@ -6592,6 +7558,10 @@
         "mobId": "fairy-4",
         "count": 3,
         "respawnSec": 1800
+      },
+      {
+        "mobId": "stone-golem",
+        "count": 9
       }
     ],
     "links": [
@@ -6804,6 +7774,14 @@
           "x": 4.4,
           "y": 86.4
         }
+      },
+      {
+        "to": "utahs-pig-farm",
+        "kind": "portal",
+        "pos": {
+          "x": 2.2,
+          "y": 23.6
+        }
       }
     ],
     "npcIds": [],
@@ -6929,6 +7907,14 @@
         "pos": {
           "x": 16.1,
           "y": 11.1
+        }
+      },
+      {
+        "to": "the-tree-tunnel-at-the-forest-up-north",
+        "kind": "portal",
+        "pos": {
+          "x": 50.4,
+          "y": 81.3
         }
       }
     ],
@@ -7831,6 +8817,37 @@
     "image": "https://mapleclassic.wiki/images/thumb/7/75/The_Tree_That_Grew_III.png/800px-The_Tree_That_Grew_III.png"
   },
   {
+    "id": "the-tree-tunnel-at-the-forest-up-north",
+    "name": "The Tree Tunnel At the Forest Up North",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "the-forest-north-of-ellinia",
+        "kind": "portal",
+        "pos": {
+          "x": 28.4,
+          "y": 53.8
+        }
+      }
+    ],
+    "npcIds": [
+      "ronnie"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Tree_Tunnel_At_the_Forest_Up_North",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/d/d2/The_Tree_Tunnel_At_the_Forest_Up_North.png/800px-The_Tree_Tunnel_At_the_Forest_Up_North.png"
+  },
+  {
     "id": "the-tunnel-that-lost-light-i",
     "name": "The Tunnel That Lost Light I",
     "region": "victoria-island",
@@ -7889,6 +8906,10 @@
       {
         "mobId": "drake",
         "count": 15
+      },
+      {
+        "mobId": "wild-kargo",
+        "count": 7
       }
     ],
     "links": [
@@ -8096,6 +9117,33 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/thumb/6/6f/Thicket_Around_the_Beach_III.png/800px-Thicket_Around_the_Beach_III.png"
+  },
+  {
+    "id": "thieves-hideout",
+    "name": "Thieves' Hideout",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "kerning-city",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "dark-lord"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Thieves'_Hideout",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/5/56/Thieves%27_Hideout.png/240px-Thieves%27_Hideout.png"
   },
   {
     "id": "transfer-area",
@@ -8532,6 +9580,86 @@
     "image": "https://mapleclassic.wiki/images/thumb/4/4a/Tree_Dungeon%2C_Monkey_Forest_II.png/240px-Tree_Dungeon%2C_Monkey_Forest_II.png"
   },
   {
+    "id": "utahs-pig-farm",
+    "name": "Utah's Pig Farm",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "the-forest-east-of-henesys",
+        "kind": "portal",
+        "pos": {
+          "x": 2.5,
+          "y": 84.6
+        }
+      }
+    ],
+    "npcIds": [
+      "utah"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Utah's_Pig_Farm",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/0/0a/Utah%27s_Pig_Farm.png/800px-Utah%27s_Pig_Farm.png"
+  },
+  {
+    "id": "vip-sauna",
+    "name": "VIP Sauna",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [],
+    "npcIds": [
+      "mr-wetbottom"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/VIP_Sauna",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/b/b9/VIP_Sauna.png/240px-VIP_Sauna.png"
+  },
+  {
+    "id": "warriors-sanctuary",
+    "name": "Warriors' Sanctuary",
+    "region": "victoria-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "perion",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "dances-with-balrog"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warriors'_Sanctuary",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/a/ab/Warriors%27_Sanctuary.png/240px-Warriors%27_Sanctuary.png"
+  },
+  {
     "id": "west-domain-of-perion",
     "name": "West Domain of Perion",
     "region": "victoria-island",
@@ -8878,6 +10006,11 @@
       {
         "mobId": "cold-eye",
         "count": 17
+      },
+      {
+        "mobId": "wild-kargo",
+        "count": 13,
+        "respawnSec": 120
       }
     ],
     "links": [

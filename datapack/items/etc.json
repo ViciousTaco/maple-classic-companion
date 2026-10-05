@@ -36,6 +36,30 @@
     "npcSellMeso": 60
   },
   {
+    "id": "alligator-skin-pouch",
+    "name": "Alligator Skin Pouch",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Icarus_and_the_Balloon",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/c/c4/Alligator_Skin_Pouch.png"
+  },
+  {
     "id": "amethyst-ore",
     "name": "Amethyst Ore",
     "category": "etc",
@@ -70,6 +94,36 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/9/9f/Amethyst_Ore.png",
     "npcSellMeso": 200
+  },
+  {
+    "id": "ancient-scroll",
+    "name": "Ancient Scroll",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/What_Pia_Borrowed",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/What_Pia_has_Borrowed",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/2/2a/Ancient_Scroll.png"
   },
   {
     "id": "animal-fossil",
@@ -192,6 +246,59 @@
     "npcSellMeso": 43
   },
   {
+    "id": "arcons-blood",
+    "name": "Arcon's Blood",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Getting_Arcon's_Blood",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/10/Arcon%27s_Blood.png"
+  },
+  {
+    "id": "armor-crafting-catalyst",
+    "name": "Armor Crafting Catalyst",
+    "category": "etc",
+    "npcSellMeso": 1000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Blacksmith_in_My_Own_Right!",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Leatherworker_in_My_Own_Right!",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/3/33/Armor_Crafting_Catalyst.png"
+  },
+  {
     "id": "arwens-glass-shoe",
     "name": "Arwen's Glass Shoe",
     "category": "etc",
@@ -216,6 +323,84 @@
     "npcSellMeso": 250
   },
   {
+    "id": "ayans-letter",
+    "name": "Ayan's Letter",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/I_Need_to_Find_My_Daughter_2",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/44/Ayan%27s_Letter.png"
+  },
+  {
+    "id": "ayans-toy-sword",
+    "name": "Ayan's Toy Sword",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/I_Need_to_Find_My_Daughter_1",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/2/28/Ayan%27s_Toy_Sword.png"
+  },
+  {
+    "id": "black-crystal",
+    "name": "Black Crystal",
+    "category": "etc",
+    "npcSellMeso": 2500,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/What_Pia_Borrowed",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/What_Pia_has_Borrowed",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/e/e0/Black_Crystal.png"
+  },
+  {
     "id": "black-crystal-ore",
     "name": "Black Crystal Ore",
     "category": "etc",
@@ -238,6 +423,54 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/0/0b/Black_Crystal_Ore.png",
     "npcSellMeso": 500
+  },
+  {
+    "id": "black-feather",
+    "name": "Black Feather",
+    "category": "etc",
+    "npcSellMeso": 1000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Luke_the_Security_Guy's_Wish_to_Travel",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/3/35/Black_Feather.png"
+  },
+  {
+    "id": "blackbulls-deed-to-the-land",
+    "name": "Blackbull's Deed to the Land",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Building_a_New_House_For_Blackbull",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/f/fa/Blackbull%27s_Deed_to_the_Land.png"
   },
   {
     "id": "blue-mushroom-cap",
@@ -288,6 +521,30 @@
     "npcSellMeso": 2
   },
   {
+    "id": "blue-viola",
+    "name": "Blue Viola",
+    "category": "etc",
+    "npcSellMeso": 1000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/John's_Present",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/5d/Blue_Viola.png"
+  },
+  {
     "id": "broken-mirror-glass",
     "name": "Broken Mirror Glass",
     "category": "etc",
@@ -303,6 +560,36 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/e/ee/Broken_Mirror_Glass.png"
+  },
+  {
+    "id": "bronze-ingot",
+    "name": "Bronze Ingot",
+    "category": "etc",
+    "npcSellMeso": 100,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mr._Thunder_in_Need_of_an_Apprentice",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Chris's_Request",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/16/Bronze_Ingot.png"
   },
   {
     "id": "bronze-ore",
@@ -339,6 +626,30 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/0/03/Bronze_Ore.png",
     "npcSellMeso": 20
+  },
+  {
+    "id": "bruces-special-cake",
+    "name": "Bruce's Special Cake",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Father's_Love_for_His_Daughter",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/78/Bruce%27s_Special_Cake.png"
   },
   {
     "id": "bubblings-huge-bubble",
@@ -389,6 +700,29 @@
     "npcSellMeso": 24
   },
   {
+    "id": "chief-stans-letter",
+    "name": "Chief Stan's Letter",
+    "category": "etc",
+    "npcSellMeso": 0,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Chief_Stan's_Reply",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
     "id": "clang-claw",
     "name": "Clang Claw",
     "category": "etc",
@@ -411,6 +745,36 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/3/39/Clang_Claw.png",
     "npcSellMeso": 49
+  },
+  {
+    "id": "coconut",
+    "name": "Coconut",
+    "category": "etc",
+    "npcSellMeso": 145,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Special_Taste_of_Florina_Beach_I",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Special_Taste_of_Florina_Beach_II",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/2/2f/Coconut.png"
   },
   {
     "id": "cold-eye-tail",
@@ -509,6 +873,107 @@
     "npcSellMeso": 40
   },
   {
+    "id": "dances-with-balrogs-letter",
+    "name": "Dances with Balrog's Letter",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dances_with_Balrog's_Reply",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/c/cd/Dances_with_Balrog%27s_Letter.png"
+  },
+  {
+    "id": "dark-stone-golem-rubble",
+    "name": "Dark Stone Golem Rubble",
+    "category": "etc",
+    "npcSellMeso": 58,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Maya's_Last_Collection",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/6/65/Dark_Stone_Golem_Rubble.png"
+  },
+  {
+    "id": "dexterity-crystal",
+    "name": "Dexterity Crystal",
+    "category": "etc",
+    "npcSellMeso": 5000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Athena_Pierce_and_Her_Recovery",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/d/d1/Dexterity_Crystal.png"
+  },
+  {
+    "id": "diamond",
+    "name": "Diamond",
+    "category": "etc",
+    "npcSellMeso": 1200,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Cold_Milk",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Last_Material_Delivery_for_Building_a_New_House",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/e/ea/Diamond.png"
+  },
+  {
     "id": "diamond-ore",
     "name": "Diamond Ore",
     "category": "etc",
@@ -543,6 +1008,60 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/9/97/Diamond_Ore.png",
     "npcSellMeso": 240
+  },
+  {
+    "id": "double-rooted-red-ginseng",
+    "name": "Double-Rooted Red Ginseng",
+    "category": "etc",
+    "npcSellMeso": 2000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sabitrama's_Anti-Aging_Medicine",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/1f/Double-Rooted_Red_Ginseng.png"
+  },
+  {
+    "id": "dragon-skin",
+    "name": "Dragon Skin",
+    "category": "etc",
+    "npcSellMeso": 200,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Last_Material_Delivery_for_Building_a_New_House",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Last_Material_for_Building_a_New_House",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/12/Dragon_Skin.png"
   },
   {
     "id": "drake-skull",
@@ -683,6 +1202,29 @@
     "npcSellMeso": 10000
   },
   {
+    "id": "estelles-special-sauce",
+    "name": "Estelle's Special Sauce",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Estelle's_Special_Sauce_(quest)",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/a/a1/Estelle%27s_Special_Sauce.png"
+  },
+  {
     "id": "evil-eye-tail",
     "name": "Evil Eye Tail",
     "category": "etc",
@@ -761,6 +1303,108 @@
     "npcSellMeso": 17
   },
   {
+    "id": "flaming-feather",
+    "name": "Flaming Feather",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Reawakening_the_Gladius",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/f/f6/Flaming_Feather.png"
+  },
+  {
+    "id": "flying-medicine",
+    "name": "Flying Medicine",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Delivering_the_Flying_Medicine",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Delivering_the_Flying_Pill",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/8/80/Flying_Medicine.png"
+  },
+  {
+    "id": "fossil-box",
+    "name": "Fossil Box",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Delivering_a_Box_of_Fossils",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/2/2f/Fossil_Box.png"
+  },
+  {
+    "id": "fossil-report",
+    "name": "Fossil Report",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Progress_on_Fossil_Research",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/7c/Fossil_Report.png"
+  },
+  {
     "id": "fragment-of-magic",
     "name": "Fragment of Magic",
     "category": "etc",
@@ -795,6 +1439,54 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/c/cd/Fragment_of_Magic.png",
     "npcSellMeso": 10
+  },
+  {
+    "id": "fresh-milk",
+    "name": "Fresh Milk",
+    "category": "etc",
+    "npcSellMeso": 500,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Satisfied_Ronnie",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/3/34/Fresh_Milk.png"
+  },
+  {
+    "id": "garnet",
+    "name": "Garnet",
+    "category": "etc",
+    "npcSellMeso": 200,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Estelle's_Request",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/5a/Garnet.png"
   },
   {
     "id": "garnet-ore",
@@ -881,6 +1573,30 @@
     "npcSellMeso": 39
   },
   {
+    "id": "gold-ingot",
+    "name": "Gold Ingot",
+    "category": "etc",
+    "npcSellMeso": 300,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Blacksmith_in_My_Own_Right!",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/2/22/Gold_Ingot.png"
+  },
+  {
     "id": "gold-ore",
     "name": "Gold Ore",
     "category": "etc",
@@ -965,6 +1681,29 @@
     "npcSellMeso": 14
   },
   {
+    "id": "heros-gladius-quest-item",
+    "name": "Hero's Gladius (quest item)",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Hero's_Gladius_(quest)",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/0/0b/Hero%27s_Gladius.png"
+  },
+  {
     "id": "horny-mushroom-cap",
     "name": "Horny Mushroom Cap",
     "category": "etc",
@@ -1011,6 +1750,36 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/e/ec/Iron_Hog%27s_Metal_Hoof.png",
     "npcSellMeso": 28
+  },
+  {
+    "id": "iron-ingot",
+    "name": "Iron Ingot",
+    "category": "etc",
+    "npcSellMeso": 100,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mr._Thunder_in_Need_of_an_Apprentice",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Chris's_Request",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/0/0a/Iron_Ingot.png"
   },
   {
     "id": "iron-ore",
@@ -1222,6 +1991,77 @@
     "npcSellMeso": 38
   },
   {
+    "id": "lucas-letter",
+    "name": "Lucas' Letter",
+    "category": "etc",
+    "npcSellMeso": 0,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lucas'_Reply",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/5b/Lucas%27_Letter.png"
+  },
+  {
+    "id": "luck-crystal",
+    "name": "Luck Crystal",
+    "category": "etc",
+    "npcSellMeso": 5000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Lord_and_His_Recovery",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/9/93/Luck_Crystal.png"
+  },
+  {
+    "id": "luminous-magical-resonance",
+    "name": "Luminous Magical Resonance",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Roots_of_Regret",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/e/ea/Luminous_Magical_Resonance.png"
+  },
+  {
     "id": "lupin-doll",
     "name": "Lupin Doll",
     "category": "etc",
@@ -1294,6 +2134,30 @@
     "npcSellMeso": 55
   },
   {
+    "id": "marias-letter",
+    "name": "Maria's Letter",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Letter_for_Lucas",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/5c/Maria%27s_Letter.png"
+  },
+  {
     "id": "medicine-with-weird-vibes",
     "name": "Medicine With Weird Vibes",
     "category": "etc",
@@ -1316,6 +2180,30 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/a/a6/Medicine_With_Weird_Vibes.png",
     "npcSellMeso": 48
+  },
+  {
+    "id": "mithril-ingot",
+    "name": "Mithril Ingot",
+    "category": "etc",
+    "npcSellMeso": 200,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Silas_Irons_in_Need_of_Help",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/45/Mithril_Ingot.png"
   },
   {
     "id": "mithril-ore",
@@ -1376,6 +2264,53 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/3/35/Monster_Card.png",
     "npcSellMeso": 1
+  },
+  {
+    "id": "moon-rock",
+    "name": "Moon Rock",
+    "category": "etc",
+    "npcSellMeso": 2000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jane's_Final_Challenge",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/0/0d/Moon_Rock.png"
+  },
+  {
+    "id": "mrs-ming-mings-cooking-recipe",
+    "name": "Mrs. Ming Ming's Cooking Recipe",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mrs._Ming_Ming's_Advice",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
   },
   {
     "id": "mushmom-spore",
@@ -1450,6 +2385,200 @@
     "npcSellMeso": 12
   },
   {
+    "id": "octopus-mushroom-omok-set",
+    "name": "Octopus & Mushroom Omok Set",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Make_a_Octopus_%26_Mushroom_Omok_Set",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/44/Octopus_%26_Mushroom_Omok_Set.png"
+  },
+  {
+    "id": "old-chief-stans-hammer",
+    "name": "Old Chief Stan's Hammer",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Chief_Stan's_Hammer",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/f/f4/Old_Chief_Stan%27s_Hammer.png"
+  },
+  {
+    "id": "old-gold-watch",
+    "name": "Old Gold Watch",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mother's_Gold_Watch",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/c/c1/Old_Gold_Watch.png"
+  },
+  {
+    "id": "old-map-piece-1-4",
+    "name": "Old Map Piece (1/4)",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Looking_for_the_Sage_in_Ellinia",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "old-map-piece-2-4",
+    "name": "Old Map Piece (2/4)",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Looking_for_the_Sage_in_Henesys",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "old-map-piece-3-4",
+    "name": "Old Map Piece (3/4)",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Looking_for_the_Sage_in_Kerning_City",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "old-wooden-board",
+    "name": "Old Wooden Board",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pio's_Collecting_Recycled_Goods",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/7d/Old_Wooden_Board.png"
+  },
+  {
+    "id": "omok-piece-mushroom",
+    "name": "Omok Piece: Mushroom",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Make_a_Octopus_%26_Mushroom_Omok_Set",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Make_a_Pig_%26_Mushroom_Omok_Set",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/3/3b/Omok_Piece_-_Mushroom.png"
+  },
+  {
     "id": "omok-piece-octopus",
     "name": "Omok Piece: Octopus",
     "category": "etc",
@@ -1471,6 +2600,36 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "npcSellMeso": 1
+  },
+  {
+    "id": "omok-piece-pig",
+    "name": "Omok Piece: Pig",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Make_a_Pig_%26_Mushroom_Omok_Set",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Make_a_Pig_%26_Octopus_Omok_Set",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/6/6f/Omok_Piece_-_Pig.png"
   },
   {
     "id": "omok-piece-slime",
@@ -1518,6 +2677,30 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/b/b3/Omok_Table.png",
     "npcSellMeso": 1
+  },
+  {
+    "id": "one-handed-weapon-crafting-catalyst",
+    "name": "One-Handed Weapon Crafting Catalyst",
+    "category": "etc",
+    "npcSellMeso": 1000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Weaponcrafter_in_My_Own_Right!",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/4e/One-Handed_Weapon_Crafting_Catalyst.png"
   },
   {
     "id": "opal-ore",
@@ -1580,6 +2763,36 @@
     "npcSellMeso": 8
   },
   {
+    "id": "orihalcon-ingot",
+    "name": "Orihalcon Ingot",
+    "category": "etc",
+    "npcSellMeso": 500,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Blacksmith_in_My_Own_Right!",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Luke_the_Security_Guy's_Wish_to_Travel",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/18/Orihalcon_Ingot.png"
+  },
+  {
     "id": "orihalcon-ore",
     "name": "Orihalcon Ore",
     "category": "etc",
@@ -1614,6 +2827,78 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/f/f2/Orihalcon_Ore.png",
     "npcSellMeso": 100
+  },
+  {
+    "id": "piece-of-ice",
+    "name": "Piece of Ice",
+    "category": "etc",
+    "npcSellMeso": 400,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Reawakening_the_Gladius",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/b/bb/Piece_of_Ice.png"
+  },
+  {
+    "id": "pig-mushroom-omok-set",
+    "name": "Pig & Mushroom Omok Set",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Make_a_Pig_%26_Mushroom_Omok_Set",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/8/8d/Pig_%26_Mushroom_Omok_Set.png"
+  },
+  {
+    "id": "pig-octopus-omok-set",
+    "name": "Pig & Octopus Omok Set",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Make_a_Pig_%26_Octopus_Omok_Set",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/5e/Pig_%26_Octopus_Omok_Set.png"
   },
   {
     "id": "pigs-head",
@@ -1670,6 +2955,54 @@
     "npcSellMeso": 10
   },
   {
+    "id": "pink-anthurium",
+    "name": "Pink Anthurium",
+    "category": "etc",
+    "npcSellMeso": 1000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sabitrama_and_the_Diet_Medicine",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/5c/Pink_Anthurium.png"
+  },
+  {
+    "id": "pink-viola",
+    "name": "Pink Viola",
+    "category": "etc",
+    "npcSellMeso": 1000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/John's_Pink_Flower_Basket",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/a/aa/Pink_Viola.png"
+  },
+  {
     "id": "plant-fossil",
     "name": "Plant Fossil",
     "category": "etc",
@@ -1694,6 +3027,30 @@
     "npcSellMeso": 1
   },
   {
+    "id": "plant-sample",
+    "name": "Plant Sample",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Research_on_Plant_Fossils",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/72/Plant_Sample.png"
+  },
+  {
     "id": "poisonous-mushroom",
     "name": "Poisonous Mushroom",
     "category": "etc",
@@ -1716,6 +3073,60 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/c/c6/Poisonous_Mushroom.png",
     "npcSellMeso": 500
+  },
+  {
+    "id": "power-crystal",
+    "name": "Power Crystal",
+    "category": "etc",
+    "npcSellMeso": 5000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dances_with_Balrog_and_His_Recovery",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/f/fd/Power_Crystal.png"
+  },
+  {
+    "id": "processed-wood",
+    "name": "Processed Wood",
+    "category": "etc",
+    "npcSellMeso": 10,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Vicious_in_Need_of_Help",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Icarus's_Hang_Glider",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/3/39/Processed_Wood.png"
   },
   {
     "id": "raffle-petal",
@@ -1766,6 +3177,30 @@
     "npcSellMeso": 47
   },
   {
+    "id": "red-cape",
+    "name": "Red Cape",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pia's_Gift",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/b/bd/Red_Cape.png"
+  },
+  {
     "id": "red-snail-shell",
     "name": "Red Snail Shell",
     "category": "etc",
@@ -1788,6 +3223,76 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/9/95/Red_Snail_Shell.png",
     "npcSellMeso": 4
+  },
+  {
+    "id": "rinas-unagi-special",
+    "name": "Rina's Unagi Special",
+    "category": "etc",
+    "npcSellMeso": 550,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rina's_Unagi_Special_(quest)",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/55/Rina%27s_Unagi_Special.png"
+  },
+  {
+    "id": "rotten-root-fragment",
+    "name": "Rotten Root Fragment",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tracing_the_Resonance",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/14/Rotten_Root_Fragment.png"
+  },
+  {
+    "id": "rusty-screw",
+    "name": "Rusty Screw",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pio's_Collecting_Recycled_Goods",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/d/da/Rusty_Screw.png"
   },
   {
     "id": "sapphire-ore",
@@ -1820,6 +3325,60 @@
     "npcSellMeso": 120
   },
   {
+    "id": "screw",
+    "name": "Screw",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mr._Thunder_in_Need_of_Help",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pia's_Present_For_a_Friend",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/59/Screw.png"
+  },
+  {
+    "id": "scroll-crafting-catalyst",
+    "name": "Scroll Crafting Catalyst",
+    "category": "etc",
+    "npcSellMeso": 1000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/An_Arcforger_in_My_Own_Right!",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/b/ba/Scroll_Crafting_Catalyst.png"
+  },
+  {
     "id": "scroll-crafting-stimulator",
     "name": "Scroll Crafting Stimulator",
     "category": "etc",
@@ -1848,6 +3407,173 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/1/1d/Scroll_Crafting_Stimulator.png",
     "npcSellMeso": 5000
+  },
+  {
+    "id": "secret-book",
+    "name": "Secret Book",
+    "category": "etc",
+    "npcSellMeso": 150,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Returned_Secret_Book",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/d/d3/Secret_Book.png"
+  },
+  {
+    "id": "seras-mirror",
+    "name": "Sera's Mirror",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bringing_a_Mirror_to_Heena",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/43/Sera%27s_Mirror.png"
+  },
+  {
+    "id": "set-of-match-cards",
+    "name": "Set of Match Cards",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Make_a_Match_Cards_Set",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/6/60/Set_of_Match_Cards.png"
+  },
+  {
+    "id": "shumis-coin",
+    "name": "Shumi's Coin",
+    "category": "etc",
+    "npcSellMeso": 50,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shumi's_Lost_Coin",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/9/92/Shumi%27s_Coin.png"
+  },
+  {
+    "id": "shumis-roll-of-cash",
+    "name": "Shumi's Roll of Cash",
+    "category": "etc",
+    "npcSellMeso": 100,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shumi's_Lost_Roll_of_Cash",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/2/23/Shumi%27s_Roll_of_Cash.png"
+  },
+  {
+    "id": "shumis-sack-of-cash",
+    "name": "Shumi's Sack of Cash",
+    "category": "etc",
+    "npcSellMeso": 1000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Shumi's_Lost_Sack_of_Cash",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/a/ae/Shumi%27s_Sack_of_Cash.png"
+  },
+  {
+    "id": "silver-ingot",
+    "name": "Silver Ingot",
+    "category": "etc",
+    "npcSellMeso": 400,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pia's_Present_For_a_Friend",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/6/60/Silver_Ingot.png"
   },
   {
     "id": "silver-ore",
@@ -1910,6 +3636,78 @@
     "npcSellMeso": 50
   },
   {
+    "id": "slime-mushroom-omok-set",
+    "name": "Slime & Mushroom Omok Set",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Make_a_Slime_%26_Mushroom_Omok_Set",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/e/e5/Slime_%26_Mushroom_Omok_Set.png"
+  },
+  {
+    "id": "slime-octopus-omok-set",
+    "name": "Slime & Octopus Omok Set",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Make_a_Slime_%26_Octopus_Omok_Set",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/b/b7/Slime_%26_Octopus_Omok_Set.png"
+  },
+  {
+    "id": "slime-pig-omok-set",
+    "name": "Slime & Pig Omok Set",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Make_a_Slime_%26_Pig_Omok_Set",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/c/c0/Slime_%26_Pig_Omok_Set.png"
+  },
+  {
     "id": "snail-shell",
     "name": "Snail Shell",
     "category": "etc",
@@ -1934,6 +3732,100 @@
     "npcSellMeso": 1
   },
   {
+    "id": "sparkling-glass-marble",
+    "name": "Sparkling Glass Marble",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Camila's_Gem",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/4f/Sparkling_Glass_Marble.png"
+  },
+  {
+    "id": "sparkling-rock",
+    "name": "Sparkling Rock",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Making_Sparkling_Rock",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/c/cf/Sparkling_Rock.png"
+  },
+  {
+    "id": "special-stirge-phobia-cure",
+    "name": "Special Stirge Phobia Cure",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/It's_All_in_the_Mind",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/c/c3/Special_Stirge_Phobia_Cure.png"
+  },
+  {
+    "id": "spool-of-thread",
+    "name": "Spool of Thread",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Francois_in_Need_of_Help",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/46/Spool_of_Thread.png"
+  },
+  {
     "id": "squishy-liquid",
     "name": "Squishy Liquid",
     "category": "etc",
@@ -1956,6 +3848,36 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/4/49/Squishy_Liquid.png",
     "npcSellMeso": 6
+  },
+  {
+    "id": "star-rock",
+    "name": "Star Rock",
+    "category": "etc",
+    "npcSellMeso": 4000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sabitrama's_Anti-Aging_Medicine",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Reawakening_the_Gladius",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/0/03/Star_Rock.png"
   },
   {
     "id": "stiff-feather",
@@ -2018,6 +3940,60 @@
     "npcSellMeso": 20
   },
   {
+    "id": "stone-golem-rubble",
+    "name": "Stone Golem Rubble",
+    "category": "etc",
+    "npcSellMeso": 56,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Maya's_Last_Collection",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Building_a_New_House_For_Blackbull",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/e/e9/Stone_Golem_Rubble.png"
+  },
+  {
+    "id": "stuffed-drake-skull",
+    "name": "Stuffed Drake Skull",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Transporting_Drake's_Skull",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/9/95/Stuffed_Drake_Skull.png"
+  },
+  {
     "id": "stumps-teardrop",
     "name": "Stump's Teardrop",
     "category": "etc",
@@ -2064,6 +4040,47 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/c/c1/Tablecloth.png",
     "npcSellMeso": 34
+  },
+  {
+    "id": "tauromacis-horn",
+    "name": "Tauromacis Horn",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tauromacis",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/a/aa/Tauromacis_Horn.png"
+  },
+  {
+    "id": "topaz",
+    "name": "Topaz",
+    "category": "etc",
+    "npcSellMeso": 400,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/An_Arcforger_in_My_Own_Right!",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/a/a5/Topaz.png"
   },
   {
     "id": "topaz-ore",
@@ -2144,6 +4161,101 @@
     "npcSellMeso": 5
   },
   {
+    "id": "two-handed-weapon-crafting-catalyst",
+    "name": "Two-Handed Weapon Crafting Catalyst",
+    "category": "etc",
+    "npcSellMeso": 1000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Carpenter_in_My_Own_Right!",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/9/9c/Two-Handed_Weapon_Crafting_Catalyst.png"
+  },
+  {
+    "id": "vitamin-gummy",
+    "name": "Vitamin Gummy",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Grandfather's_Vitamin_Gummy",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/3/36/Vitamin_Gummy.png"
+  },
+  {
+    "id": "weird-medicine",
+    "name": "Weird Medicine",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Delivering_the_Weird_Medicine",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/9/93/Weird_Medicine.png"
+  },
+  {
+    "id": "white-viola",
+    "name": "White Viola",
+    "category": "etc",
+    "npcSellMeso": 1000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/John's_Last_Present",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/5e/White_Viola.png"
+  },
+  {
     "id": "wild-boar-tooth",
     "name": "Wild Boar Tooth",
     "category": "etc",
@@ -2166,5 +4278,100 @@
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/7/70/Wild_Boar_Tooth.png",
     "npcSellMeso": 25
+  },
+  {
+    "id": "wild-kargo-eye",
+    "name": "Wild Kargo Eye",
+    "category": "etc",
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Kargo",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/a/ac/Wild_Kargo_Eye.png"
+  },
+  {
+    "id": "winstons-recommendation",
+    "name": "Winston's Recommendation",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Delivering_a_Box_of_Fossils",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/2/28/Winston%27s_Recommendation.png"
+  },
+  {
+    "id": "wisdom-crystal",
+    "name": "Wisdom Crystal",
+    "category": "etc",
+    "npcSellMeso": 5000,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Grendel_the_Really_Old_and_His_Recovery",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/f/f5/Wisdom_Crystal.png"
+  },
+  {
+    "id": "witchgrass-leaf",
+    "name": "Witchgrass Leaf",
+    "category": "etc",
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Ingredients_for_the_Flying_Medicine",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/The_Ingredients_for_the_Flying_Pill",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Category:Etc_items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/e/ec/Witchgrass_Leaf.png"
   }
 ]

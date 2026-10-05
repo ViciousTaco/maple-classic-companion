@@ -1,0 +1,434 @@
+[
+  {
+    "id": "improved-hp-recovery",
+    "name": "Improved HP Recovery",
+    "jobId": "warrior",
+    "maxLevel": 15,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/7f/Improved_HP_Recovery.png"
+  },
+  {
+    "id": "iron-body",
+    "name": "Iron Body",
+    "jobId": "warrior",
+    "maxLevel": 20,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 15
+      },
+      {
+        "level": 2,
+        "mpCost": 15
+      },
+      {
+        "level": 3,
+        "mpCost": 15
+      },
+      {
+        "level": 4,
+        "mpCost": 15
+      },
+      {
+        "level": 5,
+        "mpCost": 15
+      },
+      {
+        "level": 6,
+        "mpCost": 15
+      },
+      {
+        "level": 7,
+        "mpCost": 15
+      },
+      {
+        "level": 8,
+        "mpCost": 15
+      },
+      {
+        "level": 9,
+        "mpCost": 15
+      },
+      {
+        "level": 10,
+        "mpCost": 15
+      },
+      {
+        "level": 11,
+        "mpCost": 15
+      },
+      {
+        "level": 12,
+        "mpCost": 15
+      },
+      {
+        "level": 13,
+        "mpCost": 15
+      },
+      {
+        "level": 14,
+        "mpCost": 15
+      },
+      {
+        "level": 15,
+        "mpCost": 15
+      },
+      {
+        "level": 16,
+        "mpCost": 15
+      },
+      {
+        "level": 17,
+        "mpCost": 15
+      },
+      {
+        "level": 18,
+        "mpCost": 15
+      },
+      {
+        "level": 19,
+        "mpCost": 15
+      },
+      {
+        "level": 20,
+        "mpCost": 15
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Iron_Body",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/0/08/Iron_Body.png"
+  },
+  {
+    "id": "max-hp-increase",
+    "name": "Max HP Increase",
+    "jobId": "warrior",
+    "maxLevel": 15,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/19/Max_HP_Increase.png"
+  },
+  {
+    "id": "power-strike",
+    "name": "Power Strike",
+    "jobId": "warrior",
+    "maxLevel": 20,
+    "kind": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "damagePct": 160,
+        "mpCost": 4
+      },
+      {
+        "level": 2,
+        "damagePct": 165,
+        "mpCost": 4
+      },
+      {
+        "level": 3,
+        "damagePct": 170,
+        "mpCost": 4
+      },
+      {
+        "level": 4,
+        "damagePct": 175,
+        "mpCost": 4
+      },
+      {
+        "level": 5,
+        "damagePct": 180,
+        "mpCost": 5
+      },
+      {
+        "level": 6,
+        "damagePct": 185,
+        "mpCost": 5
+      },
+      {
+        "level": 7,
+        "damagePct": 190,
+        "mpCost": 5
+      },
+      {
+        "level": 8,
+        "damagePct": 195,
+        "mpCost": 6
+      },
+      {
+        "level": 9,
+        "damagePct": 200,
+        "mpCost": 6
+      },
+      {
+        "level": 10,
+        "damagePct": 205,
+        "mpCost": 7
+      },
+      {
+        "level": 11,
+        "damagePct": 210,
+        "mpCost": 7
+      },
+      {
+        "level": 12,
+        "damagePct": 215,
+        "mpCost": 8
+      },
+      {
+        "level": 13,
+        "damagePct": 220,
+        "mpCost": 8
+      },
+      {
+        "level": 14,
+        "damagePct": 225,
+        "mpCost": 9
+      },
+      {
+        "level": 15,
+        "damagePct": 230,
+        "mpCost": 9
+      },
+      {
+        "level": 16,
+        "damagePct": 235,
+        "mpCost": 10
+      },
+      {
+        "level": 17,
+        "damagePct": 240,
+        "mpCost": 10
+      },
+      {
+        "level": 18,
+        "damagePct": 245,
+        "mpCost": 11
+      },
+      {
+        "level": 19,
+        "damagePct": 250,
+        "mpCost": 11
+      },
+      {
+        "level": 20,
+        "damagePct": 260,
+        "mpCost": 12
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Power_Strike",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/b/be/Power_Strike.png"
+  },
+  {
+    "id": "precise-strikes",
+    "name": "Precise Strikes",
+    "jobId": "warrior",
+    "maxLevel": 15,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/a/a2/Precise_Strikes.png"
+  },
+  {
+    "id": "slash-blast",
+    "name": "Slash Blast",
+    "jobId": "warrior",
+    "maxLevel": 20,
+    "kind": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "damagePct": 70,
+        "targets": 4,
+        "mpCost": 4
+      },
+      {
+        "level": 2,
+        "damagePct": 73,
+        "targets": 4,
+        "mpCost": 4
+      },
+      {
+        "level": 3,
+        "damagePct": 76,
+        "targets": 4,
+        "mpCost": 4
+      },
+      {
+        "level": 4,
+        "damagePct": 79,
+        "targets": 4,
+        "mpCost": 4
+      },
+      {
+        "level": 5,
+        "damagePct": 82,
+        "targets": 4,
+        "mpCost": 5
+      },
+      {
+        "level": 6,
+        "damagePct": 85,
+        "targets": 4,
+        "mpCost": 5
+      },
+      {
+        "level": 7,
+        "damagePct": 88,
+        "targets": 4,
+        "mpCost": 5
+      },
+      {
+        "level": 8,
+        "damagePct": 91,
+        "targets": 4,
+        "mpCost": 6
+      },
+      {
+        "level": 9,
+        "damagePct": 94,
+        "targets": 4,
+        "mpCost": 6
+      },
+      {
+        "level": 10,
+        "damagePct": 97,
+        "targets": 4,
+        "mpCost": 7
+      },
+      {
+        "level": 11,
+        "damagePct": 100,
+        "targets": 4,
+        "mpCost": 7
+      },
+      {
+        "level": 12,
+        "damagePct": 103,
+        "targets": 4,
+        "mpCost": 8
+      },
+      {
+        "level": 13,
+        "damagePct": 106,
+        "targets": 4,
+        "mpCost": 8
+      },
+      {
+        "level": 14,
+        "damagePct": 109,
+        "targets": 4,
+        "mpCost": 9
+      },
+      {
+        "level": 15,
+        "damagePct": 112,
+        "targets": 4,
+        "mpCost": 9
+      },
+      {
+        "level": 16,
+        "damagePct": 115,
+        "targets": 4,
+        "mpCost": 10
+      },
+      {
+        "level": 17,
+        "damagePct": 118,
+        "targets": 4,
+        "mpCost": 10
+      },
+      {
+        "level": 18,
+        "damagePct": 121,
+        "targets": 4,
+        "mpCost": 11
+      },
+      {
+        "level": 19,
+        "damagePct": 124,
+        "targets": 4,
+        "mpCost": 11
+      },
+      {
+        "level": 20,
+        "damagePct": 130,
+        "targets": 4,
+        "mpCost": 12
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slash_Blast",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/55/Slash_Blast.png"
+  }
+]

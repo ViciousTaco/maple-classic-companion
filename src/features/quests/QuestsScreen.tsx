@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { toggleQuestStep } from "./steps";
 import { motion } from "motion/react";
 import { Check, Crown, MapPin, ScrollText, Sparkles } from "lucide-react";
 import type { Pack } from "../../data/pack";
@@ -60,21 +61,7 @@ function QuestBody({ pack, profile, quest }: { pack: Pack; profile: Profile; que
   const startMap = pack.index.npcById.get(quest.startNpcId)?.mapId;
   const meow = meowdbUrl("quest", quest.ext?.meowdb);
 
-  const toggle = (i: number) =>
-    store.getState().updateProfile(profile.id, (p) => {
-      const set = new Set(p.questSteps[quest.id] ?? []);
-      if (set.has(i)) set.delete(i);
-      else set.add(i);
-      const steps = [...set].sort((a, b) => a - b);
-      const all = quest.steps.length > 0 && steps.length === quest.steps.length;
-      const active = p.unlocks.questsActive.filter((q) => q !== quest.id);
-      const doneList = p.unlocks.questsDone.filter((q) => q !== quest.id);
-      return {
-        ...p,
-        questSteps: { ...p.questSteps, [quest.id]: steps },
-        unlocks: { ...p.unlocks, questsActive: all || steps.length === 0 ? active : [...active, quest.id], questsDone: all ? [...doneList, quest.id] : doneList },
-      };
-    });
+  const toggle = (i: number) => store.getState().updateProfile(profile.id, (p) => toggleQuestStep(p, quest, i));
   const setDone = (v: boolean) =>
     store.getState().updateProfile(profile.id, (p) => ({
       ...p,

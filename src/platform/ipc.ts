@@ -3,7 +3,7 @@ import { tauriPlatform } from "./ipc.tauri";
 import type { Platform } from "./types";
 
 export type * from "./types";
-export { NEED_ALL_FILES, RELEASE_URL_PREFIX } from "./types";
+export { APP_EVENTS, NEED_ALL_FILES, RELEASE_URL_PREFIX } from "./types";
 
 const inTauri = typeof window !== "undefined" && "__TAURI_INTERNALS__" in window;
 

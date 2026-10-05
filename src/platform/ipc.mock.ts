@@ -1,6 +1,16 @@
-import { base64ToBytes } from "./base64";
-import { NEED_ALL_FILES, RELEASE_URL_PREFIX } from "./types";
-import type { BackupInfo, PackActive, Platform } from "./types";
+import { base64ToBytes, bytesToBase64 } from "./base64";
+import { encodePng } from "./png";
+import { APP_EVENTS, NEED_ALL_FILES, RELEASE_URL_PREFIX } from "./types";
+import type {
+  BackupInfo,
+  NotifyBanner,
+  OcrLine,
+  PackActive,
+  Platform,
+  ScreenRegion,
+  ScreenSnapshot,
+  ScreenWindow,
+} from "./types";
 
 const PACK_FILE = /^[a-z0-9.-]+\.json$/;
 const CACHE_KEY = /^[a-z0-9-]{1,64}$/;
@@ -56,6 +66,62 @@ function parseManifest(json: string): { packVersion: string; files: ManifestEntr
   return { packVersion: m.packVersion, files: m.files as ManifestEntry[] };
 }
 
+/** Same limits as Rust `screen.rs`. */
+const MAX_REGION_SIDE = 4000;
+const MAX_REGIONS = 16;
+const ACTION_KIND = /^[a-z0-9][a-z0-9:._-]{0,63}$/;
+/** The fake game window `screenListWindows` returns by default. */
+export const MOCK_GAME_WINDOW: ScreenWindow = {
+  id: 4242,
+  title: "MapleStory",
+  app: "MapleStory.exe",
+  width: 1280,
+  height: 720,
+  minimized: false,
+};
+
+/** Same checks as Rust `check_regions`; returns rounded rects or throws the Rust-style message. */
+function checkRegions(regions: ScreenRegion[], win: ScreenWindow) {
+  if (regions.length > MAX_REGIONS) throw new Error(`At most ${MAX_REGIONS} regions per read`);
+  const names = new Set<string>();
+  return regions.map((r) => {
+    if (names.has(r.name)) throw new Error(`Region name "${r.name}" is used twice`);
+    names.add(r.name);
+    if (r.name.trim() === "" || [...r.name].length > 64)
+      throw new Error("Region name must be 1-64 characters");
+    if ([r.x, r.y, r.w, r.h].some((v) => !Number.isFinite(v) || v < 0))
+      throw new Error(`Region "${r.name}" has a negative or invalid coordinate`);
+    const [x, y, w, h] = [r.x, r.y, r.w, r.h].map(Math.round) as [number, number, number, number];
+    if (w < 1 || h < 1) throw new Error(`Region "${r.name}" is empty`);
+    if (w > MAX_REGION_SIDE || h > MAX_REGION_SIDE)
+      throw new Error(`Region "${r.name}" is larger than ${MAX_REGION_SIDE}x${MAX_REGION_SIDE}`);
+    if (x + w > win.width || y + h > win.height)
+      throw new Error(`Region "${r.name}" (${x},${y} ${w}x${h}) is outside the ${win.width}x${win.height} window`);
+    const scale = r.scale ?? 2;
+    if (!Number.isFinite(scale) || scale < 1 || scale > 4) throw new Error("scale must be between 1 and 4");
+    return { name: r.name, w, h };
+  });
+}
+
+/** A recognisable fake game screen: sky, ground, a chat box (bottom left) and a yellow EXP bar (bottom). */
+function fakeGameScreen(width: number, height: number): Uint8Array {
+  return encodePng(width, height, (x, y) => {
+    const fy = y / height;
+    if (fy > 0.95) return x / width < 0.42 ? [240, 200, 40] : [70, 60, 30]; // EXP bar, 42% full
+    if (fy > 0.72 && x / width < 0.4) return [25, 25, 35]; // chat log
+    if (fy > 0.62) return [90, 140, 70]; // ground
+    return [120, 170, 230]; // sky
+  });
+}
+
+const textLine = (text: string, i: number, w: number, h: number): OcrLine => ({
+  text,
+  x: 0,
+  y: Math.min(i * 14, Math.max(0, h - 12)),
+  w: Math.min(w, text.length * 7),
+  h: Math.min(12, h),
+});
+
 /** Knobs and state UI tests can read or change. */
 export type MockControls = {
   /** `false` → `packVerifyManifest` / `packInstall` treat every signature as bad. */
@@ -63,6 +129,18 @@ export type MockControls = {
   appVersion: string;
   /** Active installed pack version (`null` → bundled baseline). */
   activePack: string | null;
+  /** What `screenListWindows` returns (default: one 1280x720 "MapleStory" window). */
+  windows: ScreenWindow[];
+  /** Region name → lines `screenRead` returns (strings get simple stacked boxes). Missing → no lines. */
+  ocrLines: Record<string, (string | OcrLine)[]>;
+  /** `covered` flag on every region `screenRead` returns. */
+  covered: boolean;
+  hotkeyRegistered: boolean;
+  /** `true` → `notify` reports a Windows toast; `false` (like the portable exe) → banner event fallback. */
+  toast: boolean;
+  miniOpen: boolean;
+  /** Emits an app event to every `onEvent` subscriber (e.g. `"mcc://watch-toggle"`). */
+  emit: (name: string, payload?: unknown) => void;
 };
 
 /** In-memory Platform for the browser, Vitest and Playwright. Mirrors the Rust checks that matter to the UI. */
@@ -75,6 +153,10 @@ export function createMockPlatform(initialJson: string | null = null): Platform 
   packs: Map<string, Map<string, Uint8Array>>;
   cache: Map<string, string>;
   updateCalls: { url: string; sha256: string; signature: string }[];
+  /** Notifications shown as (mock) toasts. */
+  toasts: NotifyBanner[];
+  /** `relayToMain` calls, in order. */
+  relayed: { kind: string; payload: unknown }[];
   controls: MockControls;
 } {
   let current = initialJson;
@@ -87,7 +169,36 @@ export function createMockPlatform(initialJson: string | null = null): Platform 
   const packs = new Map<string, Map<string, Uint8Array>>();
   const cache = new Map<string, string>();
   const updateCalls: { url: string; sha256: string; signature: string }[] = [];
-  const controls: MockControls = { signatureOk: true, appVersion: "0.1.0", activePack: null };
+  const toasts: NotifyBanner[] = [];
+  const relayed: { kind: string; payload: unknown }[] = [];
+  const listeners = new Map<string, Set<(payload: unknown) => void>>();
+  const emit = (name: string, payload: unknown = null) => {
+    for (const fn of [...(listeners.get(name) ?? [])]) fn(payload);
+  };
+  const controls: MockControls = {
+    signatureOk: true,
+    appVersion: "0.1.0",
+    activePack: null,
+    windows: [{ ...MOCK_GAME_WINDOW }],
+    ocrLines: {},
+    covered: false,
+    hotkeyRegistered: true,
+    toast: false,
+    miniOpen: false,
+    emit,
+  };
+
+  const findWindow = (id: number) => {
+    const w = controls.windows.find((x) => x.id === id);
+    if (!w) throw new Error("That window has closed — pick it again");
+    if (w.minimized) throw new Error("The window is minimised — restore it first");
+    return w;
+  };
+  const checkNote = (title: string, body: string) => {
+    if (title.trim() === "" || [...title].length > 200)
+      throw new Error("Notification title must be 1-200 characters");
+    if ([...body].length > 1000) throw new Error("Notification text is too long (max 1000 characters)");
+  };
 
   const checkImage = (bytes: Uint8Array) => {
     if (bytes.byteLength > 400 * 1024) throw new Error("Image is too large (max 400 KB)");
@@ -119,6 +230,8 @@ export function createMockPlatform(initialJson: string | null = null): Platform 
     packs,
     cache,
     updateCalls,
+    toasts,
+    relayed,
     controls,
     getPaths: async () => ({ dataDir: "(in-memory)", portable: false }),
     profilesLoad: async () => ({ json: current, restoredFromBackup: null, corruptFile: null }),
@@ -133,6 +246,7 @@ export function createMockPlatform(initialJson: string | null = null): Platform 
       }
       current = json;
       saves.push(json);
+      emit(APP_EVENTS.profilesSaved, null);
     },
     backupsList: async () => backups.map(({ file, savedAt }) => ({ file, savedAt })),
     backupsRestore: async (file) => {
@@ -287,6 +401,65 @@ export function createMockPlatform(initialJson: string | null = null): Platform 
       checkCacheKey(key);
       JSON.parse(json); // refuse invalid JSON like Rust does
       cache.set(key, json);
+    },
+    screenListWindows: async () => controls.windows.map((w) => ({ ...w })),
+    screenSnapshot: async (windowId): Promise<ScreenSnapshot> => {
+      const w = findWindow(windowId);
+      // Smaller than the real long-edge-1600 picture to keep the mock light; the contract only needs
+      // width/height = PNG size and sourceWidth/sourceHeight = window size.
+      const k = Math.max(1, Math.ceil(Math.max(w.width, w.height) / 160));
+      const [width, height] = [Math.max(1, Math.round(w.width / k)), Math.max(1, Math.round(w.height / k))];
+      return {
+        pngBase64: bytesToBase64(fakeGameScreen(width, height)),
+        width,
+        height,
+        sourceWidth: w.width,
+        sourceHeight: w.height,
+        covered: controls.covered,
+      };
+    },
+    screenRead: async (windowId, regions) => {
+      const w = findWindow(windowId);
+      return checkRegions(regions, w).map((r) => ({
+        name: r.name,
+        lines: (controls.ocrLines[r.name] ?? []).map((l, i) =>
+          typeof l === "string" ? textLine(l, i, r.w, r.h) : { ...l },
+        ),
+        covered: controls.covered,
+      }));
+    },
+    hotkeyStatus: async () => ({ registered: controls.hotkeyRegistered, accelerator: "Ctrl+Alt+W" }),
+    notify: async (title, body) => {
+      checkNote(title, body);
+      if (controls.toast) {
+        toasts.push({ title, body });
+        return { via: "toast", reason: null };
+      }
+      emit(APP_EVENTS.notifyBanner, { title, body });
+      return { via: "fallback", reason: "Windows only shows pop-up notifications for installed apps" };
+    },
+    notifyStatus: async () =>
+      controls.toast
+        ? { toast: true, reason: null }
+        : { toast: false, reason: "Windows only shows pop-up notifications for installed apps" },
+    miniWindowOpen: async () => {
+      controls.miniOpen = true;
+    },
+    miniWindowClose: async () => {
+      controls.miniOpen = false;
+    },
+    relayToMain: async (kind, payload) => {
+      if (!ACTION_KIND.test(kind)) throw new Error("kind must match ^[a-z0-9][a-z0-9:._-]{0,63}$");
+      const action = { kind, payload: payload ?? null };
+      relayed.push(action);
+      emit(APP_EVENTS.miniAction, action);
+    },
+    onEvent: (name: string, handler: (payload: unknown) => void) => {
+      const set = listeners.get(name) ?? new Set();
+      listeners.set(name, set);
+      const entry = (payload: unknown) => handler(payload); // one entry per subscription
+      set.add(entry);
+      return () => void set.delete(entry);
     },
   };
 }

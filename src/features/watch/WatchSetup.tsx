@@ -11,7 +11,7 @@ import type { WatchWindow } from "./controller";
 // I-29 setup: pick the game window → draw the two boxes on a one-off picture → test → save.
 // The picture lives only in this dialog's memory and disappears when it closes.
 
-type Snapshot = { pngBase64: string; width: number; height: number; sourceWidth: number; sourceHeight: number };
+type Snapshot = { pngBase64: string; width: number; height: number; sourceWidth: number; sourceHeight: number; covered?: boolean };
 type SnapshotPlatform = { screenSnapshot(windowId: number): Promise<Snapshot> };
 type BoxName = "status" | "chat";
 
@@ -164,6 +164,11 @@ function Wizard({ onDone }: { onDone: () => void }) {
               </button>
             ))}
           </div>
+          {shot.covered && (
+            <p className="mb-2 rounded-2xl bg-maple/12 px-3 py-2 text-sm text-maple-deep dark:text-maple-hi">
+              Part of the game was hidden behind another window when the picture was taken. Bring the game to the front and pick it again.
+            </p>
+          )}
           <p className="mb-2 text-sm text-ink-2">{BOX[drawing].hint}</p>
           <BoxCanvas shot={shot} boxes={boxes} drawing={drawing} onBox={(r) => {
             setBoxes((b) => ({ ...b, [drawing]: r }));

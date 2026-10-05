@@ -18,7 +18,8 @@ export type WatchLine = { text: string; x: number; y: number; w: number; h: numb
 /** The platform calls the watcher needs (implemented in Rust, see src-tauri/src/screen.rs). */
 export type WatchPlatform = {
   screenListWindows(): Promise<WatchWindow[]>;
-  screenRead(windowId: number, regions: WatchRegion[]): Promise<{ name: string; lines: WatchLine[] }[]>;
+  /** `covered`: another window overlapped the region, so its text must be ignored. */
+  screenRead(windowId: number, regions: WatchRegion[]): Promise<{ name: string; lines: WatchLine[]; covered?: boolean }[]>;
 };
 
 export type WatchSetup = NonNullable<Settings["watch"]>;
@@ -224,6 +225,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           if (s.status) regions.push({ name: "status", ...s.status });
           if (s.chat) regions.push({ name: "chat", ...s.chat });
           const out = await deps.platform.screenRead(windowId, regions);
+          if (out.some((r) => r.covered)) throw new Missing("Something is covering the game's boxes (the mini window?) — move it aside and watching carries on.");
           missingSince = null;
           if (get().status === "paused") set({ status: "on", problem: null });
 

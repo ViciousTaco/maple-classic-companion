@@ -1,0 +1,444 @@
+[
+  {
+    "id": "amazons-judgement-hunter",
+    "name": "Amazon's Judgement",
+    "jobId": "hunter",
+    "maxLevel": 20,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/58/Amazon%27s_Judgement.png"
+  },
+  {
+    "id": "arrow-bomb-bow",
+    "name": "Arrow Bomb: Bow",
+    "jobId": "hunter",
+    "maxLevel": 30,
+    "kind": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "damagePct": 80,
+        "mpCost": 14
+      },
+      {
+        "level": 2,
+        "damagePct": 82,
+        "mpCost": 14
+      },
+      {
+        "level": 3,
+        "damagePct": 84,
+        "mpCost": 14
+      },
+      {
+        "level": 4,
+        "damagePct": 86,
+        "mpCost": 15
+      },
+      {
+        "level": 5,
+        "damagePct": 88,
+        "mpCost": 15
+      },
+      {
+        "level": 6,
+        "damagePct": 90,
+        "mpCost": 16
+      },
+      {
+        "level": 7,
+        "damagePct": 92,
+        "mpCost": 16
+      },
+      {
+        "level": 8,
+        "damagePct": 94,
+        "mpCost": 17
+      },
+      {
+        "level": 9,
+        "damagePct": 96,
+        "mpCost": 17
+      },
+      {
+        "level": 10,
+        "damagePct": 98,
+        "mpCost": 18
+      },
+      {
+        "level": 11,
+        "damagePct": 100,
+        "mpCost": 18
+      },
+      {
+        "level": 12,
+        "damagePct": 102,
+        "mpCost": 19
+      },
+      {
+        "level": 13,
+        "damagePct": 104,
+        "mpCost": 19
+      },
+      {
+        "level": 14,
+        "damagePct": 106,
+        "mpCost": 20
+      },
+      {
+        "level": 15,
+        "damagePct": 108,
+        "mpCost": 20
+      },
+      {
+        "level": 16,
+        "damagePct": 110,
+        "mpCost": 21
+      },
+      {
+        "level": 17,
+        "damagePct": 112,
+        "mpCost": 21
+      },
+      {
+        "level": 18,
+        "damagePct": 114,
+        "mpCost": 22
+      },
+      {
+        "level": 19,
+        "damagePct": 116,
+        "mpCost": 22
+      },
+      {
+        "level": 20,
+        "damagePct": 118,
+        "mpCost": 23
+      },
+      {
+        "level": 21,
+        "damagePct": 120,
+        "mpCost": 23
+      },
+      {
+        "level": 22,
+        "damagePct": 122,
+        "mpCost": 24
+      },
+      {
+        "level": 23,
+        "damagePct": 124,
+        "mpCost": 24
+      },
+      {
+        "level": 24,
+        "damagePct": 126,
+        "mpCost": 25
+      },
+      {
+        "level": 25,
+        "damagePct": 128,
+        "mpCost": 25
+      },
+      {
+        "level": 26,
+        "damagePct": 130,
+        "mpCost": 26
+      },
+      {
+        "level": 27,
+        "damagePct": 132,
+        "mpCost": 26
+      },
+      {
+        "level": 28,
+        "damagePct": 134,
+        "mpCost": 27
+      },
+      {
+        "level": 29,
+        "damagePct": 136,
+        "mpCost": 27
+      },
+      {
+        "level": 30,
+        "damagePct": 140,
+        "mpCost": 28
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Arrow_Bomb:_Bow",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/8/87/Arrow_Bomb_Bow.png"
+  },
+  {
+    "id": "bow-booster",
+    "name": "Bow Booster",
+    "jobId": "hunter",
+    "maxLevel": 20,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 30
+      },
+      {
+        "level": 2,
+        "mpCost": 29
+      },
+      {
+        "level": 3,
+        "mpCost": 28
+      },
+      {
+        "level": 4,
+        "mpCost": 27
+      },
+      {
+        "level": 5,
+        "mpCost": 26
+      },
+      {
+        "level": 6,
+        "mpCost": 25
+      },
+      {
+        "level": 7,
+        "mpCost": 24
+      },
+      {
+        "level": 8,
+        "mpCost": 23
+      },
+      {
+        "level": 9,
+        "mpCost": 22
+      },
+      {
+        "level": 10,
+        "mpCost": 21
+      },
+      {
+        "level": 11,
+        "mpCost": 20
+      },
+      {
+        "level": 12,
+        "mpCost": 19
+      },
+      {
+        "level": 13,
+        "mpCost": 18
+      },
+      {
+        "level": 14,
+        "mpCost": 17
+      },
+      {
+        "level": 15,
+        "mpCost": 16
+      },
+      {
+        "level": 16,
+        "mpCost": 15
+      },
+      {
+        "level": 17,
+        "mpCost": 14
+      },
+      {
+        "level": 18,
+        "mpCost": 13
+      },
+      {
+        "level": 19,
+        "mpCost": 12
+      },
+      {
+        "level": 20,
+        "mpCost": 10
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bow_Booster",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/9/98/Bow_Booster.png"
+  },
+  {
+    "id": "bow-mastery",
+    "name": "Bow Mastery",
+    "jobId": "hunter",
+    "maxLevel": 20,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/c/c0/Bow_Mastery.png"
+  },
+  {
+    "id": "final-attack-bow",
+    "name": "Final Attack: Bow",
+    "jobId": "hunter",
+    "maxLevel": 30,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/2/21/Final_Attack_Bow.png"
+  },
+  {
+    "id": "soul-arrow-bow",
+    "name": "Soul Arrow: Bow",
+    "jobId": "hunter",
+    "maxLevel": 20,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 25
+      },
+      {
+        "level": 2,
+        "mpCost": 24
+      },
+      {
+        "level": 3,
+        "mpCost": 23
+      },
+      {
+        "level": 4,
+        "mpCost": 22
+      },
+      {
+        "level": 5,
+        "mpCost": 21
+      },
+      {
+        "level": 6,
+        "mpCost": 20
+      },
+      {
+        "level": 7,
+        "mpCost": 19
+      },
+      {
+        "level": 8,
+        "mpCost": 18
+      },
+      {
+        "level": 9,
+        "mpCost": 17
+      },
+      {
+        "level": 10,
+        "mpCost": 16
+      },
+      {
+        "level": 11,
+        "mpCost": 15
+      },
+      {
+        "level": 12,
+        "mpCost": 14
+      },
+      {
+        "level": 13,
+        "mpCost": 13
+      },
+      {
+        "level": 14,
+        "mpCost": 12
+      },
+      {
+        "level": 15,
+        "mpCost": 11
+      },
+      {
+        "level": 16,
+        "mpCost": 10
+      },
+      {
+        "level": 17,
+        "mpCost": 9
+      },
+      {
+        "level": 18,
+        "mpCost": 8
+      },
+      {
+        "level": 19,
+        "mpCost": 7
+      },
+      {
+        "level": 20,
+        "mpCost": 5
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Soul_Arrow:_Bow",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/9/9b/Soul_Arrow_Bow.png"
+  }
+]

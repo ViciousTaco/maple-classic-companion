@@ -32,6 +32,27 @@
     "verifiedAt": "2026-10-05"
   },
   {
+    "id": "heena",
+    "name": "Heena",
+    "mapId": "mushroom-town-west-entrance",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushroom_Town_-_West_Entrance",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bringing_a_Mirror_to_Heena",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
     "id": "lucas",
     "name": "Lucas",
     "mapId": "amherst",
@@ -50,14 +71,20 @@
   {
     "id": "lucy",
     "name": "Lucy",
-    "mapId": "amherst",
-    "role": "Grocer - in Amherst Department Store",
+    "mapId": "amherst-department-store",
+    "role": "Grocer",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Amherst",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Amherst_Department_Store",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -112,16 +139,43 @@
     "verifiedAt": "2026-10-05"
   },
   {
+    "id": "nina",
+    "name": "Nina",
+    "mapId": "mushroom-town-nina",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushroom_Town_(Nina)",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/What_Sen_wants_to_eat",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
     "id": "pan",
     "name": "Pan",
-    "mapId": "southperry",
-    "role": "Armor Seller - in Southperry Armor Store",
+    "mapId": "southperry-armor-store",
+    "role": "Armor Seller",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Southperry",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Southperry_Armor_Store",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
@@ -191,6 +245,27 @@
     "verifiedAt": "2026-10-05"
   },
   {
+    "id": "roger",
+    "name": "Roger",
+    "mapId": "mushroom-town-roger",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushroom_Town_(Roger)",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Roger's_Apple_(quest)",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
     "id": "sam-maple-island",
     "name": "Sam (Maple Island)",
     "mapId": "snail-hunting-ground-i",
@@ -205,6 +280,48 @@
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05"
+  },
+  {
+    "id": "sen",
+    "name": "Sen",
+    "mapId": "mushroom-town-townstreet",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushroom_Town_Townstreet",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Returning_to_Nina",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "sera",
+    "name": "Sera",
+    "mapId": "mushroom-town-west-entrance",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushroom_Town_-_West_Entrance",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bringing_a_Mirror_to_Heena",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
   },
   {
     "id": "shanks",
@@ -225,14 +342,20 @@
   {
     "id": "sid",
     "name": "Sid",
-    "mapId": "amherst",
-    "role": "Weapon Seller - in Amherst Weapon Store",
+    "mapId": "amherst-weapon-store",
+    "role": "Weapon Seller",
     "sources": [
       {
         "kind": "community",
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Amherst",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Amherst_Weapon_Store",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",

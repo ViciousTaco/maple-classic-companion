@@ -78,4 +78,112 @@ export interface Platform {
   cacheRead(key: string): Promise<string | null>;
   /** Validates the JSON and replaces the entry atomically. */
   cacheWrite(key: string, json: string): Promise<void>;
+
+  // ---- Screen watcher (I-29, D-10 amended). Only runs when the UI calls it; frames never stored or sent. ----
+  /** Visible top-level windows with a title (topmost first), excluding this app's own windows. */
+  screenListWindows(): Promise<ScreenWindow[]>;
+  /**
+   * One-off picture of the whole window for the setup screen (long edge ≤ 1600 px). Our own windows that
+   * overlap the game are hidden for ~0.35 s while it is taken. Rejects if the window is minimised or gone.
+   */
+  screenSnapshot(windowId: number): Promise<ScreenSnapshot>;
+  /**
+   * Copies the window's pixels once and OCRs each region (coordinates in source window pixels).
+   * Rejects (message for the UI) if the window is gone/minimised or a region is outside it or > 4000×4000.
+   */
+  screenRead(windowId: number, regions: ScreenRegion[]): Promise<ScreenRegionText[]>;
+  /** Ctrl+Alt+W → `mcc://watch-toggle`. `registered: false` when another app already owns the shortcut. */
+  hotkeyStatus(): Promise<HotkeyStatus>;
+
+  // ---- Event reminders (I-26) ----
+  /**
+   * Windows toast when one can actually appear; otherwise flashes the taskbar and emits `mcc://notify`
+   * (`NotifyBanner`) to every window so the UI shows an in-app banner. Resolves with which path was used.
+   */
+  notify(title: string, body: string): Promise<NotifyResult>;
+  /** Whether `notify` will use a toast, and why not (show it in Settings). */
+  notifyStatus(): Promise<NotifyStatus>;
+
+  // ---- Mini window (I-24). The UI tells the windows apart by `getCurrentWindow().label` ("main" / "mini"). ----
+  /** Opens (or focuses) the always-on-top mini window. */
+  miniWindowOpen(): Promise<void>;
+  miniWindowClose(): Promise<void>;
+  /**
+   * Mini window → main window: emits `mcc://mini-action` `{ kind, payload }` to `main` only. The mini window
+   * never calls `profilesSave` (Rust refuses it); `main` saves and every window gets `mcc://profiles-saved`.
+   * `kind` must match `^[a-z0-9][a-z0-9:._-]{0,63}$`.
+   */
+  relayToMain(kind: string, payload?: unknown): Promise<void>;
+  /**
+   * Subscribes this window to an event (events sent to all windows, or to this window's label); returns the
+   * unsubscribe function, safe to call at any time (also before the subscription has finished setting up).
+   */
+  onEvent<K extends AppEventName>(name: K, handler: (payload: AppEventPayloads[K]) => void): () => void;
+  onEvent(name: string, handler: (payload: unknown) => void): () => void;
 }
+
+export type ScreenWindow = {
+  /** Pass back to `screenSnapshot` / `screenRead`. Not stable across game restarts. */
+  id: number;
+  title: string;
+  /** Exe file name, e.g. `MapleStory.exe` ("" if unknown). */
+  app: string;
+  /** Physical pixels (restored size while minimised). */
+  width: number;
+  height: number;
+  minimized: boolean;
+};
+export type ScreenSnapshot = {
+  pngBase64: string;
+  /** PNG size. */
+  width: number;
+  height: number;
+  /** Real window size: region coordinates use this space (multiply picker pixels by sourceWidth / width). */
+  sourceWidth: number;
+  sourceHeight: number;
+  /** Part of the window was behind another window or off-screen, so the picture may not show the game. */
+  covered: boolean;
+};
+/** Source window pixels; fractions are rounded. `scale` 1–4 (default 2); `filter` default `"bilinear"`. */
+export type ScreenRegion = {
+  name: string;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  scale?: number;
+  /** `"nearest"` can help with hard-edged pixel fonts. */
+  filter?: "bilinear" | "nearest";
+};
+/** One recognised line; box in region pixels. */
+export type OcrLine = { text: string; x: number; y: number; w: number; h: number };
+export type ScreenRegionText = {
+  name: string;
+  lines: OcrLine[];
+  /** Another window (e.g. the mini window) overlapped the region or it was off-screen: ignore the text. */
+  covered: boolean;
+};
+export type HotkeyStatus = { registered: boolean; accelerator: string };
+export type NotifyResult = { via: "toast" | "fallback"; reason: string | null };
+export type NotifyStatus = { toast: boolean; reason: string | null };
+export type NotifyBanner = { title: string; body: string };
+export type MiniAction = { kind: string; payload: unknown };
+
+/** Events the Rust side emits. */
+export const APP_EVENTS = {
+  /** Ctrl+Alt+W pressed anywhere; payload `null`; every window. */
+  watchToggle: "mcc://watch-toggle",
+  /** After every successful `profilesSave`; payload `null`; every window (the mini window reloads). */
+  profilesSaved: "mcc://profiles-saved",
+  /** From `relayToMain`; payload `MiniAction`; main window only. */
+  miniAction: "mcc://mini-action",
+  /** `notify` fell back: show an in-app banner; payload `NotifyBanner`; every window. */
+  notifyBanner: "mcc://notify",
+} as const;
+export type AppEventName = (typeof APP_EVENTS)[keyof typeof APP_EVENTS];
+export type AppEventPayloads = {
+  "mcc://watch-toggle": null;
+  "mcc://profiles-saved": null;
+  "mcc://mini-action": MiniAction;
+  "mcc://notify": NotifyBanner;
+};

@@ -733,6 +733,41 @@
     }
   },
   {
+    "id": "blue-sauna-robe",
+    "name": "Blue Sauna Robe",
+    "category": "equip",
+    "slot": "overall",
+    "reqLevel": 30,
+    "stats": {
+      "wdef": 75,
+      "str": 1,
+      "dex": 1,
+      "int": 1,
+      "luk": 1,
+      "hp": 10,
+      "mp": 10
+    },
+    "npcSellMeso": 5400,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Returned_Secret_Book",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Sauna_Robe",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/9/94/Blue_Sauna_Robe.png"
+  },
+  {
     "id": "blue-shark",
     "name": "Blue Shark",
     "category": "equip",
@@ -981,6 +1016,40 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/6/67/Bronze_Wolfskin.png"
+  },
+  {
+    "id": "brown-bamboo-hat",
+    "name": "Brown Bamboo Hat",
+    "category": "equip",
+    "slot": "hat",
+    "reqLevel": 25,
+    "stats": {
+      "wdef": 24,
+      "hp": 10,
+      "acc": 1
+    },
+    "reqStats": {
+      "dex": 10
+    },
+    "npcSellMeso": 1500,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Delivering_the_Weird_Medicine",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Brown_Bamboo_Hat",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/f/f8/Brown_Bamboo_Hat.png"
   },
   {
     "id": "brown-duo",
@@ -1520,6 +1589,43 @@
     }
   },
   {
+    "id": "dark-piettra-skirt",
+    "name": "Dark Piettra Skirt",
+    "category": "equip",
+    "slot": "bottom",
+    "reqLevel": 40,
+    "reqJobs": [
+      "bowman"
+    ],
+    "stats": {
+      "wdef": 35,
+      "str": 4
+    },
+    "reqStats": {
+      "str": 30,
+      "dex": 70
+    },
+    "npcSellMeso": 5600,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Drake",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Dark_Piettra_Skirt",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/6/6b/Dark_Piettra_Skirt.png"
+  },
+  {
     "id": "double-axe",
     "name": "Double Axe",
     "category": "equip",
@@ -2043,6 +2149,37 @@
     }
   },
   {
+    "id": "green-napoleon",
+    "name": "Green Napoleon",
+    "category": "equip",
+    "slot": "cape",
+    "reqLevel": 50,
+    "stats": {
+      "wdef": 22,
+      "dex": 2,
+      "acc": 4
+    },
+    "npcSellMeso": 13200,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Maya's_Last_Collection",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Napoleon",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/9/98/Green_Napoleon.png"
+  },
+  {
     "id": "green-pilfer",
     "name": "Green Pilfer",
     "category": "equip",
@@ -2389,6 +2526,40 @@
     }
   },
   {
+    "id": "heros-gladius",
+    "name": "Hero's Gladius",
+    "category": "equip",
+    "slot": "weapon",
+    "weaponType": "One-Handed Sword",
+    "reqLevel": 45,
+    "stats": {
+      "watk": 62
+    },
+    "reqStats": {
+      "str": 90,
+      "dex": 40
+    },
+    "npcSellMeso": 11500,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Hero's_Gladius_(quest)",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Hero's_Gladius",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/0/0b/Hero%27s_Gladius.png"
+  },
+  {
     "id": "ice-jeans",
     "name": "Ice Jeans",
     "category": "equip",
@@ -2529,6 +2700,37 @@
     "reqStats": {
       "luk": 70
     }
+  },
+  {
+    "id": "leaf-earrings",
+    "name": "Leaf Earrings",
+    "category": "equip",
+    "slot": "earring",
+    "reqLevel": 25,
+    "stats": {
+      "mdef": 24,
+      "mp": 5,
+      "avoid": 2
+    },
+    "npcSellMeso": 3750,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Progress_on_Fossil_Research",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Leaf_Earrings",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/b/b4/Leaf_Earrings.png"
   },
   {
     "id": "leather-purse",
@@ -2861,6 +3063,44 @@
     }
   },
   {
+    "id": "monkey-wrench",
+    "name": "Monkey Wrench",
+    "category": "equip",
+    "slot": "weapon",
+    "weaponType": "Two-Handed Blunt Weapon",
+    "reqLevel": 25,
+    "reqJobs": [
+      "warrior",
+      "bowman",
+      "thief"
+    ],
+    "stats": {
+      "watk": 47
+    },
+    "reqStats": {
+      "str": 45
+    },
+    "npcSellMeso": 5500,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/A_Weaponcrafter_in_My_Own_Right!",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Monkey_Wrench",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/0/00/Monkey_Wrench.png"
+  },
+  {
     "id": "nakamaki",
     "name": "Nakamaki",
     "category": "equip",
@@ -2891,6 +3131,66 @@
       "str": 75,
       "dex": 35
     }
+  },
+  {
+    "id": "old-gladius",
+    "name": "Old Gladius",
+    "category": "equip",
+    "slot": "weapon",
+    "weaponType": "One-Handed Sword",
+    "reqLevel": 0,
+    "stats": {
+      "watk": 10
+    },
+    "npcSellMeso": 1,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Old_Gladius_(quest)",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Old_Gladius",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/8/80/Old_Gladius.png"
+  },
+  {
+    "id": "old-raggedy-cape",
+    "name": "Old Raggedy Cape",
+    "category": "equip",
+    "slot": "cape",
+    "reqLevel": 25,
+    "stats": {
+      "wdef": 12,
+      "acc": 1
+    },
+    "npcSellMeso": 3750,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stranger's_Identity",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Old_Raggedy_Cape",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/3/3f/Old_Raggedy_Cape.png"
   },
   {
     "id": "orange-golden-circlet",
@@ -2971,6 +3271,37 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/7/79/Pan_Lid.png"
+  },
+  {
+    "id": "pansy-earrings",
+    "name": "Pansy Earrings",
+    "category": "equip",
+    "slot": "earring",
+    "reqLevel": 45,
+    "stats": {
+      "mdef": 35,
+      "mp": 5,
+      "critDmgPct": 3
+    },
+    "npcSellMeso": 13500,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/John's_Last_Present",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pansy_Earrings",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/6/6c/Pansy_Earrings.png"
   },
   {
     "id": "pink-jester",
@@ -3562,6 +3893,41 @@
     }
   },
   {
+    "id": "red-sauna-robe",
+    "name": "Red Sauna Robe",
+    "category": "equip",
+    "slot": "overall",
+    "reqLevel": 30,
+    "stats": {
+      "wdef": 75,
+      "str": 1,
+      "dex": 1,
+      "int": 1,
+      "luk": 1,
+      "hp": 10,
+      "mp": 10
+    },
+    "npcSellMeso": 5400,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Returned_Secret_Book",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Sauna_Robe",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/1b/Red_Sauna_Robe.png"
+  },
+  {
     "id": "red-silky-boots",
     "name": "Red Silky Boots",
     "category": "equip",
@@ -3829,6 +4195,36 @@
     }
   },
   {
+    "id": "ribboned-pig-headband",
+    "name": "Ribboned Pig Headband",
+    "category": "equip",
+    "slot": "hat",
+    "reqLevel": 27,
+    "stats": {
+      "wdef": 26,
+      "mp": 7
+    },
+    "npcSellMeso": 1600,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Estelle's_Special_Sauce_(quest)",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ribboned_Pig_Headband",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/c/cf/Ribboned_Pig_Headband.png"
+  },
+  {
     "id": "ryden",
     "name": "Ryden",
     "category": "equip",
@@ -3954,6 +4350,36 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/e/e5/Scimitar.png"
+  },
+  {
+    "id": "skull-earrings",
+    "name": "Skull Earrings",
+    "category": "equip",
+    "slot": "earring",
+    "reqLevel": 50,
+    "stats": {
+      "mdef": 38,
+      "avoid": 4
+    },
+    "npcSellMeso": 16500,
+    "tags": [],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Hero's_Gladius_(quest)",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Skull_Earrings",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/0/07/Skull_Earrings.png"
   },
   {
     "id": "sky-blue-umbrella",

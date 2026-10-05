@@ -1,0 +1,630 @@
+[
+  {
+    "id": "fire-arrow",
+    "name": "Fire Arrow",
+    "jobId": "wizard-fp",
+    "maxLevel": 30,
+    "kind": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 14
+      },
+      {
+        "level": 2,
+        "mpCost": 14
+      },
+      {
+        "level": 3,
+        "mpCost": 14
+      },
+      {
+        "level": 4,
+        "mpCost": 15
+      },
+      {
+        "level": 5,
+        "mpCost": 15
+      },
+      {
+        "level": 6,
+        "mpCost": 15
+      },
+      {
+        "level": 7,
+        "mpCost": 16
+      },
+      {
+        "level": 8,
+        "mpCost": 16
+      },
+      {
+        "level": 9,
+        "mpCost": 16
+      },
+      {
+        "level": 10,
+        "mpCost": 17
+      },
+      {
+        "level": 11,
+        "mpCost": 17
+      },
+      {
+        "level": 12,
+        "mpCost": 18
+      },
+      {
+        "level": 13,
+        "mpCost": 18
+      },
+      {
+        "level": 14,
+        "mpCost": 19
+      },
+      {
+        "level": 15,
+        "mpCost": 19
+      },
+      {
+        "level": 16,
+        "mpCost": 20
+      },
+      {
+        "level": 17,
+        "mpCost": 20
+      },
+      {
+        "level": 18,
+        "mpCost": 21
+      },
+      {
+        "level": 19,
+        "mpCost": 21
+      },
+      {
+        "level": 20,
+        "mpCost": 22
+      },
+      {
+        "level": 21,
+        "mpCost": 22
+      },
+      {
+        "level": 22,
+        "mpCost": 23
+      },
+      {
+        "level": 23,
+        "mpCost": 23
+      },
+      {
+        "level": 24,
+        "mpCost": 24
+      },
+      {
+        "level": 25,
+        "mpCost": 24
+      },
+      {
+        "level": 26,
+        "mpCost": 25
+      },
+      {
+        "level": 27,
+        "mpCost": 25
+      },
+      {
+        "level": 28,
+        "mpCost": 26
+      },
+      {
+        "level": 29,
+        "mpCost": 26
+      },
+      {
+        "level": 30,
+        "mpCost": 28
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire/Poison_Wizard",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Arrow",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/9/9e/Fire_Arrow.png"
+  },
+  {
+    "id": "meditation-wizard-fp",
+    "name": "Meditation",
+    "jobId": "wizard-fp",
+    "maxLevel": 20,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 15
+      },
+      {
+        "level": 2,
+        "mpCost": 15
+      },
+      {
+        "level": 3,
+        "mpCost": 15
+      },
+      {
+        "level": 4,
+        "mpCost": 16
+      },
+      {
+        "level": 5,
+        "mpCost": 16
+      },
+      {
+        "level": 6,
+        "mpCost": 17
+      },
+      {
+        "level": 7,
+        "mpCost": 17
+      },
+      {
+        "level": 8,
+        "mpCost": 18
+      },
+      {
+        "level": 9,
+        "mpCost": 18
+      },
+      {
+        "level": 10,
+        "mpCost": 19
+      },
+      {
+        "level": 11,
+        "mpCost": 19
+      },
+      {
+        "level": 12,
+        "mpCost": 20
+      },
+      {
+        "level": 13,
+        "mpCost": 20
+      },
+      {
+        "level": 14,
+        "mpCost": 21
+      },
+      {
+        "level": 15,
+        "mpCost": 21
+      },
+      {
+        "level": 16,
+        "mpCost": 22
+      },
+      {
+        "level": 17,
+        "mpCost": 22
+      },
+      {
+        "level": 18,
+        "mpCost": 23
+      },
+      {
+        "level": 19,
+        "mpCost": 23
+      },
+      {
+        "level": 20,
+        "mpCost": 25
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire/Poison_Wizard",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Meditation",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/6/62/Meditation.png"
+  },
+  {
+    "id": "mp-eater-wizard-fp",
+    "name": "MP Eater",
+    "jobId": "wizard-fp",
+    "maxLevel": 20,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire/Poison_Wizard",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/7d/MP_Eater.png"
+  },
+  {
+    "id": "poison-breath",
+    "name": "Poison Breath",
+    "jobId": "wizard-fp",
+    "maxLevel": 30,
+    "kind": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 20
+      },
+      {
+        "level": 2,
+        "mpCost": 20
+      },
+      {
+        "level": 3,
+        "mpCost": 22
+      },
+      {
+        "level": 4,
+        "mpCost": 22
+      },
+      {
+        "level": 5,
+        "mpCost": 22
+      },
+      {
+        "level": 6,
+        "mpCost": 24
+      },
+      {
+        "level": 7,
+        "mpCost": 24
+      },
+      {
+        "level": 8,
+        "mpCost": 24
+      },
+      {
+        "level": 9,
+        "mpCost": 26
+      },
+      {
+        "level": 10,
+        "mpCost": 26
+      },
+      {
+        "level": 11,
+        "mpCost": 26
+      },
+      {
+        "level": 12,
+        "mpCost": 28
+      },
+      {
+        "level": 13,
+        "mpCost": 28
+      },
+      {
+        "level": 14,
+        "mpCost": 28
+      },
+      {
+        "level": 15,
+        "mpCost": 30
+      },
+      {
+        "level": 16,
+        "mpCost": 30
+      },
+      {
+        "level": 17,
+        "mpCost": 30
+      },
+      {
+        "level": 18,
+        "mpCost": 32
+      },
+      {
+        "level": 19,
+        "mpCost": 32
+      },
+      {
+        "level": 20,
+        "mpCost": 32
+      },
+      {
+        "level": 21,
+        "mpCost": 34
+      },
+      {
+        "level": 22,
+        "mpCost": 34
+      },
+      {
+        "level": 23,
+        "mpCost": 34
+      },
+      {
+        "level": 24,
+        "mpCost": 36
+      },
+      {
+        "level": 25,
+        "mpCost": 36
+      },
+      {
+        "level": 26,
+        "mpCost": 36
+      },
+      {
+        "level": 27,
+        "mpCost": 38
+      },
+      {
+        "level": 28,
+        "mpCost": 38
+      },
+      {
+        "level": 29,
+        "mpCost": 38
+      },
+      {
+        "level": 30,
+        "mpCost": 40
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire/Poison_Wizard",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Poison_Breath",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/1e/Poison_Breath.png"
+  },
+  {
+    "id": "slow-wizard-fp",
+    "name": "Slow",
+    "jobId": "wizard-fp",
+    "maxLevel": 20,
+    "kind": "other",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 15
+      },
+      {
+        "level": 2,
+        "mpCost": 14
+      },
+      {
+        "level": 3,
+        "mpCost": 14
+      },
+      {
+        "level": 4,
+        "mpCost": 14
+      },
+      {
+        "level": 5,
+        "mpCost": 13
+      },
+      {
+        "level": 6,
+        "mpCost": 13
+      },
+      {
+        "level": 7,
+        "mpCost": 13
+      },
+      {
+        "level": 8,
+        "mpCost": 12
+      },
+      {
+        "level": 9,
+        "mpCost": 12
+      },
+      {
+        "level": 10,
+        "mpCost": 12
+      },
+      {
+        "level": 11,
+        "mpCost": 11
+      },
+      {
+        "level": 12,
+        "mpCost": 11
+      },
+      {
+        "level": 13,
+        "mpCost": 11
+      },
+      {
+        "level": 14,
+        "mpCost": 10
+      },
+      {
+        "level": 15,
+        "mpCost": 10
+      },
+      {
+        "level": 16,
+        "mpCost": 10
+      },
+      {
+        "level": 17,
+        "mpCost": 9
+      },
+      {
+        "level": 18,
+        "mpCost": 9
+      },
+      {
+        "level": 19,
+        "mpCost": 9
+      },
+      {
+        "level": 20,
+        "mpCost": 8
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire/Poison_Wizard",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slow",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/f/f5/Slow.png"
+  },
+  {
+    "id": "teleport-wizard-fp",
+    "name": "Teleport",
+    "jobId": "wizard-fp",
+    "maxLevel": 20,
+    "kind": "other",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 55
+      },
+      {
+        "level": 2,
+        "mpCost": 53
+      },
+      {
+        "level": 3,
+        "mpCost": 51
+      },
+      {
+        "level": 4,
+        "mpCost": 49
+      },
+      {
+        "level": 5,
+        "mpCost": 47
+      },
+      {
+        "level": 6,
+        "mpCost": 45
+      },
+      {
+        "level": 7,
+        "mpCost": 43
+      },
+      {
+        "level": 8,
+        "mpCost": 41
+      },
+      {
+        "level": 9,
+        "mpCost": 39
+      },
+      {
+        "level": 10,
+        "mpCost": 37
+      },
+      {
+        "level": 11,
+        "mpCost": 35
+      },
+      {
+        "level": 12,
+        "mpCost": 33
+      },
+      {
+        "level": 13,
+        "mpCost": 31
+      },
+      {
+        "level": 14,
+        "mpCost": 29
+      },
+      {
+        "level": 15,
+        "mpCost": 27
+      },
+      {
+        "level": 16,
+        "mpCost": 25
+      },
+      {
+        "level": 17,
+        "mpCost": 23
+      },
+      {
+        "level": 18,
+        "mpCost": 21
+      },
+      {
+        "level": 19,
+        "mpCost": 19
+      },
+      {
+        "level": 20,
+        "mpCost": 15
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire/Poison_Wizard",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Teleport",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/e/e8/Teleport.png"
+  }
+]

@@ -18,6 +18,7 @@ import { PartyHelper } from "../party/PartyHelper";
 import { mapName, meowdbUrl, mobName, rangeText, reasonText, regionName, sceneHue, warningText } from "../guide/text";
 import { YouTubeLite } from "../../ui/YouTubeLite";
 import { questUses, TIER_ORDER, TIER_STYLE, valueTier } from "../guide/value";
+import { SKIP_MINUTES } from "../mini/actions";
 
 export const FOCUS_SEGMENTS = [
   { value: "exp", label: <><TrendingUp size={15} />EXP</>, ariaLabel: "EXP" },
@@ -26,8 +27,6 @@ export const FOCUS_SEGMENTS = [
   { value: "meso", label: <><Coins size={15} />Meso</>, ariaLabel: "Meso" },
   { value: "balanced", label: <><Scale size={15} />Balanced</>, ariaLabel: "Balanced" },
 ] as { value: FocusId; label: React.ReactNode; ariaLabel: string }[];
-
-const SKIP_MINUTES = 90;
 
 function Ticker({ value }: { value: number }) {
   const s = useSpring(value, { stiffness: 90, damping: 20 });

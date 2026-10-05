@@ -1,1 +1,967 @@
-[]
+[
+  {
+    "id": "borrowing-seras-mirror",
+    "name": "Borrowing Sera's Mirror",
+    "category": "regular",
+    "minLevel": 1,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "heena",
+    "steps": [
+      {
+        "text": "Accept the quest from Heena in Mushroom Town - West Entrance.",
+        "kind": "talk",
+        "npcId": "heena",
+        "mapId": "mushroom-town-west-entrance"
+      },
+      {
+        "text": "Report to Sera in Mushroom Town - West Entrance to complete the quest.",
+        "kind": "deliver",
+        "npcId": "sera",
+        "mapId": "mushroom-town-west-entrance"
+      }
+    ],
+    "rewards": {
+      "exp": 2,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "seras-mirror",
+    "chainIndex": 0,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Borrowing_Sera's_Mirror",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "bringing-a-mirror-to-heena",
+    "name": "Bringing a Mirror to Heena",
+    "category": "regular",
+    "minLevel": 1,
+    "prereqQuestIds": [
+      "borrowing-seras-mirror"
+    ],
+    "startNpcId": "sera",
+    "steps": [
+      {
+        "text": "Accept the quest from Sera in Mushroom Town - West Entrance.",
+        "kind": "talk",
+        "npcId": "sera",
+        "mapId": "mushroom-town-west-entrance"
+      },
+      {
+        "text": "Collect 1 Sera's Mirror.",
+        "kind": "collect",
+        "qty": 1,
+        "itemId": "seras-mirror"
+      },
+      {
+        "text": "Report to Heena in Mushroom Town - West Entrance to complete the quest.",
+        "kind": "deliver",
+        "npcId": "heena",
+        "mapId": "mushroom-town-west-entrance"
+      }
+    ],
+    "rewards": {
+      "exp": 2,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "seras-mirror",
+    "chainIndex": 1,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bringing_a_Mirror_to_Heena",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "lucas-reply",
+    "name": "Lucas' Reply",
+    "category": "regular",
+    "minLevel": 1,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "lucas",
+    "steps": [
+      {
+        "text": "Immediately after turning in Letter for Lucas, Lucas offers the follow-up. Accept it. He hands you Lucas' Letter, his written reply for Maria.",
+        "kind": "talk",
+        "npcId": "lucas",
+        "mapId": "amherst"
+      },
+      {
+        "text": "Take The Field West of Amherst west, cross A Split Road, and find Maria on her usual spot at the west side of the map. Hand her the letter. Random reward (one of): Black Headband, Blue Headband, Brown Skullcap, Green Headband, Green Skullcap, Red Headband, Yellow Headband.",
+        "kind": "deliver",
+        "npcId": "maria",
+        "mapId": "a-split-road"
+      }
+    ],
+    "rewards": {
+      "exp": 50
+    },
+    "repeatable": false,
+    "chainId": "please-bring-this-letter-to-lucas",
+    "chainIndex": 1,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lucas'_Reply",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "mais-final-training",
+    "name": "Mai's Final Training",
+    "category": "regular",
+    "minLevel": 1,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [
+      "mais-training"
+    ],
+    "startNpcId": "mai",
+    "steps": [
+      {
+        "text": "After turning in Mai's Training on A Split Road, Mai offers her final training quest. Accept it.",
+        "kind": "talk",
+        "npcId": "mai",
+        "mapId": "a-split-road"
+      },
+      {
+        "text": "Travel further east along Maple Road until you find an Orange Mushroom. Defeat one. The kill counter ticks to 1/1; that is enough.",
+        "kind": "kill",
+        "mobId": "orange-mushroom",
+        "qty": 1
+      },
+      {
+        "text": "Travel back to A Split Road and speak to Mai to hand in the quest.",
+        "kind": "deliver",
+        "npcId": "mai",
+        "mapId": "a-split-road"
+      }
+    ],
+    "rewards": {
+      "exp": 100,
+      "meso": 150,
+      "items": [
+        {
+          "itemId": "egg",
+          "qty": 5
+        }
+      ]
+    },
+    "repeatable": false,
+    "chainId": "mais-training",
+    "chainIndex": 1,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mai's_Final_Training",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "returning-to-nina",
+    "name": "Returning to Nina",
+    "category": "regular",
+    "minLevel": 1,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [
+      "what-sen-wants-to-eat"
+    ],
+    "startNpcId": "sen",
+    "steps": [
+      {
+        "text": "Immediately after completing What Sen wants to eat, Sen offers this follow-up. Accept it.",
+        "kind": "talk",
+        "npcId": "sen",
+        "mapId": "mushroom-town-townstreet"
+      },
+      {
+        "text": "Take the door portal at the bottom of Mushroom Town Townstreet to exit back out into Mushroom Town (Nina).",
+        "kind": "travel",
+        "mapId": "mushroom-town-townstreet"
+      },
+      {
+        "text": "Speak to Nina on Mushroom Town (Nina) and hand in the quest. She thanks you and the quest completes.",
+        "kind": "deliver",
+        "npcId": "nina",
+        "mapId": "mushroom-town-nina"
+      }
+    ],
+    "rewards": {
+      "exp": 3,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "nina-and-sens-dinner-menu",
+    "chainIndex": 1,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Returning_to_Nina",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "rogers-apple",
+    "name": "Roger's Apple",
+    "category": "regular",
+    "minLevel": 1,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "roger",
+    "steps": [
+      {
+        "text": "On Mushroom Town, walk to Roger near the centre of the map and click on him to start the conversation. Accept the quest.",
+        "kind": "talk",
+        "npcId": "roger",
+        "mapId": "mushroom-town-roger"
+      },
+      {
+        "text": "Open the Item Inventory (default key I) and switch to the Use tab. Double-click Roger's Apple to eat it.",
+        "kind": "collect",
+        "itemId": "rogers-apple"
+      },
+      {
+        "text": "Speak to Roger again to hand in the quest. He thanks the player and grants the rewards.",
+        "kind": "deliver",
+        "npcId": "roger",
+        "mapId": "mushroom-town-roger"
+      }
+    ],
+    "rewards": {
+      "exp": 2,
+      "meso": 0,
+      "items": [
+        {
+          "itemId": "apple",
+          "qty": 3
+        }
+      ]
+    },
+    "repeatable": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Roger's_Apple_(quest)",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "sams-suggestion",
+    "name": "Sam's Suggestion",
+    "category": "regular",
+    "minLevel": 1,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "sam-maple-island",
+    "steps": [
+      {
+        "text": "On Snail Hunting Ground I, walk to Sam on the eastern side of the map and accept the quest.",
+        "kind": "talk",
+        "npcId": "sam-maple-island",
+        "mapId": "snail-hunting-ground-i"
+      },
+      {
+        "text": "Seventeen Snails spawn across the map, with quick respawns. Hold Ctrl to attack each Snail until it dies. The kill counter ticks up in the quest tracker; ten kills are needed.",
+        "kind": "kill",
+        "mobId": "snail",
+        "qty": 10
+      },
+      {
+        "text": "Take the eastern portal out of Snail Hunting Ground I to the next map, where Mai stands. Speak to her to hand the quest in.",
+        "kind": "deliver",
+        "npcId": "mai",
+        "mapId": "a-split-road"
+      }
+    ],
+    "rewards": {
+      "exp": 30,
+      "meso": 0,
+      "items": [
+        {
+          "itemId": "egg",
+          "qty": 3
+        }
+      ]
+    },
+    "repeatable": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sam's_Suggestion",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "todds-how-to-hunt",
+    "name": "Todd's How-to-Hunt",
+    "category": "regular",
+    "minLevel": 1,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "todd",
+    "steps": [
+      {
+        "text": "On East Entrance to Mushroom Town, walk over to Todd near the western edge of the map and click on him. Accept the quest.",
+        "kind": "talk",
+        "npcId": "todd",
+        "mapId": "east-entrance-to-mushroom-town"
+      },
+      {
+        "text": "The three Tutorial Jr. Sentinels are arranged across the central platform of the map. Approach each one, hold Ctrl to attack, and bring it to zero HP.",
+        "kind": "kill",
+        "mobId": "tutorial-jr-sentinel",
+        "qty": 3
+      },
+      {
+        "text": "Defeated Sentinels drop Jr. Sentinel Shellpieces on the ground. Stand over each piece and press Z to pick it up. The shellpieces stack in the Etc tab of your inventory; you need three.",
+        "kind": "collect",
+        "itemId": "jr-sentinel-shellpiece",
+        "qty": 3
+      },
+      {
+        "text": "With three Jr. Sentinel Shellpieces in your inventory, speak to Todd again to hand in the quest.",
+        "kind": "deliver",
+        "npcId": "todd",
+        "mapId": "east-entrance-to-mushroom-town"
+      }
+    ],
+    "rewards": {
+      "exp": 10,
+      "meso": 0
+    },
+    "repeatable": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Todd's_How-to-Hunt",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "what-sen-wants-to-eat",
+    "name": "What Sen wants to eat",
+    "category": "regular",
+    "minLevel": 1,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "nina",
+    "steps": [
+      {
+        "text": "On Mushroom Town (Nina), walk to Nina and accept the quest. She will tell you to find her brother Sen, who is inside the mushroom house on the same map.",
+        "kind": "talk",
+        "npcId": "nina",
+        "mapId": "mushroom-town-nina"
+      },
+      {
+        "text": "Walk to the door portal slightly right of centre on Mushroom Town (Nina) and press the up arrow to enter. You arrive in Mushroom Town Townstreet, the interior of the house.",
+        "kind": "travel",
+        "mapId": "mushroom-town-nina"
+      },
+      {
+        "text": "Speak to Sen inside the house. He tells you he wants Mushroom Soup for dinner. The quest completes here; no reward is granted.",
+        "kind": "deliver",
+        "npcId": "sen",
+        "mapId": "mushroom-town-townstreet"
+      }
+    ],
+    "rewards": {
+      "exp": 0,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "nina-and-sens-dinner-menu",
+    "chainIndex": 0,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/What_Sen_wants_to_eat",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "letter-for-lucas",
+    "name": "Letter for Lucas",
+    "category": "regular",
+    "minLevel": 2,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "maria",
+    "steps": [
+      {
+        "text": "On A Split Road, walk to Maria on the west side of the map and accept the quest. She hands you Maria's Letter.",
+        "kind": "talk",
+        "npcId": "maria",
+        "mapId": "a-split-road"
+      },
+      {
+        "text": "Collect 1 Maria's Letter.",
+        "kind": "collect",
+        "qty": 1,
+        "itemId": "marias-letter"
+      },
+      {
+        "text": "Continue east along Maple Road until you reach Amherst. Lucas stands near the centre of town. Speak to him and hand over the letter.",
+        "kind": "deliver",
+        "npcId": "lucas",
+        "mapId": "amherst"
+      }
+    ],
+    "rewards": {
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "please-bring-this-letter-to-lucas",
+    "chainIndex": 0,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Letter_for_Lucas",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "biggss-collection-of-items",
+    "name": "Biggs's Collection of Items",
+    "category": "regular",
+    "minLevel": 3,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "biggs",
+    "steps": [
+      {
+        "text": "Speak to Biggs in Southperry. He explains he is collecting materials and asks for the ten shells and one mushroom cap.",
+        "kind": "talk",
+        "npcId": "biggs",
+        "mapId": "southperry"
+      },
+      {
+        "text": "Blue Snails drop Blue Snail Shell reliably. They spawn in good numbers on A Split Road, Snail Hunting Ground II, Snail Hunting Ground III, and The Field West of Amherst.",
+        "kind": "collect",
+        "itemId": "blue-snail-shell",
+        "qty": 10
+      },
+      {
+        "text": "Orange Mushroom drops Orange Mushroom Cap. Orange Mushrooms spawn on The Field West of Amherst, Dangerous Forest, Mushroom Garden, and a few other maps in the western Maple Island circuit.",
+        "kind": "collect",
+        "itemId": "orange-mushroom-cap",
+        "qty": 1
+      },
+      {
+        "text": "With all materials in hand, speak to Biggs again to turn the quest in. Random reward (one of): Fruit Knife, Razor.",
+        "kind": "deliver",
+        "npcId": "biggs",
+        "mapId": "southperry"
+      }
+    ],
+    "rewards": {
+      "exp": 70,
+      "meso": 0
+    },
+    "repeatable": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Biggs's_Collection_of_Items",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "mais-training",
+    "name": "Mai's Training",
+    "category": "regular",
+    "minLevel": 3,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [
+      "sams-suggestion"
+    ],
+    "startNpcId": "mai",
+    "steps": [
+      {
+        "text": "After turning in Sam's Suggestion on A Split Road, Mai immediately offers Mai's Training. Accept it.",
+        "kind": "talk",
+        "npcId": "mai",
+        "mapId": "a-split-road"
+      },
+      {
+        "text": "Seventeen Blue Snails spawn across A Split Road; ten kills are needed. Blue Snails are level 2 and slightly tougher than the regular Snails from Sam's Suggestion, but still well within a Beginner's range.",
+        "kind": "kill",
+        "mobId": "blue-snail",
+        "qty": 10
+      },
+      {
+        "text": "Fourteen Shrooms spawn on the same map. Shrooms hit slightly harder than Blue Snails and the player will likely need to drink a Red Potion or two if leveled at 1 or 2.",
+        "kind": "kill",
+        "mobId": "shroom",
+        "qty": 10
+      },
+      {
+        "text": "Eleven Red Snails spawn on the same map; five kills are needed. Red Snails are level 4 and the highest-difficulty monster on A Split Road.",
+        "kind": "kill",
+        "mobId": "red-snail",
+        "qty": 5
+      },
+      {
+        "text": "With all three kill counters complete, speak to Mai again to hand in the quest.",
+        "kind": "deliver",
+        "npcId": "mai",
+        "mapId": "a-split-road"
+      }
+    ],
+    "rewards": {
+      "exp": 70,
+      "meso": 0,
+      "items": [
+        {
+          "itemId": "egg",
+          "qty": 5
+        }
+      ]
+    },
+    "repeatable": false,
+    "chainId": "mais-training",
+    "chainIndex": 0,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mai's_Training",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "pios-collecting-recycled-goods",
+    "name": "Pio's Collecting Recycled Goods",
+    "category": "regular",
+    "minLevel": 5,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "pio",
+    "steps": [
+      {
+        "text": "Walk to Pio in Amherst and accept the quest. He explains that he is collecting recycled scrap and asks for the two material types.",
+        "kind": "talk",
+        "npcId": "pio",
+        "mapId": "amherst"
+      },
+      {
+        "text": "Wooden boxes are scattered across Amherst. Hit each one with a basic attack to break it; the broken box drops either a Rusty Screw or an Old Wooden Board.",
+        "kind": "collect",
+        "itemId": "rusty-screw"
+      },
+      {
+        "text": "With three Rusty Screws and three Old Wooden Boards in your inventory, speak to Pio to turn the quest in.",
+        "kind": "deliver",
+        "npcId": "pio",
+        "mapId": "amherst"
+      }
+    ],
+    "rewards": {
+      "exp": 100,
+      "meso": 150,
+      "items": [
+        {
+          "itemId": "the-green-relaxer",
+          "qty": 1
+        }
+      ]
+    },
+    "repeatable": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pio's_Collecting_Recycled_Goods",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "rains-maple-quiz",
+    "name": "Rain's Maple Quiz",
+    "category": "regular",
+    "minLevel": 5,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "rain",
+    "steps": [
+      {
+        "text": "Accept the quest from Rain in Amherst.",
+        "kind": "talk",
+        "npcId": "rain",
+        "mapId": "amherst"
+      }
+    ],
+    "rewards": {
+      "exp": 245,
+      "meso": 0,
+      "items": [
+        {
+          "itemId": "orange",
+          "qty": 5
+        }
+      ]
+    },
+    "repeatable": false,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "rains-maple-quiz-1",
+    "name": "Rain's Maple Quiz 1",
+    "category": "regular",
+    "minLevel": 5,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [],
+    "startNpcId": "rain",
+    "steps": [
+      {
+        "text": "Accept the quest from Rain in Amherst.",
+        "kind": "talk",
+        "npcId": "rain",
+        "mapId": "amherst"
+      }
+    ],
+    "rewards": {
+      "exp": 20,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "rains-maple-quiz",
+    "chainIndex": 0,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz_1",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "rains-maple-quiz-2",
+    "name": "Rain's Maple Quiz 2",
+    "category": "regular",
+    "minLevel": 5,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [
+      "rains-maple-quiz-1"
+    ],
+    "startNpcId": "rain",
+    "steps": [
+      {
+        "text": "Accept the quest from Rain in Amherst.",
+        "kind": "talk",
+        "npcId": "rain",
+        "mapId": "amherst"
+      }
+    ],
+    "rewards": {
+      "exp": 25,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "rains-maple-quiz",
+    "chainIndex": 1,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz_2",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "rains-maple-quiz-3",
+    "name": "Rain's Maple Quiz 3",
+    "category": "regular",
+    "minLevel": 5,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [
+      "rains-maple-quiz-2"
+    ],
+    "startNpcId": "rain",
+    "steps": [
+      {
+        "text": "Accept the quest from Rain in Amherst.",
+        "kind": "talk",
+        "npcId": "rain",
+        "mapId": "amherst"
+      }
+    ],
+    "rewards": {
+      "exp": 30,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "rains-maple-quiz",
+    "chainIndex": 2,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz_3",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "rains-maple-quiz-4",
+    "name": "Rain's Maple Quiz 4",
+    "category": "regular",
+    "minLevel": 5,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [
+      "rains-maple-quiz-3"
+    ],
+    "startNpcId": "rain",
+    "steps": [
+      {
+        "text": "Accept the quest from Rain in Amherst.",
+        "kind": "talk",
+        "npcId": "rain",
+        "mapId": "amherst"
+      }
+    ],
+    "rewards": {
+      "exp": 35,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "rains-maple-quiz",
+    "chainIndex": 3,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz_4",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "rains-maple-quiz-5",
+    "name": "Rain's Maple Quiz 5",
+    "category": "regular",
+    "minLevel": 5,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [
+      "rains-maple-quiz-4"
+    ],
+    "startNpcId": "rain",
+    "steps": [
+      {
+        "text": "Accept the quest from Rain in Amherst.",
+        "kind": "talk",
+        "npcId": "rain",
+        "mapId": "amherst"
+      }
+    ],
+    "rewards": {
+      "exp": 40,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "rains-maple-quiz",
+    "chainIndex": 4,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz_5",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "rains-maple-quiz-6",
+    "name": "Rain's Maple Quiz 6",
+    "category": "regular",
+    "minLevel": 5,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [
+      "rains-maple-quiz-5"
+    ],
+    "startNpcId": "rain",
+    "steps": [
+      {
+        "text": "Accept the quest from Rain in Amherst.",
+        "kind": "talk",
+        "npcId": "rain",
+        "mapId": "amherst"
+      }
+    ],
+    "rewards": {
+      "exp": 45,
+      "meso": 0
+    },
+    "repeatable": false,
+    "chainId": "rains-maple-quiz",
+    "chainIndex": 5,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz_6",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  },
+  {
+    "id": "rains-maple-quiz-7",
+    "name": "Rain's Maple Quiz 7",
+    "category": "regular",
+    "minLevel": 5,
+    "jobs": [
+      "beginner"
+    ],
+    "prereqQuestIds": [
+      "rains-maple-quiz-6"
+    ],
+    "startNpcId": "rain",
+    "steps": [
+      {
+        "text": "Accept the quest from Rain in Amherst.",
+        "kind": "talk",
+        "npcId": "rain",
+        "mapId": "amherst"
+      }
+    ],
+    "rewards": {
+      "exp": 50,
+      "meso": 0,
+      "items": [
+        {
+          "itemId": "orange",
+          "qty": 5
+        }
+      ]
+    },
+    "repeatable": false,
+    "chainId": "rains-maple-quiz",
+    "chainIndex": 6,
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rain's_Maple_Quiz_7",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06"
+  }
+]

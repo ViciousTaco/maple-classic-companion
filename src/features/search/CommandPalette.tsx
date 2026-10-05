@@ -22,6 +22,7 @@ const SCREENS: [string, string][] = [
   ["News & events", "/news"],
   ["Maps", "/maps"],
   ["Characters", "/characters"],
+  ["Screen watcher", "/watch"],
   ["Settings", "/settings"],
 ];
 

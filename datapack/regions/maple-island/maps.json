@@ -29,15 +29,29 @@
           "x": 2.7,
           "y": 82.1
         }
+      },
+      {
+        "to": "amherst-department-store",
+        "kind": "portal",
+        "pos": {
+          "x": 52.1,
+          "y": 70.7
+        }
+      },
+      {
+        "to": "amherst-weapon-store",
+        "kind": "portal",
+        "pos": {
+          "x": 16.8,
+          "y": 39.3
+        }
       }
     ],
     "npcIds": [
       "lucas",
-      "lucy",
       "maple-administrator",
       "pio",
-      "rain",
-      "sid"
+      "rain"
     ],
     "sources": [
       {
@@ -108,12 +122,19 @@
         "kind": "ship",
         "costMeso": 300,
         "note": "Shanks's boat to Victoria Island"
+      },
+      {
+        "to": "southperry-armor-store",
+        "kind": "portal",
+        "pos": {
+          "x": 28.6,
+          "y": 91.4
+        }
       }
     ],
     "npcIds": [
       "bari",
       "biggs",
-      "pan",
       "shanks",
       "yoona"
     ],
@@ -195,6 +216,60 @@
     "image": "https://mapleclassic.wiki/images/thumb/b/b6/A_Split_Road.png/800px-A_Split_Road.png"
   },
   {
+    "id": "amherst-department-store",
+    "name": "Amherst Department Store",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "amherst",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "lucy"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Amherst_Department_Store",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/3/31/Amherst_Department_Store.png/240px-Amherst_Department_Store.png"
+  },
+  {
+    "id": "amherst-weapon-store",
+    "name": "Amherst Weapon Store",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "amherst",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "sid"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Amherst_Weapon_Store",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/5/57/Amherst_Weapon_Store.png/240px-Amherst_Weapon_Store.png"
+  },
+  {
     "id": "dangerous-forest",
     "name": "Dangerous Forest",
     "region": "maple-island",
@@ -259,6 +334,14 @@
         "pos": {
           "x": 93.2,
           "y": 21.4
+        }
+      },
+      {
+        "to": "mushroom-town-nina",
+        "kind": "portal",
+        "pos": {
+          "x": 4.4,
+          "y": 88.9
         }
       }
     ],
@@ -461,6 +544,155 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/thumb/7/76/Mushroom_Garden.png/800px-Mushroom_Garden.png"
+  },
+  {
+    "id": "mushroom-town-nina",
+    "name": "Mushroom Town (Nina)",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "east-entrance-to-mushroom-town",
+        "kind": "portal",
+        "pos": {
+          "x": 94.0,
+          "y": 63.8
+        }
+      },
+      {
+        "to": "mushroom-town-roger",
+        "kind": "portal",
+        "pos": {
+          "x": 6.1,
+          "y": 78.0
+        }
+      },
+      {
+        "to": "mushroom-town-townstreet",
+        "kind": "portal",
+        "pos": {
+          "x": 57.1,
+          "y": 63.4
+        }
+      }
+    ],
+    "npcIds": [
+      "nina"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushroom_Town_(Nina)",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/d/d9/Mushroom_Town_%28Nina%29.png/800px-Mushroom_Town_%28Nina%29.png"
+  },
+  {
+    "id": "mushroom-town-roger",
+    "name": "Mushroom Town (Roger)",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "mushroom-town-nina",
+        "kind": "portal",
+        "pos": {
+          "x": 84.2,
+          "y": 67.2
+        }
+      },
+      {
+        "to": "mushroom-town-west-entrance",
+        "kind": "portal",
+        "pos": {
+          "x": 20.2,
+          "y": 75.4
+        }
+      }
+    ],
+    "npcIds": [
+      "roger"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushroom_Town_(Roger)",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/e/ef/Mushroom_Town.png/800px-Mushroom_Town.png"
+  },
+  {
+    "id": "mushroom-town-townstreet",
+    "name": "Mushroom Town Townstreet",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "mushroom-town-nina",
+        "kind": "portal",
+        "pos": {
+          "x": 41.3,
+          "y": 76.5
+        }
+      }
+    ],
+    "npcIds": [
+      "sen"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushroom_Town_Townstreet",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/d/d1/Mushroom_Town_Townstreet.png/800px-Mushroom_Town_Townstreet.png"
+  },
+  {
+    "id": "mushroom-town-west-entrance",
+    "name": "Mushroom Town - West Entrance",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "mushroom-town-roger",
+        "kind": "portal",
+        "pos": {
+          "x": 91.5,
+          "y": 68.5
+        }
+      }
+    ],
+    "npcIds": [
+      "heena",
+      "sera"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushroom_Town_-_West_Entrance",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/4/43/Mushroom_Town_-_West_Entrance.png/800px-Mushroom_Town_-_West_Entrance.png"
   },
   {
     "id": "snail-field-of-flowers",
@@ -690,6 +922,33 @@
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
     "image": "https://mapleclassic.wiki/images/thumb/3/37/Snail_Hunting_Ground_III.png/800px-Snail_Hunting_Ground_III.png"
+  },
+  {
+    "id": "southperry-armor-store",
+    "name": "Southperry Armor Store",
+    "region": "maple-island",
+    "isTown": false,
+    "spawns": [],
+    "links": [
+      {
+        "to": "southperry",
+        "kind": "portal"
+      }
+    ],
+    "npcIds": [
+      "pan"
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Southperry_Armor_Store",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/thumb/e/e1/Southperry_Armor_Store.png/240px-Southperry_Armor_Store.png"
   },
   {
     "id": "the-field-east-of-amherst",

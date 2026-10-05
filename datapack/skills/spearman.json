@@ -1,0 +1,558 @@
+[
+  {
+    "id": "final-attack-polearm",
+    "name": "Final Attack: Polearm",
+    "jobId": "spearman",
+    "maxLevel": 30,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/0/0f/Final_Attack_Polearm.png"
+  },
+  {
+    "id": "final-attack-spear",
+    "name": "Final Attack: Spear",
+    "jobId": "spearman",
+    "maxLevel": 30,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/11/Final_Attack_Spear.png"
+  },
+  {
+    "id": "iron-will",
+    "name": "Iron Will",
+    "jobId": "spearman",
+    "maxLevel": 30,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 10
+      },
+      {
+        "level": 2,
+        "mpCost": 10
+      },
+      {
+        "level": 3,
+        "mpCost": 10
+      },
+      {
+        "level": 4,
+        "mpCost": 11
+      },
+      {
+        "level": 5,
+        "mpCost": 11
+      },
+      {
+        "level": 6,
+        "mpCost": 12
+      },
+      {
+        "level": 7,
+        "mpCost": 12
+      },
+      {
+        "level": 8,
+        "mpCost": 13
+      },
+      {
+        "level": 9,
+        "mpCost": 13
+      },
+      {
+        "level": 10,
+        "mpCost": 14
+      },
+      {
+        "level": 11,
+        "mpCost": 14
+      },
+      {
+        "level": 12,
+        "mpCost": 15
+      },
+      {
+        "level": 13,
+        "mpCost": 15
+      },
+      {
+        "level": 14,
+        "mpCost": 16
+      },
+      {
+        "level": 15,
+        "mpCost": 16
+      },
+      {
+        "level": 16,
+        "mpCost": 17
+      },
+      {
+        "level": 17,
+        "mpCost": 17
+      },
+      {
+        "level": 18,
+        "mpCost": 18
+      },
+      {
+        "level": 19,
+        "mpCost": 18
+      },
+      {
+        "level": 20,
+        "mpCost": 19
+      },
+      {
+        "level": 21,
+        "mpCost": 19
+      },
+      {
+        "level": 22,
+        "mpCost": 20
+      },
+      {
+        "level": 23,
+        "mpCost": 20
+      },
+      {
+        "level": 24,
+        "mpCost": 21
+      },
+      {
+        "level": 25,
+        "mpCost": 21
+      },
+      {
+        "level": 26,
+        "mpCost": 22
+      },
+      {
+        "level": 27,
+        "mpCost": 22
+      },
+      {
+        "level": 28,
+        "mpCost": 23
+      },
+      {
+        "level": 29,
+        "mpCost": 23
+      },
+      {
+        "level": 30,
+        "mpCost": 25
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Iron_Will",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/7/7f/Iron_Will.png"
+  },
+  {
+    "id": "polearm-booster",
+    "name": "Polearm Booster",
+    "jobId": "spearman",
+    "maxLevel": 20,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 30
+      },
+      {
+        "level": 2,
+        "mpCost": 29
+      },
+      {
+        "level": 3,
+        "mpCost": 28
+      },
+      {
+        "level": 4,
+        "mpCost": 27
+      },
+      {
+        "level": 5,
+        "mpCost": 26
+      },
+      {
+        "level": 6,
+        "mpCost": 25
+      },
+      {
+        "level": 7,
+        "mpCost": 24
+      },
+      {
+        "level": 8,
+        "mpCost": 23
+      },
+      {
+        "level": 9,
+        "mpCost": 22
+      },
+      {
+        "level": 10,
+        "mpCost": 21
+      },
+      {
+        "level": 11,
+        "mpCost": 20
+      },
+      {
+        "level": 12,
+        "mpCost": 19
+      },
+      {
+        "level": 13,
+        "mpCost": 18
+      },
+      {
+        "level": 14,
+        "mpCost": 17
+      },
+      {
+        "level": 15,
+        "mpCost": 16
+      },
+      {
+        "level": 16,
+        "mpCost": 15
+      },
+      {
+        "level": 17,
+        "mpCost": 14
+      },
+      {
+        "level": 18,
+        "mpCost": 13
+      },
+      {
+        "level": 19,
+        "mpCost": 12
+      },
+      {
+        "level": 20,
+        "mpCost": 10
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Polearm_Booster",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/0/0c/Polearm_Booster.png"
+  },
+  {
+    "id": "polearm-mastery",
+    "name": "Polearm Mastery",
+    "jobId": "spearman",
+    "maxLevel": 20,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/0/02/Polearm_Mastery.png"
+  },
+  {
+    "id": "rush-spearman",
+    "name": "Rush",
+    "jobId": "spearman",
+    "maxLevel": 20,
+    "kind": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "damagePct": 60,
+        "mpCost": 40
+      },
+      {
+        "level": 2,
+        "damagePct": 61,
+        "mpCost": 39
+      },
+      {
+        "level": 3,
+        "damagePct": 62,
+        "mpCost": 38
+      },
+      {
+        "level": 4,
+        "damagePct": 63,
+        "mpCost": 37
+      },
+      {
+        "level": 5,
+        "damagePct": 64,
+        "mpCost": 36
+      },
+      {
+        "level": 6,
+        "damagePct": 65,
+        "mpCost": 35
+      },
+      {
+        "level": 7,
+        "damagePct": 66,
+        "mpCost": 34
+      },
+      {
+        "level": 8,
+        "damagePct": 67,
+        "mpCost": 33
+      },
+      {
+        "level": 9,
+        "damagePct": 68,
+        "mpCost": 32
+      },
+      {
+        "level": 10,
+        "damagePct": 69,
+        "mpCost": 31
+      },
+      {
+        "level": 11,
+        "damagePct": 70,
+        "mpCost": 30
+      },
+      {
+        "level": 12,
+        "damagePct": 71,
+        "mpCost": 29
+      },
+      {
+        "level": 13,
+        "damagePct": 72,
+        "mpCost": 28
+      },
+      {
+        "level": 14,
+        "damagePct": 73,
+        "mpCost": 27
+      },
+      {
+        "level": 15,
+        "damagePct": 74,
+        "mpCost": 26
+      },
+      {
+        "level": 16,
+        "damagePct": 75,
+        "mpCost": 25
+      },
+      {
+        "level": 17,
+        "damagePct": 76,
+        "mpCost": 24
+      },
+      {
+        "level": 18,
+        "damagePct": 77,
+        "mpCost": 23
+      },
+      {
+        "level": 19,
+        "damagePct": 78,
+        "mpCost": 22
+      },
+      {
+        "level": 20,
+        "damagePct": 80,
+        "mpCost": 20
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rush",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/4/42/Rush.png"
+  },
+  {
+    "id": "spear-booster",
+    "name": "Spear Booster",
+    "jobId": "spearman",
+    "maxLevel": 20,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 30
+      },
+      {
+        "level": 2,
+        "mpCost": 29
+      },
+      {
+        "level": 3,
+        "mpCost": 28
+      },
+      {
+        "level": 4,
+        "mpCost": 27
+      },
+      {
+        "level": 5,
+        "mpCost": 26
+      },
+      {
+        "level": 6,
+        "mpCost": 25
+      },
+      {
+        "level": 7,
+        "mpCost": 24
+      },
+      {
+        "level": 8,
+        "mpCost": 23
+      },
+      {
+        "level": 9,
+        "mpCost": 22
+      },
+      {
+        "level": 10,
+        "mpCost": 21
+      },
+      {
+        "level": 11,
+        "mpCost": 20
+      },
+      {
+        "level": 12,
+        "mpCost": 19
+      },
+      {
+        "level": 13,
+        "mpCost": 18
+      },
+      {
+        "level": 14,
+        "mpCost": 17
+      },
+      {
+        "level": 15,
+        "mpCost": 16
+      },
+      {
+        "level": 16,
+        "mpCost": 15
+      },
+      {
+        "level": 17,
+        "mpCost": 14
+      },
+      {
+        "level": 18,
+        "mpCost": 13
+      },
+      {
+        "level": 19,
+        "mpCost": 12
+      },
+      {
+        "level": 20,
+        "mpCost": 10
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Spear_Booster",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/5f/Spear_Booster.png"
+  },
+  {
+    "id": "spear-mastery",
+    "name": "Spear Mastery",
+    "jobId": "spearman",
+    "maxLevel": 20,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Warrior",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/52/Spear_Mastery.png"
+  }
+]

@@ -5,7 +5,7 @@ import { StatAdvice } from "../stats/StatAdvice";
 import { Button, Card, Field, LargeTitle, NumberInput, Section, Sections, Segmented, Stepper, Toggle, inputClass } from "../../ui/kit";
 import { toast } from "../../ui/overlays";
 import { ScreenshotPicker } from "./ScreenshotPicker";
-import { SkillsEditor, type SkillDef } from "./SkillsEditor";
+import { SkillsEditor, skillsForJob, type SkillDef } from "./SkillsEditor";
 import { FOCUS_OPTIONS, removeScreenshot, saveScreenshot, useScreenshot } from "./hooks";
 import { buildExport, exportFileName } from "./transfer";
 
@@ -90,6 +90,7 @@ export function CharacterSheet({ profileId }: { profileId: string }) {
   const job = jobById(rules, profile.jobId);
   const need = requiredLevel(rules, profile.jobId);
   const { damageMin, damageMax } = profile.combat;
+  const attackSkills = skillsForJob(rules, (pack?.skills ?? []) as SkillDef[], profile.jobId).filter((s) => pack?.index.skillById.get(s.id)?.kind === "attack");
   const filledStats = STAT_FIELDS.filter(([k]) => profile.stats[k] !== undefined).length;
   const unlockCount =
     profile.unlocks.areas.length +
@@ -266,6 +267,34 @@ export function CharacterSheet({ profileId }: { profileId: string }) {
                 />
               )}
             </Field>
+            {attackSkills.length > 0 && (
+              <Field label="Main attack skill" hint="Its damage %, hits and targets (at the level set under Skills) go into the EXP/hour estimate.">
+                {(id) => (
+                  <select
+                    id={id}
+                    className={inputClass}
+                    value={profile.combat.mainSkillId ?? ""}
+                    onChange={(e) => {
+                      const mainSkillId = e.currentTarget.value;
+                      update((p) => {
+                        const combat = { ...p.combat };
+                        if (mainSkillId) combat.mainSkillId = mainSkillId;
+                        else delete combat.mainSkillId;
+                        return { ...p, combat };
+                      });
+                    }}
+                  >
+                    <option value="">Regular attack</option>
+                    {attackSkills.map((s) => (
+                      <option key={s.id} value={s.id}>
+                        {s.name}
+                        {(profile.skills[s.id] ?? 0) > 0 ? ` (level ${profile.skills[s.id]})` : " (not learned yet)"}
+                      </option>
+                    ))}
+                  </select>
+                )}
+              </Field>
+            )}
           </div>
         </Section>
 

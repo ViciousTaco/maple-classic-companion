@@ -135,10 +135,14 @@ test("a too-high job for the level shows a soft warning but still saves", async 
 });
 
 // ---- P2-T7 skills editor ----
-test("with no skill data the sheet says so instead of inventing skills", async () => {
+test("skills come from the guide data for the character's own job line", async () => {
   const user = userEvent.setup();
   await renderApp([profileInput()]);
   window.location.hash = `#/characters/${ID_A}`;
   await user.click(await screen.findByRole("button", { name: /^Skills/ }));
-  expect(screen.getByText("Skill details are not in the guide data yet")).toBeInTheDocument();
+  expect(screen.getAllByText("Lucky Seven").length).toBeGreaterThan(0); // Thief
+  expect(screen.queryByText("Power Strike")).not.toBeInTheDocument(); // Warrior
+  await user.click(screen.getByRole("button", { name: /^Combat/ }));
+  const main = screen.getByLabelText("Main attack skill");
+  expect(within(main).getByRole("option", { name: /Lucky Seven \(not learned yet\)/ })).toBeInTheDocument();
 });

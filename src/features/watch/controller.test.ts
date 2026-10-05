@@ -20,10 +20,10 @@ async function rig(opts: { level?: number; setup?: boolean } = {}) {
   if (opts.setup !== false) store.getState().updateSettings({ watch: SETUP });
   const pack = smallPack();
   let t = Date.parse("2026-10-07T00:00:00Z");
-  const screen = { status: ["Lv. 25", "EXP [40.00%]"], chat: ["old line before watching"], window: { id: 7, title: "MapleStory", app: "MapleStory.exe", width: 1366, height: 768, minimized: false } as WatchWindow | null };
+  const screen = { covered: false, status: ["Lv. 25", "EXP [40.00%]"], chat: ["old line before watching"], window: { id: 7, title: "MapleStory", app: "MapleStory.exe", width: 1366, height: 768, minimized: false } as WatchWindow | null };
   const platform: WatchPlatform = {
     screenListWindows: async () => (screen.window ? [screen.window] : []),
-    screenRead: async (_id, regions) => regions.map((r) => ({ name: r.name, lines: (r.name === "status" ? screen.status : screen.chat).map((text) => ({ text, x: 0, y: 0, w: 1, h: 1 })) })),
+    screenRead: async (_id, regions) => regions.map((r) => ({ name: r.name, lines: (r.name === "status" ? screen.status : screen.chat).map((text) => ({ text, x: 0, y: 0, w: 1, h: 1 })), covered: screen.covered })),
   };
   const told: string[] = [];
   const watcher = createWatcher({ platform, store, getPack: () => pack, now: () => t, schedule: () => () => {}, tell: (m) => told.push(m) });
@@ -123,4 +123,18 @@ test("a long run sets the character's measured pace", async () => {
   expect(pace.minutes).toBeGreaterThan(13);
   expect(pace.percentPerHour).toBeCloseTo(6 / (pace.minutes / 60), 5);
   expect(profile().observations["spot-exp"]!.sessions).toBe(1); // checkpoints don't inflate the run count
+});
+
+test("text from a covered box is ignored, then counting carries on", async () => {
+  const { watcher, screen, advance } = await rig();
+  await watcher.getState().start("spot-exp");
+  await advance(2000);
+  screen.covered = true;
+  await advance(2000, ["You have gained experience (+24)"]);
+  expect(watcher.getState().status).toBe("paused");
+  expect(watcher.getState().session!.kills).toBe(0);
+  screen.covered = false;
+  await advance(2000, ["You have gained experience (+24)"]);
+  expect(watcher.getState().status).toBe("on");
+  expect(watcher.getState().session!.kills).toBe(2); // both gains were still in the chat box
 });

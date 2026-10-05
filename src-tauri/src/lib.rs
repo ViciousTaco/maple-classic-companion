@@ -1,7 +1,11 @@
 mod cache;
 mod datapack;
 mod files;
+mod hotkey;
+mod mini;
+mod notify;
 mod paths;
+mod screen;
 mod screenshots;
 pub mod signing;
 pub mod storage;
@@ -12,8 +16,8 @@ use storage::{BackupInfo, LoadResult, ProfileStore, WindowGeometry};
 use screenshots::ImageSlot;
 use tauri::{
     ipc::{InvokeBody, Request, Response},
-    AppHandle, LogicalPosition, LogicalSize, Manager, State, WebviewUrl, WebviewWindow,
-    WebviewWindowBuilder,
+    AppHandle, Emitter, LogicalPosition, LogicalSize, Manager, State, Webview, WebviewUrl, WebviewWindow,
+    WebviewWindowBuilder, WindowEvent,
 };
 use tauri_plugin_opener::OpenerExt;
 
@@ -32,9 +36,22 @@ fn profiles_load(state: State<'_, AppState>) -> Result<LoadResult, String> {
     state.profiles.load()
 }
 
+/// Single writer (§8.2): only the main window may write profiles; the mini window relays instead (I-24).
+fn main_window_only(webview: &Webview) -> Result<(), String> {
+    if webview.label() == mini::MAIN_LABEL {
+        Ok(())
+    } else {
+        Err("Only the main window saves profiles; use relay_to_main".into())
+    }
+}
+
 #[tauri::command]
-fn profiles_save(state: State<'_, AppState>, json: String) -> Result<(), String> {
-    state.profiles.save(&json)
+fn profiles_save(app: AppHandle, webview: Webview, state: State<'_, AppState>, json: String) -> Result<(), String> {
+    main_window_only(&webview)?;
+    state.profiles.save(&json)?;
+    // Lets the mini window reload; a failed emit must not turn a good save into an error.
+    let _ = app.emit(mini::PROFILES_SAVED_EVENT, ());
+    Ok(())
 }
 
 #[tauri::command]
@@ -119,8 +136,25 @@ fn image_cache_read(state: State<'_, AppState>, kind: String, id: String) -> Res
 }
 
 #[tauri::command]
-fn profiles_backup_now(state: State<'_, AppState>) -> Result<(), String> {
+fn profiles_backup_now(webview: Webview, state: State<'_, AppState>) -> Result<(), String> {
+    main_window_only(&webview)?;
     state.profiles.backup_now()
+}
+
+/// Async: creating a window from a synchronous command deadlocks on Windows.
+#[tauri::command]
+async fn mini_window_open(app: AppHandle, state: State<'_, AppState>) -> Result<(), String> {
+    mini::open(&app, state.paths.data_dir.join("webview"))
+}
+
+#[tauri::command]
+fn mini_window_close(app: AppHandle) -> Result<(), String> {
+    mini::close(&app)
+}
+
+#[tauri::command]
+fn relay_to_main(app: AppHandle, kind: String, payload: Option<serde_json::Value>) -> Result<(), String> {
+    mini::relay(&app, kind, payload)
 }
 
 #[tauri::command]
@@ -220,6 +254,8 @@ pub fn run() {
         }))
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_http::init())
+        .plugin(hotkey::plugin())
+        .plugin(tauri_plugin_notification::init())
         .manage(state)
         .setup(move |app| {
             // Created here (not in tauri.conf.json) so WebView2 data lives in the portable folder.
@@ -234,9 +270,19 @@ pub fn run() {
                 apply_geometry(&window, g);
             }
             window.show()?;
+            // Ctrl+Alt+W → mcc://watch-toggle; if another app owns it we carry on (hotkey_status reports it).
+            hotkey::register(app.handle());
             // A successful start: the previous version's leftovers can go (P8-T6).
             std::thread::spawn(updater::cleanup_update_leftovers);
             Ok(())
+        })
+        .on_window_event(|window, event| {
+            // The mini window can't save on its own, so it goes when the main window goes.
+            if window.label() == mini::MAIN_LABEL && matches!(event, WindowEvent::Destroyed) {
+                if let Some(mini) = window.app_handle().get_webview_window(mini::MINI_LABEL) {
+                    let _ = mini.destroy();
+                }
+            }
         })
         .invoke_handler(tauri::generate_handler![
             get_paths,
@@ -265,7 +311,17 @@ pub fn run() {
             updater::app_update_apply,
             updater::app_version,
             cache::cache_read,
-            cache::cache_write
+            cache::cache_write,
+            screen::screen_list_windows,
+            screen::screen_snapshot,
+            screen::screen_read,
+            hotkey::hotkey_status,
+            notify::notify_status,
+            notify::notify_show,
+            notify::notify_fallback,
+            mini_window_open,
+            mini_window_close,
+            relay_to_main
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

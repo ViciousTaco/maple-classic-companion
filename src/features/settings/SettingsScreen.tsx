@@ -11,6 +11,30 @@ import { formatWhen, SYDNEY } from "../../lib/sydney";
 import { Button, Card, LargeTitle, Toggle } from "../../ui/kit";
 import { ConfirmDialog, toast } from "../../ui/overlays";
 
+/** Whether Windows will show the reminder as a notification, or the app falls back to a banner + taskbar flash. */
+function NotifyStatusLine() {
+  const platform = usePlatform() as ReturnType<typeof usePlatform> & { notifyStatus?: () => Promise<{ toast: boolean; reason: string | null }> };
+  const [status, setStatus] = useState<{ toast: boolean; reason: string | null } | null>(null);
+  useEffect(() => {
+    let live = true;
+    platform.notifyStatus?.().then(
+      (s) => live && setStatus(s),
+      () => {},
+    );
+    return () => {
+      live = false;
+    };
+  }, [platform]);
+  if (!status) return null;
+  return (
+    <p className="py-2 text-xs text-ink-3">
+      {status.toast
+        ? "Shows as a Windows notification."
+        : `Windows notifications aren't available here${status.reason ? ` (${status.reason})` : ""}, so reminders show as a banner in the app and the taskbar button flashes.`}
+    </p>
+  );
+}
+
 function Select<T extends string>({
   label,
   value,
@@ -117,6 +141,7 @@ export function SettingsScreen() {
             checked={settings.reminders.enabled}
             onChange={(enabled) => set({ reminders: { ...settings.reminders, enabled } })}
           />
+          {settings.reminders.enabled && <NotifyStatusLine />}
           {settings.reminders.enabled && (
             <Select
               label="How early"
@@ -212,7 +237,8 @@ export function SettingsScreen() {
         </ul>
         <p className="mt-4 text-sm text-ink-3">
           Not affiliated with or endorsed by Nexon. MapleStory and all related names, images and assets belong to Nexon. This is a free,
-          non-commercial fan tool, and it never reads, changes or interacts with the game.
+          non-commercial fan tool. It never changes or interacts with the game; the optional screen watcher only reads the text in your
+          two boxes while you switch it on, and never saves or sends a picture.
         </p>
       </Card>
 

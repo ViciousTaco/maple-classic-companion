@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { toast } from "../ui/overlays";
 import { motion } from "motion/react";
-import { ChartSpline, Eye, Gem, Home as HomeIcon, Leaf, Newspaper, NotebookPen, ScrollText, Search, Settings, Shield, Swords, Users } from "lucide-react";
+import { ChartSpline, Eye, Gem, Home as HomeIcon, Leaf, Newspaper, NotebookPen, PictureInPicture2, ScrollText, Search, Settings, Shield, Swords, Users } from "lucide-react";
 import { jobName } from "../data/gameRules";
 import { CharacterSheet } from "../features/characters/CharacterSheet";
 import { CharactersScreen, Portrait } from "../features/characters/CharactersScreen";
@@ -224,11 +224,26 @@ function TopBar() {
           <NotebookPen size={17} strokeWidth={2.2} />
           Quick note
         </Button>
+        <MiniButton />
         <IconButton label="Settings" onClick={() => navigate("/settings")}>
           <Settings size={18} strokeWidth={2.2} />
         </IconButton>
       </div>
     </header>
+  );
+}
+
+/** I-24: opens the small always-on-top window (desktop app only). */
+function MiniButton() {
+  const platform = usePlatform() as ReturnType<typeof usePlatform> & { miniWindowOpen?: () => Promise<unknown> };
+  if (!platform.miniWindowOpen) return null;
+  return (
+    <IconButton
+      label="Mini window (stays on top while you play)"
+      onClick={() => platform.miniWindowOpen!().catch((e: unknown) => toast({ message: `Couldn't open the mini window: ${String(e)}`, tone: "error" }))}
+    >
+      <PictureInPicture2 size={18} strokeWidth={2.2} />
+    </IconButton>
   );
 }
 
@@ -270,7 +285,8 @@ function useLastView() {
   const activeId = useProfiles((s) => s.file.activeProfileId);
   useEffect(() => {
     const p = store.getState().file.profiles.find((x) => x.id === activeId);
-    if (p) navigate(p.lastView); // no-op when already there; runs only when the active character changes
+    // No-op when already on that screen (a `?query` on it is kept); runs only when the active character changes.
+    if (p && window.location.hash.replace(/^#/, "").split("?")[0] !== p.lastView) navigate(p.lastView);
   }, [activeId, store]);
   useEffect(() => {
     const s = store.getState();

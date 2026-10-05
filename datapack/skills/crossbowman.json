@@ -1,0 +1,474 @@
+[
+  {
+    "id": "amazons-judgement-crossbowman",
+    "name": "Amazon's Judgement",
+    "jobId": "crossbowman",
+    "maxLevel": 20,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/58/Amazon%27s_Judgement.png"
+  },
+  {
+    "id": "crossbow-booster",
+    "name": "Crossbow Booster",
+    "jobId": "crossbowman",
+    "maxLevel": 20,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 30
+      },
+      {
+        "level": 2,
+        "mpCost": 29
+      },
+      {
+        "level": 3,
+        "mpCost": 28
+      },
+      {
+        "level": 4,
+        "mpCost": 27
+      },
+      {
+        "level": 5,
+        "mpCost": 26
+      },
+      {
+        "level": 6,
+        "mpCost": 25
+      },
+      {
+        "level": 7,
+        "mpCost": 24
+      },
+      {
+        "level": 8,
+        "mpCost": 23
+      },
+      {
+        "level": 9,
+        "mpCost": 22
+      },
+      {
+        "level": 10,
+        "mpCost": 21
+      },
+      {
+        "level": 11,
+        "mpCost": 20
+      },
+      {
+        "level": 12,
+        "mpCost": 19
+      },
+      {
+        "level": 13,
+        "mpCost": 18
+      },
+      {
+        "level": 14,
+        "mpCost": 17
+      },
+      {
+        "level": 15,
+        "mpCost": 16
+      },
+      {
+        "level": 16,
+        "mpCost": 15
+      },
+      {
+        "level": 17,
+        "mpCost": 14
+      },
+      {
+        "level": 18,
+        "mpCost": 13
+      },
+      {
+        "level": 19,
+        "mpCost": 12
+      },
+      {
+        "level": 20,
+        "mpCost": 10
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Crossbow_Booster",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/d/d5/Crossbow_Booster.png"
+  },
+  {
+    "id": "crossbow-mastery",
+    "name": "Crossbow Mastery",
+    "jobId": "crossbowman",
+    "maxLevel": 20,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/1/12/Crossbow_Mastery.png"
+  },
+  {
+    "id": "final-attack-crossbow",
+    "name": "Final Attack: Crossbow",
+    "jobId": "crossbowman",
+    "maxLevel": 30,
+    "kind": "passive",
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/5/53/Final_Attack_Crossbow.png"
+  },
+  {
+    "id": "iron-arrow-crossbow",
+    "name": "Iron Arrow: Crossbow",
+    "jobId": "crossbowman",
+    "maxLevel": 30,
+    "kind": "attack",
+    "levels": [
+      {
+        "level": 1,
+        "damagePct": 130,
+        "targets": 4,
+        "mpCost": 14
+      },
+      {
+        "level": 2,
+        "damagePct": 132,
+        "targets": 4,
+        "mpCost": 14
+      },
+      {
+        "level": 3,
+        "damagePct": 134,
+        "targets": 4,
+        "mpCost": 14
+      },
+      {
+        "level": 4,
+        "damagePct": 136,
+        "targets": 4,
+        "mpCost": 15
+      },
+      {
+        "level": 5,
+        "damagePct": 138,
+        "targets": 4,
+        "mpCost": 15
+      },
+      {
+        "level": 6,
+        "damagePct": 140,
+        "targets": 4,
+        "mpCost": 16
+      },
+      {
+        "level": 7,
+        "damagePct": 142,
+        "targets": 4,
+        "mpCost": 16
+      },
+      {
+        "level": 8,
+        "damagePct": 144,
+        "targets": 4,
+        "mpCost": 17
+      },
+      {
+        "level": 9,
+        "damagePct": 146,
+        "targets": 4,
+        "mpCost": 17
+      },
+      {
+        "level": 10,
+        "damagePct": 148,
+        "targets": 4,
+        "mpCost": 18
+      },
+      {
+        "level": 11,
+        "damagePct": 150,
+        "targets": 4,
+        "mpCost": 18
+      },
+      {
+        "level": 12,
+        "damagePct": 152,
+        "targets": 4,
+        "mpCost": 19
+      },
+      {
+        "level": 13,
+        "damagePct": 154,
+        "targets": 4,
+        "mpCost": 19
+      },
+      {
+        "level": 14,
+        "damagePct": 156,
+        "targets": 4,
+        "mpCost": 20
+      },
+      {
+        "level": 15,
+        "damagePct": 158,
+        "targets": 4,
+        "mpCost": 20
+      },
+      {
+        "level": 16,
+        "damagePct": 160,
+        "targets": 4,
+        "mpCost": 21
+      },
+      {
+        "level": 17,
+        "damagePct": 162,
+        "targets": 4,
+        "mpCost": 21
+      },
+      {
+        "level": 18,
+        "damagePct": 164,
+        "targets": 4,
+        "mpCost": 22
+      },
+      {
+        "level": 19,
+        "damagePct": 166,
+        "targets": 4,
+        "mpCost": 22
+      },
+      {
+        "level": 20,
+        "damagePct": 168,
+        "targets": 4,
+        "mpCost": 23
+      },
+      {
+        "level": 21,
+        "damagePct": 170,
+        "targets": 4,
+        "mpCost": 23
+      },
+      {
+        "level": 22,
+        "damagePct": 172,
+        "targets": 4,
+        "mpCost": 24
+      },
+      {
+        "level": 23,
+        "damagePct": 174,
+        "targets": 4,
+        "mpCost": 24
+      },
+      {
+        "level": 24,
+        "damagePct": 176,
+        "targets": 4,
+        "mpCost": 25
+      },
+      {
+        "level": 25,
+        "damagePct": 178,
+        "targets": 4,
+        "mpCost": 25
+      },
+      {
+        "level": 26,
+        "damagePct": 180,
+        "targets": 4,
+        "mpCost": 26
+      },
+      {
+        "level": 27,
+        "damagePct": 182,
+        "targets": 4,
+        "mpCost": 26
+      },
+      {
+        "level": 28,
+        "damagePct": 184,
+        "targets": 4,
+        "mpCost": 27
+      },
+      {
+        "level": 29,
+        "damagePct": 186,
+        "targets": 4,
+        "mpCost": 27
+      },
+      {
+        "level": 30,
+        "damagePct": 190,
+        "targets": 4,
+        "mpCost": 28
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Iron_Arrow:_Crossbow",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/2/2f/Iron_Arrow_Crossbow.png"
+  },
+  {
+    "id": "soul-arrow-crossbow",
+    "name": "Soul Arrow: Crossbow",
+    "jobId": "crossbowman",
+    "maxLevel": 20,
+    "kind": "buff",
+    "levels": [
+      {
+        "level": 1,
+        "mpCost": 25
+      },
+      {
+        "level": 2,
+        "mpCost": 24
+      },
+      {
+        "level": 3,
+        "mpCost": 23
+      },
+      {
+        "level": 4,
+        "mpCost": 22
+      },
+      {
+        "level": 5,
+        "mpCost": 21
+      },
+      {
+        "level": 6,
+        "mpCost": 20
+      },
+      {
+        "level": 7,
+        "mpCost": 19
+      },
+      {
+        "level": 8,
+        "mpCost": 18
+      },
+      {
+        "level": 9,
+        "mpCost": 17
+      },
+      {
+        "level": 10,
+        "mpCost": 16
+      },
+      {
+        "level": 11,
+        "mpCost": 15
+      },
+      {
+        "level": 12,
+        "mpCost": 14
+      },
+      {
+        "level": 13,
+        "mpCost": 13
+      },
+      {
+        "level": 14,
+        "mpCost": 12
+      },
+      {
+        "level": 15,
+        "mpCost": 11
+      },
+      {
+        "level": 16,
+        "mpCost": 10
+      },
+      {
+        "level": 17,
+        "mpCost": 9
+      },
+      {
+        "level": 18,
+        "mpCost": 8
+      },
+      {
+        "level": 19,
+        "mpCost": 7
+      },
+      {
+        "level": 20,
+        "mpCost": 5
+      }
+    ],
+    "sources": [
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bowman",
+        "retrievedAt": "2026-10-06"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Soul_Arrow:_Crossbow",
+        "retrievedAt": "2026-10-06"
+      }
+    ],
+    "confidence": "likely",
+    "verifiedAt": "2026-10-06",
+    "image": "https://mapleclassic.wiki/images/f/fe/Soul_Arrow_Crossbow.png"
+  }
+]
