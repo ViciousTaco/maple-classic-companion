@@ -51,6 +51,7 @@ export function EntityImage({
   fit = "contain",
   fallback,
   hideWhenMissing = false,
+  natural = false,
 }: {
   kind: EntityKind;
   id: string;
@@ -64,6 +65,8 @@ export function EntityImage({
   fallback?: React.ReactNode;
   /** Render nothing at all until a picture exists (for decorative sprites). */
   hideWhenMissing?: boolean;
+  /** Show the picture at its own shape (full width, auto height) — needed for overlays positioned in %. */
+  natural?: boolean;
 }) {
   const platform = usePlatform();
   const [state, setState] = useState<{ key: string; bytes: Uint8Array | null; source: Source } | null>(null);
@@ -120,7 +123,7 @@ export function EntityImage({
   const title = current?.source === "own" ? `${name} — your picture` : current?.source === "wiki" ? `${name} — image via MapleClassic Wiki · © Nexon` : name;
   const pic = (
     <span
-      className={`relative inline-flex shrink-0 items-center justify-center overflow-hidden rounded-xl bg-fill ${className}`}
+      className={`relative ${natural && src ? "block" : "inline-flex items-center justify-center"} shrink-0 overflow-hidden rounded-xl bg-fill ${className}`}
       title={title}
       onDragOver={(e) => editable && e.preventDefault()}
       onDrop={(e) => {
@@ -130,7 +133,12 @@ export function EntityImage({
       }}
     >
       {src ? (
-        <img src={src} alt={name} className={`h-full w-full ${fit === "cover" ? "object-cover" : "object-contain [image-rendering:pixelated]"}`} draggable={false} />
+        <img
+          src={src}
+          alt={name}
+          className={natural ? "block h-auto w-full" : `h-full w-full ${fit === "cover" ? "object-cover" : "object-contain [image-rendering:pixelated]"}`}
+          draggable={false}
+        />
       ) : (
         (fallback ?? <ImageIcon className="h-1/2 w-1/2 text-ink-3" aria-hidden />)
       )}

@@ -9,6 +9,7 @@ import { bestLootTargets, findDropSources } from "../../engine/loot";
 import { Chip, EmptyState, LargeTitle, Section, Sections, inputClass, spring } from "../../ui/kit";
 import { ConfidenceChip, ExternalLinkButton } from "../guide/parts";
 import { EntityImage } from "../guide/EntityImage";
+import { questUses, TIER_STYLE, valueTier } from "../guide/value";
 import { mapName, meowdbUrl } from "../guide/text";
 
 export function WishStar({ profile, itemId }: { profile: Profile; itemId: string }) {
@@ -63,7 +64,16 @@ function ItemRow({ pack, profile, item }: { pack: Pack; profile: Profile; item: 
         <EntityImage kind="item" id={item.id} name={item.name} url={item.image} className="h-12 w-12" />
         <WishStar profile={profile} itemId={item.id} />
         <ConfidenceChip confidence={item.confidence} sources={item.sources} verifiedAt={item.verifiedAt} />
+        {(() => {
+          const tier = valueTier(item, pack);
+          return tier ? <span className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${TIER_STYLE[tier].chip}`}>{TIER_STYLE[tier].label}</span> : null;
+        })()}
         {item.rarity && <Chip tone="maple">{item.rarity.replace("-", " ")}</Chip>}
+        {questUses(item.id, pack).map((q) => (
+          <Chip key={q.id} tone="leaf">
+            Needed for {q.name}
+          </Chip>
+        ))}
         {item.npcSellMeso !== undefined && <Chip>Sells for {item.npcSellMeso.toLocaleString("en-AU")} meso</Chip>}
         {meow && <ExternalLinkButton href={meow}>MeowDB</ExternalLinkButton>}
       </div>

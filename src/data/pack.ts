@@ -104,13 +104,22 @@ export async function loadPack(sources: PackSource[]): Promise<LoadResult> {
 }
 
 /** The baseline copied into the frontend build at `/baseline/` (P3-T10). */
-export function bundledSource(fetchFn: typeof fetch = fetch, base = "baseline/"): PackSource {
+export function bundledSource(fetchFn: typeof fetch = fetch, base = "baseline/", timeoutMs = 15_000): PackSource {
   return {
     kind: "bundled",
     async read(file) {
-      const res = await fetchFn(`${base}${file}`);
-      if (!res.ok) throw new Error(`${file}: HTTP ${res.status}`);
-      return res.json();
+      // A stalled read must never leave the app on the loading screen forever.
+      const ctl = new AbortController();
+      const timer = setTimeout(() => ctl.abort(), timeoutMs);
+      try {
+        const res = await fetchFn(`${base}${file}`, { signal: ctl.signal });
+        if (!res.ok) throw new Error(`${file}: HTTP ${res.status}`);
+        return await res.json();
+      } catch (err) {
+        throw ctl.signal.aborted ? new Error(`${file}: timed out`) : err;
+      } finally {
+        clearTimeout(timer);
+      }
     },
   };
 }

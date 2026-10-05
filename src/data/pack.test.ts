@@ -1,5 +1,5 @@
 import { miniPack } from "./fixtures/miniPack";
-import { buildIndexes, loadPack, type PackSource } from "./pack";
+import { buildIndexes, bundledSource, loadPack, type PackSource } from "./pack";
 import { PACK_FILES } from "./schema/pack";
 
 const fileMap = (p = miniPack()) =>
@@ -52,4 +52,10 @@ test("a pack with broken references is rejected (rule 2) and a missing file too"
     expect(r.problems[0]).toMatch(/unknown monster "ghost"/);
     expect(r.problems[1]).toMatch(/quests\.json/);
   }
+});
+
+test("a stalled bundled read times out instead of hanging", async () => {
+  const stall = ((_url: string, init?: RequestInit) =>
+    new Promise((_, reject) => init?.signal?.addEventListener("abort", () => reject(new DOMException("aborted", "AbortError"))))) as typeof fetch;
+  await expect(bundledSource(stall, "baseline/", 50).read("meta.json")).rejects.toThrow("meta.json: timed out");
 });

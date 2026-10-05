@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, LayoutGroup, motion, useSpring, useTransform } from "motion/react";
+import { motion, useSpring, useTransform } from "motion/react";
 import { AlertTriangle, Coins, Footprints, Gem, MapPin, NotebookPen, RefreshCw, RotateCcw, Scale, Shield, ShieldCheck, Sword, TrendingUp, Users } from "lucide-react";
 import type { FocusId } from "../../data/schema/profile";
 import type { Pack } from "../../data/pack";
@@ -15,10 +15,11 @@ import { RouteView } from "../guide/RouteView";
 import { EntityImage } from "../guide/EntityImage";
 import { mapName, meowdbUrl, mobName, rangeText, reasonText, regionName, sceneHue, warningText } from "../guide/text";
 import { YouTubeLite } from "../../ui/YouTubeLite";
+import { questUses, TIER_ORDER, TIER_STYLE, valueTier } from "../guide/value";
 
 export const FOCUS_SEGMENTS = [
   { value: "exp", label: <><TrendingUp size={15} />EXP</>, ariaLabel: "EXP" },
-  { value: "rare-drop", label: <><Gem size={15} />Rare</>, ariaLabel: "Rare drops" },
+  { value: "rare-drop", label: <><Gem size={15} />Rare Item</>, ariaLabel: "Rare Item" },
   { value: "class-equip", label: <><Shield size={15} />Gear</>, ariaLabel: "Class gear" },
   { value: "meso", label: <><Coins size={15} />Meso</>, ariaLabel: "Meso" },
   { value: "balanced", label: <><Scale size={15} />Balanced</>, ariaLabel: "Balanced" },
@@ -64,7 +65,7 @@ function HeroCard({ pack, rec, pinned, onTaken, onRoute, onUnpin }: { pack: Pack
   const map = pack.index.mapById.get(rec.mapId);
   const d = DANGER[rec.estimate.danger];
   return (
-    <motion.article layoutId={`spot-${rec.spotId}`} transition={spring} className="glass grid gap-6 rounded-[30px] p-5 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]" aria-label={`Train here: ${mapName(pack, rec.mapId)}`}>
+    <article className="glass grid gap-6 rounded-[30px] p-5 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]" aria-label={`Train here: ${mapName(pack, rec.mapId)}`}>
       <div className="relative min-h-44">
         <div className="absolute inset-0">
           <EntityImage
@@ -155,7 +156,7 @@ function HeroCard({ pack, rec, pinned, onTaken, onRoute, onUnpin }: { pack: Pack
           </Button>
         </div>
       </div>
-    </motion.article>
+    </article>
   );
 }
 
@@ -231,8 +232,7 @@ export function TrainScreen() {
         </button>
       )}
 
-      <LayoutGroup>
-        <AnimatePresence mode="popLayout" initial={false}>
+      <div className="space-y-6">
           <HeroCard
             key={hero.spotId}
             pack={pack}
@@ -248,7 +248,6 @@ export function TrainScreen() {
             onUnpin={() => setPinned(null)}
             onRoute={() => setRouteTo(hero.mapId)}
           />
-        </AnimatePresence>
 
         <div>
           <div className="mb-2 flex items-center justify-between px-1">
@@ -266,7 +265,6 @@ export function TrainScreen() {
               {others.map((b) => (
                 <motion.button
                   key={b.spotId}
-                  layoutId={`spot-${b.spotId}`}
                   type="button"
                   transition={spring}
                   whileHover={{ y: -3 }}
@@ -298,7 +296,7 @@ export function TrainScreen() {
             </div>
           )}
         </div>
-      </LayoutGroup>
+      </div>
 
       <Sections>
         <Section value="why" title="Why this spot" summary={`compared with ${plan.considered} spot${plan.considered === 1 ? "" : "s"}`}>
@@ -362,24 +360,49 @@ export function TrainScreen() {
           </table>
         </Section>
 
-        <Section value="drops" title="Drops" summary="rates shown honestly">
+        <Section value="drops" title="Drops" summary="best first · rates shown honestly">
           {mobs.every((m) => !(pack.index.dropsByMob.get(m.id) ?? []).length) ? (
             <p className="text-ink-2">No drops recorded for these monsters yet.</p>
           ) : (
-            <ul className="space-y-1.5 text-sm">
-              {mobs.flatMap((m) =>
-                (pack.index.dropsByMob.get(m.id) ?? [])
-                  .filter((d) => d.status !== "legacy-unverified")
-                  .map((d) => (
-                    <li key={`${m.id}-${d.itemId}`} className="flex flex-wrap items-center justify-between gap-2 rounded-xl bg-fill px-3 py-1.5">
-                      <span>
-                        <strong>{pack.index.itemById.get(d.itemId)?.name ?? d.itemId}</strong> <span className="text-ink-3">from {m.name}</span>
+            <>
+              <p className="mb-3 flex flex-wrap items-center gap-2 text-xs text-ink-3">
+                {(["gold", "silver", "bronze"] as const).map((t) => (
+                  <span key={t} className={`rounded-full px-2 py-0.5 font-bold ${TIER_STYLE[t].chip}`}>{TIER_STYLE[t].label}</span>
+                ))}
+                = the guide's highest NPC sell prices (top 10 % / 25 % / 50 %) or items marked rare. Player-market prices aren't tracked.
+              </p>
+              <ul className="space-y-1.5 text-sm">
+                {mobs
+                  .flatMap((m) =>
+                    (pack.index.dropsByMob.get(m.id) ?? [])
+                      .filter((d) => d.status !== "legacy-unverified")
+                      .map((d) => {
+                        const item = pack.index.itemById.get(d.itemId);
+                        return { m, d, item, tier: item ? valueTier(item, pack) : null, quests: questUses(d.itemId, pack) };
+                      }),
+                  )
+                  .sort((a, b) => TIER_ORDER[a.tier ?? "none"]! - TIER_ORDER[b.tier ?? "none"]! || (b.item?.npcSellMeso ?? 0) - (a.item?.npcSellMeso ?? 0) || (a.item?.name ?? "").localeCompare(b.item?.name ?? ""))
+                  .map(({ m, d, item, tier, quests }) => (
+                    <li
+                      key={`${m.id}-${d.itemId}`}
+                      className={`flex flex-wrap items-center justify-between gap-2 rounded-xl px-3 py-1.5 ${tier ? TIER_STYLE[tier].row : "bg-fill"}`}
+                    >
+                      <span className="flex min-w-0 flex-wrap items-center gap-2">
+                        {tier && <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${TIER_STYLE[tier].chip}`}>{TIER_STYLE[tier].label}</span>}
+                        <strong className="text-ink">{item?.name ?? d.itemId}</strong>
+                        <span className="text-ink-2">from {m.name}</span>
+                        {item?.npcSellMeso !== undefined && <span className="text-xs text-ink-2">· sells for {item.npcSellMeso.toLocaleString("en-AU")} meso</span>}
+                        {quests.map((q) => (
+                          <span key={q.id} className="rounded-full bg-leaf/15 px-2 py-0.5 text-[11px] font-semibold text-leaf">
+                            Needed for {q.name}
+                          </span>
+                        ))}
                       </span>
                       <span className="text-xs text-ink-2">{rateLabel(d)}</span>
                     </li>
-                  )),
-              )}
-            </ul>
+                  ))}
+              </ul>
+            </>
           )}
         </Section>
 
@@ -423,7 +446,7 @@ export function TrainScreen() {
         )}
       </Sections>
 
-      <Dialog open={routeTo !== null} onOpenChange={(o) => !o && setRouteTo(null)} title={`How to get to ${routeTo ? mapName(pack, routeTo) : ""}`}>
+      <Dialog wide open={routeTo !== null} onOpenChange={(o) => !o && setRouteTo(null)} title={`How to get to ${routeTo ? mapName(pack, routeTo) : ""}`}>
         {routeTo && <RouteView pack={pack} profile={profile} to={routeTo} />}
       </Dialog>
     </div>

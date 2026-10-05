@@ -346,7 +346,7 @@ export function Shell() {
         <TopBar />
         <NoticeBar />
         <main className="flex-1 overflow-y-auto px-8 pb-10 pt-4">
-          <motion.div key={route} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.22, ease: [0.2, 0.9, 0.3, 1] }}>
+          <motion.div key={route} className="mx-auto w-full max-w-[1320px]" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.22, ease: [0.2, 0.9, 0.3, 1] }}>
             <Routes />
           </motion.div>
         </main>

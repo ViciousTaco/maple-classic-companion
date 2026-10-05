@@ -30,6 +30,7 @@
   --sky: #2f8cff;
   --danger: #ff3b30;
   --thumb: #ffffff;
+  --option-bg: #fff8f1;
   --chart-1: #e2501a;
   --chart-2: #1f6fe0;
   --chart-grid: rgb(60 45 30 / 0.1);
@@ -58,6 +59,7 @@
     0 2px 6px -2px rgb(0 0 0 / 0.4);
   --field: rgb(255 255 255 / 0.08);
   --thumb: #5d5762;
+  --option-bg: #2b2530;
   --chart-1: #e8692a;
   --chart-2: #3a86e8;
   --chart-grid: rgb(255 255 255 / 0.09);
@@ -127,6 +129,13 @@ body {
 
 ::selection {
   background: rgb(255 106 43 / 0.25);
+}
+
+/* Native dropdown lists follow the theme and stay readable (owner request 2026-10-06). */
+select option,
+select optgroup {
+  background-color: var(--option-bg);
+  color: var(--ink);
 }
 
 /* Numbers in inputs: no spinner arrows (steppers do that job). */

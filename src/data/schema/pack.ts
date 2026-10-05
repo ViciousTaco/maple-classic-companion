@@ -116,6 +116,8 @@ export const MapSchema = z.object({
       kind: z.enum(["portal", "taxi", "ship", "hidden"]),
       costMeso: posInt.optional(),
       note: z.string().optional(),
+      /** Where the portal sits on the map picture, in % across (x) and down (y). */
+      pos: z.object({ x: z.number().min(0).max(100), y: z.number().min(0).max(100) }).optional(),
     }),
   ),
   npcIds: z.array(id),

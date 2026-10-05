@@ -8,15 +8,27 @@
     "links": [
       {
         "to": "amherst-townstreet",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 72.9,
+          "y": 82.0
+        }
       },
       {
         "to": "the-field-east-of-amherst",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.2,
+          "y": 81.9
+        }
       },
       {
         "to": "the-field-west-of-amherst",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 2.7,
+          "y": 82.1
+        }
       }
     ],
     "npcIds": [
@@ -48,11 +60,19 @@
     "links": [
       {
         "to": "amherst",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 44.9,
+          "y": 76.5
+        }
       },
       {
         "to": "snail-field-of-flowers",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 23.2,
+          "y": 79.8
+        }
       }
     ],
     "npcIds": [],
@@ -77,7 +97,11 @@
     "links": [
       {
         "to": "a-split-road",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 2.2,
+          "y": 80.6
+        }
       },
       {
         "to": "lith-harbor",
@@ -127,15 +151,27 @@
     "links": [
       {
         "to": "snail-hunting-ground-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 2.8,
+          "y": 71.7
+        }
       },
       {
         "to": "southperry",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 95.4,
+          "y": 82.2
+        }
       },
       {
         "to": "the-field-west-of-amherst",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 95.2,
+          "y": 49.7
+        }
       },
       {
         "to": "snail-hunting-ground-ii",
@@ -184,7 +220,11 @@
     "links": [
       {
         "to": "the-field-west-of-amherst",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 3.7,
+          "y": 24.9
+        }
       }
     ],
     "npcIds": [],
@@ -215,7 +255,11 @@
     "links": [
       {
         "to": "snail-hunting-ground-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.2,
+          "y": 21.4
+        }
       }
     ],
     "npcIds": [
@@ -260,7 +304,11 @@
     "links": [
       {
         "to": "the-field-west-of-amherst",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 45.2,
+          "y": 88.5
+        }
       }
     ],
     "npcIds": [],
@@ -306,7 +354,11 @@
     "links": [
       {
         "to": "the-field-west-of-amherst",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 58.4,
+          "y": 59.0
+        }
       }
     ],
     "npcIds": [],
@@ -352,7 +404,11 @@
     "links": [
       {
         "to": "the-field-west-of-amherst",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 86.7,
+          "y": 49.6
+        }
       }
     ],
     "npcIds": [],
@@ -432,7 +488,11 @@
     "links": [
       {
         "to": "amherst-townstreet",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 84.9,
+          "y": 20.7
+        }
       }
     ],
     "npcIds": [],
@@ -470,7 +530,11 @@
     "links": [
       {
         "to": "the-field-west-of-amherst",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 9.4,
+          "y": 75.1
+        }
       }
     ],
     "npcIds": [],
@@ -500,7 +564,11 @@
     "links": [
       {
         "to": "snail-hunting-ground-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.2,
+          "y": 89.0
+        }
       },
       {
         "to": "east-entrance-to-mushroom-town",
@@ -541,11 +609,19 @@
     "links": [
       {
         "to": "snail-hunting-ground-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 2.5,
+          "y": 90.9
+        }
       },
       {
         "to": "snail-hunting-ground-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 96.4,
+          "y": 91.0
+        }
       },
       {
         "to": "a-split-road",
@@ -587,11 +663,19 @@
     "links": [
       {
         "to": "a-split-road",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 95.1,
+          "y": 22.1
+        }
       },
       {
         "to": "snail-hunting-ground-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 8.7,
+          "y": 80.9
+        }
       }
     ],
     "npcIds": [],
@@ -633,11 +717,19 @@
     "links": [
       {
         "to": "amherst",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 5.5,
+          "y": 79.1
+        }
       },
       {
         "to": "tomato-field",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 85.1,
+          "y": 47.7
+        }
       }
     ],
     "npcIds": [],
@@ -683,35 +775,67 @@
     "links": [
       {
         "to": "a-split-road",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 2.2,
+          "y": 82.0
+        }
       },
       {
         "to": "amherst",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 97.2,
+          "y": 90.8
+        }
       },
       {
         "to": "dangerous-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 88.2,
+          "y": 43.8
+        }
       },
       {
         "to": "hunting-ground-middle-of-the-forest-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 22.1,
+          "y": 35.0
+        }
       },
       {
         "to": "hunting-ground-middle-of-the-forest-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 31.5,
+          "y": 32.1
+        }
       },
       {
         "to": "in-a-small-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 10.7,
+          "y": 49.8
+        }
       },
       {
         "to": "mushroom-garden-maple-island",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 56.5,
+          "y": 90.7
+        }
       },
       {
         "to": "snail-garden",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 60.8,
+          "y": 90.8
+        }
       }
     ],
     "npcIds": [],
@@ -753,7 +877,11 @@
     "links": [
       {
         "to": "the-field-east-of-amherst",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 3.9,
+          "y": 78.2
+        }
       }
     ],
     "npcIds": [],

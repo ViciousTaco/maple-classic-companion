@@ -2,7 +2,14 @@ import type { Pack } from "../data/pack";
 
 // Plan P4-T8: shortest routes over map links.
 
-export type RouteStep = { from: string; to: string; kind: "portal" | "taxi" | "ship" | "hidden"; costMeso?: number };
+export type RouteStep = {
+  from: string;
+  to: string;
+  kind: "portal" | "taxi" | "ship" | "hidden";
+  costMeso?: number;
+  /** Where the portal is on the "from" map's picture (% across / down), when recorded. */
+  pos?: { x: number; y: number };
+};
 
 /**
  * Dijkstra over map links: cost 1 per hop (taxis/ships also 1, with their meso cost noted).
@@ -30,7 +37,13 @@ export function findRoute(pack: Pack, from: string, to: string, unlockedAreas: s
       const d = dist.get(cur)! + 1;
       if (d < (dist.get(link.to) ?? Infinity)) {
         dist.set(link.to, d);
-        prev.set(link.to, { from: cur, to: link.to, kind: link.kind, ...(link.costMeso !== undefined ? { costMeso: link.costMeso } : {}) });
+        prev.set(link.to, {
+          from: cur,
+          to: link.to,
+          kind: link.kind,
+          ...(link.costMeso !== undefined ? { costMeso: link.costMeso } : {}),
+          ...(link.pos ? { pos: link.pos } : {}),
+        });
         frontier.push(link.to);
       }
     }

@@ -40,7 +40,7 @@ export async function removeScreenshot(platform: Platform, store: ProfileStore, 
 
 export const FOCUS_OPTIONS = [
   { value: "exp", label: "EXP" },
-  { value: "rare-drop", label: "Rare drops" },
+  { value: "rare-drop", label: "Rare Item" },
   { value: "class-equip", label: "Class gear" },
   { value: "meso", label: "Meso" },
   { value: "balanced", label: "Balanced" },

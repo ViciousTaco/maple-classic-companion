@@ -8,11 +8,19 @@
     "links": [
       {
         "to": "the-field-south-of-ellinia",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 7.4,
+          "y": 95.0
+        }
       },
       {
         "to": "the-field-up-north-of-ellinia",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 4.5,
+          "y": 34.1
+        }
       },
       {
         "to": "lith-harbor",
@@ -85,7 +93,11 @@
     "links": [
       {
         "to": "a-look-out-shed-around-the-beach",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 95.9,
+          "y": 86.5
+        }
       },
       {
         "to": "henesys",
@@ -121,19 +133,35 @@
     "links": [
       {
         "to": "an-empty-house",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 12.8,
+          "y": 37.8
+        }
       },
       {
         "to": "henesys-hunting-ground-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 1.9,
+          "y": 69.0
+        }
       },
       {
         "to": "the-hill-east-of-henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.9,
+          "y": 84.1
+        }
       },
       {
         "to": "the-road-to-the-dungeon",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 96.3,
+          "y": 31.0
+        }
       },
       {
         "to": "florina-beach",
@@ -224,20 +252,36 @@
     "links": [
       {
         "to": "kerning-city-construction-site",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 4.3,
+          "y": 75.3
+        }
       },
       {
         "to": "subway-ticketing-booth",
         "kind": "portal",
-        "note": "one-way (reverse not confirmed)"
+        "note": "one-way (reverse not confirmed)",
+        "pos": {
+          "x": 60.8,
+          "y": 88.2
+        }
       },
       {
         "to": "sunset-sky",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 96.8,
+          "y": 58.5
+        }
       },
       {
         "to": "the-swamp-of-despair-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 31.9,
+          "y": 85.7
+        }
       },
       {
         "to": "lith-harbor",
@@ -315,7 +359,11 @@
     "links": [
       {
         "to": "right-around-lith-harbor",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 97.2,
+          "y": 87.5
+        }
       },
       {
         "to": "southperry",
@@ -376,15 +424,27 @@
     "links": [
       {
         "to": "deep-valley-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.8,
+          "y": 91.8
+        }
       },
       {
         "to": "perion-street-corner",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 86.8,
+          "y": 69.5
+        }
       },
       {
         "to": "west-street-corner-of-perion",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 9.3,
+          "y": 83.8
+        }
       },
       {
         "to": "lith-harbor",
@@ -438,15 +498,27 @@
     "links": [
       {
         "to": "ant-tunnel-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 88.7,
+          "y": 85.5
+        }
       },
       {
         "to": "sleepy-dungeon-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 67.3,
+          "y": 76.0
+        }
       },
       {
         "to": "swampy-land-in-a-deep-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 13.9,
+          "y": 62.2
+        }
       },
       {
         "to": "lith-harbor",
@@ -539,23 +611,43 @@
     "links": [
       {
         "to": "beach-hunting-ground",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 46.7,
+          "y": 92.3
+        }
       },
       {
         "to": "forest-west-of-henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 96.6,
+          "y": 90.0
+        }
       },
       {
         "to": "kerning-city-middle-forest-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 3.8,
+          "y": 20.2
+        }
       },
       {
         "to": "the-pig-beach",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 35.0,
+          "y": 68.4
+        }
       },
       {
         "to": "thicket-around-the-beach-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 3.6,
+          "y": 89.9
+        }
       }
     ],
     "npcIds": [],
@@ -605,15 +697,27 @@
     "links": [
       {
         "to": "forest-west-of-henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 4.2,
+          "y": 82.3
+        }
       },
       {
         "to": "henesys-hunting-ground-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 92.1,
+          "y": 63.7
+        }
       },
       {
         "to": "mushroom-garden-victoria-island",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 64.0,
+          "y": 19.2
+        }
       }
     ],
     "npcIds": [],
@@ -648,11 +752,19 @@
     "links": [
       {
         "to": "florina-beach",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 1.7,
+          "y": 89.4
+        }
       },
       {
         "to": "lorang-lorang",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 97.3,
+          "y": 89.7
+        }
       }
     ],
     "npcIds": [],
@@ -683,11 +795,19 @@
     "links": [
       {
         "to": "henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 66.9,
+          "y": 39.8
+        }
       },
       {
         "to": "pig-park",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 18.6,
+          "y": 43.5
+        }
       }
     ],
     "npcIds": [],
@@ -712,15 +832,27 @@
     "links": [
       {
         "to": "another-path",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 68.2,
+          "y": 80.7
+        }
       },
       {
         "to": "drakes-meal-table",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 71.6,
+          "y": 31.2
+        }
       },
       {
         "to": "the-tunnel-that-lost-light-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 6.9,
+          "y": 30.6
+        }
       }
     ],
     "npcIds": [],
@@ -750,11 +882,19 @@
     "links": [
       {
         "to": "another-entrance",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 5.3,
+          "y": 12.9
+        }
       },
       {
         "to": "sanctuary-entrance-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 89.4,
+          "y": 91.8
+        }
       }
     ],
     "npcIds": [],
@@ -788,11 +928,19 @@
     "links": [
       {
         "to": "ant-tunnel-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.8,
+          "y": 78.1
+        }
       },
       {
         "to": "sleepywood",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 15.2,
+          "y": 15.3
+        }
       }
     ],
     "npcIds": [],
@@ -826,11 +974,19 @@
     "links": [
       {
         "to": "ant-tunnel-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 6.8,
+          "y": 24.9
+        }
       },
       {
         "to": "ant-tunnel-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.1,
+          "y": 32.0
+        }
       }
     ],
     "npcIds": [],
@@ -864,11 +1020,19 @@
     "links": [
       {
         "to": "ant-tunnel-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 5.1,
+          "y": 38.6
+        }
       },
       {
         "to": "ant-tunnel-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.9,
+          "y": 31.0
+        }
       }
     ],
     "npcIds": [],
@@ -902,11 +1066,19 @@
     "links": [
       {
         "to": "ant-tunnel-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 6.3,
+          "y": 10.4
+        }
       },
       {
         "to": "dark-cave",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.3,
+          "y": 80.5
+        }
       }
     ],
     "npcIds": [],
@@ -944,15 +1116,27 @@
     "links": [
       {
         "to": "deep-ant-tunnel-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 8.5,
+          "y": 38.5
+        }
       },
       {
         "to": "the-cave-of-evil-eye-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 5.1,
+          "y": 76.9
+        }
       },
       {
         "to": "the-grave-of-mushmom",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 63.5,
+          "y": 20.0
+        }
       }
     ],
     "npcIds": [
@@ -1110,7 +1294,11 @@
     "links": [
       {
         "to": "3-way-road-split",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 3.8,
+          "y": 51.3
+        }
       }
     ],
     "npcIds": [],
@@ -1148,7 +1336,11 @@
     "links": [
       {
         "to": "kerning-city-construction-site",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 83.5,
+          "y": 25.2
+        }
       }
     ],
     "npcIds": [],
@@ -1186,7 +1378,11 @@
     "links": [
       {
         "to": "lorang-and-clang",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 50.5,
+          "y": 40.1
+        }
       }
     ],
     "npcIds": [],
@@ -1236,15 +1432,27 @@
     "links": [
       {
         "to": "northern-top-of-construction-site",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 69.0,
+          "y": 27.5
+        }
       },
       {
         "to": "sunset-sky",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 3.1,
+          "y": 70.9
+        }
       },
       {
         "to": "west-domain-of-perion",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 92.3,
+          "y": 78.1
+        }
       }
     ],
     "npcIds": [
@@ -1284,7 +1492,11 @@
     "links": [
       {
         "to": "damp-tree-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 61.0,
+          "y": 23.5
+        }
       }
     ],
     "npcIds": [],
@@ -1326,15 +1538,27 @@
     "links": [
       {
         "to": "damp-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 41.1,
+          "y": 23.5
+        }
       },
       {
         "to": "dangerous-croko-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 12.1,
+          "y": 44.9
+        }
       },
       {
         "to": "deep-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 92.5,
+          "y": 82.9
+        }
       }
     ],
     "npcIds": [],
@@ -1376,11 +1600,19 @@
     "links": [
       {
         "to": "dangerous-croko-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 97.6,
+          "y": 92.2
+        }
       },
       {
         "to": "the-swamp-of-despair-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 2.3,
+          "y": 93.9
+        }
       }
     ],
     "npcIds": [],
@@ -1418,15 +1650,27 @@
     "links": [
       {
         "to": "damp-tree-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 95.9,
+          "y": 90.1
+        }
       },
       {
         "to": "dangerous-croko-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 1.4,
+          "y": 90.9
+        }
       },
       {
         "to": "monkey-swamp-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 9.7,
+          "y": 4.1
+        }
       }
     ],
     "npcIds": [],
@@ -1464,11 +1708,19 @@
     "links": [
       {
         "to": "dark-cave",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 5.7,
+          "y": 19.0
+        }
       },
       {
         "to": "deep-ant-tunnel-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 90.0,
+          "y": 88.1
+        }
       }
     ],
     "npcIds": [],
@@ -1502,11 +1754,19 @@
     "links": [
       {
         "to": "dangerous-valley-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 52.2,
+          "y": 19.4
+        }
       },
       {
         "to": "deep-valley-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 19.1,
+          "y": 74.1
+        }
       }
     ],
     "npcIds": [],
@@ -1540,7 +1800,11 @@
     "links": [
       {
         "to": "dangerous-valley",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 84.1,
+          "y": 81.9
+        }
       }
     ],
     "npcIds": [],
@@ -1578,11 +1842,19 @@
     "links": [
       {
         "to": "ant-tunnel-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 5.1,
+          "y": 77.2
+        }
       },
       {
         "to": "dangerous-steam",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.9,
+          "y": 77.3
+        }
       }
     ],
     "npcIds": [],
@@ -1625,11 +1897,19 @@
     "links": [
       {
         "to": "dangerous-steam",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 17.5,
+          "y": 17.3
+        }
       },
       {
         "to": "deep-ant-tunnel-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.3,
+          "y": 78.9
+        }
       }
     ],
     "npcIds": [],
@@ -1667,11 +1947,19 @@
     "links": [
       {
         "to": "ant-tunnel-park",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 90.1,
+          "y": 70.0
+        }
       },
       {
         "to": "deep-ant-tunnel-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 5.4,
+          "y": 48.2
+        }
       }
     ],
     "npcIds": [],
@@ -1725,15 +2013,27 @@
     "links": [
       {
         "to": "damp-tree-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 17.5,
+          "y": 34.2
+        }
       },
       {
         "to": "perion-dungeon-entrance",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 84.6,
+          "y": 10.8
+        }
       },
       {
         "to": "swampy-land-in-a-deep-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 87.6,
+          "y": 94.2
+        }
       }
     ],
     "npcIds": [],
@@ -1787,15 +2087,27 @@
     "links": [
       {
         "to": "dangerous-valley",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 17.4,
+          "y": 29.2
+        }
       },
       {
         "to": "deep-valley-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 54.4,
+          "y": 91.2
+        }
       },
       {
         "to": "perion",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 69.0,
+          "y": 36.3
+        }
       }
     ],
     "npcIds": [],
@@ -1841,15 +2153,27 @@
     "links": [
       {
         "to": "deep-valley-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 64.9,
+          "y": 21.9
+        }
       },
       {
         "to": "deep-valley-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 16.3,
+          "y": 88.5
+        }
       },
       {
         "to": "the-burnt-land-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 29.9,
+          "y": 50.4
+        }
       }
     ],
     "npcIds": [],
@@ -1895,11 +2219,19 @@
     "links": [
       {
         "to": "deep-valley-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 13.8,
+          "y": 52.5
+        }
       },
       {
         "to": "perion-dungeon-entrance",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 92.2,
+          "y": 90.3
+        }
       }
     ],
     "npcIds": [],
@@ -1942,7 +2274,11 @@
     "links": [
       {
         "to": "the-forest-of-wisdom",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 83.8,
+          "y": 17.0
+        }
       }
     ],
     "npcIds": [],
@@ -1981,11 +2317,19 @@
     "links": [
       {
         "to": "the-cave-of-evil-eye-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 7.8,
+          "y": 41.4
+        }
       },
       {
         "to": "the-tunnel-that-lost-light-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 96.1,
+          "y": 38.1
+        }
       }
     ],
     "npcIds": [],
@@ -2226,15 +2570,27 @@
     "links": [
       {
         "to": "rocky-road-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 11.3,
+          "y": 19.8
+        }
       },
       {
         "to": "the-forest-north-of-ellinia",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.3,
+          "y": 95.0
+        }
       },
       {
         "to": "the-land-of-wild-boar-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 87.8,
+          "y": 9.4
+        }
       }
     ],
     "npcIds": [],
@@ -2276,15 +2632,27 @@
     "links": [
       {
         "to": "east-rocky-mountain-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 15.9,
+          "y": 17.7
+        }
       },
       {
         "to": "perion-street-corner",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 11.1,
+          "y": 60.8
+        }
       },
       {
         "to": "rocky-road-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 76.8,
+          "y": 59.2
+        }
       }
     ],
     "npcIds": [],
@@ -2322,11 +2690,19 @@
     "links": [
       {
         "to": "east-rocky-mountain-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 76.8,
+          "y": 53.7
+        }
       },
       {
         "to": "east-rocky-mountain-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 18.4,
+          "y": 21.3
+        }
       }
     ],
     "npcIds": [
@@ -2370,11 +2746,19 @@
     "links": [
       {
         "to": "east-rocky-mountain-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 76.8,
+          "y": 53.5
+        }
       },
       {
         "to": "east-rocky-mountain-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 18.2,
+          "y": 20.6
+        }
       }
     ],
     "npcIds": [],
@@ -2416,11 +2800,19 @@
     "links": [
       {
         "to": "east-rocky-mountain-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 75.8,
+          "y": 59.3
+        }
       },
       {
         "to": "east-rocky-mountain-v",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 15.8,
+          "y": 17.6
+        }
       }
     ],
     "npcIds": [],
@@ -2462,11 +2854,19 @@
     "links": [
       {
         "to": "east-rocky-mountain-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 56.8,
+          "y": 74.7
+        }
       },
       {
         "to": "east-rocky-mountain-vi",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 65.6,
+          "y": 25.3
+        }
       }
     ],
     "npcIds": [],
@@ -2512,11 +2912,19 @@
     "links": [
       {
         "to": "east-rocky-mountain-v",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 6.7,
+          "y": 80.2
+        }
       },
       {
         "to": "east-rocky-mountain-vii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 80.3,
+          "y": 29.6
+        }
       }
     ],
     "npcIds": [],
@@ -2554,7 +2962,11 @@
     "links": [
       {
         "to": "east-rocky-mountain-vi",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 10.6,
+          "y": 84.2
+        }
       }
     ],
     "npcIds": [],
@@ -2612,11 +3024,19 @@
     "links": [
       {
         "to": "3-way-road-split",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 4.8,
+          "y": 80.9
+        }
       },
       {
         "to": "a-hill-west-of-henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.5,
+          "y": 80.8
+        }
       }
     ],
     "npcIds": [],
@@ -2817,15 +3237,27 @@
     "links": [
       {
         "to": "swampy-land-in-a-deep-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 92.1,
+          "y": 65.2
+        }
       },
       {
         "to": "the-breathing-rock",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 35.1,
+          "y": 87.6
+        }
       },
       {
         "to": "the-road-to-the-dungeon",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 6.3,
+          "y": 57.5
+        }
       }
     ],
     "npcIds": [
@@ -2881,15 +3313,27 @@
     "links": [
       {
         "to": "a-hill-west-of-henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 7.1,
+          "y": 89.8
+        }
       },
       {
         "to": "henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.9,
+          "y": 89.9
+        }
       },
       {
         "to": "henesys-hunting-ground-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 64.8,
+          "y": 32.8
+        }
       }
     ],
     "npcIds": [],
@@ -2943,11 +3387,19 @@
     "links": [
       {
         "to": "henesys-hunting-ground-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 92.1,
+          "y": 87.7
+        }
       },
       {
         "to": "henesys-hunting-ground-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 65.2,
+          "y": 11.1
+        }
       }
     ],
     "npcIds": [],
@@ -2997,7 +3449,11 @@
     "links": [
       {
         "to": "henesys-hunting-ground-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 92.1,
+          "y": 87.7
+        }
       }
     ],
     "npcIds": [],
@@ -3031,7 +3487,11 @@
     "links": [
       {
         "to": "lorang-and-clang",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 2.3,
+          "y": 90.7
+        }
       }
     ],
     "npcIds": [],
@@ -3086,11 +3546,19 @@
     "links": [
       {
         "to": "hunting-ground-in-the-deep-forest-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 92.8,
+          "y": 11.0
+        }
       },
       {
         "to": "swampy-land-in-a-deep-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 6.3,
+          "y": 47.8
+        }
       }
     ],
     "npcIds": [],
@@ -3136,7 +3604,11 @@
     "links": [
       {
         "to": "hunting-ground-in-the-deep-forest-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.6,
+          "y": 72.5
+        }
       }
     ],
     "npcIds": [],
@@ -3182,15 +3654,27 @@
     "links": [
       {
         "to": "caution-falling-down",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 24.7,
+          "y": 19.8
+        }
       },
       {
         "to": "kerning-city",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 97.1,
+          "y": 26.4
+        }
       },
       {
         "to": "l-forest-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 97.0,
+          "y": 90.7
+        }
       }
     ],
     "npcIds": [
@@ -3246,15 +3730,27 @@
     "links": [
       {
         "to": "3-way-road-split",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.9,
+          "y": 83.4
+        }
       },
       {
         "to": "kerning-city-middle-forest-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 50.2,
+          "y": 19.2
+        }
       },
       {
         "to": "l-forest-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 7.5,
+          "y": 86.7
+        }
       }
     ],
     "npcIds": [],
@@ -3312,11 +3808,19 @@
     "links": [
       {
         "to": "kerning-city-middle-forest-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 67.9,
+          "y": 81.3
+        }
       },
       {
         "to": "kerning-city-middle-forest-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 57.9,
+          "y": 18.1
+        }
       }
     ],
     "npcIds": [],
@@ -3374,7 +3878,11 @@
     "links": [
       {
         "to": "kerning-city-middle-forest-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 59.2,
+          "y": 81.4
+        }
       }
     ],
     "npcIds": [],
@@ -3441,11 +3949,19 @@
     "links": [
       {
         "to": "kerning-city-construction-site",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 6.3,
+          "y": 81.7
+        }
       },
       {
         "to": "l-forest-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.9,
+          "y": 90.6
+        }
       }
     ],
     "npcIds": [],
@@ -3519,11 +4035,19 @@
     "links": [
       {
         "to": "l-forest-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 4.0,
+          "y": 89.2
+        }
       },
       {
         "to": "l-forest-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 91.1,
+          "y": 75.6
+        }
       }
     ],
     "npcIds": [],
@@ -3589,11 +4113,19 @@
     "links": [
       {
         "to": "kerning-city-middle-forest-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 97.6,
+          "y": 78.5
+        }
       },
       {
         "to": "l-forest-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 3.9,
+          "y": 81.1
+        }
       }
     ],
     "npcIds": [],
@@ -3637,11 +4169,19 @@
     "links": [
       {
         "to": "over-the-wall",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 58.2,
+          "y": 87.0
+        }
       },
       {
         "to": "perion-street-corner",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 8.9,
+          "y": 61.2
+        }
       }
     ],
     "npcIds": [],
@@ -3930,15 +4470,27 @@
     "links": [
       {
         "to": "clang-and-lorang",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 86.6,
+          "y": 82.2
+        }
       },
       {
         "to": "hot-sand",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 95.1,
+          "y": 89.5
+        }
       },
       {
         "to": "lorang-lorang",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 2.3,
+          "y": 89.5
+        }
       }
     ],
     "npcIds": [],
@@ -3972,15 +4524,27 @@
     "links": [
       {
         "to": "a-look-out-shed-around-the-beach",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 2.0,
+          "y": 92.6
+        }
       },
       {
         "to": "lorang-and-clang",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 98.1,
+          "y": 92.9
+        }
       },
       {
         "to": "lorang-lorang-lorang",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 54.1,
+          "y": 28.8
+        }
       }
     ],
     "npcIds": [],
@@ -4010,7 +4574,11 @@
     "links": [
       {
         "to": "lorang-lorang",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 39.6,
+          "y": 33.2
+        }
       }
     ],
     "npcIds": [],
@@ -4044,15 +4612,27 @@
     "links": [
       {
         "to": "monkey-forest-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 81.3,
+          "y": 23.3
+        }
       },
       {
         "to": "the-forest-of-wisdom",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 20.7,
+          "y": 15.2
+        }
       },
       {
         "to": "tree-dungeon-monkey-forest-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 48.6,
+          "y": 89.3
+        }
       }
     ],
     "npcIds": [],
@@ -4086,15 +4666,27 @@
     "links": [
       {
         "to": "monkey-forest-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 23.1,
+          "y": 16.3
+        }
       },
       {
         "to": "the-forest-of-evil-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 83.6,
+          "y": 15.6
+        }
       },
       {
         "to": "tree-dungeon-monkey-forest-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 79.4,
+          "y": 86.5
+        }
       }
     ],
     "npcIds": [],
@@ -4128,11 +4720,19 @@
     "links": [
       {
         "to": "dangerous-croko-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 22.1,
+          "y": 90.0
+        }
       },
       {
         "to": "monkey-swamp-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 50.8,
+          "y": 91.1
+        }
       }
     ],
     "npcIds": [],
@@ -4170,11 +4770,19 @@
     "links": [
       {
         "to": "monkey-swamp-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 64.9,
+          "y": 91.0
+        }
       },
       {
         "to": "monkey-swamp-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 29.2,
+          "y": 89.8
+        }
       }
     ],
     "npcIds": [],
@@ -4208,7 +4816,11 @@
     "links": [
       {
         "to": "monkey-swamp-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 15.6,
+          "y": 90.3
+        }
       }
     ],
     "npcIds": [],
@@ -4284,7 +4896,11 @@
     "links": [
       {
         "to": "construction-site-north-of-kerning-city",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 38.6,
+          "y": 25.2
+        }
       }
     ],
     "npcIds": [],
@@ -4326,7 +4942,11 @@
     "links": [
       {
         "to": "land-of-wild-boar",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 50.0,
+          "y": 83.0
+        }
       }
     ],
     "npcIds": [],
@@ -4368,11 +4988,19 @@
     "links": [
       {
         "to": "deep-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 10.4,
+          "y": 91.4
+        }
       },
       {
         "to": "deep-valley-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 80.5,
+          "y": 29.9
+        }
       }
     ],
     "npcIds": [
@@ -4420,15 +5048,27 @@
     "links": [
       {
         "to": "east-rocky-mountain-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.1,
+          "y": 26.4
+        }
       },
       {
         "to": "land-of-wild-boar",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 24.8,
+          "y": 86.3
+        }
       },
       {
         "to": "perion",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 9.3,
+          "y": 35.6
+        }
       }
     ],
     "npcIds": [],
@@ -4458,11 +5098,19 @@
     "links": [
       {
         "to": "an-empty-house",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 5.2,
+          "y": 63.4
+        }
       },
       {
         "to": "pig-park-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 96.5,
+          "y": 42.2
+        }
       }
     ],
     "npcIds": [],
@@ -4492,11 +5140,19 @@
     "links": [
       {
         "to": "pig-park",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 21.2,
+          "y": 89.7
+        }
       },
       {
         "to": "someone-elses-house",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 75.3,
+          "y": 19.3
+        }
       }
     ],
     "npcIds": [],
@@ -4534,11 +5190,19 @@
     "links": [
       {
         "to": "lith-harbor",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 5.2,
+          "y": 35.4
+        }
       },
       {
         "to": "thicket-around-the-beach-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.5,
+          "y": 46.3
+        }
       }
     ],
     "npcIds": [],
@@ -4584,11 +5248,19 @@
     "links": [
       {
         "to": "east-rocky-mountain-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 12.8,
+          "y": 55.7
+        }
       },
       {
         "to": "rocky-road-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 76.5,
+          "y": 54.2
+        }
       }
     ],
     "npcIds": [],
@@ -4642,11 +5314,19 @@
     "links": [
       {
         "to": "rocky-road-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 12.8,
+          "y": 57.1
+        }
       },
       {
         "to": "rocky-road-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 76.5,
+          "y": 55.6
+        }
       }
     ],
     "npcIds": [],
@@ -4692,11 +5372,19 @@
     "links": [
       {
         "to": "east-domain-of-perion",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 78.1,
+          "y": 54.1
+        }
       },
       {
         "to": "rocky-road-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 13.1,
+          "y": 56.1
+        }
       }
     ],
     "npcIds": [],
@@ -4726,11 +5414,19 @@
     "links": [
       {
         "to": "another-path",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 2.3,
+          "y": 57.8
+        }
       },
       {
         "to": "sanctuary-entrance-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.9,
+          "y": 62.5
+        }
       }
     ],
     "npcIds": [],
@@ -4760,11 +5456,19 @@
     "links": [
       {
         "to": "sanctuary-entrance-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 5.9,
+          "y": 47.6
+        }
       },
       {
         "to": "sanctuary-entrance-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 98.0,
+          "y": 53.1
+        }
       }
     ],
     "npcIds": [],
@@ -4795,11 +5499,19 @@
     "links": [
       {
         "to": "sanctuary-entrance-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 3.4,
+          "y": 50.5
+        }
       },
       {
         "to": "sanctuary-entrance-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 97.2,
+          "y": 34.5
+        }
       }
     ],
     "npcIds": [],
@@ -4830,7 +5542,11 @@
     "links": [
       {
         "to": "sanctuary-entrance-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 4.0,
+          "y": 43.1
+        }
       }
     ],
     "npcIds": [],
@@ -4884,11 +5600,19 @@
     "links": [
       {
         "to": "sleepy-dungeon-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 21.8,
+          "y": 84.5
+        }
       },
       {
         "to": "sleepywood",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 68.8,
+          "y": 12.7
+        }
       }
     ],
     "npcIds": [
@@ -4944,11 +5668,19 @@
     "links": [
       {
         "to": "sleepy-dungeon-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 9.7,
+          "y": 6.3
+        }
       },
       {
         "to": "sleepy-dungeon-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 34.7,
+          "y": 84.2
+        }
       }
     ],
     "npcIds": [],
@@ -4991,11 +5723,19 @@
     "links": [
       {
         "to": "sleepy-dungeon-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 30.7,
+          "y": 6.3
+        }
       },
       {
         "to": "sleepy-dungeon-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 75.7,
+          "y": 86.9
+        }
       }
     ],
     "npcIds": [],
@@ -5039,11 +5779,19 @@
     "links": [
       {
         "to": "sleepy-dungeon-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 74.7,
+          "y": 8.5
+        }
       },
       {
         "to": "sleepy-dungeon-v",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 15.2,
+          "y": 83.3
+        }
       }
     ],
     "npcIds": [],
@@ -5095,7 +5843,11 @@
     "links": [
       {
         "to": "sleepy-dungeon-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 7.9,
+          "y": 5.5
+        }
       }
     ],
     "npcIds": [],
@@ -5205,11 +5957,19 @@
     "links": [
       {
         "to": "construction-site-north-of-kerning-city",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.5,
+          "y": 74.9
+        }
       },
       {
         "to": "kerning-city",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 2.4,
+          "y": 80.2
+        }
       }
     ],
     "npcIds": [],
@@ -5259,19 +6019,35 @@
     "links": [
       {
         "to": "deep-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 83.3,
+          "y": 10.3
+        }
       },
       {
         "to": "henesys-dungeon-entrance",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 19.2,
+          "y": 32.3
+        }
       },
       {
         "to": "hunting-ground-in-the-deep-forest-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 91.7,
+          "y": 94.3
+        }
       },
       {
         "to": "sleepywood",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 79.8,
+          "y": 80.7
+        }
       }
     ],
     "npcIds": [],
@@ -5313,7 +6089,11 @@
     "links": [
       {
         "to": "the-forest-east-of-henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 91.3,
+          "y": 69.8
+        }
       }
     ],
     "npcIds": [],
@@ -5352,11 +6132,19 @@
     "links": [
       {
         "to": "henesys-dungeon-entrance",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 19.1,
+          "y": 75.3
+        }
       },
       {
         "to": "the-entrance-of-golems-temple",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 53.3,
+          "y": 28.9
+        }
       }
     ],
     "npcIds": [],
@@ -5390,11 +6178,19 @@
     "links": [
       {
         "to": "deep-valley-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 5.1,
+          "y": 55.7
+        }
       },
       {
         "to": "the-burnt-land-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 66.8,
+          "y": 21.7
+        }
       }
     ],
     "npcIds": [],
@@ -5428,11 +6224,19 @@
     "links": [
       {
         "to": "the-burnt-land-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 30.5,
+          "y": 21.9
+        }
       },
       {
         "to": "the-burnt-land-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 81.0,
+          "y": 41.4
+        }
       }
     ],
     "npcIds": [],
@@ -5466,11 +6270,19 @@
     "links": [
       {
         "to": "the-burnt-land-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 3.2,
+          "y": 56.8
+        }
       },
       {
         "to": "the-burnt-land-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 23.1,
+          "y": 22.0
+        }
       }
     ],
     "npcIds": [],
@@ -5508,11 +6320,19 @@
     "links": [
       {
         "to": "the-burnt-land-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 3.2,
+          "y": 56.8
+        }
       },
       {
         "to": "the-burnt-land-v",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 23.1,
+          "y": 22.0
+        }
       }
     ],
     "npcIds": [],
@@ -5550,7 +6370,11 @@
     "links": [
       {
         "to": "the-burnt-land-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 30.5,
+          "y": 21.9
+        }
       }
     ],
     "npcIds": [],
@@ -5585,11 +6409,19 @@
     "links": [
       {
         "to": "ant-tunnel-park",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 30.8,
+          "y": 21.4
+        }
       },
       {
         "to": "the-cave-of-evil-eye-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 69.3,
+          "y": 90.9
+        }
       }
     ],
     "npcIds": [],
@@ -5624,11 +6456,19 @@
     "links": [
       {
         "to": "the-cave-of-evil-eye-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 38.0,
+          "y": 18.8
+        }
       },
       {
         "to": "the-cave-of-evil-eye-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 27.9,
+          "y": 90.0
+        }
       }
     ],
     "npcIds": [],
@@ -5663,11 +6503,19 @@
     "links": [
       {
         "to": "the-cave-of-evil-eye-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 58.7,
+          "y": 16.8
+        }
       },
       {
         "to": "the-cave-of-evil-eye-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 68.5,
+          "y": 89.1
+        }
       }
     ],
     "npcIds": [],
@@ -5702,11 +6550,19 @@
     "links": [
       {
         "to": "drake-hunting-ground",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 76.6,
+          "y": 90.5
+        }
       },
       {
         "to": "the-cave-of-evil-eye-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 22.6,
+          "y": 22.3
+        }
       }
     ],
     "npcIds": [],
@@ -5799,11 +6655,19 @@
     "links": [
       {
         "to": "ellinia",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 90.8,
+          "y": 50.7
+        }
       },
       {
         "to": "the-forest-of-wisdom",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 11.6,
+          "y": 92.0
+        }
       }
     ],
     "npcIds": [
@@ -5843,11 +6707,19 @@
     "links": [
       {
         "to": "ellinia",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 91.2,
+          "y": 84.3
+        }
       },
       {
         "to": "the-tree-that-grew-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 9.0,
+          "y": 62.5
+        }
       }
     ],
     "npcIds": [
@@ -5911,15 +6783,27 @@
     "links": [
       {
         "to": "the-blue-mushroom-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 25.0,
+          "y": 15.8
+        }
       },
       {
         "to": "the-forest-south-of-ellinia",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 96.9,
+          "y": 42.0
+        }
       },
       {
         "to": "the-rain-forest-east-of-henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 4.4,
+          "y": 86.4
+        }
       }
     ],
     "npcIds": [],
@@ -5961,47 +6845,91 @@
     "links": [
       {
         "to": "east-domain-of-perion",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 5.5,
+          "y": 83.6
+        }
       },
       {
         "to": "the-tree-that-grew-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 92.5,
+          "y": 95.9
+        }
       },
       {
         "to": "tree-dungeon-forest-up-north-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 76.5,
+          "y": 82.1
+        }
       },
       {
         "to": "tree-dungeon-forest-up-north-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 16.2,
+          "y": 81.1
+        }
       },
       {
         "to": "tree-dungeon-forest-up-north-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 50.6,
+          "y": 28.6
+        }
       },
       {
         "to": "tree-dungeon-forest-up-north-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 29.0,
+          "y": 18.9
+        }
       },
       {
         "to": "tree-dungeon-forest-up-north-ix",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 32.1,
+          "y": 6.9
+        }
       },
       {
         "to": "tree-dungeon-forest-up-north-v",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 77.3,
+          "y": 17.9
+        }
       },
       {
         "to": "tree-dungeon-forest-up-north-vi",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 76.5,
+          "y": 41.3
+        }
       },
       {
         "to": "tree-dungeon-forest-up-north-vii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 13.2,
+          "y": 31.5
+        }
       },
       {
         "to": "tree-dungeon-forest-up-north-viii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 16.1,
+          "y": 11.1
+        }
       }
     ],
     "npcIds": [
@@ -6038,11 +6966,19 @@
     "links": [
       {
         "to": "monkey-forest-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 23.1,
+          "y": 16.0
+        }
       },
       {
         "to": "the-forest-of-evil-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 80.6,
+          "y": 16.5
+        }
       }
     ],
     "npcIds": [],
@@ -6077,7 +7013,11 @@
     "links": [
       {
         "to": "the-forest-of-evil-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 23.1,
+          "y": 16.0
+        }
       }
     ],
     "npcIds": [],
@@ -6115,19 +7055,35 @@
     "links": [
       {
         "to": "downstairs-at-the-forest",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 79.4,
+          "y": 92.5
+        }
       },
       {
         "to": "monkey-forest-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 26.9,
+          "y": 11.5
+        }
       },
       {
         "to": "the-field-south-of-ellinia",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.2,
+          "y": 68.1
+        }
       },
       {
         "to": "the-forest-south-of-ellinia",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 6.1,
+          "y": 67.7
+        }
       }
     ],
     "npcIds": [],
@@ -6173,27 +7129,51 @@
     "links": [
       {
         "to": "dungeon-southern-forest-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 8.0,
+          "y": 74.2
+        }
       },
       {
         "to": "dungeon-southern-forest-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 25.6,
+          "y": 29.6
+        }
       },
       {
         "to": "dungeon-southern-forest-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 77.4,
+          "y": 15.9
+        }
       },
       {
         "to": "dungeon-southern-forest-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 89.4,
+          "y": 19.2
+        }
       },
       {
         "to": "the-forest-east-of-henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 4.3,
+          "y": 92.5
+        }
       },
       {
         "to": "the-forest-of-wisdom",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.0,
+          "y": 13.1
+        }
       }
     ],
     "npcIds": [],
@@ -6232,7 +7212,11 @@
     "links": [
       {
         "to": "ant-tunnel-park",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 48.1,
+          "y": 30.3
+        }
       }
     ],
     "npcIds": [],
@@ -6286,11 +7270,19 @@
     "links": [
       {
         "to": "henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 4.4,
+          "y": 88.2
+        }
       },
       {
         "to": "the-rain-forest-east-of-henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.2,
+          "y": 88.2
+        }
       }
     ],
     "npcIds": [
@@ -6334,7 +7326,11 @@
     "links": [
       {
         "to": "east-domain-of-perion",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 85.7,
+          "y": 68.3
+        }
       }
     ],
     "npcIds": [],
@@ -6380,7 +7376,11 @@
     "links": [
       {
         "to": "3-way-road-split",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 20.5,
+          "y": 27.1
+        }
       }
     ],
     "npcIds": [],
@@ -6414,11 +7414,19 @@
     "links": [
       {
         "to": "the-forest-east-of-henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 95.0,
+          "y": 69.5
+        }
       },
       {
         "to": "the-hill-east-of-henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 7.3,
+          "y": 68.9
+        }
       }
     ],
     "npcIds": [],
@@ -6480,11 +7488,19 @@
     "links": [
       {
         "to": "henesys",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 6.5,
+          "y": 79.3
+        }
       },
       {
         "to": "henesys-dungeon-entrance",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 95.0,
+          "y": 83.0
+        }
       }
     ],
     "npcIds": [
@@ -6528,11 +7544,19 @@
     "links": [
       {
         "to": "kerning-city",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 2.7,
+          "y": 87.8
+        }
       },
       {
         "to": "the-swamp-of-despair-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 96.5,
+          "y": 90.7
+        }
       }
     ],
     "npcIds": [],
@@ -6574,11 +7598,19 @@
     "links": [
       {
         "to": "the-swamp-of-despair-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 4.6,
+          "y": 89.3
+        }
       },
       {
         "to": "the-swamp-of-despair-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.7,
+          "y": 85.5
+        }
       }
     ],
     "npcIds": [
@@ -6618,11 +7650,19 @@
     "links": [
       {
         "to": "dangerous-croko-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 88.9,
+          "y": 92.6
+        }
       },
       {
         "to": "the-swamp-of-despair-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 3.2,
+          "y": 91.2
+        }
       }
     ],
     "npcIds": [],
@@ -6660,15 +7700,27 @@
     "links": [
       {
         "to": "the-field-up-north-of-ellinia",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.0,
+          "y": 86.7
+        }
       },
       {
         "to": "the-forest-north-of-ellinia",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 10.5,
+          "y": 89.9
+        }
       },
       {
         "to": "the-tree-that-grew-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 23.5,
+          "y": 23.7
+        }
       }
     ],
     "npcIds": [],
@@ -6706,11 +7758,19 @@
     "links": [
       {
         "to": "the-tree-that-grew-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 82.4,
+          "y": 88.6
+        }
       },
       {
         "to": "the-tree-that-grew-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 20.5,
+          "y": 13.7
+        }
       }
     ],
     "npcIds": [],
@@ -6748,7 +7808,11 @@
     "links": [
       {
         "to": "the-tree-that-grew-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 82.7,
+          "y": 86.6
+        }
       }
     ],
     "npcIds": [
@@ -6784,11 +7848,19 @@
     "links": [
       {
         "to": "drake-hunting-ground",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 8.8,
+          "y": 18.9
+        }
       },
       {
         "to": "the-tunnel-that-lost-light-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.8,
+          "y": 92.9
+        }
       }
     ],
     "npcIds": [],
@@ -6822,11 +7894,19 @@
     "links": [
       {
         "to": "another-entrance",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 90.0,
+          "y": 93.9
+        }
       },
       {
         "to": "the-tunnel-that-lost-light-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 6.2,
+          "y": 25.2
+        }
       }
     ],
     "npcIds": [],
@@ -6872,11 +7952,19 @@
     "links": [
       {
         "to": "right-around-lith-harbor",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 5.1,
+          "y": 82.0
+        }
       },
       {
         "to": "thicket-around-the-beach-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 92.6,
+          "y": 87.9
+        }
       }
     ],
     "npcIds": [],
@@ -6918,11 +8006,19 @@
     "links": [
       {
         "to": "thicket-around-the-beach-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 8.5,
+          "y": 82.8
+        }
       },
       {
         "to": "thicket-around-the-beach-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 92.1,
+          "y": 82.8
+        }
       }
     ],
     "npcIds": [],
@@ -6973,11 +8069,19 @@
     "links": [
       {
         "to": "3-way-road-split",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.0,
+          "y": 74.1
+        }
       },
       {
         "to": "thicket-around-the-beach-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 7.2,
+          "y": 86.5
+        }
       }
     ],
     "npcIds": [],
@@ -7007,15 +8111,27 @@
     "links": [
       {
         "to": "line-1-area-1",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 17.9,
+          "y": 45.3
+        }
       },
       {
         "to": "line-1-area-2",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 82.2,
+          "y": 43.7
+        }
       },
       {
         "to": "line-2-area-1",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 81.8,
+          "y": 83.9
+        }
       }
     ],
     "npcIds": [],
@@ -7449,11 +8565,19 @@
     "links": [
       {
         "to": "construction-site-north-of-kerning-city",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 10.1,
+          "y": 77.4
+        }
       },
       {
         "to": "west-rocky-mountain-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 93.7,
+          "y": 23.0
+        }
       }
     ],
     "npcIds": [],
@@ -7491,15 +8615,27 @@
     "links": [
       {
         "to": "west-domain-of-perion",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 10.6,
+          "y": 57.3
+        }
       },
       {
         "to": "west-rocky-mountain-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 43.0,
+          "y": 23.3
+        }
       },
       {
         "to": "west-street-corner-of-perion",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.5,
+          "y": 50.5
+        }
       }
     ],
     "npcIds": [],
@@ -7541,11 +8677,19 @@
     "links": [
       {
         "to": "west-rocky-mountain-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 50.7,
+          "y": 52.9
+        }
       },
       {
         "to": "west-rocky-mountain-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 54.0,
+          "y": 17.0
+        }
       }
     ],
     "npcIds": [],
@@ -7595,11 +8739,19 @@
     "links": [
       {
         "to": "west-rocky-mountain-ii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 15.2,
+          "y": 70.3
+        }
       },
       {
         "to": "west-rocky-mountain-iv",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 56.2,
+          "y": 15.4
+        }
       }
     ],
     "npcIds": [],
@@ -7641,7 +8793,11 @@
     "links": [
       {
         "to": "west-rocky-mountain-iii",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 22.4,
+          "y": 50.7
+        }
       }
     ],
     "npcIds": [
@@ -7685,11 +8841,19 @@
     "links": [
       {
         "to": "perion",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 94.9,
+          "y": 69.5
+        }
       },
       {
         "to": "west-rocky-mountain-i",
-        "kind": "portal"
+        "kind": "portal",
+        "pos": {
+          "x": 2.6,
+          "y": 74.3
+        }
       }
     ],
     "npcIds": [],
