@@ -31,7 +31,7 @@ export type GameRules = {
   jobs: JobInfo[];
   regions: Named[];
   bosses: Named[];
-  partyQuests: (Named & { town: string; minLevel: number })[];
+  partyQuests: (Named & { town: string; minLevel: number; finalBoss?: string })[];
   crafting: (Named & { npc: string; minLevel: number })[];
   citizenship: {
     minLevel: number;

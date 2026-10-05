@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { toast } from "../ui/overlays";
 import { motion } from "motion/react";
-import { ChartSpline, Gem, Home as HomeIcon, Leaf, Newspaper, NotebookPen, ScrollText, Settings, Shield, Swords, Users } from "lucide-react";
+import { ChartSpline, Gem, Home as HomeIcon, Leaf, Newspaper, NotebookPen, ScrollText, Search, Settings, Shield, Swords, Users } from "lucide-react";
 import { jobName } from "../data/gameRules";
 import { CharacterSheet } from "../features/characters/CharacterSheet";
 import { CharactersScreen, Portrait } from "../features/characters/CharactersScreen";
@@ -16,12 +16,13 @@ import { QuestsScreen } from "../features/quests/QuestsScreen";
 import { ProjectionsScreen } from "../features/projections/ProjectionsScreen";
 import { formatWhen } from "../lib/sydney";
 import { Button, IconButton, LargeTitle, Stepper, spring } from "../ui/kit";
-import { navigate, useActiveProfile, usePack, usePackInfo, usePlatform, useProfileStore, useProfiles, useRoute, useRules } from "./context";
+import { navigate, useActiveProfile, usePack, usePackInfo, usePlatform, useProfileStore, useProfiles, useRoute, useRouteQuery, useRules } from "./context";
 import { useUpdates } from "./updates";
 import { useNews } from "../features/news/store";
 import { NewsScreen } from "../features/news/NewsScreen";
 import { MapsScreen } from "../features/maps/MapsScreen";
 import { LevelUpBurst } from "../ui/LevelUpBurst";
+import { CommandPalette, useSearch } from "../features/search/CommandPalette";
 import { relativeTime } from "../features/characters/hooks";
 import { useNow } from "../features/guide/parts";
 
@@ -131,6 +132,22 @@ function NoticeBar() {
   );
 }
 
+function SearchButton() {
+  const openSearch = useSearch((s) => s.setOpen);
+  return (
+    <button
+      type="button"
+      onClick={() => openSearch(true)}
+      className="glass hidden items-center gap-2 rounded-full py-2 pl-3 pr-2 text-[13px] text-ink-3 hover:text-ink lg:inline-flex"
+      title="Search (Ctrl+K)"
+    >
+      <Search size={15} />
+      Search
+      <kbd className="rounded-md border border-hairline px-1.5 text-[11px]">Ctrl K</kbd>
+    </button>
+  );
+}
+
 /** Plan §7.2: "Data v2026.10.07-1 · checked 12 s ago" / "Offline · data from …" — click to check now. */
 function FreshnessPill() {
   const pack = usePack();
@@ -198,6 +215,7 @@ function TopBar() {
       )}
       <div className="flex items-center gap-2">
         <FreshnessPill />
+        <SearchButton />
         <Button onClick={() => openNote(true)} title="Quick note (Ctrl+N)">
           <NotebookPen size={17} strokeWidth={2.2} />
           Quick note
@@ -212,6 +230,7 @@ function TopBar() {
 
 function Routes() {
   const route = useRoute();
+  const query = useRouteQuery().get("q") ?? "";
   const m = /^\/characters\/([0-9a-f-]{36})$/i.exec(route);
   if (m) return <CharacterSheet profileId={m[1]!} />;
   switch (route) {
@@ -224,15 +243,15 @@ function Routes() {
     case "/plan":
       return <ProjectionsScreen />;
     case "/loot":
-      return <LootScreen />;
+      return <LootScreen key={query} initialQuery={query} />;
     case "/gear":
       return <GearScreen />;
     case "/quests":
-      return <QuestsScreen />;
+      return <QuestsScreen key={query} initialQuery={query} />;
     case "/news":
       return <NewsScreen />;
     case "/maps":
-      return <MapsScreen />;
+      return <MapsScreen key={query} initialQuery={query} />;
     default:
       return <HomeScreen />;
   }
@@ -259,9 +278,15 @@ function useLastView() {
 
 function useShortcuts() {
   const openNote = useQuickNote((s) => s.setOpen);
+  const openSearch = useSearch((s) => s.setOpen);
   useEffect(() => {
     const on = (e: KeyboardEvent) => {
       if (!e.ctrlKey || e.altKey || e.metaKey) return;
+      if (e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        openSearch(true);
+        return;
+      }
       if (e.key.toLowerCase() === "n") {
         e.preventDefault();
         openNote(true);
@@ -275,7 +300,7 @@ function useShortcuts() {
     };
     window.addEventListener("keydown", on);
     return () => window.removeEventListener("keydown", on);
-  }, [openNote]);
+  }, [openNote, openSearch]);
 }
 
 function NavRail() {
@@ -352,6 +377,7 @@ export function Shell() {
         </main>
       </div>
       <QuickNoteDialog />
+      <CommandPalette />
     </div>
   );
 }

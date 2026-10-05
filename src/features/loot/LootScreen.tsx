@@ -89,10 +89,10 @@ function ItemRow({ pack, profile, item }: { pack: Pack; profile: Profile; item: 
   );
 }
 
-export function LootScreen() {
+export function LootScreen({ initialQuery = "" }: { initialQuery?: string }) {
   const pack = usePack();
   const profile = useActiveProfile();
-  const [q, setQ] = useState("");
+  const [q, setQ] = useState(initialQuery);
   const results = useMemo(() => {
     if (!pack || q.trim().length < 2) return [];
     const needle = q.trim().toLowerCase();

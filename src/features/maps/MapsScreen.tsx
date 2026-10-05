@@ -10,11 +10,11 @@ import { mapName, mobName, regionName, sceneHue } from "../guide/text";
 
 // P6-T5: maps by region, highlighting the recommended spot and quest targets.
 
-export function MapsScreen() {
+export function MapsScreen({ initialQuery = "" }: { initialQuery?: string }) {
   const pack = usePack();
   const profile = useActiveProfile();
   const plan = useTrainingPlan(profile);
-  const [q, setQ] = useState("");
+  const [q, setQ] = useState(initialQuery);
   const highlights = useMemo(() => {
     const train = new Set([plan?.primary?.mapId, ...(plan?.backups.map((b) => b.mapId) ?? [])].filter(Boolean) as string[]);
     const questMaps = new Set<string>();

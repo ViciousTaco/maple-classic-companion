@@ -4,7 +4,7 @@ import { Check, Crown, MapPin, ScrollText, Sparkles } from "lucide-react";
 import type { Pack } from "../../data/pack";
 import type { Quest } from "../../data/schema/pack";
 import type { Profile } from "../../data/schema/profile";
-import { useActiveProfile, usePack, useProfileStore, useRules } from "../../app/context";
+import { navigate, useActiveProfile, usePack, useProfileStore, useRules } from "../../app/context";
 import { jobById, jobName, nextAdvancement, type GameRules } from "../../data/gameRules";
 import { availableQuests, comingSoon, rankQuests } from "../../engine/quests";
 import { Button, Card, Chip, EmptyState, LargeTitle, Section, Sections, Segmented, spring } from "../../ui/kit";
@@ -162,7 +162,7 @@ function QuestBody({ pack, profile, quest }: { pack: Pack; profile: Profile; que
 
 type Tab = "available" | "soon" | "done";
 
-export function QuestsScreen() {
+export function QuestsScreen({ initialQuery = "" }: { initialQuery?: string }) {
   const pack = usePack();
   const rules = useRules();
   const profile = useActiveProfile();
@@ -179,7 +179,10 @@ export function QuestsScreen() {
   }, [pack, profile, now]);
   if (!profile) return <EmptyState title="Pick a character to get started" />;
   if (!pack || !lists) return <EmptyState title="The guide data isn't loaded" />;
-  const list = lists[tab];
+  // Opened from search: show the matching quests from every list.
+  const needle = initialQuery.trim().toLowerCase();
+  const found = needle ? pack.quests.filter((x) => x.name.toLowerCase().includes(needle)) : null;
+  const list = found ?? lists[tab];
   const top = tab === "available" ? list.slice(0, 5) : list;
   const rest = tab === "available" ? list.slice(5) : [];
 
@@ -199,6 +202,14 @@ export function QuestsScreen() {
           ]}
         />
       </div>
+      {found && (
+        <p className="flex items-center gap-2 text-sm text-ink-2">
+          Showing quests matching "{initialQuery}" ·
+          <button type="button" className="font-semibold text-sky hover:underline" onClick={() => navigate("/quests")}>
+            show all
+          </button>
+        </p>
+      )}
       <JobAdvanceCard rules={rules} pack={pack} profile={profile} />
       {list.length === 0 ? (
         <EmptyState title={tab === "done" ? "Nothing finished yet" : "No quests in the guide data for this yet"} icon={tab === "done" ? <Check size={20} /> : <ScrollText size={20} />}>

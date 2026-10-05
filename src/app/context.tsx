@@ -42,14 +42,25 @@ function currentHash(): string {
   return h.startsWith("/") ? h : "/home";
 }
 
-export function useRoute(): string {
-  const [route, setRoute] = useState(currentHash);
+function useHash(): string {
+  const [hash, setHash] = useState(currentHash);
   useEffect(() => {
-    const on = () => setRoute(currentHash());
+    const on = () => setHash(currentHash());
     window.addEventListener("hashchange", on);
     return () => window.removeEventListener("hashchange", on);
   }, []);
-  return route;
+  return hash;
+}
+
+/** The current screen path, without any `?query`. */
+export function useRoute(): string {
+  return useHash().split("?")[0]!;
+}
+
+/** `?q=…` etc. from the current hash (search results open screens pre-filtered). */
+export function useRouteQuery(): URLSearchParams {
+  const hash = useHash();
+  return new URLSearchParams(hash.includes("?") ? hash.slice(hash.indexOf("?") + 1) : "");
 }
 
 export function navigate(path: string) {

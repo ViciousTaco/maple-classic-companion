@@ -13,6 +13,7 @@ import { useQuickNote } from "../notes/QuickNote";
 import { ConfidenceChip, ExternalLinkButton, Scene, useNow, useTrainingPlan } from "../guide/parts";
 import { RouteView } from "../guide/RouteView";
 import { EntityImage } from "../guide/EntityImage";
+import { PartyHelper } from "../party/PartyHelper";
 import { mapName, meowdbUrl, mobName, rangeText, reasonText, regionName, sceneHue, warningText } from "../guide/text";
 import { YouTubeLite } from "../../ui/YouTubeLite";
 import { questUses, TIER_ORDER, TIER_STYLE, valueTier } from "../guide/value";
@@ -439,11 +440,20 @@ export function TrainScreen() {
           </Section>
         )}
 
-        {plan.partySpots.length > 0 && (
-          <Section value="party" title="Needs a party" summary={`${plan.partySpots.length} spot${plan.partySpots.length === 1 ? "" : "s"}`}>
-            <PartyList pack={pack} recs={plan.partySpots} />
-          </Section>
-        )}
+        <Section value="party" title="Party up" summary="party quest + a ready-to-paste recruiting message">
+          {plan.partySpots.length > 0 && (
+            <div className="mb-4">
+              <p className="mb-1 text-sm font-semibold text-ink-2">Party-only spots</p>
+              <PartyList pack={pack} recs={plan.partySpots} />
+            </div>
+          )}
+          <PartyHelper
+            pack={pack}
+            rules={rules}
+            profile={profile}
+            spots={[hero, ...others].filter((r) => pack.index.spotById.get(r.spotId)?.party !== "solo")}
+          />
+        </Section>
       </Sections>
 
       <Dialog wide open={routeTo !== null} onOpenChange={(o) => !o && setRouteTo(null)} title={`How to get to ${routeTo ? mapName(pack, routeTo) : ""}`}>
