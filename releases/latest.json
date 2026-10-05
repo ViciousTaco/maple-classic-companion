@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "notes": "First public release: training spots with backups, loot, gear and stat advice, quests and routes, map browser, live news and events in Sydney time, projections, live updates.",
+  "notes": "First public release: training spots with backups and turn-by-turn routes, loot tiers, gear and stat advice, quests, map browser, live news and events in Sydney time, projections, live updates.",
   "url": "https://github.com/ViciousTaco/maple-classic-companion/releases/download/v1.0.0/MapleClassicCompanion.exe",
-  "sha256": "3b9faeea7fea1d398cf0199b023cb5d77d4e9b859a58655bfedc5ab939d2aac0",
-  "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVScWRSNE4ycFZ4Qks3TnJCekdVUFVzSDlYSHF1TmZUeWJZbG1rVUpUV21NSWZ6bUNmamJ4TU1kdDFSMWoyZlh5cFdNeGFjTUJJTVF1VVJMOXJEa1BnVFJ3M05hRXVxbEE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxMjI2MjY4CWZpbGU6TWFwbGVDbGFzc2ljQ29tcGFuaW9uLmV4ZQoxYjlxeDR4TkdQanY1Y1JjbittY2lWUHlqMkptZmhoeEZVS09mODNGZUxpMVJmalhkS0hxMWMrVjFuUGVhaEZIR3lQdGEvbHIyUEM1V2xWOTUzN3VDQT09Cg=="
+  "sha256": "4e26bc4a5301ce16cb32bef8b2ce152897236e1e01286424e6ce2f7c198c82ab",
+  "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVScWRSNE4ycFZ4QkZWM1REYWxLczFVU2d1TXdDSkl1Q1NSQ2Z2SmgzU2l2Y2ZpSTRkYzhuVUdubWEvdEsxaXQvY2dWOTMydzM1ZVI5NHBPUUloY3BhSzJaTGlEUDZFQ0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxMjI3NTQ1CWZpbGU6TWFwbGVDbGFzc2ljQ29tcGFuaW9uLmV4ZQo1V2Via0FlM3FRb0poUDF3RG5XOHV3ZjNta2treDZESlY0QlNFQ3BrcExjS1B4K2E3Mk16MllxcTFtK01sWW9YdGc5ZTkxeHpSWWxMVWdJdXlENFREQT09Cg=="
 }

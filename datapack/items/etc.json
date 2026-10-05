@@ -22,11 +22,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Adamantium_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/2/29/Adamantium_Ore.png"
+    "image": "https://mapleclassic.wiki/images/2/29/Adamantium_Ore.png",
+    "npcSellMeso": 60
   },
   {
     "id": "amethyst-ore",
@@ -51,11 +58,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Amethyst_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/9/9f/Amethyst_Ore.png"
+    "image": "https://mapleclassic.wiki/images/9/9f/Amethyst_Ore.png",
+    "npcSellMeso": 200
   },
   {
     "id": "animal-fossil",
@@ -68,11 +82,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Animal_Fossil",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/8/85/Animal_Fossil.png"
+    "image": "https://mapleclassic.wiki/images/8/85/Animal_Fossil.png",
+    "npcSellMeso": 1
   },
   {
     "id": "animal-fur-bundle",
@@ -97,11 +118,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Stirge",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Animal_Fur_Bundle",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/b/b6/Animal_Fur_Bundle.png"
+    "image": "https://mapleclassic.wiki/images/b/b6/Animal_Fur_Bundle.png",
+    "npcSellMeso": 10
   },
   {
     "id": "aquamarine-ore",
@@ -126,11 +154,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Ligator",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aquamarine_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/5/53/Aquamarine_Ore.png"
+    "image": "https://mapleclassic.wiki/images/5/53/Aquamarine_Ore.png",
+    "npcSellMeso": 40
   },
   {
     "id": "aqumander-tail",
@@ -143,11 +178,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Aqumander",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Aqumander_Tail",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/9/91/Aqumander_Tail.png"
+    "image": "https://mapleclassic.wiki/images/9/91/Aqumander_Tail.png",
+    "npcSellMeso": 43
   },
   {
     "id": "arwens-glass-shoe",
@@ -160,11 +202,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Arwen's_Glass_Shoe",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/c/c6/Arwen%27s_Glass_Shoe.png"
+    "image": "https://mapleclassic.wiki/images/c/c6/Arwen%27s_Glass_Shoe.png",
+    "npcSellMeso": 250
   },
   {
     "id": "black-crystal-ore",
@@ -177,11 +226,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Malady",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Black_Crystal_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/0/0b/Black_Crystal_Ore.png"
+    "image": "https://mapleclassic.wiki/images/0/0b/Black_Crystal_Ore.png",
+    "npcSellMeso": 500
   },
   {
     "id": "blue-mushroom-cap",
@@ -194,11 +250,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Mushroom_Cap",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/b/ba/Blue_Mushroom_Cap.png"
+    "image": "https://mapleclassic.wiki/images/b/ba/Blue_Mushroom_Cap.png",
+    "npcSellMeso": 19
   },
   {
     "id": "blue-snail-shell",
@@ -211,11 +274,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Blue_Snail_Shell",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/4/41/Blue_Snail_Shell.png"
+    "image": "https://mapleclassic.wiki/images/4/41/Blue_Snail_Shell.png",
+    "npcSellMeso": 2
   },
   {
     "id": "broken-mirror-glass",
@@ -257,11 +327,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Orange_Mushroom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bronze_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/0/03/Bronze_Ore.png"
+    "image": "https://mapleclassic.wiki/images/0/03/Bronze_Ore.png",
+    "npcSellMeso": 20
   },
   {
     "id": "bubblings-huge-bubble",
@@ -274,11 +351,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Bubbling",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Bubbling's_Huge_Bubble",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/c/c7/Bubbling%27s_Huge_Bubble.png"
+    "image": "https://mapleclassic.wiki/images/c/c7/Bubbling%27s_Huge_Bubble.png",
+    "npcSellMeso": 15
   },
   {
     "id": "charm-of-the-undead",
@@ -291,11 +375,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Zombie_Mushroom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Charm_of_the_Undead",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/e/ef/Charm_of_the_Undead.png"
+    "image": "https://mapleclassic.wiki/images/e/ef/Charm_of_the_Undead.png",
+    "npcSellMeso": 24
   },
   {
     "id": "clang-claw",
@@ -308,11 +399,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Clang",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Clang_Claw",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/3/39/Clang_Claw.png"
+    "image": "https://mapleclassic.wiki/images/3/39/Clang_Claw.png",
+    "npcSellMeso": 49
   },
   {
     "id": "cold-eye-tail",
@@ -325,11 +423,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Cold_Eye",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Cold_Eye_Tail",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/a/a1/Cold_Eye_Tail.png"
+    "image": "https://mapleclassic.wiki/images/a/a1/Cold_Eye_Tail.png",
+    "npcSellMeso": 41
   },
   {
     "id": "croco-skin",
@@ -342,11 +447,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Croco",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Croco_Skin",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/9/9b/Croco_Skin.png"
+    "image": "https://mapleclassic.wiki/images/9/9b/Croco_Skin.png",
+    "npcSellMeso": 52
   },
   {
     "id": "curse-eye-tail",
@@ -359,11 +471,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Curse_Eye_Tail",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/3/31/Curse_Eye_Tail.png"
+    "image": "https://mapleclassic.wiki/images/3/31/Curse_Eye_Tail.png",
+    "npcSellMeso": 33
   },
   {
     "id": "cursed-doll",
@@ -376,11 +495,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Zombie_Lupin",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Cursed_Doll",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/6/6d/Cursed_Doll.png"
+    "image": "https://mapleclassic.wiki/images/6/6d/Cursed_Doll.png",
+    "npcSellMeso": 40
   },
   {
     "id": "diamond-ore",
@@ -405,11 +531,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Diamond_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/9/97/Diamond_Ore.png"
+    "image": "https://mapleclassic.wiki/images/9/97/Diamond_Ore.png",
+    "npcSellMeso": 240
   },
   {
     "id": "drake-skull",
@@ -428,11 +561,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Drake",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Drake_Skull",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/1/1f/Drake_Skull.png"
+    "image": "https://mapleclassic.wiki/images/1/1f/Drake_Skull.png",
+    "npcSellMeso": 45
   },
   {
     "id": "duskmander-tail",
@@ -445,11 +585,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Duskmander",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Duskmander_Tail",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/6/6a/Duskmander_Tail.png"
+    "image": "https://mapleclassic.wiki/images/6/6a/Duskmander_Tail.png",
+    "npcSellMeso": 49
   },
   {
     "id": "echopus-leg",
@@ -462,11 +609,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Echopus",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Echopus_Leg",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/3/3a/Echopus_Leg.png"
+    "image": "https://mapleclassic.wiki/images/3/3a/Echopus_Leg.png",
+    "npcSellMeso": 44
   },
   {
     "id": "emerald-ore",
@@ -491,11 +645,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Glowshroom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Emerald_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/9/9f/Emerald_Ore.png"
+    "image": "https://mapleclassic.wiki/images/9/9f/Emerald_Ore.png",
+    "npcSellMeso": 80
   },
   {
     "id": "equipment-crafting-stimulator",
@@ -508,11 +669,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Equipment_Crafting_Stimulator",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/f/f6/Equipment_Crafting_Stimulator.png"
+    "image": "https://mapleclassic.wiki/images/f/f6/Equipment_Crafting_Stimulator.png",
+    "npcSellMeso": 10000
   },
   {
     "id": "evil-eye-tail",
@@ -525,11 +693,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Evil_Eye",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Evil_Eye_Tail",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/4/41/Evil_Eye_Tail.png"
+    "image": "https://mapleclassic.wiki/images/4/41/Evil_Eye_Tail.png",
+    "npcSellMeso": 27
   },
   {
     "id": "fire-boars-tooth",
@@ -542,11 +717,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Fire_Boar",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fire_Boar's_Tooth",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/4/49/Fire_Boar%27s_Tooth.png"
+    "image": "https://mapleclassic.wiki/images/4/49/Fire_Boar%27s_Tooth.png",
+    "npcSellMeso": 32
   },
   {
     "id": "firewood",
@@ -565,11 +747,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Firewood",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/d/d4/Firewood.png"
+    "image": "https://mapleclassic.wiki/images/d/d4/Firewood.png",
+    "npcSellMeso": 17
   },
   {
     "id": "fragment-of-magic",
@@ -594,11 +783,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Stirge",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Fragment_of_Magic",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/c/cd/Fragment_of_Magic.png"
+    "image": "https://mapleclassic.wiki/images/c/cd/Fragment_of_Magic.png",
+    "npcSellMeso": 10
   },
   {
     "id": "garnet-ore",
@@ -623,11 +819,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Stirge",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Garnet_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/5/5e/Garnet_Ore.png"
+    "image": "https://mapleclassic.wiki/images/5/5e/Garnet_Ore.png",
+    "npcSellMeso": 40
   },
   {
     "id": "giant-trees-bough",
@@ -640,11 +843,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Myewood",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Giant_Tree's_Bough",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/e/e4/Giant_Tree%27s_Bough.png"
+    "image": "https://mapleclassic.wiki/images/e/e4/Giant_Tree%27s_Bough.png",
+    "npcSellMeso": 51
   },
   {
     "id": "glowing-mushroom-spore",
@@ -657,11 +867,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Glowshroom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Glowing_Mushroom_Spore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/a/a3/Glowing_Mushroom_Spore.png"
+    "image": "https://mapleclassic.wiki/images/a/a3/Glowing_Mushroom_Spore.png",
+    "npcSellMeso": 39
   },
   {
     "id": "gold-ore",
@@ -686,11 +903,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Gold_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/f/f7/Gold_Ore.png"
+    "image": "https://mapleclassic.wiki/images/f/f7/Gold_Ore.png",
+    "npcSellMeso": 60
   },
   {
     "id": "golden-stirge-wing",
@@ -703,11 +927,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Golden_Stirge",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Golden_Stirge_Wing",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/2/23/Golden_Stirge_Wing.png"
+    "image": "https://mapleclassic.wiki/images/2/23/Golden_Stirge_Wing.png",
+    "npcSellMeso": 42
   },
   {
     "id": "green-mushroom-cap",
@@ -720,11 +951,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Green_Mushroom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Green_Mushroom_Cap",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/1/13/Green_Mushroom_Cap.png"
+    "image": "https://mapleclassic.wiki/images/1/13/Green_Mushroom_Cap.png",
+    "npcSellMeso": 14
   },
   {
     "id": "horny-mushroom-cap",
@@ -737,11 +975,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Horny_Mushroom_Cap",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/7/71/Horny_Mushroom_Cap.png"
+    "image": "https://mapleclassic.wiki/images/7/71/Horny_Mushroom_Cap.png",
+    "npcSellMeso": 22
   },
   {
     "id": "iron-hogs-metal-hoof",
@@ -754,11 +999,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Iron_Hog",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Iron_Hog's_Metal_Hoof",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/e/ec/Iron_Hog%27s_Metal_Hoof.png"
+    "image": "https://mapleclassic.wiki/images/e/ec/Iron_Hog%27s_Metal_Hoof.png",
+    "npcSellMeso": 28
   },
   {
     "id": "iron-ore",
@@ -783,11 +1035,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Stirge",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Iron_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/8/87/Iron_Ore.png"
+    "image": "https://mapleclassic.wiki/images/8/87/Iron_Ore.png",
+    "npcSellMeso": 20
   },
   {
     "id": "jr-boogie-horn",
@@ -800,11 +1059,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Jr._Boogie_1",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Boogie_Horn",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/3/30/Jr._Boogie_Horn.png"
+    "image": "https://mapleclassic.wiki/images/3/30/Jr._Boogie_Horn.png",
+    "npcSellMeso": 35
   },
   {
     "id": "jr-necki-skin",
@@ -817,11 +1083,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Jr._Necki",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Jr._Necki_Skin",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/5/57/Jr._Necki_Skin.png"
+    "image": "https://mapleclassic.wiki/images/5/57/Jr._Necki_Skin.png",
+    "npcSellMeso": 21
   },
   {
     "id": "jr-sentinel-shellpiece",
@@ -851,11 +1124,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Dark_Stump",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Leaf",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/a/a8/Leaf.png"
+    "image": "https://mapleclassic.wiki/images/a/a8/Leaf.png",
+    "npcSellMeso": 11
   },
   {
     "id": "leather",
@@ -880,11 +1160,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Leather",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/3/3d/Leather.png"
+    "image": "https://mapleclassic.wiki/images/3/3d/Leather.png",
+    "npcSellMeso": 10
   },
   {
     "id": "ligator-skin",
@@ -897,11 +1184,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Ligator",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Ligator_Skin",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/e/e0/Ligator_Skin.png"
+    "image": "https://mapleclassic.wiki/images/e/e0/Ligator_Skin.png",
+    "npcSellMeso": 31
   },
   {
     "id": "lorang-claw",
@@ -914,11 +1208,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Lorang",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lorang_Claw",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/5/56/Lorang_Claw.png"
+    "image": "https://mapleclassic.wiki/images/5/56/Lorang_Claw.png",
+    "npcSellMeso": 38
   },
   {
     "id": "lupin-doll",
@@ -931,11 +1232,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Lupin",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin_Doll",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/c/c8/Lupin_Doll.png"
+    "image": "https://mapleclassic.wiki/images/c/c8/Lupin_Doll.png",
+    "npcSellMeso": 100
   },
   {
     "id": "lupins-banana",
@@ -948,11 +1256,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Lupin",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Lupin's_Banana",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/1/14/Lupin%27s_Banana.png"
+    "image": "https://mapleclassic.wiki/images/1/14/Lupin%27s_Banana.png",
+    "npcSellMeso": 37
   },
   {
     "id": "maladys-experimental-frog",
@@ -965,11 +1280,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Malady",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Malady's_Experimental_Frog",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/7/7e/Malady%27s_Experimental_Frog.png"
+    "image": "https://mapleclassic.wiki/images/7/7e/Malady%27s_Experimental_Frog.png",
+    "npcSellMeso": 55
   },
   {
     "id": "medicine-with-weird-vibes",
@@ -982,11 +1304,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Wraith",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Medicine_With_Weird_Vibes",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/a/a6/Medicine_With_Weird_Vibes.png"
+    "image": "https://mapleclassic.wiki/images/a/a6/Medicine_With_Weird_Vibes.png",
+    "npcSellMeso": 48
   },
   {
     "id": "mithril-ore",
@@ -1011,11 +1340,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Bubbling",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mithril_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/e/ee/Mithril_Ore.png"
+    "image": "https://mapleclassic.wiki/images/e/ee/Mithril_Ore.png",
+    "npcSellMeso": 40
   },
   {
     "id": "monster-card",
@@ -1028,11 +1364,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Blue_Snail",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Monster_Card",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/3/35/Monster_Card.png"
+    "image": "https://mapleclassic.wiki/images/3/35/Monster_Card.png",
+    "npcSellMeso": 1
   },
   {
     "id": "mushmom-spore",
@@ -1045,11 +1388,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Mushmom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushmom_Spore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/5/5a/Mushmom_Spore.png"
+    "image": "https://mapleclassic.wiki/images/5/5a/Mushmom_Spore.png",
+    "npcSellMeso": 400
   },
   {
     "id": "mushroom-spore",
@@ -1062,11 +1412,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Shroom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Mushroom_Spore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/b/b8/Mushroom_Spore.png"
+    "image": "https://mapleclassic.wiki/images/b/b8/Mushroom_Spore.png",
+    "npcSellMeso": 3
   },
   {
     "id": "octopus-leg",
@@ -1079,11 +1436,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Octopus",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Octopus_Leg",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/2/27/Octopus_Leg.png"
+    "image": "https://mapleclassic.wiki/images/2/27/Octopus_Leg.png",
+    "npcSellMeso": 12
   },
   {
     "id": "omok-piece-octopus",
@@ -1096,10 +1460,17 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Octopus",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Omok_Piece%3A_Octopus",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
-    "verifiedAt": "2026-10-05"
+    "verifiedAt": "2026-10-05",
+    "npcSellMeso": 1
   },
   {
     "id": "omok-piece-slime",
@@ -1112,10 +1483,17 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Slime",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Omok_Piece%3A_Slime",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
-    "verifiedAt": "2026-10-05"
+    "verifiedAt": "2026-10-05",
+    "npcSellMeso": 1
   },
   {
     "id": "omok-table",
@@ -1128,11 +1506,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Stump",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Omok_Table",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/b/b3/Omok_Table.png"
+    "image": "https://mapleclassic.wiki/images/b/b3/Omok_Table.png",
+    "npcSellMeso": 1
   },
   {
     "id": "opal-ore",
@@ -1157,11 +1542,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Opal_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/b/b9/Opal_Ore.png"
+    "image": "https://mapleclassic.wiki/images/b/b9/Opal_Ore.png",
+    "npcSellMeso": 160
   },
   {
     "id": "orange-mushroom-cap",
@@ -1174,11 +1566,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Orange_Mushroom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Orange_Mushroom_Cap",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/7/74/Orange_Mushroom_Cap.png"
+    "image": "https://mapleclassic.wiki/images/7/74/Orange_Mushroom_Cap.png",
+    "npcSellMeso": 8
   },
   {
     "id": "orihalcon-ore",
@@ -1203,11 +1602,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Orihalcon_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/f/f2/Orihalcon_Ore.png"
+    "image": "https://mapleclassic.wiki/images/f/f2/Orihalcon_Ore.png",
+    "npcSellMeso": 100
   },
   {
     "id": "pigs-head",
@@ -1226,11 +1632,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig's_Head",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/e/e2/Pig%27s_Head.png"
+    "image": "https://mapleclassic.wiki/images/e/e2/Pig%27s_Head.png",
+    "npcSellMeso": 7
   },
   {
     "id": "pigs-ribbon",
@@ -1243,11 +1656,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Ribbon_Pig",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Pig's_Ribbon",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/f/fb/Pig%27s_Ribbon.png"
+    "image": "https://mapleclassic.wiki/images/f/fb/Pig%27s_Ribbon.png",
+    "npcSellMeso": 10
   },
   {
     "id": "plant-fossil",
@@ -1260,11 +1680,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Axe_Stump",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Plant_Fossil",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/f/fd/Plant_Fossil.png"
+    "image": "https://mapleclassic.wiki/images/f/fd/Plant_Fossil.png",
+    "npcSellMeso": 1
   },
   {
     "id": "poisonous-mushroom",
@@ -1277,11 +1704,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Poisonous_Mushroom",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/c/c6/Poisonous_Mushroom.png"
+    "image": "https://mapleclassic.wiki/images/c/c6/Poisonous_Mushroom.png",
+    "npcSellMeso": 500
   },
   {
     "id": "raffle-petal",
@@ -1294,11 +1728,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Raffle",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Raffle_Petal",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/d/da/Raffle_Petal.png"
+    "image": "https://mapleclassic.wiki/images/d/da/Raffle_Petal.png",
+    "npcSellMeso": 40
   },
   {
     "id": "rafflesia-petal",
@@ -1311,11 +1752,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Rafflesia",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Rafflesia_Petal",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/b/b7/Rafflesia_Petal.png"
+    "image": "https://mapleclassic.wiki/images/b/b7/Rafflesia_Petal.png",
+    "npcSellMeso": 47
   },
   {
     "id": "red-snail-shell",
@@ -1328,11 +1776,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Red_Snail",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Red_Snail_Shell",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/9/95/Red_Snail_Shell.png"
+    "image": "https://mapleclassic.wiki/images/9/95/Red_Snail_Shell.png",
+    "npcSellMeso": 4
   },
   {
     "id": "sapphire-ore",
@@ -1351,11 +1806,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Bubbling",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Sapphire_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/a/ae/Sapphire_Ore.png"
+    "image": "https://mapleclassic.wiki/images/a/ae/Sapphire_Ore.png",
+    "npcSellMeso": 120
   },
   {
     "id": "scroll-crafting-stimulator",
@@ -1374,11 +1836,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Zombie_Mushmom",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Scroll_Crafting_Stimulator",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/1/1d/Scroll_Crafting_Stimulator.png"
+    "image": "https://mapleclassic.wiki/images/1/1d/Scroll_Crafting_Stimulator.png",
+    "npcSellMeso": 5000
   },
   {
     "id": "silver-ore",
@@ -1403,11 +1872,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Lupin",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Silver_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/9/97/Silver_Ore.png"
+    "image": "https://mapleclassic.wiki/images/9/97/Silver_Ore.png",
+    "npcSellMeso": 80
   },
   {
     "id": "slime-bubble",
@@ -1420,11 +1896,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Slime",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Slime_Bubble",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/5/55/Slime_Bubble.png"
+    "image": "https://mapleclassic.wiki/images/5/55/Slime_Bubble.png",
+    "npcSellMeso": 50
   },
   {
     "id": "snail-shell",
@@ -1437,11 +1920,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Snail",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Snail_Shell",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/2/29/Snail_Shell.png"
+    "image": "https://mapleclassic.wiki/images/2/29/Snail_Shell.png",
+    "npcSellMeso": 1
   },
   {
     "id": "squishy-liquid",
@@ -1454,11 +1944,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Slime",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Squishy_Liquid",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/4/49/Squishy_Liquid.png"
+    "image": "https://mapleclassic.wiki/images/4/49/Squishy_Liquid.png",
+    "npcSellMeso": 6
   },
   {
     "id": "stiff-feather",
@@ -1483,11 +1980,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Stirge",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stiff_Feather",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/d/d0/Stiff_Feather.png"
+    "image": "https://mapleclassic.wiki/images/d/d0/Stiff_Feather.png",
+    "npcSellMeso": 10
   },
   {
     "id": "stirge-wing",
@@ -1500,11 +2004,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Stirge",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stirge_Wing",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/8/84/Stirge_Wing.png"
+    "image": "https://mapleclassic.wiki/images/8/84/Stirge_Wing.png",
+    "npcSellMeso": 20
   },
   {
     "id": "stumps-teardrop",
@@ -1517,11 +2028,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Dark_Axe_Stump",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Stump's_Teardrop",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/9/9b/Stump%27s_Teardrop.png"
+    "image": "https://mapleclassic.wiki/images/9/9b/Stump%27s_Teardrop.png",
+    "npcSellMeso": 1
   },
   {
     "id": "tablecloth",
@@ -1534,11 +2052,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Jr._Wraith",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tablecloth",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/c/c1/Tablecloth.png"
+    "image": "https://mapleclassic.wiki/images/c/c1/Tablecloth.png",
+    "npcSellMeso": 34
   },
   {
     "id": "topaz-ore",
@@ -1557,11 +2082,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Curse_Eye",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Topaz_Ore",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/0/0e/Topaz_Ore.png"
+    "image": "https://mapleclassic.wiki/images/0/0e/Topaz_Ore.png",
+    "npcSellMeso": 80
   },
   {
     "id": "tortie-shell",
@@ -1574,11 +2106,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Tortie",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tortie_Shell",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/3/34/Tortie_Shell.png"
+    "image": "https://mapleclassic.wiki/images/3/34/Tortie_Shell.png",
+    "npcSellMeso": 46
   },
   {
     "id": "tree-branch",
@@ -1591,11 +2130,18 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Stump",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Tree_Branch",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/f/fe/Tree_Branch.png"
+    "image": "https://mapleclassic.wiki/images/f/fe/Tree_Branch.png",
+    "npcSellMeso": 5
   },
   {
     "id": "wild-boar-tooth",
@@ -1608,10 +2154,17 @@
         "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
         "url": "https://mapleclassic.wiki/wiki/Wild_Boar",
         "retrievedAt": "2026-10-05"
+      },
+      {
+        "kind": "community",
+        "label": "MapleClassic Wiki (CC BY-NC-SA 4.0)",
+        "url": "https://mapleclassic.wiki/wiki/Wild_Boar_Tooth",
+        "retrievedAt": "2026-10-06"
       }
     ],
     "confidence": "likely",
     "verifiedAt": "2026-10-05",
-    "image": "https://mapleclassic.wiki/images/7/70/Wild_Boar_Tooth.png"
+    "image": "https://mapleclassic.wiki/images/7/70/Wild_Boar_Tooth.png",
+    "npcSellMeso": 25
   }
 ]

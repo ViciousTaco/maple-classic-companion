@@ -165,7 +165,8 @@ export function validatePack(pack: PackData, opts: Opts = {}): Issue[] {
   if (opts.level === "integrity") return issues;
 
   // ---- Rules 3–6: provenance ----
-  const today = now.toISOString().slice(0, 10);
+  // One day of slack: dates are written in the owner's zone (Sydney is up to 11 h ahead of UTC).
+  const today = new Date(now.getTime() + 86_400_000).toISOString().slice(0, 10);
   const future = (d: string) => d.slice(0, 10) > today;
   type Prov = { sources: Source[]; confidence: string; verifiedAt: string };
   const provenance: [PackKey, string, Prov][] = [
