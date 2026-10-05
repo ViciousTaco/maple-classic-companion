@@ -4,7 +4,7 @@ import type { Profile, Settings } from "../../data/schema/profile";
 import type { ProfileStore } from "../characters/store";
 import { activeProfile } from "../characters/store";
 import { recommendTraining } from "../../engine/recommend";
-import { newLines, parseChatLine, parseStatus, type ChatEvent } from "./parse";
+import { hiddenKills, newLines, parseChatLine, parseStatus, type ChatEvent } from "./parse";
 import { applyEvents, applyStatus, mergeSession, newSession, percentGained, tick, type SessionTotals } from "./session";
 
 // I-29 screen watcher. The owner is always in control: it is off at every launch, only the owner turns it on
@@ -82,6 +82,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
 
   let cancel: (() => void) | null = null;
   let prevChat: string[] | null = null;
+  let prevStatus: { level: number | null; expValue: number | null } | null = null;
   let lastStepAt = 0;
   let lastCheckpoint = 0;
   let missingSince: number | null = null;
@@ -173,6 +174,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
         const chosen = spotId ?? (pack ? recommendTraining({ profile: p, pack, now: new Date(now()) }).primary?.spotId : null) ?? null;
         const mapId = chosen ? (pack?.index.spotById.get(chosen)?.mapId ?? null) : null;
         prevChat = null;
+        prevStatus = null;
         levelVotes = [];
         missingSince = null;
         countedRun = false;
@@ -236,6 +238,12 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           const fresh = prevChat === null ? [] : newLines(prevChat, chatLines);
           prevChat = chatLines;
           const events = fresh.map(parseChatLine).filter((e): e is ChatEvent => e !== null);
+          // Same-looking chat lines hide new kills; the EXP total on the bar still shows them.
+          if (fresh.length === 0 && prevStatus && st.level !== null && st.level === prevStatus.level && st.expValue !== null && prevStatus.expValue !== null) {
+            const last = [...chatLines].reverse().map(parseChatLine).find((e) => e?.kind === "exp");
+            if (last?.kind === "exp") for (let i = hiddenKills(st.expValue - prevStatus.expValue, last.amount); i > 0; i--) events.push({ kind: "exp", amount: last.amount });
+          }
+          if (st.expValue !== null || st.level !== null) prevStatus = { level: st.level ?? prevStatus?.level ?? null, expValue: st.expValue };
 
           let session = get().session!;
           const before = { ...session.killsByMob };
@@ -248,7 +256,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           for (const e of events) feedNew.push({ id: feedId++, at: t, text: describeEvent(e, pack, e.kind === "exp" ? newMobs[mobIdx++] : undefined) });
           set({
             session,
-            read: st.level !== null || st.expPercent !== null ? { ...st, at: t } : get().read,
+            read: st.level !== null || st.expPercent !== null ? { level: st.level, expPercent: st.expPercent, at: t } : get().read,
             feed: [...feedNew.reverse(), ...get().feed].slice(0, FEED_MAX),
           });
           syncLevel(st.level, st.expPercent);

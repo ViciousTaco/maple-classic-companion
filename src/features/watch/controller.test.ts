@@ -138,3 +138,18 @@ test("text from a covered box is ignored, then counting carries on", async () =>
   expect(watcher.getState().status).toBe("on");
   expect(watcher.getState().session!.kills).toBe(2); // both gains were still in the chat box
 });
+
+test("farming one monster: identical chat lines still count, via the EXP total on the bar", async () => {
+  const { watcher, screen, advance } = await rig();
+  const same = "You have gained experience (+24)";
+  screen.chat = [same, same, same, same];
+  screen.status = ["Lv. 25", "EXP 1000 [10.00%]"];
+  await watcher.getState().start("spot-exp");
+  await advance(2000); // primes
+  screen.status = ["Lv. 25", "EXP 1072 [10.50%]"]; // 3 kills; the chat box looks exactly the same
+  await advance(2000);
+  expect(watcher.getState().session).toMatchObject({ kills: 3, exp: 72 });
+  screen.status = ["Lv. 25", "EXP 1072 [10.50%]"];
+  await advance(2000);
+  expect(watcher.getState().session!.kills).toBe(3); // nothing new, nothing counted
+});
