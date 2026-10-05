@@ -107,7 +107,7 @@ Record answers here. Format: `APPROVED: <choice> — <date>`.
 | D-7 | **Times display in `Australia/Sydney`** (AEST/AEDT chosen per instant via the tz database), with a setting to use the PC's zone instead. | The owner's requirement; Astra's tested approach. |
 | D-8 | **Every displayed game fact carries provenance** (source, date, confidence). Unknown is shown as unknown. | The only honest route to "accurate". |
 | D-9 | **Progressive disclosure:** each screen shows ≤ 3 primary cards; detail lives in collapsed accordions; a minimal profile (name, job, level) is enough to get recommendations. | "Don't overwhelm the user." |
-| D-10 | **The app never interacts with the game process.** | Account safety. |
+| D-10 | **The app never interacts with the game process.** Amended 2026-10-06 (owner): the opt-in **screen watcher** may read *pixels* of a screen region the owner selects, only while the owner has switched it on (off at every launch; visible indicator; one-click/hotkey off). Never memory reading, packet inspection, input automation, hooking, injection or client-file extraction. Frames are processed in memory with Windows' offline OCR and discarded; only parsed numbers are stored locally; nothing is sent anywhere. | Account safety; owner accepted the residual ToS ambiguity of passive screen reading. |
 | D-11 | **Non-commercial fan tool** with a visible disclaimer: not affiliated with Nexon; MapleStory assets belong to Nexon. | IP hygiene. |
 
 ---
@@ -941,7 +941,7 @@ Any model may add `PROPOSED` rows. Only the owner changes Status. ★ = recommen
 | I-01 ★ | **Personal drop log**: tap to log kills and drops per spot; shows your observed rate with sample size. | The only honest way to get real drop rates while none are published. | M | PROPOSED |
 | I-02 ★ | **Session tracker**: start/stop timer + EXP % before/after → real EXP/hour, used to calibrate estimates for that character. | Recommendations get more accurate the more you play. | M | PROPOSED |
 | I-03 ★ | **Mini mode**: small always-on-top window with the current spot, backup button and quest steps (a plain window; no game interaction). | Usable while playing on one monitor. | S | PROPOSED |
-| I-04 ★ | **Global search (Ctrl+K)** across monsters, items, maps, quests, NPCs. | Fastest navigation. | S | PROPOSED |
+| I-04 ★ | **Global search (Ctrl+K)** across monsters, items, maps, quests, NPCs. | Fastest navigation. | S | APPROVED 2026-10-06 |
 | I-05 ★ | **Event reminders**: Windows notifications before GM events and deadlines, in Sydney time. | Don't miss timed rewards. | M | PROPOSED |
 | I-06 | **Skill build planner** with SP budget check and recommended orders (sourced). | Avoids irreversible skill mistakes. | M | PROPOSED |
 | I-07 | **Meso goal planner**: target amount → hours at the best meso spot. | Makes the meso path concrete. | S | PROPOSED |
@@ -957,14 +957,15 @@ Any model may add `PROPOSED` rows. Only the owner changes Status. ★ = recommen
 | I-17 | **Compare two spots side by side.** | Clearer choices. | S | PROPOSED |
 | I-18 | **Multi-character overview**: who needs what; shared wishlist. | Helps with 3-character accounts. | S | PROPOSED |
 | I-20 ★ | **Projections**: interactive graphs — time to next level (from the character's measured EXP pace or the engine estimate), meso accumulated per hour, and drop chance over kills (`1-(1-p)^n`, only from exact/sampled rates or a clearly labelled what-if rate; never from tier heuristics, §6.3). | Makes estimates tangible and easy to read. | M | APPROVED (the owner request) 2026-10-05 |
-| I-21 ★ | **Kill & drop logger** (extends I-01): tap counters per spot while playing; turns "rate not known" into your own sampled rates, which then power Gold/Silver/Bronze, meso/hour and drop-chance curves honestly. | Real numbers where none are published. | M | PROPOSED |
-| I-22 ★ | **Session tracker with auto-calibration** (I-02): start/stop + EXP % before/after per spot; the engine learns your real kills/hour and replaces the 0.8 s / 1.5 s assumptions for your character. | EXP/hour estimates become your own. | M | PROPOSED |
-| I-23 ★ | **Fill the data gaps from the wiki**: regular (non-job) quests with steps and rewards, NPC sub-locations (job schools etc.), Lv 55–70 monsters/spots, skills (damage %, targets) for computed estimates. | Quests screen and estimates become much richer. | L | PROPOSED |
-| I-24 | **Mini overlay window** (I-03): small always-on-top card with current spot, backup button, route step and quest checklist — a separate window, never touching the game. | Use while playing on one monitor. | S | PROPOSED |
-| I-25 | **Party finder helper**: for party spots and the PQ, show level bands and what each class brings; copyable Discord/Megaphone message. | Faster party forming. | S | PROPOSED |
-| I-26 | **Event reminders** (I-05): Windows notifications 15 min before GM events/deadlines (Sydney time). | Never miss timed rewards. | S | PROPOSED |
+| I-29 ★ | **Screen watcher** (replaces I-21/I-22, owner idea): owner drags boxes over the game's EXP bar and chat log; while switched on (button, top-bar pill, global hotkey Ctrl+Alt+W), Windows offline OCR reads level/EXP %/meso and pickup/EXP messages every few seconds → real EXP/h, meso/h per spot, kill counts (monster identified by EXP amount) and the owner's own sampled drop rates. Off at launch; frames never stored or sent. | Real numbers with no manual logging. | L | APPROVED 2026-10-06 (continuous, full owner control) |
+| I-21 ★ | **Kill & drop logger** (extends I-01): tap counters per spot while playing; turns "rate not known" into your own sampled rates, which then power Gold/Silver/Bronze, meso/hour and drop-chance curves honestly. | Real numbers where none are published. | M | SUPERSEDED by I-29 (owner) |
+| I-22 ★ | **Session tracker with auto-calibration** (I-02): start/stop + EXP % before/after per spot; the engine learns your real kills/hour and replaces the 0.8 s / 1.5 s assumptions for your character. | EXP/hour estimates become your own. | M | SUPERSEDED by I-29 (owner) |
+| I-23 ★ | **Fill the data gaps from the wiki**: regular (non-job) quests with steps and rewards, NPC sub-locations (job schools etc.), Lv 55–70 monsters/spots, skills (damage %, targets) for computed estimates. | Quests screen and estimates become much richer. | L | APPROVED 2026-10-06 |
+| I-24 | **Mini overlay window** (I-03): small always-on-top card with current spot, backup button, route step and quest checklist — a separate window, never touching the game. | Use while playing on one monitor. | S | APPROVED 2026-10-06 |
+| I-25 | **Party finder helper**: for party spots and the PQ, show level bands and what each class brings; copyable Discord/Megaphone message. | Faster party forming. | S | APPROVED 2026-10-06 |
+| I-26 | **Event reminders** (I-05): Windows notifications 15 min before GM events/deadlines (Sydney time). | Never miss timed rewards. | S | APPROVED 2026-10-06 |
 | I-27 | **Global search Ctrl+K** (I-04) across maps, monsters, items, quests, NPCs. | Fastest navigation. | S | PROPOSED |
-| I-28 | **Daily wiki change check** once the MapleClassic Wiki maintainers OK it (`docs/wiki-permission-request.md`). | Data stays current with less effort. | S | PROPOSED |
+| I-28 | **Daily wiki change check** once the MapleClassic Wiki maintainers OK it (`docs/wiki-permission-request.md`). | Data stays current with less effort. | S | APPROVED 2026-10-06 as **on request**: the owner asks a Claude session ("check the wiki and Nexon for updates"); no API key in the app, no schedule |
 | I-19 ★ | **Quick note (in-app field notes)**: a button on every screen (and `Ctrl+N`) opens a small box: paste/drop screenshots, paste text copied from a page the owner is reading (e.g. MeowDB), optional source URL, optional link to the current monster/map/quest. Saves to `field-notes\inbox\<stamp>\`. A pasted MeowDB URL gives the exact `ext.meowdb` id. The maintaining model converts notes per §6.5 on request. The app never fetches the URL. | Makes Tier B data entry effortless — the main data source under G-1. | S | APPROVED 2026-10-05 — built as P2-T6b |
 
 ---
@@ -1014,6 +1015,8 @@ Any model may add `PROPOSED` rows. Only the owner changes Status. ★ = recommen
 | 2026-10-06 | Publishing: repo pushed as one clean commit by ViciousTaco <noreply>; personal name, email and Windows user path removed from public files; app identifier now `com.vicioustaco.mapleclassiccompanion`; `.claude/` local-only. | owner |
 
 | 2026-10-06 | Item pages fetched politely (212, approved source): 251/268 items now have NPC sell prices, 120 equips have stat requirements; Gold/Silver/Bronze thresholds are the guide's own price percentiles (currently ≥ 7,500 / ≥ 3,000 / ≥ 900 meso). Validator rule 3 allows one day of timezone lead (dates are written in Sydney time). Guide data 2026.10.06-1 bundled in exe v1.0.0; `releases/latest.json` signed and verified. | owner |
+
+| 2026-10-06 | Owner approved I-23…I-28 and the new I-29 screen watcher (continuous, owner-controlled; D-10 amended as recorded in §3). I-21/I-22 superseded by I-29. I-28 = on-request data refresh via a Claude session (owner prefers this over an API key in the app). | owner |
 
 **Spike results (fill in at P1-T9):** path probe `FAIL in "&" folder; PASS via junction (2026-10-05)`; folder renamed · paste `PASS (the owner, built exe; persists after restart)` · YouTube `PASS (the owner: plays with sound, no Error 153, Open on YouTube works)` · exe size `4.6` MB · cold start `0.28 s to window` · portable `data folder + webview\ beside exe; nothing written to %LOCALAPPDATA% / %APPDATA%` · signature `PASS (tauri signer sig accepted; 1-byte change rejected)` · self-replace `PASS (v1 → v2 swap + relaunch, examples/self_replace_demo.rs)`
 
