@@ -49,3 +49,7 @@ npm run exe              # builds and copies MapleClassicCompanion.exe to this f
 ```
 
 Plan, decisions and progress: `MASTER_PLAN.md`. Data upkeep: `docs/DATA_MAINTENANCE.md`. Releases: `docs/RELEASE.md`.
+
+## Licence
+
+The app code is MIT (see `LICENSE`). The guide data in `datapack/` is CC BY-NC-SA 4.0, derived from MapleClassic Wiki — see `datapack/NOTICE.md`. MapleStory and all game content belong to NEXON.

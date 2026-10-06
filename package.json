@@ -1,6 +1,7 @@
 {
   "name": "maple-classic-companion",
   "private": true,
+  "license": "MIT",
   "version": "1.1.0",
   "type": "module",
   "scripts": {
