@@ -6,10 +6,10 @@ import { jobLine, rulesFromPack } from "../../data/gameRules";
 import { describeStats, parseQuestWindow, parseSkillsWindow, parseStatsWindow, plausibleStats, statsChanges, type Line, type QuestsRead, type StatsRead } from "./windows";
 import { activeProfile } from "../characters/store";
 import { recommendTraining } from "../../engine/recommend";
-import { hiddenKills, matchName, parseChatLine, parseExpText, parseMapName, parseStatus, type ChatEvent } from "./parse";
-import { judgeKills, newChatTracker, newKillBook, trackChat, type ChatTracker, type KillBook } from "./kills";
+import { matchName, parseExpText, parseMapName, parseStatus } from "./parse";
+import { addSample, expGained, newExpMeter, type ExpMeter } from "./gain";
 import { CANDIDATES, DEFAULT_METHOD, NO_FIELDS, newStabilizer, scoreReading, updateFields, type BoxName, type Fields, type Stabilizer } from "./reading";
-import { applyEvents, applyStatus, mergeSession, newSession, observationKey, percentGained, tick, type SessionTotals } from "./session";
+import { applyStatus, killsFromExp, mergeSession, newSession, observationKey, percentGained, tick, type SessionTotals } from "./session";
 
 const addCounts = (a: Record<string, number>, b: Record<string, number>) => {
   const out = { ...a };
@@ -126,17 +126,6 @@ export const FULL_SCAN_EVERY_MS = 5_000;
 export const TUNE_EVERY_MS = 10_000;
 const FEED_MAX = 8;
 
-export function describeEvent(e: ChatEvent, pack: Pack | null, mobId?: string): string {
-  const mob = mobId && mobId !== "?" ? pack?.index.monsterById.get(mobId)?.name : undefined;
-  if (e.kind === "kill") return `Kill${mob ? ` · ${mob}` : ""} (its ${e.amount.toLocaleString("en-AU")} EXP came up again)`;
-  if (e.kind === "exp") {
-    if (e.bonus) return `+${e.amount.toLocaleString("en-AU")} EXP`;
-    return `Kill · +${e.amount.toLocaleString("en-AU")} EXP${mob ? ` · ${mob}` : ""}`;
-  }
-  if (e.kind === "meso") return `+${e.amount.toLocaleString("en-AU")} meso`;
-  return `Picked up ${e.name}`;
-}
-
 export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
   const now = deps.now ?? (() => Date.now());
   const schedule =
@@ -148,12 +137,10 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
   const tell = deps.tell ?? (() => {});
 
   let cancel: (() => void) | null = null;
-  /** Which chat lines are new (by where they are) and which EXP amounts are kills. */
-  let chat: ChatTracker = newChatTracker();
-  let killBook: KillBook = newKillBook();
-  let prevStatus: { level: number | null; expValue: number | null } | null = null;
-  /** Kills implied by the EXP total, held until the next read confirms the total didn't drop (a misread digit). */
-  let pendingHidden: { kills: number; amount: number; expValue: number } | null = null;
+  /** EXP gained this run, from the EXP number on the bar (see gain.ts); `expAtSession`: what it was when the
+   * current session (a checkpoint or map stretch) began. */
+  let meter: ExpMeter = newExpMeter();
+  let expAtSession = 0;
   let nameMisses = 0;
   let lastFullScan = 0;
   let confirmNext = false;
@@ -194,9 +181,12 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           ? { percentPerHour: (runPct / runPctMs) * 3_600_000, level: s.lastLevel, measuredAt: t.toISOString(), minutes: runPctMs / 60_000 }
           : null;
       const key = observationKey(s.spotId, s.mapId);
+      // Trained here: the EXP bar rose (EXP gained, or the % when the level's EXP size isn't known).
+      const trained = s.exp > 0 || (pct ?? 0) > 0;
+      expAtSession += s.exp;
       // I-34: one training-log row per watched stretch at a map (checkpoints of the same stretch are merged).
       const run: TrainingRun | null =
-        key && s.kills > 0
+        key && trained
           ? { startedAt: s.startedAt, endedAt: t.toISOString(), key, level: s.lastLevel, minutes: s.activeMs / 60_000, kills: s.kills, exp: s.exp, meso: s.meso, items: s.items, levelPercent: pct }
           : null;
       deps.store.getState().updateProfile(p.id, (prof) => ({
@@ -216,10 +206,10 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           activeMs: r.activeMs + s.activeMs,
           pct: r.pct + (pct ?? 0),
           pctMs: r.pctMs + (pct === null ? 0 : s.activeMs),
-          maps: s.mapId && !r.maps.includes(s.mapId) && s.kills > 0 ? [...r.maps, s.mapId] : r.maps,
+          maps: s.mapId && !r.maps.includes(s.mapId) && trained ? [...r.maps, s.mapId] : r.maps,
         },
       });
-      if (s.kills > 0) countedRun = true;
+      if (trained) countedRun = true;
       // Continue counting from here with fresh totals (status start = last read).
       const fresh = newSession(s.spotId, s.mapId, t);
       set({ session: { ...fresh, lastKillAt: s.lastKillAt, startLevel: s.lastLevel, startExp: s.lastExp, lastLevel: s.lastLevel, lastExp: s.lastExp } });
@@ -284,7 +274,6 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       if (!cur || cur.mapId === mapId) return;
       fold(false);
       countedRun = false;
-      killBook = newKillBook(); // other monsters here
       const spotId = spotOnMap(pack, mapId);
       const name = pack.index.mapById.get(mapId)?.name ?? mapId;
       set({
@@ -302,7 +291,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
      */
     const liveTune = async (s: WatchSetup, windowId: number, t: number) => {
       const pack = deps.getPack();
-      const drawn = (["status", "expText", "chat", "map"] as const).filter((b) => s[b]);
+      const drawn = (["status", "expText", "map"] as const).filter((b) => s[b]);
       if (!pack || drawn.length === 0) return;
       const regions: WatchRegion[] = drawn.flatMap((b) =>
         CANDIDATES[b].map((m, i) => ({ name: `${b}#${i}`, ...s[b]!, scale: 3, prep: m.prep, filter: m.filter, ...(b === "expText" ? { mode: "both" as const } : {}) })),
@@ -422,10 +411,8 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
         }
         const chosen = spotId ?? (pack ? recommendTraining({ profile: p, pack, now: new Date(now()) }).primary?.spotId : null) ?? null;
         const mapId = chosen ? (pack?.index.spotById.get(chosen)?.mapId ?? null) : null;
-        chat = newChatTracker();
-        killBook = newKillBook();
-        prevStatus = null;
-        pendingHidden = null;
+        meter = newExpMeter();
+        expAtSession = 0;
         nameMisses = 0;
         pendingScan = null;
         confirmNext = false;
@@ -451,7 +438,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
         const level = get().session?.lastLevel ?? null;
         fold(true);
         const r = get().run;
-        const summary: RunSummary | null = r.kills > 0 ? { ...r, startedAt: get().startedAt ?? now(), endedAt: now(), level } : null;
+        const summary: RunSummary | null = r.exp > 0 || r.pct > 0 ? { ...r, startedAt: get().startedAt ?? now(), endedAt: now(), level } : null;
         set({ status: "off", problem: reason ?? null, session: null, startedAt: null, lastSummary: summary ?? get().lastSummary });
         if (reason) tell(reason, "info");
       },
@@ -498,7 +485,6 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           const push = (box: BoxName, rect: NonNullable<WatchSetup[BoxName]>, extra: Partial<WatchRegion> = {}) =>
             regions.push({ name: box, ...rect, scale: 3, prep: how(box).prep, filter: how(box).filter, ...extra });
           if (s.status) push("status", s.status);
-          if (s.chat) push("chat", s.chat);
           if (s.map) push("map", s.map);
           if (s.expText) push("expText", s.expText, { mode: "both" });
           if (s.expBar && !s.expText) regions.push({ name: "expBar", ...s.expBar, mode: "bar" });
@@ -510,8 +496,6 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           if (get().status === "paused") set({ status: "on", problem: null });
 
           const statusLines = out.find((r) => r.name === "status")?.lines.map((l) => l.text) ?? [];
-          const chatRead = out.find((r) => r.name === "chat")?.lines ?? [];
-          const chatLines = chatRead.map((l) => l.text);
           const fullLines = out.find((r) => r.name === "full")?.lines ?? [];
           // Without a minimap box, the minimap's title is still in the whole-window read (top-left corner).
           const mapLines =
@@ -567,49 +551,29 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
             if (text !== get().mapText) set({ mapText: text });
           }
 
-          // The first read only learns what's already in the chat box — nothing from before watching counts.
-          const fresh = trackChat(chat, chatRead, t);
-          const events = judgeKills(
-            killBook,
-            fresh.map(parseChatLine).filter((e): e is ChatEvent => e !== null),
-          );
-
-          // Kills the chat box can't show — identical lines (one monster type) or more kills than lines in one
-          // interval (mobbing) — are implied by the rise in the EXP total that the chat didn't account for. They are
-          // added only once the next read confirms the total didn't fall back (a misread digit would).
-          if (pendingHidden) {
-            if (st.expValue !== null && st.expValue >= pendingHidden.expValue)
-              for (let i = 0; i < pendingHidden.kills; i++) events.unshift({ kind: "exp", amount: pendingHidden.amount });
-            pendingHidden = null;
-          }
-          if (prevStatus && st.level !== null && st.level === prevStatus.level && st.expValue !== null && prevStatus.expValue !== null) {
-            const counted = events.reduce((a, e) => (e.kind === "exp" ? a + e.amount : a), 0);
-            const isKill = (e: ChatEvent | null | undefined) => e?.kind === "exp" && !e.bonus;
-            const last = [...events].reverse().find(isKill) ?? [...chatLines].reverse().map(parseChatLine).find(isKill);
-            if (last?.kind === "exp") {
-              const kills = hiddenKills(st.expValue - prevStatus.expValue - counted, last.amount);
-              if (kills > 0) pendingHidden = { kills, amount: last.amount, expValue: st.expValue };
-            }
-          }
-          if (st.expValue !== null || st.level !== null) prevStatus = { level: st.level ?? prevStatus?.level ?? null, expValue: st.expValue };
-
           let session = get().session!;
-          const before = { ...session.killsByMob };
-          // The EXP bar moving up is training even when no chat line could be read (owner's run on the live
-          // client): it keeps the training clock running so pace and time-to-level come from the bar alone.
-          const prevExp = session.lastExp;
-          if (st.expPercent !== null && prevExp !== null && st.expPercent > prevExp + 0.001 && (st.level === null || st.level === (session.lastLevel ?? st.level))) session = { ...session, lastKillAt: t };
-          session = applyEvents(session, events, pack, t);
+          // EXP gained comes from the EXP number on the bar (its good readings), compared read to read.
+          const f = get().fields;
+          if (f.level && f.expPercent && f.expPercent.at === t) {
+            const level = f.level.value;
+            const known = pack.formulas.expToNext?.[level];
+            if (known && !meter.need[level]) meter.need[level] = known;
+            const before = expGained(meter) ?? 0;
+            const prevPct = meter.last?.level === level ? meter.last.pct : null;
+            addSample(meter, { level, pct: f.expPercent.value, total: f.expValue?.at === t ? f.expValue.value : null });
+            const gained = expGained(meter);
+            if (gained !== null) {
+              const exp = Math.max(0, gained - expAtSession);
+              session = { ...session, exp, kills: killsFromExp(pack, session.mapId, exp) ?? 0 };
+            }
+            // Training (the bar rose, in EXP or just in %) keeps the clock running.
+            if ((gained ?? 0) > before || (prevPct !== null && f.expPercent.value > prevPct)) session = { ...session, lastKillAt: t };
+          }
           session = tick(session, dt, t);
           session = applyStatus(session, st.level, st.expPercent);
-          const feedNew: FeedItem[] = [];
-          let mobIdx = 0;
-          const newMobs = Object.entries(session.killsByMob).flatMap(([id, n]) => Array(n - (before[id] ?? 0)).fill(id) as string[]);
-          for (const e of events) feedNew.push({ id: feedId++, at: t, text: describeEvent(e, pack, e.kind === "kill" || (e.kind === "exp" && !e.bonus) ? newMobs[mobIdx++] : undefined) });
           set({
             session,
             read: st.level !== null || st.expPercent !== null ? { level: st.level, expPercent: st.expPercent, expValue: st.expValue ?? get().read?.expValue ?? null, name: st.name, at: t } : get().read,
-            feed: [...feedNew.reverse(), ...get().feed].slice(0, FEED_MAX),
           });
           syncLevel(st.level, st.expPercent);
           if (fullScan) {
@@ -625,19 +589,14 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
                   t: new Date(t).toISOString(),
                   ms: lastStepMs,
                   status: statusLines,
-                  chat: chatLines,
                   map: mapLines,
                   exp: out.find((r) => r.name === "expText")?.lines.map((l) => l.text),
                   expDigits: out.find((r) => r.name === "expText")?.digits,
-                  methods: Object.fromEntries((["status", "expText", "chat", "map"] as const).map((b) => [b, s.tuning?.[b] ?? "default"])),
+                  methods: Object.fromEntries((["status", "expText", "map"] as const).map((b) => [b, s.tuning?.[b] ?? "default"])),
                   full: fullScan ? fullLines.map((l) => l.text) : undefined,
                   parsed: { level: st.level, expPercent: st.expPercent, expValue: st.expValue, name: st.name, mapId: get().mapId },
-                  fresh,
-                  events,
-                  hiddenPending: pendingHidden?.kills ?? 0,
-                  chatAt: chatRead.map((l) => Math.round(l.y)),
-                  killAmounts: killBook.amounts.map((k) => `${k.amount}×${k.seen}`),
-                  chatFades: chat.fades,
+                  expGained: expGained(meter),
+                  levelSize: f.level ? (meter.need[f.level.value] ?? null) : null,
                   session: { kills: sess.kills, exp: sess.exp, meso: sess.meso, activeMs: sess.activeMs, spotId: sess.spotId },
                   scan: fullScan ? get().lastScan : undefined,
                 }),
@@ -650,7 +609,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
             fold(false);
           }
           const lastKill = get().session?.lastKillAt ?? get().startedAt ?? t;
-          if (t - lastKill >= AUTO_OFF_IDLE_MS) get().stop("No kills for 20 minutes, so the screen watcher switched itself off.");
+          if (t - lastKill >= AUTO_OFF_IDLE_MS) get().stop("No EXP gained for 20 minutes, so Analyse switched itself off.");
         } catch (err) {
           missingSince ??= t;
           const message = err instanceof Missing ? err.message : `Couldn't read the game window: ${String(err)}`;

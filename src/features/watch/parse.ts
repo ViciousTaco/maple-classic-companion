@@ -35,76 +35,6 @@ export function parseStatus(lines: string[]): StatusRead {
   };
 }
 
-/**
- * `bonus`: EXP that isn't a kill (a bonus line, a pickup). `unclear`: the words were unreadable, so whether it's a
- * kill is left to the amount (see `judgeKills`). `kill`: a kill whose EXP was already added (held back until its
- * amount came round again); from the parser, amount 0 means a kill line whose amount was unreadable.
- */
-export type ChatEvent =
-  | { kind: "exp"; amount: number; bonus?: boolean; unclear?: boolean }
-  | { kind: "kill"; amount: number }
-  | { kind: "meso"; amount: number }
-  | { kind: "item"; name: string };
-
-const num = (s: string) => Number(fixDigits(s).replace(/[,.\s]/g, ""));
-/** Words that only bonus lines have ("Burning Field Bonus EXP", "Buff Bonus EXP", "(4) Multi-kill Bonus EXP"). */
-const BONUS_WORDS = ["bonus", "burning", "field", "blessing", "buff", "multi", "combo"];
-const AMOUNT = /\(\s*\+?\s*([0-9OoIl|][0-9OoIl|,.\s]*?)\s*\)|^\s*\+\s*([0-9][0-9,.]*)\b/;
-
-/**
- * Pickup / gain messages. Unknown lines are ignored (never guessed). Keywords are matched on a copy with common OCR
- * slips undone ("rn" for "m": "rnesos", "itern"); numbers and item names come from the line as read.
- */
-export function parseChatLine(line: string): ChatEvent | null {
-  const l = line.trim().replace(/['’`"]/g, "");
-  const k = l.toLowerCase().replace(/rn/g, "m");
-  // System messages start the line ("You have gained …", optionally after a "[Tag]"); anything after a "Name:"
-  // prefix is a player talking. Lines with a "Name:" prefix are never gains, whatever follows.
-  const prefix = /^([^:(]{1,24}):\s/.exec(l);
-  if (prefix && !/\bE\W{0,2}[XZ]?\W{0,2}P\b|bonus/i.test(prefix[1]!)) return null;
-  const systemStart = /^(?:\[[^\]]{1,24}\]\s*)?[^a-z]{0,3}(?:you\s+have\s+|you\s+received\s+|\+\s*\d)/.test(k);
-  const bonus = /\bbonus\b/.test(k);
-  const amount = () => {
-    const m = AMOUNT.exec(l);
-    return m ? num(m[1] ?? m[2]!) : NaN;
-  };
-  if (systemStart && /gain\w*\s+(?:an?\s+)?item\b/.test(k)) {
-    const m = /\(\s*(.+?)\s*(?:x\s*\d+\s*)?\)/.exec(l);
-    return m ? { kind: "item", name: m[1]!.trim() } : null;
-  }
-  if (systemStart && /gain\w*\s+(?:some\s+)?mes\w*/.test(k)) {
-    const a = amount();
-    return a > 0 && a < 100_000_000 ? { kind: "meso", amount: a } : null;
-  }
-  if (systemStart && (/(?:gain|receiv)\w*\s+(?:an?\s+)?ex\w*/.test(k) || /^\+\s*\d[\d,]*\s*ex\w*/.test(k))) {
-    const a = amount();
-    return a > 0 && a < 10_000_000_000 ? { kind: "exp", amount: a, ...(bonus ? { bonus: true } : {}) } : null;
-  }
-  // Words unreadable but the shape is unmistakable: an EXP-like token ("EXP", "EZP", "E/.P") and a "(+N)" amount.
-  // Seen on the live client, where the chat font defeats OCR but the digits survive.
-  // A line that says it ("received"/"gained", tolerating a slip or two) is a kill line; one with a bonus word is a
-  // bonus; one whose words are noise is `unclear` — `judgeKills` decides from its amount. A kill line whose amount
-  // came out as noise ("received (+$CJö2fJ5)") is still a kill, of the usual amount (`judgeKills` fills it in).
-  if (/\(\s*\+/.test(l)) {
-    const words = l.toLowerCase().replace(/[^a-z\s]/g, " ").split(/\s+/).filter((w) => w.length >= 4);
-    const saysBonus = bonus || words.some((w) => BONUS_WORDS.some((b) => editDistance(w, b) <= 1));
-    const saysKill = !saysBonus && words.some((w) => w.length >= 5 && (editDistance(w, "received") <= 2 || editDistance(w, "gained") <= 1));
-    if (saysKill || /\b[Ee](?:X|Z|[^\w\s]{1,3})?[Pp]\b/.test(l)) {
-      const a = amount();
-      if (!(a >= 10 && a < 10_000_000_000)) return saysKill ? { kind: "kill", amount: 0 } : null;
-      if (saysBonus) return { kind: "exp", amount: a, bonus: true };
-      return saysKill ? { kind: "exp", amount: a } : { kind: "exp", amount: a, bonus: true, unclear: true };
-    }
-  }
-  // Only the amount survived ("(+345205)"): unclear, like above.
-  const bare = /^\W{0,3}\(\s*\+\s*([0-9][0-9,.]*)\s*\)\W{0,3}$/.exec(l);
-  if (bare) {
-    const a = num(bare[1]!);
-    return a >= 10 && a < 10_000_000_000 ? { kind: "exp", amount: a, bonus: true, unclear: true } : null;
-  }
-  return null;
-}
-
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9()+]/g, "");
 
 /** Name matching that tolerates OCR slips (case, punctuation, one or two wrong letters). */
@@ -137,17 +67,6 @@ function editDistance(a: string, b: string): number {
     }
   }
   return dp[b.length]!;
-}
-
-/**
- * Kills hidden from the chat box: when every visible line is the same (one monster type, nothing else picked up),
- * new lines can't be told from old ones. The status bar's EXP total still rises, so `delta / amount` kills happened
- * (only when it divides cleanly, so quest EXP or a level-up isn't counted as kills).
- */
-export function hiddenKills(expDelta: number, amount: number): number {
-  if (!(expDelta > 0) || !(amount > 0)) return 0;
-  const k = Math.round(expDelta / amount);
-  return k >= 1 && k <= 60 && Math.abs(expDelta - k * amount) <= amount * 0.2 ? k : 0;
 }
 
 /**

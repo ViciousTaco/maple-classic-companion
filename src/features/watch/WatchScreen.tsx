@@ -84,7 +84,7 @@ export function WatchScreen() {
 
   return (
     <div className="space-y-6">
-      <LargeTitle sub="Reads your game screen while you switch it on: kills, EXP, meso, pickups, map, stats, skills and quests">Analyse</LargeTitle>
+      <LargeTitle sub="Reads your game screen while you switch it on: level, EXP gained and pace, map, stats, skills and quests">Analyse</LargeTitle>
 
       <Card className={`p-5 transition-colors ${w.status === "on" ? "ring-2 ring-danger/60" : ""}`}>
         <div className="flex flex-wrap items-center gap-5">
@@ -188,26 +188,26 @@ export function WatchScreen() {
             <Card className="p-5">
               <h3 className="mb-3 font-display text-[19px] font-semibold">This session</h3>
               <dl className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+                <Tile
+                  label="EXP gained"
+                  value={tot.exp > 0 ? tot.exp.toLocaleString("en-AU") : "—"}
+                  sub={tot.exp > 0 ? `${perHour(tot.exp)} / h${tot.kills > 0 ? ` · ≈ ${tot.kills.toLocaleString("en-AU")} kills` : ""}` : "from the EXP number"}
+                />
                 <Tile label="Level progress" value={progress.pct > 0 ? `+${progress.pct.toFixed(3)}%` : "—"} sub={progress.perHour !== null ? `${progress.perHour.toFixed(2)}% / h` : "from the EXP %"} />
                 <Tile label="Next level" value={eta ?? "—"} sub={eta ? "at this pace" : "needs a few minutes of EXP"} />
                 <Tile label="Training time" value={`${Math.floor(mins)} min`} sub="idle time not counted" />
-                <Tile label="Kills" value={tot.kills > 0 ? tot.kills.toLocaleString("en-AU") : "—"} sub={tot.kills > 0 ? `${perHour(tot.kills)} / h` : "from chat, when readable"} />
               </dl>
-              {(tot.exp > 0 || tot.meso > 0) && (
-                <p className="mt-2 text-sm text-ink-2">
-                  From chat: <strong className="text-ink">{tot.exp.toLocaleString("en-AU")}</strong> EXP ({perHour(tot.exp)}/h) · <strong className="text-ink">{tot.meso.toLocaleString("en-AU")}</strong> meso ({perHour(tot.meso)}/h)
-                </p>
-              )}
               <p className="mt-2 text-xs text-ink-3">
-                Only your own “You have gained …” lines count — other players' chat is ignored. In a party, EXP you're given for a party member's kill counts as a kill too.
-                {tot.kills === 0 && mins >= 1 ? " No chat line has been readable yet — level progress, pace and time to level come from the EXP % instead." : ""}
+                EXP gained is the EXP number on your bar, compared from read to read — nothing is missed however fast you kill, and a death
+                penalty isn't taken off. Kills are estimated from EXP on maps the guide knows.
+                {tot.exp === 0 && progress.pct > 0 ? " The EXP number hasn't read cleanly yet, so progress comes from the EXP % for now." : ""}
               </p>
               <FieldsReadout fields={w.fields} expLeft={expLeft} hasMap={!!setup?.map} />
             </Card>
             <Card className="p-5">
               <h3 className="mb-3 font-display text-[19px] font-semibold">Just now</h3>
               {w.feed.length === 0 ? (
-                <p className="text-sm text-ink-3">Kill something — gains show up here.</p>
+                <p className="text-sm text-ink-3">Level-ups, map moves and stats updates show up here.</p>
               ) : (
                 <ul className="space-y-1 text-sm">
                   <AnimatePresence initial={false}>
@@ -229,7 +229,7 @@ export function WatchScreen() {
           <div>
             <h3 className="font-display text-[19px] font-semibold">Stats & skills from the game</h3>
             <p className="mt-1 text-sm text-ink-2">
-              Open your Character Stats, Skills or Quest window in game. While watching, the app checks for them every 5 seconds and updates this character (STR/DEX/INT/LUK, HP/MP, damage range, accuracy, avoidability, skill levels, quests in progress or completed) once two reads agree — usually within a few seconds of opening the window. Kills, EXP, meso, pickups and your map are read every tick. Or read it right now:
+              Open your Character Stats, Skills or Quest window in game. While watching, the app checks for them every 5 seconds and updates this character (STR/DEX/INT/LUK, HP/MP, damage range, accuracy, avoidability, skill levels, quests in progress or completed) once two reads agree — usually within a few seconds of opening the window. Your level, EXP and map are read every tick. Or read it right now:
             </p>
           </div>
           <Button
@@ -287,18 +287,18 @@ export function WatchScreen() {
           <Lock size={17} /> What it does — and never does
         </h3>
         <ul className="grid gap-2 text-sm text-ink-2 sm:grid-cols-2">
-          <li className="flex gap-2"><Eye size={15} className="mt-0.5 shrink-0 text-leaf" /> Reads the text inside your two boxes every few seconds, using Windows' built-in text recognition (offline).</li>
+          <li className="flex gap-2"><Eye size={15} className="mt-0.5 shrink-0 text-leaf" /> Reads the text inside your boxes every few seconds, using Windows' built-in text recognition (offline).</li>
           <li className="flex gap-2"><Ban size={15} className="mt-0.5 shrink-0 text-danger" /> Never saves or sends a picture. Only the numbers it counted are kept, on this PC.</li>
           <li className="flex gap-2"><Ban size={15} className="mt-0.5 shrink-0 text-danger" /> Never touches the game: no clicks, no keys, no memory reading, no hooks or overlays inside it, no changes to game files. It copies what's already on your screen, the same way Discord or Teams screen sharing does.</li>
-          <li className="flex gap-2"><Timer size={15} className="mt-0.5 shrink-0 text-sky" /> Off every time the app starts. Switches itself off if the game closes or you stop killing for 20 minutes.</li>
-          <li className="flex gap-2"><Eye size={15} className="mt-0.5 shrink-0 text-leaf" /> Knows it's you: it checks the character name on your status bar against this profile, and only your own “You have gained …” lines count. Add the optional map box and it follows you from map to map.</li>
+          <li className="flex gap-2"><Timer size={15} className="mt-0.5 shrink-0 text-sky" /> Off every time the app starts. Switches itself off if the game closes or your EXP doesn't rise for 20 minutes.</li>
+          <li className="flex gap-2"><Eye size={15} className="mt-0.5 shrink-0 text-leaf" /> Knows it's you: it checks the character name on your status bar against this profile. Add the optional map box and it follows you from map to map.</li>
         </ul>
       </Card>
 
       {pack && measured.length > 0 && (
         <Card className="p-5">
           <h3 className="mb-1 font-display text-[19px] font-semibold">Your measured spots</h3>
-          <p className="mb-3 text-sm text-ink-3">After 10 minutes and 30 kills at a spot, Train shows these instead of estimates.</p>
+          <p className="mb-3 text-sm text-ink-3">After 10 minutes at a spot the guide knows, Train shows these instead of estimates (kills worked out from the EXP you gained).</p>
           <table className="w-full text-sm">
             <thead className="text-left text-xs text-ink-3">
               <tr>
@@ -325,8 +325,8 @@ export function WatchScreen() {
                     <td className="py-2 tabular-nums">
                       {Math.round(o.minutes)} min · {o.kills.toLocaleString("en-AU")} kills
                     </td>
-                    <td className="py-2 tabular-nums">{r ? rangeText(r.killsPerHour) : "need more"}</td>
-                    <td className="py-2 tabular-nums">{r ? rangeText(r.expPerHour) : "—"}</td>
+                    <td className="py-2 tabular-nums">{r ? rangeText(r.killsPerHour) : o.kills > 0 ? "need more" : "—"}</td>
+                    <td className="py-2 tabular-nums">{r ? rangeText(r.expPerHour) : o.minutes >= 1 && o.exp > 0 ? Math.round((o.exp / o.minutes) * 60).toLocaleString("en-AU") : "—"}</td>
                     <td className="py-2 tabular-nums">{r ? rangeText(r.mesoPerHour) : "—"}</td>
                     <td className="py-2 text-right">
                       <Button size="sm" variant="ghost" onClick={() => setForget(id)} aria-label="Forget this spot's numbers">

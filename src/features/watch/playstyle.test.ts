@@ -2,9 +2,9 @@ import { createMockPlatform } from "../../platform/ipc.mock";
 import { smallPack } from "../../../tests/fixtures/pack.small";
 import { activeProfile, createProfileStore } from "../characters/store";
 import { createWatcher, type WatchPlatform, type WatchWindow } from "./controller";
-import { matchName, parseChatLine, parseMapName, parseStatus } from "./parse";
+import { matchName, parseMapName, parseStatus } from "./parse";
 
-// I-29 follow-ups (owner): moving between maps, mobbing faster than the chat scrolls, other players on screen,
+// I-29 follow-ups (owner): moving between maps, mobbing faster than any read, other players on screen,
 // and making sure it's the owner's own character being read.
 
 const SETUP = {
@@ -12,7 +12,7 @@ const SETUP = {
   sourceWidth: 1366,
   sourceHeight: 768,
   status: { x: 0, y: 740, w: 600, h: 28 },
-  chat: { x: 0, y: 560, w: 500, h: 160 },
+  chat: null,
   map: { x: 0, y: 0, w: 200, h: 30 },
   intervalSec: 2,
   diagnostics: false,
@@ -46,7 +46,6 @@ async function rig(opts: { name?: string; map?: boolean; quest?: boolean } = {})
   let t = Date.parse("2026-10-07T00:00:00Z");
   const screen = {
     status: ["Lv. 25  Taco  EXP 1000 [40.00%]"],
-    chat: ["Welcome"],
     map: ["Test Map f-exp"],
     window: { id: 7, title: "MapleStory", app: "MapleStory.exe", width: 1366, height: 768, minimized: false } as WatchWindow | null,
   };
@@ -61,26 +60,16 @@ async function rig(opts: { name?: string; map?: boolean; quest?: boolean } = {})
   };
   const told: string[] = [];
   const watcher = createWatcher({ platform, store, getPack: () => pack, now: () => t, schedule: () => () => {}, tell: (m) => told.push(m) });
-  const advance = async (ms: number, chatAdd: string[] = []) => {
+  const advance = async (ms: number, status?: string[]) => {
     t += ms;
-    screen.chat = [...screen.chat, ...chatAdd].slice(-6);
+    if (status) screen.status = status;
     await watcher.getState().step();
   };
   return { store, watcher, screen, advance, profile: () => activeProfile(store.getState())!, told, pack };
 }
 
-test("other players' chat never counts, even when it mentions gains", () => {
-  expect(parseChatLine("Bob: I gained experience (+999) lol")).toBeNull();
-  expect(parseChatLine("GuildMate : You have gained mesos (+500)")).toBeNull(); // quoted by someone else
-  expect(parseChatLine("You have gained experience (+24)")).toEqual({ kind: "exp", amount: 24 });
-  expect(parseChatLine("[You have gained mesos (+12)")).toEqual({ kind: "meso", amount: 12 }); // stray OCR bracket
-  expect(parseChatLine("[Event] You have gained experience (+50)")).toEqual({ kind: "exp", amount: 50 }); // tagged system line
-  expect(parseChatLine("[Guild] Bob: You have gained experience (+50)")).toBeNull();
-  // Live-client OCR (2026-10-06): words mangled, the EXP token and amount survive.
-  expect(parseChatLine("J3uit ZICJ(llJ3 E/.P (+1 02753)")).toEqual({ kind: "exp", amount: 102753, bonus: true, unclear: true }); // unreadable words: the amount decides
-  expect(parseChatLine("; 30111J3 EZP (+91 49274)")).toEqual({ kind: "exp", amount: 9149274, bonus: true, unclear: true });
-  expect(parseChatLine("Bob: EXP (+500) lol")).toBeNull(); // a player, not the game
-});
+/** Taco's status bar at Lv 25 (a 2,500-EXP level in this rig): the EXP number and its % agree, like the game's. */
+const bar = (exp: number) => [`Lv. 25  Taco  EXP ${exp} [${((exp / 2500) * 100).toFixed(2)}%]`];
 
 test("the status bar gives the character's name; map names tolerate OCR but not ambiguity", () => {
   expect(parseStatus(["Lv. 23  Demo  EXP 51402 [44.17%]"]).name).toBe("Demo");
@@ -96,21 +85,21 @@ test("the status bar gives the character's name; map names tolerate OCR but not 
   expect(parseMapName(["Ant Tunnel ll"], [...maps, "Ant Tunnel III"])).toBe("Ant Tunnel II");
 });
 
-test("moving between maps: kills are banked per map and the next map's spot takes over", async () => {
+test("moving between maps: EXP is banked per map and the next map's spot takes over", async () => {
   const { watcher, screen, advance, profile } = await rig();
   await watcher.getState().start();
   expect(watcher.getState().autoMap).toBe(true);
-  await advance(2000); // primes; minimap says f-exp
+  await advance(2000, bar(1000)); // primes; minimap says f-exp
   expect(watcher.getState().mapId).toBe("f-exp");
-  await advance(2000, ["You have gained experience (+24)"]);
-  await advance(2000, ["You have gained experience (+24) b"]);
+  await advance(2000, bar(1024));
+  await advance(2000, bar(1048));
   screen.map = ["Test Map f-meso"]; // walked through the portal
-  await advance(2000, ["You have gained experience (+18)"]);
+  await advance(2000, bar(1066));
   expect(watcher.getState().mapId).toBe("f-meso");
   expect(watcher.getState().spotId).toBe("spot-meso");
   expect(watcher.getState().feed.some((f) => f.text === "Moved to Test Map f-meso")).toBe(true);
-  // The kill on the new map is counted there, with the right monster.
-  expect(watcher.getState().session!.killsByMob).toEqual({ "m-rich": 1 });
+  // The EXP gained on the new map counts there, and its kills from that map's monster (Test Mob m-rich, 18 EXP).
+  expect(watcher.getState().session).toMatchObject({ exp: 18, kills: 1 });
   watcher.getState().stop();
   const obs = profile().observations;
   expect(obs["spot-exp"]).toMatchObject({ kills: 2, exp: 48 });
@@ -120,13 +109,14 @@ test("moving between maps: kills are banked per map and the next map's spot take
 test("a map with no training spot in the guide still counts, under the map's own key", async () => {
   const { watcher, screen, advance, profile } = await rig();
   await watcher.getState().start();
-  await advance(2000);
+  await advance(2000, bar(1000));
+  await advance(2000, bar(1000));
   screen.map = ["Test Map town"]; // a map without a spot
-  await advance(2000, ["You have gained experience (+24)"]);
+  await advance(2000, bar(1024));
   expect(watcher.getState().spotId).toBeNull();
   expect(watcher.getState().feed.some((f) => /no training spot in the guide/.test(f.text))).toBe(true);
   watcher.getState().stop();
-  expect(profile().observations["map:town"]).toMatchObject({ kills: 1 });
+  expect(profile().observations["map:town"]).toMatchObject({ exp: 24, kills: 0 }); // no monsters known there: no kill estimate
 });
 
 test("picking a spot by hand stops following the minimap until 'wherever you are' is chosen again", async () => {
@@ -142,32 +132,24 @@ test("picking a spot by hand stops following the minimap until 'wherever you are
   expect(watcher.getState().spotId).toBe("spot-meso");
 });
 
-test("mobbing: more kills per read than chat lines are counted from the EXP total, after the next read confirms it", async () => {
-  const { watcher, screen, advance } = await rig({ map: false });
+test("mobbing: every kill counts, however many happen between two reads", async () => {
+  const { watcher, advance } = await rig({ map: false });
   await watcher.getState().start("spot-exp");
-  await advance(2000);
-  // 10 kills in 2 s: the chat box only holds 6 lines, so 4 fell off before being seen.
-  screen.status = ["Lv. 25  Taco  EXP 1240 [42.00%]"];
-  await advance(2000, Array.from({ length: 10 }, (_, i) => `You have gained experience (+24) ${i}`));
-  // Every line the box shows is new (all below or in place of what was there): 6 kills; the other 4 come from the
-  // EXP total once the next read confirms it didn't fall back.
-  expect(watcher.getState().session!.kills).toBe(6);
-  screen.status = ["Lv. 25  Taco  EXP 1240 [42.00%]"];
-  await advance(2000);
-  expect(watcher.getState().session!.kills).toBe(10);
-  expect(watcher.getState().session!.exp).toBe(240);
+  await advance(2000, bar(1000));
+  await advance(2000, bar(1240)); // 10 kills in 2 s (+9.6 %): a big jump waits for the next read to back it…
+  await advance(2000, bar(1312)); // …which it does (3 more kills)
+  expect(watcher.getState().session).toMatchObject({ exp: 312, kills: 13 });
 });
 
-test("a misread EXP digit can't invent kills: the next read must not fall back", async () => {
-  const { watcher, screen, advance } = await rig({ map: false });
+test("a misread EXP number can't invent EXP", async () => {
+  const { watcher, advance } = await rig({ map: false });
   await watcher.getState().start("spot-exp");
-  await advance(2000);
-  screen.status = ["Lv. 25  Taco  EXP 1072 [40.00%]"]; // OCR slip: 1000 read as 1072 (= 3 kills' worth)
-  await advance(2000);
-  screen.status = ["Lv. 25  Taco  EXP 1000 [40.00%]"]; // back to the truth
-  await advance(2000);
-  await advance(2000);
-  expect(watcher.getState().session!.kills).toBe(0);
+  await advance(2000, bar(1000));
+  await advance(2000, bar(1000));
+  await advance(2000, ["Lv. 25  Taco  EXP 1072 [40.00%]"]); // OCR slip: 1000 read as 1072, the % says otherwise
+  await advance(2000, bar(1000)); // back to the truth
+  await advance(2000, bar(1000));
+  expect(watcher.getState().session!.exp).toBe(0);
 });
 
 test("the character always shows the level the screen shows, even past the guide's data", async () => {
@@ -184,10 +166,10 @@ test("reading another character's status bar pauses watching instead of counting
   await watcher.getState().start("spot-exp");
   await advance(2000);
   screen.status = ["Lv. 40  SomeoneElse  EXP 9000 [10.00%]"];
-  await advance(2000, ["You have gained experience (+24)"]);
+  await advance(2000);
   await advance(2000);
   expect(watcher.getState().status).toBe("on"); // two reads: could be an OCR slip
-  await advance(2000, ["You have gained experience (+24) x"]);
+  await advance(2000);
   expect(watcher.getState().status).toBe("paused");
   expect(watcher.getState().problem).toMatch(/SomeoneElse.*Taco/);
   screen.status = ["Lv. 25  Taco  EXP 1000 [40.00%]"];
@@ -230,17 +212,16 @@ test("the open Stats / Skills window updates the character, after two whole-wind
 });
 
 test("run totals and the training log survive checkpoints; stopping leaves a summary", async () => {
-  const { watcher, screen, advance, profile } = await rig({ map: false });
+  const { watcher, advance, profile } = await rig({ map: false });
   await watcher.getState().start("spot-exp");
-  await advance(2000);
-  for (let i = 0; i < 4; i++) await advance(2000, [`You have gained experience (+24) ${i}`]);
+  await advance(2000, bar(1000));
+  for (let i = 1; i <= 4; i++) await advance(2000, bar(1000 + 24 * i));
   // 5-minute checkpoint: the session resets but the run keeps counting.
-  await advance(5 * 60_000 + 1000, ["You have gained experience (+24) cp"]);
-  expect(watcher.getState().run.kills).toBeGreaterThanOrEqual(4);
-  expect(watcher.getState().run.kills + watcher.getState().session!.kills).toBe(5);
+  await advance(5 * 60_000 + 1000, bar(1120));
+  expect(watcher.getState().run.exp).toBeGreaterThanOrEqual(96);
+  expect(watcher.getState().run.exp + watcher.getState().session!.exp).toBe(120);
   expect(profile().trainingLog).toHaveLength(1); // one stretch at one map so far
-  screen.status = ["Lv. 25  Taco  EXP 1120 [45.00%]"];
-  await advance(2000, ["You have gained experience (+24) last"]);
+  await advance(2000, bar(1144));
   watcher.getState().stop();
   const log = profile().trainingLog;
   expect(log).toHaveLength(1); // checkpoints merged into the same stretch
@@ -297,7 +278,7 @@ test("the diagnostic log gets one text line per read only while switched on", as
   let t = Date.parse("2026-10-07T00:00:00Z");
   const platform: WatchPlatform = {
     screenListWindows: async () => [{ id: 7, title: "MapleStory", app: "", width: 1366, height: 768, minimized: false }],
-    screenRead: async (_id, regions) => regions.map((r) => ({ name: r.name, lines: r.name === "chat" ? [{ text: "You have gained mesos (+5)", x: 0, y: 0, w: 1, h: 1 }] : [], covered: false })),
+    screenRead: async (_id, regions) => regions.map((r) => ({ name: r.name, lines: r.name === "status" ? [{ text: "Lv. 25  Taco  EXP 1000 [40.00%]", x: 0, y: 0, w: 1, h: 1 }] : [], covered: false })),
     watchLogAppend: async (line) => {
       lines.push(line);
       return "x.jsonl";
@@ -309,7 +290,7 @@ test("the diagnostic log gets one text line per read only while switched on", as
   await w.getState().step();
   expect(lines).toHaveLength(1);
   const entry = JSON.parse(lines[0]!);
-  expect(entry.chat).toEqual(["You have gained mesos (+5)"]);
+  expect(entry.status).toEqual(["Lv. 25  Taco  EXP 1000 [40.00%]"]);
   expect(entry).not.toHaveProperty("png");
   store.getState().updateSettings({ watch: { ...SETUP, map: null, diagnostics: false } });
   t += 2000;
@@ -347,7 +328,7 @@ test("EXP bar fill stands in for the % when the digits can't be read", async () 
   expect(w.getState().session?.lastExp).toBe(41.2);
 });
 
-test("a rising EXP bar keeps the training clock running when no chat is readable", async () => {
+test("a rising EXP bar keeps the training clock running, even with only its fill to go on", async () => {
   const store = createProfileStore(createMockPlatform(), { debounceMs: 0 });
   await store.getState().load();
   store.getState().createProfile({ name: "Taco", jobId: "thief", level: 25 });

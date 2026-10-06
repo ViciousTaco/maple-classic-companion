@@ -1,7 +1,5 @@
 import type { Pack } from "../../data/pack";
 import type { Observation } from "../../data/schema/profile";
-import type { ChatEvent } from "./parse";
-import { matchName } from "./parse";
 
 // I-29: a watching session at one spot, and the per-character totals it adds up to.
 
@@ -9,9 +7,12 @@ export type SessionTotals = {
   spotId: string | null;
   mapId: string | null;
   startedAt: string;
-  /** Time spent actually training: gaps between reads count only while kills keep coming (idle/town time doesn't). */
+  /** Time spent actually training: gaps between reads count only while the EXP bar keeps rising (idle/town time doesn't). */
   activeMs: number;
+  /** When the EXP bar last rose (named for kills, which is what raises it). */
   lastKillAt: number | null;
+  /** Kills: estimated from EXP on guide maps (`killsFromExp`). Meso and items came from the old chat reader (I-50,
+   * removed 2026-10-07) and stay 0; kept so saved data still loads. */
   kills: number;
   exp: number;
   meso: number;
@@ -29,37 +30,20 @@ export function newSession(spotId: string | null, mapId: string | null, now: Dat
   return { spotId, mapId, startedAt: now.toISOString(), activeMs: 0, lastKillAt: null, kills: 0, exp: 0, meso: 0, killsByMob: {}, items: {}, startLevel: null, startExp: null, lastLevel: null, lastExp: null };
 }
 
-/** Which monster an EXP gain came from: the unique monster on this map with exactly that EXP, else "?". */
-export function monsterForExp(pack: Pack, mapId: string | null, amount: number): string {
+/**
+ * Kills estimated from EXP gained: EXP ÷ the map's average monster EXP (weighted by how many spawn). Classic monsters
+ * give fixed EXP, so on a guide map this is close; null when the map or its monsters' EXP aren't in the guide.
+ */
+export function killsFromExp(pack: Pack, mapId: string | null, exp: number): number | null {
   const map = mapId ? pack.index.mapById.get(mapId) : undefined;
-  const candidates = (map?.spawns ?? []).map((s) => pack.index.monsterById.get(s.mobId)).filter((m) => m && m.exp === amount);
-  return candidates.length === 1 ? candidates[0]!.id : "?";
+  const mobs = (map?.spawns ?? []).map((sp) => ({ n: sp.count ?? 1, exp: pack.index.monsterById.get(sp.mobId)?.exp ?? 0 })).filter((m) => m.exp > 0);
+  if (mobs.length === 0 || exp <= 0) return null;
+  const perKill = mobs.reduce((a, m) => a + m.n * m.exp, 0) / mobs.reduce((a, m) => a + m.n, 0);
+  return Math.round(exp / perKill);
 }
 
-/** A kill within this long counts the time since the previous read as training time. */
+/** EXP gained within this long counts the time since the previous read as training time. */
 export const ACTIVE_WINDOW_MS = 60_000;
-
-export function applyEvents(t: SessionTotals, events: ChatEvent[], pack: Pack, nowMs = Date.now()): SessionTotals {
-  const next = { ...t, killsByMob: { ...t.killsByMob }, items: { ...t.items } };
-  if (events.some((e) => e.kind === "exp" || e.kind === "kill")) next.lastKillAt = nowMs;
-  const itemNames = pack.items.map((i) => i.name);
-  for (const e of events) {
-    if (e.kind === "exp" || e.kind === "kill") {
-      if (e.kind === "exp") next.exp += e.amount;
-      if (e.kind === "exp" && e.bonus) continue; // EXP that isn't a kill (bonus line, pickup)
-      next.kills += 1;
-      const mob = monsterForExp(pack, t.mapId, e.amount);
-      next.killsByMob[mob] = (next.killsByMob[mob] ?? 0) + 1;
-    } else if (e.kind === "meso") {
-      next.meso += e.amount;
-    } else {
-      const name = matchName(e.name, itemNames);
-      const id = name ? pack.items.find((i) => i.name === name)!.id : `?:${e.name}`;
-      next.items[id] = (next.items[id] ?? 0) + 1;
-    }
-  }
-  return next;
-}
 
 export function applyStatus(t: SessionTotals, level: number | null, exp: number | null): SessionTotals {
   if (level === null && exp === null) return t;
@@ -102,7 +86,7 @@ export function observationKey(spotId: string | null, mapId: string | null): str
  */
 export function mergeSession(observations: Record<string, Observation>, s: SessionTotals, now: Date, countSession = true): Record<string, Observation> {
   const key = observationKey(s.spotId, s.mapId);
-  if (!key || s.kills === 0) return observations;
+  if (!key || (s.exp <= 0 && (percentGained(s) ?? 0) <= 0)) return observations;
   const prev = observations[key];
   const minutes = s.activeMs / 60_000;
   const pct = percentGained(s);

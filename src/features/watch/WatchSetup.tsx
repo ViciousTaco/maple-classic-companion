@@ -4,7 +4,7 @@ import type { Region } from "../../data/schema/profile";
 import { useActiveProfile, usePack, usePlatform, useProfileStore, useProfiles } from "../../app/context";
 import { Button, Chip } from "../../ui/kit";
 import { Dialog } from "../../ui/overlays";
-import { parseChatLine, parseExpText, parseMapName, parseStatus } from "./parse";
+import { parseExpText, parseMapName, parseStatus } from "./parse";
 import { CANDIDATES, methodLabel, scoreReading, type Tuning } from "./reading";
 import { canWatch } from "./useWatch";
 import type { WatchWindow } from "./controller";
@@ -15,14 +15,13 @@ import type { WatchWindow } from "./controller";
 type Snapshot = { pngBase64: string; width: number; height: number; sourceWidth: number; sourceHeight: number; covered?: boolean };
 type SnapshotPlatform = { screenSnapshot(windowId: number): Promise<Snapshot> };
 // Storage keys kept for saved setups: `status` is the Level box, `expText` the EXP box.
-type BoxName = "status" | "expText" | "chat" | "map";
-const BOXES = ["status", "expText", "chat", "map"] as const;
+type BoxName = "status" | "expText" | "map";
+const BOXES = ["status", "expText", "map"] as const;
 
 const BOX = {
   status: { label: "Level", hint: "Drag a small box around your level and name on the status bar — e.g. “Lv. 272 ViciousTaco”.", color: "var(--sky)", cls: "border-sky bg-sky/15" },
-  chat: { label: "EXP messages", hint: "Drag a box around where the EXP messages pop up after each kill — “You received EXP (+…)” / “You have gained experience (+…)”, usually stacked on the right above the skill bar. Make it tall enough for a few lines. Not the chat log, notification or quest helper boxes.", color: "var(--maple)", cls: "border-maple bg-maple/15" },
   map: { label: "Map name (optional)", hint: "Drag a box around the map's name at the top of the minimap, so Analyse follows you from map to map.", color: "var(--leaf)", cls: "border-leaf bg-leaf/15" },
-  expText: { label: "EXP", hint: "Drag a box around the EXP digits — e.g. “4,012,189,870,315 [72.668%]”. The % gives your progress to three decimals; the total shows when it reads cleanly.", color: "#ffcc00", cls: "border-[#ffcc00] bg-[#ffcc00]/15" },
+  expText: { label: "EXP", hint: "Drag a box around the EXP digits — e.g. “4,012,189,870,315 [72.668%]”. Analyse compares this number from read to read for your EXP gained, EXP per hour and time to level.", color: "#ffcc00", cls: "border-[#ffcc00] bg-[#ffcc00]/15" },
 } as const;
 
 const OWN_TITLE = /maple classic companion/i;
@@ -30,7 +29,7 @@ const looksLikeGame = (w: WatchWindow) => /maple/i.test(w.title) && !OWN_TITLE.t
 
 export function WatchSetup({ open, onOpenChange }: { open: boolean; onOpenChange: (v: boolean) => void }) {
   return (
-    <Dialog open={open} onOpenChange={onOpenChange} title="Set up Analyse" description="Three quick steps. Nothing is read until you switch Analyse on. Four boxes: Level, EXP, EXP messages, and the minimap's map name (optional — lets Analyse follow you between maps)." wide>
+    <Dialog open={open} onOpenChange={onOpenChange} title="Set up Analyse" description="Three quick steps. Nothing is read until you switch Analyse on. Three boxes: Level, EXP, and the minimap's map name (optional — lets Analyse follow you between maps)." wide>
       {open && <Wizard onDone={() => onOpenChange(false)} />}
     </Dialog>
   );
@@ -45,10 +44,10 @@ function Wizard({ onDone }: { onDone: () => void }) {
   const [windows, setWindows] = useState<WatchWindow[] | null>(null);
   const [win, setWin] = useState<WatchWindow | null>(null);
   const [shot, setShot] = useState<Snapshot | null>(null);
-  const [boxes, setBoxes] = useState<Record<BoxName, Region | null>>({ status: null, expText: null, chat: null, map: null });
+  const [boxes, setBoxes] = useState<Record<BoxName, Region | null>>({ status: null, expText: null, map: null });
   const [drawing, setDrawing] = useState<BoxName>("status");
   const [lastDrawn, setLastDrawn] = useState<BoxName | null>(null);
-  const [test, setTest] = useState<{ level: number | null; expPercent: number | null; expValue: number | null; barPercent: number | null; name: string | null; map: string | null; mapLines: string[]; chat: string[]; understood: number } | null>(null);
+  const [test, setTest] = useState<{ level: number | null; expPercent: number | null; expValue: number | null; barPercent: number | null; name: string | null; map: string | null; mapLines: string[] } | null>(null);
   const [busy, setBusy] = useState(false);
   const [tuning, setTuning] = useState<Tuning>(() => prev?.tuning ?? {});
   const [error, setError] = useState<string | null>(null);
@@ -85,7 +84,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
       const same = prev && prev.sourceWidth === s.sourceWidth && prev.sourceHeight === s.sourceHeight;
       // Older setups had one wide "Level & EXP bar" box: keep it as Level only if it was reasonably small.
       const oldStatus = same && prev.status && prev.status.w < s.sourceWidth * 0.5 ? prev.status : null;
-      setBoxes({ status: oldStatus, expText: same ? (prev.expText ?? prev.expBar) : null, chat: same ? prev.chat : null, map: same ? prev.map : null });
+      setBoxes({ status: oldStatus, expText: same ? (prev.expText ?? prev.expBar) : null, map: same ? prev.map : null });
       setDrawing(oldStatus ? "expText" : "status");
     } catch (e) {
       setError(`Couldn't take the picture: ${String(e)}`);
@@ -129,10 +128,9 @@ function Wizard({ onDone }: { onDone: () => void }) {
         if (e.expPercent !== null) status.expPercent = e.expPercent;
         if (e.expValue !== null) status.expValue = e.expValue;
       }
-      const chat = best.chat?.lines ?? [];
       const mapLines = best.map?.lines ?? [];
       const map = pack ? parseMapName(mapLines, mapNames) : null;
-      setTest({ level: status.level, expPercent: status.expPercent, expValue: status.expValue, barPercent: null, name: status.name, map, mapLines, chat, understood: chat.filter((l) => parseChatLine(l) !== null).length });
+      setTest({ level: status.level, expPercent: status.expPercent, expValue: status.expValue, barPercent: null, name: status.name, map, mapLines });
     } catch (e) {
       setError(`Test read failed: ${String(e)}`);
     } finally {
@@ -148,7 +146,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
         sourceWidth: shot.sourceWidth,
         sourceHeight: shot.sourceHeight,
         status: boxes.status,
-        chat: boxes.chat,
+        chat: null,
         map: boxes.map,
         expBar: null,
         expText: boxes.expText,
@@ -196,7 +194,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
       </Step>
 
       {shot && (
-        <Step n={2} title="Draw the boxes" done={!!boxes.status && !!boxes.expText && !!boxes.chat}>
+        <Step n={2} title="Draw the boxes" done={!!boxes.status && !!boxes.expText}>
           <div className="mb-2 flex flex-wrap items-center gap-2">
             {BOXES.map((b) => (
               <button
@@ -233,7 +231,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
         </Step>
       )}
 
-      {shot && (boxes.status || boxes.chat || boxes.map || boxes.expText) && (
+      {shot && (boxes.status || boxes.map || boxes.expText) && (
         <Step n={3} title="Test it" done={!!test}>
           <div className="flex flex-wrap items-center gap-2">
             <Button onClick={() => void runTest()} disabled={busy}>
@@ -250,9 +248,6 @@ function Wizard({ onDone }: { onDone: () => void }) {
                   </Chip>
                 )}
                 {boxes.map && <Chip tone={test.map ? "leaf" : "neutral"}>Map: {test.map ?? (test.mapLines.length ? `“${test.mapLines[0]}” isn't a map the guide knows` : "nothing read")}</Chip>}
-                <Chip tone={test.understood > 0 ? "leaf" : "neutral"}>
-                  Chat: {test.chat.length} line{test.chat.length === 1 ? "" : "s"} read, {test.understood} understood
-                </Chip>
               </>
             )}
           </div>
@@ -262,17 +257,11 @@ function Wizard({ onDone }: { onDone: () => void }) {
               {BOXES.filter((b) => tuning[b]).map((b) => `${BOX[b].label.replace(" (optional)", "")}: ${methodLabel(tuning[b]!)}`).join(" · ")}
             </p>
           )}
-          {test && test.chat.length > 0 && (
-            <pre className="mt-2 max-h-28 overflow-auto rounded-xl bg-fill p-2 text-xs text-ink-2">{test.chat.join("\n")}</pre>
-          )}
           {test && test.expPercent === null && boxes.expText && (
             <p className="mt-2 text-sm text-ink-2">EXP digits not read — make the EXP box a little tighter around the digits (keep the thin bar under them inside it).</p>
           )}
           {test && test.level === null && boxes.status && (
             <p className="mt-2 text-sm text-ink-2">Level not found — try a slightly bigger box around “Lv.” and your name.</p>
-          )}
-          {test && test.understood === 0 && boxes.chat && (
-            <p className="mt-2 text-sm text-ink-2">No gain messages in the chat box right now — that's fine. Kill a monster and test again to check.</p>
           )}
         </Step>
       )}

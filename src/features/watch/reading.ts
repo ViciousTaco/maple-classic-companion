@@ -1,10 +1,10 @@
-import { matchName, parseChatLine, parseExpText, parseStatus } from "./parse";
+import { matchName, parseExpText, parseStatus } from "./parse";
 
 // Analyse overhaul (2026-10-06): how each box is read, and how the setup picks the best way for the owner's screen.
 // Every choice here was verified on a real live-client frame (tests/frames-private, git-ignored) — if the busy
 // modern client reads, Classic's flat UI will.
 
-export type BoxName = "status" | "expText" | "chat" | "map";
+export type BoxName = "status" | "expText" | "map";
 export type Prep = "none" | "lightText" | "brightText";
 export type Method = { prep: Prep; filter: "bilinear" | "nearest" };
 export type Tuning = Partial<Record<BoxName, Method>>;
@@ -13,12 +13,11 @@ export type Tuning = Partial<Record<BoxName, Method>>;
 export const DEFAULT_METHOD: Record<BoxName, Method> = {
   status: { prep: "none", filter: "bilinear" },
   map: { prep: "none", filter: "bilinear" },
-  chat: { prep: "none", filter: "bilinear" },
   // Outlined pale digits on a bright bar: keep only pixels whiter than their row's background.
   expText: { prep: "lightText", filter: "bilinear" },
 };
 
-/** Methods the setup's test read tries per box (≤ 4 each, so four boxes fit one read). */
+/** Methods the setup's test read tries per box (≤ 4 each, so every box fits one read). */
 export const CANDIDATES: Record<BoxName, Method[]> = {
   status: [
     { prep: "none", filter: "bilinear" },
@@ -37,12 +36,6 @@ export const CANDIDATES: Record<BoxName, Method[]> = {
     { prep: "none", filter: "nearest" },
     { prep: "lightText", filter: "bilinear" },
     { prep: "brightText", filter: "bilinear" },
-  ],
-  chat: [
-    { prep: "none", filter: "bilinear" },
-    { prep: "lightText", filter: "bilinear" },
-    { prep: "brightText", filter: "bilinear" },
-    { prep: "none", filter: "nearest" },
   ],
 };
 
@@ -64,7 +57,6 @@ export function scoreReading(
   mapNames: string[],
   ctx: { level?: number; expPercent?: number; map?: string } = {},
 ): number {
-  const text = lines.join(" ");
   switch (box) {
     case "status": {
       const st = parseStatus(lines);
@@ -83,11 +75,6 @@ export function scoreReading(
       const known = matchName(line, mapNames) !== null;
       return (known ? 10 : 0) + Math.min(words, 5) - 2 * oddChars(line) + (ctx.map && line === ctx.map ? 5 : 0);
     }
-    case "chat": {
-      const parsed = lines.filter((l) => parseChatLine(l) !== null).length;
-      const words = text.split(/\s+/).filter((w) => /^[A-Za-z]{3,}$/.test(w)).length;
-      return parsed * 10 + Math.min(words, 9) - oddChars(text);
-    }
   }
 }
 
@@ -103,8 +90,8 @@ export type Fields = {
 export const NO_FIELDS: Fields = { level: null, name: null, expPercent: null, expValue: null, map: null };
 
 /** What the last few reads said — the evidence a new value needs before it replaces a good one. */
-export type Stabilizer = { pendingLevel: number | null; pendingPct: number | null; lastExpRaw: number | null; mapWindow: string[] };
-export const newStabilizer = (): Stabilizer => ({ pendingLevel: null, pendingPct: null, lastExpRaw: null, mapWindow: [] });
+export type Stabilizer = { pendingLevel: number | null; pendingPct: number | null; lastExpRaw: number | null; lastRatio: number | null; mapWindow: string[] };
+export const newStabilizer = (): Stabilizer => ({ pendingLevel: null, pendingPct: null, lastExpRaw: null, lastRatio: null, mapWindow: [] });
 
 const MAP_WINDOW = 5;
 /** The minimap's map line: the last line with real letters, channel removed. */
@@ -135,15 +122,26 @@ export function updateFields(
     const p = read.expPercent;
     const last = prev.expPercent?.value;
     const levelledUp = prev.level !== null && f.level !== null && f.level.value > prev.level.value;
-    const agrees = stab.pendingPct !== null && Math.abs(stab.pendingPct - p) <= 0.05;
+    // A big change is real when the next read backs it: about the same, or a little further the same way (fast
+    // training at a low level can move the % a lot every read). A one-off misread isn't followed by another.
+    const agrees = stab.pendingPct !== null && p >= stab.pendingPct - 0.05 && p - stab.pendingPct <= 3;
     if (last === undefined || Math.abs(p - last) <= 3 || levelledUp || agrees) {
       f.expPercent = { value: p, at: t };
       stab.pendingPct = null;
     } else stab.pendingPct = p;
   }
   if (read.expValue !== null) {
-    if (read.expValue === stab.lastExpRaw) f.expValue = { value: read.expValue, at: t };
+    // The number changes every read while training, so "two equal reads" alone would never accept it. At one level
+    // the number and the % rise together (number ÷ % = the level's size), so a read whose ratio agrees with the
+    // previous read's is right too. (The % is rounded — to 2 decimals on some bars — so that much slack is allowed;
+    // a misread digit anywhere but the last few is far outside it.)
+    const pct = read.expPercent;
+    const ratio = pct !== null && pct > 0 ? read.expValue / pct : null;
+    const tol = pct !== null && pct > 0 ? Math.max(1e-4, 0.012 / pct) : 0;
+    const agrees = ratio !== null && stab.lastRatio !== null && Math.abs(ratio / stab.lastRatio - 1) <= tol;
+    if (read.expValue === stab.lastExpRaw || agrees) f.expValue = { value: read.expValue, at: t };
     stab.lastExpRaw = read.expValue;
+    stab.lastRatio = ratio;
   }
   const line = mapLineOf(read.mapLines);
   if (line) {

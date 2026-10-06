@@ -170,6 +170,7 @@ export const SettingsSchema = z
         sourceWidth: int(1, 20000),
         sourceHeight: int(1, 20000),
         status: RegionSchema.nullable(),
+        /** Retired (the EXP messages box, removed 2026-10-07): always null now; kept so older saved setups load. */
         chat: RegionSchema.nullable(),
         /** The minimap's title box; lets the watcher follow the player from map to map. */
         map: RegionSchema.nullable().default(null),
