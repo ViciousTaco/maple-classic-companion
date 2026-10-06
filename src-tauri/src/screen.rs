@@ -82,6 +82,8 @@ pub enum Mode {
     #[default]
     Ocr,
     Bar,
+    /// Text *and* bar fill from the same box (the EXP strip: digits above a thin bar).
+    Both,
 }
 
 /// One recognised line; the box is in region pixels.
@@ -103,6 +105,16 @@ pub struct RegionText {
     /// `mode: "bar"` only — the filled fraction 0..1, or null when the box doesn't look like a bar.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub fill: Option<f64>,
+}
+
+/// The bar in an EXP strip sits under the digits: measure the bottom 40 % of the box (at least 3 rows).
+pub fn bar_fill_lower(px: &[u8], w: u32, h: u32) -> Option<f64> {
+    if h < 4 {
+        return bar_fill(px, w, h);
+    }
+    let rows = (h * 2 / 5).max(3).min(h);
+    let start = (h - rows) as usize * w as usize * BPP;
+    bar_fill(&px[start..], w, rows)
 }
 
 /// How far a horizontal progress bar is filled, from its pixels (BGRA, `w`×`h`). The filled part is brighter /
@@ -856,7 +868,8 @@ mod win {
                         return Ok(RegionText { name: region.name.clone(), lines: Vec::new(), covered, fill: bar_fill(&px, r.w, r.h) });
                     }
                     let lines = ocr_region(engine, &px, (r.w, r.h), scale, region.filter, max)?;
-                    Ok(RegionText { name: region.name.clone(), lines, covered, fill: None })
+                    let fill = if region.mode == Mode::Both { bar_fill_lower(&px, r.w, r.h) } else { None };
+                    Ok(RegionText { name: region.name.clone(), lines, covered, fill })
                 })
                 .collect()
         })

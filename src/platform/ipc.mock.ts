@@ -430,7 +430,7 @@ export function createMockPlatform(initialJson: string | null = null): Platform 
         name: r.name,
         lines: r.mode === "bar" ? [] : (controls.ocrLines[r.name] ?? []).map((l, i) => (typeof l === "string" ? textLine(l, i, r.w, r.h) : { ...l })),
         covered: controls.covered,
-        ...(r.mode === "bar" ? { fill: controls.barFill } : {}),
+        ...(r.mode === "bar" || r.mode === "both" ? { fill: controls.barFill } : {}),
       }));
     },
     hotkeyStatus: async () => ({ registered: controls.hotkeyRegistered, accelerator: controls.hotkey }),

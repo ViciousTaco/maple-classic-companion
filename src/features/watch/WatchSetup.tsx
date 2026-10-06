@@ -13,15 +13,15 @@ import type { WatchWindow } from "./controller";
 
 type Snapshot = { pngBase64: string; width: number; height: number; sourceWidth: number; sourceHeight: number; covered?: boolean };
 type SnapshotPlatform = { screenSnapshot(windowId: number): Promise<Snapshot> };
-type BoxName = "status" | "chat" | "map" | "expText" | "expBar";
-const BOXES = ["status", "chat", "map", "expText", "expBar"] as const;
+// Storage keys kept for saved setups: `status` is the Level box, `expText` the EXP box.
+type BoxName = "status" | "expText" | "chat" | "map";
+const BOXES = ["status", "expText", "chat", "map"] as const;
 
 const BOX = {
-  status: { label: "Level & EXP bar", hint: "Drag a box around the bar at the bottom that shows your level and EXP %.", color: "var(--sky)", cls: "border-sky bg-sky/15" },
+  status: { label: "Level", hint: "Drag a small box around your level and name on the status bar — e.g. “Lv. 272 ViciousTaco”.", color: "var(--sky)", cls: "border-sky bg-sky/15" },
   chat: { label: "Chat box", hint: "Drag a box around the chat log — the panel where messages scroll (bottom-left by default), where “You have gained …” lines appear. Not the notification or quest helper boxes.", color: "var(--maple)", cls: "border-maple bg-maple/15" },
   map: { label: "Map name (optional)", hint: "Drag a box around the map's name at the top of the minimap, so Analyse follows you from map to map.", color: "var(--leaf)", cls: "border-leaf bg-leaf/15" },
-  expText: { label: "EXP numbers (optional)", hint: "Drag a small box around just the EXP digits — e.g. “4,012,189,870,315 [72.668%]” — and nothing else. A tight box reads far better than the whole bar.", color: "var(--sky)", cls: "border-sky bg-sky/15" },
-  expBar: { label: "EXP bar (optional)", hint: "Drag a tight box around the EXP bar itself — just the bar, edge to edge, no text above or below. How far it's filled gives your EXP % even when the digits are too small to read.", color: "#ffcc00", cls: "border-[#ffcc00] bg-[#ffcc00]/15" },
+  expText: { label: "EXP", hint: "Drag a box around the EXP digits and the thin bar under them — e.g. “4,012,189,870,315 [72.668%]” plus the bar. The digits give the exact total and %; the bar's fill is the fallback when digits can't be read.", color: "#ffcc00", cls: "border-[#ffcc00] bg-[#ffcc00]/15" },
 } as const;
 
 const OWN_TITLE = /maple classic companion/i;
@@ -29,7 +29,7 @@ const looksLikeGame = (w: WatchWindow) => /maple/i.test(w.title) && !OWN_TITLE.t
 
 export function WatchSetup({ open, onOpenChange }: { open: boolean; onOpenChange: (v: boolean) => void }) {
   return (
-    <Dialog open={open} onOpenChange={onOpenChange} title="Set up Analyse" description="Three quick steps. Nothing is read until you switch Analyse on. The map and EXP-bar boxes are optional: one lets the watcher follow you between maps, the other gives EXP % without reading digits." wide>
+    <Dialog open={open} onOpenChange={onOpenChange} title="Set up Analyse" description="Three quick steps. Nothing is read until you switch Analyse on. Four boxes: Level, EXP, Chat, and the minimap's map name (optional — lets Analyse follow you between maps)." wide>
       {open && <Wizard onDone={() => onOpenChange(false)} />}
     </Dialog>
   );
@@ -44,7 +44,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
   const [windows, setWindows] = useState<WatchWindow[] | null>(null);
   const [win, setWin] = useState<WatchWindow | null>(null);
   const [shot, setShot] = useState<Snapshot | null>(null);
-  const [boxes, setBoxes] = useState<Record<BoxName, Region | null>>({ status: null, chat: null, map: null, expText: null, expBar: null });
+  const [boxes, setBoxes] = useState<Record<BoxName, Region | null>>({ status: null, expText: null, chat: null, map: null });
   const [drawing, setDrawing] = useState<BoxName>("status");
   const [lastDrawn, setLastDrawn] = useState<BoxName | null>(null);
   const [test, setTest] = useState<{ level: number | null; expPercent: number | null; expValue: number | null; barPercent: number | null; name: string | null; map: string | null; mapLines: string[]; chat: string[]; understood: number } | null>(null);
@@ -81,8 +81,10 @@ function Wizard({ onDone }: { onDone: () => void }) {
       setShot(s);
       setTest(null);
       const same = prev && prev.sourceWidth === s.sourceWidth && prev.sourceHeight === s.sourceHeight;
-      setBoxes({ status: same ? prev.status : null, chat: same ? prev.chat : null, map: same ? prev.map : null, expText: same ? prev.expText : null, expBar: same ? prev.expBar : null });
-      setDrawing(same && prev.status ? "chat" : "status");
+      // Older setups had one wide "Level & EXP bar" box: keep it as Level only if it was reasonably small.
+      const oldStatus = same && prev.status && prev.status.w < s.sourceWidth * 0.5 ? prev.status : null;
+      setBoxes({ status: oldStatus, expText: same ? (prev.expText ?? prev.expBar) : null, chat: same ? prev.chat : null, map: same ? prev.map : null });
+      setDrawing(oldStatus ? "expText" : "status");
     } catch (e) {
       setError(`Couldn't take the picture: ${String(e)}`);
     } finally {
@@ -96,7 +98,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
     setError(null);
     try {
       const filter = prev?.textStyle === "pixel" ? ("nearest" as const) : ("bilinear" as const);
-      const regions = BOXES.flatMap((name) => (boxes[name] ? [name === "expBar" ? { name, ...boxes[name], mode: "bar" as const } : { name, ...boxes[name], scale: 3, filter }] : []));
+      const regions = BOXES.flatMap((name) => (boxes[name] ? [{ name, ...boxes[name], scale: 3, filter, ...(name === "expText" ? { mode: "both" as const } : {}) }] : []));
       const out = await platform.screenRead(win.id, regions);
       const status = parseStatus(out.find((r) => r.name === "status")?.lines.map((l) => l.text) ?? []);
       const expLines = out.find((r) => r.name === "expText")?.lines.map((l) => l.text);
@@ -108,7 +110,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
       const chat = out.find((r) => r.name === "chat")?.lines.map((l) => l.text) ?? [];
       const mapLines = out.find((r) => r.name === "map")?.lines.map((l) => l.text) ?? [];
       const map = pack ? parseMapName(mapLines, pack.maps.map((m) => m.name)) : null;
-      const fill = out.find((r) => r.name === "expBar")?.fill;
+      const fill = out.find((r) => r.name === "expText")?.fill;
       setTest({ level: status.level, expPercent: status.expPercent, expValue: status.expValue, barPercent: typeof fill === "number" ? Math.round(fill * 1000) / 10 : null, name: status.name, map, mapLines, chat, understood: chat.filter((l) => parseChatLine(l) !== null).length });
     } catch (e) {
       setError(`Test read failed: ${String(e)}`);
@@ -127,7 +129,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
         status: boxes.status,
         chat: boxes.chat,
         map: boxes.map,
-        expBar: boxes.expBar,
+        expBar: null,
         expText: boxes.expText,
         intervalSec: prev?.intervalSec ?? 2,
         diagnostics: prev?.diagnostics ?? false,
@@ -172,7 +174,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
       </Step>
 
       {shot && (
-        <Step n={2} title="Draw the boxes" done={!!boxes.status && !!boxes.chat}>
+        <Step n={2} title="Draw the boxes" done={!!boxes.status && !!boxes.expText && !!boxes.chat}>
           <div className="mb-2 flex flex-wrap items-center gap-2">
             {BOXES.map((b) => (
               <button
@@ -199,10 +201,8 @@ function Wizard({ onDone }: { onDone: () => void }) {
             setBoxes((b) => ({ ...b, [drawing]: r }));
             setLastDrawn(drawing);
             setTest(null);
-            if (drawing === "status" && !boxes.chat) setDrawing("chat");
-            else if (drawing === "chat" && !boxes.map) setDrawing("map");
-            else if (drawing === "map" && !boxes.expText) setDrawing("expText");
-            else if (drawing === "expText" && !boxes.expBar) setDrawing("expBar");
+            const next = BOXES.find((b) => b !== drawing && !boxes[b] && BOXES.indexOf(b) > BOXES.indexOf(drawing)) ?? BOXES.find((b) => b !== drawing && !boxes[b]);
+            if (next) setDrawing(next);
           }} />
           <Magnifier shot={shot} box={boxes[lastDrawn ?? drawing]} label={BOX[lastDrawn ?? drawing].label} />
           <p className="mt-2 text-xs text-ink-3">
@@ -211,7 +211,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
         </Step>
       )}
 
-      {shot && (boxes.status || boxes.chat || boxes.map || boxes.expText || boxes.expBar) && (
+      {shot && (boxes.status || boxes.chat || boxes.map || boxes.expText) && (
         <Step n={3} title="Test it" done={!!test}>
           <div className="flex flex-wrap items-center gap-2">
             <Button onClick={() => void runTest()} disabled={busy}>
@@ -228,7 +228,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
                   </Chip>
                 )}
                 {boxes.map && <Chip tone={test.map ? "leaf" : "neutral"}>Map: {test.map ?? (test.mapLines.length ? `“${test.mapLines[0]}” isn't a map the guide knows` : "nothing read")}</Chip>}
-                {boxes.expBar && <Chip tone={test.barPercent !== null ? "leaf" : "neutral"}>EXP bar: {test.barPercent !== null ? `${test.barPercent}% filled` : "no bar found in that box"}</Chip>}
+                {boxes.expText && <Chip tone={test.barPercent !== null ? "leaf" : "neutral"}>EXP bar fill: {test.barPercent !== null ? `${test.barPercent}%` : "no bar seen under the digits"}</Chip>}
                 <Chip tone={test.understood > 0 ? "leaf" : "neutral"}>
                   Chat: {test.chat.length} line{test.chat.length === 1 ? "" : "s"} read, {test.understood} understood
                 </Chip>
@@ -238,14 +238,11 @@ function Wizard({ onDone }: { onDone: () => void }) {
           {test && test.chat.length > 0 && (
             <pre className="mt-2 max-h-28 overflow-auto rounded-xl bg-fill p-2 text-xs text-ink-2">{test.chat.join("\n")}</pre>
           )}
-          {test && test.expPercent === null && test.level !== null && boxes.status && !boxes.expText && (
-            <p className="mt-2 text-sm text-ink-2">Level read, EXP not — add the “EXP numbers” box tightly around the digits; a small box reads far better than the whole bar.</p>
-          )}
-          {test && test.barPercent !== null && test.barPercent >= 99.5 && boxes.expBar && (
-            <p className="mt-2 text-sm text-ink-2">EXP bar reads 100% — the box is probably over text rather than the bar. Redraw it over the thin coloured bar only.</p>
+          {test && test.expPercent === null && boxes.expText && (
+            <p className="mt-2 text-sm text-ink-2">EXP digits not read — make the EXP box a little tighter around the digits (keep the thin bar under them inside it).</p>
           )}
           {test && test.level === null && boxes.status && (
-            <p className="mt-2 text-sm text-ink-2">Level not found — try a slightly bigger box around “Lv.” and the EXP numbers.</p>
+            <p className="mt-2 text-sm text-ink-2">Level not found — try a slightly bigger box around “Lv.” and your name.</p>
           )}
           {test && test.understood === 0 && boxes.chat && (
             <p className="mt-2 text-sm text-ink-2">No gain messages in the chat box right now — that's fine. Kill a monster and test again to check.</p>
@@ -259,7 +256,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
         <Button variant="ghost" onClick={onDone}>
           Cancel
         </Button>
-        <Button variant="primary" disabled={!win || !shot || (!boxes.status && !boxes.chat)} onClick={save}>
+        <Button variant="primary" disabled={!win || !shot || !boxes.status || !boxes.expText} onClick={save}>
           <CheckCircle2 size={16} /> Save setup
         </Button>
       </div>

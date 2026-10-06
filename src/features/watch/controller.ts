@@ -40,7 +40,7 @@ function appendRun(log: TrainingRun[], run: TrainingRun, continues: boolean): Tr
 // or nothing has happened for a while. Frames stay in Rust memory; only recognised text reaches this module.
 
 export type WatchWindow = { id: number; title: string; app: string; width: number; height: number; minimized: boolean };
-export type WatchRegion = { name: string; x: number; y: number; w: number; h: number; scale?: number; filter?: "bilinear" | "nearest"; mode?: "ocr" | "bar" };
+export type WatchRegion = { name: string; x: number; y: number; w: number; h: number; scale?: number; filter?: "bilinear" | "nearest"; mode?: "ocr" | "bar" | "both" };
 export type WatchLine = { text: string; x: number; y: number; w: number; h: number };
 
 /** The platform calls the watcher needs (implemented in Rust, see src-tauri/src/screen.rs). */
@@ -422,8 +422,8 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           if (s.status) regions.push({ name: "status", ...s.status, scale: 3, filter });
           if (s.chat) regions.push({ name: "chat", ...s.chat, scale: 3, filter });
           if (s.map) regions.push({ name: "map", ...s.map, scale: 3, filter });
-          if (s.expBar) regions.push({ name: "expBar", ...s.expBar, mode: "bar" });
-          if (s.expText) regions.push({ name: "expText", ...s.expText, scale: 3, filter });
+          if (s.expText) regions.push({ name: "expText", ...s.expText, scale: 3, filter, mode: "both" });
+          if (s.expBar && !s.expText) regions.push({ name: "expBar", ...s.expBar, mode: "bar" });
           const fullScan = confirmNext || t - lastFullScan >= FULL_SCAN_EVERY_MS;
           if (fullScan) regions.push({ name: "full", x: 0, y: 0, w: s.sourceWidth, h: s.sourceHeight, scale: 1 });
           const out = await deps.platform.screenRead(windowId, regions);
@@ -447,7 +447,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
             if (e.expValue !== null) st.expValue = e.expValue;
           }
           // I-45: when no digits could be read, the bar's fill is the EXP % (to 0.1 %, good enough for pace).
-          const fill = out.find((r) => r.name === "expBar")?.fill;
+          const fill = out.find((r) => r.name === "expText")?.fill ?? out.find((r) => r.name === "expBar")?.fill;
           if (st.expPercent === null && typeof fill === "number" && fill >= 0 && fill <= 1) st.expPercent = Math.round(fill * 1000) / 10;
 
           // Right character? The status bar names it. Three clear mismatches in a row means another character
