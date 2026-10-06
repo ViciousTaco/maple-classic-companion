@@ -1,7 +1,7 @@
 // npm run datapack:build  — validate datapack/ → dist-datapack/*.json (minified) + manifest.json (plan §8.6).
 // npm run datapack:bundle — also copies dist-datapack/ to public/baseline/ (the baseline bundled in the exe).
 import { createHash } from "node:crypto";
-import { cpSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { copyFileSync, cpSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { PACK_FILES, type PackKey } from "../src/data/schema/pack";
 import { formatIssue, parsePackFiles, validatePack } from "../src/data/validate";

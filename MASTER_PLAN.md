@@ -31,7 +31,7 @@ You are picking up a project mid-flight. Follow these rules exactly.
 10. **Never touch the game client.** No memory reading, packet inspection, input automation, overlays that hook the game, or extracting client files. This app is a separate window of information only. (Nexon sanctions unauthorised programs across both MapleStory and Classic World.)
 11. **Path hazard (CONFIRMED by test, 2026-10-05):** a folder name containing `&` breaks every npm bin shim (`vite`, `tauri`, `vitest`, `npx …` fail with `'Leveling' is not recognized…`). **Never run npm/cargo/tauri commands from a path containing `&`.** Do P0-T3 before anything else and use the resulting clean path for every command in this plan. Paths with spaces are fine when quoted.
 12. **Shell notes for this PC:** Windows 10 Home; PowerShell 5.1 (no `&&`; use `;`). `cmd` is not on PATH inside some agent shells — use PowerShell or Git Bash. Node lives at `%LOCALAPPDATA%\hermes\node\`.
-13. **Everything stays inside `E:\Ai Projects\Maple Classic Companion` (the owner, 2026-10-05).** Before any npm/cargo/tauri/playwright command, dot-source `.\dev-env.ps1` (puts Node on PATH and redirects `CARGO_HOME`, npm cache, Playwright browsers and `TEMP`/`TMP` into `.cache\` and `.tmp\`). Test exes run from `test-run\` (not the Desktop). Keys live in `.keys\`. Agents must not write scratch files elsewhere (use `.tmp\`). All of these folders are git-ignored. Only the installed toolchains themselves (Node, Rust, VS, WebView2) live outside.
+13. **Everything stays inside the project folder (the owner, 2026-10-05).** Before any npm/cargo/tauri/playwright command, dot-source `.\dev-env.ps1` (puts Node on PATH and redirects `CARGO_HOME`, npm cache, Playwright browsers and `TEMP`/`TMP` into `.cache\` and `.tmp\`). Test exes run from `test-run\` (not the Desktop). Keys live in `.keys\`. Agents must not write scratch files elsewhere (use `.tmp\`). All of these folders are git-ignored. Only the installed toolchains themselves (Node, Rust, VS, WebView2) live outside.
 
 ---
 
@@ -760,9 +760,9 @@ Legend: **Files** = create/modify · **Verify** = command and expected result ·
 ### Phase 0 — Decisions & groundwork
 
 - [x] **P0-T1** the owner answers G-1…G-7; record in §2. (Done 2026-10-05. P0-T4 is cancelled: G-1 = link out only.)
-- [x] **P0-T3 (do first)** Get onto a path without `&`. Probe already run on 2026-10-05 in `E:\Ai Projects\Maplestory Classic Training & Leveling Guide`: a plain `node -e` script works, but any npm bin shim fails (`'Leveling' is not recognized as an internal or external command`), so Vite/Tauri/Vitest cannot run there. Choose one and record it in §15:
-  - **Option 1 (preferred): The owner renames the folder** in File Explorer to a name without `&`, e.g. `E:\Ai Projects\Maple Classic Companion` (spaces are fine), and opens the next AI session in the renamed folder.
-  - **Option 2 (tested working for npm shims):** keep the folder and create a junction, then run every command from the junction path: `New-Item -ItemType Junction -Path 'E:\dev\mcc' -Target 'E:\Ai Projects\Maplestory Classic Training & Leveling Guide'` (create `E:\dev` first). To remove a junction later use `(Get-Item 'E:\dev\mcc').Delete()` — never `Remove-Item -Recurse`, which can delete the real files.
+- [x] **P0-T3 (do first)** Get onto a path without `&`. Probe already run on 2026-10-05 in `<parent folder>\Maplestory Classic Training & Leveling Guide`: a plain `node -e` script works, but any npm bin shim fails (`'Leveling' is not recognized as an internal or external command`), so Vite/Tauri/Vitest cannot run there. Choose one and record it in §15:
+  - **Option 1 (preferred): The owner renames the folder** in File Explorer to a name without `&`, e.g. the project folder (spaces are fine), and opens the next AI session in the renamed folder.
+  - **Option 2 (tested working for npm shims):** keep the folder and create a junction, then run every command from the junction path: `New-Item -ItemType Junction -Path 'E:\dev\mcc' -Target '<parent folder>\Maplestory Classic Training & Leveling Guide'` (create `E:\dev` first). To remove a junction later use `(Get-Item 'E:\dev\mcc').Delete()` — never `Remove-Item -Recurse`, which can delete the real files.
   - **Verify (either option):** in the clean path, in a temp subfolder with `{"scripts":{"bin":"semver 1.2.3 -i minor"},"devDependencies":{"semver":"^7.0.0"}}`, `npm install` then `npm run bin` prints `1.3.0`. Delete the temp subfolder.
 - [x] **P0-T2** Initialise git in the clean path. `git init -b main`; create `.gitignore` with `node_modules/`, `dist/`, `dist-datapack/`, `src-tauri/target/`, `MapleClassicCompanion-data/`, `field-notes/`, `*.key`, `.env*`; commit `MASTER_PLAN.md`. Do not add the GitHub remote or push yet (that is P8-T1). **Verify:** `git log --oneline` shows one commit.
 - [x] **P0-T4** ~~Send the Appendix A email~~ — cancelled (G-1 = link out only).
@@ -891,7 +891,7 @@ All engine code is pure TypeScript with no React or IPC imports. Build against `
 
 ### Phase 10 — Packaging, QA, release
 
-- [x] **P10-T1** _(v1.0.0, original icon, exe at project root)_ (Location rule, the owner 2026-10-05: the final exe lives at the project root `E:\Ai Projects\Maple Classic Companion\MapleClassicCompanion.exe`, built with `npm run exe`; git-ignored.) App icon, version `1.0.0`, exe file properties, final name per G-5.
+- [x] **P10-T1** _(v1.0.0, original icon, exe at project root)_ (Location rule, the owner 2026-10-05: the final exe lives at the project root `<project folder>\MapleClassicCompanion.exe`, built with `npm run exe`; git-ignored.) App icon, version `1.0.0`, exe file properties, final name per G-5.
 - [ ] **P10-T2** Full QA checklist on the built exe (every row of §4 demonstrated; results in §14).
 - [x] **P10-T3** Docs: `README.md` (for players: download, run, where data lives, how to back up), `docs/DATA_MAINTENANCE.md` (Appendix C expanded), `docs/RELEASE.md`, `docs/SOURCES.md`.
 - [ ] **P10-T4** Release (built locally, not in CI): `npm run build:exe` → `scripts/release.ts` computes sha256, signs the exe, writes `releases/latest.json` + `.sig` → commit, tag `v1.0.0`, push → create the GitHub Release and upload `MapleClassicCompanion.exe` (with `gh release create v1.0.0 <exe>` after `winget install GitHub.cli` and `gh auth login` by the owner, or by the owner dragging the file into the Releases page). The Pages publish workflow then serves the new `latest.json`. **Verify:** an older build shows "Version 1.0.0 is ready" and updates itself.
@@ -1001,7 +1001,7 @@ elease-1.1.0\latest.json(.sig)` into `releases\`, commit and push (or ask a sess
 |---|---|---|
 | 2026-10-05 | Plan v1.0 created | — |
 | 2026-10-05 | Gates G-1…G-7 answered (see §2). P0-T1 done; P0-T4 (email) cancelled. New P9 work from G-4: paste-your-own image per record + "Find image" button. | The owner |
-| 2026-10-05 | P0-T3 resolved by Option 1: folder renamed to `E:\Ai Projects\Maple Classic Companion`. Toolchain (P0-T5): Node 22.23.2, npm 10.9.8, rustc/cargo 1.95.0 msvc, git 2.49.0. Repo-local git identity set to the owner. | The owner (renamed folder) |
+| 2026-10-05 | P0-T3 resolved by Option 1: folder renamed to the project folder. Toolchain (P0-T5): Node 22.23.2, npm 10.9.8, rustc/cargo 1.95.0 msvc, git 2.49.0. Repo-local git identity set to the owner. | The owner (renamed folder) |
 
 | 2026-10-05 | Review recommendations: (1) drop `window-state` plugin, store window geometry in `profiles.json` — APPROVED; (2) image IPC uses raw binary bodies instead of `number[]` (§8.3 updated) — APPROVED; (3) defer app self-update — REJECTED, P8-T6 stays; (4) field notes made effortless → I-19 Quick note APPROVED as P2-T6b; MeowDB remains link-out only (G-1) but the owner may paste text they copied themselves into a note; (5) `recommend.ts` pre-sorts candidates by `spotId` before `pickPlan` so ties are deterministic — APPROVED. GitHub username ViciousTaco recorded (G-2). | The owner |
 
@@ -1063,7 +1063,7 @@ The rule in §6.1 Tier C1 stands regardless: link out only.
 
 ---
 
-## Appendix B — What is reused from Astra (`E:\Ai Projects\Maplestory Events & Updates\app`)
+## Appendix B — What is reused from Astra (`<parent folder>\Maplestory Events & Updates\app`)
 
 | Astra file | Reuse | Lands in |
 |---|---|---|

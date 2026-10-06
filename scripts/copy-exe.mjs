@@ -1,4 +1,4 @@
-// Copies the release build to the project root: E:\Ai Projects\Maple Classic Companion\MapleClassicCompanion.exe
+// Copies the release build to the project root: <project folder>\MapleClassicCompanion.exe
 // (the owner's requirement). Its data folder is created beside it on first run.
 import { copyFileSync, statSync } from "node:fs";
 import { resolve } from "node:path";

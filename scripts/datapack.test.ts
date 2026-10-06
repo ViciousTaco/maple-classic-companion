@@ -37,7 +37,7 @@ function writeSource(dir: string, p = miniPack()) {
 
 let tmp: string;
 beforeEach(() => {
-  // Inside the project (the owner: nothing outside E:\Ai Projects\Maple Classic Companion) when TEMP points there.
+  // Inside the project (the owner: nothing outside <project folder>) when TEMP points there.
   tmp = mkdtempSync(join(process.env.TEMP ?? tmpdir(), "mcc-pack-"));
 });
 afterEach(() => rmSync(tmp, { recursive: true, force: true }));
