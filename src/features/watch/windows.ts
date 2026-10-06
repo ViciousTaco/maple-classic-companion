@@ -10,6 +10,8 @@ export type Line = { text: string; x: number; y: number; w: number; h: number };
 export type StatsRead = {
   stats: Partial<Pick<Profile["stats"], "str" | "dex" | "int" | "luk" | "hp" | "mp">>;
   combat: Partial<Pick<Profile["combat"], "damageMin" | "damageMax" | "accuracy" | "avoid">>;
+  /** EXP % when the window shows it ("EXP 12,345 [45.67%]") — a fallback for status bars with tiny text. */
+  expPercent?: number;
 };
 
 const NUM = "[0-9OoIl|][0-9OoIl|,]*";
@@ -18,9 +20,11 @@ const num = (s: string) => Number(fixDigits(s).replace(/,/g, ""));
 /** Lines on the same row as `line` (vertical centres within half a line height), to its right, nearest first. */
 function rightOf(line: Line, all: Line[]): Line[] {
   const cy = line.y + line.h / 2;
+  const dy = (o: Line) => Math.abs(o.y + o.h / 2 - cy);
   return all
-    .filter((o) => o !== line && o.x >= line.x + line.w * 0.6 && Math.abs(o.y + o.h / 2 - cy) <= Math.max(line.h, o.h) * 0.6)
-    .sort((a, b) => a.x - b.x);
+    .filter((o) => o !== line && o.x >= line.x + line.w * 0.6 && dy(o) <= Math.max(line.h, o.h) * 0.6)
+    // Closest row first (tight stat tables put the next row's value within tolerance), then nearest to the right.
+    .sort((a, b) => dy(a) - dy(b) || a.x - b.x);
 }
 
 /** The first number in a line, or in the nearest line to its right (labels and values are often separate boxes). */
@@ -74,6 +78,14 @@ export function parseStatsWindow(lines: Line[]): StatsRead | null {
           out.combat.damageMin = lo;
           out.combat.damageMax = hi;
         }
+      }
+      continue;
+    }
+    if (/^exp/.test(label)) {
+      const m = /\[\s*([0-9OoIl|]{1,3})(?:[.,]([0-9OoIl|]{1,2}))?/.exec(line.text) ?? /([0-9OoIl|]{1,3})(?:[.,]([0-9OoIl|]{1,2}))?\s*%/.exec(line.text);
+      if (m) {
+        const v = Number(`${fixDigits(m[1]!)}.${m[2] ? fixDigits(m[2]) : "0"}`);
+        if (v >= 0 && v <= 100) out.expPercent = v;
       }
       continue;
     }

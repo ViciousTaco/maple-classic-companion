@@ -13,6 +13,7 @@ const idle: StoreApi<WatchState> = createStore<WatchState>()(() => ({
   problem: null,
   spotId: null,
   mapId: null,
+  mapText: null,
   autoMap: true,
   session: null,
   read: null,

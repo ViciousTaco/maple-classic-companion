@@ -65,6 +65,8 @@ export type WatchState = {
   spotId: string | null;
   /** The map the minimap box says the player is on (null until read, or without a map box). */
   mapId: string | null;
+  /** The minimap's text when it didn't match any map in the guide (so the owner sees why nothing switched). */
+  mapText: string | null;
   /** Following the minimap (default when a map box is set up). Picking a spot by hand switches it off for the run. */
   autoMap: boolean;
   session: SessionTotals | null;
@@ -233,6 +235,9 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       levelVotes = [...levelVotes, level].slice(-3);
       const cap = deps.getPack()?.meta.levelCap ?? 300;
       const stable = levelVotes.length === 3 && levelVotes.every((v) => v === level);
+      if (stable && level > cap && !get().feed.some((f) => f.text.includes("above this guide's level cap"))) {
+        set({ feed: [{ id: feedId++, at: now(), text: `Game shows Lv ${level}, above this guide's level cap (${cap}) — not applied to the character` }, ...get().feed].slice(0, FEED_MAX) });
+      }
       if (stable && level !== p.level && level >= 1 && level <= cap) {
         deps.store.getState().updateProfile(p.id, (prof) => ({ ...prof, level, expPercent: expPercent ?? prof.expPercent }));
         lastExpSync = now();
@@ -298,9 +303,11 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       // I-38: quests seen under "In Progress" become active; under "Completed" become done. Nothing is ever un-done.
       const newActive = quests ? quests.active.filter((id) => !p.unlocks.questsActive.includes(id) && !p.unlocks.questsDone.includes(id)) : [];
       const newDone = quests ? quests.done.filter((id) => !p.unlocks.questsDone.includes(id)) : [];
-      if (!statChange && skillCount === 0 && newActive.length === 0 && newDone.length === 0) return "Already up to date with the game.";
+      const expChange = stats?.expPercent !== undefined && stats.expPercent !== p.expPercent ? stats.expPercent : null;
+      if (!statChange && skillCount === 0 && newActive.length === 0 && newDone.length === 0 && expChange === null) return "Already up to date with the game.";
       deps.store.getState().updateProfile(p.id, (prof) => ({
         ...prof,
+        ...(expChange !== null ? { expPercent: expChange } : {}),
         stats: { ...prof.stats, ...(statChange?.stats ?? {}) },
         combat: { ...prof.combat, ...(statChange?.combat ?? {}) },
         skills: { ...prof.skills, ...skillChange },
@@ -311,7 +318,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
         },
       }));
       const questWhat = [newActive.length ? `${newActive.length} quest${newActive.length === 1 ? "" : "s"} in progress` : "", newDone.length ? `${newDone.length} quest${newDone.length === 1 ? "" : "s"} completed` : ""].filter(Boolean).join(", ");
-      const what = [statChange ? describeStats(statChange) : "", skillCount ? `${skillCount} skill level${skillCount === 1 ? "" : "s"}` : "", questWhat].filter(Boolean).join(" · ");
+      const what = [statChange ? describeStats(statChange) : "", expChange !== null ? `EXP ${expChange}%` : "", skillCount ? `${skillCount} skill level${skillCount === 1 ? "" : "s"}` : "", questWhat].filter(Boolean).join(" · ");
       set({ lastScan: { at: t, ...seen, applied: true }, feed: [{ id: feedId++, at: t, text: `Updated from the game: ${what}` }, ...get().feed].slice(0, FEED_MAX) });
       tell(`Character updated from the game: ${what}`);
       return `Updated: ${what}`;
@@ -322,6 +329,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       problem: null,
       spotId: null,
       mapId: null,
+      mapText: null,
       autoMap: true,
       session: null,
       read: null,
@@ -407,9 +415,10 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
             throw new Missing(`The game window changed size (${w.width}×${w.height}). Run the watcher setup again to redraw the boxes.`);
           const windowId = w.id;
           const regions: WatchRegion[] = [];
-          if (s.status) regions.push({ name: "status", ...s.status });
+          // The status bar and minimap title use tiny fonts: enlarge 3× before OCR. Chat is normal text (2×).
+          if (s.status) regions.push({ name: "status", ...s.status, scale: 3 });
           if (s.chat) regions.push({ name: "chat", ...s.chat });
-          if (s.map) regions.push({ name: "map", ...s.map });
+          if (s.map) regions.push({ name: "map", ...s.map, scale: 3 });
           const fullScan = confirmNext || t - lastFullScan >= FULL_SCAN_EVERY_MS;
           if (fullScan) regions.push({ name: "full", x: 0, y: 0, w: s.sourceWidth, h: s.sourceHeight, scale: 1 });
           const out = await deps.platform.screenRead(windowId, regions);
@@ -430,7 +439,8 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           // (or another client's window) is being read, and nothing from it may be counted.
           const me = profile();
           if (me && st.name) {
-            nameMisses = matchName(st.name, [me.name]) ? 0 : nameMisses + 1;
+            const anywhere = statusLines.some((l) => l.split(/\s+/).some((w) => matchName(w, [me.name])));
+            nameMisses = anywhere || matchName(st.name, [me.name]) ? 0 : nameMisses + 1;
             if (nameMisses >= 3)
               throw new Missing(`The game shows “${st.name}”, but this is ${me.name}'s profile. Switch character in the app (or pick the right game window) and watching carries on.`);
           }
@@ -439,7 +449,13 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           if (get().autoMap && mapLines.length > 0) {
             const mapName = parseMapName(mapLines, pack.maps.map((m) => m.name));
             const map = mapName ? pack.maps.find((m) => m.name === mapName) : undefined;
-            if (map) moveTo(pack, map.id, t);
+            if (map) {
+              moveTo(pack, map.id, t);
+              if (get().mapText) set({ mapText: null });
+            } else {
+              const text = mapLines.map((l) => l.trim()).filter((l) => l.length >= 3 && !/^(?:ch|channel)\.?\s*\d+$/i.test(l)).join(" · ");
+              if (text && text !== get().mapText) set({ mapText: text });
+            }
           }
 
           // The first read only learns what's already in the chat box — nothing from before watching counts.

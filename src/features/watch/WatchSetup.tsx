@@ -18,7 +18,7 @@ const BOXES = ["status", "chat", "map"] as const;
 
 const BOX = {
   status: { label: "Level & EXP bar", hint: "Drag a box around the bar at the bottom that shows your level and EXP %.", color: "var(--sky)", cls: "border-sky bg-sky/15" },
-  chat: { label: "Chat box", hint: "Drag a box around the chat lines where “You have gained …” messages appear.", color: "var(--maple)", cls: "border-maple bg-maple/15" },
+  chat: { label: "Chat box", hint: "Drag a box around the chat log — the panel where messages scroll (bottom-left by default), where “You have gained …” lines appear. Not the notification or quest helper boxes.", color: "var(--maple)", cls: "border-maple bg-maple/15" },
   map: { label: "Map name (optional)", hint: "Drag a box around the map's name at the top of the minimap, so the watcher follows you from map to map.", color: "var(--leaf)", cls: "border-leaf bg-leaf/15" },
 } as const;
 
@@ -92,7 +92,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
     setBusy(true);
     setError(null);
     try {
-      const regions = BOXES.flatMap((name) => (boxes[name] ? [{ name, ...boxes[name] }] : []));
+      const regions = BOXES.flatMap((name) => (boxes[name] ? [{ name, ...boxes[name], ...(name === "chat" ? {} : { scale: 3 }) }] : []));
       const out = await platform.screenRead(win.id, regions);
       const status = parseStatus(out.find((r) => r.name === "status")?.lines.map((l) => l.text) ?? []);
       const chat = out.find((r) => r.name === "chat")?.lines.map((l) => l.text) ?? [];
@@ -213,6 +213,9 @@ function Wizard({ onDone }: { onDone: () => void }) {
           </div>
           {test && test.chat.length > 0 && (
             <pre className="mt-2 max-h-28 overflow-auto rounded-xl bg-fill p-2 text-xs text-ink-2">{test.chat.join("\n")}</pre>
+          )}
+          {test && test.expPercent === null && test.level !== null && boxes.status && (
+            <p className="mt-2 text-sm text-ink-2">Level read, EXP % not — the EXP text is tiny on some bars. Try a tighter box around just the EXP numbers, or leave it: EXP is also read from your Stats window.</p>
           )}
           {test && test.level === null && boxes.status && (
             <p className="mt-2 text-sm text-ink-2">Level not found — try a slightly bigger box around “Lv.” and the EXP numbers.</p>

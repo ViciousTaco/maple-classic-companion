@@ -130,7 +130,9 @@ export function WatchScreen() {
                 ))}
               </select>
               {on && setup?.map && w.autoMap && (
-                <span className="text-ink-2">{w.mapId ? `now on ${mapName(pack, w.mapId)}` : "reading the minimap…"}</span>
+                <span className="text-ink-2">
+                  {w.mapId ? `now on ${mapName(pack, w.mapId)}` : w.mapText ? `minimap says “${w.mapText}” — not a map in the guide` : "reading the minimap…"}
+                </span>
               )}
             </label>
             <span className="flex items-center gap-2">

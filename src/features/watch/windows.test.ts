@@ -17,13 +17,19 @@ test("the Character Stats window, with labels and values in one line", () => {
     L("Accuracy 56", 10, 200),
     L("Avoidability 31", 10, 220),
     L("Attack 35", 10, 240), // weapon attack: ignored
+    L("EXP 51,402 [44.17%]", 10, 260),
   ])!;
+  expect(r.expPercent).toBe(44.17);
   expect(r.stats).toEqual({ hp: 912, mp: 355, str: 35, dex: 25, int: 4, luk: 60 });
   expect(r.combat).toEqual({ damageMin: 40, damageMax: 90, accuracy: 56, avoid: 31 });
 });
 
 test("labels and values in separate columns are paired by row", () => {
   const r = parseStatsWindow([
+    L("INT", 10, 70, 30),
+    L("4", 120, 68),
+    L("LUK", 10, 130, 30),
+    L("3", 120, 129),
     L("STR", 10, 90, 30),
     L("35 (30 + 5)", 120, 91),
     L("DEX", 10, 110, 30),
@@ -33,7 +39,8 @@ test("labels and values in separate columns are paired by row", () => {
     L("HP", 10, 40, 20),
     L("912 / 912", 120, 40),
   ])!;
-  expect(r.stats).toEqual({ str: 35, dex: 25, hp: 912 });
+  // Tight rows: each label takes the value on its own row, never a neighbour's.
+  expect(r.stats).toEqual({ str: 35, dex: 25, hp: 912, int: 4, luk: 3 });
   expect(r.combat).toEqual({ avoid: 31 });
 });
 
