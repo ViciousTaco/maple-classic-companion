@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0",
-  "notes": "First public release: training spots with backups and turn-by-turn routes, loot tiers, gear and stat advice, quests, map browser, live news and events in Sydney time, projections, live updates.",
-  "url": "https://github.com/ViciousTaco/maple-classic-companion/releases/download/v1.0.0/MapleClassicCompanion.exe",
-  "sha256": "4e26bc4a5301ce16cb32bef8b2ce152897236e1e01286424e6ce2f7c198c82ab",
-  "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVScWRSNE4ycFZ4QkZWM1REYWxLczFVU2d1TXdDSkl1Q1NSQ2Z2SmgzU2l2Y2ZpSTRkYzhuVUdubWEvdEsxaXQvY2dWOTMydzM1ZVI5NHBPUUloY3BhSzJaTGlEUDZFQ0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxMjI3NTQ1CWZpbGU6TWFwbGVDbGFzc2ljQ29tcGFuaW9uLmV4ZQo1V2Via0FlM3FRb0poUDF3RG5XOHV3ZjNta2treDZESlY0QlNFQ3BrcExjS1B4K2E3Mk16MllxcTFtK01sWW9YdGc5ZTkxeHpSWWxMVWdJdXlENFREQT09Cg=="
+  "version": "1.1.0",
+  "notes": "Screen watcher (follows you between maps, reads your Stats and Skills windows, counts kills, EXP, meso and pickups while you switch it on; Ctrl+Alt+W), event reminders, mini window, Ctrl+K search, party helper, 186 quests, skills and more maps.",
+  "url": "https://github.com/ViciousTaco/maple-classic-companion/releases/download/v1.1.0/MapleClassicCompanion.exe",
+  "sha256": "785ebd79b49f62e42675ba676c70c9a845f69cc8153d95e7994934347979c296",
+  "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVScWRSNE4ycFZ4QkFOU1ErZk1BcHZhMUdaUTB2bFU4STVaRGs3ZDR3a1VrMzlITEdWVXFwc3lITGdQQVRtVXM4TGxURVJNKy9zZHBtVVkyZDFxVlBBY2pMNHllSXl6Mnd3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxMjUxNDQ2CWZpbGU6TWFwbGVDbGFzc2ljQ29tcGFuaW9uLmV4ZQp6Q0JpOGd4bjFucjlVMVdDaDdGOXNBM2JDcVg2S0h3dVQyTUZMVHlDS0t3cWJTV0pldmtac1BibjI5ZHlUYVEvUENMczhMdmcrVjlDSHo5TEw3bk1DQT09Cg=="
 }
