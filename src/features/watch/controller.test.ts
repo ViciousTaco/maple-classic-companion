@@ -15,6 +15,7 @@ const SETUP = {
   expBar: null,
   expText: null,
   textStyle: "smooth" as const,
+  tuning: {},
   savedAt: "2026-10-07T00:00:00.000Z",
 };
 

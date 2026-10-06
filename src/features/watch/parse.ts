@@ -35,7 +35,8 @@ export function parseStatus(lines: string[]): StatusRead {
   };
 }
 
-export type ChatEvent = { kind: "exp"; amount: number } | { kind: "meso"; amount: number } | { kind: "item"; name: string };
+/** `bonus`: an extra EXP line for the same kill (party, buff, burning field…) — adds EXP, never a kill. */
+export type ChatEvent = { kind: "exp"; amount: number; bonus?: boolean } | { kind: "meso"; amount: number } | { kind: "item"; name: string };
 
 const num = (s: string) => Number(fixDigits(s).replace(/[,.\s]/g, ""));
 const AMOUNT = /\(\s*\+?\s*([0-9OoIl|][0-9OoIl|,.\s]*?)\s*\)|\+\s*([0-9][0-9,.]*)/;
@@ -49,8 +50,10 @@ export function parseChatLine(line: string): ChatEvent | null {
   const k = l.toLowerCase().replace(/rn/g, "m");
   // System messages start the line ("You have gained …", optionally after a "[Tag]"); anything after a "Name:"
   // prefix is a player talking. Lines with a "Name:" prefix are never gains, whatever follows.
-  if (/^[^:(]{1,24}:\s/.test(l)) return null;
-  const systemStart = /^(?:\[[^\]]{1,24}\]\s*)?[^a-z]{0,3}(?:you\s+have\s+|\+\s*\d)/.test(k);
+  const prefix = /^([^:(]{1,24}):\s/.exec(l);
+  if (prefix && !/\bE\W{0,2}[XZ]?\W{0,2}P\b|bonus/i.test(prefix[1]!)) return null;
+  const systemStart = /^(?:\[[^\]]{1,24}\]\s*)?[^a-z]{0,3}(?:you\s+have\s+|you\s+received\s+|\+\s*\d)/.test(k);
+  const bonus = /\bbonus\b/.test(k);
   const amount = () => {
     const m = AMOUNT.exec(l);
     return m ? num(m[1] ?? m[2]!) : NaN;
@@ -63,15 +66,15 @@ export function parseChatLine(line: string): ChatEvent | null {
     const a = amount();
     return a > 0 && a < 100_000_000 ? { kind: "meso", amount: a } : null;
   }
-  if (systemStart && (/gain\w*\s+(?:an?\s+)?ex\w*/.test(k) || /^\+\s*\d[\d,]*\s*ex\w*/.test(k))) {
+  if (systemStart && (/(?:gain|receiv)\w*\s+(?:an?\s+)?ex\w*/.test(k) || /^\+\s*\d[\d,]*\s*ex\w*/.test(k))) {
     const a = amount();
-    return a > 0 && a < 10_000_000 ? { kind: "exp", amount: a } : null;
+    return a > 0 && a < 10_000_000_000 ? { kind: "exp", amount: a } : null;
   }
   // Words unreadable but the shape is unmistakable: an EXP-like token ("EXP", "EZP", "E/.P") and a "(+N)" amount.
   // Seen on the live client, where the chat font defeats OCR but the digits survive.
   if (/\bE(?:X|Z|[^\w\s]{1,3})?P\b/.test(l) && /\(\s*\+/.test(l)) {
     const a = amount();
-    return a > 0 && a < 10_000_000 ? { kind: "exp", amount: a } : null;
+    return a > 0 && a < 10_000_000_000 ? { kind: "exp", amount: a, ...(bonus ? { bonus: true } : {}) } : null;
   }
   return null;
 }
@@ -170,16 +173,27 @@ export function parseMapName(lines: string[], mapNames: string[]): string | null
  */
 export function parseExpText(lines: string[], digits?: string): { expValue: number | null; expPercent: number | null } {
   const text = lines.join(" ");
+  // The %: "[72.672%]". The "[" is often read as "1", "I" or "(" ("172.672%)"), so a leading 1 that makes the value
+  // impossible (> 100) is dropped.
   const pct = /\[\s*([0-9OoIl|]{1,3})(?:[.,]([0-9OoIl|]{1,3}))?/.exec(text) ?? /([0-9OoIl|]{1,3})(?:[.,]([0-9OoIl|]{1,3}))?\s*%/.exec(text);
-  const expPercent = pct ? Number(`${fixDigits(pct[1]!)}.${pct[2] ? fixDigits(pct[2]) : "0"}`) : NaN;
+  let whole = pct ? fixDigits(pct[1]!) : "";
+  if (whole.length === 3 && Number(whole) > 100 && whole.startsWith("1")) whole = whole.slice(1);
+  const expPercent = pct ? Number(`${whole}.${pct[2] ? fixDigits(pct[2]) : "0"}`) : NaN;
   // The total: Windows OCR refuses numbers with two or more thousands separators, so the comma-erased re-read
-  // (`digits`) is tried first — its longest digit run before any "[" — then the normal text.
+  // (`digits`) is tried first — its longest digit run before any "[" — then the normal text. Only text that is
+  // nothing but digits and separators counts: a misread digit ("4DS", "€93") must not become a wrong total.
   // Erased separators leave gaps ("4 012 207 400 499"): digit groups split by one space or comma are one number.
   const longest = (src: string) =>
     [...src.replace(/\[.*$/, "").replace(/([0-9OoIl|])[ ,](?=[0-9OoIl|]{3}(?![0-9OoIl|]))/g, "$1").matchAll(/[0-9OoIl|][0-9OoIl|,]{2,}/g)]
       .map((m) => fixDigits(m[0]).replace(/,/g, ""))
       .sort((a, b) => b.length - a.length)[0];
-  const best = (digits ? longest(digits) : undefined) ?? longest(text);
+  // The run of digits/separators directly before the "[" (or the %): other text in the box (an HP row above,
+  // a label) is ignored, and a misread character inside the number cuts it short instead of corrupting it.
+  const clean = (src: string) => {
+    const head = src.replace(/[[(].*$/, "").replace(/\s*1?\d{1,3}[.,]\d{1,3}\s*%.*$/, "").trimEnd();
+    return /([0-9OoIl|][0-9OoIl|.,\s]*)$/.exec(head)?.[1] ?? "";
+  };
+  const best = (digits ? longest(clean(digits)) : undefined) ?? longest(clean(text));
   const expValue = best ? Number(best) : NaN;
   return {
     expValue: Number.isSafeInteger(expValue) && expValue >= 0 ? expValue : null,

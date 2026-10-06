@@ -101,3 +101,19 @@ test("the EXP-numbers box: exact total and % to three decimals (owner's live-cli
   expect(parseExpText(["[42.620%)"], "4 012 207 400 499 [42 620%)")).toEqual({ expValue: 4012207400499, expPercent: 42.62 }); // exact engine output
   expect(parseExpText(["EXP 51402 [44.17%]"], "51402 [44 17%]")).toEqual({ expValue: 51402, expPercent: 44.17 }); // Classic-style, no separators
 });
+
+test("live-client EXP strip and floating EXP lines, as read from a real frame (2026-10-06)", async () => {
+  const { parseExpText } = await import("./parse");
+  // The light-text clean-up's real output: "[" read as "1".
+  expect(parseExpText(["172.672%)"])).toEqual({ expValue: null, expPercent: 72.672 });
+  // Misread digits never become a total.
+  expect(parseExpText(["172.672%)"], "4 012 909 €93")).toEqual({ expValue: null, expPercent: 72.672 });
+  expect(parseExpText(["4.012.4DS.SOSSS3 172.672% I"])).toEqual({ expValue: null, expPercent: 72.672 });
+  // A clean read does.
+  expect(parseExpText(["172.672%)"], "4 012 406 808 693 [72 672%)")).toEqual({ expValue: 4012406808693, expPercent: 72.672 });
+  // Modern chat: base EXP is a kill; bonus lines add EXP only; "Bonus EXP:" is not a player's "Name:" line.
+  expect(parseChatLine("You received EXP (+395205)")).toEqual({ kind: "exp", amount: 395205 });
+  expect(parseChatLine("Burning Field Bonus EXP: 40% (+158082)")).toEqual({ kind: "exp", amount: 158082, bonus: true });
+  expect(parseChatLine("Elven Blessing, Sol Janus Bonus EXP (+142274)")).toEqual({ kind: "exp", amount: 142274, bonus: true });
+  expect(parseChatLine("Bob: EXP (+500) lol")).toBeNull();
+});

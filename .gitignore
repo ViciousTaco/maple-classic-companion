@@ -43,3 +43,6 @@ test-run/
 /MapleClassicCompanion.exe
 public/baseline/
 .claude/
+
+# Real game frames used to tune Analyse (other players' names visible — never published)
+tests/frames-private/

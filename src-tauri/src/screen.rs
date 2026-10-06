@@ -74,6 +74,9 @@ pub struct Region {
     /// `"bar"`: measure how far a progress bar is filled instead of reading text (the EXP bar; I-45).
     #[serde(default)]
     pub mode: Mode,
+    /// Clean-up applied before recognition (chosen per box by the setup's test read).
+    #[serde(default)]
+    pub prep: Prep,
 }
 
 #[derive(Debug, Clone, Copy, Default, Deserialize, PartialEq, Eq)]
@@ -209,7 +212,140 @@ pub fn erase_small_low_marks(src: &[u8], w: u32, h: u32) -> Option<Vec<u8>> {
     Some(out)
 }
 
+/// Text clean-up before OCR (Analyse overhaul, tuned on real live-client frames). Each turns a region into dark
+/// text on a white background, which the recogniser handles far better than outlined text over game art.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub enum Prep {
+    /// No clean-up.
+    #[default]
+    None,
+    /// Keep near-white, unsaturated pixels (white text with dark outlines over coloured bars/backgrounds).
+    LightText,
+    /// Keep bright pixels of any hue (yellow or white system text over darker backgrounds).
+    BrightText,
+    /// Otsu threshold on luminance; the minority class becomes text.
+    Otsu,
+    /// Pixels that differ strongly from their own row's dominant colour (outlined/hollow digits drawn on a bar
+    /// whose shade changes row by row — the live client's EXP strip).
+    RowContrast,
+}
+
+/// Applies a clean-up step (BGRA in, BGRA out, same size).
+pub fn prep_text(px: &[u8], w: u32, h: u32, prep: Prep) -> Vec<u8> {
+    let lum = |p: &[u8]| 0.114 * p[0] as f64 + 0.587 * p[1] as f64 + 0.299 * p[2] as f64;
+    match prep {
+        Prep::None => px.to_vec(),
+        Prep::LightText => {
+            // Pixels markedly whiter than their own row's dominant colour (min channel = whiteness). Reads the
+            // pale strokes of outlined digits on the live client's yellow EXP bar, and white text on dark panels.
+            let (wu, hu) = (w as usize, h as usize);
+            let mut out = vec![255u8; wu * hu * BPP];
+            for y in 0..hu {
+                let row = |x: usize| &px[(y * wu + x) * BPP..(y * wu + x) * BPP + 4];
+                let mut mins: Vec<u8> = (0..wu).map(|x| row(x)[0].min(row(x)[1]).min(row(x)[2])).collect();
+                let mut lums: Vec<f64> = (0..wu).map(|x| lum(row(x))).collect();
+                let (bg_min, bg_lum) = {
+                    let (mut a, mut b) = (mins.clone(), lums.clone());
+                    a.sort_unstable();
+                    b.sort_by(|p, q| p.partial_cmp(q).unwrap());
+                    (a[a.len() / 2] as i32, b[b.len() / 2])
+                };
+                for x in 0..wu {
+                    if mins[x] as i32 - bg_min > 60 && lums[x] > bg_lum - 20.0 {
+                        out[(y * wu + x) * BPP..(y * wu + x) * BPP + 3].copy_from_slice(&[0, 0, 0]);
+                    }
+                }
+                mins.clear();
+                lums.clear();
+            }
+            out
+        }
+        Prep::BrightText => {
+            // Bright relative to this region: top 30 % luminance with a floor, so it adapts to dim/bright scenes.
+            let mut ls: Vec<f64> = (0..(w * h) as usize).map(|i| lum(&px[i * BPP..i * BPP + 4])).collect();
+            let mut sorted = ls.clone();
+            sorted.sort_by(|a, b| a.partial_cmp(b).unwrap());
+            let th = sorted[(sorted.len() * 7) / 10].max(130.0);
+            let mask: Vec<bool> = ls.drain(..).map(|l| l >= th).collect();
+            let mut out = vec![255u8; (w * h) as usize * BPP];
+            for (i, &m) in mask.iter().enumerate() {
+                if m {
+                    out[i * BPP..i * BPP + 3].copy_from_slice(&[0, 0, 0]);
+                }
+            }
+            out
+        }
+        Prep::RowContrast => {
+            let (wu, hu) = (w as usize, h as usize);
+            let mut out = vec![255u8; wu * hu * BPP];
+            for y in 0..hu {
+                let mut bg = [0u8; 3];
+                for (c, slot) in bg.iter_mut().enumerate() {
+                    let mut v: Vec<u8> = (0..wu).map(|x| px[(y * wu + x) * BPP + c]).collect();
+                    v.sort_unstable();
+                    *slot = v[v.len() / 2];
+                }
+                // A row that is mostly "text" (an edge line of the bar) has no meaningful background: skip it.
+                let far: Vec<bool> = (0..wu)
+                    .map(|x| {
+                        let p = &px[(y * wu + x) * BPP..(y * wu + x) * BPP + 3];
+                        let d: f64 = (0..3).map(|c| (p[c] as f64 - bg[c] as f64).powi(2)).sum::<f64>().sqrt();
+                        d > 90.0
+                    })
+                    .collect();
+                if far.iter().filter(|&&f| f).count() * 2 > wu {
+                    continue;
+                }
+                for (x, &f) in far.iter().enumerate() {
+                    if f {
+                        out[(y * wu + x) * BPP..(y * wu + x) * BPP + 3].copy_from_slice(&[0, 0, 0]);
+                    }
+                }
+            }
+            out
+        }
+        Prep::Otsu => {
+            let ls: Vec<u8> = (0..(w * h) as usize).map(|i| lum(&px[i * BPP..i * BPP + 4]).round() as u8).collect();
+            let mut hist = [0u64; 256];
+            for &l in &ls {
+                hist[l as usize] += 1;
+            }
+            let total = ls.len() as f64;
+            let sum: f64 = (0..256).map(|i| i as f64 * hist[i] as f64).sum();
+            let (mut wb, mut sb, mut best, mut th) = (0.0, 0.0, 0.0, 0u8);
+            for t in 0..256 {
+                wb += hist[t] as f64;
+                if wb == 0.0 {
+                    continue;
+                }
+                let wf = total - wb;
+                if wf == 0.0 {
+                    break;
+                }
+                sb += t as f64 * hist[t] as f64;
+                let (mb, mf) = (sb / wb, (sum - sb) / wf);
+                let v = wb * wf * (mb - mf) * (mb - mf);
+                if v > best {
+                    best = v;
+                    th = t as u8;
+                }
+            }
+            let above = ls.iter().filter(|&&l| l > th).count();
+            let text_is_bright = above * 2 < ls.len();
+            let mut out = vec![255u8; (w * h) as usize * BPP];
+            for (i, &l) in ls.iter().enumerate() {
+                if (l > th) == text_is_bright {
+                    out[i * BPP..i * BPP + 3].copy_from_slice(&[0, 0, 0]);
+                }
+            }
+            out
+        }
+    }
+}
+
 /// The bar in an EXP strip sits under the digits: measure the bottom 40 % of the box (at least 3 rows).
+#[allow(dead_code)]
 pub fn bar_fill_lower(px: &[u8], w: u32, h: u32) -> Option<f64> {
     if h < 4 {
         return bar_fill(px, w, h);
@@ -937,6 +1073,7 @@ mod win {
     }
 
     /// Raw BGRA pixels of one region of a window (probes and tests).
+    #[allow(dead_code)]
     pub fn region_pixels(id: u32, r: PxRect) -> Result<Vec<u8>, String> {
         let (_h, win) = target(id)?;
         capture(win.offset(r))
@@ -965,16 +1102,19 @@ mod win {
                     if region.mode == Mode::Bar {
                         return Ok(RegionText { name: region.name.clone(), lines: Vec::new(), covered, fill: bar_fill(&px, r.w, r.h), digits: None });
                     }
-                    let lines = ocr_region(engine, &px, (r.w, r.h), scale, region.filter, max)?;
-                    let (fill, digits) = if region.mode == Mode::Both {
-                        let digits = erase_small_low_marks(&px, r.w, r.h)
+                    let cleaned = prep_text(&px, r.w, r.h, region.prep);
+                    let lines = ocr_region(engine, &cleaned, (r.w, r.h), scale, region.filter, max)?;
+                    // `both`: also read a copy with commas/points erased (long thousands-separated numbers). No bar
+                    // fill here — a box around the digits rarely spans the whole bar, so its fill would be wrong.
+                    let digits = if region.mode == Mode::Both {
+                        erase_small_low_marks(&cleaned, r.w, r.h)
                             .and_then(|e| ocr_region(engine, &e, (r.w, r.h), scale, region.filter, max).ok())
                             .map(|ls| ls.iter().map(|l| l.text.as_str()).collect::<Vec<_>>().join(" "))
-                            .filter(|t| !t.is_empty());
-                        (bar_fill_lower(&px, r.w, r.h), digits)
+                            .filter(|t| !t.is_empty())
                     } else {
-                        (None, None)
+                        None
                     };
+                    let fill = None;
                     Ok(RegionText { name: region.name.clone(), lines, covered, fill, digits })
                 })
                 .collect()
@@ -1065,7 +1205,7 @@ mod tests {
     use super::*;
 
     fn region(name: &str, x: f64, y: f64, w: f64, h: f64) -> Region {
-        Region { name: name.into(), x, y, w, h, scale: None, filter: Filter::Bilinear, mode: Mode::Ocr }
+        Region { name: name.into(), x, y, w, h, scale: None, filter: Filter::Bilinear, mode: Mode::Ocr, prep: Prep::None }
     }
 
     /// BGRA image where pixel (x, y) = [x, y, x + y, 255] (mod 256).
@@ -1354,6 +1494,80 @@ mod tests {
         println!("PROBE normal: {:?}", lines.iter().map(|l| l.text.as_str()).collect::<Vec<_>>());
     }
 
+    /// Regression on a real live-client frame (git-ignored; skipped when absent): the fields that must read.
+    #[cfg(windows)]
+    #[test]
+    #[ignore]
+    fn real_frame_regression() {
+        let path = concat!(env!("CARGO_MANIFEST_DIR"), "/../tests/frames-private/live-1.png");
+        let Ok(file) = std::fs::File::open(path) else { return };
+        let mut reader = png::Decoder::new(std::io::BufReader::new(file)).read_info().unwrap();
+        let mut buf = vec![0; reader.output_buffer_size().unwrap()];
+        let info = reader.next_frame(&mut buf).unwrap();
+        let ch = info.color_type.samples();
+        let (fw, fh) = (info.width, info.height);
+        let mut frame = vec![0u8; (fw * fh) as usize * BPP];
+        for i in 0..(fw * fh) as usize {
+            frame[i * BPP] = buf[i * ch + 2];
+            frame[i * BPP + 1] = buf[i * ch + 1];
+            frame[i * BPP + 2] = buf[i * ch];
+            frame[i * BPP + 3] = 255;
+        }
+        let max = win::max_dim();
+        let read = |r: PxRect, prep: Prep, filter: Filter| {
+            let px = prep_text(&crop(&frame, fw, r), r.w, r.h, prep);
+            let ls = win::with_engine(|e| win::ocr_region(e, &px, (r.w, r.h), 3.0, filter, max)).unwrap();
+            ls.iter().map(|l| l.text.clone()).collect::<Vec<_>>().join(" ")
+        };
+        assert!(read(PxRect { x: 0, y: 1015, w: 240, h: 40 }, Prep::None, Filter::Bilinear).contains("272"));
+        assert!(read(PxRect { x: 70, y: 48, w: 160, h: 48 }, Prep::None, Filter::Bilinear).contains("Living Spring 5"));
+        assert!(read(PxRect { x: 830, y: 1058, w: 260, h: 14 }, Prep::LightText, Filter::Bilinear).contains("72.672"));
+    }
+
+    /// Real-frame harness: runs the production OCR path with each clean-up step on named crops of a saved game
+    /// frame. MCC_FRAME = PNG path; MCC_RECTS = "name:x,y,w,h;…" (frame pixels).
+    #[cfg(windows)]
+    #[test]
+    #[ignore]
+    fn ocr_frame_probe() {
+        let path = std::env::var("MCC_FRAME").expect("MCC_FRAME");
+        let rects = std::env::var("MCC_RECTS").expect("MCC_RECTS");
+        let dec = png::Decoder::new(std::io::BufReader::new(std::fs::File::open(&path).unwrap()));
+        let mut reader = dec.read_info().unwrap();
+        let mut buf = vec![0; reader.output_buffer_size().unwrap()];
+        let info = reader.next_frame(&mut buf).unwrap();
+        let (fw, fh) = (info.width, info.height);
+        let ch = info.color_type.samples();
+        let mut frame = vec![0u8; (fw * fh) as usize * BPP];
+        for i in 0..(fw * fh) as usize {
+            frame[i * BPP] = buf[i * ch + 2];
+            frame[i * BPP + 1] = buf[i * ch + 1];
+            frame[i * BPP + 2] = buf[i * ch];
+            frame[i * BPP + 3] = 255;
+        }
+        let max = win::max_dim();
+        for spec in rects.split(';').filter(|s| !s.is_empty()) {
+            let (name, nums) = spec.split_once(':').unwrap();
+            let v: Vec<u32> = nums.split(',').map(|n| n.trim().parse().unwrap()).collect();
+            let r = PxRect { x: v[0], y: v[1], w: v[2], h: v[3] };
+            let px = crop(&frame, fw, r);
+            for prep in [Prep::None, Prep::LightText] {
+                let p = prep_text(&px, r.w, r.h, prep);
+                for (scale, filter) in [(3.0, Filter::Bilinear), (4.0, Filter::Bilinear), (3.0, Filter::Nearest), (4.0, Filter::Nearest)] {
+                    let a = win::with_engine(|e| win::ocr_region(e, &p, (r.w, r.h), scale, filter, max)).unwrap();
+                    let erased = erase_small_low_marks(&p, r.w, r.h)
+                        .map(|e2| win::with_engine(|e| win::ocr_region(e, &e2, (r.w, r.h), scale, filter, max)).unwrap())
+                        .unwrap_or_default();
+                    println!(
+                        "FRAME {name} {prep:?} x{scale} {filter:?}: {:?} | erased {:?}",
+                        a.iter().map(|l| l.text.as_str()).collect::<Vec<_>>(),
+                        erased.iter().map(|l| l.text.as_str()).collect::<Vec<_>>()
+                    );
+                }
+            }
+        }
+    }
+
     /// Manual probe against the running stand-in window: the EXP strip's real pixels, before/after erase.
     /// `MCC_PROBE_DIR` = where to write strip-raw.png / strip-erased.png.
     #[cfg(windows)]
@@ -1451,7 +1665,7 @@ mod tests {
         println!("list_windows: {} windows in {:?}", windows.len(), t.elapsed());
         let target = windows.iter().find(|w| !w.minimized && w.width >= 600 && w.height >= 400).expect("a window");
         let regions = vec![
-            Region { name: "exp".into(), x: 20.0, y: 0.0, w: 300.0, h: 30.0, scale: None, filter: Filter::Bilinear, mode: Mode::Ocr },
+            Region { name: "exp".into(), x: 20.0, y: 0.0, w: 300.0, h: 30.0, scale: None, filter: Filter::Bilinear, mode: Mode::Ocr, prep: Prep::None },
             Region {
                 name: "chat".into(),
                 x: 20.0,
@@ -1461,6 +1675,7 @@ mod tests {
                 scale: None,
                 filter: Filter::Bilinear,
                 mode: Mode::Ocr,
+                prep: Prep::None,
             },
         ];
         for round in 0..4 {

@@ -7,6 +7,7 @@ import { describeStats, parseQuestWindow, parseSkillsWindow, parseStatsWindow, p
 import { activeProfile } from "../characters/store";
 import { recommendTraining } from "../../engine/recommend";
 import { hiddenKills, matchName, newLines, parseChatLine, parseExpText, parseMapName, parseStatus, type ChatEvent } from "./parse";
+import { DEFAULT_METHOD, NO_FIELDS, type BoxName, type Fields } from "./reading";
 import { applyEvents, applyStatus, mergeSession, newSession, observationKey, percentGained, tick, type SessionTotals } from "./session";
 
 const addCounts = (a: Record<string, number>, b: Record<string, number>) => {
@@ -40,7 +41,7 @@ function appendRun(log: TrainingRun[], run: TrainingRun, continues: boolean): Tr
 // or nothing has happened for a while. Frames stay in Rust memory; only recognised text reaches this module.
 
 export type WatchWindow = { id: number; title: string; app: string; width: number; height: number; minimized: boolean };
-export type WatchRegion = { name: string; x: number; y: number; w: number; h: number; scale?: number; filter?: "bilinear" | "nearest"; mode?: "ocr" | "bar" | "both" };
+export type WatchRegion = { name: string; x: number; y: number; w: number; h: number; scale?: number; filter?: "bilinear" | "nearest"; mode?: "ocr" | "bar" | "both"; prep?: "none" | "lightText" | "brightText" };
 export type WatchLine = { text: string; x: number; y: number; w: number; h: number };
 
 /** The platform calls the watcher needs (implemented in Rust, see src-tauri/src/screen.rs). */
@@ -71,6 +72,8 @@ export type WatchState = {
   autoMap: boolean;
   session: SessionTotals | null;
   read: { level: number | null; expPercent: number | null; expValue: number | null; name: string | null; at: number } | null;
+  /** Each field's last good reading and when it was taken — what the screen shows (never flickers to "?"). */
+  fields: Fields;
   feed: FeedItem[];
   startedAt: number | null;
   /** What the last whole-window read found (the in-game Stats / Skills / Quest windows), for the Watch screen. */
@@ -150,6 +153,8 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
   /** A whole-window read must say the same thing twice before it changes the character (OCR noise). */
   let pendingScan: { key: string; stats: StatsRead | null; skills: Record<string, number> | null; quests: QuestsRead | null } | null = null;
   let lastStepMs = 0;
+  /** The EXP total is only trusted once two reads in a row agree (a misread digit never shows). */
+  let lastExpRaw: number | null = null;
   let lastStepAt = 0;
   let lastCheckpoint = 0;
   let missingSince: number | null = null;
@@ -338,6 +343,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       feed: [],
       startedAt: null,
       lastScan: null,
+      fields: NO_FIELDS,
       run: EMPTY_RUN,
       lastSummary: null,
       effectiveIntervalMs: 2000,
@@ -366,7 +372,9 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
         countedRun = false;
         runPct = runPctMs = 0;
         lastStepAt = lastCheckpoint = now();
-        set({ status: "on", problem: null, spotId: chosen, mapId, autoMap: !!s.map && spotId === undefined, session: newSession(chosen, mapId, new Date(now())), read: null, feed: [], startedAt: now(), run: EMPTY_RUN });
+        lastExpRaw = null;
+        // With a map box, Analyse always follows the minimap; picking a spot by hand later switches that off.
+        set({ status: "on", problem: null, spotId: chosen, mapId, autoMap: !!s.map, session: newSession(chosen, mapId, new Date(now())), read: null, fields: NO_FIELDS, feed: [], startedAt: now(), run: EMPTY_RUN });
         loop();
       },
 
@@ -417,12 +425,16 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
             throw new Missing(`The game window changed size (${w.width}×${w.height}). Run the watcher setup again to redraw the boxes.`);
           const windowId = w.id;
           const regions: WatchRegion[] = [];
-          // Game text is small: enlarge 3× before OCR. "pixel" keeps bitmap fonts crisp (no smoothing).
+          // Each box is read the way the setup's test read found best for this screen (defaults otherwise),
+          // enlarged 3×. "Pixel-sharp" forces no smoothing for boxes that were never tuned.
           const filter = s.textStyle === "pixel" ? "nearest" : "bilinear";
-          if (s.status) regions.push({ name: "status", ...s.status, scale: 3, filter });
-          if (s.chat) regions.push({ name: "chat", ...s.chat, scale: 3, filter });
-          if (s.map) regions.push({ name: "map", ...s.map, scale: 3, filter });
-          if (s.expText) regions.push({ name: "expText", ...s.expText, scale: 3, filter, mode: "both" });
+          const how = (box: BoxName) => s.tuning?.[box] ?? { ...DEFAULT_METHOD[box], filter: s.textStyle === "pixel" ? "nearest" : DEFAULT_METHOD[box].filter };
+          const push = (box: BoxName, rect: NonNullable<WatchSetup[BoxName]>, extra: Partial<WatchRegion> = {}) =>
+            regions.push({ name: box, ...rect, scale: 3, prep: how(box).prep, filter: how(box).filter, ...extra });
+          if (s.status) push("status", s.status);
+          if (s.chat) push("chat", s.chat);
+          if (s.map) push("map", s.map);
+          if (s.expText) push("expText", s.expText, { mode: "both" });
           if (s.expBar && !s.expText) regions.push({ name: "expBar", ...s.expBar, mode: "bar" });
           const fullScan = confirmNext || t - lastFullScan >= FULL_SCAN_EVERY_MS;
           if (fullScan) regions.push({ name: "full", x: 0, y: 0, w: s.sourceWidth, h: s.sourceHeight, scale: 2, filter });
@@ -448,8 +460,24 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
             if (e.expValue !== null) st.expValue = e.expValue;
           }
           // I-45: when no digits could be read, the bar's fill is the EXP % (to 0.1 %, good enough for pace).
-          const fill = out.find((r) => r.name === "expText")?.fill ?? out.find((r) => r.name === "expBar")?.fill;
+          // A legacy full-bar box only — a box around the digits doesn't span the bar, so its fill would be wrong.
+          const fill = out.find((r) => r.name === "expBar")?.fill;
           if (st.expPercent === null && typeof fill === "number" && fill >= 0 && fill <= 1) st.expPercent = Math.round(fill * 1000) / 10;
+
+          // Last good value per field (with when it was read): the screen shows these, not this one read.
+          {
+            const f = { ...get().fields };
+            if (st.level !== null) f.level = { value: st.level, at: t };
+            if (st.name) f.name = { value: st.name, at: t };
+            if (st.expPercent !== null) f.expPercent = { value: st.expPercent, at: t };
+            if (st.expValue !== null) {
+              if (st.expValue === lastExpRaw) f.expValue = { value: st.expValue, at: t };
+              lastExpRaw = st.expValue;
+            }
+            const mapLine = mapLines.map((l) => l.replace(/\b(?:ch|channel)\.?\s*\d+\b/i, "").trim()).filter((l) => /[A-Za-z]{3,}/.test(l)).at(-1);
+            if (mapLine) f.map = { value: mapLine, at: t };
+            set({ fields: f });
+          }
 
           // Right character? The status bar names it. Three clear mismatches in a row means another character
           // (or another client's window) is being read, and nothing from it may be counted.
@@ -530,6 +558,9 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
                   status: statusLines,
                   chat: chatLines,
                   map: mapLines,
+                  exp: out.find((r) => r.name === "expText")?.lines.map((l) => l.text),
+                  expDigits: out.find((r) => r.name === "expText")?.digits,
+                  methods: Object.fromEntries((["status", "expText", "chat", "map"] as const).map((b) => [b, s.tuning?.[b] ?? "default"])),
                   full: fullScan ? fullLines.map((l) => l.text) : undefined,
                   parsed: { level: st.level, expPercent: st.expPercent, expValue: st.expValue, name: st.name, mapId: get().mapId },
                   fresh,

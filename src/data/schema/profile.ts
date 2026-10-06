@@ -182,6 +182,13 @@ export const SettingsSchema = z
         diagnostics: z.boolean().default(false),
         /** How the game draws text: "pixel" enlarges without smoothing, which suits Classic's bitmap font. */
         textStyle: z.enum(["smooth", "pixel"]).default("smooth"),
+        /** Per box, the reading method the setup's test read found works best on this screen (Analyse overhaul). */
+        tuning: z
+          .partialRecord(
+            z.enum(["status", "expText", "chat", "map"]),
+            z.object({ prep: z.enum(["none", "lightText", "brightText"]), filter: z.enum(["bilinear", "nearest"]) }),
+          )
+          .default({}),
         savedAt: iso,
       })
       .nullable()

@@ -162,6 +162,9 @@ export type ScreenRegion = {
   filter?: "bilinear" | "nearest";
   /** `"bar"`: measure how far a progress bar is filled (0..1 in `fill`) instead of reading text; `"both"`: text plus the fill of the bar in the lower part of the box. */
   mode?: "ocr" | "bar" | "both";
+  /** Clean-up before recognition: `lightText` keeps pixels whiter than their row (outlined pale digits on a bar),
+   * `brightText` keeps the brightest pixels (yellow/white text on dark). */
+  prep?: "none" | "lightText" | "brightText";
 };
 /** One recognised line; box in region pixels. */
 export type OcrLine = { text: string; x: number; y: number; w: number; h: number };

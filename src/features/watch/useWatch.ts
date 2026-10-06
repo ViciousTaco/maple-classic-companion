@@ -20,6 +20,7 @@ const idle: StoreApi<WatchState> = createStore<WatchState>()(() => ({
   feed: [],
   startedAt: null,
   lastScan: null,
+  fields: { level: null, name: null, expPercent: null, expValue: null, map: null },
   run: { kills: 0, exp: 0, meso: 0, items: {}, activeMs: 0, pct: 0, pctMs: 0, maps: [] },
   lastSummary: null,
   effectiveIntervalMs: 2000,

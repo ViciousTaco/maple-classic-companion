@@ -12,6 +12,8 @@ import { BigSwitch, useElapsed } from "./WatchControls";
 import { WatchSetup } from "./WatchSetup";
 import { canWatch, useWatch } from "./useWatch";
 import { percentGained } from "./session";
+import type { Fields } from "./reading";
+import { useNow } from "../guide/parts";
 import { toast } from "../../ui/overlays";
 
 const TEXT_STYLES: { value: "smooth" | "pixel"; label: string }[] = [
@@ -61,14 +63,21 @@ export function WatchScreen() {
   const tot = s ? { kills: w.run.kills + s.kills, exp: w.run.exp + s.exp, meso: w.run.meso + s.meso, activeMs: w.run.activeMs + s.activeMs } : w.run;
   const mins = tot.activeMs / 60_000;
   const perHour = (v: number) => (mins >= 1 ? Math.round((v / mins) * 60).toLocaleString("en-AU") : "—");
-  // EXP still needed for the level: from the guide's EXP table when it knows this level, else from the % and total.
+  // EXP still needed for the level: from the guide's EXP table when it knows this level, else from the % and the
+  // (agreed) total. Only from good readings.
   const expLeft = (() => {
-    const r = w.read;
-    if (!r || r.expPercent === null) return null;
-    const need = r.level !== null ? pack?.formulas.expToNext?.[r.level] : undefined;
-    if (need) return Math.max(0, Math.round(need - (need * r.expPercent) / 100));
-    if (r.expValue !== null && r.expPercent > 0) return Math.max(0, Math.round((r.expValue / r.expPercent) * (100 - r.expPercent)));
+    const f = w.fields;
+    if (!f.expPercent) return null;
+    const pct = f.expPercent.value;
+    const need = f.level ? pack?.formulas.expToNext?.[f.level.value] : undefined;
+    if (need) return Math.max(0, Math.round(need - (need * pct) / 100));
+    if (f.expValue && pct > 0) return Math.max(0, Math.round((f.expValue.value / pct) * (100 - pct)));
     return null;
+  })();
+  const progress = (() => {
+    const pct = w.run.pct + (s ? (percentGained(s) ?? 0) : 0);
+    const ms = w.run.pctMs + (s && percentGained(s) !== null ? s.activeMs : 0);
+    return { pct, perHour: ms >= 60_000 && pct > 0 ? (pct / ms) * 3_600_000 : null };
   })();
   const eta = s ? levelEta({ ...w.run, pct: w.run.pct + (percentGained(s) ?? 0), pctMs: w.run.pctMs + (percentGained(s) === null ? 0 : s.activeMs) }, s.lastExp) : null;
   const measured = Object.entries(profile.observations).sort((a, b) => b[1].lastAt.localeCompare(a[1].lastAt));
@@ -84,7 +93,7 @@ export function WatchScreen() {
             label="Analyse"
             onChange={(v) => {
               if (v && !setup) setSetupOpen(true);
-              else if (v) void w.start(spotId);
+              else if (v) void w.start(setup?.map ? undefined : spotId);
               else w.stop();
             }}
           />
@@ -179,29 +188,21 @@ export function WatchScreen() {
             <Card className="p-5">
               <h3 className="mb-3 font-display text-[19px] font-semibold">This session</h3>
               <dl className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-                <Tile label="Kills" value={tot.kills.toLocaleString("en-AU")} sub={`${perHour(tot.kills)} / h`} />
-                <Tile label="EXP" value={tot.exp.toLocaleString("en-AU")} sub={`${perHour(tot.exp)} / h`} />
-                <Tile label="Meso" value={tot.meso.toLocaleString("en-AU")} sub={`${perHour(tot.meso)} / h`} />
+                <Tile label="Level progress" value={progress.pct > 0 ? `+${progress.pct.toFixed(3)}%` : "—"} sub={progress.perHour !== null ? `${progress.perHour.toFixed(2)}% / h` : "from the EXP %"} />
+                <Tile label="Next level" value={eta ?? "—"} sub={eta ? "at this pace" : "needs a few minutes of EXP"} />
                 <Tile label="Training time" value={`${Math.floor(mins)} min`} sub="idle time not counted" />
+                <Tile label="Kills" value={tot.kills > 0 ? tot.kills.toLocaleString("en-AU") : "—"} sub={tot.kills > 0 ? `${perHour(tot.kills)} / h` : "from chat, when readable"} />
               </dl>
-              {eta && (
-                <p className="mt-2 text-sm font-semibold text-leaf">At this pace, Lv {(w.read?.level ?? profile.level) + 1} in about {eta}.</p>
+              {(tot.exp > 0 || tot.meso > 0) && (
+                <p className="mt-2 text-sm text-ink-2">
+                  From chat: <strong className="text-ink">{tot.exp.toLocaleString("en-AU")}</strong> EXP ({perHour(tot.exp)}/h) · <strong className="text-ink">{tot.meso.toLocaleString("en-AU")}</strong> meso ({perHour(tot.meso)}/h)
+                </p>
               )}
               <p className="mt-2 text-xs text-ink-3">
                 Only your own “You have gained …” lines count — other players' chat is ignored. In a party, EXP you're given for a party member's kill counts as a kill too.
-                {tot.kills === 0 && mins >= 1 ? " No chat line has been readable yet, so kills aren't counted — but your EXP % is moving, so pace and time to level still work." : ""}
+                {tot.kills === 0 && mins >= 1 ? " No chat line has been readable yet — level progress, pace and time to level come from the EXP % instead." : ""}
               </p>
-              <p className="mt-3 text-sm text-ink-2">
-                {w.read ? (
-                  <>
-                    Game shows <strong className="text-ink">{w.read.name ?? profile.name}</strong> · <strong className="text-ink">Lv {w.read.level ?? "?"}</strong> · <strong className="text-ink">{w.read.expPercent ?? "?"}%</strong> EXP
-                    {w.read.expValue !== null && <> · EXP <strong className="text-ink">{w.read.expValue.toLocaleString("en-AU")}</strong></>}
-                    {expLeft !== null && <> · EXP left <strong className="text-ink">{expLeft.toLocaleString("en-AU")}</strong></>}
-                  </>
-                ) : (
-                  "Waiting for the level bar…"
-                )}
-              </p>
+              <FieldsReadout fields={w.fields} expLeft={expLeft} hasMap={!!setup?.map} />
             </Card>
             <Card className="p-5">
               <h3 className="mb-3 font-display text-[19px] font-semibold">Just now</h3>
@@ -359,6 +360,37 @@ export function WatchScreen() {
           setForget(null);
         }}
       />
+    </div>
+  );
+}
+
+/** Each reading's last good value and how long ago it was read — so a missed read never shows as "?". */
+function FieldsReadout({ fields, expLeft, hasMap }: { fields: Fields; expLeft: number | null; hasMap: boolean }) {
+  const now = useNow(1000).getTime();
+  const age = (at: number) => {
+    const sec = Math.max(0, Math.round((now - at) / 1000));
+    return sec < 5 ? "just now" : sec < 60 ? `${sec}s ago` : `${Math.floor(sec / 60)} min ago`;
+  };
+  const row = (label: string, f: { value: string; at: number } | null, missing: string) => (
+    <div className="flex items-baseline justify-between gap-3 rounded-xl bg-fill px-3 py-1.5" key={label}>
+      <span className="text-xs font-semibold text-ink-3">{label}</span>
+      {f ? (
+        <span className={now - f.at > 30_000 ? "text-ink-3" : "text-ink"}>
+          <strong>{f.value}</strong> <span className="text-xs text-ink-3">· {age(f.at)}</span>
+        </span>
+      ) : (
+        <span className="text-xs text-ink-3">{missing}</span>
+      )}
+    </div>
+  );
+  const fmt = <T,>(f: { value: T; at: number } | null, show: (v: T) => string) => (f ? { value: show(f.value), at: f.at } : null);
+  return (
+    <div className="mt-3 grid gap-1.5 text-sm sm:grid-cols-2">
+      {row("Level", fmt(fields.level, (v) => `Lv ${v}`), "not read yet — check the Level box")}
+      {row("EXP", fmt(fields.expPercent, (v) => `${v}%`), "not read yet — check the EXP box")}
+      {row("EXP total", fmt(fields.expValue, (v) => v.toLocaleString("en-AU")), "shown once two reads agree")}
+      {expLeft !== null ? row("EXP left", { value: expLeft.toLocaleString("en-AU"), at: fields.expPercent?.at ?? now }, "") : null}
+      {hasMap ? row("Map", fields.map, "not read yet — check the Map box") : null}
     </div>
   );
 }

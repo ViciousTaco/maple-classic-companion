@@ -5,6 +5,7 @@ import { useActiveProfile, usePack, usePlatform, useProfileStore, useProfiles } 
 import { Button, Chip } from "../../ui/kit";
 import { Dialog } from "../../ui/overlays";
 import { parseChatLine, parseExpText, parseMapName, parseStatus } from "./parse";
+import { CANDIDATES, methodLabel, scoreReading, type Tuning } from "./reading";
 import { canWatch } from "./useWatch";
 import type { WatchWindow } from "./controller";
 
@@ -21,7 +22,7 @@ const BOX = {
   status: { label: "Level", hint: "Drag a small box around your level and name on the status bar — e.g. “Lv. 272 ViciousTaco”.", color: "var(--sky)", cls: "border-sky bg-sky/15" },
   chat: { label: "Chat box", hint: "Drag a box around the chat log — the panel where messages scroll (bottom-left by default), where “You have gained …” lines appear. Not the notification or quest helper boxes.", color: "var(--maple)", cls: "border-maple bg-maple/15" },
   map: { label: "Map name (optional)", hint: "Drag a box around the map's name at the top of the minimap, so Analyse follows you from map to map.", color: "var(--leaf)", cls: "border-leaf bg-leaf/15" },
-  expText: { label: "EXP", hint: "Drag a box around the EXP digits and the thin bar under them — e.g. “4,012,189,870,315 [72.668%]” plus the bar. The digits give the exact total and %; the bar's fill is the fallback when digits can't be read.", color: "#ffcc00", cls: "border-[#ffcc00] bg-[#ffcc00]/15" },
+  expText: { label: "EXP", hint: "Drag a box around the EXP digits — e.g. “4,012,189,870,315 [72.668%]”. The % gives your progress to three decimals; the total shows when it reads cleanly.", color: "#ffcc00", cls: "border-[#ffcc00] bg-[#ffcc00]/15" },
 } as const;
 
 const OWN_TITLE = /maple classic companion/i;
@@ -49,6 +50,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
   const [lastDrawn, setLastDrawn] = useState<BoxName | null>(null);
   const [test, setTest] = useState<{ level: number | null; expPercent: number | null; expValue: number | null; barPercent: number | null; name: string | null; map: string | null; mapLines: string[]; chat: string[]; understood: number } | null>(null);
   const [busy, setBusy] = useState(false);
+  const [tuning, setTuning] = useState<Tuning>(() => prev?.tuning ?? {});
   const [error, setError] = useState<string | null>(null);
 
   const fetchWindows = async (): Promise<WatchWindow[]> => {
@@ -92,27 +94,45 @@ function Wizard({ onDone }: { onDone: () => void }) {
     }
   };
 
+  // Self-tuning test read: every candidate method for every drawn box in one capture; the best-scoring method per
+  // box is kept (and saved), so the reading adapts to this screen's fonts — the live client today, Classic tomorrow.
   const runTest = async () => {
     if (!win || !canWatch(platform)) return;
     setBusy(true);
     setError(null);
     try {
-      const filter = prev?.textStyle === "pixel" ? ("nearest" as const) : ("bilinear" as const);
-      const regions = BOXES.flatMap((name) => (boxes[name] ? [{ name, ...boxes[name], scale: 3, filter, ...(name === "expText" ? { mode: "both" as const } : {}) }] : []));
+      const drawn = BOXES.filter((b) => boxes[b]);
+      const regions = drawn.flatMap((b) =>
+        CANDIDATES[b].map((m, i) => ({ name: `${b}#${i}`, ...boxes[b]!, scale: 3, prep: m.prep, filter: m.filter, ...(b === "expText" ? { mode: "both" as const } : {}) })),
+      );
       const out = await platform.screenRead(win.id, regions);
-      const status = parseStatus(out.find((r) => r.name === "status")?.lines.map((l) => l.text) ?? []);
-      const expRegion = out.find((r) => r.name === "expText");
-      const expLines = expRegion?.lines.map((l) => l.text);
-      if (expLines) {
-        const e = parseExpText(expLines, expRegion?.digits);
+      const mapNames = pack ? pack.maps.map((m) => m.name) : [];
+      const pickedTuning: Tuning = {};
+      const best: Partial<Record<BoxName, { lines: string[]; digits?: string }>> = {};
+      for (const b of drawn) {
+        let top = -1;
+        CANDIDATES[b].forEach((m, i) => {
+          const r = out.find((x) => x.name === `${b}#${i}`);
+          const lines = r?.lines.map((l) => l.text) ?? [];
+          const score = scoreReading(b, lines, r?.digits, me?.name ?? null, mapNames);
+          if (score > top) {
+            top = score;
+            pickedTuning[b] = m;
+            best[b] = { lines, digits: r?.digits };
+          }
+        });
+      }
+      setTuning(pickedTuning);
+      const status = parseStatus(best.status?.lines ?? []);
+      if (best.expText) {
+        const e = parseExpText(best.expText.lines, best.expText.digits);
         if (e.expPercent !== null) status.expPercent = e.expPercent;
         if (e.expValue !== null) status.expValue = e.expValue;
       }
-      const chat = out.find((r) => r.name === "chat")?.lines.map((l) => l.text) ?? [];
-      const mapLines = out.find((r) => r.name === "map")?.lines.map((l) => l.text) ?? [];
-      const map = pack ? parseMapName(mapLines, pack.maps.map((m) => m.name)) : null;
-      const fill = out.find((r) => r.name === "expText")?.fill;
-      setTest({ level: status.level, expPercent: status.expPercent, expValue: status.expValue, barPercent: typeof fill === "number" ? Math.round(fill * 1000) / 10 : null, name: status.name, map, mapLines, chat, understood: chat.filter((l) => parseChatLine(l) !== null).length });
+      const chat = best.chat?.lines ?? [];
+      const mapLines = best.map?.lines ?? [];
+      const map = pack ? parseMapName(mapLines, mapNames) : null;
+      setTest({ level: status.level, expPercent: status.expPercent, expValue: status.expValue, barPercent: null, name: status.name, map, mapLines, chat, understood: chat.filter((l) => parseChatLine(l) !== null).length });
     } catch (e) {
       setError(`Test read failed: ${String(e)}`);
     } finally {
@@ -135,6 +155,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
         intervalSec: prev?.intervalSec ?? 2,
         diagnostics: prev?.diagnostics ?? false,
         textStyle: prev?.textStyle ?? "smooth",
+        tuning,
         savedAt: new Date().toISOString(),
       },
     });
@@ -229,13 +250,18 @@ function Wizard({ onDone }: { onDone: () => void }) {
                   </Chip>
                 )}
                 {boxes.map && <Chip tone={test.map ? "leaf" : "neutral"}>Map: {test.map ?? (test.mapLines.length ? `“${test.mapLines[0]}” isn't a map the guide knows` : "nothing read")}</Chip>}
-                {boxes.expText && <Chip tone={test.barPercent !== null ? "leaf" : "neutral"}>EXP bar fill: {test.barPercent !== null ? `${test.barPercent}%` : "no bar seen under the digits"}</Chip>}
                 <Chip tone={test.understood > 0 ? "leaf" : "neutral"}>
                   Chat: {test.chat.length} line{test.chat.length === 1 ? "" : "s"} read, {test.understood} understood
                 </Chip>
               </>
             )}
           </div>
+          {test && Object.keys(tuning).length > 0 && (
+            <p className="mt-2 text-xs text-ink-3">
+              Best way to read each box on this screen (saved with the setup):{" "}
+              {BOXES.filter((b) => tuning[b]).map((b) => `${BOX[b].label.replace(" (optional)", "")}: ${methodLabel(tuning[b]!)}`).join(" · ")}
+            </p>
+          )}
           {test && test.chat.length > 0 && (
             <pre className="mt-2 max-h-28 overflow-auto rounded-xl bg-fill p-2 text-xs text-ink-2">{test.chat.join("\n")}</pre>
           )}

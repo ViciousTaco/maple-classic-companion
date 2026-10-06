@@ -45,8 +45,9 @@ export function applyEvents(t: SessionTotals, events: ChatEvent[], pack: Pack, n
   const itemNames = pack.items.map((i) => i.name);
   for (const e of events) {
     if (e.kind === "exp") {
-      next.kills += 1;
       next.exp += e.amount;
+      if (e.bonus) continue; // extra EXP for the same kill
+      next.kills += 1;
       const mob = monsterForExp(pack, t.mapId, e.amount);
       next.killsByMob[mob] = (next.killsByMob[mob] ?? 0) + 1;
     } else if (e.kind === "meso") {

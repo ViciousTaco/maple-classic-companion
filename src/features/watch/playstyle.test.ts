@@ -19,6 +19,7 @@ const SETUP = {
   expBar: null,
   expText: null,
   textStyle: "smooth" as const,
+  tuning: {},
   savedAt: "2026-10-07T00:00:00.000Z",
 };
 
@@ -369,4 +370,27 @@ test("a rising EXP bar keeps the training clock running when no chat is readable
   expect(s.kills).toBe(0);
   expect(s.activeMs).toBeGreaterThanOrEqual(16_000); // the clock ran because EXP kept rising
   expect(w.getState().read?.expPercent).toBeCloseTo(42, 0);
+});
+
+test("a missed read keeps the last good value (with its time); the EXP total needs two agreeing reads", async () => {
+  const { watcher, screen, advance } = await rig({ map: false });
+  await watcher.getState().start("spot-exp");
+  screen.status = ["Lv. 25  Taco  EXP 51402 [40.00%]"];
+  await advance(2000);
+  const first = watcher.getState().fields;
+  expect(first.level?.value).toBe(25);
+  expect(first.expPercent?.value).toBe(40);
+  screen.status = []; // OCR returned nothing this tick
+  await advance(2000);
+  expect(watcher.getState().fields.level?.value).toBe(25);
+  expect(watcher.getState().fields.level?.at).toBe(first.level?.at);
+});
+
+test("turning Analyse on always follows the minimap when a map box is set up", async () => {
+  const { watcher, advance } = await rig();
+  await watcher.getState().start("spot-drop"); // the screen's switch passes the planned spot
+  expect(watcher.getState().autoMap).toBe(true);
+  await advance(2000);
+  expect(watcher.getState().mapId).toBe("f-exp");
+  expect(watcher.getState().fields.map?.value).toBe("Test Map f-exp");
 });
