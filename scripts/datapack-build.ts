@@ -35,6 +35,8 @@ export function buildPack(srcDir: string, outDir: string, now = new Date()) {
     files,
   };
   writeFileSync(join(outDir, "manifest.json"), JSON.stringify(manifest, null, 2) + "\n", "utf8");
+  // The licence and attribution notice travels with the data (CC BY-NC-SA: attribution + share-alike).
+  copyFileSync(resolve("datapack/NOTICE.md"), join(outDir, "NOTICE.md"));
   return manifest;
 }
 
