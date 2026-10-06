@@ -180,7 +180,7 @@ export function WatchScreen() {
           <div>
             <h3 className="font-display text-[19px] font-semibold">Stats & skills from the game</h3>
             <p className="mt-1 text-sm text-ink-2">
-              Open your Character Stats or Skills window in game. While watching, the app reads it every 10 seconds and updates this character (STR/DEX/INT/LUK, HP/MP, damage range, accuracy, avoidability, skill levels) once two reads agree. Or read it right now:
+              Open your Character Stats or Skills window in game. While watching, the app checks for it every 5 seconds and updates this character (STR/DEX/INT/LUK, HP/MP, damage range, accuracy, avoidability, skill levels) once two reads agree — usually within a few seconds of opening the window. Kills, EXP, meso, pickups and your map are read every tick. Or read it right now:
             </p>
           </div>
           <Button

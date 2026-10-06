@@ -171,19 +171,24 @@ test("the open Stats / Skills window updates the character, after two whole-wind
   full.full = [];
   await watcher.getState().start("spot-exp");
   await advance(2000);
-  // Owner opens the Stats window. Whole-window reads happen every 10 s.
+  // Owner opens the Stats window. Whole-window reads happen every 5 s; once a window is seen, the confirming read
+  // comes on the very next tick.
   full.full = ["STR 35", "DEX 25", "INT 4", "LUK 60", "HP 912 / 912", "Damage 40 ~ 90", "Test Multi Skill 5 / 20"];
-  await advance(10_000);
+  await advance(2000);
+  expect(watcher.getState().lastScan).toBeNull(); // not time for a whole-window read yet
+  await advance(3000);
   expect(profile().stats.str).toBeUndefined(); // first read: waiting for confirmation
   expect(watcher.getState().lastScan).toMatchObject({ applied: false, skills: 1 });
-  await advance(10_000);
+  await advance(2000);
   expect(profile().stats).toMatchObject({ str: 35, dex: 25, int: 4, luk: 60, hp: 912 });
   expect(profile().combat).toMatchObject({ damageMin: 40, damageMax: 90 });
   expect(profile().skills["sk-multi"]).toBe(5);
   expect(watcher.getState().feed[0]!.text).toMatch(/^Updated from the game: STR 35/);
   // One noisy read changes nothing.
   full.full = ["STR 85", "DEX 25", "INT 4", "LUK 60"];
-  await advance(10_000);
+  await advance(5000);
+  full.full = ["STR 35", "DEX 25", "INT 4", "LUK 60"]; // the next (confirming) read disagrees → nothing applied
+  await advance(2000);
   expect(profile().stats.str).toBe(35);
   // The on-demand read works too, and says when nothing is open.
   full.full = [];

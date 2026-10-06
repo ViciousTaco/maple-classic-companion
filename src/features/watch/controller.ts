@@ -74,8 +74,11 @@ export const AUTO_OFF_NO_WINDOW_MS = 5 * 60_000;
 export const AUTO_OFF_IDLE_MS = 20 * 60_000;
 /** Fold totals into the character every few minutes so a crash loses little. */
 export const CHECKPOINT_MS = 5 * 60_000;
-/** While on, the whole window is read this often for the Stats / Skills windows (cheaper regions every read). */
-export const FULL_SCAN_EVERY_MS = 10_000;
+/**
+ * While on, the whole window is read this often for the Stats / Skills windows (the small boxes are read every tick).
+ * Once such a window is seen, the confirming read happens on the very next tick, so an update lands in 2–7 s.
+ */
+export const FULL_SCAN_EVERY_MS = 5_000;
 const FEED_MAX = 8;
 
 export function describeEvent(e: ChatEvent, pack: Pack | null, mobId?: string): string {
@@ -104,6 +107,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
   let pendingHidden: { kills: number; amount: number; expValue: number } | null = null;
   let nameMisses = 0;
   let lastFullScan = 0;
+  let confirmNext = false;
   /** A whole-window read must say the same thing twice before it changes the character (OCR noise). */
   let pendingScan: { key: string; stats: StatsRead | null; skills: Record<string, number> | null } | null = null;
   let lastStepAt = 0;
@@ -218,6 +222,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       const found = stats !== null || skills !== null;
       const agreed = force || (pendingScan?.key === key && found);
       pendingScan = found ? { key, stats, skills } : null;
+      confirmNext = found && !agreed;
       set({ lastScan: { at: t, stats: stats ? describeStats(stats) : null, skills: skills ? Object.keys(skills).length : 0, applied: false } });
       if (!found) return "No Stats or Skills window is open in the game right now — open one and try again.";
       if (!agreed) return "Read once — confirming on the next read.";
@@ -265,6 +270,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
         pendingHidden = null;
         nameMisses = 0;
         pendingScan = null;
+        confirmNext = false;
         lastFullScan = now();
         levelVotes = [];
         missingSince = null;
@@ -322,7 +328,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           if (s.status) regions.push({ name: "status", ...s.status });
           if (s.chat) regions.push({ name: "chat", ...s.chat });
           if (s.map) regions.push({ name: "map", ...s.map });
-          const fullScan = t - lastFullScan >= FULL_SCAN_EVERY_MS;
+          const fullScan = confirmNext || t - lastFullScan >= FULL_SCAN_EVERY_MS;
           if (fullScan) regions.push({ name: "full", x: 0, y: 0, w: s.sourceWidth, h: s.sourceHeight, scale: 1 });
           const out = await deps.platform.screenRead(windowId, regions);
           if (out.some((r) => r.covered)) throw new Missing("Something is covering the game's boxes (the mini window?) — move it aside and watching carries on.");
