@@ -190,6 +190,11 @@ export const SettingsSchema = z
             z.object({ prep: z.enum(["none", "lightText", "brightText"]), filter: z.enum(["bilinear", "nearest"]) }),
           )
           .default({}),
+        /**
+         * EXP each level needs in all, from the EXP number the owner typed in once (Analyse pairs it with the % read at
+         * that moment) — for clients whose EXP number doesn't read reliably (the live client's pixel font).
+         */
+        levelSizes: z.record(z.string(), z.number().positive()).optional(),
         savedAt: iso,
       })
       .nullable()

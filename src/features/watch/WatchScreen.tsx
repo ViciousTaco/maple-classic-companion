@@ -4,7 +4,7 @@ import { Ban, Eye, Lock, MonitorX, ScanText, Settings2, Timer, Trash2 } from "lu
 import { HotkeyPicker, levelEta, SessionSummary, TrainingLog, WatcherData } from "./WatchExtras";
 import { navigate, useActiveProfile, usePack, usePlatform, useProfileStore, useProfiles, useRouteQuery } from "../../app/context";
 import { observedRates } from "../../engine/observed";
-import { Button, Card, EmptyState, LargeTitle, Segmented } from "../../ui/kit";
+import { Button, Card, EmptyState, inputClass, LargeTitle, Segmented } from "../../ui/kit";
 import { ConfirmDialog } from "../../ui/overlays";
 import { mapName, rangeText } from "../guide/text";
 import { useTrainingPlan } from "../guide/parts";
@@ -62,17 +62,14 @@ export function WatchScreen() {
   // The session resets at checkpoints and map changes; the run keeps the whole stretch since switching on.
   const tot = s ? { kills: w.run.kills + s.kills, exp: w.run.exp + s.exp, meso: w.run.meso + s.meso, activeMs: w.run.activeMs + s.activeMs } : w.run;
   const mins = tot.activeMs / 60_000;
-  const perHour = (v: number) => (mins >= 1 ? Math.round((v / mins) * 60).toLocaleString("en-AU") : "—");
   // EXP still needed for the level: from the guide's EXP table when it knows this level, else from the % and the
   // (agreed) total. Only from good readings.
   const expLeft = (() => {
     const f = w.fields;
     if (!f.expPercent) return null;
     const pct = f.expPercent.value;
-    const need = f.level ? pack?.formulas.expToNext?.[f.level.value] : undefined;
-    if (need) return Math.max(0, Math.round(need - (need * pct) / 100));
-    if (f.expValue && pct > 0) return Math.max(0, Math.round((f.expValue.value / pct) * (100 - pct)));
-    return null;
+    const need = (f.level ? pack?.formulas.expToNext?.[f.level.value] : undefined) ?? f.levelSize?.value;
+    return need ? Math.max(0, Math.round(need - (need * pct) / 100)) : null;
   })();
   const progress = (() => {
     const pct = w.run.pct + (s ? (percentGained(s) ?? 0) : 0);
@@ -190,8 +187,14 @@ export function WatchScreen() {
               <dl className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
                 <Tile
                   label="EXP gained"
-                  value={tot.exp > 0 ? tot.exp.toLocaleString("en-AU") : "—"}
-                  sub={tot.exp > 0 ? `${perHour(tot.exp)} / h${tot.kills > 0 ? ` · ≈ ${tot.kills.toLocaleString("en-AU")} kills` : ""}` : "from the EXP number"}
+                  value={tot.exp > 0 ? big(tot.exp) : "—"}
+                  sub={
+                    tot.exp > 0
+                      ? `${mins >= 1 ? big((tot.exp / mins) * 60) : "—"} / h${tot.kills > 0 ? ` · ≈ ${tot.kills.toLocaleString("en-AU")} kills` : ""}`
+                      : w.fields.levelSize
+                        ? "from the EXP %"
+                        : "needs your level's EXP size (below)"
+                  }
                 />
                 <Tile label="Level progress" value={progress.pct > 0 ? `+${progress.pct.toFixed(3)}%` : "—"} sub={progress.perHour !== null ? `${progress.perHour.toFixed(2)}% / h` : "from the EXP %"} />
                 <Tile label="Next level" value={eta ?? "—"} sub={eta ? "at this pace" : "needs a few minutes of EXP"} />
@@ -202,7 +205,12 @@ export function WatchScreen() {
                 penalty isn't taken off. Kills are estimated from EXP on maps the guide knows.
                 {tot.exp === 0 && progress.pct > 0 ? " The EXP number hasn't read cleanly yet, so progress comes from the EXP % for now." : ""}
               </p>
-              <FieldsReadout fields={w.fields} expLeft={expLeft} hasMap={!!setup?.map} />
+              <FieldsReadout
+                fields={w.fields}
+                expLeft={expLeft}
+                hasMap={!!setup?.map}
+                onLevelSize={(level, size) => setup && store.getState().updateSettings({ watch: { ...setup, levelSizes: { ...setup.levelSizes, [String(level)]: size } } })}
+              />
             </Card>
             <Card className="p-5">
               <h3 className="mb-3 font-display text-[19px] font-semibold">Just now</h3>
@@ -365,7 +373,13 @@ export function WatchScreen() {
 }
 
 /** Each reading's last good value and how long ago it was read — so a missed read never shows as "?". */
-function FieldsReadout({ fields, expLeft, hasMap }: { fields: Fields; expLeft: number | null; hasMap: boolean }) {
+/** Big EXP numbers short enough for a tile: 39.63 B, 1.7 T; smaller ones in full. */
+export function big(n: number): string {
+  return n >= 1e9 ? new Intl.NumberFormat("en-AU", { notation: "compact", maximumFractionDigits: 2 }).format(n) : Math.round(n).toLocaleString("en-AU");
+}
+
+function FieldsReadout({ fields, expLeft, hasMap, onLevelSize }: { fields: Fields; expLeft: number | null; hasMap: boolean; onLevelSize: (level: number, size: number) => void }) {
+  const [typed, setTyped] = useState("");
   const now = useNow(1000).getTime();
   const age = (at: number) => {
     const sec = Math.max(0, Math.round((now - at) / 1000));
@@ -388,9 +402,42 @@ function FieldsReadout({ fields, expLeft, hasMap }: { fields: Fields; expLeft: n
     <div className="mt-3 grid gap-1.5 text-sm sm:grid-cols-2">
       {row("Level", fmt(fields.level, (v) => `Lv ${v}`), "not read yet — check the Level box")}
       {row("EXP", fmt(fields.expPercent, (v) => `${v}%`), "not read yet — check the EXP box")}
-      {row("EXP total", fmt(fields.expValue, (v) => v.toLocaleString("en-AU")), "shown once two reads agree")}
+      {row("EXP total", fmt(fields.expValue, (v) => v.toLocaleString("en-AU")), fields.levelSize ? "shown when it reads cleanly" : "not read cleanly yet")}
       {expLeft !== null ? row("EXP left", { value: expLeft.toLocaleString("en-AU"), at: fields.expPercent?.at ?? now }, "") : null}
       {hasMap ? row("Map", fields.map, "not read yet — check the Map box") : null}
+      {fields.levelSize
+        ? row("Level's EXP size", fmt(fields.levelSize, (v) => v.toLocaleString("en-AU")), "")
+        : fields.level &&
+          fields.expPercent && (
+            <form
+              className="flex flex-wrap items-center gap-2 rounded-xl bg-fill px-3 py-1.5 sm:col-span-2"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const n = Number(typed.replace(/\D/g, ""));
+                const pct = fields.expPercent!.value;
+                if (n > 0 && pct >= 0.5) {
+                  onLevelSize(fields.level!.value, Math.round(n / (pct / 100)));
+                  setTyped("");
+                }
+              }}
+            >
+              <span className="text-xs text-ink-2">
+                Your EXP number doesn't read cleanly, so EXP gained needs it once: type the EXP shown on your bar now (it's paired with the{" "}
+                {fields.expPercent.value}% just read).
+              </span>
+              <input
+                value={typed}
+                onChange={(e) => setTyped(e.target.value)}
+                inputMode="numeric"
+                placeholder="e.g. 4,013,477,000,000"
+                aria-label="EXP shown on your bar"
+                className={`${inputClass} min-w-0 flex-1 tabular-nums`}
+              />
+              <Button size="sm" type="submit" disabled={!typed.replace(/\D/g, "")}>
+                Save
+              </Button>
+            </form>
+          )}
     </div>
   );
 }

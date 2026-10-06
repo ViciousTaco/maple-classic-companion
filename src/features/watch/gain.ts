@@ -1,7 +1,8 @@
 // EXP gained, from the EXP number on the bar alone (owner, 2026-10-07: the EXP messages fly past faster than any read
 // can catch, so they're not used). Each good reading of the bar is a sample; what was gained is the difference
 // between the first and the latest sample at a level — so a misread in between never adds up — plus whatever
-// finished levels contributed. A drop (death penalty) is not "gained" and is not taken off either.
+// finished levels contributed. A drop (death penalty) is not "gained" and is not taken off either; a small dip
+// (under 1 % of the level) is a misread, not a death, and is ignored.
 
 /** One good reading of the bar: level, EXP % and (when readable) the EXP number. */
 export type ExpSample = { level: number; pct: number; total: number | null };
@@ -12,7 +13,7 @@ export type ExpMeter = {
   /** The current stretch: its first and latest samples, at one level. */
   first: ExpSample | null;
   last: ExpSample | null;
-  /** EXP to the next level, per level — from the guide, or worked out from the bar (EXP number ÷ %). */
+  /** EXP to the next level, per level — from the guide, or worked out from the bar (EXP number ÷ %, by the caller). */
   need: Record<number, number>;
 };
 
@@ -41,8 +42,6 @@ export function expGained(m: ExpMeter): number | null {
 
 /** Folds a good reading in. */
 export function addSample(m: ExpMeter, s: ExpSample): void {
-  // The bar's own EXP number and % say how big the level is (rounding of the % kept small by needing ≥ 1 %).
-  if (s.total !== null && s.pct >= 1) m.need[s.level] ??= Math.round(s.total / (s.pct / 100));
   const last = m.last;
   if (!m.first || !last) {
     m.first = m.last = s;
@@ -61,6 +60,8 @@ export function addSample(m: ExpMeter, s: ExpSample): void {
     m.last = s;
     return;
   }
+  // A dip under 1 % of the level: a misread (a dropped decimal part, "72" for 72.687), not a death — ignored.
+  if (s.level === last.level && s.pct < last.pct && last.pct - s.pct < 1) return;
   const a = into(m, last);
   const b = into(m, s);
   const dropped = s.level !== last.level || (a !== null && b !== null ? b < a : s.pct < last.pct);

@@ -154,6 +154,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
         diagnostics: prev?.diagnostics ?? false,
         textStyle: prev?.textStyle ?? "smooth",
         tuning,
+        ...(prev?.levelSizes ? { levelSizes: prev.levelSizes } : {}),
         savedAt: new Date().toISOString(),
       },
     });

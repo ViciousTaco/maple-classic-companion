@@ -517,11 +517,13 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
 
           // Last good value per field (with when it was read): the screen shows these, not this one read.
           // One misread never replaces a good value: it must be consistent or confirmed by the next read.
-          set({
-            fields: updateFields(get().fields, { level: st.level, name: st.name, expPercent: st.expPercent, expValue: st.expValue, mapLines }, t, stab, (line) =>
-              pack.maps.some((m) => m.name === line),
-            ),
-          });
+          let fields = updateFields(get().fields, { level: st.level, name: st.name, expPercent: st.expPercent, expValue: st.expValue, mapLines }, t, stab, (line) =>
+            pack.maps.some((m) => m.name === line),
+          );
+          // The level's size the owner gave (typed EXP number ÷ %), when the bar's own number hasn't shown it.
+          const typed = fields.level ? s.levelSizes?.[String(fields.level.value)] : undefined;
+          if (!fields.levelSize && typed) fields = { ...fields, levelSize: { value: typed, at: t } };
+          set({ fields });
 
           // Live self-tuning: every so often read each box every way and keep whichever reads best on this screen.
           if (t - lastTune >= TUNE_EVERY_MS) {
@@ -557,7 +559,9 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           if (f.level && f.expPercent && f.expPercent.at === t) {
             const level = f.level.value;
             const known = pack.formulas.expToNext?.[level];
-            if (known && !meter.need[level]) meter.need[level] = known;
+            // The level's size: the guide's EXP table, else what the bar's own number ÷ % showed (`updateFields`).
+            const size = known ?? (f.levelSize?.value || undefined);
+            if (size) meter.need[level] = size;
             const before = expGained(meter) ?? 0;
             const prevPct = meter.last?.level === level ? meter.last.pct : null;
             addSample(meter, { level, pct: f.expPercent.value, total: f.expValue?.at === t ? f.expValue.value : null });
@@ -596,7 +600,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
                   full: fullScan ? fullLines.map((l) => l.text) : undefined,
                   parsed: { level: st.level, expPercent: st.expPercent, expValue: st.expValue, name: st.name, mapId: get().mapId },
                   expGained: expGained(meter),
-                  levelSize: f.level ? (meter.need[f.level.value] ?? null) : null,
+                  levelSize: f.levelSize?.value ?? null,
                   session: { kills: sess.kills, exp: sess.exp, meso: sess.meso, activeMs: sess.activeMs, spotId: sess.spotId },
                   scan: fullScan ? get().lastScan : undefined,
                 }),

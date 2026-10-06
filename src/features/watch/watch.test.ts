@@ -84,11 +84,11 @@ test("live-client EXP strip, as read from a real frame (2026-10-06)", async () =
 const LV272 = 5_521_215_000_000; // ≈ the owner's level 272 (4,012,406,808,693 at 72.672 %)
 
 test("EXP gained is the rise in the EXP number, however many kills happened between reads", () => {
-  const m = newExpMeter();
+  const m = newExpMeter({ 272: LV272 });
   addSample(m, { level: 272, pct: 72.672, total: 4_012_406_808_693 });
   addSample(m, { level: 272, pct: 72.69, total: 4_013_406_808_693 }); // ~1,250 kills' worth in one read: all counted
   expect(expGained(m)).toBe(1_000_000_000);
-  // A read where only the % came through: the level's size (learned from the number ÷ %) turns it into EXP.
+  // A read where only the % came through: the level's size turns it into EXP.
   addSample(m, { level: 272, pct: 72.71, total: null });
   expect(expGained(m)).toBeGreaterThan(1_000_000_000);
 });

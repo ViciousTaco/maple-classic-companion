@@ -58,6 +58,7 @@ test("EXP gained comes from the EXP number on the bar, then is saved to the spot
   await watcher.getState().start("spot-exp");
   expect(watcher.getState().status).toBe("on");
   await advance(2000, bar(4000));
+  await advance(2000, bar(4000)); // the first value needs a second read to back it
   await advance(2000, bar(4240)); // 10 kills of Test Mob m-fast (24 EXP) between reads — all counted
   await advance(2000, bar(4480));
   await advance(2000, bar(4480)); // nothing new
@@ -112,7 +113,9 @@ test("switches itself off after 20 minutes without EXP", async () => {
   const { watcher, advance } = await rig();
   await watcher.getState().start("spot-exp");
   await advance(2000, bar(4000));
+  await advance(2000, bar(4000));
   await advance(2000, bar(4240));
+  await advance(2000, bar(4480));
   await advance(AUTO_OFF_IDLE_MS + 1000);
   expect(watcher.getState().status).toBe("off");
   expect(watcher.getState().problem).toMatch(/No EXP gained for 20 minutes/);
@@ -121,6 +124,7 @@ test("switches itself off after 20 minutes without EXP", async () => {
 test("a long run sets the character's measured pace", async () => {
   const { watcher, advance, profile } = await rig();
   await watcher.getState().start("spot-exp");
+  await advance(2000, bar(4000));
   await advance(2000, bar(4000));
   for (let i = 1; i <= 400; i++) await advance(2000, bar(4000 + Math.round((600 * i) / 400)));
   watcher.getState().stop();
@@ -135,13 +139,28 @@ test("EXP gained while a box was covered isn't lost: the next good read counts i
   const { watcher, screen, advance } = await rig();
   await watcher.getState().start("spot-exp");
   await advance(2000, bar(4000));
-  await advance(2000, bar(4240));
+  await advance(2000, bar(4000));
+  await advance(2000, bar(4240)); // a 2.4 % jump before the pace is known: waits for the next read…
+  await advance(2000, bar(4480)); // …which backs it
+  expect(watcher.getState().session!.exp).toBe(480);
   screen.covered = true;
-  await advance(2000, bar(4480));
+  await advance(2000, bar(4720));
   expect(watcher.getState().status).toBe("paused");
-  expect(watcher.getState().session!.exp).toBe(240);
+  expect(watcher.getState().session!.exp).toBe(480);
   screen.covered = false;
-  await advance(2000, bar(4500));
+  await advance(2000, bar(4960));
   expect(watcher.getState().status).toBe("on");
-  expect(watcher.getState().session!.exp).toBe(500);
+  expect(watcher.getState().session!.exp).toBe(960);
+});
+
+test("live client: only the % reads; with the level's size typed in once, EXP gained comes from the % — misreads ignored", async () => {
+  const { store, watcher, advance } = await rig();
+  const size = 5_521_000_000_000;
+  store.getState().updateSettings({ watch: { ...store.getState().file.settings.watch!, levelSizes: { "25": size } } });
+  await watcher.getState().start("spot-exp");
+  const pct = (p: string) => ["Lv. 25", `[${p}%]`];
+  // The owner's log (2026-10-07), in order: the real %, plus the misreads "7" (the same frame read twice) and "72".
+  for (const p of ["72.680", "72.680", "72.684", "7", "7", "72.684", "72.686", "72", "72.687", "72.687"]) await advance(2000, pct(p));
+  expect(watcher.getState().fields.expPercent?.value).toBe(72.687);
+  expect(watcher.getState().session!.exp).toBe(Math.round((size * 0.007) / 100)); // 0.007 % of the level, nothing more
 });

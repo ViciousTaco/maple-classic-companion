@@ -90,6 +90,7 @@ test("moving between maps: EXP is banked per map and the next map's spot takes o
   await watcher.getState().start();
   expect(watcher.getState().autoMap).toBe(true);
   await advance(2000, bar(1000)); // primes; minimap says f-exp
+  await advance(2000, bar(1000)); // the first value needs a second read to back it
   expect(watcher.getState().mapId).toBe("f-exp");
   await advance(2000, bar(1024));
   await advance(2000, bar(1048));
@@ -113,10 +114,11 @@ test("a map with no training spot in the guide still counts, under the map's own
   await advance(2000, bar(1000));
   screen.map = ["Test Map town"]; // a map without a spot
   await advance(2000, bar(1024));
+  await advance(2000, bar(1048));
   expect(watcher.getState().spotId).toBeNull();
   expect(watcher.getState().feed.some((f) => /no training spot in the guide/.test(f.text))).toBe(true);
   watcher.getState().stop();
-  expect(profile().observations["map:town"]).toMatchObject({ exp: 24, kills: 0 }); // no monsters known there: no kill estimate
+  expect(profile().observations["map:town"]).toMatchObject({ exp: 48, kills: 0 }); // no monsters known there: no kill estimate
 });
 
 test("picking a spot by hand stops following the minimap until 'wherever you are' is chosen again", async () => {
@@ -135,6 +137,7 @@ test("picking a spot by hand stops following the minimap until 'wherever you are
 test("mobbing: every kill counts, however many happen between two reads", async () => {
   const { watcher, advance } = await rig({ map: false });
   await watcher.getState().start("spot-exp");
+  await advance(2000, bar(1000));
   await advance(2000, bar(1000));
   await advance(2000, bar(1240)); // 10 kills in 2 s (+9.6 %): a big jump waits for the next read to back it…
   await advance(2000, bar(1312)); // …which it does (3 more kills)
@@ -214,6 +217,7 @@ test("the open Stats / Skills window updates the character, after two whole-wind
 test("run totals and the training log survive checkpoints; stopping leaves a summary", async () => {
   const { watcher, advance, profile } = await rig({ map: false });
   await watcher.getState().start("spot-exp");
+  await advance(2000, bar(1000));
   await advance(2000, bar(1000));
   for (let i = 1; i <= 4; i++) await advance(2000, bar(1000 + 24 * i));
   // 5-minute checkpoint: the session resets but the run keeps counting.
@@ -358,6 +362,7 @@ test("a missed read keeps the last good value (with its time); the EXP total nee
   await watcher.getState().start("spot-exp");
   screen.status = ["Lv. 25  Taco  EXP 51402 [40.00%]"];
   await advance(2000);
+  await advance(2000); // a first value is shown once a second read backs it
   const first = watcher.getState().fields;
   expect(first.level?.value).toBe(25);
   expect(first.expPercent?.value).toBe(40);
@@ -381,7 +386,7 @@ test("one misread never replaces a good value; two agreeing reads do (owner's lo
   const stab = newStabilizer();
   const r = (o: object) => ({ level: null, name: null, expPercent: null, expValue: null, mapLines: [], ...o });
   let f = updateFields(NO_FIELDS, r({ level: 272, expPercent: 72.674, mapLines: ["Esfera", "Living Spring 5"] }), 1, stab);
-  f = updateFields(f, r({ mapLines: ["Esfera", "Living Spring 5"] }), 2, stab);
+  f = updateFields(f, r({ expPercent: 72.674, mapLines: ["Esfera", "Living Spring 5"] }), 2, stab);
   expect(f.map?.value).toBe("Living Spring 5");
   f = updateFields(f, r({ expPercent: 3, mapLines: ["Esfera", "Living SP{ing 5", "1"] }), 3, stab);
   expect(f.expPercent?.value).toBe(72.674); // impossible jump ignored
