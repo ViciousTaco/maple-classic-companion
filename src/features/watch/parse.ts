@@ -4,7 +4,7 @@
 export type StatusRead = { level: number | null; expPercent: number | null; expValue: number | null; name: string | null };
 
 /** OCR often confuses these in digits. */
-function fixDigits(s: string): string {
+export function fixDigits(s: string): string {
   return s.replace(/[Oo]/g, "0").replace(/[Il|]/g, "1").replace(/S(?=\d)|(?<=\d)S/g, "5");
 }
 

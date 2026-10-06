@@ -2,6 +2,8 @@ import { createStore, type StoreApi } from "zustand/vanilla";
 import type { Pack } from "../../data/pack";
 import type { Profile, Settings } from "../../data/schema/profile";
 import type { ProfileStore } from "../characters/store";
+import { jobLine, rulesFromPack } from "../../data/gameRules";
+import { describeStats, parseSkillsWindow, parseStatsWindow, statsChanges, type Line, type StatsRead } from "./windows";
 import { activeProfile } from "../characters/store";
 import { recommendTraining } from "../../engine/recommend";
 import { hiddenKills, matchName, newLines, parseChatLine, parseMapName, parseStatus, type ChatEvent } from "./parse";
@@ -38,6 +40,8 @@ export type WatchState = {
   read: { level: number | null; expPercent: number | null; name: string | null; at: number } | null;
   feed: FeedItem[];
   startedAt: number | null;
+  /** What the last whole-window read found (the in-game Stats / Skills windows), for the Watch screen. */
+  lastScan: { at: number; stats: string | null; skills: number; applied: boolean } | null;
 
   start(spotId?: string | null): Promise<void>;
   stop(reason?: string): void;
@@ -47,6 +51,11 @@ export type WatchState = {
   followMap(): void;
   /** One read cycle (the loop calls this; tests call it directly). */
   step(): Promise<void>;
+  /**
+   * Read the whole game window once for the Stats / Skills windows and apply what's found (owner-initiated, works
+   * while off). Returns what was applied, or why nothing was.
+   */
+  scanNow(): Promise<string>;
 };
 
 export type WatcherDeps = {
@@ -65,6 +74,8 @@ export const AUTO_OFF_NO_WINDOW_MS = 5 * 60_000;
 export const AUTO_OFF_IDLE_MS = 20 * 60_000;
 /** Fold totals into the character every few minutes so a crash loses little. */
 export const CHECKPOINT_MS = 5 * 60_000;
+/** While on, the whole window is read this often for the Stats / Skills windows (cheaper regions every read). */
+export const FULL_SCAN_EVERY_MS = 10_000;
 const FEED_MAX = 8;
 
 export function describeEvent(e: ChatEvent, pack: Pack | null, mobId?: string): string {
@@ -92,6 +103,9 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
   /** Kills implied by the EXP total, held until the next read confirms the total didn't drop (a misread digit). */
   let pendingHidden: { kills: number; amount: number; expValue: number } | null = null;
   let nameMisses = 0;
+  let lastFullScan = 0;
+  /** A whole-window read must say the same thing twice before it changes the character (OCR noise). */
+  let pendingScan: { key: string; stats: StatsRead | null; skills: Record<string, number> | null } | null = null;
   let lastStepAt = 0;
   let lastCheckpoint = 0;
   let missingSince: number | null = null;
@@ -191,6 +205,38 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       });
     };
 
+    /** Lines from a whole-window read → Stats / Skills windows → the character, once two reads agree. */
+    const applyScan = (pack: Pack, lines: Line[], t: number, force = false): string => {
+      const p = profile();
+      if (!p) return "Pick a character first.";
+      const line = jobLine(rulesFromPack(pack), p.jobId);
+      line.add("beginner");
+      const skillDefs = pack.skills.filter((sk) => line.has(sk.jobId)).map((sk) => ({ id: sk.id, name: sk.name, maxLevel: sk.maxLevel }));
+      const stats = parseStatsWindow(lines);
+      const skills = parseSkillsWindow(lines, skillDefs);
+      const key = JSON.stringify([stats, skills]);
+      const found = stats !== null || skills !== null;
+      const agreed = force || (pendingScan?.key === key && found);
+      pendingScan = found ? { key, stats, skills } : null;
+      set({ lastScan: { at: t, stats: stats ? describeStats(stats) : null, skills: skills ? Object.keys(skills).length : 0, applied: false } });
+      if (!found) return "No Stats or Skills window is open in the game right now — open one and try again.";
+      if (!agreed) return "Read once — confirming on the next read.";
+      const statChange = stats ? statsChanges(p, stats) : null;
+      const skillChange = skills ? Object.fromEntries(Object.entries(skills).filter(([id, v]) => (p.skills[id] ?? 0) !== v)) : {};
+      const skillCount = Object.keys(skillChange).length;
+      if (!statChange && skillCount === 0) return "Already up to date with the game.";
+      deps.store.getState().updateProfile(p.id, (prof) => ({
+        ...prof,
+        stats: { ...prof.stats, ...(statChange?.stats ?? {}) },
+        combat: { ...prof.combat, ...(statChange?.combat ?? {}) },
+        skills: { ...prof.skills, ...skillChange },
+      }));
+      const what = [statChange ? describeStats(statChange) : "", skillCount ? `${skillCount} skill level${skillCount === 1 ? "" : "s"}` : ""].filter(Boolean).join(" · ");
+      set({ lastScan: { at: t, stats: stats ? describeStats(stats) : null, skills: skills ? Object.keys(skills).length : 0, applied: true }, feed: [{ id: feedId++, at: t, text: `Updated from the game: ${what}` }, ...get().feed].slice(0, FEED_MAX) });
+      tell(`Character updated from the game: ${what}`);
+      return `Updated: ${what}`;
+    };
+
     return {
       status: "off",
       problem: null,
@@ -201,6 +247,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       read: null,
       feed: [],
       startedAt: null,
+      lastScan: null,
 
       async start(spotId) {
         if (get().status !== "off") return;
@@ -217,6 +264,8 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
         prevStatus = null;
         pendingHidden = null;
         nameMisses = 0;
+        pendingScan = null;
+        lastFullScan = now();
         levelVotes = [];
         missingSince = null;
         countedRun = false;
@@ -273,6 +322,8 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           if (s.status) regions.push({ name: "status", ...s.status });
           if (s.chat) regions.push({ name: "chat", ...s.chat });
           if (s.map) regions.push({ name: "map", ...s.map });
+          const fullScan = t - lastFullScan >= FULL_SCAN_EVERY_MS;
+          if (fullScan) regions.push({ name: "full", x: 0, y: 0, w: s.sourceWidth, h: s.sourceHeight, scale: 1 });
           const out = await deps.platform.screenRead(windowId, regions);
           if (out.some((r) => r.covered)) throw new Missing("Something is covering the game's boxes (the mini window?) — move it aside and watching carries on.");
           missingSince = null;
@@ -280,7 +331,11 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
 
           const statusLines = out.find((r) => r.name === "status")?.lines.map((l) => l.text) ?? [];
           const chatLines = out.find((r) => r.name === "chat")?.lines.map((l) => l.text) ?? [];
-          const mapLines = out.find((r) => r.name === "map")?.lines.map((l) => l.text) ?? [];
+          const fullLines = out.find((r) => r.name === "full")?.lines ?? [];
+          // Without a minimap box, the minimap's title is still in the whole-window read (top-left corner).
+          const mapLines =
+            out.find((r) => r.name === "map")?.lines.map((l) => l.text) ??
+            fullLines.filter((l) => l.y < s.sourceHeight * 0.25 && l.x < s.sourceWidth * 0.35).map((l) => l.text);
           const st = parseStatus(statusLines);
 
           // Right character? The status bar names it. Three clear mismatches in a row means another character
@@ -337,6 +392,10 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
             feed: [...feedNew.reverse(), ...get().feed].slice(0, FEED_MAX),
           });
           syncLevel(st.level, st.expPercent);
+          if (fullScan) {
+            lastFullScan = t;
+            applyScan(pack, fullLines, t);
+          }
 
           if (t - lastCheckpoint >= CHECKPOINT_MS) {
             lastCheckpoint = t;
@@ -349,6 +408,22 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           const message = err instanceof Missing ? err.message : `Couldn't read the game window: ${String(err)}`;
           set({ status: "paused", problem: message });
           if (t - missingSince >= AUTO_OFF_NO_WINDOW_MS) get().stop("The game window was gone for 5 minutes, so the screen watcher switched itself off.");
+        }
+      },
+
+      async scanNow() {
+        const s = setup();
+        const pack = deps.getPack();
+        if (!s) return "Set up the watcher first (it needs to know which window is the game).";
+        if (!pack) return "The guide data isn't loaded.";
+        try {
+          const w = await findWindow(s);
+          if (!w || w.minimized) return w ? "The game is minimised." : "Can't see the game window — is MapleStory open?";
+          const out = await deps.platform.screenRead(w.id, [{ name: "full", x: 0, y: 0, w: w.width, h: w.height, scale: 1 }]);
+          if (out[0]?.covered) return "Something is covering the game window — move it aside and try again.";
+          return applyScan(pack, out[0]?.lines ?? [], now(), true);
+        } catch (err) {
+          return `Couldn't read the game window: ${String(err)}`;
         }
       },
     };

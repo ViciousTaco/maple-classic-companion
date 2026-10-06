@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { Ban, Eye, Keyboard, Lock, MonitorX, Settings2, Timer, Trash2 } from "lucide-react";
+import { Ban, Eye, Keyboard, Lock, MonitorX, ScanText, Settings2, Timer, Trash2 } from "lucide-react";
 import { navigate, useActiveProfile, usePack, usePlatform, useProfileStore, useProfiles, useRouteQuery } from "../../app/context";
 import { observedRates } from "../../engine/observed";
 import { Button, Card, Chip, EmptyState, LargeTitle, Segmented } from "../../ui/kit";
@@ -28,6 +28,8 @@ export function WatchScreen() {
   // `?setup=1` (from the top-bar pill before the first setup) opens it too, even when already on this screen.
   const setupOpen = setupClicked || query.get("setup") === "1";
   const [forget, setForget] = useState<string | null>(null);
+  const [scanMsg, setScanMsg] = useState<string | null>(null);
+  const [scanning, setScanning] = useState(false);
   const hotkey = useHotkeyStatus();
   const w = useWatch((s) => s);
   const elapsed = useElapsed(w.startedAt);
@@ -174,13 +176,45 @@ export function WatchScreen() {
       </AnimatePresence>
 
       <Card className="p-5">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h3 className="font-display text-[19px] font-semibold">Stats & skills from the game</h3>
+            <p className="mt-1 text-sm text-ink-2">
+              Open your Character Stats or Skills window in game. While watching, the app reads it every 10 seconds and updates this character (STR/DEX/INT/LUK, HP/MP, damage range, accuracy, avoidability, skill levels) once two reads agree. Or read it right now:
+            </p>
+          </div>
+          <Button
+            variant="primary"
+            disabled={scanning || !setup}
+            onClick={async () => {
+              setScanning(true);
+              try {
+                setScanMsg(await w.scanNow());
+              } finally {
+                setScanning(false);
+              }
+            }}
+          >
+            <ScanText size={16} /> {scanning ? "Reading…" : "Read my stats & skills now"}
+          </Button>
+        </div>
+        {(scanMsg || w.lastScan) && (
+          <p className="mt-3 text-sm text-ink-2">
+            {scanMsg ?? (w.lastScan!.applied ? "Updated from the game" : w.lastScan!.stats || w.lastScan!.skills ? "Seen in the game" : "No Stats or Skills window seen")}
+            {w.lastScan?.stats ? ` — ${w.lastScan.stats}` : ""}
+            {w.lastScan?.skills ? ` — ${w.lastScan.skills} skill${w.lastScan.skills === 1 ? "" : "s"}` : ""}
+          </p>
+        )}
+      </Card>
+
+      <Card className="p-5">
         <h3 className="mb-3 flex items-center gap-2 font-display text-[19px] font-semibold">
           <Lock size={17} /> What it does — and never does
         </h3>
         <ul className="grid gap-2 text-sm text-ink-2 sm:grid-cols-2">
           <li className="flex gap-2"><Eye size={15} className="mt-0.5 shrink-0 text-leaf" /> Reads the text inside your two boxes every few seconds, using Windows' built-in text recognition (offline).</li>
           <li className="flex gap-2"><Ban size={15} className="mt-0.5 shrink-0 text-danger" /> Never saves or sends a picture. Only the numbers it counted are kept, on this PC.</li>
-          <li className="flex gap-2"><Ban size={15} className="mt-0.5 shrink-0 text-danger" /> Never touches the game: no clicks, no keys, no memory reading, no changes to game files.</li>
+          <li className="flex gap-2"><Ban size={15} className="mt-0.5 shrink-0 text-danger" /> Never touches the game: no clicks, no keys, no memory reading, no hooks or overlays inside it, no changes to game files. It copies what's already on your screen, the same way Discord or Teams screen sharing does.</li>
           <li className="flex gap-2"><Timer size={15} className="mt-0.5 shrink-0 text-sky" /> Off every time the app starts. Switches itself off if the game closes or you stop killing for 20 minutes.</li>
           <li className="flex gap-2"><Eye size={15} className="mt-0.5 shrink-0 text-leaf" /> Knows it's you: it checks the character name on your status bar against this profile, and only your own “You have gained …” lines count. Add the optional map box and it follows you from map to map.</li>
         </ul>

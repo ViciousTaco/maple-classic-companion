@@ -34,7 +34,11 @@ async function rig(opts: { name?: string; map?: boolean } = {}) {
   const platform: WatchPlatform = {
     screenListWindows: async () => (screen.window ? [screen.window] : []),
     screenRead: async (_id, regions) =>
-      regions.map((r) => ({ name: r.name, lines: (screen[r.name as "status" | "chat" | "map"] ?? []).map((text) => ({ text, x: 0, y: 0, w: 1, h: 1 })), covered: false })),
+      regions.map((r) => ({
+        name: r.name,
+        lines: ((screen as unknown as Record<string, string[] | undefined>)[r.name] ?? []).map((text, i) => ({ text, x: 0, y: i * 20, w: text.length * 8, h: 16 })),
+        covered: false,
+      })),
   };
   const told: string[] = [];
   const watcher = createWatcher({ platform, store, getPack: () => pack, now: () => t, schedule: () => () => {}, tell: (m) => told.push(m) });
@@ -159,4 +163,29 @@ test("reading another character's status bar pauses watching instead of counting
   screen.status = ["Lv. 25  Tac0  EXP 1000 [40.00%]"];
   for (let i = 0; i < 4; i++) await advance(2000);
   expect(watcher.getState().status).toBe("on");
+});
+
+test("the open Stats / Skills window updates the character, after two whole-window reads agree", async () => {
+  const { watcher, screen, advance, profile } = await rig({ map: false });
+  const full = (screen as unknown as Record<string, string[]>);
+  full.full = [];
+  await watcher.getState().start("spot-exp");
+  await advance(2000);
+  // Owner opens the Stats window. Whole-window reads happen every 10 s.
+  full.full = ["STR 35", "DEX 25", "INT 4", "LUK 60", "HP 912 / 912", "Damage 40 ~ 90", "Test Multi Skill 5 / 20"];
+  await advance(10_000);
+  expect(profile().stats.str).toBeUndefined(); // first read: waiting for confirmation
+  expect(watcher.getState().lastScan).toMatchObject({ applied: false, skills: 1 });
+  await advance(10_000);
+  expect(profile().stats).toMatchObject({ str: 35, dex: 25, int: 4, luk: 60, hp: 912 });
+  expect(profile().combat).toMatchObject({ damageMin: 40, damageMax: 90 });
+  expect(profile().skills["sk-multi"]).toBe(5);
+  expect(watcher.getState().feed[0]!.text).toMatch(/^Updated from the game: STR 35/);
+  // One noisy read changes nothing.
+  full.full = ["STR 85", "DEX 25", "INT 4", "LUK 60"];
+  await advance(10_000);
+  expect(profile().stats.str).toBe(35);
+  // The on-demand read works too, and says when nothing is open.
+  full.full = [];
+  expect(await watcher.getState().scanNow()).toMatch(/No Stats or Skills window/);
 });
