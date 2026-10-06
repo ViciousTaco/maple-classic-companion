@@ -176,6 +176,8 @@ export const SettingsSchema = z
         intervalSec: z.number().min(1).max(30).default(2),
         /** I-44: write recognised text + decisions to field-notes\watch-log\ (never pixels) for tuning. */
         diagnostics: z.boolean().default(false),
+        /** How the game draws text: "pixel" enlarges without smoothing, which suits Classic's bitmap font. */
+        textStyle: z.enum(["smooth", "pixel"]).default("smooth"),
         savedAt: iso,
       })
       .nullable()

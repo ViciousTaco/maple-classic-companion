@@ -47,8 +47,9 @@ const AMOUNT = /\(\s*\+?\s*([0-9OoIl|][0-9OoIl|,.\s]*?)\s*\)|\+\s*([0-9][0-9,.]*
 export function parseChatLine(line: string): ChatEvent | null {
   const l = line.trim();
   const k = l.toLowerCase().replace(/rn/g, "m");
-  // System messages start the line ("You have gained …"); anything after a "Name:" prefix is a player talking.
-  if (!/^[^a-z]{0,3}(?:you\s+have\s+|\+\s*\d)/.test(k)) return null;
+  // System messages start the line ("You have gained …", optionally after a "[Tag]"); anything after a "Name:"
+  // prefix is a player talking.
+  if (!/^(?:\[[^\]]{1,24}\]\s*)?[^a-z]{0,3}(?:you\s+have\s+|\+\s*\d)/.test(k)) return null;
   const amount = () => {
     const m = AMOUNT.exec(l);
     return m ? num(m[1] ?? m[2]!) : NaN;

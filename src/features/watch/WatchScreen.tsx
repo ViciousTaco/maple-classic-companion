@@ -14,6 +14,10 @@ import { canWatch, useWatch } from "./useWatch";
 import { percentGained } from "./session";
 import { toast } from "../../ui/overlays";
 
+const TEXT_STYLES: { value: "smooth" | "pixel"; label: string }[] = [
+  { value: "smooth", label: "Smooth" },
+  { value: "pixel", label: "Pixel-sharp" },
+];
 const INTERVALS = [
   { value: "1", label: "1 s" },
   { value: "2", label: "2 s" },
@@ -142,6 +146,13 @@ export function WatchScreen() {
                 value={String(setup?.intervalSec ?? 2)}
                 options={INTERVALS}
                 onChange={(v) => setup && store.getState().updateSettings({ watch: { ...setup, intervalSec: Number(v) } })}
+              />
+              <span className="ml-3 font-semibold text-ink-2">Game text looks</span>
+              <Segmented
+                label="Game text looks"
+                value={setup?.textStyle ?? "smooth"}
+                options={TEXT_STYLES}
+                onChange={(v) => setup && store.getState().updateSettings({ watch: { ...setup, textStyle: v } })}
               />
               {on && setup && w.effectiveIntervalMs > setup.intervalSec * 1000 && (
                 <span className="text-xs text-ink-3">reads take longer, so every {(w.effectiveIntervalMs / 1000).toFixed(1)} s for now</span>

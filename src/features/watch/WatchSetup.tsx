@@ -92,7 +92,8 @@ function Wizard({ onDone }: { onDone: () => void }) {
     setBusy(true);
     setError(null);
     try {
-      const regions = BOXES.flatMap((name) => (boxes[name] ? [{ name, ...boxes[name], ...(name === "chat" ? {} : { scale: 3 }) }] : []));
+      const filter = prev?.textStyle === "pixel" ? ("nearest" as const) : ("bilinear" as const);
+      const regions = BOXES.flatMap((name) => (boxes[name] ? [{ name, ...boxes[name], scale: 3, filter }] : []));
       const out = await platform.screenRead(win.id, regions);
       const status = parseStatus(out.find((r) => r.name === "status")?.lines.map((l) => l.text) ?? []);
       const chat = out.find((r) => r.name === "chat")?.lines.map((l) => l.text) ?? [];
@@ -118,6 +119,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
         map: boxes.map,
         intervalSec: prev?.intervalSec ?? 2,
         diagnostics: prev?.diagnostics ?? false,
+        textStyle: prev?.textStyle ?? "smooth",
         savedAt: new Date().toISOString(),
       },
     });

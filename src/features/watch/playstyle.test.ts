@@ -16,6 +16,7 @@ const SETUP = {
   map: { x: 0, y: 0, w: 200, h: 30 },
   intervalSec: 2,
   diagnostics: false,
+  textStyle: "smooth" as const,
   savedAt: "2026-10-07T00:00:00.000Z",
 };
 
@@ -70,6 +71,8 @@ test("other players' chat never counts, even when it mentions gains", () => {
   expect(parseChatLine("GuildMate : You have gained mesos (+500)")).toBeNull(); // quoted by someone else
   expect(parseChatLine("You have gained experience (+24)")).toEqual({ kind: "exp", amount: 24 });
   expect(parseChatLine("[You have gained mesos (+12)")).toEqual({ kind: "meso", amount: 12 }); // stray OCR bracket
+  expect(parseChatLine("[Event] You have gained experience (+50)")).toEqual({ kind: "exp", amount: 50 }); // tagged system line
+  expect(parseChatLine("[Guild] Bob: You have gained experience (+50)")).toBeNull();
 });
 
 test("the status bar gives the character's name; map names tolerate OCR but not ambiguity", () => {

@@ -40,7 +40,7 @@ function appendRun(log: TrainingRun[], run: TrainingRun, continues: boolean): Tr
 // or nothing has happened for a while. Frames stay in Rust memory; only recognised text reaches this module.
 
 export type WatchWindow = { id: number; title: string; app: string; width: number; height: number; minimized: boolean };
-export type WatchRegion = { name: string; x: number; y: number; w: number; h: number; scale?: number };
+export type WatchRegion = { name: string; x: number; y: number; w: number; h: number; scale?: number; filter?: "bilinear" | "nearest" };
 export type WatchLine = { text: string; x: number; y: number; w: number; h: number };
 
 /** The platform calls the watcher needs (implemented in Rust, see src-tauri/src/screen.rs). */
@@ -415,10 +415,11 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
             throw new Missing(`The game window changed size (${w.width}×${w.height}). Run the watcher setup again to redraw the boxes.`);
           const windowId = w.id;
           const regions: WatchRegion[] = [];
-          // The status bar and minimap title use tiny fonts: enlarge 3× before OCR. Chat is normal text (2×).
-          if (s.status) regions.push({ name: "status", ...s.status, scale: 3 });
-          if (s.chat) regions.push({ name: "chat", ...s.chat });
-          if (s.map) regions.push({ name: "map", ...s.map, scale: 3 });
+          // Game text is small: enlarge 3× before OCR. "pixel" keeps bitmap fonts crisp (no smoothing).
+          const filter = s.textStyle === "pixel" ? "nearest" : "bilinear";
+          if (s.status) regions.push({ name: "status", ...s.status, scale: 3, filter });
+          if (s.chat) regions.push({ name: "chat", ...s.chat, scale: 3, filter });
+          if (s.map) regions.push({ name: "map", ...s.map, scale: 3, filter });
           const fullScan = confirmNext || t - lastFullScan >= FULL_SCAN_EVERY_MS;
           if (fullScan) regions.push({ name: "full", x: 0, y: 0, w: s.sourceWidth, h: s.sourceHeight, scale: 1 });
           const out = await deps.platform.screenRead(windowId, regions);
