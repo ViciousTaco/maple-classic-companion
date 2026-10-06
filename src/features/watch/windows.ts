@@ -46,9 +46,21 @@ const pair = new RegExp(`(${NUM})\\s*(?:/|~|-|to)\\s*(${NUM})`);
  * ("40 ~ 90"), accuracy and avoidability. Labels are matched loosely; a lone "Attack 35" is ignored because weapon
  * attack is not a damage range. Returns null unless at least STR and DEX were found (so random text never counts).
  */
-export function parseStatsWindow(lines: Line[]): StatsRead | null {
+export function parseStatsWindow(all: Line[]): StatsRead | null {
   const out: StatsRead = { stats: {}, combat: {} };
   const inRange = (v: number, max: number) => Number.isInteger(v) && v >= 0 && v <= max;
+  // Only one window's labels: the STR/DEX/INT/LUK labels that share a column (another stats-like window, such as
+  // Hyper Stats, must not lend its numbers). Lines from other columns are still available as values.
+  const labelOf = (l: Line) => l.text.trim().toLowerCase().replace(/[^a-z]/g, "");
+  const baseLabels = all.filter((l) => ["str", "dex", "int", "luk"].some((k) => labelOf(l).startsWith(k)));
+  const columns: Line[][] = [];
+  for (const l of baseLabels) {
+    const col = columns.find((c) => Math.abs(c[0]!.x - l.x) <= 40);
+    if (col) col.push(l);
+    else columns.push([l]);
+  }
+  const chosen = [...columns].sort((a, b) => new Set(b.map(labelOf)).size - new Set(a.map(labelOf)).size || a[0]!.y - b[0]!.y)[0] ?? [];
+  const lines = all.filter((l) => !baseLabels.includes(l) || chosen.includes(l));
   for (const line of lines) {
     const label = line.text.trim().toLowerCase().replace(/[^a-z]/g, "");
     const key = (["str", "dex", "int", "luk"] as const).find((k) => label.startsWith(k));
@@ -181,4 +193,19 @@ export function parseQuestWindow(lines: Line[], quests: QuestDefLite[]): QuestsR
     if (!out[head.kind].includes(id)) out[head.kind].push(id);
   }
   return out.active.length + out.done.length > 0 ? out : null;
+}
+
+/**
+ * Could these be a Classic character's stats? Base stats are never below 4; the four together can't exceed what
+ * AP (25 + 5 per level) plus a generous equipment allowance could give. Garbage from another window fails this.
+ */
+export function plausibleStats(read: StatsRead, level: number): boolean {
+  const base = ["str", "dex", "int", "luk"] as const;
+  const vals = base.map((k) => read.stats[k]).filter((v): v is number => v !== undefined);
+  if (vals.some((v) => v < 4)) return false;
+  const total = vals.reduce((a, b) => a + b, 0);
+  if (total > 25 + 5 * level + 400) return false;
+  if (read.stats.hp !== undefined && read.stats.hp < 50) return false;
+  if (read.combat.damageMin !== undefined && read.combat.damageMax !== undefined && read.combat.damageMax > read.combat.damageMin * 20) return false;
+  return true;
 }

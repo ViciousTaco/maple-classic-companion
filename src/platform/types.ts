@@ -160,6 +160,8 @@ export type ScreenRegion = {
   scale?: number;
   /** `"nearest"` can help with hard-edged pixel fonts. */
   filter?: "bilinear" | "nearest";
+  /** `"bar"`: measure how far a progress bar is filled (0..1 in `fill`) instead of reading text. */
+  mode?: "ocr" | "bar";
 };
 /** One recognised line; box in region pixels. */
 export type OcrLine = { text: string; x: number; y: number; w: number; h: number };
@@ -168,6 +170,8 @@ export type ScreenRegionText = {
   lines: OcrLine[];
   /** Another window (e.g. the mini window) overlapped the region or it was off-screen: ignore the text. */
   covered: boolean;
+  /** `mode: "bar"` only — filled fraction 0..1, or null when the box doesn't look like a bar. */
+  fill?: number | null;
 };
 export type HotkeyStatus = { registered: boolean; accelerator: string };
 export type NotifyResult = { via: "toast" | "fallback"; reason: string | null };

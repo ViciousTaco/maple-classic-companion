@@ -150,7 +150,7 @@ export function CharacterSheet({ profileId }: { profileId: string }) {
               </Field>
               <div className="space-y-1">
                 <p className="text-sm font-medium text-ink-2">Level</p>
-                <Stepper label="Level" value={profile.level} min={1} max={rules.levelCap} onChange={(level) => update((p) => ({ ...p, level }))} />
+                <Stepper label="Level" value={profile.level} min={1} max={Math.max(rules.levelCap, profile.level)} onChange={(level) => update((p) => ({ ...p, level }))} />
               </div>
               <Field
                 label="Job"

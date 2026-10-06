@@ -12,6 +12,7 @@ const SETUP = {
   map: null,
   intervalSec: 2,
   diagnostics: false,
+  expBar: null,
   textStyle: "smooth" as const,
   savedAt: "2026-10-07T00:00:00.000Z",
 };

@@ -3,7 +3,7 @@ import type { Pack } from "../../data/pack";
 import { TRAINING_LOG_MAX, type Profile, type Settings, type TrainingRun } from "../../data/schema/profile";
 import type { ProfileStore } from "../characters/store";
 import { jobLine, rulesFromPack } from "../../data/gameRules";
-import { describeStats, parseQuestWindow, parseSkillsWindow, parseStatsWindow, statsChanges, type Line, type QuestsRead, type StatsRead } from "./windows";
+import { describeStats, parseQuestWindow, parseSkillsWindow, parseStatsWindow, plausibleStats, statsChanges, type Line, type QuestsRead, type StatsRead } from "./windows";
 import { activeProfile } from "../characters/store";
 import { recommendTraining } from "../../engine/recommend";
 import { hiddenKills, matchName, newLines, parseChatLine, parseMapName, parseStatus, type ChatEvent } from "./parse";
@@ -40,7 +40,7 @@ function appendRun(log: TrainingRun[], run: TrainingRun, continues: boolean): Tr
 // or nothing has happened for a while. Frames stay in Rust memory; only recognised text reaches this module.
 
 export type WatchWindow = { id: number; title: string; app: string; width: number; height: number; minimized: boolean };
-export type WatchRegion = { name: string; x: number; y: number; w: number; h: number; scale?: number; filter?: "bilinear" | "nearest" };
+export type WatchRegion = { name: string; x: number; y: number; w: number; h: number; scale?: number; filter?: "bilinear" | "nearest"; mode?: "ocr" | "bar" };
 export type WatchLine = { text: string; x: number; y: number; w: number; h: number };
 
 /** The platform calls the watcher needs (implemented in Rust, see src-tauri/src/screen.rs). */
@@ -49,7 +49,7 @@ export type WatchPlatform = {
   /** I-44 diagnostic log line (text only); optional so tests and the browser preview can omit it. */
   watchLogAppend?(line: string): Promise<string>;
   /** `covered`: another window overlapped the region, so its text must be ignored. */
-  screenRead(windowId: number, regions: WatchRegion[]): Promise<{ name: string; lines: WatchLine[]; covered?: boolean }[]>;
+  screenRead(windowId: number, regions: WatchRegion[]): Promise<{ name: string; lines: WatchLine[]; covered?: boolean; fill?: number | null }[]>;
 };
 
 export type WatchSetup = NonNullable<Settings["watch"]>;
@@ -235,10 +235,11 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       levelVotes = [...levelVotes, level].slice(-3);
       const cap = deps.getPack()?.meta.levelCap ?? 300;
       const stable = levelVotes.length === 3 && levelVotes.every((v) => v === level);
-      if (stable && level > cap && !get().feed.some((f) => f.text.includes("above this guide's level cap"))) {
-        set({ feed: [{ id: feedId++, at: now(), text: `Game shows Lv ${level}, above this guide's level cap (${cap}) — not applied to the character` }, ...get().feed].slice(0, FEED_MAX) });
+      // The character always shows what the screen says (owner's rule); the guide's cap only limits its advice.
+      if (stable && level > cap && level !== p.level && !get().feed.some((f) => f.text.includes("guide's data stops at"))) {
+        set({ feed: [{ id: feedId++, at: now(), text: `Game shows Lv ${level}. This guide's data stops at Lv ${cap}, so training advice ends there — the character is set to ${level} anyway.` }, ...get().feed].slice(0, FEED_MAX) });
       }
-      if (stable && level !== p.level && level >= 1 && level <= cap) {
+      if (stable && level !== p.level && level >= 1 && level <= 300) {
         deps.store.getState().updateProfile(p.id, (prof) => ({ ...prof, level, expPercent: expPercent ?? prof.expPercent }));
         lastExpSync = now();
         tell(level > p.level ? `Level ${level}! Your character is updated.` : `Level set to ${level} from the game screen.`);
@@ -285,7 +286,8 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       const line = jobLine(rulesFromPack(pack), p.jobId);
       line.add("beginner");
       const skillDefs = pack.skills.filter((sk) => line.has(sk.jobId)).map((sk) => ({ id: sk.id, name: sk.name, maxLevel: sk.maxLevel }));
-      const stats = parseStatsWindow(lines);
+      const rawStats = parseStatsWindow(lines);
+      const stats = rawStats && plausibleStats(rawStats, p.level) ? rawStats : null;
       const skills = parseSkillsWindow(lines, skillDefs);
       const quests = parseQuestWindow(lines, pack.quests.map((q) => ({ id: q.id, name: q.name })));
       const key = JSON.stringify([stats, skills, quests]);
@@ -420,6 +422,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           if (s.status) regions.push({ name: "status", ...s.status, scale: 3, filter });
           if (s.chat) regions.push({ name: "chat", ...s.chat, scale: 3, filter });
           if (s.map) regions.push({ name: "map", ...s.map, scale: 3, filter });
+          if (s.expBar) regions.push({ name: "expBar", ...s.expBar, mode: "bar" });
           const fullScan = confirmNext || t - lastFullScan >= FULL_SCAN_EVERY_MS;
           if (fullScan) regions.push({ name: "full", x: 0, y: 0, w: s.sourceWidth, h: s.sourceHeight, scale: 1 });
           const out = await deps.platform.screenRead(windowId, regions);
@@ -435,6 +438,9 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
             out.find((r) => r.name === "map")?.lines.map((l) => l.text) ??
             fullLines.filter((l) => l.y < s.sourceHeight * 0.25 && l.x < s.sourceWidth * 0.35).map((l) => l.text);
           const st = parseStatus(statusLines);
+          // I-45: when the bar's digits can't be read, its fill is the EXP % (to 0.1 %, good enough for pace).
+          const fill = out.find((r) => r.name === "expBar")?.fill;
+          if (st.expPercent === null && typeof fill === "number" && fill >= 0 && fill <= 1) st.expPercent = Math.round(fill * 1000) / 10;
 
           // Right character? The status bar names it. Three clear mismatches in a row means another character
           // (or another client's window) is being read, and nothing from it may be counted.

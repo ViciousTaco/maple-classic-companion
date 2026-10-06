@@ -57,7 +57,7 @@ function Journey({ rules, profile }: { rules: GameRules; profile: Profile }) {
         )}
       </div>
       <p className="mt-1 text-xs text-ink-3">
-        <span className="tabular-nums">{overall.toFixed(1)}%</span> of the way to Lv {rules.levelCap}
+        <span className="tabular-nums">{overall.toFixed(1)}%</span> of the way to Lv {rules.levelCap}{profile.level > rules.levelCap ? ` (you're past this guide's data)` : ""}
         {profile.expPercent !== null && <> · <span className="tabular-nums">{profile.expPercent}%</span> into Lv {profile.level}</>}
       </p>
       <div className="relative mx-3 mb-7 mt-6 h-2 rounded-full bg-fill">

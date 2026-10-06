@@ -69,7 +69,7 @@ function PaceMeter({ profile }: { profile: Profile }) {
           <Field label="EXP % now">{(id) => <NumberInput id={id} value={endPct} max={100} onChange={setEndPct} placeholder="e.g. 62" />}</Field>
           <div className="space-y-1.5">
             <p className="pl-1 text-[13px] font-semibold text-ink-2">Level now</p>
-            <Stepper label="Level now" value={endLevel} min={timer.level} max={rules.levelCap} onChange={setEndLevel} />
+            <Stepper label="Level now" value={endLevel} min={timer.level} max={Math.max(rules.levelCap, endLevel)} onChange={setEndLevel} />
           </div>
         </div>
         <div className="flex gap-2">

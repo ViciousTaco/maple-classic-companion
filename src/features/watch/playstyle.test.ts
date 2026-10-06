@@ -16,6 +16,7 @@ const SETUP = {
   map: { x: 0, y: 0, w: 200, h: 30 },
   intervalSec: 2,
   diagnostics: false,
+  expBar: null,
   textStyle: "smooth" as const,
   savedAt: "2026-10-07T00:00:00.000Z",
 };
@@ -163,6 +164,15 @@ test("a misread EXP digit can't invent kills: the next read must not fall back",
   expect(watcher.getState().session!.kills).toBe(0);
 });
 
+test("the character always shows the level the screen shows, even past the guide's data", async () => {
+  const { watcher, screen, advance, profile } = await rig({ map: false });
+  await watcher.getState().start("spot-exp");
+  screen.status = ["Lv. 272  Taco  EXP 1 [0.10%]"];
+  for (let i = 0; i < 3; i++) await advance(2000);
+  expect(profile().level).toBe(272);
+  expect(watcher.getState().feed.some((f) => /data stops at Lv 100/.test(f.text))).toBe(true);
+});
+
 test("reading another character's status bar pauses watching instead of counting it", async () => {
   const { watcher, screen, advance } = await rig({ name: "Taco" });
   await watcher.getState().start("spot-exp");
@@ -299,4 +309,34 @@ test("the diagnostic log gets one text line per read only while switched on", as
   t += 2000;
   await w.getState().step();
   expect(lines).toHaveLength(1);
+});
+
+test("EXP bar fill stands in for the % when the digits can't be read", async () => {
+  const store = createProfileStore(createMockPlatform(), { debounceMs: 0 });
+  await store.getState().load();
+  store.getState().createProfile({ name: "Taco", jobId: "thief", level: 25 });
+  store.getState().updateSettings({ watch: { ...SETUP, map: null, expBar: { x: 0, y: 760, w: 600, h: 6 } } });
+  let t = Date.parse("2026-10-07T00:00:00Z");
+  let fill = 0.4;
+  const platform: WatchPlatform = {
+    screenListWindows: async () => [{ id: 7, title: "MapleStory", app: "", width: 1366, height: 768, minimized: false }],
+    screenRead: async (_id, regions) =>
+      regions.map((r) => ({
+        name: r.name,
+        lines: r.name === "status" ? [{ text: "Lv. 25  Taco  EXP 51402", x: 0, y: 0, w: 1, h: 1 }] : [],
+        covered: false,
+        ...(r.mode === "bar" ? { fill } : {}),
+      })),
+  };
+  const w = createWatcher({ platform, store, getPack: () => smallPack(), now: () => t, schedule: () => () => {} });
+  await w.getState().start("spot-exp");
+  t += 2000;
+  await w.getState().step();
+  expect(w.getState().read).toMatchObject({ level: 25, expPercent: 40 });
+  fill = 0.4123;
+  t += 2000;
+  await w.getState().step();
+  expect(w.getState().read?.expPercent).toBe(41.2);
+  expect(w.getState().session?.startExp).toBe(40);
+  expect(w.getState().session?.lastExp).toBe(41.2);
 });

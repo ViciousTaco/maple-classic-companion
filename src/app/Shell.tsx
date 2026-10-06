@@ -207,7 +207,7 @@ function TopBar() {
             </span>
           </motion.button>
           <span className="relative">
-            <Stepper label="Level" value={profile.level} min={1} max={rules.levelCap} onChange={(level) => store.getState().updateProfile(profile.id, (p) => ({ ...p, level }))} />
+            <Stepper label="Level" value={profile.level} min={1} max={Math.max(rules.levelCap, profile.level)} onChange={(level) => store.getState().updateProfile(profile.id, (p) => ({ ...p, level }))} />
             <LevelUpBurst level={profile.level} />
           </span>
         </div>

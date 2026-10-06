@@ -71,6 +71,17 @@ pub struct Region {
     pub scale: Option<f64>,
     #[serde(default)]
     pub filter: Filter,
+    /// `"bar"`: measure how far a progress bar is filled instead of reading text (the EXP bar; I-45).
+    #[serde(default)]
+    pub mode: Mode,
+}
+
+#[derive(Debug, Clone, Copy, Default, Deserialize, PartialEq, Eq)]
+#[serde(rename_all = "lowercase")]
+pub enum Mode {
+    #[default]
+    Ocr,
+    Bar,
 }
 
 /// One recognised line; the box is in region pixels.
@@ -89,6 +100,64 @@ pub struct RegionText {
     pub lines: Vec<OcrLine>,
     /// Another window overlapped this region (or it was off-screen): the text is probably not the game's.
     pub covered: bool,
+    /// `mode: "bar"` only — the filled fraction 0..1, or null when the box doesn't look like a bar.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub fill: Option<f64>,
+}
+
+/// How far a horizontal progress bar is filled, from its pixels (BGRA, `w`×`h`). The filled part is brighter /
+/// more colourful than the empty part and sits on the left. Several rows are sampled (text drawn over the bar
+/// spoils single rows) and the median taken. None when there is no clear bright/dark split.
+pub fn bar_fill(px: &[u8], w: u32, h: u32) -> Option<f64> {
+    if w < 8 || h < 2 {
+        return None;
+    }
+    let rows: Vec<u32> = if h >= 6 { vec![h / 5, h * 2 / 5, h / 2, h * 3 / 5, h * 4 / 5] } else { (0..h).collect() };
+    let mut fills: Vec<f64> = Vec::new();
+    for &row in &rows {
+        let mut v: Vec<f64> = (0..w)
+            .map(|x| {
+                let i = ((row * w + x) as usize) * BPP;
+                let (b, g, r) = (px[i] as f64, px[i + 1] as f64, px[i + 2] as f64);
+                let max = r.max(g).max(b);
+                let min = r.min(g).min(b);
+                0.6 * max + 0.4 * (max - min) // brightness, with a bonus for colour
+            })
+            .collect();
+        let lo = v.iter().cloned().fold(f64::MAX, f64::min);
+        let hi = v.iter().cloned().fold(f64::MIN, f64::max);
+        if hi - lo < 40.0 {
+            continue; // flat row: all filled, all empty, or not a bar
+        }
+        let th = (lo + hi) / 2.0;
+        // Smooth 3 px to ignore thin tick marks, then find the last bright column with a bright run behind it.
+        let n = v.len();
+        let sm: Vec<f64> = (0..n).map(|i| (v[i.saturating_sub(1)] + v[i] + v[(i + 1).min(n - 1)]) / 3.0).collect();
+        v.clear();
+        let bright: Vec<bool> = sm.iter().map(|&b| b >= th).collect();
+        let mut edge = 0usize;
+        let mut run = 0usize;
+        for (i, &b) in bright.iter().enumerate() {
+            if b {
+                run += 1;
+                if run >= 3 {
+                    edge = i + 1;
+                }
+            } else {
+                run = 0;
+            }
+        }
+        let bright_before = bright[..edge].iter().filter(|&&b| b).count() as f64 / edge.max(1) as f64;
+        if edge > 0 && bright_before < 0.6 {
+            continue; // bright bits scattered (text), not a bar fill
+        }
+        fills.push(edge as f64 / n as f64);
+    }
+    if fills.is_empty() {
+        return None;
+    }
+    fills.sort_by(|a, b| a.partial_cmp(b).unwrap());
+    Some(fills[fills.len() / 2])
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -782,8 +851,12 @@ mod win {
                 .map(|(region, &(r, scale))| {
                     let local = PxRect { x: r.x - b.x, y: r.y - b.y, w: r.w, h: r.h };
                     let px = crop(&frame, b.w, local);
+                    let covered = is_covered(win.offset(r), &above);
+                    if region.mode == Mode::Bar {
+                        return Ok(RegionText { name: region.name.clone(), lines: Vec::new(), covered, fill: bar_fill(&px, r.w, r.h) });
+                    }
                     let lines = ocr_region(engine, &px, (r.w, r.h), scale, region.filter, max)?;
-                    Ok(RegionText { name: region.name.clone(), lines, covered: is_covered(win.offset(r), &above) })
+                    Ok(RegionText { name: region.name.clone(), lines, covered, fill: None })
                 })
                 .collect()
         })
@@ -873,7 +946,7 @@ mod tests {
     use super::*;
 
     fn region(name: &str, x: f64, y: f64, w: f64, h: f64) -> Region {
-        Region { name: name.into(), x, y, w, h, scale: None, filter: Filter::Bilinear }
+        Region { name: name.into(), x, y, w, h, scale: None, filter: Filter::Bilinear, mode: Mode::Ocr }
     }
 
     /// BGRA image where pixel (x, y) = [x, y, x + y, 255] (mod 256).
@@ -929,6 +1002,34 @@ mod tests {
         let b = PxRect { x: 5, y: 300, w: 200, h: 150 };
         assert_eq!(bounding(&[a]), Some(a));
         assert_eq!(bounding(&[a, b]), Some(PxRect { x: 5, y: 300, w: 305, h: 220 }));
+    }
+
+    #[test]
+    fn bar_fill_measures_a_half_full_bar_and_ignores_flat_boxes() {
+        let (w, h) = (200u32, 10u32);
+        let mut px = vec![0u8; (w * h) as usize * BPP];
+        for y in 0..h {
+            for x in 0..w {
+                let i = ((y * w + x) as usize) * BPP;
+                let filled = x < 85; // 42.5 %
+                let (b, g, r) = if filled { (40u8, 200u8, 255u8) } else { (30u8, 30u8, 30u8) }; // yellow on dark
+                px[i] = b;
+                px[i + 1] = g;
+                px[i + 2] = r;
+                px[i + 3] = 255;
+            }
+        }
+        let fill = bar_fill(&px, w, h).unwrap();
+        assert!((fill - 0.425).abs() < 0.02, "{fill}");
+        // Text pixels over the empty part don't move the edge.
+        for x in 120..140 {
+            let i = ((5 * w + x) as usize) * BPP;
+            px[i + 2] = 255;
+        }
+        let fill2 = bar_fill(&px, w, h).unwrap();
+        assert!((fill2 - 0.425).abs() < 0.02, "{fill2}");
+        let flat = vec![30u8; (w * h) as usize * BPP];
+        assert_eq!(bar_fill(&flat, w, h), None);
     }
 
     #[test]
@@ -1045,6 +1146,7 @@ mod tests {
             name: "exp".into(),
             lines: vec![OcrLine { text: "EXP".into(), x: 1.0, y: 2.0, w: 3.0, h: 4.0 }],
             covered: false,
+            fill: None,
         };
         assert_eq!(
             serde_json::to_string(&t).unwrap(),
@@ -1134,7 +1236,7 @@ mod tests {
         println!("list_windows: {} windows in {:?}", windows.len(), t.elapsed());
         let target = windows.iter().find(|w| !w.minimized && w.width >= 600 && w.height >= 400).expect("a window");
         let regions = vec![
-            Region { name: "exp".into(), x: 20.0, y: 0.0, w: 300.0, h: 30.0, scale: None, filter: Filter::Bilinear },
+            Region { name: "exp".into(), x: 20.0, y: 0.0, w: 300.0, h: 30.0, scale: None, filter: Filter::Bilinear, mode: Mode::Ocr },
             Region {
                 name: "chat".into(),
                 x: 20.0,
@@ -1143,6 +1245,7 @@ mod tests {
                 h: 150.0,
                 scale: None,
                 filter: Filter::Bilinear,
+                mode: Mode::Ocr,
             },
         ];
         for round in 0..4 {

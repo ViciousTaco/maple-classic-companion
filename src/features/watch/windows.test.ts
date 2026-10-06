@@ -1,5 +1,5 @@
 import { smallPack, testProfile } from "../../../tests/fixtures/pack.small";
-import { describeStats, parseSkillsWindow, parseStatsWindow, statsChanges, type Line } from "./windows";
+import { describeStats, parseSkillsWindow, parseStatsWindow, plausibleStats, statsChanges, type Line } from "./windows";
 
 // Lines as Windows OCR returns them: label and value sometimes in one line, sometimes in separate boxes on a row.
 const L = (text: string, x: number, y: number, w = text.length * 8, h = 16): Line => ({ text, x, y, w, h });
@@ -78,4 +78,24 @@ test("only differences are applied, and are described plainly", () => {
   expect(describeStats(c)).toBe("DEX 25, LUK 60, accuracy 56");
   expect(statsChanges(p, { stats: { str: 35, dex: 20 }, combat: {} })).toBeNull();
   expect(smallPack().skills.length).toBeGreaterThan(0);
+});
+
+test("two stat-like windows open (from the owner's log): labels pair only within one column, and impossible stats are rejected", () => {
+  // Hyper Stats window on the left (labels x=100, values x=330 → 0 / 11 / 10) and Character Info on the right
+  // (labels x=700, values x=900). Column clustering keeps each window's labels with its own values.
+  const lines = [
+    L("STR", 100, 100, 30), L("0", 330, 100),
+    L("DEX", 100, 125, 30), L("11", 330, 125),
+    L("LUK", 100, 150, 30), L("10", 330, 150),
+    L("STR", 700, 300, 30), L("4,105", 900, 300),
+    L("DEX", 700, 325, 30), L("3,065", 900, 325),
+    L("INT", 700, 350, 30), L("4", 900, 350),
+    L("LUK", 700, 375, 30), L("3", 900, 375),
+  ];
+  const r = parseStatsWindow(lines)!;
+  expect(r.stats).toEqual({ str: 4105, dex: 3065, int: 4, luk: 3 }); // the column with all four labels wins
+  // …and a Lv 100 Classic character cannot have these, so nothing is applied.
+  expect(plausibleStats(r, 100)).toBe(false);
+  expect(plausibleStats({ stats: { str: 4, dex: 60, int: 4, luk: 35 }, combat: {} }, 23)).toBe(true);
+  expect(plausibleStats({ stats: { str: 0, dex: 60, int: 4, luk: 35 }, combat: {} }, 23)).toBe(false); // a base stat is never 0
 });

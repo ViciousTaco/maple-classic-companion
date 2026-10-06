@@ -99,7 +99,7 @@ function checkRegions(regions: ScreenRegion[], win: ScreenWindow) {
       throw new Error(`Region "${r.name}" (${x},${y} ${w}x${h}) is outside the ${win.width}x${win.height} window`);
     const scale = r.scale ?? 2;
     if (!Number.isFinite(scale) || scale < 1 || scale > 4) throw new Error("scale must be between 1 and 4");
-    return { name: r.name, w, h };
+    return { name: r.name, w, h, mode: r.mode ?? "ocr" };
   });
 }
 
@@ -137,6 +137,8 @@ export type MockControls = {
   covered: boolean;
   hotkeyRegistered: boolean;
   hotkey: string;
+  /** What a `mode: "bar"` region reports. */
+  barFill: number | null;
   /** `true` → `notify` reports a Windows toast; `false` (like the portable exe) → banner event fallback. */
   toast: boolean;
   miniOpen: boolean;
@@ -186,6 +188,7 @@ export function createMockPlatform(initialJson: string | null = null): Platform 
     covered: false,
     hotkeyRegistered: true,
     hotkey: "Ctrl+Shift+K",
+    barFill: null,
     toast: false,
     miniOpen: false,
     emit,
@@ -425,10 +428,9 @@ export function createMockPlatform(initialJson: string | null = null): Platform 
       const w = findWindow(windowId);
       return checkRegions(regions, w).map((r) => ({
         name: r.name,
-        lines: (controls.ocrLines[r.name] ?? []).map((l, i) =>
-          typeof l === "string" ? textLine(l, i, r.w, r.h) : { ...l },
-        ),
+        lines: r.mode === "bar" ? [] : (controls.ocrLines[r.name] ?? []).map((l, i) => (typeof l === "string" ? textLine(l, i, r.w, r.h) : { ...l })),
         covered: controls.covered,
+        ...(r.mode === "bar" ? { fill: controls.barFill } : {}),
       }));
     },
     hotkeyStatus: async () => ({ registered: controls.hotkeyRegistered, accelerator: controls.hotkey }),
