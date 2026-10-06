@@ -45,6 +45,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
   const [shot, setShot] = useState<Snapshot | null>(null);
   const [boxes, setBoxes] = useState<Record<BoxName, Region | null>>({ status: null, chat: null, map: null, expBar: null });
   const [drawing, setDrawing] = useState<BoxName>("status");
+  const [lastDrawn, setLastDrawn] = useState<BoxName | null>(null);
   const [test, setTest] = useState<{ level: number | null; expPercent: number | null; barPercent: number | null; name: string | null; map: string | null; mapLines: string[]; chat: string[]; understood: number } | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -169,7 +170,10 @@ function Wizard({ onDone }: { onDone: () => void }) {
               <button
                 key={b}
                 type="button"
-                onClick={() => setDrawing(b)}
+                onClick={() => {
+                  setDrawing(b);
+                  setLastDrawn(b);
+                }}
                 className={`rounded-full px-3 py-1 text-sm font-semibold transition ${drawing === b ? "bg-maple text-white" : "bg-fill hover:bg-fill-strong"}`}
               >
                 <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full" style={{ background: BOX[b].color }} />
@@ -185,12 +189,16 @@ function Wizard({ onDone }: { onDone: () => void }) {
           <p className="mb-2 text-sm text-ink-2">{BOX[drawing].hint}</p>
           <BoxCanvas shot={shot} boxes={boxes} drawing={drawing} onBox={(r) => {
             setBoxes((b) => ({ ...b, [drawing]: r }));
+            setLastDrawn(drawing);
             setTest(null);
             if (drawing === "status" && !boxes.chat) setDrawing("chat");
             else if (drawing === "chat" && !boxes.map) setDrawing("map");
             else if (drawing === "map" && !boxes.expBar) setDrawing("expBar");
           }} />
-          <p className="mt-2 text-xs text-ink-3">This picture is only shown here so you can draw on it. It isn't saved anywhere.</p>
+          <Magnifier shot={shot} box={boxes[lastDrawn ?? drawing]} label={BOX[lastDrawn ?? drawing].label} />
+          <p className="mt-2 text-xs text-ink-3">
+            This picture is only shown here so you can draw on it. It isn't saved anywhere. It's shown at {Math.round((shot.width / shot.sourceWidth) * 100)}% of the game's size; the watcher reads the real pixels, enlarged 3×.
+          </p>
         </Step>
       )}
 
@@ -256,6 +264,31 @@ function Step({ n, title, done, children }: { n: number; title: string; done: bo
       </h3>
       {children}
     </section>
+  );
+}
+
+/** The drawn box at 1:1 (or larger when small), so the owner can see exactly what the watcher will read. */
+function Magnifier({ shot, box, label }: { shot: Snapshot; box: Region | null; label: string }) {
+  if (!box) return null;
+  const k = shot.width / shot.sourceWidth; // picture px per source px
+  const zoom = Math.max(1, Math.min(4, Math.floor(600 / Math.max(1, box.w * k))));
+  const style = {
+    width: box.w * k * zoom,
+    height: box.h * k * zoom,
+    backgroundImage: `url(data:image/png;base64,${shot.pngBase64})`,
+    backgroundSize: `${shot.width * zoom}px ${shot.height * zoom}px`,
+    backgroundPosition: `-${box.x * k * zoom}px -${box.y * k * zoom}px`,
+    imageRendering: zoom > 1 ? ("pixelated" as const) : ("auto" as const),
+  };
+  return (
+    <div className="mt-2">
+      <p className="mb-1 text-xs font-semibold text-ink-2">
+        {label}: what the watcher sees ({box.w}×{box.h} px{zoom > 1 ? `, shown ${zoom}×` : ""})
+      </p>
+      <div className="max-w-full overflow-auto rounded-xl border border-hairline">
+        <div style={{ ...style, maxWidth: "none" }} />
+      </div>
+    </div>
   );
 }
 

@@ -65,7 +65,7 @@ export type WatchState = {
   spotId: string | null;
   /** The map the minimap box says the player is on (null until read, or without a map box). */
   mapId: string | null;
-  /** The minimap's text when it didn't match any map in the guide (so the owner sees why nothing switched). */
+  /** What the minimap says right now, as read (the map's own name, matched to the guide or not). */
   mapText: string | null;
   /** Following the minimap (default when a map box is set up). Picking a spot by hand switches it off for the run. */
   autoMap: boolean;
@@ -456,13 +456,12 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           if (get().autoMap && mapLines.length > 0) {
             const mapName = parseMapName(mapLines, pack.maps.map((m) => m.name));
             const map = mapName ? pack.maps.find((m) => m.name === mapName) : undefined;
-            if (map) {
-              moveTo(pack, map.id, t);
-              if (get().mapText) set({ mapText: null });
-            } else {
-              const text = mapLines.map((l) => l.trim()).filter((l) => l.length >= 3 && !/^(?:ch|channel)\.?\s*\d+$/i.test(l)).join(" · ");
-              if (text && text !== get().mapText) set({ mapText: text });
-            }
+            // Live "current map": the guide's name when matched, else the minimap's own text (map line only — the
+            // area name is usually the first line and the channel is dropped).
+            const cleaned = mapLines.map((l) => l.replace(/\b(?:ch|channel)\.?\s*\d+\b/i, "").trim()).filter((l) => l.length >= 3);
+            const text = map ? map.name : (cleaned.at(-1) ?? null);
+            if (map) moveTo(pack, map.id, t);
+            if (text !== get().mapText) set({ mapText: text });
           }
 
           // The first read only learns what's already in the chat box — nothing from before watching counts.

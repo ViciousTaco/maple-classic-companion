@@ -120,24 +120,26 @@ export function WatchScreen() {
         {pack && (
           <div className="mt-5 flex flex-wrap items-center gap-3 border-t border-hairline pt-4 text-sm">
             <label className="flex items-center gap-2">
-              <span className="font-semibold text-ink-2">Training at</span>
+              <span className="font-semibold text-ink-2">Current map</span>
+              {setup?.map && w.autoMap ? (
+                <span className="rounded-full bg-fill px-3 py-1.5 font-semibold">
+                  {on ? (w.mapText ?? (w.mapId ? mapName(pack, w.mapId) : "reading the minimap…")) : "read from the minimap while watching"}
+                </span>
+              ) : null}
               <select
-                className="rounded-full bg-fill px-3 py-1.5 font-semibold"
+                className={`rounded-full bg-fill px-3 py-1.5 ${setup?.map && w.autoMap ? "text-xs text-ink-2" : "font-semibold"}`}
                 value={setup?.map && w.autoMap ? "__auto" : (spotId ?? "")}
                 onChange={(e) => (e.target.value === "__auto" ? w.followMap() : w.setSpot(e.target.value))}
+                aria-label="Which training spot to count against"
               >
-                {setup?.map && <option value="__auto">Wherever you are (follows the minimap)</option>}
+                {setup?.map && <option value="__auto">Follows the minimap</option>}
                 {spots.map((sp) => (
                   <option key={sp.id} value={sp.id}>
                     {mapName(pack, sp.mapId)}
                   </option>
                 ))}
               </select>
-              {on && setup?.map && w.autoMap && (
-                <span className="text-ink-2">
-                  {w.mapId ? `now on ${mapName(pack, w.mapId)}` : w.mapText ? `minimap says “${w.mapText}” — not a map in the guide` : "reading the minimap…"}
-                </span>
-              )}
+              {on && setup?.map && w.autoMap && w.mapText && !w.mapId && <span className="text-xs text-ink-3">not in this guide's data — still counting</span>}
             </label>
             <span className="flex items-center gap-2">
               <span className="font-semibold text-ink-2">Read every</span>
