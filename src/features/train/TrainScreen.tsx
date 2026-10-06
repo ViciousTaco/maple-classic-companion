@@ -410,13 +410,13 @@ export function TrainScreen() {
               </ul>
             </>
           )}
-          {observedDrops(profile.observations[hero.spotId]).length > 0 && (
+          {observedDrops(profile.observations[hero.spotId] ?? profile.observations[`map:${hero.mapId}`]).length > 0 && (
             <div className="mt-4">
               <p className="mb-2 flex items-center gap-1.5 text-sm font-semibold text-ink-2">
                 <Eye size={14} /> What you've picked up here (screen watcher)
               </p>
               <div className="flex flex-wrap gap-1.5">
-                {observedDrops(profile.observations[hero.spotId]).map((o) => (
+                {observedDrops(profile.observations[hero.spotId] ?? profile.observations[`map:${hero.mapId}`]).map((o) => (
                   <Chip key={o.itemId}>
                     {pack.index.itemById.get(o.itemId)?.name ?? o.itemId} · {o.drops.toLocaleString("en-AU")} in {o.kills.toLocaleString("en-AU")} kills
                   </Chip>

@@ -90,18 +90,24 @@ const add = (a: Record<string, number>, b: Record<string, number>) => {
   return out;
 };
 
+/** Observations are keyed by training spot, or by `map:<id>` on a map the guide has no spot for. */
+export function observationKey(spotId: string | null, mapId: string | null): string | null {
+  return spotId ?? (mapId ? `map:${mapId}` : null);
+}
+
 /**
  * Folds a session's totals into the character's per-spot totals. Sessions with no kills change nothing.
  * `countSession` is false for later checkpoints of the same watching run, so "sessions" counts runs.
  */
 export function mergeSession(observations: Record<string, Observation>, s: SessionTotals, now: Date, countSession = true): Record<string, Observation> {
-  if (!s.spotId || s.kills === 0) return observations;
-  const prev = observations[s.spotId];
+  const key = observationKey(s.spotId, s.mapId);
+  if (!key || s.kills === 0) return observations;
+  const prev = observations[key];
   const minutes = s.activeMs / 60_000;
   const pct = percentGained(s);
   return {
     ...observations,
-    [s.spotId]: {
+    [key]: {
       minutes: (prev?.minutes ?? 0) + minutes,
       kills: (prev?.kills ?? 0) + s.kills,
       exp: (prev?.exp ?? 0) + s.exp,

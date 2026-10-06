@@ -1,23 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import { CheckCircle2, Gamepad2, MonitorUp, RefreshCw, ScanText } from "lucide-react";
 import type { Region } from "../../data/schema/profile";
-import { usePlatform, useProfileStore, useProfiles } from "../../app/context";
+import { useActiveProfile, usePack, usePlatform, useProfileStore, useProfiles } from "../../app/context";
 import { Button, Chip } from "../../ui/kit";
 import { Dialog } from "../../ui/overlays";
-import { parseChatLine, parseStatus } from "./parse";
+import { parseChatLine, parseMapName, parseStatus } from "./parse";
 import { canWatch } from "./useWatch";
 import type { WatchWindow } from "./controller";
 
-// I-29 setup: pick the game window → draw the two boxes on a one-off picture → test → save.
+// I-29 setup: pick the game window → draw the boxes on a one-off picture → test → save.
 // The picture lives only in this dialog's memory and disappears when it closes.
 
 type Snapshot = { pngBase64: string; width: number; height: number; sourceWidth: number; sourceHeight: number; covered?: boolean };
 type SnapshotPlatform = { screenSnapshot(windowId: number): Promise<Snapshot> };
-type BoxName = "status" | "chat";
+type BoxName = "status" | "chat" | "map";
+const BOXES = ["status", "chat", "map"] as const;
 
 const BOX = {
   status: { label: "Level & EXP bar", hint: "Drag a box around the bar at the bottom that shows your level and EXP %.", color: "var(--sky)", cls: "border-sky bg-sky/15" },
   chat: { label: "Chat box", hint: "Drag a box around the chat lines where “You have gained …” messages appear.", color: "var(--maple)", cls: "border-maple bg-maple/15" },
+  map: { label: "Map name (optional)", hint: "Drag a box around the map's name at the top of the minimap, so the watcher follows you from map to map.", color: "var(--leaf)", cls: "border-leaf bg-leaf/15" },
 } as const;
 
 const OWN_TITLE = /maple classic companion/i;
@@ -25,7 +27,7 @@ const looksLikeGame = (w: WatchWindow) => /maple/i.test(w.title) && !OWN_TITLE.t
 
 export function WatchSetup({ open, onOpenChange }: { open: boolean; onOpenChange: (v: boolean) => void }) {
   return (
-    <Dialog open={open} onOpenChange={onOpenChange} title="Set up the screen watcher" description="Three quick steps. Nothing is read until you switch the watcher on." wide>
+    <Dialog open={open} onOpenChange={onOpenChange} title="Set up the screen watcher" description="Three quick steps. Nothing is read until you switch the watcher on. The third box is optional — add it and the watcher follows you from map to map." wide>
       {open && <Wizard onDone={() => onOpenChange(false)} />}
     </Dialog>
   );
@@ -35,12 +37,14 @@ function Wizard({ onDone }: { onDone: () => void }) {
   const platform = usePlatform();
   const store = useProfileStore();
   const prev = useProfiles((s) => s.file.settings.watch);
+  const pack = usePack();
+  const me = useActiveProfile();
   const [windows, setWindows] = useState<WatchWindow[] | null>(null);
   const [win, setWin] = useState<WatchWindow | null>(null);
   const [shot, setShot] = useState<Snapshot | null>(null);
-  const [boxes, setBoxes] = useState<Record<BoxName, Region | null>>({ status: null, chat: null });
+  const [boxes, setBoxes] = useState<Record<BoxName, Region | null>>({ status: null, chat: null, map: null });
   const [drawing, setDrawing] = useState<BoxName>("status");
-  const [test, setTest] = useState<{ level: number | null; expPercent: number | null; chat: string[]; understood: number } | null>(null);
+  const [test, setTest] = useState<{ level: number | null; expPercent: number | null; name: string | null; map: string | null; mapLines: string[]; chat: string[]; understood: number } | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -74,7 +78,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
       setShot(s);
       setTest(null);
       const same = prev && prev.sourceWidth === s.sourceWidth && prev.sourceHeight === s.sourceHeight;
-      setBoxes({ status: same ? prev.status : null, chat: same ? prev.chat : null });
+      setBoxes({ status: same ? prev.status : null, chat: same ? prev.chat : null, map: same ? prev.map : null });
       setDrawing(same && prev.status ? "chat" : "status");
     } catch (e) {
       setError(`Couldn't take the picture: ${String(e)}`);
@@ -88,11 +92,13 @@ function Wizard({ onDone }: { onDone: () => void }) {
     setBusy(true);
     setError(null);
     try {
-      const regions = (["status", "chat"] as const).flatMap((name) => (boxes[name] ? [{ name, ...boxes[name] }] : []));
+      const regions = BOXES.flatMap((name) => (boxes[name] ? [{ name, ...boxes[name] }] : []));
       const out = await platform.screenRead(win.id, regions);
       const status = parseStatus(out.find((r) => r.name === "status")?.lines.map((l) => l.text) ?? []);
       const chat = out.find((r) => r.name === "chat")?.lines.map((l) => l.text) ?? [];
-      setTest({ ...status, chat, understood: chat.filter((l) => parseChatLine(l) !== null).length });
+      const mapLines = out.find((r) => r.name === "map")?.lines.map((l) => l.text) ?? [];
+      const map = pack ? parseMapName(mapLines, pack.maps.map((m) => m.name)) : null;
+      setTest({ level: status.level, expPercent: status.expPercent, name: status.name, map, mapLines, chat, understood: chat.filter((l) => parseChatLine(l) !== null).length });
     } catch (e) {
       setError(`Test read failed: ${String(e)}`);
     } finally {
@@ -109,6 +115,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
         sourceHeight: shot.sourceHeight,
         status: boxes.status,
         chat: boxes.chat,
+        map: boxes.map,
         intervalSec: prev?.intervalSec ?? 2,
         savedAt: new Date().toISOString(),
       },
@@ -150,9 +157,9 @@ function Wizard({ onDone }: { onDone: () => void }) {
       </Step>
 
       {shot && (
-        <Step n={2} title="Draw the two boxes" done={!!boxes.status && !!boxes.chat}>
+        <Step n={2} title="Draw the boxes" done={!!boxes.status && !!boxes.chat}>
           <div className="mb-2 flex flex-wrap items-center gap-2">
-            {(["status", "chat"] as const).map((b) => (
+            {BOXES.map((b) => (
               <button
                 key={b}
                 type="button"
@@ -174,12 +181,13 @@ function Wizard({ onDone }: { onDone: () => void }) {
             setBoxes((b) => ({ ...b, [drawing]: r }));
             setTest(null);
             if (drawing === "status" && !boxes.chat) setDrawing("chat");
+            else if (drawing === "chat" && !boxes.map) setDrawing("map");
           }} />
           <p className="mt-2 text-xs text-ink-3">This picture is only shown here so you can draw on it. It isn't saved anywhere.</p>
         </Step>
       )}
 
-      {shot && (boxes.status || boxes.chat) && (
+      {shot && (boxes.status || boxes.chat || boxes.map) && (
         <Step n={3} title="Test it" done={!!test}>
           <div className="flex flex-wrap items-center gap-2">
             <Button onClick={() => void runTest()} disabled={busy}>
@@ -189,6 +197,13 @@ function Wizard({ onDone }: { onDone: () => void }) {
               <>
                 <Chip tone={test.level !== null ? "leaf" : "neutral"}>Level: {test.level ?? "not found"}</Chip>
                 <Chip tone={test.expPercent !== null ? "leaf" : "neutral"}>EXP: {test.expPercent !== null ? `${test.expPercent}%` : "not found"}</Chip>
+                {boxes.status && (
+                  <Chip tone={test.name && me && test.name.toLowerCase() === me.name.toLowerCase() ? "leaf" : test.name ? "maple" : "neutral"}>
+                    Name: {test.name ?? "not found"}
+                    {test.name && me && test.name.toLowerCase() !== me.name.toLowerCase() ? ` — this profile is ${me.name}` : ""}
+                  </Chip>
+                )}
+                {boxes.map && <Chip tone={test.map ? "leaf" : "neutral"}>Map: {test.map ?? (test.mapLines.length ? `“${test.mapLines[0]}” isn't a map the guide knows` : "nothing read")}</Chip>}
                 <Chip tone={test.understood > 0 ? "leaf" : "neutral"}>
                   Chat: {test.chat.length} line{test.chat.length === 1 ? "" : "s"} read, {test.understood} understood
                 </Chip>
@@ -271,7 +286,7 @@ function BoxCanvas({ shot, boxes, drawing, onBox }: { shot: Snapshot; boxes: Rec
       }}
     >
       <img src={`data:image/png;base64,${shot.pngBase64}`} alt="The game window (one-off picture for drawing the boxes)" className="block w-full" draggable={false} />
-      {(["status", "chat"] as const).map((b) =>
+      {BOXES.map((b) =>
         boxes[b] && !(drag && b === drawing) ? (
           <div key={b} className={`pointer-events-none absolute rounded-md border-2 ${BOX[b].cls}`} style={pct(boxes[b])}>
             <span className="absolute -top-5 left-0 whitespace-nowrap rounded bg-black/60 px-1 text-[10px] font-semibold text-white">{BOX[b].label}</span>

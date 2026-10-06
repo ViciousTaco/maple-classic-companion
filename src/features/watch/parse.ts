@@ -1,7 +1,7 @@
 // I-29 screen watcher — turning OCR text into game events. Pure functions, tuned against real Classic World
 // screenshots after launch (the UI isn't public yet), so every pattern is deliberately tolerant.
 
-export type StatusRead = { level: number | null; expPercent: number | null; expValue: number | null };
+export type StatusRead = { level: number | null; expPercent: number | null; expValue: number | null; name: string | null };
 
 /** OCR often confuses these in digits. */
 function fixDigits(s: string): string {
@@ -20,6 +20,10 @@ export function parseStatus(lines: string[]): StatusRead {
   const bracket = /\[\s*([0-9OoIl|]{1,3})(?:[.,]([0-9OoIl|]{1,2}))?/.exec(text);
   const pct = bracket ?? /([0-9OoIl|]{1,3})(?:[.,]([0-9OoIl|]{1,3}))?\s*%/.exec(text);
   const total = /EXP\s*:?\s*([0-9OoIl|][0-9OoIl|,]{0,13})/i.exec(text);
+  // The character's name sits between the level and the EXP/HP/MP figures on the status bar.
+  const afterLevel = lv ? text.slice(lv.index + lv[0].length) : "";
+  const nm = /^[^A-Za-z]*([A-Za-z][A-Za-z0-9]{2,12})\b/.exec(afterLevel);
+  const name = nm && !/^(EXP|HP|MP|LV|LEVEL)$/i.test(nm[1]!) ? nm[1]! : null;
   const level = lv ? Number(fixDigits(lv[1]!)) : NaN;
   const expPercent = pct ? Number(`${fixDigits(pct[1]!)}.${pct[2] ? fixDigits(pct[2]) : "0"}`) : NaN;
   const expValue = total ? Number(fixDigits(total[1]!).replace(/,/g, "")) : NaN;
@@ -27,6 +31,7 @@ export function parseStatus(lines: string[]): StatusRead {
     level: Number.isInteger(level) && level >= 1 && level <= 300 ? level : null,
     expPercent: Number.isFinite(expPercent) && expPercent >= 0 && expPercent <= 100 ? expPercent : null,
     expValue: Number.isSafeInteger(expValue) && expValue >= 0 ? expValue : null,
+    name,
   };
 }
 
@@ -42,6 +47,8 @@ const AMOUNT = /\(\s*\+?\s*([0-9OoIl|][0-9OoIl|,.\s]*?)\s*\)|\+\s*([0-9][0-9,.]*
 export function parseChatLine(line: string): ChatEvent | null {
   const l = line.trim();
   const k = l.toLowerCase().replace(/rn/g, "m");
+  // System messages start the line ("You have gained …"); anything after a "Name:" prefix is a player talking.
+  if (!/^[^a-z]{0,3}(?:you\s+have\s+|\+\s*\d)/.test(k)) return null;
   const amount = () => {
     const m = AMOUNT.exec(l);
     return m ? num(m[1] ?? m[2]!) : NaN;
@@ -92,11 +99,16 @@ export function matchName(raw: string, names: string[]): string | null {
   const r = norm(raw);
   if (!r) return null;
   let best: { name: string; d: number } | null = null;
+  let tie = false;
   for (const n of names) {
     const d = editDistance(r, norm(n));
-    if (!best || d < best.d) best = { name: n, d };
+    if (!best || d < best.d) {
+      best = { name: n, d };
+      tie = false;
+    } else if (d === best.d && norm(n) !== norm(best.name)) tie = true;
   }
-  return best && best.d <= Math.max(1, Math.floor(r.length / 8)) ? best.name : null;
+  // A tie means two names are equally close (e.g. "Ant Tunnel II" vs "IV" with one bad letter): say nothing.
+  return best && !tie && best.d <= Math.max(1, Math.floor(r.length / 8)) ? best.name : null;
 }
 
 function editDistance(a: string, b: string): number {
@@ -123,4 +135,22 @@ export function hiddenKills(expDelta: number, amount: number): number {
   if (!(expDelta > 0) || !(amount > 0)) return 0;
   const k = Math.round(expDelta / amount);
   return k >= 1 && k <= 60 && Math.abs(expDelta - k * amount) <= amount * 0.2 ? k : 0;
+}
+
+/**
+ * The map the player is on, from the minimap's title box. The minimap also shows the area ("Victoria Island") and
+ * sometimes a channel, so every line is tried and the clean match wins; no match → null (keep the previous map).
+ */
+export function parseMapName(lines: string[], mapNames: string[]): string | null {
+  for (const raw of lines) {
+    // Drop the channel, then repair a trailing roman numeral: OCR reads "III" as "Ill", "II" as "ll" or "1I".
+    const line = raw
+      .replace(/\b(?:ch|channel)\.?\s*\d+\b/i, "")
+      .trim()
+      .replace(/\s([IVXil1|]{1,4})$/, (_, n: string) => ` ${n.replace(/[il1|]/g, "I")}`);
+    if (line.length < 3) continue;
+    const hit = matchName(line, mapNames);
+    if (hit) return hit;
+  }
+  return null;
 }

@@ -81,7 +81,9 @@ export function WatchScreen() {
                 ? w.problem ?? (setup ? "Flip the switch, click the Watch pill at the top, or press Ctrl+Alt+W in game." : "Set it up once, then switch it on whenever you like.")
                 : w.status === "paused"
                   ? w.problem
-                  : "Reading only the two boxes you drew. Switch off any time."}
+                  : setup?.map
+                    ? "Reading only the boxes you drew, and following you from map to map. Switch off any time."
+                    : "Reading only the two boxes you drew. Switch off any time."}
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
@@ -100,15 +102,19 @@ export function WatchScreen() {
               <span className="font-semibold text-ink-2">Training at</span>
               <select
                 className="rounded-full bg-fill px-3 py-1.5 font-semibold"
-                value={spotId ?? ""}
-                onChange={(e) => w.setSpot(e.target.value)}
+                value={setup?.map && w.autoMap ? "__auto" : (spotId ?? "")}
+                onChange={(e) => (e.target.value === "__auto" ? w.followMap() : w.setSpot(e.target.value))}
               >
+                {setup?.map && <option value="__auto">Wherever you are (follows the minimap)</option>}
                 {spots.map((sp) => (
                   <option key={sp.id} value={sp.id}>
                     {mapName(pack, sp.mapId)}
                   </option>
                 ))}
               </select>
+              {on && setup?.map && w.autoMap && (
+                <span className="text-ink-2">{w.mapId ? `now on ${mapName(pack, w.mapId)}` : "reading the minimap…"}</span>
+              )}
             </label>
             <span className="flex items-center gap-2">
               <span className="font-semibold text-ink-2">Read every</span>
@@ -134,10 +140,13 @@ export function WatchScreen() {
                 <Tile label="Meso" value={s.meso.toLocaleString("en-AU")} sub={`${perHour(s.meso)} / h`} />
                 <Tile label="Training time" value={`${Math.floor(mins)} min`} sub="idle time not counted" />
               </dl>
+              <p className="mt-2 text-xs text-ink-3">
+                Only your own “You have gained …” lines count — other players' chat is ignored. In a party, EXP you're given for a party member's kill counts as a kill too.
+              </p>
               <p className="mt-3 text-sm text-ink-2">
                 {w.read ? (
                   <>
-                    Game shows <strong className="text-ink">Lv {w.read.level ?? "?"}</strong> · <strong className="text-ink">{w.read.expPercent ?? "?"}%</strong> EXP
+                    Game shows <strong className="text-ink">{w.read.name ?? profile.name}</strong> · <strong className="text-ink">Lv {w.read.level ?? "?"}</strong> · <strong className="text-ink">{w.read.expPercent ?? "?"}%</strong> EXP
                   </>
                 ) : (
                   "Waiting for the level bar…"
@@ -173,6 +182,7 @@ export function WatchScreen() {
           <li className="flex gap-2"><Ban size={15} className="mt-0.5 shrink-0 text-danger" /> Never saves or sends a picture. Only the numbers it counted are kept, on this PC.</li>
           <li className="flex gap-2"><Ban size={15} className="mt-0.5 shrink-0 text-danger" /> Never touches the game: no clicks, no keys, no memory reading, no changes to game files.</li>
           <li className="flex gap-2"><Timer size={15} className="mt-0.5 shrink-0 text-sky" /> Off every time the app starts. Switches itself off if the game closes or you stop killing for 20 minutes.</li>
+          <li className="flex gap-2"><Eye size={15} className="mt-0.5 shrink-0 text-leaf" /> Knows it's you: it checks the character name on your status bar against this profile, and only your own “You have gained …” lines count. Add the optional map box and it follows you from map to map.</li>
         </ul>
       </Card>
 
@@ -195,11 +205,12 @@ export function WatchScreen() {
               {measured.map(([id, o]) => {
                 const r = observedRates(pack, o);
                 const sp = pack.index.spotById.get(id);
+                const mapOnly = id.startsWith("map:") ? pack.index.mapById.get(id.slice(4)) : undefined;
                 return (
                   <tr key={id}>
                     <td className="py-2 font-medium">
                       <button type="button" className="hover:underline" onClick={() => navigate("/train")}>
-                        {sp ? mapName(pack, sp.mapId) : id}
+                        {sp ? mapName(pack, sp.mapId) : mapOnly ? `${mapOnly.name} (no spot in the guide)` : id}
                       </button>
                     </td>
                     <td className="py-2 tabular-nums">

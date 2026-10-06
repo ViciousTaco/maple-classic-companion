@@ -9,6 +9,7 @@ const SETUP = {
   sourceHeight: 768,
   status: { x: 0, y: 740, w: 600, h: 28 },
   chat: { x: 0, y: 560, w: 500, h: 160 },
+  map: null,
   intervalSec: 2,
   savedAt: "2026-10-07T00:00:00.000Z",
 };
@@ -148,8 +149,9 @@ test("farming one monster: identical chat lines still count, via the EXP total o
   await advance(2000); // primes
   screen.status = ["Lv. 25", "EXP 1072 [10.50%]"]; // 3 kills; the chat box looks exactly the same
   await advance(2000);
+  expect(watcher.getState().session!.kills).toBe(0); // held until the next read confirms the total
+  await advance(2000);
   expect(watcher.getState().session).toMatchObject({ kills: 3, exp: 72 });
-  screen.status = ["Lv. 25", "EXP 1072 [10.50%]"];
   await advance(2000);
   expect(watcher.getState().session!.kills).toBe(3); // nothing new, nothing counted
 });

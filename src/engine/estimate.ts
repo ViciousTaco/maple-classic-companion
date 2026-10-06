@@ -105,7 +105,7 @@ export function mesoPerKillOf(pack: Pack, mob: Monster, mode: "rank" | "shown" =
 
 export function estimateSpot(pack: Pack, profile: Profile, spot: TrainingSpot, basis: Exclude<Basis, "observed"> = basisFor(profile)): SpotEstimate {
   const est = estimateFromData(pack, profile, spot, basis);
-  const observed = observedRates(pack, profile.observations[spot.id]);
+  const observed = observedRates(pack, profile.observations[spot.id] ?? profile.observations[`map:${spot.mapId}`]);
   if (!observed) return est;
   // Measured numbers win for display. For ranking they replace computed kills/hour; level-band ranking compares
   // relative densities, so a measured spot keeps its density there to stay comparable with the others.

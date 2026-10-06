@@ -147,6 +147,8 @@ export const SettingsSchema = z
         sourceHeight: int(1, 20000),
         status: RegionSchema.nullable(),
         chat: RegionSchema.nullable(),
+        /** The minimap's title box; lets the watcher follow the player from map to map. */
+        map: RegionSchema.nullable().default(null),
         intervalSec: z.number().min(1).max(30).default(2),
         savedAt: iso,
       })

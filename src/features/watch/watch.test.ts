@@ -3,15 +3,15 @@ import { hiddenKills, matchName, newLines, parseChatLine, parseStatus } from "./
 import { applyEvents, applyStatus, monsterForExp, newSession, percentGained } from "./session";
 
 test("status bar: level and EXP % in the shapes OCR produces", () => {
-  expect(parseStatus(["Lv. 23  Taco", "EXP 12345 [21.73%]"])).toEqual({ level: 23, expPercent: 21.73, expValue: 12345 });
-  expect(parseStatus(["LV 7", "48,5 %"])).toEqual({ level: 7, expPercent: 48.5, expValue: null });
+  expect(parseStatus(["Lv. 23  Taco", "EXP 12345 [21.73%]"])).toEqual({ level: 23, expPercent: 21.73, expValue: 12345, name: "Taco" });
+  expect(parseStatus(["LV 7", "48,5 %"])).toEqual({ level: 7, expPercent: 48.5, expValue: null, name: null });
   expect(parseStatus(["Lv.2O", "9.O5%"])).toMatchObject({ level: 20, expPercent: 9.05 }); // O read for 0
   // Real Windows OCR of a status bar (2026-10-06): "%]" came back as "0/01".
-  expect(parseStatus(["Lv. 23", "Demo", "EXP 51402 [44.170/01"])).toEqual({ level: 23, expPercent: 44.17, expValue: 51402 });
+  expect(parseStatus(["Lv. 23", "Demo", "EXP 51402 [44.170/01"])).toEqual({ level: 23, expPercent: 44.17, expValue: 51402, name: "Demo" });
   expect(parseStatus(["IV. 31  Demo"]).level).toBe(31); // OCR read "Lv." as "IV."
   expect(parseStatus(["1v 8"]).level).toBe(8);
   expect(parseStatus(["Level up!"]).level).toBeNull(); // "ev" inside a word isn't a level
-  expect(parseStatus(["nothing useful"])).toEqual({ level: null, expPercent: null, expValue: null });
+  expect(parseStatus(["nothing useful"])).toEqual({ level: null, expPercent: null, expValue: null, name: null });
   expect(parseStatus(["Lv. 999", "250%"])).toMatchObject({ level: null, expPercent: null }); // impossible values dropped
 });
 

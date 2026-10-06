@@ -4,7 +4,7 @@ import type { Profile, Settings } from "../../data/schema/profile";
 import type { ProfileStore } from "../characters/store";
 import { activeProfile } from "../characters/store";
 import { recommendTraining } from "../../engine/recommend";
-import { hiddenKills, newLines, parseChatLine, parseStatus, type ChatEvent } from "./parse";
+import { hiddenKills, matchName, newLines, parseChatLine, parseMapName, parseStatus, type ChatEvent } from "./parse";
 import { applyEvents, applyStatus, mergeSession, newSession, percentGained, tick, type SessionTotals } from "./session";
 
 // I-29 screen watcher. The owner is always in control: it is off at every launch, only the owner turns it on
@@ -30,8 +30,12 @@ export type WatchState = {
   /** Why it's paused or why it switched itself off. */
   problem: string | null;
   spotId: string | null;
+  /** The map the minimap box says the player is on (null until read, or without a map box). */
+  mapId: string | null;
+  /** Following the minimap (default when a map box is set up). Picking a spot by hand switches it off for the run. */
+  autoMap: boolean;
   session: SessionTotals | null;
-  read: { level: number | null; expPercent: number | null; at: number } | null;
+  read: { level: number | null; expPercent: number | null; name: string | null; at: number } | null;
   feed: FeedItem[];
   startedAt: number | null;
 
@@ -39,6 +43,8 @@ export type WatchState = {
   stop(reason?: string): void;
   toggle(): Promise<void>;
   setSpot(spotId: string): void;
+  /** Back to following the minimap. */
+  followMap(): void;
   /** One read cycle (the loop calls this; tests call it directly). */
   step(): Promise<void>;
 };
@@ -83,6 +89,9 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
   let cancel: (() => void) | null = null;
   let prevChat: string[] | null = null;
   let prevStatus: { level: number | null; expValue: number | null } | null = null;
+  /** Kills implied by the EXP total, held until the next read confirms the total didn't drop (a misread digit). */
+  let pendingHidden: { kills: number; amount: number; expValue: number } | null = null;
+  let nameMisses = 0;
   let lastStepAt = 0;
   let lastCheckpoint = 0;
   let missingSince: number | null = null;
@@ -153,10 +162,41 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       }
     };
 
+    /** Spot for a map: the one in the current plan if it's there, else the first spot on that map, else none. */
+    const spotOnMap = (pack: Pack, mapId: string): string | null => {
+      const p = profile();
+      const onMap = pack.trainingSpots.filter((sp) => sp.mapId === mapId).map((sp) => sp.id);
+      if (onMap.length === 0) return null;
+      if (p) {
+        const plan = recommendTraining({ profile: p, pack, now: new Date(now()) });
+        const hit = [plan.primary, ...plan.backups].find((r) => r && onMap.includes(r.spotId));
+        if (hit) return hit.spotId;
+      }
+      return onMap[0]!;
+    };
+
+    /** The player moved to another map: bank what was counted so far and carry on there. */
+    const moveTo = (pack: Pack, mapId: string, t: number) => {
+      const cur = get().session;
+      if (!cur || cur.mapId === mapId) return;
+      fold(false);
+      countedRun = false;
+      const spotId = spotOnMap(pack, mapId);
+      const name = pack.index.mapById.get(mapId)?.name ?? mapId;
+      set({
+        mapId,
+        spotId,
+        session: { ...get().session!, spotId, mapId },
+        feed: [{ id: feedId++, at: t, text: spotId ? `Moved to ${name}` : `Moved to ${name} (no training spot in the guide yet — still counting)` }, ...get().feed].slice(0, FEED_MAX),
+      });
+    };
+
     return {
       status: "off",
       problem: null,
       spotId: null,
+      mapId: null,
+      autoMap: true,
       session: null,
       read: null,
       feed: [],
@@ -175,12 +215,14 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
         const mapId = chosen ? (pack?.index.spotById.get(chosen)?.mapId ?? null) : null;
         prevChat = null;
         prevStatus = null;
+        pendingHidden = null;
+        nameMisses = 0;
         levelVotes = [];
         missingSince = null;
         countedRun = false;
         runPct = runPctMs = 0;
         lastStepAt = lastCheckpoint = now();
-        set({ status: "on", problem: null, spotId: chosen, session: newSession(chosen, mapId, new Date(now())), read: null, feed: [], startedAt: now() });
+        set({ status: "on", problem: null, spotId: chosen, mapId, autoMap: !!s.map && spotId === undefined, session: newSession(chosen, mapId, new Date(now())), read: null, feed: [], startedAt: now() });
         loop();
       },
 
@@ -200,13 +242,17 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
 
       setSpot(spotId) {
         if (get().status === "off") {
-          set({ spotId });
+          set({ spotId, autoMap: false });
           return;
         }
         fold(false);
         countedRun = false;
         const mapId = deps.getPack()?.index.spotById.get(spotId)?.mapId ?? null;
-        set({ spotId, session: { ...get().session!, spotId, mapId } });
+        set({ spotId, mapId, autoMap: false, session: { ...get().session!, spotId, mapId } });
+      },
+
+      followMap() {
+        set({ autoMap: true });
       },
 
       async step() {
@@ -226,6 +272,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           const regions: WatchRegion[] = [];
           if (s.status) regions.push({ name: "status", ...s.status });
           if (s.chat) regions.push({ name: "chat", ...s.chat });
+          if (s.map) regions.push({ name: "map", ...s.map });
           const out = await deps.platform.screenRead(windowId, regions);
           if (out.some((r) => r.covered)) throw new Missing("Something is covering the game's boxes (the mini window?) — move it aside and watching carries on.");
           missingSince = null;
@@ -233,15 +280,45 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
 
           const statusLines = out.find((r) => r.name === "status")?.lines.map((l) => l.text) ?? [];
           const chatLines = out.find((r) => r.name === "chat")?.lines.map((l) => l.text) ?? [];
+          const mapLines = out.find((r) => r.name === "map")?.lines.map((l) => l.text) ?? [];
           const st = parseStatus(statusLines);
+
+          // Right character? The status bar names it. Three clear mismatches in a row means another character
+          // (or another client's window) is being read, and nothing from it may be counted.
+          const me = profile();
+          if (me && st.name) {
+            nameMisses = matchName(st.name, [me.name]) ? 0 : nameMisses + 1;
+            if (nameMisses >= 3)
+              throw new Missing(`The game shows “${st.name}”, but this is ${me.name}'s profile. Switch character in the app (or pick the right game window) and watching carries on.`);
+          }
+
+          // Follow the player from map to map (minimap box).
+          if (get().autoMap && mapLines.length > 0) {
+            const mapName = parseMapName(mapLines, pack.maps.map((m) => m.name));
+            const map = mapName ? pack.maps.find((m) => m.name === mapName) : undefined;
+            if (map) moveTo(pack, map.id, t);
+          }
+
           // The first read only learns what's already in the chat box — nothing from before watching counts.
           const fresh = prevChat === null ? [] : newLines(prevChat, chatLines);
           prevChat = chatLines;
           const events = fresh.map(parseChatLine).filter((e): e is ChatEvent => e !== null);
-          // Same-looking chat lines hide new kills; the EXP total on the bar still shows them.
-          if (fresh.length === 0 && prevStatus && st.level !== null && st.level === prevStatus.level && st.expValue !== null && prevStatus.expValue !== null) {
-            const last = [...chatLines].reverse().map(parseChatLine).find((e) => e?.kind === "exp");
-            if (last?.kind === "exp") for (let i = hiddenKills(st.expValue - prevStatus.expValue, last.amount); i > 0; i--) events.push({ kind: "exp", amount: last.amount });
+
+          // Kills the chat box can't show — identical lines (one monster type) or more kills than lines in one
+          // interval (mobbing) — are implied by the rise in the EXP total that the chat didn't account for. They are
+          // added only once the next read confirms the total didn't fall back (a misread digit would).
+          if (pendingHidden) {
+            if (st.expValue !== null && st.expValue >= pendingHidden.expValue)
+              for (let i = 0; i < pendingHidden.kills; i++) events.unshift({ kind: "exp", amount: pendingHidden.amount });
+            pendingHidden = null;
+          }
+          if (prevStatus && st.level !== null && st.level === prevStatus.level && st.expValue !== null && prevStatus.expValue !== null) {
+            const counted = events.reduce((a, e) => (e.kind === "exp" ? a + e.amount : a), 0);
+            const last = [...events].reverse().find((e) => e.kind === "exp") ?? [...chatLines].reverse().map(parseChatLine).find((e) => e?.kind === "exp");
+            if (last?.kind === "exp") {
+              const kills = hiddenKills(st.expValue - prevStatus.expValue - counted, last.amount);
+              if (kills > 0) pendingHidden = { kills, amount: last.amount, expValue: st.expValue };
+            }
           }
           if (st.expValue !== null || st.level !== null) prevStatus = { level: st.level ?? prevStatus?.level ?? null, expValue: st.expValue };
 
@@ -256,7 +333,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           for (const e of events) feedNew.push({ id: feedId++, at: t, text: describeEvent(e, pack, e.kind === "exp" ? newMobs[mobIdx++] : undefined) });
           set({
             session,
-            read: st.level !== null || st.expPercent !== null ? { level: st.level, expPercent: st.expPercent, at: t } : get().read,
+            read: st.level !== null || st.expPercent !== null ? { level: st.level, expPercent: st.expPercent, name: st.name, at: t } : get().read,
             feed: [...feedNew.reverse(), ...get().feed].slice(0, FEED_MAX),
           });
           syncLevel(st.level, st.expPercent);

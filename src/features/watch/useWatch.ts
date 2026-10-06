@@ -12,6 +12,8 @@ const idle: StoreApi<WatchState> = createStore<WatchState>()(() => ({
   status: "off",
   problem: null,
   spotId: null,
+  mapId: null,
+  autoMap: true,
   session: null,
   read: null,
   feed: [],
@@ -20,6 +22,7 @@ const idle: StoreApi<WatchState> = createStore<WatchState>()(() => ({
   stop: () => {},
   toggle: async () => {},
   setSpot: () => {},
+  followMap: () => {},
   step: async () => {},
 }));
 
