@@ -38,3 +38,8 @@ export function rateLabel(drop: Drop): string {
 }
 
 export const usableDrop = (d: Drop) => d.status !== "legacy-unverified";
+
+/** I-35: "You: 3 in 240 kills" — the owner's own pickups per kill, from the screen watcher. */
+export function ownRateLabel(r: { drops: number; kills: number } | null): string | null {
+  return r ? `You: ${r.drops.toLocaleString("en-AU")} in ${r.kills.toLocaleString("en-AU")} kills` : null;
+}

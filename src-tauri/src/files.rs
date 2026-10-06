@@ -36,6 +36,7 @@ pub fn named_folder(data_dir: &Path, which: &str) -> Result<PathBuf, String> {
         "backups" => data_dir.join("backups"),
         "exports" => data_dir.join("exports"),
         "field-notes" => data_dir.join("field-notes").join("inbox"),
+        "watch-log" => data_dir.join("field-notes").join("watch-log"),
         _ => return Err("Unknown folder".into()),
     })
 }
@@ -89,6 +90,41 @@ pub fn field_note_create(data_dir: &Path, json: &str) -> Result<String, String> 
         .ok_or("Too many notes at once")?;
     write_atomic(&base.join(&id).join("note.json"), json.as_bytes())?;
     Ok(id)
+}
+
+/// I-44 diagnostic log for the screen watcher: appends one JSON line (recognised *text* and what the watcher made
+/// of it — never pixels) to `field-notes\watch-log\<YYYY-MM-DD>.jsonl`. Only called while the owner has the
+/// log switched on. Returns the file written.
+pub fn watch_log_append(data_dir: &Path, line: &str) -> Result<String, String> {
+    require_json(line)?;
+    if line.len() > 64 * 1024 {
+        return Err("Log line too long".into());
+    }
+    let dir = data_dir.join("field-notes").join("watch-log");
+    fs::create_dir_all(&dir).map_err(e)?;
+    let file = dir.join(format!("{}.jsonl", chrono::Utc::now().format("%Y-%m-%d")));
+    let mut f = fs::OpenOptions::new().create(true).append(true).open(&file).map_err(e)?;
+    use std::io::Write;
+    f.write_all(line.as_bytes()).map_err(e)?;
+    f.write_all(b"\n").map_err(e)?;
+    Ok(file.file_name().unwrap().to_string_lossy().into_owned())
+}
+
+/// Deletes every diagnostic log file (owner-initiated). Returns how many were removed.
+pub fn watch_log_clear(data_dir: &Path) -> Result<usize, String> {
+    let dir = data_dir.join("field-notes").join("watch-log");
+    if !dir.is_dir() {
+        return Ok(0);
+    }
+    let mut n = 0;
+    for entry in fs::read_dir(&dir).map_err(e)? {
+        let path = entry.map_err(e)?.path();
+        if path.extension().and_then(|x| x.to_str()) == Some("jsonl") {
+            fs::remove_file(&path).map_err(e)?;
+            n += 1;
+        }
+    }
+    Ok(n)
 }
 
 /// Adds `img-<n>.<ext>` to an existing note. Returns the file name.

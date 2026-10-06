@@ -175,6 +175,16 @@ fn field_note_create(state: State<'_, AppState>, json: String) -> Result<String,
 }
 
 #[tauri::command]
+fn watch_log_append(state: State<'_, AppState>, line: String) -> Result<String, String> {
+    files::watch_log_append(&state.paths.data_dir, &line)
+}
+
+#[tauri::command]
+fn watch_log_clear(state: State<'_, AppState>) -> Result<usize, String> {
+    files::watch_log_clear(&state.paths.data_dir)
+}
+
+#[tauri::command]
 fn field_note_add_image(state: State<'_, AppState>, request: Request<'_>) -> Result<SavedFile, String> {
     let id = header(&request, "x-note-id")?;
     Ok(SavedFile { file: files::field_note_add_image(&state.paths.data_dir, &id, raw_body(&request)?)? })
@@ -270,7 +280,8 @@ pub fn run() {
                 apply_geometry(&window, g);
             }
             window.show()?;
-            // Ctrl+Alt+W → mcc://watch-toggle; if another app owns it we carry on (hotkey_status reports it).
+            // Default Ctrl+Shift+K → mcc://watch-toggle; the UI re-applies the owner's choice (hotkey_set).
+            // If another app owns it we carry on (hotkey_status reports it).
             hotkey::register(app.handle());
             // A successful start: the previous version's leftovers can go (P8-T6).
             std::thread::spawn(updater::cleanup_update_leftovers);
@@ -302,6 +313,8 @@ pub fn run() {
             export_save,
             reveal_folder,
             field_note_create,
+            watch_log_append,
+            watch_log_clear,
             field_note_add_image,
             datapack::pack_active,
             datapack::pack_read,
@@ -316,6 +329,7 @@ pub fn run() {
             screen::screen_snapshot,
             screen::screen_read,
             hotkey::hotkey_status,
+            hotkey::hotkey_set,
             notify::notify_status,
             notify::notify_show,
             notify::notify_fallback,

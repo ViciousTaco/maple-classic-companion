@@ -1,7 +1,7 @@
 import type { Pack } from "../data/pack";
 import type { Monster, TrainingSpot } from "../data/schema/pack";
 import type { Profile } from "../data/schema/profile";
-import { observedRates, type ObservedRates } from "./observed";
+import { observedRates, paceFactor, type ObservedRates } from "./observed";
 import { knownProbability, rateWeight, usableDrop } from "./rates";
 
 // Plan §8.7 step 0 + step 2 (estimate). Pure.
@@ -19,6 +19,8 @@ export type Estimate = {
   danger: Danger;
   /** Present when the screen watcher measured this spot long enough (the shown numbers then come from it). */
   observed: ObservedRates | null;
+  /** I-36: computed numbers were scaled by this from the owner's measured spots (null = no calibration applied). */
+  calibration: { factor: number; spots: number } | null;
 };
 
 export type MobShare = { mob: Monster; weight: number; count: number | null; respawn: number | null };
@@ -103,8 +105,40 @@ export function mesoPerKillOf(pack: Pack, mob: Monster, mode: "rank" | "shown" =
   return known ? value : null;
 }
 
-export function estimateSpot(pack: Pack, profile: Profile, spot: TrainingSpot, basis: Exclude<Basis, "observed"> = basisFor(profile)): SpotEstimate {
-  const est = estimateFromData(pack, profile, spot, basis);
+/**
+ * I-36: how the owner's measured kills/hour compare with what the engine predicts for those same spots. One factor
+ * (median, clamped 0.5–2) applied to unmeasured computed spots, so the 0.8 s / 1.5 s assumptions bend to the owner.
+ */
+export function calibration(pack: Pack, profile: Profile): { factor: number; spots: number } | null {
+  if (basisFor(profile) !== "computed") return null;
+  const pairs: { predicted: number; observed: number }[] = [];
+  for (const spot of pack.trainingSpots) {
+    const obs = observedRates(pack, profile.observations[spot.id] ?? profile.observations[`map:${spot.mapId}`]);
+    if (!obs) continue;
+    const predicted = estimateFromData(pack, profile, spot, "computed").kph;
+    pairs.push({ predicted, observed: (obs.kills / obs.minutes) * 60 });
+  }
+  const f = paceFactor(pairs);
+  return f && Math.abs(f.factor - 1) >= 0.05 ? f : null;
+}
+
+export function estimateSpot(
+  pack: Pack,
+  profile: Profile,
+  spot: TrainingSpot,
+  basis: Exclude<Basis, "observed"> = basisFor(profile),
+  calib: { factor: number; spots: number } | null = calibration(pack, profile),
+): SpotEstimate {
+  let est = estimateFromData(pack, profile, spot, basis);
+  if (calib && est.estimate.basis === "computed") {
+    const k = calib.factor;
+    const scale = (r: Range | null) => (r ? { low: r.low * k, high: r.high * k } : null);
+    est = {
+      ...est,
+      kph: est.kph * k,
+      estimate: { ...est.estimate, killsPerHour: scale(est.estimate.killsPerHour), expPerHour: scale(est.estimate.expPerHour), mesoPerHour: scale(est.estimate.mesoPerHour), calibration: calib },
+    };
+  }
   const observed = observedRates(pack, profile.observations[spot.id] ?? profile.observations[`map:${spot.mapId}`]);
   if (!observed) return est;
   // Measured numbers win for display. For ranking they replace computed kills/hour; level-band ranking compares
@@ -119,6 +153,7 @@ export function estimateSpot(pack: Pack, profile: Profile, spot: TrainingSpot, b
       expPerHour: observed.expPerHour,
       mesoPerHour: observed.mesoPerHour,
       observed,
+      calibration: null,
     },
   };
 }
@@ -143,7 +178,7 @@ function estimateFromData(pack: Pack, profile: Profile, spot: TrainingSpot, basi
     const kph = respawn ? sumCount / respawn : sumCount;
     const expPerKill = mobs.reduce((a, m) => a + m.weight * m.mob.exp, 0);
     return {
-      estimate: { basis: "level-band", hitsToKill: null, killsPerHour: null, expPerHour: null, mesoPerHour: null, danger, observed: null },
+      estimate: { basis: "level-band", hitsToKill: null, killsPerHour: null, expPerHour: null, mesoPerHour: null, danger, observed: null, calibration: null },
       kph,
       mobs,
       expPerKill,
@@ -198,6 +233,7 @@ function estimateFromData(pack: Pack, profile: Profile, spot: TrainingSpot, basi
       mesoPerHour: mesoPerKillShown === null ? null : range(kph * mesoPerKillShown),
       danger,
       observed: null,
+      calibration: null,
     },
     kph,
     mobs,

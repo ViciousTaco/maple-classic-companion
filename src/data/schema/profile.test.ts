@@ -52,6 +52,7 @@ test("an empty file has default settings", () => {
     theme: "system",
     window: null,
     reminders: { enabled: true, leadMinutes: 15, muted: [] },
+    hotkey: "Ctrl+Shift+K",
     watch: null, // the screen watcher is never on by default, and has no setup until the owner makes one
   });
 });

@@ -1,7 +1,7 @@
 import type { Pack } from "../data/pack";
 import type { Confidence, TrainingSpot } from "../data/schema/pack";
 import type { Profile } from "../data/schema/profile";
-import { basisFor, estimateSpot, type Estimate, type Range, type SpotEstimate } from "./estimate";
+import { basisFor, calibration, estimateSpot, type Estimate, type Range, type SpotEstimate } from "./estimate";
 import { jobFamily, isClassEquip, normalise, rawSubscores, type RawSubscores } from "./subscores";
 import { reasonsFor, warningsFor, type Reason } from "./reasons";
 import { bandFit, DEFAULT_FOCUS_WEIGHTS, finalScore, pickPlan, relaxedFit, type SubscoreKey } from "./weights";
@@ -68,6 +68,7 @@ export function recommendTraining(input: { profile: Profile; pack: Pack; now: Da
   const { profile, pack, now } = input;
   const weights = pack.focusProfiles[profile.focus] ?? DEFAULT_FOCUS_WEIGHTS[profile.focus];
   const basis = basisFor(profile);
+  const calib = calibration(pack, profile);
   const skipped = new Set(profile.skippedSpots.filter((s) => Date.parse(s.until) > now.getTime()).map((s) => s.spotId));
   const spots = [...pack.trainingSpots].sort((a, b) => a.id.localeCompare(b.id)); // ties broken by spotId (step 7)
 
@@ -79,7 +80,7 @@ export function recommendTraining(input: { profile: Profile; pack: Pack; now: Da
       if (exclude.has(spot.id)) continue;
       const bb = bestBand(pack, profile, spot, fitFn);
       if (!bb || bb.fit === 0 || !regionOk(pack, profile, spot)) continue;
-      const est = estimateSpot(pack, profile, spot, basis);
+      const est = estimateSpot(pack, profile, spot, basis, calib);
       const c: Candidate = { spot, fit: bb.fit, est, raw: rawSubscores(pack, profile, spot, est), stretch };
       if (spot.party === "party") party.push(c);
       else if (skipped.has(spot.id)) skippedOnly++;

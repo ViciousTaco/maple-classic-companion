@@ -7,7 +7,7 @@ export type ProfilesLoadResult = {
 };
 export type BackupInfo = { file: string; savedAt: string };
 export type EntityKind = "monster" | "map" | "item" | "npc";
-export type FolderName = "data" | "backups" | "exports" | "field-notes";
+export type FolderName = "data" | "backups" | "exports" | "field-notes" | "watch-log";
 /** `null`s → no installed pack is active; the UI uses the bundled baseline. */
 export type PackActive = { version: string | null; dir: string | null };
 /**
@@ -92,8 +92,14 @@ export interface Platform {
    * Rejects (message for the UI) if the window is gone/minimised or a region is outside it or > 4000×4000.
    */
   screenRead(windowId: number, regions: ScreenRegion[]): Promise<ScreenRegionText[]>;
-  /** Ctrl+Alt+W → `mcc://watch-toggle`. `registered: false` when another app already owns the shortcut. */
+  /** The watch hotkey (default Ctrl+Shift+K) → `mcc://watch-toggle`. `registered: false` when another app already owns the shortcut. */
   hotkeyStatus(): Promise<HotkeyStatus>;
+  /** I-33: the owner's choice, e.g. "Ctrl+Shift+K" (≥ 1 modifier + a letter/digit/F-key). Rejects unsafe ones. */
+  hotkeySet(accelerator: string): Promise<HotkeyStatus>;
+  /** I-44: one JSON line of recognised text + decisions → `field-notes\watch-log\<date>.jsonl`. Never pixels. */
+  watchLogAppend(line: string): Promise<string>;
+  /** Deletes every diagnostic log file; returns how many. */
+  watchLogClear(): Promise<number>;
 
   // ---- Event reminders (I-26) ----
   /**
@@ -171,7 +177,7 @@ export type MiniAction = { kind: string; payload: unknown };
 
 /** Events the Rust side emits. */
 export const APP_EVENTS = {
-  /** Ctrl+Alt+W pressed anywhere; payload `null`; every window. */
+  /** The watch hotkey pressed anywhere; payload `null`; every window. */
   watchToggle: "mcc://watch-toggle",
   /** After every successful `profilesSave`; payload `null`; every window (the mini window reloads). */
   profilesSaved: "mcc://profiles-saved",

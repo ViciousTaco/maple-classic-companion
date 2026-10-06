@@ -2,6 +2,8 @@ import { useMemo, useState } from "react";
 import { motion } from "motion/react";
 import { Search, Star } from "lucide-react";
 import type { Pack } from "../../data/pack";
+import { ownDropRate } from "../../engine/observed";
+import { ownRateLabel } from "../../engine/rates";
 import type { Item } from "../../data/schema/pack";
 import type { Profile } from "../../data/schema/profile";
 import { useActiveProfile, usePack, useProfileStore } from "../../app/context";
@@ -36,7 +38,7 @@ export function WishStar({ profile, itemId }: { profile: Profile; itemId: string
   );
 }
 
-function Sources({ pack, item }: { pack: Pack; item: Item }) {
+function Sources({ pack, item, profile }: { pack: Pack; item: Item; profile: Profile }) {
   const sources = findDropSources(pack, item.id);
   if (!sources.length) return <p className="text-sm text-ink-3">No known monster drops it yet.</p>;
   return (
@@ -47,7 +49,13 @@ function Sources({ pack, item }: { pack: Pack; item: Item }) {
             <span>
               <strong>{s.mob.name}</strong> <span className="text-ink-3">Lv {s.mob.level}</span>
             </span>
-            <span className="text-xs text-ink-2">{s.label}</span>
+            <span className="text-xs text-ink-2">
+              {s.label}
+              {(() => {
+                const own = ownRateLabel(ownDropRate(pack, profile.observations, s.mob.id, item.id));
+                return own ? <span className="ml-2 font-semibold text-leaf">{own}</span> : null;
+              })()}
+            </span>
           </div>
           {s.mapIds.length > 0 && <p className="mt-0.5 text-xs text-ink-3">Found in {s.mapIds.slice(0, 4).map((m) => mapName(pack, m)).join(", ")}{s.mapIds.length > 4 ? "…" : ""}</p>}
         </li>
@@ -84,7 +92,7 @@ function ItemRow({ pack, profile, item }: { pack: Pack; profile: Profile; item: 
             .join(" · ")}
         </p>
       )}
-      <Sources pack={pack} item={item} />
+      <Sources pack={pack} item={item} profile={profile} />
     </Section>
   );
 }

@@ -19,6 +19,9 @@ const idle: StoreApi<WatchState> = createStore<WatchState>()(() => ({
   feed: [],
   startedAt: null,
   lastScan: null,
+  run: { kills: 0, exp: 0, meso: 0, items: {}, activeMs: 0, pct: 0, pctMs: 0, maps: [] },
+  lastSummary: null,
+  effectiveIntervalMs: 2000,
   start: async () => {},
   stop: () => {},
   toggle: async () => {},
@@ -56,7 +59,16 @@ export function useWatcherSetup(platform: Platform, store: ProfileStore, pack: P
     if (!enabled || !canWatch(platform)) return;
     const w = createWatcher({ platform, store, getPack: () => packHolder.current, tell: (message, tone) => toast({ message, tone }) });
     setApi(w);
-    // Ctrl+Alt+W works even while the game has focus (global shortcut registered by Rust).
+    // I-33: Rust registers the default key at launch; apply the owner's saved choice (once the save file is loaded).
+    const hk = platform as Platform & { hotkeySet?: (a: string) => Promise<{ registered: boolean; accelerator: string }> };
+    const applyHotkey = () => {
+      const st = store.getState();
+      if (st.status === "loading" || !hk.hotkeySet) return false;
+      void hk.hotkeySet(st.file.settings.hotkey).catch(() => {});
+      return true;
+    };
+    const unsubStore = applyHotkey() ? () => {} : store.subscribe(() => applyHotkey() && unsubStore());
+    // The hotkey (default Ctrl+Shift+K) works even while the game has focus (global shortcut registered by Rust).
     const p = platform as Platform & { onEvent?: (name: string, fn: (payload: unknown) => void) => unknown };
     let un: (() => void) | null = null;
     let dead = false;
@@ -68,6 +80,7 @@ export function useWatcherSetup(platform: Platform, store: ProfileStore, pack: P
     return () => {
       dead = true;
       un?.();
+      unsubStore();
       w.getState().stop();
       setApi(idle);
     };

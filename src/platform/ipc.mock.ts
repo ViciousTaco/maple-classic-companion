@@ -136,6 +136,7 @@ export type MockControls = {
   /** `covered` flag on every region `screenRead` returns. */
   covered: boolean;
   hotkeyRegistered: boolean;
+  hotkey: string;
   /** `true` → `notify` reports a Windows toast; `false` (like the portable exe) → banner event fallback. */
   toast: boolean;
   miniOpen: boolean;
@@ -171,6 +172,7 @@ export function createMockPlatform(initialJson: string | null = null): Platform 
   const updateCalls: { url: string; sha256: string; signature: string }[] = [];
   const toasts: NotifyBanner[] = [];
   const relayed: { kind: string; payload: unknown }[] = [];
+  const watchLog: string[] = [];
   const listeners = new Map<string, Set<(payload: unknown) => void>>();
   const emit = (name: string, payload: unknown = null) => {
     for (const fn of [...(listeners.get(name) ?? [])]) fn(payload);
@@ -183,6 +185,7 @@ export function createMockPlatform(initialJson: string | null = null): Platform 
     ocrLines: {},
     covered: false,
     hotkeyRegistered: true,
+    hotkey: "Ctrl+Shift+K",
     toast: false,
     miniOpen: false,
     emit,
@@ -428,7 +431,25 @@ export function createMockPlatform(initialJson: string | null = null): Platform 
         covered: controls.covered,
       }));
     },
-    hotkeyStatus: async () => ({ registered: controls.hotkeyRegistered, accelerator: "Ctrl+Alt+W" }),
+    hotkeyStatus: async () => ({ registered: controls.hotkeyRegistered, accelerator: controls.hotkey }),
+    hotkeySet: async (accelerator) => {
+      const parts = accelerator.split("+").map((p) => p.trim());
+      const key = parts.at(-1) ?? "";
+      if (parts.length < 2 || !/^([A-Za-z]|\d|F\d{1,2})$/.test(key) || !parts.slice(0, -1).every((m) => /^(ctrl|control|alt|shift)$/i.test(m)))
+        throw new Error("Use at least one of Ctrl, Alt, Shift plus a key, e.g. Ctrl+Shift+K");
+      controls.hotkey = accelerator;
+      return { registered: controls.hotkeyRegistered, accelerator };
+    },
+    watchLogAppend: async (line) => {
+      JSON.parse(line);
+      watchLog.push(line);
+      return "mock.jsonl";
+    },
+    watchLogClear: async () => {
+      const n = watchLog.length;
+      watchLog.length = 0;
+      return n;
+    },
     notify: async (title, body) => {
       checkNote(title, body);
       if (controls.toast) {

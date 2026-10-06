@@ -11,6 +11,7 @@ const SETUP = {
   chat: { x: 0, y: 560, w: 500, h: 160 },
   map: null,
   intervalSec: 2,
+  diagnostics: false,
   savedAt: "2026-10-07T00:00:00.000Z",
 };
 

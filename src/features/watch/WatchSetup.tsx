@@ -117,6 +117,7 @@ function Wizard({ onDone }: { onDone: () => void }) {
         chat: boxes.chat,
         map: boxes.map,
         intervalSec: prev?.intervalSec ?? 2,
+        diagnostics: prev?.diagnostics ?? false,
         savedAt: new Date().toISOString(),
       },
     });

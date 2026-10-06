@@ -1,16 +1,42 @@
 import { createStore, type StoreApi } from "zustand/vanilla";
 import type { Pack } from "../../data/pack";
-import type { Profile, Settings } from "../../data/schema/profile";
+import { TRAINING_LOG_MAX, type Profile, type Settings, type TrainingRun } from "../../data/schema/profile";
 import type { ProfileStore } from "../characters/store";
 import { jobLine, rulesFromPack } from "../../data/gameRules";
-import { describeStats, parseSkillsWindow, parseStatsWindow, statsChanges, type Line, type StatsRead } from "./windows";
+import { describeStats, parseQuestWindow, parseSkillsWindow, parseStatsWindow, statsChanges, type Line, type QuestsRead, type StatsRead } from "./windows";
 import { activeProfile } from "../characters/store";
 import { recommendTraining } from "../../engine/recommend";
 import { hiddenKills, matchName, newLines, parseChatLine, parseMapName, parseStatus, type ChatEvent } from "./parse";
-import { applyEvents, applyStatus, mergeSession, newSession, percentGained, tick, type SessionTotals } from "./session";
+import { applyEvents, applyStatus, mergeSession, newSession, observationKey, percentGained, tick, type SessionTotals } from "./session";
+
+const addCounts = (a: Record<string, number>, b: Record<string, number>) => {
+  const out = { ...a };
+  for (const [k, v] of Object.entries(b)) out[k] = (out[k] ?? 0) + v;
+  return out;
+};
+
+/** Appends a run, or merges it into the previous row when it continues the same stretch (a checkpoint). */
+function appendRun(log: TrainingRun[], run: TrainingRun, continues: boolean): TrainingRun[] {
+  const last = log.at(-1);
+  if (continues && last && last.key === run.key && last.endedAt === run.startedAt) {
+    const merged: TrainingRun = {
+      ...last,
+      endedAt: run.endedAt,
+      level: run.level ?? last.level,
+      minutes: last.minutes + run.minutes,
+      kills: last.kills + run.kills,
+      exp: last.exp + run.exp,
+      meso: last.meso + run.meso,
+      items: addCounts(last.items, run.items),
+      levelPercent: last.levelPercent === null && run.levelPercent === null ? null : (last.levelPercent ?? 0) + (run.levelPercent ?? 0),
+    };
+    return [...log.slice(0, -1), merged];
+  }
+  return [...log, run].slice(-TRAINING_LOG_MAX);
+}
 
 // I-29 screen watcher. The owner is always in control: it is off at every launch, only the owner turns it on
-// (button, the top-bar pill or Ctrl+Alt+W), and it switches itself OFF — never on — when the game goes away
+// (button, the top-bar pill or the hotkey, default Ctrl+Shift+K), and it switches itself OFF — never on — when the game goes away
 // or nothing has happened for a while. Frames stay in Rust memory; only recognised text reaches this module.
 
 export type WatchWindow = { id: number; title: string; app: string; width: number; height: number; minimized: boolean };
@@ -20,11 +46,16 @@ export type WatchLine = { text: string; x: number; y: number; w: number; h: numb
 /** The platform calls the watcher needs (implemented in Rust, see src-tauri/src/screen.rs). */
 export type WatchPlatform = {
   screenListWindows(): Promise<WatchWindow[]>;
+  /** I-44 diagnostic log line (text only); optional so tests and the browser preview can omit it. */
+  watchLogAppend?(line: string): Promise<string>;
   /** `covered`: another window overlapped the region, so its text must be ignored. */
   screenRead(windowId: number, regions: WatchRegion[]): Promise<{ name: string; lines: WatchLine[]; covered?: boolean }[]>;
 };
 
 export type WatchSetup = NonNullable<Settings["watch"]>;
+export type RunTotals = { kills: number; exp: number; meso: number; items: Record<string, number>; activeMs: number; pct: number; pctMs: number; maps: string[] };
+export type RunSummary = RunTotals & { startedAt: number; endedAt: number; level: number | null };
+const EMPTY_RUN: RunTotals = { kills: 0, exp: 0, meso: 0, items: {}, activeMs: 0, pct: 0, pctMs: 0, maps: [] };
 export type FeedItem = { id: number; at: number; text: string };
 
 export type WatchState = {
@@ -40,8 +71,14 @@ export type WatchState = {
   read: { level: number | null; expPercent: number | null; name: string | null; at: number } | null;
   feed: FeedItem[];
   startedAt: number | null;
-  /** What the last whole-window read found (the in-game Stats / Skills windows), for the Watch screen. */
-  lastScan: { at: number; stats: string | null; skills: number; applied: boolean } | null;
+  /** What the last whole-window read found (the in-game Stats / Skills / Quest windows), for the Watch screen. */
+  lastScan: { at: number; stats: string | null; skills: number; quests: number; applied: boolean } | null;
+  /** Totals for the whole watching run so far (the session resets at checkpoints and map changes; this doesn't). */
+  run: RunTotals;
+  /** The last finished run, for the summary card. */
+  lastSummary: RunSummary | null;
+  /** I-32: the interval actually in use — grows when reads take longer than the chosen interval. */
+  effectiveIntervalMs: number;
 
   start(spotId?: string | null): Promise<void>;
   stop(reason?: string): void;
@@ -109,7 +146,8 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
   let lastFullScan = 0;
   let confirmNext = false;
   /** A whole-window read must say the same thing twice before it changes the character (OCR noise). */
-  let pendingScan: { key: string; stats: StatsRead | null; skills: Record<string, number> | null } | null = null;
+  let pendingScan: { key: string; stats: StatsRead | null; skills: Record<string, number> | null; quests: QuestsRead | null } | null = null;
+  let lastStepMs = 0;
   let lastStepAt = 0;
   let lastCheckpoint = 0;
   let missingSince: number | null = null;
@@ -138,12 +176,32 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
         final && runPctMs >= 10 * 60_000 && runPct > 0 && s.lastLevel !== null
           ? { percentPerHour: (runPct / runPctMs) * 3_600_000, level: s.lastLevel, measuredAt: t.toISOString(), minutes: runPctMs / 60_000 }
           : null;
+      const key = observationKey(s.spotId, s.mapId);
+      // I-34: one training-log row per watched stretch at a map (checkpoints of the same stretch are merged).
+      const run: TrainingRun | null =
+        key && s.kills > 0
+          ? { startedAt: s.startedAt, endedAt: t.toISOString(), key, level: s.lastLevel, minutes: s.activeMs / 60_000, kills: s.kills, exp: s.exp, meso: s.meso, items: s.items, levelPercent: pct }
+          : null;
       deps.store.getState().updateProfile(p.id, (prof) => ({
         ...prof,
         observations: mergeSession(prof.observations, s, t, !countedRun),
+        trainingLog: run ? appendRun(prof.trainingLog, run, countedRun) : prof.trainingLog,
         // Auto pace (I-20): measured over this watching run, so the Plan screen's projection uses real numbers.
         ...(pace ? { pace } : {}),
       }));
+      const r = get().run;
+      set({
+        run: {
+          kills: r.kills + s.kills,
+          exp: r.exp + s.exp,
+          meso: r.meso + s.meso,
+          items: addCounts(r.items, s.items),
+          activeMs: r.activeMs + s.activeMs,
+          pct: r.pct + (pct ?? 0),
+          pctMs: r.pctMs + (pct === null ? 0 : s.activeMs),
+          maps: s.mapId && !r.maps.includes(s.mapId) && s.kills > 0 ? [...r.maps, s.mapId] : r.maps,
+        },
+      });
       if (s.kills > 0) countedRun = true;
       // Continue counting from here with fresh totals (status start = last read).
       const fresh = newSession(s.spotId, s.mapId, t);
@@ -151,11 +209,17 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
     };
 
     const loop = () => {
+      // I-32: never schedule faster than reads can finish — a slow read stretches the next wait (×1.5 its duration).
+      const wanted = (setup()?.intervalSec ?? 2) * 1000;
+      const effective = Math.max(wanted, Math.round(lastStepMs * 1.5));
+      if (effective !== get().effectiveIntervalMs) set({ effectiveIntervalMs: effective });
       cancel = schedule(async () => {
         if (get().status === "off") return;
+        const t0 = now();
         await get().step();
+        lastStepMs = now() - t0;
         if (get().status !== "off") loop();
-      }, (setup()?.intervalSec ?? 2) * 1000);
+      }, effective);
     };
 
     const findWindow = async (s: WatchSetup): Promise<WatchWindow | null> => {
@@ -218,26 +282,37 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       const skillDefs = pack.skills.filter((sk) => line.has(sk.jobId)).map((sk) => ({ id: sk.id, name: sk.name, maxLevel: sk.maxLevel }));
       const stats = parseStatsWindow(lines);
       const skills = parseSkillsWindow(lines, skillDefs);
-      const key = JSON.stringify([stats, skills]);
-      const found = stats !== null || skills !== null;
+      const quests = parseQuestWindow(lines, pack.quests.map((q) => ({ id: q.id, name: q.name })));
+      const key = JSON.stringify([stats, skills, quests]);
+      const found = stats !== null || skills !== null || quests !== null;
       const agreed = force || (pendingScan?.key === key && found);
-      pendingScan = found ? { key, stats, skills } : null;
+      pendingScan = found ? { key, stats, skills, quests } : null;
       confirmNext = found && !agreed;
-      set({ lastScan: { at: t, stats: stats ? describeStats(stats) : null, skills: skills ? Object.keys(skills).length : 0, applied: false } });
-      if (!found) return "No Stats or Skills window is open in the game right now — open one and try again.";
+      const seen = { stats: stats ? describeStats(stats) : null, skills: skills ? Object.keys(skills).length : 0, quests: quests ? quests.active.length + quests.done.length : 0 };
+      set({ lastScan: { at: t, ...seen, applied: false } });
+      if (!found) return "No Stats, Skills or Quest window is open in the game right now — open one and try again.";
       if (!agreed) return "Read once — confirming on the next read.";
       const statChange = stats ? statsChanges(p, stats) : null;
       const skillChange = skills ? Object.fromEntries(Object.entries(skills).filter(([id, v]) => (p.skills[id] ?? 0) !== v)) : {};
       const skillCount = Object.keys(skillChange).length;
-      if (!statChange && skillCount === 0) return "Already up to date with the game.";
+      // I-38: quests seen under "In Progress" become active; under "Completed" become done. Nothing is ever un-done.
+      const newActive = quests ? quests.active.filter((id) => !p.unlocks.questsActive.includes(id) && !p.unlocks.questsDone.includes(id)) : [];
+      const newDone = quests ? quests.done.filter((id) => !p.unlocks.questsDone.includes(id)) : [];
+      if (!statChange && skillCount === 0 && newActive.length === 0 && newDone.length === 0) return "Already up to date with the game.";
       deps.store.getState().updateProfile(p.id, (prof) => ({
         ...prof,
         stats: { ...prof.stats, ...(statChange?.stats ?? {}) },
         combat: { ...prof.combat, ...(statChange?.combat ?? {}) },
         skills: { ...prof.skills, ...skillChange },
+        unlocks: {
+          ...prof.unlocks,
+          questsActive: [...prof.unlocks.questsActive.filter((id) => !newDone.includes(id)), ...newActive],
+          questsDone: [...prof.unlocks.questsDone, ...newDone],
+        },
       }));
-      const what = [statChange ? describeStats(statChange) : "", skillCount ? `${skillCount} skill level${skillCount === 1 ? "" : "s"}` : ""].filter(Boolean).join(" · ");
-      set({ lastScan: { at: t, stats: stats ? describeStats(stats) : null, skills: skills ? Object.keys(skills).length : 0, applied: true }, feed: [{ id: feedId++, at: t, text: `Updated from the game: ${what}` }, ...get().feed].slice(0, FEED_MAX) });
+      const questWhat = [newActive.length ? `${newActive.length} quest${newActive.length === 1 ? "" : "s"} in progress` : "", newDone.length ? `${newDone.length} quest${newDone.length === 1 ? "" : "s"} completed` : ""].filter(Boolean).join(", ");
+      const what = [statChange ? describeStats(statChange) : "", skillCount ? `${skillCount} skill level${skillCount === 1 ? "" : "s"}` : "", questWhat].filter(Boolean).join(" · ");
+      set({ lastScan: { at: t, ...seen, applied: true }, feed: [{ id: feedId++, at: t, text: `Updated from the game: ${what}` }, ...get().feed].slice(0, FEED_MAX) });
       tell(`Character updated from the game: ${what}`);
       return `Updated: ${what}`;
     };
@@ -253,6 +328,9 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       feed: [],
       startedAt: null,
       lastScan: null,
+      run: EMPTY_RUN,
+      lastSummary: null,
+      effectiveIntervalMs: 2000,
 
       async start(spotId) {
         if (get().status !== "off") return;
@@ -272,12 +350,13 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
         pendingScan = null;
         confirmNext = false;
         lastFullScan = now();
+        lastStepMs = 0;
         levelVotes = [];
         missingSince = null;
         countedRun = false;
         runPct = runPctMs = 0;
         lastStepAt = lastCheckpoint = now();
-        set({ status: "on", problem: null, spotId: chosen, mapId, autoMap: !!s.map && spotId === undefined, session: newSession(chosen, mapId, new Date(now())), read: null, feed: [], startedAt: now() });
+        set({ status: "on", problem: null, spotId: chosen, mapId, autoMap: !!s.map && spotId === undefined, session: newSession(chosen, mapId, new Date(now())), read: null, feed: [], startedAt: now(), run: EMPTY_RUN });
         loop();
       },
 
@@ -285,8 +364,11 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
         if (get().status === "off") return;
         cancel?.();
         cancel = null;
+        const level = get().session?.lastLevel ?? null;
         fold(true);
-        set({ status: "off", problem: reason ?? null, session: null, startedAt: null });
+        const r = get().run;
+        const summary: RunSummary | null = r.kills > 0 ? { ...r, startedAt: get().startedAt ?? now(), endedAt: now(), level } : null;
+        set({ status: "off", problem: reason ?? null, session: null, startedAt: null, lastSummary: summary ?? get().lastSummary });
         if (reason) tell(reason, "info");
       },
 
@@ -401,6 +483,28 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           if (fullScan) {
             lastFullScan = t;
             applyScan(pack, fullLines, t);
+          }
+          // I-44: diagnostic log — recognised text and decisions, never pixels; only while the owner has it on.
+          if (s.diagnostics && deps.platform.watchLogAppend) {
+            const sess = get().session!;
+            void deps.platform
+              .watchLogAppend(
+                JSON.stringify({
+                  t: new Date(t).toISOString(),
+                  ms: lastStepMs,
+                  status: statusLines,
+                  chat: chatLines,
+                  map: mapLines,
+                  full: fullScan ? fullLines.map((l) => l.text) : undefined,
+                  parsed: { level: st.level, expPercent: st.expPercent, expValue: st.expValue, name: st.name, mapId: get().mapId },
+                  fresh,
+                  events,
+                  hiddenPending: pendingHidden?.kills ?? 0,
+                  session: { kills: sess.kills, exp: sess.exp, meso: sess.meso, activeMs: sess.activeMs, spotId: sess.spotId },
+                  scan: fullScan ? get().lastScan : undefined,
+                }),
+              )
+              .catch(() => {});
           }
 
           if (t - lastCheckpoint >= CHECKPOINT_MS) {

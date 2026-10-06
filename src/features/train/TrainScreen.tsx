@@ -4,8 +4,8 @@ import { AlertTriangle, Coins, Eye, Footprints, Gem, MapPin, NotebookPen, Refres
 import type { FocusId } from "../../data/schema/profile";
 import type { Pack } from "../../data/pack";
 import type { Recommendation } from "../../engine/recommend";
-import { rateLabel } from "../../engine/rates";
-import { observedDrops } from "../../engine/observed";
+import { ownRateLabel, rateLabel } from "../../engine/rates";
+import { observedDrops, ownDropRate } from "../../engine/observed";
 import { navigate, useActiveProfile, usePack, useProfileStore, useRules } from "../../app/context";
 import { jobName } from "../../data/gameRules";
 import { Button, Card, Chip, EmptyState, LargeTitle, Section, Sections, Segmented, spring } from "../../ui/kit";
@@ -404,7 +404,13 @@ export function TrainScreen() {
                           </span>
                         ))}
                       </span>
-                      <span className="text-xs text-ink-2">{rateLabel(d)}</span>
+                      <span className="text-xs text-ink-2">
+                        {rateLabel(d)}
+                        {(() => {
+                          const own = ownRateLabel(ownDropRate(pack, profile.observations, m.id, d.itemId));
+                          return own ? <span className="ml-2 font-semibold text-leaf">{own}</span> : null;
+                        })()}
+                      </span>
                     </li>
                   ))}
               </ul>

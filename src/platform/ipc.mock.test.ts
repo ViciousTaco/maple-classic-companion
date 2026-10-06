@@ -164,7 +164,9 @@ test("mock screen watcher: windows, snapshot PNG, region checks and OCR lines", 
 
 test("mock events: hotkey toggle, profiles-saved, mini relay, unsubscribe", async () => {
   const p = createMockPlatform();
-  expect(await p.hotkeyStatus()).toEqual({ registered: true, accelerator: "Ctrl+Alt+W" });
+  expect(await p.hotkeyStatus()).toEqual({ registered: true, accelerator: "Ctrl+Shift+K" });
+  expect((await p.hotkeySet("Ctrl+Alt+W")).accelerator).toBe("Ctrl+Alt+W");
+  await expect(p.hotkeySet("K")).rejects.toThrow(/at least one/);
 
   const seen: string[] = [];
   const offToggle = p.onEvent(APP_EVENTS.watchToggle, () => seen.push("toggle"));

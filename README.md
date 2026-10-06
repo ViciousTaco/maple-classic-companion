@@ -9,7 +9,8 @@ Not affiliated with or endorsed by Nexon. MapleStory and all related names, imag
 never changes or interacts with the game — no memory reading, no input, no hooks, no changes to game files. The optional
 screen watcher only reads what is already on your screen while you switch it on (off at every launch), the same way
 Discord or Teams screen sharing does, using Windows' offline text recognition; pictures are never saved or sent. It
-can follow you from map to map, and read your open Character Stats and Skills windows so the character stays current.
+can follow you from map to map, read your open Character Stats, Skills and Quest windows so the character stays
+current, and keeps a training log. On/off: the Watch pill, the big switch, or Ctrl+Shift+K (changeable).
 
 ## Run it
 

@@ -48,7 +48,7 @@ export function MiniApp() {
         </span>
         <span className="flex items-center gap-2">
           {profile.expPercent !== null && <span className="tabular-nums text-ink-2">{profile.expPercent}%</span>}
-          <button type="button" title="Screen watcher on/off (Ctrl+Alt+W)" aria-label="Screen watcher on/off" onClick={() => relay({ kind: "watch-toggle", payload: {} })} className="flex h-7 w-7 items-center justify-center rounded-full bg-fill hover:bg-fill-strong">
+          <button type="button" title="Screen watcher on/off" aria-label="Screen watcher on/off" onClick={() => relay({ kind: "watch-toggle", payload: {} })} className="flex h-7 w-7 items-center justify-center rounded-full bg-fill hover:bg-fill-strong">
             <Eye size={14} />
           </button>
         </span>

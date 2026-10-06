@@ -44,6 +44,24 @@ function ObservationSchema() {
 }
 export type Observation = z.infer<ReturnType<typeof ObservationSchema>>;
 
+function TrainingRunSchema() {
+  return z.object({
+    startedAt: iso,
+    endedAt: iso,
+    /** Spot id, or `map:<id>` on a map with no guide spot. */
+    key: z.string(),
+    level: int(1, 300).nullable(),
+    minutes: z.number().min(0).max(1e6),
+    kills: count,
+    exp: count,
+    meso: count,
+    items: z.record(z.string(), count).default({}),
+    /** % of a level gained during this stretch, when the status bar was readable. */
+    levelPercent: z.number().min(0).max(1e6).nullable(),
+  });
+}
+export type TrainingRun = z.infer<ReturnType<typeof TrainingRunSchema>>;
+
 /** I-29: a region of the game window, in the window's real pixels. */
 export const RegionSchema = z.object({ x: int(0, 20000), y: int(0, 20000), w: int(4, 4000), h: int(4, 4000) });
 export type Region = z.infer<typeof RegionSchema>;
@@ -111,7 +129,11 @@ export const ProfileSchema = z.object({
   questSteps: z.record(z.string(), z.array(int(0, 99))).default({}),
   /** I-29: what the screen watcher saw, summed per training spot (only while the owner had it switched on). */
   observations: z.record(z.string(), ObservationSchema()).default({}),
+  /** I-34: one row per watched stretch at a map (newest last, capped at TRAINING_LOG_MAX). */
+  trainingLog: z.array(TrainingRunSchema()).default([]),
 });
+
+export const TRAINING_LOG_MAX = 500;
 export type Profile = z.infer<typeof ProfileSchema>;
 export type ProfileInput = z.input<typeof ProfileSchema>;
 
@@ -139,6 +161,8 @@ export const SettingsSchema = z
         muted: z.array(z.string()).default([]),
       })
       .prefault({}),
+    /** I-33: the global watch on/off key (≥ 1 modifier + a letter/digit/F-key). */
+    hotkey: z.string().min(3).max(40).default("Ctrl+Shift+K"),
     /** I-29 setup. Deliberately no "on" flag: the watcher is off at every launch. */
     watch: z
       .object({
@@ -150,6 +174,8 @@ export const SettingsSchema = z
         /** The minimap's title box; lets the watcher follow the player from map to map. */
         map: RegionSchema.nullable().default(null),
         intervalSec: z.number().min(1).max(30).default(2),
+        /** I-44: write recognised text + decisions to field-notes\watch-log\ (never pixels) for tuning. */
+        diagnostics: z.boolean().default(false),
         savedAt: iso,
       })
       .nullable()

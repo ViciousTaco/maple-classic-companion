@@ -1,15 +1,18 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { Ban, Eye, Keyboard, Lock, MonitorX, ScanText, Settings2, Timer, Trash2 } from "lucide-react";
+import { Ban, Eye, Lock, MonitorX, ScanText, Settings2, Timer, Trash2 } from "lucide-react";
+import { HotkeyPicker, levelEta, SessionSummary, TrainingLog, WatcherData } from "./WatchExtras";
 import { navigate, useActiveProfile, usePack, usePlatform, useProfileStore, useProfiles, useRouteQuery } from "../../app/context";
 import { observedRates } from "../../engine/observed";
-import { Button, Card, Chip, EmptyState, LargeTitle, Segmented } from "../../ui/kit";
+import { Button, Card, EmptyState, LargeTitle, Segmented } from "../../ui/kit";
 import { ConfirmDialog } from "../../ui/overlays";
 import { mapName, rangeText } from "../guide/text";
 import { useTrainingPlan } from "../guide/parts";
 import { BigSwitch, useElapsed } from "./WatchControls";
 import { WatchSetup } from "./WatchSetup";
 import { canWatch, useWatch } from "./useWatch";
+import { percentGained } from "./session";
+import { toast } from "../../ui/overlays";
 
 const INTERVALS = [
   { value: "1", label: "1 s" },
@@ -23,6 +26,7 @@ export function WatchScreen() {
   const profile = useActiveProfile();
   const store = useProfileStore();
   const setup = useProfiles((s) => s.file.settings.watch);
+  const hotkeyValue = useProfiles((s) => s.file.settings.hotkey);
   const query = useRouteQuery();
   const [setupClicked, setSetupOpen] = useState(false);
   // `?setup=1` (from the top-bar pill before the first setup) opens it too, even when already on this screen.
@@ -49,8 +53,11 @@ export function WatchScreen() {
   const spotId = w.spotId ?? plan?.primary?.spotId ?? null;
   const spots = pack ? [...pack.trainingSpots].sort((a, b) => mapName(pack, a.mapId).localeCompare(mapName(pack, b.mapId))) : [];
   const s = w.session;
-  const mins = s ? s.activeMs / 60_000 : 0;
+  // The session resets at checkpoints and map changes; the run keeps the whole stretch since switching on.
+  const tot = s ? { kills: w.run.kills + s.kills, exp: w.run.exp + s.exp, meso: w.run.meso + s.meso, activeMs: w.run.activeMs + s.activeMs } : w.run;
+  const mins = tot.activeMs / 60_000;
   const perHour = (v: number) => (mins >= 1 ? Math.round((v / mins) * 60).toLocaleString("en-AU") : "—");
+  const eta = s ? levelEta({ ...w.run, pct: w.run.pct + (percentGained(s) ?? 0), pctMs: w.run.pctMs + (percentGained(s) === null ? 0 : s.activeMs) }, s.lastExp) : null;
   const measured = Object.entries(profile.observations).sort((a, b) => b[1].lastAt.localeCompare(a[1].lastAt));
 
   return (
@@ -80,7 +87,7 @@ export function WatchScreen() {
             </p>
             <p className="text-sm text-ink-2">
               {w.status === "off"
-                ? w.problem ?? (setup ? "Flip the switch, click the Watch pill at the top, or press Ctrl+Alt+W in game." : "Set it up once, then switch it on whenever you like.")
+                ? w.problem ?? (setup ? `Flip the switch, click the Watch pill at the top, or press ${hotkeyValue} in game.` : "Set it up once, then switch it on whenever you like.")
                 : w.status === "paused"
                   ? w.problem
                   : setup?.map
@@ -89,9 +96,17 @@ export function WatchScreen() {
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
-            <Chip tone={hotkey === false ? "maple" : "neutral"}>
-              <Keyboard size={13} /> {hotkey === false ? "Ctrl+Alt+W is used by another app" : "Ctrl+Alt+W"}
-            </Chip>
+            <HotkeyPicker
+              value={hotkeyValue}
+              registered={hotkey}
+              onChange={async (v) => {
+                const p = platform as typeof platform & { hotkeySet?: (a: string) => Promise<{ registered: boolean }> };
+                const r = await p.hotkeySet?.(v);
+                store.getState().updateSettings({ hotkey: v });
+                if (r && !r.registered) toast({ message: `${v} is already used by another app — the watcher can't hear it. Pick another.`, tone: "error", durationMs: 8000 });
+                else toast({ message: `On/off key is now ${v}` });
+              }}
+            />
             <Button onClick={() => setSetupOpen(true)} disabled={on}>
               <Settings2 size={15} /> {setup ? "Set up again" : "Set up"}
             </Button>
@@ -126,6 +141,9 @@ export function WatchScreen() {
                 options={INTERVALS}
                 onChange={(v) => setup && store.getState().updateSettings({ watch: { ...setup, intervalSec: Number(v) } })}
               />
+              {on && setup && w.effectiveIntervalMs > setup.intervalSec * 1000 && (
+                <span className="text-xs text-ink-3">reads take longer, so every {(w.effectiveIntervalMs / 1000).toFixed(1)} s for now</span>
+              )}
             </span>
           </div>
         )}
@@ -137,11 +155,14 @@ export function WatchScreen() {
             <Card className="p-5">
               <h3 className="mb-3 font-display text-[19px] font-semibold">This session</h3>
               <dl className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-                <Tile label="Kills" value={s.kills.toLocaleString("en-AU")} sub={`${perHour(s.kills)} / h`} />
-                <Tile label="EXP" value={s.exp.toLocaleString("en-AU")} sub={`${perHour(s.exp)} / h`} />
-                <Tile label="Meso" value={s.meso.toLocaleString("en-AU")} sub={`${perHour(s.meso)} / h`} />
+                <Tile label="Kills" value={tot.kills.toLocaleString("en-AU")} sub={`${perHour(tot.kills)} / h`} />
+                <Tile label="EXP" value={tot.exp.toLocaleString("en-AU")} sub={`${perHour(tot.exp)} / h`} />
+                <Tile label="Meso" value={tot.meso.toLocaleString("en-AU")} sub={`${perHour(tot.meso)} / h`} />
                 <Tile label="Training time" value={`${Math.floor(mins)} min`} sub="idle time not counted" />
               </dl>
+              {eta && (
+                <p className="mt-2 text-sm font-semibold text-leaf">At this pace, Lv {(w.read?.level ?? profile.level) + 1} in about {eta}.</p>
+              )}
               <p className="mt-2 text-xs text-ink-3">
                 Only your own “You have gained …” lines count — other players' chat is ignored. In a party, EXP you're given for a party member's kill counts as a kill too.
               </p>
@@ -180,7 +201,7 @@ export function WatchScreen() {
           <div>
             <h3 className="font-display text-[19px] font-semibold">Stats & skills from the game</h3>
             <p className="mt-1 text-sm text-ink-2">
-              Open your Character Stats or Skills window in game. While watching, the app checks for it every 5 seconds and updates this character (STR/DEX/INT/LUK, HP/MP, damage range, accuracy, avoidability, skill levels) once two reads agree — usually within a few seconds of opening the window. Kills, EXP, meso, pickups and your map are read every tick. Or read it right now:
+              Open your Character Stats, Skills or Quest window in game. While watching, the app checks for them every 5 seconds and updates this character (STR/DEX/INT/LUK, HP/MP, damage range, accuracy, avoidability, skill levels, quests in progress or completed) once two reads agree — usually within a few seconds of opening the window. Kills, EXP, meso, pickups and your map are read every tick. Or read it right now:
             </p>
           </div>
           <Button
@@ -200,11 +221,37 @@ export function WatchScreen() {
         </div>
         {(scanMsg || w.lastScan) && (
           <p className="mt-3 text-sm text-ink-2">
-            {scanMsg ?? (w.lastScan!.applied ? "Updated from the game" : w.lastScan!.stats || w.lastScan!.skills ? "Seen in the game" : "No Stats or Skills window seen")}
+            {scanMsg ?? (w.lastScan!.applied ? "Updated from the game" : w.lastScan!.stats || w.lastScan!.skills || w.lastScan!.quests ? "Seen in the game" : "No Stats, Skills or Quest window seen")}
             {w.lastScan?.stats ? ` — ${w.lastScan.stats}` : ""}
             {w.lastScan?.skills ? ` — ${w.lastScan.skills} skill${w.lastScan.skills === 1 ? "" : "s"}` : ""}
+            {w.lastScan?.quests ? ` — ${w.lastScan.quests} quest${w.lastScan.quests === 1 ? "" : "s"}` : ""}
           </p>
         )}
+      </Card>
+
+      {pack && !on && w.lastSummary && <SessionSummary pack={pack} summary={w.lastSummary} />}
+
+      {pack && (
+        <Card className="p-5">
+          <h3 className="mb-1 font-display text-[19px] font-semibold">Training log</h3>
+          <p className="mb-3 text-sm text-ink-3">Every watched stretch at a map, so you can see whether a spot or a build change paid off.</p>
+          <TrainingLog pack={pack} log={profile.trainingLog} />
+        </Card>
+      )}
+
+      <Card className="p-5">
+        <h3 className="mb-3 font-display text-[19px] font-semibold">Your watcher data</h3>
+        <WatcherData
+          platform={platform}
+          profile={profile}
+          diagnostics={setup?.diagnostics ?? false}
+          onDiagnostics={(v) => setup && store.getState().updateSettings({ watch: { ...setup, diagnostics: v } })}
+          onForget={() => {
+            if (w.status !== "off") w.stop();
+            store.getState().updateProfile(profile.id, (p) => ({ ...p, observations: {}, trainingLog: [], pace: null, paceTimer: null }));
+            toast({ message: `Forgot everything the watcher learned for ${profile.name}` });
+          }}
+        />
       </Card>
 
       <Card className="p-5">
@@ -299,7 +346,7 @@ function Tile({ label, value, sub }: { label: string; value: string; sub: string
   );
 }
 
-/** Whether Ctrl+Alt+W got registered (null = unknown / not supported here). */
+/** Whether the watch hotkey got registered (null = unknown / not supported here). */
 function useHotkeyStatus(): boolean | null {
   const platform = usePlatform() as { hotkeyStatus?: () => Promise<{ registered: boolean }> };
   const [ok, setOk] = useState<boolean | null>(null);

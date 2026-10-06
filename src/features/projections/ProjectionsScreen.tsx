@@ -5,6 +5,7 @@ import { useActiveProfile, usePack, useProfileStore, useProfiles, useRules } fro
 import type { Profile } from "../../data/schema/profile";
 import { dropChance, formatDuration, hoursToLevel, killsForChance, levelTimeline, mesoSeries, paceFromSession } from "../../engine/projection";
 import { knownProbability } from "../../engine/rates";
+import { ownDropRate } from "../../engine/observed";
 import { formatWhen, SYDNEY } from "../../lib/sydney";
 import { Button, Card, Chip, EmptyState, Field, LargeTitle, NumberInput, Segmented, Stepper, inputClass, spring } from "../../ui/kit";
 import { ProjectionChart } from "../../ui/ProjectionChart";
@@ -266,9 +267,17 @@ function DropSection({ profile }: { profile: Profile }) {
   const chosen = itemId || candidates[0]?.id || "";
   const known = useMemo(() => {
     if (!pack || !chosen) return null;
-    const probs = (pack.index.dropsByItem.get(chosen) ?? []).map((d) => ({ d, k: knownProbability(d) })).filter((x) => x.k !== null);
-    return probs.sort((a, b) => b.k!.p - a.k!.p)[0] ?? null;
-  }, [pack, chosen]);
+    const drops = pack.index.dropsByItem.get(chosen) ?? [];
+    const probs = drops.map((d) => ({ d, k: knownProbability(d) })).filter((x) => x.k !== null);
+    const best = probs.sort((a, b) => b.k!.p - a.k!.p)[0];
+    if (best) return best;
+    // I-35: the owner's own pickups per kill (screen watcher) count as a sampled rate.
+    const own = drops
+      .map((d) => ({ d, r: ownDropRate(pack, profile.observations, d.mobId, chosen) }))
+      .filter((x) => x.r !== null && x.r.drops > 0)
+      .sort((a, b) => b.r!.drops / b.r!.kills - a.r!.drops / a.r!.kills)[0];
+    return own ? { d: own.d, k: { p: own.r!.drops / own.r!.kills, basis: "sampled" as const, sample: own.r! } } : null;
+  }, [pack, chosen, profile.observations]);
   const p = known ? known.k!.p : 1 / oneIn;
   const k50 = killsForChance(p, 0.5) ?? 0;
   const k90 = killsForChance(p, 0.9) ?? 0;
@@ -303,7 +312,7 @@ function DropSection({ profile }: { profile: Profile }) {
           ))}
         </select>
         {known ? (
-          <Chip tone="leaf">{known.k!.basis === "official" ? "Official rate" : `Your log: ${known.k!.sample!.drops} in ${known.k!.sample!.kills} kills`}</Chip>
+          <Chip tone="leaf">{known.k!.basis === "official" ? "Official rate" : `You: ${known.k!.sample!.drops} in ${known.k!.sample!.kills} kills`}</Chip>
         ) : (
           <Chip tone="sky">What-if rate — no real rate is known yet</Chip>
         )}

@@ -139,3 +139,34 @@ export function describeStats(c: StatsRead): string {
   ];
   return parts.join(", ");
 }
+
+export type QuestDefLite = { id: string; name: string };
+export type QuestsRead = { active: string[]; done: string[] };
+
+/**
+ * The Quest window: a tab heading ("In Progress" / "Completed" / "Available") with quest names listed below it.
+ * Names are matched against the guide's quests; the heading nearest above a name decides which list it joins.
+ * Null unless a heading and at least one known quest were seen.
+ */
+export function parseQuestWindow(lines: Line[], quests: QuestDefLite[]): QuestsRead | null {
+  const heads = lines
+    .map((l) => ({ l, kind: /in\s*progress/i.test(l.text) ? "active" : /completed/i.test(l.text) ? "done" : /available/i.test(l.text) ? "available" : null }))
+    .filter((h): h is { l: Line; kind: "active" | "done" | "available" } => h.kind !== null);
+  if (heads.length === 0) return null;
+  const names = quests.map((q) => q.name);
+  const out: QuestsRead = { active: [], done: [] };
+  for (const line of lines) {
+    const text = line.text.replace(/^\W+|\W+$/g, "").replace(/\s*\(\d+\)$/, "");
+    if (text.length < 4 || heads.some((h) => h.l === line)) continue;
+    const name = matchName(text, names);
+    if (!name) continue;
+    const id = quests.find((q) => q.name === name)!.id;
+    // The heading above (smaller y) and horizontally overlapping this line's window column.
+    const head = heads
+      .filter((h) => h.l.y < line.y && Math.abs(h.l.x - line.x) < 400)
+      .sort((a, b) => b.l.y - a.l.y)[0];
+    if (!head || head.kind === "available") continue;
+    if (!out[head.kind].includes(id)) out[head.kind].push(id);
+  }
+  return out.active.length + out.done.length > 0 ? out : null;
+}

@@ -14,6 +14,7 @@ export function WatchPill() {
   const problem = useWatch((s) => s.problem);
   const toggle = useWatch((s) => s.toggle);
   const setUp = useProfiles((s) => s.file.settings.watch !== null);
+  const hotkey = useProfiles((s) => s.file.settings.hotkey);
   if (!canWatch(platform)) return null;
 
   const onClick = () => {
@@ -23,11 +24,11 @@ export function WatchPill() {
   const title =
     status === "off"
       ? setUp
-        ? "Start the screen watcher (Ctrl+Alt+W)"
+        ? `Start the screen watcher (${hotkey})`
         : "Set up the screen watcher"
       : status === "paused"
-        ? `Paused: ${problem ?? ""} — click to switch off (Ctrl+Alt+W)`
-        : "Watching the game window — click to switch off (Ctrl+Alt+W)";
+        ? `Paused: ${problem ?? ""} — click to switch off (${hotkey})`
+        : `Watching the game window — click to switch off (${hotkey})`;
 
   return (
     <motion.button

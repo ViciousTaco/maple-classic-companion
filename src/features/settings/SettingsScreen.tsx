@@ -162,7 +162,7 @@ export function SettingsScreen() {
         <h2 className="font-display text-[19px] font-semibold">Screen watcher</h2>
         <p className="mt-1 text-sm text-ink-2">
           {settings.watch
-            ? `Set up for “${settings.watch.windowTitle}”. Off every time the app starts — switch it on with the Watch pill at the top or Ctrl+Alt+W.`
+            ? `Set up for “${settings.watch.windowTitle}”. Off every time the app starts — switch it on with the Watch pill at the top or ${settings.hotkey}.`
             : "Counts your kills, EXP, meso and pickups from the game screen while you switch it on. Not set up yet."}
         </p>
         <div className="mt-3">

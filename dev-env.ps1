@@ -8,4 +8,7 @@ $env:PLAYWRIGHT_BROWSERS_PATH = "$root\.cache\ms-playwright"
 $env:TEMP = "$root\.tmp"; $env:TMP = "$root\.tmp"      # compiler / linker temp files
 New-Item -ItemType Directory -Force "$root\.cache", "$root\.tmp" | Out-Null
 # Release exes carry no local paths: the project folder becomes "." and the crate cache "cargo" (P10).
-$env:RUSTFLAGS = "-C target-feature=+crt-static --remap-path-prefix=$root\.cache\cargo=cargo --remap-path-prefix=$root=."
+# CARGO_ENCODED_RUSTFLAGS (unit-separator-delimited) because the folder name may contain spaces.
+Remove-Item Env:RUSTFLAGS -ErrorAction SilentlyContinue
+$us = [char]0x1f
+$env:CARGO_ENCODED_RUSTFLAGS = "-C${us}target-feature=+crt-static${us}--remap-path-prefix=$root\.cache\cargo=cargo${us}--remap-path-prefix=$root=."

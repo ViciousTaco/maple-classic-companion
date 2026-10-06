@@ -15,15 +15,30 @@ const SETUP = {
   chat: { x: 0, y: 560, w: 500, h: 160 },
   map: { x: 0, y: 0, w: 200, h: 30 },
   intervalSec: 2,
+  diagnostics: false,
   savedAt: "2026-10-07T00:00:00.000Z",
 };
 
-async function rig(opts: { name?: string; map?: boolean } = {}) {
+const TEST_QUEST = {
+  id: "q-test",
+  name: "Test quest",
+  category: "regular",
+  minLevel: 1,
+  startNpcId: "npc-x",
+  steps: [{ text: "Talk", kind: "talk" }],
+  rewards: {},
+  sources: [{ kind: "wiki", label: "w", retrievedAt: "2026-10-05" }],
+  confidence: "likely",
+};
+
+async function rig(opts: { name?: string; map?: boolean; quest?: boolean } = {}) {
   const store = createProfileStore(createMockPlatform(), { debounceMs: 0 });
   await store.getState().load();
   store.getState().createProfile({ name: opts.name ?? "Taco", jobId: "thief", level: 25 });
   store.getState().updateSettings({ watch: opts.map === false ? { ...SETUP, map: null } : SETUP });
-  const pack = smallPack();
+  const pack = smallPack((d) => {
+    if (opts.quest) d.quests.push(TEST_QUEST as never);
+  });
   let t = Date.parse("2026-10-07T00:00:00Z");
   const screen = {
     status: ["Lv. 25  Taco  EXP 1000 [40.00%]"],
@@ -192,5 +207,93 @@ test("the open Stats / Skills window updates the character, after two whole-wind
   expect(profile().stats.str).toBe(35);
   // The on-demand read works too, and says when nothing is open.
   full.full = [];
-  expect(await watcher.getState().scanNow()).toMatch(/No Stats or Skills window/);
+  expect(await watcher.getState().scanNow()).toMatch(/No Stats, Skills or Quest window/);
+});
+
+test("run totals and the training log survive checkpoints; stopping leaves a summary", async () => {
+  const { watcher, screen, advance, profile } = await rig({ map: false });
+  await watcher.getState().start("spot-exp");
+  await advance(2000);
+  for (let i = 0; i < 4; i++) await advance(2000, [`You have gained experience (+24) ${i}`]);
+  // 5-minute checkpoint: the session resets but the run keeps counting.
+  await advance(5 * 60_000 + 1000, ["You have gained experience (+24) cp"]);
+  expect(watcher.getState().run.kills).toBeGreaterThanOrEqual(4);
+  expect(watcher.getState().run.kills + watcher.getState().session!.kills).toBe(5);
+  expect(profile().trainingLog).toHaveLength(1); // one stretch at one map so far
+  screen.status = ["Lv. 25  Taco  EXP 1120 [45.00%]"];
+  await advance(2000, ["You have gained experience (+24) last"]);
+  watcher.getState().stop();
+  const log = profile().trainingLog;
+  expect(log).toHaveLength(1); // checkpoints merged into the same stretch
+  expect(log[0]).toMatchObject({ key: "spot-exp", kills: 6, exp: 144, level: 25 });
+  expect(watcher.getState().lastSummary).toMatchObject({ kills: 6, exp: 144, level: 25, maps: ["f-exp"] });
+});
+
+test("reads slower than the interval stretch the next wait instead of piling up", async () => {
+  const store = createProfileStore(createMockPlatform(), { debounceMs: 0 });
+  await store.getState().load();
+  store.getState().createProfile({ name: "Taco", jobId: "thief", level: 25 });
+  store.getState().updateSettings({ watch: { ...SETUP, map: null, intervalSec: 1 } });
+  let t = 0;
+  const delays: number[] = [];
+  let fire: (() => void) | null = null;
+  const platform: WatchPlatform = {
+    screenListWindows: async () => [{ id: 7, title: "MapleStory", app: "", width: 1366, height: 768, minimized: false }],
+    screenRead: async (_id, regions) => {
+      t += 2500; // every read takes 2.5 s
+      return regions.map((r) => ({ name: r.name, lines: [], covered: false }));
+    },
+  };
+  const w = createWatcher({ platform, store, getPack: () => smallPack(), now: () => t, schedule: (fn, ms) => { delays.push(ms); fire = fn; return () => {}; } });
+  await w.getState().start("spot-exp");
+  expect(delays[0]).toBe(1000);
+  await fire!();
+  expect(delays[1]).toBe(3750); // 2.5 s × 1.5
+  expect(w.getState().effectiveIntervalMs).toBe(3750);
+});
+
+test("the Quest window marks quests in progress and completed, never un-completing anything", async () => {
+  const { watcher, screen, advance, profile, pack } = await rig({ map: false, quest: true });
+  const q = pack.quests[0]!;
+  const full = screen as unknown as Record<string, string[]>;
+  await watcher.getState().start("spot-exp");
+  await advance(2000);
+  full.full = ["In Progress", q.name];
+  await advance(5000);
+  await advance(2000);
+  expect(profile().unlocks.questsActive).toEqual([q.id]);
+  full.full = ["Completed", q.name];
+  await advance(5000);
+  await advance(2000);
+  expect(profile().unlocks.questsDone).toEqual([q.id]);
+  expect(profile().unlocks.questsActive).toEqual([]);
+});
+
+test("the diagnostic log gets one text line per read only while switched on", async () => {
+  const lines: string[] = [];
+  const store = createProfileStore(createMockPlatform(), { debounceMs: 0 });
+  await store.getState().load();
+  store.getState().createProfile({ name: "Taco", jobId: "thief", level: 25 });
+  store.getState().updateSettings({ watch: { ...SETUP, map: null, diagnostics: true } });
+  let t = Date.parse("2026-10-07T00:00:00Z");
+  const platform: WatchPlatform = {
+    screenListWindows: async () => [{ id: 7, title: "MapleStory", app: "", width: 1366, height: 768, minimized: false }],
+    screenRead: async (_id, regions) => regions.map((r) => ({ name: r.name, lines: r.name === "chat" ? [{ text: "You have gained mesos (+5)", x: 0, y: 0, w: 1, h: 1 }] : [], covered: false })),
+    watchLogAppend: async (line) => {
+      lines.push(line);
+      return "x.jsonl";
+    },
+  };
+  const w = createWatcher({ platform, store, getPack: () => smallPack(), now: () => t, schedule: () => () => {} });
+  await w.getState().start("spot-exp");
+  t += 2000;
+  await w.getState().step();
+  expect(lines).toHaveLength(1);
+  const entry = JSON.parse(lines[0]!);
+  expect(entry.chat).toEqual(["You have gained mesos (+5)"]);
+  expect(entry).not.toHaveProperty("png");
+  store.getState().updateSettings({ watch: { ...SETUP, map: null, diagnostics: false } });
+  t += 2000;
+  await w.getState().step();
+  expect(lines).toHaveLength(1);
 });
