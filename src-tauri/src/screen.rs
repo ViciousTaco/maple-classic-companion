@@ -145,7 +145,10 @@ pub fn erase_small_low_marks(src: &[u8], w: u32, h: u32) -> Option<Vec<u8>> {
     let lum = |p: &[u8]| 0.114 * p[0] as f64 + 0.587 * p[1] as f64 + 0.299 * p[2] as f64;
     let bgl = lum(&bg);
     let ink: Vec<bool> = (0..wu * hu).map(|i| (lum(&src[i * BPP..i * BPP + 4]) - bgl).abs() > 60.0).collect();
-    let rows: Vec<usize> = (0..hu).filter(|&y| (0..wu).any(|x| ink[y * wu + x])).collect();
+    // The text line's rows: rows with some ink but not mostly ink (a progress bar under the digits is a solid
+    // run across the box and must not stretch the measured text height).
+    let coverage = |y: usize| (0..wu).filter(|&x| ink[y * wu + x]).count() as f64 / wu as f64;
+    let rows: Vec<usize> = (0..hu).filter(|&y| { let c = coverage(y); c > 0.0 && c < 0.5 }).collect();
     let (&top, &bottom) = (rows.first()?, rows.last()?);
     let text_h = (bottom - top + 1) as f64;
     let mut seen = vec![false; wu * hu];
@@ -173,8 +176,8 @@ pub fn erase_small_low_marks(src: &[u8], w: u32, h: u32) -> Option<Vec<u8>> {
             }
         }
         let (ch, cw) = ((maxy - miny + 1) as f64, (maxx - minx + 1) as f64);
-        let low = miny as f64 >= top as f64 + text_h * 0.5;
-        if low && ch <= text_h * 0.45 && cw <= text_h * 0.4 {
+        let low = miny as f64 >= top as f64 + text_h * 0.5 && miny <= bottom;
+        if low && ch <= text_h * 0.45 && cw <= text_h * 0.4 && cw < wu as f64 * 0.5 {
             for i in comp {
                 out[i * BPP..i * BPP + 4].copy_from_slice(&bg);
             }
@@ -1096,19 +1099,23 @@ mod tests {
         let bg = [30u8, 30, 30, 255];
         let mut px: Vec<u8> = bg.repeat((w * h) as usize);
         let set = |px: &mut Vec<u8>, x: u32, y: u32| px[((y * w + x) as usize) * BPP..((y * w + x) as usize) * BPP + 4].copy_from_slice(&[230, 230, 230, 255]);
-        for y in 2..11 {
+        for y in 2..10 {
             for x in 4..9 {
                 set(&mut px, x, y); // a digit: full height
             }
         }
-        for y in 8..11 {
+        for y in 8..10 {
             for x in 12..14 {
                 set(&mut px, x, y); // a comma: small and low
             }
         }
+        for x in 0..w {
+            set(&mut px, x, 11); // a progress bar right under the text, spanning the box
+        }
         let out = erase_small_low_marks(&px, w, h).unwrap();
         let at = |p: &[u8], x: u32, y: u32| p[((y * w + x) as usize) * BPP..((y * w + x) as usize) * BPP + 4].to_vec();
         assert_eq!(at(&out, 12, 9), bg.to_vec(), "comma erased");
+        assert_eq!(at(&out, 20, 11), vec![230, 230, 230, 255], "bar kept");
         assert_eq!(at(&out, 6, 6), vec![230, 230, 230, 255], "digit kept");
         assert!(erase_small_low_marks(&bg.repeat((w * h) as usize), w, h).is_none(), "no text → None");
     }
