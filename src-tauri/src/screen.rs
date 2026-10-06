@@ -135,7 +135,8 @@ pub fn border_median(src: &[u8], w: u32, h: u32) -> [u8; 4] {
 
 /// Erases small marks sitting low on the text line — commas and decimal points — so the engine will read a long
 /// thousands-separated number (it refuses "4,012,207,400,499" outright and reads "4012207400499" perfectly).
-/// Digits span the full line height and survive. None when the box holds no text.
+/// Everything is measured against the digit glyphs themselves (median height of the compact components), so a
+/// progress bar under the digits or anything else wide in the box cannot skew it. None when the box holds no text.
 pub fn erase_small_low_marks(src: &[u8], w: u32, h: u32) -> Option<Vec<u8>> {
     let (wu, hu) = (w as usize, h as usize);
     if wu < 2 || hu < 2 {
@@ -144,30 +145,31 @@ pub fn erase_small_low_marks(src: &[u8], w: u32, h: u32) -> Option<Vec<u8>> {
     let bg = border_median(src, w, h);
     let lum = |p: &[u8]| 0.114 * p[0] as f64 + 0.587 * p[1] as f64 + 0.299 * p[2] as f64;
     let bgl = lum(&bg);
-    let ink: Vec<bool> = (0..wu * hu).map(|i| (lum(&src[i * BPP..i * BPP + 4]) - bgl).abs() > 60.0).collect();
-    // The text line's rows: rows with some ink but not mostly ink (a progress bar under the digits is a solid
-    // run across the box and must not stretch the measured text height).
-    let coverage = |y: usize| (0..wu).filter(|&x| ink[y * wu + x]).count() as f64 / wu as f64;
-    let rows: Vec<usize> = (0..hu).filter(|&y| { let c = coverage(y); c > 0.0 && c < 0.5 }).collect();
-    let (&top, &bottom) = (rows.first()?, rows.last()?);
-    let text_h = (bottom - top + 1) as f64;
+    let ink: Vec<bool> = (0..wu * hu).map(|i| (lum(&src[i * BPP..i * BPP + 4]) - bgl).abs() > 45.0).collect();
+    // Connected components (4-neighbour) with bounding boxes.
+    struct Comp {
+        px: Vec<usize>,
+        minx: usize,
+        maxx: usize,
+        miny: usize,
+        maxy: usize,
+    }
     let mut seen = vec![false; wu * hu];
-    let mut out = src.to_vec();
+    let mut comps: Vec<Comp> = Vec::new();
     for start in 0..wu * hu {
         if !ink[start] || seen[start] {
             continue;
         }
         seen[start] = true;
         let mut stack = vec![start];
-        let mut comp = Vec::new();
-        let (mut minx, mut maxx, mut miny, mut maxy) = (usize::MAX, 0usize, usize::MAX, 0usize);
+        let mut c = Comp { px: Vec::new(), minx: usize::MAX, maxx: 0, miny: usize::MAX, maxy: 0 };
         while let Some(i) = stack.pop() {
-            comp.push(i);
+            c.px.push(i);
             let (x, y) = (i % wu, i / wu);
-            minx = minx.min(x);
-            maxx = maxx.max(x);
-            miny = miny.min(y);
-            maxy = maxy.max(y);
+            c.minx = c.minx.min(x);
+            c.maxx = c.maxx.max(x);
+            c.miny = c.miny.min(y);
+            c.maxy = c.maxy.max(y);
             for j in [x.checked_sub(1).map(|xx| y * wu + xx), (x + 1 < wu).then(|| y * wu + x + 1), y.checked_sub(1).map(|yy| yy * wu + x), (y + 1 < hu).then(|| (y + 1) * wu + x)].into_iter().flatten() {
                 if ink[j] && !seen[j] {
                     seen[j] = true;
@@ -175,10 +177,31 @@ pub fn erase_small_low_marks(src: &[u8], w: u32, h: u32) -> Option<Vec<u8>> {
                 }
             }
         }
-        let (ch, cw) = ((maxy - miny + 1) as f64, (maxx - minx + 1) as f64);
-        let low = miny as f64 >= top as f64 + text_h * 0.5 && miny <= bottom;
-        if low && ch <= text_h * 0.45 && cw <= text_h * 0.4 && cw < wu as f64 * 0.5 {
-            for i in comp {
+        comps.push(c);
+    }
+    // Glyphs: compact components (not wide like a bar or an underline).
+    let is_glyph = |c: &Comp| {
+        let (cw, ch) = ((c.maxx - c.minx + 1) as f64, (c.maxy - c.miny + 1) as f64);
+        cw <= ch * 3.0 && cw < wu as f64 * 0.3
+    };
+    let mut heights: Vec<f64> = comps.iter().filter(|c| is_glyph(c)).map(|c| (c.maxy - c.miny + 1) as f64).collect();
+    if heights.is_empty() {
+        return None;
+    }
+    heights.sort_by(|a, b| a.partial_cmp(b).unwrap());
+    // The digit height: the upper-median of glyph heights (marks are the small ones).
+    let glyph_h = heights[heights.len() * 3 / 4];
+    if glyph_h < 4.0 {
+        return None;
+    }
+    let top = comps.iter().filter(|c| is_glyph(c) && (c.maxy - c.miny + 1) as f64 >= glyph_h * 0.8).map(|c| c.miny).min()?;
+    let mut out = src.to_vec();
+    for c in &comps {
+        let (cw, ch) = ((c.maxx - c.minx + 1) as f64, (c.maxy - c.miny + 1) as f64);
+        let small = ch <= glyph_h * 0.65 && cw <= glyph_h * 0.55;
+        let low = c.miny as f64 >= top as f64 + glyph_h * 0.4;
+        if is_glyph(c) && small && low {
+            for &i in &c.px {
                 out[i * BPP..i * BPP + 4].copy_from_slice(&bg);
             }
         }
@@ -460,6 +483,7 @@ pub fn resize_nearest(src: &[u8], w: u32, h: u32, nw: u32, nh: u32) -> Vec<u8> {
 }
 
 /// Adds a `p`-pixel border filled with the median colour of the image's outer ring (its background), so text
+
 /// that touches the edge doesn't get smeared outwards. Returns the `(w + 2p) × (h + 2p)` image.
 pub fn pad_with_background(src: &[u8], w: u32, h: u32, p: u32) -> Vec<u8> {
     let (w, h, p) = (w as usize, h as usize, p as usize);
@@ -912,6 +936,12 @@ mod win {
             .collect())
     }
 
+    /// Raw BGRA pixels of one region of a window (probes and tests).
+    pub fn region_pixels(id: u32, r: PxRect) -> Result<Vec<u8>, String> {
+        let (_h, win) = target(id)?;
+        capture(win.offset(r))
+    }
+
     pub fn read(id: u32, regions: &[Region]) -> Result<Vec<RegionText>, String> {
         if regions.is_empty() {
             return Ok(Vec::new());
@@ -1322,6 +1352,45 @@ mod tests {
         println!("PROBE erased: {:?}", lines.iter().map(|l| l.text.as_str()).collect::<Vec<_>>());
         let lines = win::with_engine(|e| win::ocr_region(e, &px, (360, 24), 3.0, Filter::Bilinear, max)).unwrap();
         println!("PROBE normal: {:?}", lines.iter().map(|l| l.text.as_str()).collect::<Vec<_>>());
+    }
+
+    /// Manual probe against the running stand-in window: the EXP strip's real pixels, before/after erase.
+    /// `MCC_PROBE_DIR` = where to write strip-raw.png / strip-erased.png.
+    #[cfg(windows)]
+    #[test]
+    #[ignore]
+    fn ocr_live_strip_probe() {
+        let dir = std::env::var("MCC_PROBE_DIR").unwrap_or_else(|_| ".".into());
+        let w = win::list_windows().unwrap().into_iter().find(|w| w.title == "MapleStory").expect("stand-in running");
+        let r = PxRect { x: 300, y: 561, w: 300, h: 20 };
+        let px = win::region_pixels(w.id, r).unwrap();
+        std::fs::write(format!("{dir}/strip-raw.png"), encode_png_rgb(&bgra_to_rgb(&px), r.w, r.h).unwrap()).unwrap();
+        let bg = border_median(&px, r.w, r.h);
+        let lum = |p: &[u8]| 0.114 * p[0] as f64 + 0.587 * p[1] as f64 + 0.299 * p[2] as f64;
+        let bgl = lum(&bg);
+        println!("PROBE bg {bg:?} lum {bgl:.0}");
+        for th in [30.0, 45.0, 60.0] {
+            let n = (0..(r.w * r.h) as usize).filter(|&i| (lum(&px[i * BPP..i * BPP + 4]) - bgl).abs() > th).count();
+            println!("PROBE ink pixels at >{th}: {n}");
+        }
+        let wu = r.w as usize;
+        let cov: Vec<String> = (0..r.h as usize)
+            .map(|y| format!("{:.2}", (0..wu).filter(|&x| (lum(&px[(y * wu + x) * BPP..(y * wu + x) * BPP + 4]) - bgl).abs() > 60.0).count() as f64 / wu as f64))
+            .collect();
+        println!("PROBE row coverage: {}", cov.join(" "));
+        let max = win::max_dim();
+        let a = win::with_engine(|en| win::ocr_region(en, &px, (r.w, r.h), 3.0, Filter::Bilinear, max)).unwrap();
+        println!("PROBE raw ocr: {:?}", a.iter().map(|l| l.text.as_str()).collect::<Vec<_>>());
+        match erase_small_low_marks(&px, r.w, r.h) {
+            Some(e) => {
+                std::fs::write(format!("{dir}/strip-erased.png"), encode_png_rgb(&bgra_to_rgb(&e), r.w, r.h).unwrap()).unwrap();
+                let changed = px.chunks_exact(BPP).zip(e.chunks_exact(BPP)).filter(|(a, b)| a != b).count();
+                println!("PROBE erased pixels: {changed}");
+                let b = win::with_engine(|en| win::ocr_region(en, &e, (r.w, r.h), 3.0, Filter::Bilinear, max)).unwrap();
+                println!("PROBE erased ocr: {:?}", b.iter().map(|l| l.text.as_str()).collect::<Vec<_>>());
+            }
+            None => println!("PROBE erase returned None"),
+        }
     }
 
     /// Manual accuracy report for tuning: exact-match rate of the production OCR path on rendered UI-like text.
