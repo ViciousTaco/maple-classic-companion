@@ -101,9 +101,10 @@ function Wizard({ onDone }: { onDone: () => void }) {
       const regions = BOXES.flatMap((name) => (boxes[name] ? [{ name, ...boxes[name], scale: 3, filter, ...(name === "expText" ? { mode: "both" as const } : {}) }] : []));
       const out = await platform.screenRead(win.id, regions);
       const status = parseStatus(out.find((r) => r.name === "status")?.lines.map((l) => l.text) ?? []);
-      const expLines = out.find((r) => r.name === "expText")?.lines.map((l) => l.text);
+      const expRegion = out.find((r) => r.name === "expText");
+      const expLines = expRegion?.lines.map((l) => l.text);
       if (expLines) {
-        const e = parseExpText(expLines);
+        const e = parseExpText(expLines, expRegion?.digits);
         if (e.expPercent !== null) status.expPercent = e.expPercent;
         if (e.expValue !== null) status.expValue = e.expValue;
       }

@@ -96,4 +96,8 @@ test("the EXP-numbers box: exact total and % to three decimals (owner's live-cli
   expect(parseExpText(["14982 / 33063", "4,O12,189,870,315 [72.668%]"])).toEqual({ expValue: 4012189870315, expPercent: 72.668 }); // HP row above, O for 0
   expect(parseExpText(["EXP 51402 [44.170/01"])).toEqual({ expValue: 51402, expPercent: 44.17 });
   expect(parseExpText(["nothing"])).toEqual({ expValue: null, expPercent: null });
+  // What Windows OCR really returns for the live client's strip: the % only — plus the comma-erased re-read.
+  expect(parseExpText(["[72.668%)"], "4 012 189 870 315 [72 668%)")).toEqual({ expValue: 4012189870315, expPercent: 72.668 });
+  expect(parseExpText(["[42.620%)"], "4 012 207 400 499 [42 620%)")).toEqual({ expValue: 4012207400499, expPercent: 42.62 }); // exact engine output
+  expect(parseExpText(["EXP 51402 [44.17%]"], "51402 [44 17%]")).toEqual({ expValue: 51402, expPercent: 44.17 }); // Classic-style, no separators
 });

@@ -49,7 +49,7 @@ export type WatchPlatform = {
   /** I-44 diagnostic log line (text only); optional so tests and the browser preview can omit it. */
   watchLogAppend?(line: string): Promise<string>;
   /** `covered`: another window overlapped the region, so its text must be ignored. */
-  screenRead(windowId: number, regions: WatchRegion[]): Promise<{ name: string; lines: WatchLine[]; covered?: boolean; fill?: number | null }[]>;
+  screenRead(windowId: number, regions: WatchRegion[]): Promise<{ name: string; lines: WatchLine[]; covered?: boolean; fill?: number | null; digits?: string }[]>;
 };
 
 export type WatchSetup = NonNullable<Settings["watch"]>;
@@ -425,7 +425,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           if (s.expText) regions.push({ name: "expText", ...s.expText, scale: 3, filter, mode: "both" });
           if (s.expBar && !s.expText) regions.push({ name: "expBar", ...s.expBar, mode: "bar" });
           const fullScan = confirmNext || t - lastFullScan >= FULL_SCAN_EVERY_MS;
-          if (fullScan) regions.push({ name: "full", x: 0, y: 0, w: s.sourceWidth, h: s.sourceHeight, scale: 1 });
+          if (fullScan) regions.push({ name: "full", x: 0, y: 0, w: s.sourceWidth, h: s.sourceHeight, scale: 2, filter });
           const out = await deps.platform.screenRead(windowId, regions);
           if (out.some((r) => r.covered)) throw new Missing("Something is covering the game's boxes (the mini window?) — move it aside and watching carries on.");
           missingSince = null;
@@ -440,9 +440,10 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
             fullLines.filter((l) => l.y < s.sourceHeight * 0.25 && l.x < s.sourceWidth * 0.35).map((l) => l.text);
           const st = parseStatus(statusLines);
           // I-46: the dedicated EXP-text box reads far better than the whole bar; its numbers win.
-          const expLines = out.find((r) => r.name === "expText")?.lines.map((l) => l.text);
+          const expRegion = out.find((r) => r.name === "expText");
+          const expLines = expRegion?.lines.map((l) => l.text);
           if (expLines) {
-            const e = parseExpText(expLines);
+            const e = parseExpText(expLines, expRegion?.digits);
             if (e.expPercent !== null) st.expPercent = e.expPercent;
             if (e.expValue !== null) st.expValue = e.expValue;
           }
@@ -563,7 +564,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
         try {
           const w = await findWindow(s);
           if (!w || w.minimized) return w ? "The game is minimised." : "Can't see the game window — is MapleStory open?";
-          const out = await deps.platform.screenRead(w.id, [{ name: "full", x: 0, y: 0, w: w.width, h: w.height, scale: 1 }]);
+          const out = await deps.platform.screenRead(w.id, [{ name: "full", x: 0, y: 0, w: w.width, h: w.height, scale: 2 }]);
           if (out[0]?.covered) return "Something is covering the game window — move it aside and try again.";
           return applyScan(pack, out[0]?.lines ?? [], now(), true);
         } catch (err) {

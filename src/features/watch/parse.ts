@@ -168,13 +168,18 @@ export function parseMapName(lines: string[], mapNames: string[]): string | null
  * three decimals. From a small box drawn around just those digits, which the recogniser reads far better than the
  * whole status bar.
  */
-export function parseExpText(lines: string[]): { expValue: number | null; expPercent: number | null } {
+export function parseExpText(lines: string[], digits?: string): { expValue: number | null; expPercent: number | null } {
   const text = lines.join(" ");
   const pct = /\[\s*([0-9OoIl|]{1,3})(?:[.,]([0-9OoIl|]{1,3}))?/.exec(text) ?? /([0-9OoIl|]{1,3})(?:[.,]([0-9OoIl|]{1,3}))?\s*%/.exec(text);
   const expPercent = pct ? Number(`${fixDigits(pct[1]!)}.${pct[2] ? fixDigits(pct[2]) : "0"}`) : NaN;
-  // The total is the longest digit group (with thousands separators) that isn't the %.
-  const groups = [...text.replace(/\[.*$/, "").matchAll(/[0-9OoIl|][0-9OoIl|,]{2,}/g)].map((m) => fixDigits(m[0]).replace(/,/g, ""));
-  const best = groups.sort((a, b) => b.length - a.length)[0];
+  // The total: Windows OCR refuses numbers with two or more thousands separators, so the comma-erased re-read
+  // (`digits`) is tried first — its longest digit run before any "[" — then the normal text.
+  // Erased separators leave gaps ("4 012 207 400 499"): digit groups split by one space or comma are one number.
+  const longest = (src: string) =>
+    [...src.replace(/\[.*$/, "").replace(/([0-9OoIl|])[ ,](?=[0-9OoIl|]{3}(?![0-9OoIl|]))/g, "$1").matchAll(/[0-9OoIl|][0-9OoIl|,]{2,}/g)]
+      .map((m) => fixDigits(m[0]).replace(/,/g, ""))
+      .sort((a, b) => b.length - a.length)[0];
+  const best = (digits ? longest(digits) : undefined) ?? longest(text);
   const expValue = best ? Number(best) : NaN;
   return {
     expValue: Number.isSafeInteger(expValue) && expValue >= 0 ? expValue : null,

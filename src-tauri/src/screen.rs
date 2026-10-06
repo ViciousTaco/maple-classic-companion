@@ -105,6 +105,82 @@ pub struct RegionText {
     /// `mode: "bar"` only — the filled fraction 0..1, or null when the box doesn't look like a bar.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub fill: Option<f64>,
+    /// `mode: "both"` only — the text read again with commas/points erased, so long thousands-separated numbers
+    /// come through (Windows OCR refuses "4,012,207" but reads "4012207").
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub digits: Option<String>,
+}
+
+/// Median colour of the border pixels: the region's background.
+pub fn border_median(src: &[u8], w: u32, h: u32) -> [u8; 4] {
+    let (w, h) = (w as usize, h as usize);
+    let px = |x: usize, y: usize| &src[(y * w + x) * BPP..(y * w + x + 1) * BPP];
+    let mut ring: Vec<&[u8]> = Vec::with_capacity(2 * (w + h));
+    for x in 0..w {
+        ring.push(px(x, 0));
+        ring.push(px(x, h - 1));
+    }
+    for y in 0..h {
+        ring.push(px(0, y));
+        ring.push(px(w - 1, y));
+    }
+    let mut fill = [0u8, 0, 0, 255];
+    for (c, slot) in fill.iter_mut().enumerate().take(3) {
+        let mut v: Vec<u8> = ring.iter().map(|p| p[c]).collect();
+        v.sort_unstable();
+        *slot = v[v.len() / 2];
+    }
+    fill
+}
+
+/// Erases small marks sitting low on the text line — commas and decimal points — so the engine will read a long
+/// thousands-separated number (it refuses "4,012,207,400,499" outright and reads "4012207400499" perfectly).
+/// Digits span the full line height and survive. None when the box holds no text.
+pub fn erase_small_low_marks(src: &[u8], w: u32, h: u32) -> Option<Vec<u8>> {
+    let (wu, hu) = (w as usize, h as usize);
+    if wu < 2 || hu < 2 {
+        return None;
+    }
+    let bg = border_median(src, w, h);
+    let lum = |p: &[u8]| 0.114 * p[0] as f64 + 0.587 * p[1] as f64 + 0.299 * p[2] as f64;
+    let bgl = lum(&bg);
+    let ink: Vec<bool> = (0..wu * hu).map(|i| (lum(&src[i * BPP..i * BPP + 4]) - bgl).abs() > 60.0).collect();
+    let rows: Vec<usize> = (0..hu).filter(|&y| (0..wu).any(|x| ink[y * wu + x])).collect();
+    let (&top, &bottom) = (rows.first()?, rows.last()?);
+    let text_h = (bottom - top + 1) as f64;
+    let mut seen = vec![false; wu * hu];
+    let mut out = src.to_vec();
+    for start in 0..wu * hu {
+        if !ink[start] || seen[start] {
+            continue;
+        }
+        seen[start] = true;
+        let mut stack = vec![start];
+        let mut comp = Vec::new();
+        let (mut minx, mut maxx, mut miny, mut maxy) = (usize::MAX, 0usize, usize::MAX, 0usize);
+        while let Some(i) = stack.pop() {
+            comp.push(i);
+            let (x, y) = (i % wu, i / wu);
+            minx = minx.min(x);
+            maxx = maxx.max(x);
+            miny = miny.min(y);
+            maxy = maxy.max(y);
+            for j in [x.checked_sub(1).map(|xx| y * wu + xx), (x + 1 < wu).then(|| y * wu + x + 1), y.checked_sub(1).map(|yy| yy * wu + x), (y + 1 < hu).then(|| (y + 1) * wu + x)].into_iter().flatten() {
+                if ink[j] && !seen[j] {
+                    seen[j] = true;
+                    stack.push(j);
+                }
+            }
+        }
+        let (ch, cw) = ((maxy - miny + 1) as f64, (maxx - minx + 1) as f64);
+        let low = miny as f64 >= top as f64 + text_h * 0.5;
+        if low && ch <= text_h * 0.45 && cw <= text_h * 0.4 {
+            for i in comp {
+                out[i * BPP..i * BPP + 4].copy_from_slice(&bg);
+            }
+        }
+    }
+    Some(out)
 }
 
 /// The bar in an EXP strip sits under the digits: measure the bottom 40 % of the box (at least 3 rows).
@@ -384,22 +460,7 @@ pub fn resize_nearest(src: &[u8], w: u32, h: u32, nw: u32, nh: u32) -> Vec<u8> {
 /// that touches the edge doesn't get smeared outwards. Returns the `(w + 2p) × (h + 2p)` image.
 pub fn pad_with_background(src: &[u8], w: u32, h: u32, p: u32) -> Vec<u8> {
     let (w, h, p) = (w as usize, h as usize, p as usize);
-    let px = |x: usize, y: usize| &src[(y * w + x) * BPP..(y * w + x + 1) * BPP];
-    let mut ring: Vec<&[u8]> = Vec::with_capacity(2 * (w + h));
-    for x in 0..w {
-        ring.push(px(x, 0));
-        ring.push(px(x, h - 1));
-    }
-    for y in 0..h {
-        ring.push(px(0, y));
-        ring.push(px(w - 1, y));
-    }
-    let mut fill = [0u8, 0, 0, 255];
-    for (c, slot) in fill.iter_mut().enumerate().take(3) {
-        let mut v: Vec<u8> = ring.iter().map(|p| p[c]).collect();
-        v.sort_unstable();
-        *slot = v[v.len() / 2];
-    }
+    let fill = border_median(src, w as u32, h as u32);
     let nw = w + 2 * p;
     let mut out = fill.repeat(nw * (h + 2 * p));
     for y in 0..h {
@@ -826,8 +887,12 @@ mod win {
         filter: Filter,
         max: u32,
     ) -> Result<Vec<OcrLine>, String> {
-        let padded = pad_with_background(px, w, h, OCR_PAD);
-        let (pw, ph) = (w + 2 * OCR_PAD, h + 2 * OCR_PAD);
+        // Short boxes (a single text line) are enlarged more; the engine likes ~40–60 px tall glyphs.
+        let scale = if h <= 24 { scale.max(4.0) } else { scale };
+        // Pad so that after enlargement there is at least a text-height of background around the line.
+        let pad = OCR_PAD.max((h as f64 * 0.75).round() as u32);
+        let padded = pad_with_background(px, w, h, pad);
+        let (pw, ph) = (w + 2 * pad, h + 2 * pad);
         let (nw, nh) = ocr_size(pw, ph, scale, max);
         let scaled = match filter {
             Filter::Nearest if nw >= pw => resize_nearest(&padded, pw, ph, nw, nh),
@@ -838,7 +903,7 @@ mod win {
         Ok(recognize(engine, &scaled, nw, nh)?
             .into_iter()
             .map(|(text, words)| {
-                let (x, y, lw, lh) = line_box(&words, sx, sy, OCR_PAD as f32, w, h);
+                let (x, y, lw, lh) = line_box(&words, sx, sy, pad as f32, w, h);
                 OcrLine { text, x, y, w: lw, h: lh }
             })
             .collect())
@@ -865,11 +930,19 @@ mod win {
                     let px = crop(&frame, b.w, local);
                     let covered = is_covered(win.offset(r), &above);
                     if region.mode == Mode::Bar {
-                        return Ok(RegionText { name: region.name.clone(), lines: Vec::new(), covered, fill: bar_fill(&px, r.w, r.h) });
+                        return Ok(RegionText { name: region.name.clone(), lines: Vec::new(), covered, fill: bar_fill(&px, r.w, r.h), digits: None });
                     }
                     let lines = ocr_region(engine, &px, (r.w, r.h), scale, region.filter, max)?;
-                    let fill = if region.mode == Mode::Both { bar_fill_lower(&px, r.w, r.h) } else { None };
-                    Ok(RegionText { name: region.name.clone(), lines, covered, fill })
+                    let (fill, digits) = if region.mode == Mode::Both {
+                        let digits = erase_small_low_marks(&px, r.w, r.h)
+                            .and_then(|e| ocr_region(engine, &e, (r.w, r.h), scale, region.filter, max).ok())
+                            .map(|ls| ls.iter().map(|l| l.text.as_str()).collect::<Vec<_>>().join(" "))
+                            .filter(|t| !t.is_empty());
+                        (bar_fill_lower(&px, r.w, r.h), digits)
+                    } else {
+                        (None, None)
+                    };
+                    Ok(RegionText { name: region.name.clone(), lines, covered, fill, digits })
                 })
                 .collect()
         })
@@ -1018,6 +1091,29 @@ mod tests {
     }
 
     #[test]
+    fn small_low_marks_are_erased_but_digits_survive() {
+        let (w, h) = (40u32, 12u32);
+        let bg = [30u8, 30, 30, 255];
+        let mut px: Vec<u8> = bg.repeat((w * h) as usize);
+        let set = |px: &mut Vec<u8>, x: u32, y: u32| px[((y * w + x) as usize) * BPP..((y * w + x) as usize) * BPP + 4].copy_from_slice(&[230, 230, 230, 255]);
+        for y in 2..11 {
+            for x in 4..9 {
+                set(&mut px, x, y); // a digit: full height
+            }
+        }
+        for y in 8..11 {
+            for x in 12..14 {
+                set(&mut px, x, y); // a comma: small and low
+            }
+        }
+        let out = erase_small_low_marks(&px, w, h).unwrap();
+        let at = |p: &[u8], x: u32, y: u32| p[((y * w + x) as usize) * BPP..((y * w + x) as usize) * BPP + 4].to_vec();
+        assert_eq!(at(&out, 12, 9), bg.to_vec(), "comma erased");
+        assert_eq!(at(&out, 6, 6), vec![230, 230, 230, 255], "digit kept");
+        assert!(erase_small_low_marks(&bg.repeat((w * h) as usize), w, h).is_none(), "no text → None");
+    }
+
+    #[test]
     fn bar_fill_measures_a_half_full_bar_and_ignores_flat_boxes() {
         let (w, h) = (200u32, 10u32);
         let mut px = vec![0u8; (w * h) as usize * BPP];
@@ -1160,6 +1256,7 @@ mod tests {
             lines: vec![OcrLine { text: "EXP".into(), x: 1.0, y: 2.0, w: 3.0, h: 4.0 }],
             covered: false,
             fill: None,
+            digits: None,
         };
         assert_eq!(
             serde_json::to_string(&t).unwrap(),
@@ -1189,6 +1286,35 @@ mod tests {
         assert_eq!(l.text, "You have gained experience (+512)");
         assert!(l.x >= 2.0 && l.x <= 8.0 && l.y >= 2.0 && l.y <= 10.0, "{l:?}");
         assert!(l.x + l.w <= w as f32 && l.y + l.h <= h as f32 && l.w > 150.0, "{l:?}");
+    }
+
+
+    /// Manual probe (2026-10-06): Windows OCR refuses numbers with two or more thousands separators. Does any
+    /// installed recogniser language accept them, and does erasing the commas first fix it?
+    #[cfg(windows)]
+    #[test]
+    #[ignore]
+    fn ocr_long_number_probe() {
+        use gdi_text::Style;
+        use windows::Media::Ocr::OcrEngine;
+        let style = Style { px: 11, fg: 0x00E6_E6E6, bg: 30, aa: true, x: 6, y: 4 };
+        let text = "4,012,207,400,499 [42.620%]";
+        let px = gdi_text::render_styled(text, 360, 24, &style);
+        let max = win::max_dim();
+        let langs = OcrEngine::AvailableRecognizerLanguages().unwrap();
+        for i in 0..langs.Size().unwrap() {
+            let l = langs.GetAt(i).unwrap();
+            let tag = l.LanguageTag().unwrap().to_string();
+            if let Ok(eng) = OcrEngine::TryCreateFromLanguage(&l) {
+                let lines = win::ocr_region(&eng, &px, (360, 24), 3.0, Filter::Bilinear, max).unwrap();
+                println!("PROBE lang {tag}: {:?}", lines.iter().map(|l| l.text.as_str()).collect::<Vec<_>>());
+            }
+        }
+        let erased = erase_small_low_marks(&px, 360, 24).unwrap();
+        let lines = win::with_engine(|e| win::ocr_region(e, &erased, (360, 24), 3.0, Filter::Bilinear, max)).unwrap();
+        println!("PROBE erased: {:?}", lines.iter().map(|l| l.text.as_str()).collect::<Vec<_>>());
+        let lines = win::with_engine(|e| win::ocr_region(e, &px, (360, 24), 3.0, Filter::Bilinear, max)).unwrap();
+        println!("PROBE normal: {:?}", lines.iter().map(|l| l.text.as_str()).collect::<Vec<_>>());
     }
 
     /// Manual accuracy report for tuning: exact-match rate of the production OCR path on rendered UI-like text.

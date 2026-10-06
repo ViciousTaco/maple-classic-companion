@@ -172,6 +172,8 @@ export type ScreenRegionText = {
   covered: boolean;
   /** `mode: "bar"` only — filled fraction 0..1, or null when the box doesn't look like a bar. */
   fill?: number | null;
+  /** `mode: "both"` only — the text re-read with commas/points erased (long numbers come through this way). */
+  digits?: string;
 };
 export type HotkeyStatus = { registered: boolean; accelerator: string };
 export type NotifyResult = { via: "toast" | "fallback"; reason: string | null };
