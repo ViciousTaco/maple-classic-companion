@@ -490,6 +490,10 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
 
           let session = get().session!;
           const before = { ...session.killsByMob };
+          // The EXP bar moving up is training even when no chat line could be read (owner's run on the live
+          // client): it keeps the training clock running so pace and time-to-level come from the bar alone.
+          const prevExp = session.lastExp;
+          if (st.expPercent !== null && prevExp !== null && st.expPercent > prevExp + 0.001 && (st.level === null || st.level === (session.lastLevel ?? st.level))) session = { ...session, lastKillAt: t };
           session = applyEvents(session, events, pack, t);
           session = tick(session, dt, t);
           session = applyStatus(session, st.level, st.expPercent);

@@ -48,21 +48,28 @@ export function parseChatLine(line: string): ChatEvent | null {
   const l = line.trim();
   const k = l.toLowerCase().replace(/rn/g, "m");
   // System messages start the line ("You have gained …", optionally after a "[Tag]"); anything after a "Name:"
-  // prefix is a player talking.
-  if (!/^(?:\[[^\]]{1,24}\]\s*)?[^a-z]{0,3}(?:you\s+have\s+|\+\s*\d)/.test(k)) return null;
+  // prefix is a player talking. Lines with a "Name:" prefix are never gains, whatever follows.
+  if (/^[^:(]{1,24}:\s/.test(l)) return null;
+  const systemStart = /^(?:\[[^\]]{1,24}\]\s*)?[^a-z]{0,3}(?:you\s+have\s+|\+\s*\d)/.test(k);
   const amount = () => {
     const m = AMOUNT.exec(l);
     return m ? num(m[1] ?? m[2]!) : NaN;
   };
-  if (/gain\w*\s+(?:an?\s+)?item\b/.test(k)) {
+  if (systemStart && /gain\w*\s+(?:an?\s+)?item\b/.test(k)) {
     const m = /\(\s*(.+?)\s*(?:x\s*\d+\s*)?\)/.exec(l);
     return m ? { kind: "item", name: m[1]!.trim() } : null;
   }
-  if (/gain\w*\s+(?:some\s+)?mes\w*/.test(k)) {
+  if (systemStart && /gain\w*\s+(?:some\s+)?mes\w*/.test(k)) {
     const a = amount();
     return a > 0 && a < 100_000_000 ? { kind: "meso", amount: a } : null;
   }
-  if (/gain\w*\s+(?:an?\s+)?ex\w*/.test(k) || /^\+\s*\d[\d,]*\s*ex\w*/.test(k)) {
+  if (systemStart && (/gain\w*\s+(?:an?\s+)?ex\w*/.test(k) || /^\+\s*\d[\d,]*\s*ex\w*/.test(k))) {
+    const a = amount();
+    return a > 0 && a < 10_000_000 ? { kind: "exp", amount: a } : null;
+  }
+  // Words unreadable but the shape is unmistakable: an EXP-like token ("EXP", "EZP", "E/.P") and a "(+N)" amount.
+  // Seen on the live client, where the chat font defeats OCR but the digits survive.
+  if (/\bE(?:X|Z|[^\w\s]{1,3})?P\b/.test(l) && /\(\s*\+/.test(l)) {
     const a = amount();
     return a > 0 && a < 10_000_000 ? { kind: "exp", amount: a } : null;
   }

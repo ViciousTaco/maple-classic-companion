@@ -74,6 +74,10 @@ test("other players' chat never counts, even when it mentions gains", () => {
   expect(parseChatLine("[You have gained mesos (+12)")).toEqual({ kind: "meso", amount: 12 }); // stray OCR bracket
   expect(parseChatLine("[Event] You have gained experience (+50)")).toEqual({ kind: "exp", amount: 50 }); // tagged system line
   expect(parseChatLine("[Guild] Bob: You have gained experience (+50)")).toBeNull();
+  // Live-client OCR (2026-10-06): words mangled, the EXP token and amount survive.
+  expect(parseChatLine("J3uit ZICJ(llJ3 E/.P (+1 02753)")).toEqual({ kind: "exp", amount: 102753 });
+  expect(parseChatLine("; 30111J3 EZP (+91 49274)")).toEqual({ kind: "exp", amount: 9149274 });
+  expect(parseChatLine("Bob: EXP (+500) lol")).toBeNull(); // a player, not the game
 });
 
 test("the status bar gives the character's name; map names tolerate OCR but not ambiguity", () => {
@@ -339,4 +343,29 @@ test("EXP bar fill stands in for the % when the digits can't be read", async () 
   expect(w.getState().read?.expPercent).toBe(41.2);
   expect(w.getState().session?.startExp).toBe(40);
   expect(w.getState().session?.lastExp).toBe(41.2);
+});
+
+test("a rising EXP bar keeps the training clock running when no chat is readable", async () => {
+  const store = createProfileStore(createMockPlatform(), { debounceMs: 0 });
+  await store.getState().load();
+  store.getState().createProfile({ name: "Taco", jobId: "thief", level: 25 });
+  store.getState().updateSettings({ watch: { ...SETUP, map: null, expBar: { x: 0, y: 760, w: 600, h: 6 } } });
+  let t = Date.parse("2026-10-07T00:00:00Z");
+  let fill = 0.4;
+  const platform: WatchPlatform = {
+    screenListWindows: async () => [{ id: 7, title: "MapleStory", app: "", width: 1366, height: 768, minimized: false }],
+    screenRead: async (_id, regions) =>
+      regions.map((r) => ({ name: r.name, lines: r.name === "status" ? [{ text: "Lv. 25  Taco", x: 0, y: 0, w: 1, h: 1 }] : [], covered: false, ...(r.mode === "bar" ? { fill } : {}) })),
+  };
+  const w = createWatcher({ platform, store, getPack: () => smallPack(), now: () => t, schedule: () => () => {} });
+  await w.getState().start("spot-exp");
+  for (let i = 0; i < 10; i++) {
+    t += 2000;
+    fill += 0.002;
+    await w.getState().step();
+  }
+  const s = w.getState().session!;
+  expect(s.kills).toBe(0);
+  expect(s.activeMs).toBeGreaterThanOrEqual(16_000); // the clock ran because EXP kept rising
+  expect(w.getState().read?.expPercent).toBeCloseTo(42, 0);
 });

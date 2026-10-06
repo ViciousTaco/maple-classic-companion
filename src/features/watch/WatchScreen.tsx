@@ -178,6 +178,7 @@ export function WatchScreen() {
               )}
               <p className="mt-2 text-xs text-ink-3">
                 Only your own “You have gained …” lines count — other players' chat is ignored. In a party, EXP you're given for a party member's kill counts as a kill too.
+                {tot.kills === 0 && mins >= 1 ? " No chat line has been readable yet, so kills aren't counted — but your EXP % is moving, so pace and time to level still work." : ""}
               </p>
               <p className="mt-3 text-sm text-ink-2">
                 {w.read ? (
