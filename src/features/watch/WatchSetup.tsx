@@ -20,7 +20,7 @@ const BOXES = ["status", "expText", "chat", "map"] as const;
 
 const BOX = {
   status: { label: "Level", hint: "Drag a small box around your level and name on the status bar — e.g. “Lv. 272 ViciousTaco”.", color: "var(--sky)", cls: "border-sky bg-sky/15" },
-  chat: { label: "Chat box", hint: "Drag a box around the chat log — the panel where messages scroll (bottom-left by default), where “You have gained …” lines appear. Not the notification or quest helper boxes.", color: "var(--maple)", cls: "border-maple bg-maple/15" },
+  chat: { label: "EXP messages", hint: "Drag a box around where the EXP messages pop up after each kill — “You received EXP (+…)” / “You have gained experience (+…)”, usually stacked on the right above the skill bar. Make it tall enough for a few lines. Not the chat log, notification or quest helper boxes.", color: "var(--maple)", cls: "border-maple bg-maple/15" },
   map: { label: "Map name (optional)", hint: "Drag a box around the map's name at the top of the minimap, so Analyse follows you from map to map.", color: "var(--leaf)", cls: "border-leaf bg-leaf/15" },
   expText: { label: "EXP", hint: "Drag a box around the EXP digits — e.g. “4,012,189,870,315 [72.668%]”. The % gives your progress to three decimals; the total shows when it reads cleanly.", color: "#ffcc00", cls: "border-[#ffcc00] bg-[#ffcc00]/15" },
 } as const;
@@ -30,7 +30,7 @@ const looksLikeGame = (w: WatchWindow) => /maple/i.test(w.title) && !OWN_TITLE.t
 
 export function WatchSetup({ open, onOpenChange }: { open: boolean; onOpenChange: (v: boolean) => void }) {
   return (
-    <Dialog open={open} onOpenChange={onOpenChange} title="Set up Analyse" description="Three quick steps. Nothing is read until you switch Analyse on. Four boxes: Level, EXP, Chat, and the minimap's map name (optional — lets Analyse follow you between maps)." wide>
+    <Dialog open={open} onOpenChange={onOpenChange} title="Set up Analyse" description="Three quick steps. Nothing is read until you switch Analyse on. Four boxes: Level, EXP, EXP messages, and the minimap's map name (optional — lets Analyse follow you between maps)." wide>
       {open && <Wizard onDone={() => onOpenChange(false)} />}
     </Dialog>
   );

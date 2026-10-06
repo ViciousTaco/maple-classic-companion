@@ -41,12 +41,12 @@ export const ACTIVE_WINDOW_MS = 60_000;
 
 export function applyEvents(t: SessionTotals, events: ChatEvent[], pack: Pack, nowMs = Date.now()): SessionTotals {
   const next = { ...t, killsByMob: { ...t.killsByMob }, items: { ...t.items } };
-  if (events.some((e) => e.kind === "exp")) next.lastKillAt = nowMs;
+  if (events.some((e) => e.kind === "exp" || e.kind === "kill")) next.lastKillAt = nowMs;
   const itemNames = pack.items.map((i) => i.name);
   for (const e of events) {
-    if (e.kind === "exp") {
-      next.exp += e.amount;
-      if (e.bonus) continue; // extra EXP for the same kill
+    if (e.kind === "exp" || e.kind === "kill") {
+      if (e.kind === "exp") next.exp += e.amount;
+      if (e.kind === "exp" && e.bonus) continue; // EXP that isn't a kill (bonus line, pickup)
       next.kills += 1;
       const mob = monsterForExp(pack, t.mapId, e.amount);
       next.killsByMob[mob] = (next.killsByMob[mob] ?? 0) + 1;

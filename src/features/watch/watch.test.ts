@@ -1,5 +1,6 @@
 import { smallPack } from "../../../tests/fixtures/pack.small";
-import { hiddenKills, matchName, newLines, parseChatLine, parseStatus } from "./parse";
+import { hiddenKills, matchName, parseChatLine, parseStatus } from "./parse";
+import { newLines } from "./kills";
 import { applyEvents, applyStatus, monsterForExp, newSession, percentGained } from "./session";
 
 test("status bar: level and EXP % in the shapes OCR produces", () => {
@@ -124,12 +125,12 @@ test("kills only from lines that say so — real mangled lines from the owner's 
   expect(kill("received EZP (+335205)")).toBe(true);
   expect(kill("'{ou received EZP (+335205)")).toBe(true);
   expect(kill("You reteived EXP (+395205)")).toBe(true);
-  // Bonus lines with "Bonus" mangled: EXP only, not a kill.
+  // Bonus lines with "Bonus" mangled: never a kill by their words (their amounts aren't kill amounts either).
   expect(kill("Ell-lit ZJCJ(ljJ3 E/.P (+1 02753)")).toBe(false);
   expect(exp("Ell-lit ZJCJ(ljJ3 E/.P (+1 02753)")).toBe(102753);
   expect(kill("EXP: (+118561)'")).toBe(false);
   expect(kill("I. 301 30111J3 EZP (+'142274)")).toBe(false);
   // Garbage amounts are dropped, never "+1 EXP".
   expect(parseChatLine("Field ERP: 30% (+1 •1356-1 )")).toBeNull();
-  expect(parseChatLine("E•/.p (+335205)")).toEqual({ kind: "exp", amount: 335205, bonus: true });
+  expect(parseChatLine("E•/.p (+335205)")).toEqual({ kind: "exp", amount: 335205, bonus: true, unclear: true }); // its amount decides
 });

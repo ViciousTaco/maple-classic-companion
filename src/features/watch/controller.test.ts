@@ -61,7 +61,7 @@ test("counts kills seen after switching on, then saves them to the spot when swi
   await advance(2000); // nothing new
   expect(watcher.getState().session).toMatchObject({ kills: 2, exp: 48, meso: 15, items: { "i-cap": 1 } });
   expect(watcher.getState().feed[0]!.text).toBe("Picked up Test Item i-cap");
-  expect(watcher.getState().feed.some((f) => f.text === "+24 EXP · Test Mob m-fast")).toBe(true);
+  expect(watcher.getState().feed.some((f) => f.text === "Kill · +24 EXP · Test Mob m-fast")).toBe(true);
   watcher.getState().stop();
   expect(watcher.getState().status).toBe("off");
   expect(profile().observations["spot-exp"]).toMatchObject({ kills: 2, exp: 48, meso: 15, sessions: 1 });

@@ -77,8 +77,8 @@ test("other players' chat never counts, even when it mentions gains", () => {
   expect(parseChatLine("[Event] You have gained experience (+50)")).toEqual({ kind: "exp", amount: 50 }); // tagged system line
   expect(parseChatLine("[Guild] Bob: You have gained experience (+50)")).toBeNull();
   // Live-client OCR (2026-10-06): words mangled, the EXP token and amount survive.
-  expect(parseChatLine("J3uit ZICJ(llJ3 E/.P (+1 02753)")).toEqual({ kind: "exp", amount: 102753, bonus: true }); // unreadable words: EXP, not a kill
-  expect(parseChatLine("; 30111J3 EZP (+91 49274)")).toEqual({ kind: "exp", amount: 9149274, bonus: true });
+  expect(parseChatLine("J3uit ZICJ(llJ3 E/.P (+1 02753)")).toEqual({ kind: "exp", amount: 102753, bonus: true, unclear: true }); // unreadable words: the amount decides
+  expect(parseChatLine("; 30111J3 EZP (+91 49274)")).toEqual({ kind: "exp", amount: 9149274, bonus: true, unclear: true });
   expect(parseChatLine("Bob: EXP (+500) lol")).toBeNull(); // a player, not the game
 });
 
@@ -149,9 +149,9 @@ test("mobbing: more kills per read than chat lines are counted from the EXP tota
   // 10 kills in 2 s: the chat box only holds 6 lines, so 4 fell off before being seen.
   screen.status = ["Lv. 25  Taco  EXP 1240 [42.00%]"];
   await advance(2000, Array.from({ length: 10 }, (_, i) => `You have gained experience (+24) ${i}`));
-  // With no overlap between reads only the newest line is trusted (1 kill); the other 9 come from the EXP total once
-  // the next read confirms it didn't fall back.
-  expect(watcher.getState().session!.kills).toBe(1);
+  // Every line the box shows is new (all below or in place of what was there): 6 kills; the other 4 come from the
+  // EXP total once the next read confirms it didn't fall back.
+  expect(watcher.getState().session!.kills).toBe(6);
   screen.status = ["Lv. 25  Taco  EXP 1240 [42.00%]"];
   await advance(2000);
   expect(watcher.getState().session!.kills).toBe(10);

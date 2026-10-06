@@ -35,10 +35,20 @@ export function parseStatus(lines: string[]): StatusRead {
   };
 }
 
-/** `bonus`: an extra EXP line for the same kill (party, buff, burning field…) — adds EXP, never a kill. */
-export type ChatEvent = { kind: "exp"; amount: number; bonus?: boolean } | { kind: "meso"; amount: number } | { kind: "item"; name: string };
+/**
+ * `bonus`: EXP that isn't a kill (a bonus line, a pickup). `unclear`: the words were unreadable, so whether it's a
+ * kill is left to the amount (see `judgeKills`). `kill`: a kill whose EXP was already added (held back until its
+ * amount came round again); from the parser, amount 0 means a kill line whose amount was unreadable.
+ */
+export type ChatEvent =
+  | { kind: "exp"; amount: number; bonus?: boolean; unclear?: boolean }
+  | { kind: "kill"; amount: number }
+  | { kind: "meso"; amount: number }
+  | { kind: "item"; name: string };
 
 const num = (s: string) => Number(fixDigits(s).replace(/[,.\s]/g, ""));
+/** Words that only bonus lines have ("Burning Field Bonus EXP", "Buff Bonus EXP", "(4) Multi-kill Bonus EXP"). */
+const BONUS_WORDS = ["bonus", "burning", "field", "blessing", "buff", "multi", "combo"];
 const AMOUNT = /\(\s*\+?\s*([0-9OoIl|][0-9OoIl|,.\s]*?)\s*\)|^\s*\+\s*([0-9][0-9,.]*)\b/;
 
 /**
@@ -68,47 +78,34 @@ export function parseChatLine(line: string): ChatEvent | null {
   }
   if (systemStart && (/(?:gain|receiv)\w*\s+(?:an?\s+)?ex\w*/.test(k) || /^\+\s*\d[\d,]*\s*ex\w*/.test(k))) {
     const a = amount();
-    return a > 0 && a < 10_000_000_000 ? { kind: "exp", amount: a } : null;
+    return a > 0 && a < 10_000_000_000 ? { kind: "exp", amount: a, ...(bonus ? { bonus: true } : {}) } : null;
   }
   // Words unreadable but the shape is unmistakable: an EXP-like token ("EXP", "EZP", "E/.P") and a "(+N)" amount.
   // Seen on the live client, where the chat font defeats OCR but the digits survive.
-  // A kill is only counted from a line that says it ("received"/"gained", tolerating a slip or two); a line whose
-  // words are unreadable could be a bonus line for the same kill, so it adds EXP but never counts as a kill.
-  if (/\bE(?:X|Z|[^\w\s]{1,3})?[Pp]\b/.test(l) && /\(\s*\+/.test(l)) {
-    const a = amount();
-    if (!(a >= 10 && a < 10_000_000_000)) return null;
-    const words = l.toLowerCase().replace(/[^a-z\s]/g, "").split(/\s+/).filter((w) => w.length >= 5);
-    const saysKill = !bonus && words.some((w) => editDistance(w, "received") <= 2 || editDistance(w, "gained") <= 1);
-    return saysKill ? { kind: "exp", amount: a } : { kind: "exp", amount: a, bonus: true };
+  // A line that says it ("received"/"gained", tolerating a slip or two) is a kill line; one with a bonus word is a
+  // bonus; one whose words are noise is `unclear` — `judgeKills` decides from its amount. A kill line whose amount
+  // came out as noise ("received (+$CJö2fJ5)") is still a kill, of the usual amount (`judgeKills` fills it in).
+  if (/\(\s*\+/.test(l)) {
+    const words = l.toLowerCase().replace(/[^a-z\s]/g, " ").split(/\s+/).filter((w) => w.length >= 4);
+    const saysBonus = bonus || words.some((w) => BONUS_WORDS.some((b) => editDistance(w, b) <= 1));
+    const saysKill = !saysBonus && words.some((w) => w.length >= 5 && (editDistance(w, "received") <= 2 || editDistance(w, "gained") <= 1));
+    if (saysKill || /\b[Ee](?:X|Z|[^\w\s]{1,3})?[Pp]\b/.test(l)) {
+      const a = amount();
+      if (!(a >= 10 && a < 10_000_000_000)) return saysKill ? { kind: "kill", amount: 0 } : null;
+      if (saysBonus) return { kind: "exp", amount: a, bonus: true };
+      return saysKill ? { kind: "exp", amount: a } : { kind: "exp", amount: a, bonus: true, unclear: true };
+    }
+  }
+  // Only the amount survived ("(+345205)"): unclear, like above.
+  const bare = /^\W{0,3}\(\s*\+\s*([0-9][0-9,.]*)\s*\)\W{0,3}$/.exec(l);
+  if (bare) {
+    const a = num(bare[1]!);
+    return a >= 10 && a < 10_000_000_000 ? { kind: "exp", amount: a, bonus: true, unclear: true } : null;
   }
   return null;
 }
 
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9()+]/g, "");
-
-/**
- * New chat lines since the previous read. The chat box shows the last N lines, so new lines are the part of
- * `current` after the longest overlap between the end of `previous` and the start of `current`.
- * With no overlap at all, everything counts as new only when `previous` was empty (first read); otherwise only the
- * last line does (prevents double counting when OCR noise breaks the overlap).
- */
-export function newLines(previous: string[], current: string[]): string[] {
-  const p = previous.map(norm);
-  const c = current.map(norm);
-  if (p.length === 0) return current;
-  for (let k = Math.min(p.length, c.length); k > 0; k--) {
-    let same = true;
-    for (let i = 0; i < k; i++) {
-      if (p[p.length - k + i] !== c[i]) {
-        same = false;
-        break;
-      }
-    }
-    if (same) return current.slice(k);
-  }
-  const last = current.at(-1);
-  return last && norm(last) !== p.at(-1) ? [last] : [];
-}
 
 /** Name matching that tolerates OCR slips (case, punctuation, one or two wrong letters). */
 export function matchName(raw: string, names: string[]): string | null {
