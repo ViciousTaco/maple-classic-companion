@@ -159,14 +159,14 @@ export function SettingsScreen() {
       </Card>
 
       <Card>
-        <h2 className="font-display text-[19px] font-semibold">Screen watcher</h2>
+        <h2 className="font-display text-[19px] font-semibold">Analyse</h2>
         <p className="mt-1 text-sm text-ink-2">
           {settings.watch
-            ? `Set up for “${settings.watch.windowTitle}”. Off every time the app starts — switch it on with the Watch pill at the top or ${settings.hotkey}.`
+            ? `Set up for “${settings.watch.windowTitle}”. Off every time the app starts — switch it on with the Analyse pill at the top or ${settings.hotkey}.`
             : "Counts your kills, EXP, meso and pickups from the game screen while you switch it on. Not set up yet."}
         </p>
         <div className="mt-3">
-          <Button onClick={() => navigate(settings.watch ? "/watch" : "/watch?setup=1")}>{settings.watch ? "Open the watcher" : "Set it up"}</Button>
+          <Button onClick={() => navigate(settings.watch ? "/watch" : "/watch?setup=1")}>{settings.watch ? "Open Analyse" : "Set it up"}</Button>
         </div>
       </Card>
 
@@ -237,8 +237,8 @@ export function SettingsScreen() {
         </ul>
         <p className="mt-4 text-sm text-ink-3">
           Not affiliated with or endorsed by Nexon. MapleStory and all related names, images and assets belong to Nexon. This is a free,
-          non-commercial fan tool. It never changes or interacts with the game; the optional screen watcher only reads the text in your
-          two boxes while you switch it on, and never saves or sends a picture.
+          non-commercial fan tool. It never changes or interacts with the game; the optional Analyse feature only reads the text in your
+          boxes while you switch it on, and never saves or sends a picture.
         </p>
       </Card>
 

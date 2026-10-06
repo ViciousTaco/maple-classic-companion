@@ -37,7 +37,7 @@ const NAV = [
   { path: "/quests", label: "Quests", Icon: ScrollText },
   { path: "/news", label: "News", Icon: Newspaper },
   { path: "/characters", label: "Characters", Icon: Users },
-  { path: "/watch", label: "Watch", Icon: Eye },
+  { path: "/watch", label: "Analyse", Icon: Eye },
 ] as const;
 
 export function Backdrop() {

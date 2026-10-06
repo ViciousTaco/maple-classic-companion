@@ -28,7 +28,7 @@ const idle: StoreApi<WatchState> = createStore<WatchState>()(() => ({
   toggle: async () => {},
   setSpot: () => {},
   followMap: () => {},
-  scanNow: async () => "The screen watcher works in the desktop app on Windows.",
+  scanNow: async () => "Analyse works in the desktop app on Windows.",
   step: async () => {},
 }));
 

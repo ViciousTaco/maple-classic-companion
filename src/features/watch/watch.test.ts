@@ -89,3 +89,11 @@ test("kills hidden by identical chat lines are recovered from the EXP total, onl
   expect(hiddenKills(-40, 22)).toBe(0);
   expect(hiddenKills(10, 22)).toBe(0);
 });
+
+test("the EXP-numbers box: exact total and % to three decimals (owner's live-client magnifier, 2026-10-06)", async () => {
+  const { parseExpText } = await import("./parse");
+  expect(parseExpText(["4,012,189,870,315 [72.668%]"])).toEqual({ expValue: 4012189870315, expPercent: 72.668 });
+  expect(parseExpText(["14982 / 33063", "4,O12,189,870,315 [72.668%]"])).toEqual({ expValue: 4012189870315, expPercent: 72.668 }); // HP row above, O for 0
+  expect(parseExpText(["EXP 51402 [44.170/01"])).toEqual({ expValue: 51402, expPercent: 44.17 });
+  expect(parseExpText(["nothing"])).toEqual({ expValue: null, expPercent: null });
+});

@@ -6,7 +6,7 @@ import { jobLine, rulesFromPack } from "../../data/gameRules";
 import { describeStats, parseQuestWindow, parseSkillsWindow, parseStatsWindow, plausibleStats, statsChanges, type Line, type QuestsRead, type StatsRead } from "./windows";
 import { activeProfile } from "../characters/store";
 import { recommendTraining } from "../../engine/recommend";
-import { hiddenKills, matchName, newLines, parseChatLine, parseMapName, parseStatus, type ChatEvent } from "./parse";
+import { hiddenKills, matchName, newLines, parseChatLine, parseExpText, parseMapName, parseStatus, type ChatEvent } from "./parse";
 import { applyEvents, applyStatus, mergeSession, newSession, observationKey, percentGained, tick, type SessionTotals } from "./session";
 
 const addCounts = (a: Record<string, number>, b: Record<string, number>) => {
@@ -70,7 +70,7 @@ export type WatchState = {
   /** Following the minimap (default when a map box is set up). Picking a spot by hand switches it off for the run. */
   autoMap: boolean;
   session: SessionTotals | null;
-  read: { level: number | null; expPercent: number | null; name: string | null; at: number } | null;
+  read: { level: number | null; expPercent: number | null; expValue: number | null; name: string | null; at: number } | null;
   feed: FeedItem[];
   startedAt: number | null;
   /** What the last whole-window read found (the in-game Stats / Skills / Quest windows), for the Watch screen. */
@@ -423,6 +423,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           if (s.chat) regions.push({ name: "chat", ...s.chat, scale: 3, filter });
           if (s.map) regions.push({ name: "map", ...s.map, scale: 3, filter });
           if (s.expBar) regions.push({ name: "expBar", ...s.expBar, mode: "bar" });
+          if (s.expText) regions.push({ name: "expText", ...s.expText, scale: 3, filter });
           const fullScan = confirmNext || t - lastFullScan >= FULL_SCAN_EVERY_MS;
           if (fullScan) regions.push({ name: "full", x: 0, y: 0, w: s.sourceWidth, h: s.sourceHeight, scale: 1 });
           const out = await deps.platform.screenRead(windowId, regions);
@@ -438,7 +439,14 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
             out.find((r) => r.name === "map")?.lines.map((l) => l.text) ??
             fullLines.filter((l) => l.y < s.sourceHeight * 0.25 && l.x < s.sourceWidth * 0.35).map((l) => l.text);
           const st = parseStatus(statusLines);
-          // I-45: when the bar's digits can't be read, its fill is the EXP % (to 0.1 %, good enough for pace).
+          // I-46: the dedicated EXP-text box reads far better than the whole bar; its numbers win.
+          const expLines = out.find((r) => r.name === "expText")?.lines.map((l) => l.text);
+          if (expLines) {
+            const e = parseExpText(expLines);
+            if (e.expPercent !== null) st.expPercent = e.expPercent;
+            if (e.expValue !== null) st.expValue = e.expValue;
+          }
+          // I-45: when no digits could be read, the bar's fill is the EXP % (to 0.1 %, good enough for pace).
           const fill = out.find((r) => r.name === "expBar")?.fill;
           if (st.expPercent === null && typeof fill === "number" && fill >= 0 && fill <= 1) st.expPercent = Math.round(fill * 1000) / 10;
 
@@ -502,7 +510,7 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           for (const e of events) feedNew.push({ id: feedId++, at: t, text: describeEvent(e, pack, e.kind === "exp" ? newMobs[mobIdx++] : undefined) });
           set({
             session,
-            read: st.level !== null || st.expPercent !== null ? { level: st.level, expPercent: st.expPercent, name: st.name, at: t } : get().read,
+            read: st.level !== null || st.expPercent !== null ? { level: st.level, expPercent: st.expPercent, expValue: st.expValue ?? get().read?.expValue ?? null, name: st.name, at: t } : get().read,
             feed: [...feedNew.reverse(), ...get().feed].slice(0, FEED_MAX),
           });
           syncLevel(st.level, st.expPercent);

@@ -205,7 +205,7 @@ export function WatcherData({ platform, profile, diagnostics, onDiagnostics, onF
     <div className="space-y-3">
       <Toggle
         label="Record a diagnostic log"
-        detail="Writes the text the watcher recognised and what it made of it to field-notes\watch-log\ — never pictures. Switch on for a test session, then ask a Claude session to assess the log."
+        detail="Writes the text Analyse recognised and what it made of it to field-notes\watch-log\ — never pictures. Switch on for a test session, then ask a Claude session to assess the log."
         checked={diagnostics}
         onChange={onDiagnostics}
       />
@@ -217,7 +217,7 @@ export function WatcherData({ platform, profile, diagnostics, onDiagnostics, onF
           <Trash2 size={14} /> Delete diagnostic logs
         </Button>
         <Button size="sm" variant="danger" onClick={() => setConfirm("forget")} disabled={learned === 0}>
-          <Trash2 size={14} /> Forget everything the watcher learned for {profile.name}
+          <Trash2 size={14} /> Forget everything Analyse learned for {profile.name}
         </Button>
         {learned === 0 && <Chip>Nothing learned yet</Chip>}
       </div>
@@ -227,7 +227,7 @@ export function WatcherData({ platform, profile, diagnostics, onDiagnostics, onF
       <ConfirmDialog
         open={confirm === "forget"}
         onOpenChange={(v) => !v && setConfirm(null)}
-        title={`Forget what the watcher learned for ${profile.name}?`}
+        title={`Forget what Analyse learned for ${profile.name}?`}
         body="Measured spots, the training log and the measured pace are removed. Stats, skills and quests already applied to the character stay (edit them on the character sheet if needed)."
         confirmLabel="Forget"
         danger

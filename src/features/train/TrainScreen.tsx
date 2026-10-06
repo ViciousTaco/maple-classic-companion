@@ -37,7 +37,7 @@ function Ticker({ value }: { value: number }) {
 
 function Stat({ label, range, hint, measured }: { label: string; range: { low: number; high: number } | null; hint: string; measured?: boolean }) {
   return (
-    <div className="rounded-2xl bg-fill px-3 py-2.5" title={!range ? hint : measured ? "Measured by your screen watcher (±10 %)" : "Estimate range (±20 %)"}>
+    <div className="rounded-2xl bg-fill px-3 py-2.5" title={!range ? hint : measured ? "Measured from your game screen (±10 %)" : "Estimate range (±20 %)"}>
       <dt className="text-xs font-semibold text-ink-3">{label}</dt>
       <dd className="font-display text-[21px] font-bold tracking-[-0.02em]">
         {range ? (
@@ -132,7 +132,7 @@ function HeroCard({ pack, rec, pinned, onTaken, onRoute, onUnpin }: { pack: Pack
         </dl>
         {rec.estimate.observed && (
           <p className="mt-2 flex items-center gap-1.5 text-[13px] font-semibold text-leaf">
-            <Eye size={14} /> Measured by your screen watcher over {Math.round(rec.estimate.observed.minutes)} min ({rec.estimate.observed.kills.toLocaleString("en-AU")} kills)
+            <Eye size={14} /> Measured from your game screen over {Math.round(rec.estimate.observed.minutes)} min ({rec.estimate.observed.kills.toLocaleString("en-AU")} kills)
           </p>
         )}
         {rec.warnings.length > 0 && (
@@ -419,7 +419,7 @@ export function TrainScreen() {
           {observedDrops(profile.observations[hero.spotId] ?? profile.observations[`map:${hero.mapId}`]).length > 0 && (
             <div className="mt-4">
               <p className="mb-2 flex items-center gap-1.5 text-sm font-semibold text-ink-2">
-                <Eye size={14} /> What you've picked up here (screen watcher)
+                <Eye size={14} /> What you've picked up here (Analyse)
               </p>
               <div className="flex flex-wrap gap-1.5">
                 {observedDrops(profile.observations[hero.spotId] ?? profile.observations[`map:${hero.mapId}`]).map((o) => (

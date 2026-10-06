@@ -17,7 +17,7 @@ export function parseStatus(lines: string[]): StatusRead {
   const text = lines.join(" ");
   // "Lv." is sometimes read as "IV.", "lv" or "1v".
   const lv = /(?:^|[^A-Za-z])[LlI1|][vV]\.?\s*([0-9OoIl|]{1,3})\b/.exec(text);
-  const bracket = /\[\s*([0-9OoIl|]{1,3})(?:[.,]([0-9OoIl|]{1,2}))?/.exec(text);
+  const bracket = /\[\s*([0-9OoIl|]{1,3})(?:[.,]([0-9OoIl|]{1,3}))?/.exec(text);
   const pct = bracket ?? /([0-9OoIl|]{1,3})(?:[.,]([0-9OoIl|]{1,3}))?\s*%/.exec(text);
   const total = /EXP\s*:?\s*([0-9OoIl|][0-9OoIl|,]{0,13})/i.exec(text);
   // The character's name sits between the level and the EXP/HP/MP figures on the status bar.
@@ -161,4 +161,23 @@ export function parseMapName(lines: string[], mapNames: string[]): string | null
     if (hit) return hit;
   }
   return null;
+}
+
+/**
+ * The EXP text alone ("4,012,189,870,315 [72.668%]" or "EXP 51402 [44.17%]"): the running total and the % to up to
+ * three decimals. From a small box drawn around just those digits, which the recogniser reads far better than the
+ * whole status bar.
+ */
+export function parseExpText(lines: string[]): { expValue: number | null; expPercent: number | null } {
+  const text = lines.join(" ");
+  const pct = /\[\s*([0-9OoIl|]{1,3})(?:[.,]([0-9OoIl|]{1,3}))?/.exec(text) ?? /([0-9OoIl|]{1,3})(?:[.,]([0-9OoIl|]{1,3}))?\s*%/.exec(text);
+  const expPercent = pct ? Number(`${fixDigits(pct[1]!)}.${pct[2] ? fixDigits(pct[2]) : "0"}`) : NaN;
+  // The total is the longest digit group (with thousands separators) that isn't the %.
+  const groups = [...text.replace(/\[.*$/, "").matchAll(/[0-9OoIl|][0-9OoIl|,]{2,}/g)].map((m) => fixDigits(m[0]).replace(/,/g, ""));
+  const best = groups.sort((a, b) => b.length - a.length)[0];
+  const expValue = best ? Number(best) : NaN;
+  return {
+    expValue: Number.isSafeInteger(expValue) && expValue >= 0 ? expValue : null,
+    expPercent: Number.isFinite(expPercent) && expPercent >= 0 && expPercent <= 100 ? expPercent : null,
+  };
 }

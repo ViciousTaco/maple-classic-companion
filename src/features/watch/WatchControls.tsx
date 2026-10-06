@@ -24,11 +24,11 @@ export function WatchPill() {
   const title =
     status === "off"
       ? setUp
-        ? `Start the screen watcher (${hotkey})`
-        : "Set up the screen watcher"
+        ? `Start analysing the game screen (${hotkey})`
+        : "Set up Analyse"
       : status === "paused"
         ? `Paused: ${problem ?? ""} — click to switch off (${hotkey})`
-        : `Watching the game window — click to switch off (${hotkey})`;
+        : `Analysing the game window — click to switch off (${hotkey})`;
 
   return (
     <motion.button
@@ -39,7 +39,7 @@ export function WatchPill() {
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
       title={title}
-      aria-label={status === "off" ? "Start watching" : "Stop watching"}
+      aria-label={status === "off" ? "Start analysing" : "Stop analysing"}
       aria-pressed={status !== "off"}
       className={`flex h-10 items-center gap-2 rounded-full px-4 text-[14px] font-semibold ${
         status === "on"
@@ -56,7 +56,7 @@ export function WatchPill() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/80 motion-reduce:animate-none" />
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-white" />
             </span>
-            Watching{kills > 0 ? ` · ${kills.toLocaleString("en-AU")}` : ""}
+            Analysing{kills > 0 ? ` · ${kills.toLocaleString("en-AU")}` : ""}
           </motion.span>
         ) : status === "paused" ? (
           <motion.span key="paused" className="flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -64,7 +64,7 @@ export function WatchPill() {
           </motion.span>
         ) : (
           <motion.span key="off" className="flex items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <Eye size={16} strokeWidth={2.2} /> Watch
+            <Eye size={16} strokeWidth={2.2} /> Analyse
           </motion.span>
         )}
       </AnimatePresence>

@@ -46,8 +46,8 @@ export function WatchScreen() {
   if (!canWatch(platform)) {
     return (
       <div className="space-y-6">
-        <LargeTitle sub="Counts kills, EXP, meso and pickups from the game screen">Screen watcher</LargeTitle>
-        <EmptyState title="The screen watcher works in the desktop app on Windows" icon={<MonitorX size={20} />} />
+        <LargeTitle sub="Reads your game screen while you switch it on">Analyse</LargeTitle>
+        <EmptyState title="Analyse works in the desktop app on Windows" icon={<MonitorX size={20} />} />
       </div>
     );
   }
@@ -61,18 +61,27 @@ export function WatchScreen() {
   const tot = s ? { kills: w.run.kills + s.kills, exp: w.run.exp + s.exp, meso: w.run.meso + s.meso, activeMs: w.run.activeMs + s.activeMs } : w.run;
   const mins = tot.activeMs / 60_000;
   const perHour = (v: number) => (mins >= 1 ? Math.round((v / mins) * 60).toLocaleString("en-AU") : "—");
+  // EXP still needed for the level: from the guide's EXP table when it knows this level, else from the % and total.
+  const expLeft = (() => {
+    const r = w.read;
+    if (!r || r.expPercent === null) return null;
+    const need = r.level !== null ? pack?.formulas.expToNext?.[r.level] : undefined;
+    if (need) return Math.max(0, Math.round(need - (need * r.expPercent) / 100));
+    if (r.expValue !== null && r.expPercent > 0) return Math.max(0, Math.round((r.expValue / r.expPercent) * (100 - r.expPercent)));
+    return null;
+  })();
   const eta = s ? levelEta({ ...w.run, pct: w.run.pct + (percentGained(s) ?? 0), pctMs: w.run.pctMs + (percentGained(s) === null ? 0 : s.activeMs) }, s.lastExp) : null;
   const measured = Object.entries(profile.observations).sort((a, b) => b[1].lastAt.localeCompare(a[1].lastAt));
 
   return (
     <div className="space-y-6">
-      <LargeTitle sub="Counts your kills, EXP, meso and pickups from the game screen — only while you switch it on">Screen watcher</LargeTitle>
+      <LargeTitle sub="Reads your game screen while you switch it on: kills, EXP, meso, pickups, map, stats, skills and quests">Analyse</LargeTitle>
 
       <Card className={`p-5 transition-colors ${w.status === "on" ? "ring-2 ring-danger/60" : ""}`}>
         <div className="flex flex-wrap items-center gap-5">
           <BigSwitch
             on={on}
-            label="Screen watcher"
+            label="Analyse"
             onChange={(v) => {
               if (v && !setup) setSetupOpen(true);
               else if (v) void w.start(spotId);
@@ -82,7 +91,7 @@ export function WatchScreen() {
           <div className="min-w-0 flex-1">
             <p className="font-display text-[24px] font-bold tracking-[-0.02em]">
               {w.status === "on" ? (
-                <span className="text-danger">● Watching · {elapsed}</span>
+                <span className="text-danger">● Analysing · {elapsed}</span>
               ) : w.status === "paused" ? (
                 <span className="text-maple-deep dark:text-maple-hi">Paused</span>
               ) : (
@@ -91,7 +100,7 @@ export function WatchScreen() {
             </p>
             <p className="text-sm text-ink-2">
               {w.status === "off"
-                ? w.problem ?? (setup ? `Flip the switch, click the Watch pill at the top, or press ${hotkeyValue} in game.` : "Set it up once, then switch it on whenever you like.")
+                ? w.problem ?? (setup ? `Flip the switch, click the Analyse pill at the top, or press ${hotkeyValue} in game.` : "Set it up once, then switch it on whenever you like.")
                 : w.status === "paused"
                   ? w.problem
                   : setup?.map
@@ -186,6 +195,8 @@ export function WatchScreen() {
                 {w.read ? (
                   <>
                     Game shows <strong className="text-ink">{w.read.name ?? profile.name}</strong> · <strong className="text-ink">Lv {w.read.level ?? "?"}</strong> · <strong className="text-ink">{w.read.expPercent ?? "?"}%</strong> EXP
+                    {w.read.expValue !== null && <> · EXP <strong className="text-ink">{w.read.expValue.toLocaleString("en-AU")}</strong></>}
+                    {expLeft !== null && <> · EXP left <strong className="text-ink">{expLeft.toLocaleString("en-AU")}</strong></>}
                   </>
                 ) : (
                   "Waiting for the level bar…"
@@ -256,7 +267,7 @@ export function WatchScreen() {
       )}
 
       <Card className="p-5">
-        <h3 className="mb-3 font-display text-[19px] font-semibold">Your watcher data</h3>
+        <h3 className="mb-3 font-display text-[19px] font-semibold">Your Analyse data</h3>
         <WatcherData
           platform={platform}
           profile={profile}

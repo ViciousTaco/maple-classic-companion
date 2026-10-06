@@ -175,6 +175,8 @@ export const SettingsSchema = z
         map: RegionSchema.nullable().default(null),
         /** I-45: a tight box around the EXP bar itself; its fill gives EXP % when the digits are unreadable. */
         expBar: RegionSchema.nullable().default(null),
+        /** A small box around the EXP digits ("4,012,189,870,315 [72.668%]"): exact total and % (I-46). */
+        expText: RegionSchema.nullable().default(null),
         intervalSec: z.number().min(1).max(30).default(2),
         /** I-44: write recognised text + decisions to field-notes\watch-log\ (never pixels) for tuning. */
         diagnostics: z.boolean().default(false),
