@@ -39,14 +39,14 @@ export function parseStatus(lines: string[]): StatusRead {
 export type ChatEvent = { kind: "exp"; amount: number; bonus?: boolean } | { kind: "meso"; amount: number } | { kind: "item"; name: string };
 
 const num = (s: string) => Number(fixDigits(s).replace(/[,.\s]/g, ""));
-const AMOUNT = /\(\s*\+?\s*([0-9OoIl|][0-9OoIl|,.\s]*?)\s*\)|\+\s*([0-9][0-9,.]*)/;
+const AMOUNT = /\(\s*\+?\s*([0-9OoIl|][0-9OoIl|,.\s]*?)\s*\)|^\s*\+\s*([0-9][0-9,.]*)\b/;
 
 /**
  * Pickup / gain messages. Unknown lines are ignored (never guessed). Keywords are matched on a copy with common OCR
  * slips undone ("rn" for "m": "rnesos", "itern"); numbers and item names come from the line as read.
  */
 export function parseChatLine(line: string): ChatEvent | null {
-  const l = line.trim();
+  const l = line.trim().replace(/['’`"]/g, "");
   const k = l.toLowerCase().replace(/rn/g, "m");
   // System messages start the line ("You have gained …", optionally after a "[Tag]"); anything after a "Name:"
   // prefix is a player talking. Lines with a "Name:" prefix are never gains, whatever follows.
@@ -72,9 +72,14 @@ export function parseChatLine(line: string): ChatEvent | null {
   }
   // Words unreadable but the shape is unmistakable: an EXP-like token ("EXP", "EZP", "E/.P") and a "(+N)" amount.
   // Seen on the live client, where the chat font defeats OCR but the digits survive.
-  if (/\bE(?:X|Z|[^\w\s]{1,3})?P\b/.test(l) && /\(\s*\+/.test(l)) {
+  // A kill is only counted from a line that says it ("received"/"gained", tolerating a slip or two); a line whose
+  // words are unreadable could be a bonus line for the same kill, so it adds EXP but never counts as a kill.
+  if (/\bE(?:X|Z|[^\w\s]{1,3})?[Pp]\b/.test(l) && /\(\s*\+/.test(l)) {
     const a = amount();
-    return a > 0 && a < 10_000_000_000 ? { kind: "exp", amount: a, ...(bonus ? { bonus: true } : {}) } : null;
+    if (!(a >= 10 && a < 10_000_000_000)) return null;
+    const words = l.toLowerCase().replace(/[^a-z\s]/g, "").split(/\s+/).filter((w) => w.length >= 5);
+    const saysKill = !bonus && words.some((w) => editDistance(w, "received") <= 2 || editDistance(w, "gained") <= 1);
+    return saysKill ? { kind: "exp", amount: a } : { kind: "exp", amount: a, bonus: true };
   }
   return null;
 }

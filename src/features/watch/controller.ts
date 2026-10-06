@@ -7,7 +7,7 @@ import { describeStats, parseQuestWindow, parseSkillsWindow, parseStatsWindow, p
 import { activeProfile } from "../characters/store";
 import { recommendTraining } from "../../engine/recommend";
 import { hiddenKills, matchName, newLines, parseChatLine, parseExpText, parseMapName, parseStatus, type ChatEvent } from "./parse";
-import { DEFAULT_METHOD, NO_FIELDS, type BoxName, type Fields } from "./reading";
+import { CANDIDATES, DEFAULT_METHOD, NO_FIELDS, newStabilizer, scoreReading, updateFields, type BoxName, type Fields, type Stabilizer } from "./reading";
 import { applyEvents, applyStatus, mergeSession, newSession, observationKey, percentGained, tick, type SessionTotals } from "./session";
 
 const addCounts = (a: Record<string, number>, b: Record<string, number>) => {
@@ -121,6 +121,8 @@ export const CHECKPOINT_MS = 5 * 60_000;
  * Once such a window is seen, the confirming read happens on the very next tick, so an update lands in 2–7 s.
  */
 export const FULL_SCAN_EVERY_MS = 5_000;
+/** How often Analyse re-reads every box every way to keep the best method for this screen (live self-tuning). */
+export const TUNE_EVERY_MS = 10_000;
 const FEED_MAX = 8;
 
 export function describeEvent(e: ChatEvent, pack: Pack | null, mobId?: string): string {
@@ -153,8 +155,11 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
   /** A whole-window read must say the same thing twice before it changes the character (OCR noise). */
   let pendingScan: { key: string; stats: StatsRead | null; skills: Record<string, number> | null; quests: QuestsRead | null } | null = null;
   let lastStepMs = 0;
-  /** The EXP total is only trusted once two reads in a row agree (a misread digit never shows). */
-  let lastExpRaw: number | null = null;
+  /** Evidence a new reading needs before it replaces a good one (see `updateFields`). */
+  let stab: Stabilizer = newStabilizer();
+  /** Live self-tuning: a running score per box per candidate method. */
+  let lastTune = 0;
+  let tuneScores: Partial<Record<BoxName, number[]>> = {};
   let lastStepAt = 0;
   let lastCheckpoint = 0;
   let missingSince: number | null = null;
@@ -284,6 +289,58 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
       });
     };
 
+    /**
+     * Live self-tuning: one extra capture reading every drawn box with every candidate method. Scores (consistent
+     * with the current good values scores higher) are smoothed; a box switches method only when another one is
+     * clearly better, and the choice is saved so the next session starts with it.
+     */
+    const liveTune = async (s: WatchSetup, windowId: number, t: number) => {
+      const pack = deps.getPack();
+      const drawn = (["status", "expText", "chat", "map"] as const).filter((b) => s[b]);
+      if (!pack || drawn.length === 0) return;
+      const regions: WatchRegion[] = drawn.flatMap((b) =>
+        CANDIDATES[b].map((m, i) => ({ name: `${b}#${i}`, ...s[b]!, scale: 3, prep: m.prep, filter: m.filter, ...(b === "expText" ? { mode: "both" as const } : {}) })),
+      );
+      let out: Awaited<ReturnType<WatchPlatform["screenRead"]>>;
+      try {
+        out = await deps.platform.screenRead(windowId, regions);
+      } catch {
+        return; // a failed tuning read changes nothing
+      }
+      if (out.some((r) => r.covered)) return;
+      const f = get().fields;
+      const ctx = { level: f.level?.value, expPercent: f.expPercent?.value, map: f.map?.value };
+      const me = profile();
+      const mapNames = pack.maps.map((m) => m.name);
+      const tuning = { ...(s.tuning ?? {}) };
+      const report: Record<string, string[]> = {};
+      let changed = false;
+      for (const b of drawn) {
+        const prev = tuneScores[b] ?? CANDIDATES[b].map(() => 0);
+        const scores = CANDIDATES[b].map((_, i) => {
+          const r = out.find((x) => x.name === `${b}#${i}`);
+          const lines = r?.lines.map((l) => l.text) ?? [];
+          report[`${b}#${i}`] = lines;
+          return scoreReading(b, lines, r?.digits, me?.name ?? null, mapNames, ctx);
+        });
+        const ema = scores.map((sc, i) => 0.6 * prev[i]! + 0.4 * sc);
+        tuneScores[b] = ema;
+        const current = s.tuning?.[b] ?? DEFAULT_METHOD[b];
+        const cur = Math.max(0, CANDIDATES[b].findIndex((m) => m.prep === current.prep && m.filter === current.filter));
+        const best = ema.reduce((bi, v, i) => (v > ema[bi]! ? i : bi), cur);
+        if (best !== cur && ema[best]! >= ema[cur]! + 2) {
+          tuning[b] = CANDIDATES[b][best]!;
+          changed = true;
+        }
+      }
+      if (changed) deps.store.getState().updateSettings({ watch: { ...s, tuning } });
+      if (s.diagnostics && deps.platform.watchLogAppend) {
+        void deps.platform
+          .watchLogAppend(JSON.stringify({ t: new Date(t).toISOString(), tune: report, scores: tuneScores, chosen: changed ? tuning : s.tuning }))
+          .catch(() => {});
+      }
+    };
+
     /** Lines from a whole-window read → Stats / Skills windows → the character, once two reads agree. */
     const applyScan = (pack: Pack, lines: Line[], t: number, force = false): string => {
       const p = profile();
@@ -372,7 +429,9 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
         countedRun = false;
         runPct = runPctMs = 0;
         lastStepAt = lastCheckpoint = now();
-        lastExpRaw = null;
+        stab = newStabilizer();
+        lastTune = now();
+        tuneScores = {};
         // With a map box, Analyse always follows the minimap; picking a spot by hand later switches that off.
         set({ status: "on", problem: null, spotId: chosen, mapId, autoMap: !!s.map, session: newSession(chosen, mapId, new Date(now())), read: null, fields: NO_FIELDS, feed: [], startedAt: now(), run: EMPTY_RUN });
         loop();
@@ -465,18 +524,17 @@ export function createWatcher(deps: WatcherDeps): StoreApi<WatchState> {
           if (st.expPercent === null && typeof fill === "number" && fill >= 0 && fill <= 1) st.expPercent = Math.round(fill * 1000) / 10;
 
           // Last good value per field (with when it was read): the screen shows these, not this one read.
-          {
-            const f = { ...get().fields };
-            if (st.level !== null) f.level = { value: st.level, at: t };
-            if (st.name) f.name = { value: st.name, at: t };
-            if (st.expPercent !== null) f.expPercent = { value: st.expPercent, at: t };
-            if (st.expValue !== null) {
-              if (st.expValue === lastExpRaw) f.expValue = { value: st.expValue, at: t };
-              lastExpRaw = st.expValue;
-            }
-            const mapLine = mapLines.map((l) => l.replace(/\b(?:ch|channel)\.?\s*\d+\b/i, "").trim()).filter((l) => /[A-Za-z]{3,}/.test(l)).at(-1);
-            if (mapLine) f.map = { value: mapLine, at: t };
-            set({ fields: f });
+          // One misread never replaces a good value: it must be consistent or confirmed by the next read.
+          set({
+            fields: updateFields(get().fields, { level: st.level, name: st.name, expPercent: st.expPercent, expValue: st.expValue, mapLines }, t, stab, (line) =>
+              pack.maps.some((m) => m.name === line),
+            ),
+          });
+
+          // Live self-tuning: every so often read each box every way and keep whichever reads best on this screen.
+          if (t - lastTune >= TUNE_EVERY_MS) {
+            lastTune = t;
+            await liveTune(s, windowId, t);
           }
 
           // Right character? The status bar names it. Three clear mismatches in a row means another character

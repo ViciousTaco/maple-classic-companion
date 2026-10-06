@@ -77,8 +77,8 @@ test("other players' chat never counts, even when it mentions gains", () => {
   expect(parseChatLine("[Event] You have gained experience (+50)")).toEqual({ kind: "exp", amount: 50 }); // tagged system line
   expect(parseChatLine("[Guild] Bob: You have gained experience (+50)")).toBeNull();
   // Live-client OCR (2026-10-06): words mangled, the EXP token and amount survive.
-  expect(parseChatLine("J3uit ZICJ(llJ3 E/.P (+1 02753)")).toEqual({ kind: "exp", amount: 102753 });
-  expect(parseChatLine("; 30111J3 EZP (+91 49274)")).toEqual({ kind: "exp", amount: 9149274 });
+  expect(parseChatLine("J3uit ZICJ(llJ3 E/.P (+1 02753)")).toEqual({ kind: "exp", amount: 102753, bonus: true }); // unreadable words: EXP, not a kill
+  expect(parseChatLine("; 30111J3 EZP (+91 49274)")).toEqual({ kind: "exp", amount: 9149274, bonus: true });
   expect(parseChatLine("Bob: EXP (+500) lol")).toBeNull(); // a player, not the game
 });
 
@@ -393,4 +393,65 @@ test("turning Analyse on always follows the minimap when a map box is set up", a
   await advance(2000);
   expect(watcher.getState().mapId).toBe("f-exp");
   expect(watcher.getState().fields.map?.value).toBe("Test Map f-exp");
+});
+
+test("one misread never replaces a good value; two agreeing reads do (owner's log: 72.67% → 3%, map glitches)", async () => {
+  const { updateFields, newStabilizer, NO_FIELDS } = await import("./reading");
+  const stab = newStabilizer();
+  const r = (o: object) => ({ level: null, name: null, expPercent: null, expValue: null, mapLines: [], ...o });
+  let f = updateFields(NO_FIELDS, r({ level: 272, expPercent: 72.674, mapLines: ["Esfera", "Living Spring 5"] }), 1, stab);
+  f = updateFields(f, r({ mapLines: ["Esfera", "Living Spring 5"] }), 2, stab);
+  expect(f.map?.value).toBe("Living Spring 5");
+  f = updateFields(f, r({ expPercent: 3, mapLines: ["Esfera", "Living SP{ing 5", "1"] }), 3, stab);
+  expect(f.expPercent?.value).toBe(72.674); // impossible jump ignored
+  expect(f.map?.value).toBe("Living Spring 5"); // a single garbled read never shows
+  f = updateFields(f, r({ expPercent: 72.69 }), 4, stab);
+  expect(f.expPercent?.value).toBe(72.69); // consistent: accepted
+  f = updateFields(f, r({ level: 273, expPercent: 0.12 }), 5, stab);
+  f = updateFields(f, r({ level: 273, expPercent: 0.13 }), 6, stab);
+  expect(f.level?.value).toBe(273); // a level-up is confirmed by the next read…
+  expect(f.expPercent?.value).toBe(0.13); // …and the % resets with it
+  f = updateFields(f, r({ mapLines: ["Esfera", "Base Camp"] }), 7, stab);
+  f = updateFields(f, r({ mapLines: ["Esfera", "Base Camp"] }), 8, stab);
+  f = updateFields(f, r({ mapLines: ["Esfera", "Base Camp"] }), 9, stab);
+  expect(f.map?.value).toBe("Base Camp"); // moving map: the new name wins once it's the most read
+});
+
+test("live self-tuning switches a box to the method that actually reads on this screen", async () => {
+  const { watcher, screen, advance, store } = await rig({ map: false });
+  // Setup chose a method that reads nothing for the status box; "light text" reads the level.
+  store.getState().updateSettings({ watch: { ...store.getState().file.settings.watch!, tuning: { status: { prep: "brightText", filter: "bilinear" } } } });
+  await watcher.getState().start("spot-exp");
+  screen.status = ["Lv. 25  Taco  EXP 1000 [40.00%]"];
+  for (let i = 0; i < 12; i++) await advance(10_000);
+  // The mock reads the same text with every method, so all score alike: no needless switching.
+  expect(store.getState().file.settings.watch!.tuning.status).toEqual({ prep: "brightText", filter: "bilinear" });
+});
+
+test("live self-tuning: when only one method reads a box, Analyse switches to it and saves it", async () => {
+  const store = createProfileStore(createMockPlatform(), { debounceMs: 0 });
+  await store.getState().load();
+  store.getState().createProfile({ name: "Taco", jobId: "thief", level: 25 });
+  store.getState().updateSettings({ watch: { ...SETUP, map: null, tuning: { status: { prep: "brightText", filter: "bilinear" } } } });
+  let t = Date.parse("2026-10-07T00:00:00Z");
+  const platform: WatchPlatform = {
+    screenListWindows: async () => [{ id: 7, title: "MapleStory", app: "", width: 1366, height: 768, minimized: false }],
+    // Only "light text" reads the status box on this "screen".
+    screenRead: async (_id, regions) =>
+      regions.map((r) => ({
+        name: r.name,
+        lines: r.name.startsWith("status") && r.prep === "lightText" ? [{ text: "Lv. 25 Taco", x: 0, y: 0, w: 1, h: 1 }] : [],
+        covered: false,
+      })),
+  };
+  const w = createWatcher({ platform, store, getPack: () => smallPack(), now: () => t, schedule: () => () => {} });
+  await w.getState().start("spot-exp");
+  for (let i = 0; i < 6; i++) {
+    t += 10_000;
+    await w.getState().step();
+  }
+  expect(store.getState().file.settings.watch!.tuning.status?.prep).toBe("lightText");
+  t += 2000;
+  await w.getState().step();
+  expect(w.getState().fields.level?.value).toBe(25); // and the main read now uses it
 });

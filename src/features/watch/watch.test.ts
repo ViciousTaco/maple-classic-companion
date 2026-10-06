@@ -117,3 +117,19 @@ test("live-client EXP strip and floating EXP lines, as read from a real frame (2
   expect(parseChatLine("Elven Blessing, Sol Janus Bonus EXP (+142274)")).toEqual({ kind: "exp", amount: 142274, bonus: true });
   expect(parseChatLine("Bob: EXP (+500) lol")).toBeNull();
 });
+
+test("kills only from lines that say so — real mangled lines from the owner's log (2026-10-06)", () => {
+  const kill = (l: string) => { const e = parseChatLine(l); return e?.kind === "exp" && !e.bonus; };
+  const exp = (l: string) => { const e = parseChatLine(l); return e?.kind === "exp" ? e.amount : null; };
+  expect(kill("received EZP (+335205)")).toBe(true);
+  expect(kill("'{ou received EZP (+335205)")).toBe(true);
+  expect(kill("You reteived EXP (+395205)")).toBe(true);
+  // Bonus lines with "Bonus" mangled: EXP only, not a kill.
+  expect(kill("Ell-lit ZJCJ(ljJ3 E/.P (+1 02753)")).toBe(false);
+  expect(exp("Ell-lit ZJCJ(ljJ3 E/.P (+1 02753)")).toBe(102753);
+  expect(kill("EXP: (+118561)'")).toBe(false);
+  expect(kill("I. 301 30111J3 EZP (+'142274)")).toBe(false);
+  // Garbage amounts are dropped, never "+1 EXP".
+  expect(parseChatLine("Field ERP: 30% (+1 •1356-1 )")).toBeNull();
+  expect(parseChatLine("E•/.p (+335205)")).toEqual({ kind: "exp", amount: 335205, bonus: true });
+});
