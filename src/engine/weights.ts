@@ -38,9 +38,14 @@ export function finalScore(
   return base * fit * conf;
 }
 
-export function pickPlan<T extends { score: number; mapId: string }>(ranked: T[], maxBackups = 3) {
+/**
+ * Primary + backups. The primary is the best spot whose level band includes the player (`fit` 1) whenever there is
+ * one, so a spot is dropped as soon as the player outgrows it, however good its drops (owner, 2026-10-07: "the
+ * training spots do not update when I level up" — Lv 11 kept a Lv 4–10 spot). Near-band spots stay as backups.
+ */
+export function pickPlan<T extends { score: number; mapId: string; fit?: number }>(ranked: T[], maxBackups = 3) {
   const sorted = [...ranked].sort((a, b) => b.score - a.score);
-  const primary = sorted[0] ?? null;
+  const primary = sorted.find((c) => c.fit === undefined || c.fit >= 1) ?? sorted[0] ?? null;
   const used = new Set<string>(primary ? [primary.mapId] : []);
   const backups: T[] = [];
   for (const c of sorted.slice(1)) {

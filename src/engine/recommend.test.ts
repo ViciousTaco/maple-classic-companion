@@ -1,7 +1,7 @@
 import { NOW, smallPack, smallPackData, testProfile } from "../../tests/fixtures/pack.small";
 import { buildIndexes } from "../data/pack";
 import { validatePack } from "../data/validate";
-import type { FocusId } from "../data/schema/profile";
+import { FOCUS_IDS, type FocusId } from "../data/schema/profile";
 import { estimateSpot } from "./estimate";
 import { normalise, rawSubscores } from "./subscores";
 import { recommendTraining } from "./recommend";
@@ -171,4 +171,21 @@ test("invariants over 500 seeded random profiles", () => {
     }
     if (!p.primary) expect(p.emptyReason).toBeDefined();
   }
+});
+
+test("levelling up moves the main pick on: it's always a spot whose band includes the level, when there is one (real data)", async () => {
+  const { sourcePack } = await import("../data/fixtures/sourcePack");
+  const { bestBand } = await import("./recommend");
+  const pack = sourcePack();
+  const bowman = pack.jobs.find((j) => /bowman/i.test(j.name))!.id;
+  for (const focus of FOCUS_IDS)
+    for (let level = 1; level <= 30; level++) {
+      const profile = testProfile({ jobId: bowman, level, focus });
+      const p = recommendTraining({ profile, pack, now: NOW });
+      const inBand = pack.trainingSpots.some((s) => s.party !== "party" && bestBand(pack, profile, s)?.fit === 1);
+      if (inBand) expect(p.primary?.fit, `${focus} Lv ${level}`).toBe(1);
+    }
+  // The owner's case (2026-10-07): Lv 11 Bowman, Balanced — not the Lv 4–10 field any more.
+  const p = recommendTraining({ profile: testProfile({ jobId: bowman, level: 11, focus: "balanced" }), pack, now: NOW });
+  expect(pack.index.mapById.get(p.primary!.mapId)?.name).not.toBe("The Field West of Amherst");
 });
